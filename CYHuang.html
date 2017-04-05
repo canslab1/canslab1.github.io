@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>黃崇源博士履歷</title>
+  <style>
+  ul, ol {margin: 0 auto;}  table, th, td {border: 1px solid; margin: 0 auto; text-align: center; vertical-align: middle;} th, td {padding: 10px;} table {width: 100%;} th {background-color:#e0e0e0;}
+  body {  font: 400 15px Lato, sans-serif; font-family: "times new roman","微軟正黑體"; line-height: 1.8;}
+  h2 {    font-size: 24px; text-transform: uppercase;  color: #303030; font-weight: 600;  margin-top: 30px;}
+  h4 {    font-size: 19px; line-height: 1.375em; color: #303030; font-weight: 400; margin-top: 30px;}  
+  .jumbotron { background-color: #fb5; padding: 100px 25px; font-family: "times new roman","微軟正黑體";}
+  .container-fluid { padding: 60px 50px;}
+  .logo-small { color: #f4511e; font-size: 50px;}
+  .logo { color: #f4511e; font-size: 200px;}
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+  }
+  .carousel-indicators li {
+      border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+      background-color: #f4511e;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #f4511e;
+      z-index: 9999;
+      border: 0;
+      font-size: 20px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: "times new roman","微軟正黑體";
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+      transition-duration: 1s;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">首頁</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class=""><a href="#q1">個人介紹</a></li>
+        <li class=""><a href="#q2">獲獎經歷</a></li>
+        <li class=""><a href="#q3">教學成果</a></li>
+        <li class=""><a href="#q4">研究發表</a></li>
+        <li class=""><a href="#q5">學術活動</a></li>
+        <li><a target="_blank" href="http://www.facebook.com/gscott.huang">我的臉書</a></li>
+        <li><a target="_blank" href="https://scholar.google.com.tw/citations?user=0klfzfAAAAAJ&amp;hl=zh-TW">學術搜尋</a></li>
+        <li><a target="_blank" href="mailto:gscott@mail.cgu.edu.tw">寫信給我</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>黃 崇 源 教授 / 博士</h1>
+  <h1>Prof. Chung-Yuan Huang, Ph.D.</h1>
+  <p>　</p>
+  <p>長庚大學工學院資訊工程學系</p>
+  <p>桃園市龜山區文化一路 259 號</p>
+  <p>電話 : (03) 211-8800 #3474</p>
+  <p>電郵 : <a target="_blank" style="color:black;" href="mailto:gscott@mail.cgu.edu.tw">gscott@mail.cgu.edu.tw</a></p>
+</div>
+
+<div id="q1" class="container-fluid"><div class="row"><div class="col-sm-12">
+<h1>個人介紹</h1>
+<h2>服務單位</h2><table><tbody><tr><th>學校</th><th>單位</th><th>職稱</th><th>起算日</th></tr><tr><td>長庚大學</td><td>工學院<br>資訊工程學系</td><td>教授<br>教字第 141150 號</td><td>104.08.01</td></tr><tr><th>實驗室</th><td colspan="3">資訊應用學群複雜適應性網絡與系統實驗室（ＣＡＮＳ）<br>Complex Adaptive Networks and Systems Laboratory</td></tr></tbody></table>
+<h2>教育背景</h2><table><tbody><tr><th>學位</th><th>學校</th><th>系所</th><th>研究領域</th></tr><tr><td>博士 (89.09-94.11)</td><td rowspan="2">交通大學</td><td rowspan="2">資訊科學研究所</td><td rowspan="2">複雜網絡資料分析與建模<br>社會現象電腦建模與模擬</td></tr><tr><td>碩士 (87.09-89.06)</td></tr></tbody></table>
+<h2>工作經歷</h2><table><tbody><tr><th>機構</th><th>部門</th><th>職稱</th><th>工作內容</th></tr>
+<tr><td rowspan="3">長庚大學<br>副字第040574號</td><td rowspan="2">資訊工程學系</td><td>副教授 (99.08-104.07)</td><td rowspan="2">研究、教學、服務</td></tr>
+<tr><td>助理教授 (95.08-99.07)</td></tr>
+<tr><td>資訊中心</td><td>教學服務組組長 (96.08-98.07)</td><td>組內業務推動督導</td></tr>
+<tr><td colspan="2">台灣愛滋被單協會</td><td>秘書長 (98.01-99.01)</td><td>管理協會運作</td></tr>
+<tr><td rowspan="2">元培科技大學<br>助理字第016772號</td><td>生醫科技學群</td><td>副執行長 (95.02-95.07)</td><td rowspan="2">研究、教學、服務<br>協助升格科技大學</td></tr>
+<tr><td>資訊工程學系</td><td>助理教授兼系主任 (94.08-95.07)</td></tr><tr><td>世新大學</td><td>資訊管理學系</td><td>兼任助理教授 (94.08-95.07)</td><td>資訊課程教學</td></tr>
+<tr><td rowspan="2">中國科技大學<br>講字第060747號</td><td>資訊工程學系</td><td>專任講師 (91.08-94.07)</td><td rowspan="2">教學、研究、服務</td></tr>
+<tr><td>資訊管理學系</td><td>專任講師 (89.08-91.07)</td></tr>
+<tr><td>新竹市青草湖社區大學</td><td>電腦學程</td><td>資訊課程講師 (90.09-91.01)</td><td>資訊課程教學</td></tr>
+<tr><td>環世股份有限公司</td><td>管理部</td><td>系統工程師 (87.04-89.04)</td><td>維護承攬業管理系統</td></tr>
+<tr><td>宇博電腦股份有限公司</td><td>軟體部</td><td>資深系統設計師 (83.08-86.12)</td><td>開發承攬業管理系統</td></tr>
+<tr><td rowspan="2">百點連鎖資訊教室</td><td>教學部</td><td>主任 (80.10-81.09)</td><td>教師調派與講義制定</td></tr>
+<tr><td>管理部</td><td>總經理別助理 (81.02-81.09)</td><td>建立連鎖及傳銷制度</td></tr>
+<tr><td>鼎眾電腦股份有限公司</td><td>軟體開發部</td><td>主任 (76.09-80.09)</td><td>開發商用專案軟體</td></tr>
+</tbody></table>
+<h2>研究計畫</h2><table><tbody><tr><th>期間</th><th>編號及補助金額</th><th>計畫名稱</th><th>職務</th></tr>
+<tr><td>105-106</td><td>科技部專題研究計畫<br>MOST-105-2221-E-182-069<br>NERPD2F0341<br>TWD$614,000</td><td>線上熟人社群網絡演化之交友資源與記憶的影響</td><td>主持人</td></tr>
+<tr><td>104-105</td><td>科技部專題研究計畫<br>MOST-104-2221-E-182-047<br>NERPD2E0351<br>TWD$821,000</td><td>反覆式囚犯困局中<br>可自我聲譽調整能力之智慧型代理人的影響</td><td>主持人</td></tr>
+<tr><td>103-104</td><td>科技部專題研究計畫<br>MOST-103-2221-E-182-052<br>NERPD2D0541<br>TWD$500,000</td><td>最適新型流感交通阻絕策略之<br>基因演算法優選與防疫成本效益分析</td><td>主持人</td></tr>
+<tr><td>102-103</td><td>國科會專題研究計畫<br>NSC-102-2221-E-182-052<br>NERPD2C0371<br>TWD$761,000</td><td>基於規範性與資訊性社會影響之<br>多代理人意見與態度動態模擬</td><td>主持人</td></tr>
+<tr><td>101-102</td><td>國科會專題研究計畫<br>NSC-101-2119-M-182-001<br>NERPD2B0301<br>TWD$836,000</td><td>整合型計畫之子計畫一<br>應用地理空間資料探礦與知識發掘技術於<br>自願性地理資訊之擷取—以賞鳥資料為例</td><td>主持人</td></tr>
+<tr><td>100-101</td><td>國科會專題研究計畫<br>NSC-100-2221-E-182-058<br>NERPD2A0471<br>TWD$449,000</td><td>公我意識之自我覺察代理人<br>對於反覆囚犯困局之合作現象的影響與提升</td><td>主持人</td></tr>
+<tr><td>100-101</td><td>新興病毒感染研究中心<br>CMRPD290012<br>TWD$506,980</td><td>台灣新型流感H1N1疫情之計量地理分析<br>與時空傳播網絡監測平台(2/2)</td><td>主持人</td></tr>
+<tr><td>99-100</td><td>國科會專題研究計畫<br>NSC-99-2314-B-182-031<br>NERPD290581<br>TWD$780,000</td><td>建構「台灣通勤人口暨交通運輸網絡模型」<br>探討新型流感傳播之最佳交通阻絕策略施行方式</td><td>主持人</td></tr>
+<tr><td>99-100</td><td>新興病毒感染研究中心<br>CMRPD290011<br>TWD$498,580</td><td>台灣新型流感H1N1疫情之計量地理分析<br>與時空傳播網絡監測平台(1/2)</td><td>主持人</td></tr>
+<tr><td>98-99</td><td>長庚大學校內研究計畫<br>UERPD280351<br>TWD$497,500</td><td>子計畫三 : 車用無線行動式智慧型P2P網路系統</td><td>主持人</td></tr>
+<tr><td>98-99</td><td>新興病毒感染研究中心<br>CMRPD260023<br>TWD$565,498</td><td>利用社會網絡式傳染病模擬系統<br>以協助新型流感監測並提供公衛參考(3/3)</td><td>主持人</td></tr>
+<tr><td>98-99</td><td>國科會專題研究計畫<br>NSC-98-2314-B-182-043<br>NERPD280521<br>TWD$900,000</td><td>台灣專屬新型流感傳播動態電腦模擬系統<br>暨疫苗、抗病毒藥劑、居家隔離檢疫政策<br>成本效益及最佳實施策略評估分析</td><td>主持人</td></tr>
+<tr><td>97-98</td><td>國科會專題研究計畫<br>NSC-97-2221-E-182-046<br>NERPD270491<br>TWD$570,000</td><td>台灣重大流行性傳染病之公衛政策、疫苗、特效藥等<br>防疫策略之流行病學電腦模擬與評估</td><td>主持人</td></tr>
+<tr><td>97-98</td><td>長庚大學校內研究計畫<br>UERPD270281<br>TWD$436,500</td><td>主動擴散式P2P對等資源分享系統與搜尋演算法</td><td>主持人</td></tr>
+<tr><td>97-98</td><td>新興病毒感染研究中心<br>CMRPD260022<br>TWD$506,980</td><td>利用社會網絡式傳染病模擬系統<br>以協助新型流感監測並提供公衛參考(2/3)</td><td>主持人</td></tr>
+<tr><td>96-97</td><td>新興病毒感染研究中心<br>CMRPD260021<br>TWD$578,580</td><td>利用社會網絡式傳染病模擬系統<br>以協助新型流感監測並提供公衛參考(1/3)</td><td>主持人</td></tr>
+<tr><td>96-97</td><td>國科會專題研究計畫<br>NSC-96-2221-E-182-041<br>NERPD260341<br>TWD$558,000</td><td>利用橋接式與磚式功能性基調分析<br>探討實際複雜網絡的動態行為、設計原理與演化機制</td><td>主持人</td></tr>
+<tr><td>96-97</td><td>疾病管制局研究計畫<br>DOH96-DC-1102<br>PERPD260011<br>TWD$800,000</td><td>臺灣地區腸病毒疫情之停課措施、<br>洗手與戴口罩政策成效模擬與評估</td><td>主持人</td></tr>
+<tr><td>95-96</td><td>國科會專題研究計畫<br>NSC-95-2221-E-182-076<br>NERPD250521<br>TWD$449,000</td><td>小世界流行病學建模與公共衛生政策之評估</td><td>主持人</td></tr>
+<tr><td>102-103</td><td>國科會專題研究計畫<br>NSC-102-2410-H-002-168</td><td>建立偵測時空群聚動態的分析方法 : <br>以追蹤傳染病擴散的傳播鏈為例</td><td>共同主持人</td></tr>
+<tr><td>102-103</td><td>國科會專題研究計畫<br>NSC-102-2221-E-182-034</td><td>利用通用圖形處理器的多字串比對演算法之研究</td><td>共同主持人</td></tr>
+<tr><td>102-103</td><td>國科會專題研究計畫<br>NSC-102-2314-B-039-024</td><td>台灣美沙酮病人自我管理即時互動手持行動系統</td><td>共同主持人</td></tr>
+<tr><td>102-102</td><td>食品藥物管理局研究計畫<br>102TFDA-N-003</td><td>結合網絡應用程式強化藥物濫用危害防制預警及宣導功能</td><td>共同主持人</td></tr>
+<tr><td>99-100</td><td>國科會專題研究計畫<br>NSC-99-2221-E-182-053</td><td>點對點網路中檔案分享效率之研究</td><td>共同主持人</td></tr>
+<tr><td>98-99</td><td>長庚大學校內研究計畫<br>UERPD280331</td><td>總計劃 : 行動式P2P無線感測網路之行車路徑動態導航系統</td><td>共同主持人</td></tr>
+<tr><td>98-99</td><td>國科會專題研究計畫<br>NSC-98-2221-E-182-033</td><td>改善無結構式點對點網路服務品質之研究</td><td>共同主持人</td></tr>
+<tr><td>98-100</td><td>國科會專題研究計畫<br>NSC-98-2410-H-002-168-MY2</td><td>台灣登革熱疫情的計量地理分析與空間模擬</td><td>共同主持人</td></tr>
+<tr><td>98-99</td><td>疾病管制局研究計畫<br>DOH98-NNB-1048</td><td>利用風險分析方法建立藥物濫用預測模式及其防制教材</td><td>共同主持人</td></tr>
+<tr><td>98-99</td><td>疾病管制局研究計畫<br>DOH98-DC-1501</td><td>台灣注射藥癮族群愛滋防治及減害計畫評估整合型計劃<br>探討影響藥癮愛滋減害計畫工作人員持續提供服務之相關因素調查</td><td>共同主持人</td></tr>
+<tr><td>97-98</td><td>國科會專題研究計畫<br>NSC-97-2314-B002-180</td><td>建立登革熱疫情傳播網絡的時空風險模型</td><td>共同主持人</td></tr>
+<tr><td>95-96</td><td>疾病管制局研究計畫<br>DOH95-DC-1406</td><td>利用整合式傳染病監測軟體以協助流行性感冒的監測</td><td>共同主持人</td></tr>
+<tr><td>97-98</td><td>國科會專題研究計畫<br>NSC-97-2314-B-002-180</td><td>建立登革熱疫情傳播網絡的時空風險模型</td><td>共同主持人</td></tr>
+<tr><td>98-99</td><td>疾病管制局研究計畫<br>DOH98-DC-1006</td><td>疫災之風險管理及應變規劃研究</td><td>研究人員</td></tr>
+</tbody></table>
+</div></div></div>
+
+<div id="q2" class="container-fluid"><div class="row"><div class="col-sm-12">
+<h1>獲獎經歷</h1>
+<h2>獎項榮譽</h2>
+<ul><li>2016年03月指導交通大學資訊工程學系博士生傅昱翔參加在日本九州別府舉行的2016 The 4th IIAE International Conference on Industrial Application Engineering（ICIAE 2016）國際研討會口頭發表Using Network Topology and Rule-based Strategy to Identify Community Structure in Social networks會議論文，榮獲研討會最佳學生論文獎（Best Student Paper Award）。</li>
+<li>2015年10月指導長庚大學資訊工程學系李銘達、陸辰偉、俞振皓、王俊弦四位於日成科技股份有限公司實習的同學參加104學年度長庚大學工學院校外實習課程成果競賽，榮獲佳作。</li>
+<li>2014年10月指導長庚大學資訊工程學系陳繹多、周李書佑、張祐真、曹家嘉、戴上傑五位於財團法人台灣電子檢驗中心實習的同學參加103學年度長庚大學工學院課程分流電路板暑期實習競賽，榮獲第三名。</li>
+<li>2014年，Influences of Resource Limitations and Transmission Costs on Epidemic Simulations and Critical Thresholds in Scale-Free Networks（2009 85:205-219; doi:10.1177/0037549709352197）榮登模擬領域學術核心期刊Simulation: Transactions of the Society for Modeling and Simulation International的Editor's Choice Collections: Highly Cited Papers排行榜第二名。</li>
+<li>2013年6月指導長庚大學資訊工程學系鄭子駿、賴利德、林昆瑋及陳俊達四位同學參加101學年度長庚大學工學院20週年院慶專題研究成果競賽，榮獲佳作。</li>
+<li>2013年4月初，在日本北九州市國際會議中心舉行的2013 International Conference on e-Commerce, e-Administration, e-Society, e-Education, and e-Technology（e-CASE &amp; e-Tech 2013）國際研討會口頭發表Using a Modified Genetic Algorithm to Identify Locations for Automated External Defibrillators會議論文，榮獲研討會最佳論文首獎（Shieh Tung-Min Memorial Award）,獎牌乙只及獎金美金伍佰元。</li>
+<li>2012年2月起連續10個月指導長庚大學資訊工程學系鄭子駿、賴利德、林昆瑋及陳俊達四位同學參加101年中華電信舉辦的電信創新應用大賽之創作擂台行動應用校園組，通過初賽及複賽，入圍總決賽，榮獲季軍，於101年11月29日獲頒獎金新台幣拾萬元。</li>
+<li>指導跨校系李柏明等六位學生參加96年中華電信舉辦的電信加值應用大賽網路社群平台發展組，通過初賽及複賽，入圍總決賽，獎金新台幣10000元。</li>
+<li>研發全國第一套以社會網絡為基礎的多代理人流行性傳染病傳播動態電腦模擬系統CASMIM，獲加拿大、日本、新加坡等多所大學採用為教學系統、新加坡國立大學理學院研究所Michael Fortun教授的Complexity課程、美國蒙大拿大學電腦科學系Jesse V. Johnson教授的Computer Simulation and Modeling課程指定為課程輔助閱讀教材。除了疾管局用在傳染病疫情監測，更作為台北市衛生局公衛政策評估工具。</li>
+<li>博士學位修業期間，學業成績優秀，榮獲中華民國斐陶斐學會95年度榮譽會員。</li>
+<li>學年度，參加第一屆交通大學資訊學院年度研究成果海報展與競賽，榮獲入選研究成果海報獎。</li>
+<li>94年榮獲中國科技大學傑出校友獎。</li>
+<li>90年與校內外碩博士生組隊參加第二屆台灣工業銀行創業大賽，榮獲佳作。</li>
+<li>90年參加教育部主辦之「大學校院積體電路電腦輔助設計軟體製作競賽」，榮獲佳作。</li>
+<li>碩士學位修業期間，學業成績優秀，榮獲交通大學資訊科學所傑出研究生獎，獎金新台幣十萬元。</li>
+<li>87學年度第一、二學期，在83位研究生中學期成績均名列第一，獲得兩次書卷獎。</li>
+</ul>
+<h2>實務經歷</h2>
+<ul><li>攻讀博士學位前，總計11年資訊業界實務經驗。退伍後，在著名新加坡外商「宇博電腦股份有限公司」與長榮集團關係企業「環世國際物流股份有限公司」分別擔任資深系統設計師及系統工程師，負責空運進出口承攬業管理系統之分析、設計、開發、維護、擴充等工作。</li>
+<li>擔任鼎眾電腦股份有限公司軟體開發部主任期間，開發數套專案商用軟體 : <br>(1)鬥牛士餐飲業進銷存管理系統、(2)聯合航空機票銷售系統、(3)服飾批發業套裝管理系統、(4)大申貿易會計總帳系統。</li>
+<li>擔任百點連鎖資訊教室教學部主任期間，制定適合學生、家庭主婦、社會人士之各式講義，企劃暨執行「免費教學」等行銷方案，為公司廣增知名度，提高營業額，賺取豐富利潤。</li>
+<li>擔任百點連鎖資訊教室總經理特助期間，制定加盟店公司規章、傳銷組織制度及獎金派放方式。</li>
+<li>代表百點連鎖資訊教室參加全省七家電腦公司（包含皇統資訊股份有限公司）聯合舉辦之「如何辦好一場產品發表會」現場急智演講比賽，在14位參賽者中榮獲第一名（獎金USD$1,000）。</li>
+<li>曾在倚天電腦雜誌刊登「人人都會寫電玩」文章。</li>
+</ul>
+</div></div></div>
+
+<div id="q3" class="container-fluid"><div class="row"><div class="col-sm-12">
+<h1>教學成果</h1>
+<h2>指導學生</h2>
+<table><tbody><tr><th>學年</th><th>學生類型</th><th>學生姓名</th><th>備註</th></tr>
+<tr><td rowspan="2">105</td><td>研究生</td><td>謝昀容</td><td></td></tr><tr><td>大學部軟硬體專題生</td><td>廖華原、張順豪、陳信佑、張廷恩</td><td></td></tr>	
+<tr><td rowspan="3">104</td><td>博士生</td><td>巫昆誼</td><td></td></tr><tr><td>大學部軟硬體專題生</td><td rowspan="2">吳冠億、張峻瑋、張傑夫、黃恩展</td><td>林仲志教授共同指導</td></tr><tr><td>實習課程輔導生</td><td>遵宇科技股份有限公司 林仲志教授負責訪視</td></tr>
+<tr><td rowspan="2">103</td><td>博士生</td><td>馮建凱</td><td>轉考師範大學資訊工程學系</td></tr><tr><td>大學部軟硬體專題生 &amp; 實習課程輔導生</td><td>李銘達、陸辰偉、俞振皓、王俊弦</td><td>日成科技股份有限公司<br>104 學年度長庚大學工學院校外實習課程成果競賽佳作</td></tr>
+<tr><td rowspan="3">102</td><td>研究生</td><td>葉俊孝</td><td></td></tr><tr><td>大學部軟硬體專題生</td><td rowspan="2">陳繹多、周李書佑、張祐真、曹家嘉、戴上傑</td><td>中華電信 Hami Apps 軟體開發暨供應商大賞</td></tr><tr><td>實習課程輔導生</td><td>財團法人台灣電子檢驗中心<br>103 學年度長庚大學工學院分流電路板暑期實習競賽第三名</td></tr>
+<tr><td rowspan="3">101</td><td>研究生</td><td>許仁賢</td><td>2014 資訊技術應用及管理研討會以海報發表<br>「基因演算法尋找 SHA1 碰撞的最佳解」研究成果</td></tr><tr><td>大學部軟硬體專題生</td><td rowspan="2">夏梧凱、蘇弼群、蔡崇元、陳品清</td><td></td></tr><tr><td>實習課程輔導生</td><td>財團法人台灣電子檢驗中心</td></tr>
+<tr><td rowspan="3">100</td><td rowspan="2">研究生</td><td>陳思穎</td><td>2013 資訊科技國際學術研討會口頭發表<br>「探討在社群網站上使用者隱私認知的不一致－以Facebook Applications為例」研究成果</td></tr><tr><td>賴誠信</td><td>2014 資訊技術應用及管理研討會 &amp; 台灣地理資訊學會年會暨學術研討會<br>口頭發表「以基因演算法及時空間權重模式決定自動體外去顫器之台北市便利商店配置地點」研究成果</td></tr><tr><td>大學部軟硬體專題生</td><td>賴利德、鄭子駿、陳俊達、林昆瑋</td><td>軟硬體專題畢業專題成果展 亞軍及最佳人氣獎</td></tr>
+<tr><td rowspan="2">99</td><td>研究生</td><td>黃逢傑</td><td>2012 台灣地理資訊學會年會暨學術研討會口頭發表<br>「以基因演算法結合人口統計資訊配置自動體外去顫器—以台北市為例」研究成果</td></tr><tr><td>大學部軟硬體專題生 &amp; 實習課程輔導生</td><td>張裕群、楊時維、吳易儒、李礡軒</td><td>nVidia台灣分公司</td></tr>
+<tr><td rowspan="3">98</td><td>研究生</td><td>蘇錦華、王怡婷</td><td></td></tr><tr><td rowspan="2">大學部軟硬體專題生 &amp; 實習課程輔導生</td><td>馮楷懿、黃唯量</td><td>健策精密工業股份有限公司</td></tr><tr><td>胡勝揚、許志維、溫翊伶</td><td>致茂電子股份有限公司</td></tr>
+<tr><td rowspan="2">97</td><td>研究生</td><td>施詠宏、李彥寧</td><td></td></tr><tr><td>大學部軟硬體專題生</td><td>王詩涵、朱嘉葦、吳健愷</td><td>中華電信加值應用大賽 網路社群平台發展組</td></tr>
+<tr><td rowspan="2">96</td><td>研究生</td><td>吳耿良、楊嘉偉、蔡孟桓</td><td></td></tr><tr><td>實習課程輔導生</td><td>王薏婷、劉盈亨</td><td>中央研究院資訊科學所電腦系統與通訊實驗室</td></tr><tr><td rowspan="2">95</td><td>研究生</td><td>黃裕浩、蔡明其、陳彥寧</td><td>黃裕浩於 TAAI 第十三屆人工智慧與應用研討會口頭發表<br>「主動擴散式對等資源搜尋機制：透過資訊同步增進搜尋效率」研究成果</td></tr><tr><td>大學部軟硬體專題生</td><td>葉毅凡、楊復堯、張恩碩、簡嘉佑</td><td>中華電信加值應用大賽 網路社群平台發展組</td></tr>
+</tbody></table>
+<h2>教授課程</h2>
+<table><tbody><tr><th>學年 / 學期</th><th>課號 / 名稱</th><th>教學意見調查</th><th>全院百分等級</th></tr>
+<tr><td rowspan="2">105-1</td><td>GT0107 知識管理</td><td></td><td></td></tr>
+<tr><td>IT3019 網路應用軟體設計</td><td></td><td></td></tr>
+<tr><td rowspan="3">104-2</td><td>ITM114 機器學習</td><td>81.10 分</td><td>22.6 %</td></tr>
+<tr><td>ITM063 資料探勘</td><td>82.12 分</td><td>42.5 %</td></tr>
+<tr><td>IT2017 系統程式</td><td>77.26 分</td><td>3.3 %</td></tr>
+<tr><td>104-1</td><td>IT3019 網路應用軟體設計</td><td>83.38 分</td><td>70.6 %</td></tr>
+<tr><td rowspan="3">103-2</td><td>ITM114 機器學習</td><td>83.62 分</td><td>51.9 %</td></tr>
+<tr><td>ITM063 資料探勘</td><td colspan="2">無評鑑資料</td></tr>
+<tr><td>IT2017 系統程式</td><td>81.82 分</td><td>36.3 %</td></tr>
+<tr><td>103-1</td><td>IT3019 網路應用軟體設計</td><td>82.30 分</td><td>46.5 %</td></tr>
+<tr><td rowspan="2">102-2</td><td>ITM063 資料探勘</td><td>84.64 分</td><td>74.0 %</td></tr>
+<tr><td>IT2017 系統程式</td><td>79.06 分</td><td>9.4 %</td></tr>
+<tr><td>102-1</td><td>IT3019 網路應用軟體設計</td><td>79.48 分</td><td>11.6 %</td></tr>
+<tr><td rowspan="2">101-2</td><td>ITM114 機器學習</td><td>82.90 分</td><td>51.7 %</td></tr>
+<tr><td>IT2017 系統程式</td><td>79.66 分</td><td>9.7 %</td></tr>
+<tr><td rowspan="2">101-1</td><td>ITM141 柔性計算</td><td>79.36 分</td><td>5.0 %</td></tr>
+<tr><td>IT3019 網路應用軟體設計</td><td>81.52 分</td><td>34.5 %</td></tr>
+<tr><td rowspan="2">100-2</td><td>ITM063 資料探勘</td><td>82.78 分</td><td>41.1 %</td></tr>
+<tr><td>IT2017 系統程式</td><td>80.26 分</td><td>12.6 %</td></tr>
+<tr><td>100-1</td><td>IT3019 網路應用軟體設計</td><td>83.26 分</td><td>72.9 %</td></tr>
+<tr><td rowspan="2">99-2</td><td>ITM063 資料探勘</td><td>85.24 分</td><td>89.4 %</td></tr>
+<tr><td>IT2017 系統程式</td><td>80.80 分</td><td>31.6 %</td></tr>
+<tr><td>99-1</td><td>IT3019 網路應用軟體設計</td><td>83.08 分</td><td>69.2 %</td></tr>
+<tr><td rowspan="3">98-2</td><td>ITM114 機器學習</td><td rowspan="2">83.77 分</td><td rowspan="2">64.9 %</td></tr>
+<tr><td>ITM063 資料探勘</td></tr>
+<tr><td>IT2017 系統程式</td><td>79.42 分</td><td>7.9 %</td></tr>
+<tr><td rowspan="3">98-1</td><td>ITM075 感染症傳播動態建模與模擬</td><td rowspan="2">86.22 分</td><td rowspan="2">96.5 %</td></tr>
+<tr><td>ITM141 柔性計算</td></tr>
+<tr><td>IT3019 網路應用軟體設計</td><td colspan="2">免教學評鑑</td></tr>
+<tr><td rowspan="3">97-2</td><td>ITM114 機器學習</td><td rowspan="2">81.37 分</td><td rowspan="2">31.10 %</td></tr>
+<tr><td>ITM063 資料探勘</td></tr>
+<tr><td>IT2017 系統程式</td><td>78.64 分</td><td>6.2 %</td></tr>
+<tr><td rowspan="4">97-1</td><td>ITM085 感染症之生物資訊分析實習</td><td rowspan="2">83.20 分</td><td rowspan="2">61.70 %</td></tr>
+<tr><td>ITM141 柔性計算</td></tr>
+<tr><td>IT3004 物件導向軟體設計</td><td rowspan="2">82.66 分</td><td rowspan="2">51.10 %</td></tr>
+<tr><td>IT3019 網路應用軟體設計</td></tr>
+<tr><td rowspan="3">96-2</td><td>ITM146 分散式作業系統</td><td rowspan="3" colspan="2">免教學評鑑</td></tr>
+<tr><td>ITM063 資料探勘</td></tr>
+<tr><td>IT2013 組合語言與系統程式</td></tr>
+<tr><td rowspan="3">96-1</td><td>ITM141 柔性計算</td><td rowspan="3">98.44 分</td><td rowspan="3">100 %</td></tr>
+<tr><td>IT3004 物件導向軟體設計</td></tr>
+<tr><td>IT3019 網路應用軟體設計</td></tr>
+<tr><td rowspan="3">95-2</td><td>ITM141 柔性計算</td><td rowspan="3" colspan="2">免教學評鑑</td></tr>
+<tr><td>ITM097 資料庫設計</td></tr>
+<tr><td>IT2013 組合語言與系統程式</td></tr>
+<tr><td rowspan="3">95-1</td><td>ITM063 資料探勘</td><td rowspan="3">82.64 分</td><td rowspan="3">42.37 %</td></tr>
+<tr><td>IT3004 物件導向軟體設計</td></tr>
+<tr><td>IT3019 網路應用軟體設計</td></tr>
+</tbody></table>
+</div></div></div>
+
+<div id="q4" class="container-fluid"><div class="row"><div class="col-sm-12">
+<h1>研究發表</h1>
+<h2>著作統計</h2>
+<table><tbody><tr><th>年度</th><th>國際期刊</th><th>國際會議</th><th>專書專章</th><th>國內會議</th><th>專題演講</th><th>合計</th></tr>
+<tr><td>20 16</td><td>1</td><td>1</td><td> </td><td> </td><td> </td><td>2</td></tr>
+<tr><td>20 15</td><td>2</td><td>1</td><td> </td><td> </td><td> </td><td>3</td></tr>
+<tr><td>20 14</td><td>7</td><td>4</td><td> </td><td>3</td><td>1</td><td>15</td></tr>
+<tr><td>20 13</td><td>2</td><td>1</td><td> </td><td>1</td><td>3</td><td>7</td></tr>
+<tr><td>20 12</td><td>2</td><td>2</td><td> </td><td>2</td><td>1</td><td>7</td></tr>
+<tr><td>20 11</td><td>4</td><td>4</td><td> </td><td>1</td><td>2</td><td>11</td></tr>
+<tr><td>20 10</td><td>4</td><td>4</td><td> </td><td> </td><td>1</td><td>9</td></tr>
+<tr><td>20 09</td><td>3</td><td>3</td><td>3</td><td> </td><td>3</td><td>12</td></tr>
+<tr><td>20 08</td><td>1</td><td>3</td><td>2</td><td>2</td><td>2</td><td>10</td></tr>
+<tr><td>20 07</td><td>2</td><td>3</td><td>1</td><td> </td><td>2</td><td>8</td></tr>
+<tr><td>20 06</td><td>6</td><td>8</td><td>1</td><td>3</td><td> </td><td>18</td></tr>
+<tr><td>20 05</td><td>2</td><td>4</td><td>1</td><td>2</td><td> </td><td>9</td></tr>
+<tr><td>20 04</td><td>1</td><td>5</td><td>1</td><td> </td><td> </td><td>7</td></tr>
+<tr><td>20 03</td><td> </td><td> </td><td> </td><td> </td><td>1</td><td>1</td></tr>
+<tr><td>20 02</td><td> </td><td> </td><td>1</td><td> </td><td> </td><td>1</td></tr>
+<tr><td>20 01</td><td> </td><td> </td><td> </td><td>1</td><td> </td><td>1</td></tr>
+<tr><td>20 00</td><td> </td><td> </td><td>1</td><td> </td><td> </td><td>1</td></tr>
+<tr><th>小計</th><th>37</th><th>43</th><th>11</th><th>15</th><th>16</th><th>121</th></tr>
+</tbody></table>
+<h2>著作目錄</h2>
+<h3>SCI/SSCI/EI等級期刊論文</h3>
+<ol><h4>長庚大學資訊工程學系正教授時期（2015.08.01開始）</h4>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHVFZnNmF3ZUhNelk/view">Fu Y.H., Huang C.Y.*, and Sun C.T.（2016）Using a Two-Phase Evolutionary Framework to Select Multiple Network Spreaders Based on Community Structure. Physica A: Statistical Mechnics and Its Applications, 461, 840-853.（SCI, IF: 1.785, Rank: 23/79 [30 %] in Physics, Multidisciplinary, EI)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHVmtTZmI3OW0zbmM/view">Fu Y.H., Huang C.Y.*, and Sun C.T.（2015）Using Global Diversity and Local Topology Features to Identify Influential Network Spreaders. Physica A: Statistical Mechanics and Its Applications, 433, 344-355.（SCI, IF: 1.785, Rank: 23/79 [30 %] in Physics, Multidisciplinary, EI)</a></li>
+<h4>長庚大學資訊工程學系副教授時期</h4>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHcHF5SnV3N2owSEU/view">Huang C.Y.（2015）An Agent-based Epidemic Simulation of Social Behaviors Affecting HIV Transmission among Taiwanese Homosexuals. Computational and Mathematical Methods in Medicine, vol. 2015, Article ID 867264, 10 pages.（SCI, IF: 0.887, Rank: 42/56 [75 %] in Mathematical and Computational Biology)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHbHI0bm5uVW1aUGs/view">Lee C.L., Huang C.Y.*, Hsiao T.C., Wu C.Y., Chen Y.C, and Wang I.C.（2014）Impact of Vehicular Networks on Emergency Medical Services in Urban Aras. International Journal of Environmental Research and Public Health, 11(11), 11348-11370.（SCI, IF: 2.035, Rank: 101/225 [45 %] in Environmental Sciences)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHVy1uYmNEamtuWWc/view">Fu Y.H., Huang C.Y.*, and Sun C.T.（2014）Identifying Super-Spreader Nodes in Complex Networks. Mathematical Problems in Engineering, vol. 2014, Article ID 675713, 8 pages.（SCI, IF: 0.644, Rank 59/85 [70 %] in Engineering, Multidisciplinary)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHS1NKRUdkZ1VIRXM/view">Huang C.Y. and Wen T.H.（2014）Optimal Installation Locations for Automated External Defibrillators in Taipei 7-Elevens: Using GIS and a Genetic Algorithm with a New Stirring Operator. Computational and Mathematical Methods in Medicine, vol. 2014, Article ID 241435, 12 pages. doi:10.1155/2014/241435.（SCI, IF: 0.887, Rank: 42/56 [75 %] in Mathematical and Computational Biology)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHbkhVeVdfOGdPdzQ/view">Huang C.Y. and Lee C.L.（2014）Influences of Agents with a Self-Reputation Awareness Component in an Evolutionary Spatial IPD Game. PLoS One, 9(6), e99841.（SCI, IF: 3.057, Rank: 11/62 [18 %] in Multidisciplinary Sciences)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHT0NUUG9aYVF1Xzg/view">Huang C.Y. and Wen T.H.（2014）A Novel Private Attitude and Public Opinion Dynamics Model for Simulating Pluralistic Ignorance and Minority Influence. Journal of Artificial Societies and Social Simulation, 17(3), 8.（SSCI, IF: 1.101, Rank: 28/93 [31 %] in Social Sciences, Interdisciplinary)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHaGFaMkVSbF8xRUE/view">Wang S.W., Huang C.Y.*, and Sun C.T.（2014）Modeling Self-perception Agents in an Opinion Dynamics Propagation Society. Simulation: Transactions of the Society for Modeling and Simulation International, 90(3), 238-248.（SCI, IF: 0.640, Rank: 77/106 [73 %] in Computer Science, Software Engineering, EI)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHY0l6TUlxSm1vdmM/view">Wang S.W., Huang C.Y.*, and Sun C.T.（2014）A Proposal for Smart Agents with Adjusting Self-Reputation Capability for Preventing Fraud in Multi-Agent Societies. Journal of Information Science and Engineering, 30(2), 313-332.（SCI, IF: 0.392, Rank: 133/143 [93 %] in Computer Science, Information Systems)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHcnVUSnIzWW5OTFU/view">Huang C.Y.*, Wen T.H., and Tsai Y.S.（2013）FLUed: A Novel Four-Layer Model for Simulating Epidemic Dynamics and Assessing Intervention Policies. Journal of Applied Mathematics, vol. 2013, Article ID 325816, 20 pages. doi:10.1155/2013/325816.（SCI, IF: 0.834, Rank: 104/247 [43 %] in Mathematics, Applied)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHUzNwQ2xVQnM1ajA/view">Huang C.Y.*, Lee C.L., Wen T.H., and Sun C.T.（2013）A Computer Virus Spreading Model Based on Resource Limitations and Interaction Costs. The Journal of Systems and Software, 86(3), 801-808.（SCI, IF: 1.424, Rank: 31/105 [30 %] in Computer Science, Theory and Methods)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHNENXZUxaWlZuX2s/view">Huang C.Y.* and Sun C.T.（2012）Resource Limitation and Cost Influences on Computer Virus Epidemic Dynamics and Tipping Points. Discrete Dynamics in Nature and Society, vol. 2012, Article ID 473136, 15 pages. doi:10.1155/2012/473136.（SCI, IF: 0.646, Rank: 35/62 [57 %] in Multidisciplinary Sciences)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHbW55UFo2cEV4S3M/view">Tsai Y.S., Ko P.C.I., Huang C.Y., and Wen T.H.（2012）Optimizing Locations for the Installation of Automated External Defibrillators（AEDs）in Urban Public Streets Through the Use of Spatial and Temporal Weighting Schemes. Applied Geography, 35(1-2), 394-404.（SSCI, IF: 2.565, Rank: 10/77 [13 %] in Geography)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHQ1MxMU94UFY2S2s/view">Huang C.Y.*, Tzou P.J., and Sun C.T.（2011）Collective Opinion and Attitude Dynamics Dependency on Informational and Normative Social Influences. Simulation: Transactions of the Society for Modeling and Simulation International, 87(10), 875-892.（SCI, IF: 0.640, Rank: 77/106 [73 %] in Computer Science, Software Engineering, EI)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHZWRTckJ3bzlGQVU/view">Huang C.Y.*, Wang S.W., and Sun C.T.（2011）Using Self-Aware Agents to Analyze Public Self-Consciousness in the Iterated Prisoner’s Dilemma. Simulation: Transactions of the Society for Modeling and Simulation International, 87(7), 600-615.（SCI, IF: 0.640, Rank: 77/106 [73 %] in Computer Science, Software Engineering, EI)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHSmctQjRuRjdZTEk/view">Tsai Y.S., Huang C.Y., Wen T.H., Sun C.T., and Yen M.Y.（2011）Integrating Epidemic Dynamics with Daily Commuting Networks: Building a Multilayer Framework to Assess Influenza A（H1N1）Intervention Policies. Simulation: Transactions of the Society for Modeling and Simulation International, 87(5), 385-405.（SCI, IF: 0.640, Rank: 77/106 [73 %] in Computer Science, Software Engineering, EI)</a></li>
+<h4>長庚大學資訊工程學系助理教授兼資訊中心教學服務組組長時期</h4>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHTUtQWTJmcEoxMlU/view">Tsai Y.S., Huang C.Y.*, and Sun C.T.（2011）Response to Wilson’s Note on “Influences of Resource Limitations and Transmission Costs on Epidemic Simulations and Critical Thresholds in Scale-Free Networks”. Simulation: Transactions of the Society for Modeling and Simulation International, 87(3), 267-270.（SCI, IF: 0.640, Rank: 77/106 [73 %] in Computer Science, Software Engineering, EI)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHOGszYjhSN29PMG8/view">Huang C.Y., Tsai Y.S., and Wen T.H.（2010）Simulations for Epidemiology and Public Health Education. Journal of Simulation. 4(1), 68-80.（SCI, IF: 1.164, Rank: 45/82 [55 %] in Operations Research and Management Science, EI)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHUW1ielJEOHB4WmM/view">Huang C.Y., Tsai Y.S., and Wen T.H.（2010）A Network-Based Simulation Architecture for Studying Epidemic Dynamics. Simulation: Transactions of the Society for Modeling and Simulation International. 86(5/6), 351-368.（SCI, IF: 0.640, Rank: 77/106 [73 %] in Computer Science, Software Engineering, EI)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHeWVvc01RM3ZkYWs/view">Tsai Y.S. and Huang C.Y.*（2010）Effects of Resources and Costs on Diffusion Dynamics. International Journal of Intelligent Information and Database Systems, 4(1), 19-42.(EI)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHRERXVk9tYTVlSlE/view">Huang C.Y. and Tsai Y.S.（2010）Effects of Friend-Making Resources/Costs and Remembering on Acquaintance Networks. Physica A: Statistical Mechanics and Its Applications, 389(3), 604-622.（SCI, IF: 1.772, Rank: 23/79 [30 %] in Physics, Multidisciplinary, EI)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHVWdqZDkyMFlvZkk/view">Huang C.Y., Tsai Y.S., Sun C.T., Hsieh J.L., and Cheng C.Y.（2009）Influences of Resource Limitations and Transmission Costs on Epidemic Simulation and Critical Thresholds in Scale-Free Networks. Simulation: Transactions of the Society for Modeling and Simulation International, 85(3), 205-219.（SCI, IF: 0.640, Rank: 77/106 [73 %] in Computer Science, Software Engineering, EI)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHVkxwel9wNmhpc2s/view">Hsieh J.L., Huang C.Y.*, Sun C.T., Tsai Y.S., and Kao G.Y.M.（2009）Learning to Build Network-Oriented Epidemic Simulation Models in Epidemiology Education. International Journal of Simulation and Process Modelling, 5(1), 31-41.(EI)</a></li>
+<li>Huang C.Y.（2009）Teaching Epidemic Simulation and Policy-Making to Novice Researchers. International Journal of Instructional Media, 36(1), 107-117.</li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHUzR3N3ZLUER5djQ/view">Cheng C.Y., Huang C.Y.*, and Sun C.T.（2008）Mining Bridge and Brick Motifs from Complex Biological Networks for Functionally and Statistically Significant Discovery. IEEE Transactions on Systems, Man, and Cybernetics—Part B: Cybernetics, 38(1), 17-24.（SCI, IF: 2.361, Rank: 2/17 [12 %] in Computer Science, Cybernetics, EI)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHU0NLN2s1ekpGb0k/view">Huang C.Y., Cheng C.Y., and Sun C.T.（2007）Bridge and Brick Network Motifs: Identifying Significant Building Blocks from Complex Biological Systems. Artificial Intelligence in Medicine, 41(2), 117-127.（SCI, IF: 1.960, Rank: 28/94 [30 %] in Computer Science, Artificial Intelligence, EI)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHWW9pVkNoNkFOZ3M/view">Huang C.Y., Sun C.T., Cheng C.Y., and Hsieh J.L.（2007）Bridge and Brick Motifs in Complex Networks. Physica A: Statistical Mechanics and Its Applications, 377(1), 340-350.（SCI, IF: 1.772, Rank: 23/79 [30 %] in Physics, Multidisciplinary, EI)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHTzh6SXJzWHl4Rmc/view">Hsieh J.L., Sun C.T., Kao Y.M.G., and Huang C.Y.*（2006）Teaching through Simulation: Epidemic Dynamics and Public Health Policies. Simulation: Transactions of the Society for Modeling and Simulation International, 82(11), 731-759.（SCI, IF: 0.640, Rank: 77/106 [73 %] in Computer Science, Software Engineering, EI)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHbjdGTXNnVkQ2LWs/view">Chen D.J., Tsai M.J., and Huang C.Y.*（2006）UI Design Patterns Generator for Pervasive Device. WSEAS Transactions on Computers, 5(9), 2114-2121.(EI)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHdzNJVEdXRDVyWVE/view">Chen D.J., Tsai M.J., and Huang C.Y.*（2006）Visual Based Software Construction: Visual Requirement Authoring Tool and Visual Program Generator. WSEAS Transactions on Systems, 5(8), 1881-1888.(EI)</a></li>
+<h4>元培科技大學資訊工程學系講師及助理教授兼系主任時期</h4>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHcHJFSUdxRkllTXc/view">Huang C.Y., Sun C.T., and Chu Y.W.（2006）A Co-adaptive Approach to XCS Classifier Systems. WSEAS Transactions on Systems, 5(2), 388-394.(EI).</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHakxqNEJveXVIRXM/view">Chu Y.W., Sun C.T., and Huang C.Y.*（2006）Regularity of Protein Secondary Structures and Its Prediction. WSEAS Transactions on Systems, 5(2), 380-385.(EI).</a></li>
+<h4>交通大學資訊工程學系博士生暨中國科技大學資訊工程學系講師時期</h4>
+<li>Huang C.Y., Hsieh J.L., Sun C.T., and Cheng C.Y.（2006）Teaching Epidemic and Public Health Policies through Simulation. WSEAS Transactions on Information Science and Applications, 3(5), 899-904.(EI)</li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHUEs4WkZDSmJVeG8/view">Huang C.Y., Sun C.T., Hsieh J.L., Chen Y.M.A., and Lin H.（2005）A Novel Small-World Model: Using Social Mirror Identities for Epidemic Simulations. Simulation: Transactions of The Society for Modeling and Simulation International, 81(10), 671-699.（SCI, IF: 0.640, Rank: 77/106 [73 %] in Computer Science, Software Engineering, EI)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHRkhZaFd5bmFDbHM/view">Huang C.Y., Sun C.T., and Lin H.C.（2005）Influence of Local Information on Social Simulation in Small-World Network Models. Journal of Artificial Societies and Social Simulation, 8(4).（SSCI, IF: 1.101, Rank: 28/93 [31 %] in Social Sciences, Interdisciplinary)</a></li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHWE4tRlRkakIyeWM/view">Huang C.Y., Sun C.T., Hsieh J.L., and Lin H.（2004）Simulating SARS: Small-World Epidemiological Modeling and Public Health Policy Assessments. Journal of Artificial Societies and Social Simulation, 7(4).（SSCI, IF: 1.101, Rank: 28/93 [31 %] in Social Sciences, Interdisciplinary)</a></li>
+</ol>
+<h3>國際會議論文</h3>
+<ol><li>Fu Y.H., Huang C.Y.*, and Sun C.T.（2016）Identifying Network Spreaders based on Community Structure by a Two-Phase Genetic Algorithm. In Proceedings of The 8th International High Speed Intelligent Communication Forum &amp; 2016 International Conference on Communication Problem-Solving（HSIC &amp; ICCP’16), Taipei, Taiwan.</li>
+<li>Fu Y.H., Huang C.Y.*, and Sun C.T.（2016）Using Network Topology and Rule-Based Strategy to Identify Community Structure in Social Networks. In Proceedings of the 4th International Conference on Industrial Application Engineering（ICIAE’15), Beppu, Japan.</li>
+<li>Huang C.Y. and Lee C.L.（2015）Self-Reputation Awareness Agents in Spatial IPD Game. In Proceedings of the 3rd International Conference on Industrial Application Engineering（ICIAE’15), Kitakyushu, Japan.</li>
+<li>Huang C.Y., Fu Y.H., and Sun C.T.（2014）Identify influential social network spreaders. In Proceedings of IEEE International Conference on Data Mining（ICDM’14), Shenzhen, China.</li>
+<li>Lee C.L., Huang C.Y., Hsiao T.C., Wu C.Y., Chen Y.C., and Wang I.C.（2014）Impact of Vehicular Ad Hoc Networks on Emergency Medical Services in Urban Areas. In Proceedings of 2014 Asia Global Land Project Conference（GLP’14), Taipei, Taiwan.</li>
+<li>Fu Y.H., Huang C.Y., and Sun C.T.（2014）Using Global Diversity and Local Features to Identify Influential Social Network Spreaders. In Proceedings of International Workshop on Curbing Collusive Cyber-gossips in Social Networks（C3’04）joint with IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining（ASONAM’14), Beijing, China.</li>
+<li>Wen T.H. and Huang C.Y.（2014）Simulating Epidemic Dynamics and Assessing Intervention Policies. In Proceedings of International Conference on e-Commerce, e-Administration, e-Society, e-Education, and e-Technology（e-CASE &amp; e-Tech’14), Nagoya, Japan. </li>
+<li>Wen T.H., Tsai Y.S., Ko P.C.I., and Huang C.Y.（2013）Using a Modified Genetic Algorithm in Identify Locations for Automated External Defibrillators. In Proceedings of International Conference on e-Commerce, e-Administration, e-Society, e-Education, and e-Technology（e-CASE &amp; e-Tech’13), Kitakyushu, Japan.（Best Paper Award)</li>
+<li>Huang C.Y.（2012）Self-Aware Intelligent Agents in the Prisoner’s Dilemma. In Proceedings of Shanghai International Conference on Social Sciences（SICSS’12), Shanghai, China.（Session Chair)</li>
+<li>Wen T.H, Tsai Y.S., and Huang C.Y.（2012）Integration of Spatial and Temporal Variations of OHCA Patients and Emergency Service Facilities for Evaluating Potential Locations of Automated External Defibrillators（AED）in High Populated Urban Settings. In Proceedings of Global Change, Adaptation and Risk Management（GeoInformatics’12), Hong Kong.</li>
+<li>Huang C.Y., Tsai Y.S., and Wen T.H.（2011）Learning through Network-Based Simulations for Epidemiology Education. In Proceedings of Shanghai International Conference on Social Sciences（SICSS’11), Shanghai, China.</li>
+<li>Huang C.Y., Tsai Y.S., and Wen T.H.（2011）A Multilayer Framework to Assess Influenza Intervention Policies. In Proceedings of International Conference on Future Computer Sciences and Application（ICFCSA’11), Hong Kong, 132-136.</li>
+<li>Huang C.Y., Wang S.W., and Sun C.T.（2011）Self-Aware Intelligent Agents in the Prisoner’s Dilemma. In Proceedings of International Conference on Future Computer Sciences and Application（ICFCSA’11), Hong Kong, 127-131.</li>
+<li>Huang C.Y., Wang S.W., and Sun C.T.（2011）Modeling Agent Self-Awareness, Individual Performance and Collaborative Behavior. In Proceedings of IEEE 9th World Congress on Intelligent Control and Automation（WCICA’11), Taipei, Taiwan, 759-763.</li>
+<li>Huang C.Y.（2010）Influence of Self-Aware Agents with Public Self-Consciousness in the Iterated Prisoner’s Dilemma. In Proceedings of 9th WSEAS International Conference on System Science and Simulation in Engineering（ICOSSSE’10), Iwate, Japan, 133-138.</li>
+<li>Tsai Y.S., Huang C.Y., Wen T.H., and Sun C.T.（2010）A Multilayer Epidemiological Model Integrating Daily Commuting Network. In Proceedings of 9th WSEAS International Conference on System Science and Simulation in Engineering（ICOSSSE’10), Iwate, Japan, 77-83.</li>
+<li>Huang C.Y. and Wen T.H.（2010）A Multilayer Epidemic Simulation Framework Integrating Geographic Information System with Traveling Networks. In Proceedings of IEEE 8th World Congress on Intelligent Control and Automation（WCICA’10), Jinan, China, 2002-2007.</li>
+<li>Huang C.Y., Tsai Y.S., Wen T.H., and Sun C.T.（2010）A Multilayer Epidemic Simulation Framework Integrating Geographic Information System with Traveling Networks. In Proceedings of 29th IASTED International Conference on Modelling, Identification and Control（MIC’10), Innsbruck, Austria, 357-363.</li>
+<li>Wen T.Z., Tsai Y.S., Huang C.Y., and Yen M.Y.（2009）Multi-Layer Epidemic Dynamics Simulation（MEDSIM）for Spatial Transmission of Acute Respiratory Diseases. In Proceedings of 2009 Biosurveillance and Biosecurity Workshop International Perspectives, Taipei, Taiwan, R.O.C.</li>
+<li>Wang S.W., Sun C.T., and Huang C.Y.（2009）A Study of Agents with Self-awareness for Collaborative Behavior. In Proceedings of 14th Portuguese Conference on Artificial Intelligence（EPIA’09), Aveiro, Portugal, 425-435.</li>
+<li>Huang C.Y., Tsai Y.S., and Sun C.T.（2009）Effects of Resource and Remembering on Social Networks. In Proceedings of 8th International Conference on Autonomous Agents and Multiagent Systems（AAMAS’09), Budapest, Hungary, 837-842.</li>
+<li>Tsai Y.S., Sun C.T., and Huang C.Y.（2008）Epidemic Dynamics and Thresholds in Agent-Based Simulations under Realistic Resources and Cost Conditions. In Proceedings of IEEE/WIC/ACM International Conference on Intelligent Agent Technology（WI-IAT’08), Sydney, Australia, 65-70.</li>
+<li>Huang C.Y., Sun C.T., Cheng C.Y., and Tsai Y.S.（2008）Resource, Costs and Epidemic Critical Thresholds in Scale-Free Social Networks. In Proceedings of IEEE 7th World Congress on Intelligent Control and Automation（WCICA’08), Chongging, China, 1874-1879.</li>
+<li>Huang C.Y., Sun C.T., Cheng C.Y., and Tsai Y.S.（2008）Resource Limitations, Transmission Costs and Critical Thresholds in Scale-Free Networks. In Proceedings of 7th International Conference on Autonomous Agents and Multiagent Systems（AAMAS’08), Estoril, Portugal, 1121-1128.</li>
+<li>Huang C.Y., Hsieh J.L., Sun C.T., and Shih F.M.（2007）Mining Domain Ontological Information from Online Publications. In Proceedings of 6thd WSEAS International Conference on E-Activities（E-ACTIVITIES’07), Puerto De La Cruz, Tenerife, Canary Islands, Spain, 153-158.</li>
+<li>Cheng C.Y., Huang C.Y., and Sun C.T.（2007）Combining Motifs and Small-World Properties to Explore Complex Networks in Local and Global Views, In Proceedings of 2007 World Congress in Computer Science, Computer Engineering, and Applied Computing（WORLDCOMP’07), Las Vegas, Nevada, USA, 842-845.</li>
+<li>Huang C.Y., Cheng C.Y., and Sun C.T.（2007）Mining Bridge and Brick Network Motifs, In Proceedings of International Conference on Machine Learning and Data Mining（MLDM’07）Poster, Leipzig, Germany, 134-143.</li>
+<li>Sun C.T., Hsieh J.L., and Huang C.Y.（2006）Using Evolving Agents to Critique Subjective Music Compositions. In Proceedings of IEEE International Conference on Computational Intelligence and Security（CIS’06), Guangzhou, China, 474-480.</li>
+<li>Chen D.J., Tsai M.J., and Huang C.Y.（2006）Generating UI for Pervasive Devices Using Pattern-Based Approach. In Proceedings of 10th International Conference on Computers（CSCC’06), Athens, Greece, 837-843.</li>
+<li>Chen D.J., Tsai M.J., and Huang C.Y.（2006）Visual-Based Software Construction Methodology. In Proceedings of 10th International conference on Computers（CSCC’06), Athens, Greece, 831-836.</li>
+<li>Hsieh J.L., Sun C.T., and Huang C.Y.（2006）Implementing CASMIM for Epidemic Simulations. In Proceedings of First World Congress on Social Simulation（WCSS’06), Kyoto, Japan, 297-304.</li>
+<li>Huang C.Y., Sun C.T., Shih F.M., and Hsieh J.L.（2006）Mining Domain Ontological Information from Online Publications. In Proceedings of IADIS International Conference e-Society 2006, Dublin, Ireland, 433-440.</li>
+<li>Hsieh J.L., Sun C.T., and Huang C.Y.（2006）Using Evolving Agents to Critique Subjective Data: Recommending Music. In Proceedings of IEEE Congress on Evolutionary Computation（CEC’06), Vancouver, BC, Canada, 406-413.</li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHTFE1STVHWjZVN0E/view">Huang C.Y., Hsieh J.L., Sun C.T., and Cheng C.Y.（2006）Teaching Epidemic Simulation and Policy-Making to Novice Researchers. In Proceedings of International Conference on Automatic Control, Modeling and Simulation（ACMOS’06), Prague, Czech Republic, 393-398.</a></li>
+<li>Cheng C.Y., Huang C.Y., Sun C.T., and Hsieh J.L.（2006）Bridge and Brick Network Motifs. In Proceedings of IEEE 6th World Congress on Intelligent Control and Automation（WCICA’06), Dalian, China, 1222-1226.</li>
+<li>Huang C.Y., Sun C.T., and Chu Y.W.（2005）Using a Coevolution Mechanism with a Dyna Architecture for Parameter Adaptation in XCS Classifier Systems. In Proceedings of International Conference on Computational Intelligence, Man-Machine Systems and Cybernetics（CIMMACS’05), Miami, Florida, USA, 173-178.</li>
+<li>Chu Y.W., Sun C.T., and Huang C.Y.（2005）Finding Regularity in Protein Secondary Structures using a Cluster-based Genetic Algorithm. In Proceedings of International Conference on Computational Intelligence, Man-Machine Systems and Cybernetics（CIMMACS’05), Miami, Florida, USA, 179-183.</li>
+<li>Sumodhee C., Hsieh J.L., Sun C.T., and Huang C.Y., and Chen Y.M.A.（2005）Impact of Social Behaviors on HIV Epidemic: A Computer Simulation View. In Proceedings of IEEE Computational Intelligence for Modelling Control and Automation（CIMCA’05), Vienna, Austria, 550-556.</li>
+<li>Hsieh J.L., Huang C.Y., Sun C.T., and Chen Y.M.A.（2005）Using the CAMIM Small-World Epidemic Model to Analyze Public Health Policies. In Proceedings of Western Multiconference on Health Sciences Simulation, New Orleans, LA, USA, 63-69.</li>
+<li>Huang C.Y. and Sun C.T.（2004）Self-Adaptive Routing Based on Learning Classifier Systems. In Proceedings of IEEE Congress on Evolutionary Computation（CEC’04), Portland, Oregon, USA, 678-682.</li>
+<li><a target="_blank" href="https://drive.google.com/file/d/0B2C9hdWHlsqHRkhZaFd5bmFDbHM/view">Lin H.C., Huang C.Y., and Sun C.T.（2004）Influence of Local Information on Social Simulations under the Small-World Model, In Proceedings of IEEE Cyber Worlds, Tokyo, Japan, 356-360.</a></li>
+<li>Huang C.Y. and Sun C.T.（2004）Co-Adaptive Learning Classifier Systems Based on Coevolution within Dyna Architecture. In Proceedings of IEEE 5th World Congress on Intelligent Control and Automation（WCICA’04), Hangzhou, China, 2179-2183.</li>
+<li>Huang C.Y., Sun C.T., Yu C.H., and Chen C.F.（2004）Self-Adaptive Routing Method Based on Learning Classifier Systems. In Proceedings of IEEE 5th World Congress on Intelligent Control and Automation（WCICA’04), Hangzhou, China, 417-421.</li>
+<li>Yu C.H., Wu C.M., and Huang C.Y.（2004）A Study of Using Automatic Text Indexing to Analyze Web Browsing Behavior. In Proceedings of IEEE World Congress on Intelligent Control and Automation（WCICA’04), Hangzhou, China, 3991-3995.</li>
+</ol>
+<h3>專章＆學位＆其它論文</h3>
+<ol><li>Wen T.H., Tsai Y.S., Huang C.Y., and Yen M.Y.（2009）Multi-Layer Epidemic Dynamics Simulation（MEDSim）for Spatial Transmission of Acute Respiratory Diseases. Intelligence and Security Informatics: Biosurveillance and Biosecurity, New York: West Publishing Co.（ISBN: 978-1-60317-007-9)</li>
+<li>黃崇源，孫春在，謝吉隆，林鶴玲（2009）第17章─模擬非典 : 基於小世界網絡的傳染病模型和公共衛生政策評估。聖昭瀚，張軍，杜建國（編輯）社會科學計算實驗理論與應用，中國上海 : 上海三聯出版社（南京大學工程管理學院研究所課程教科書，2012年江蘇省第十二屆哲學社會科學優秀成果一等獎，在環境行為與環境管理研究領域獲得國內同行的高度評價）。</li>
+<li>Huang C.Y.（2009）Teaching Epidemic Simulation and Policy-Making to Novice Researchers. International Journal of Instructional Media, 36(1), 107-117.</li>
+<li>Huang C.Y., Cheng C.Y., and Sun C.T.（2008）Resource and Remembering Influences on Acquaintance Networks. Lecture Notes in Artificial Intelligence（LNAI), 4953, 281-291.</li>
+<li>Huang C.Y., Cheng C.Y., and Sun C.T.（2008）Resource Limitations, Transmission Costs and Critical Thresholds in Scale-Free Networks. Lecture Notes in Artificial Intelligence（LNAI), 4953, 485-494.</li>
+<li>Sun C.T., Hsieh J.L., and Huang C.Y.*（2007）Using Evolving agents to Critique Subjective Music Compositions. Lecture Notes in Artificial Intelligence（LNAI), 4456, 336-346.</li>
+<li>Huang C.Y., Hsieh J.L., and Sun C.T.（2006）Evaluating Subjective Compositions by the Cooperation between Human and Adaptive Agents. Lecture Notes in Artificial Intelligence（LNAI), 4293, 974-984.（SCIE, IF:0.513, Rank: 53/70 [76 %] in Computer Science, Theory and Methods, EI)</li>
+<li>Huang C.Y.（2005）Small-World Epidemiological Modeling and Public Health Policy Assessment: Using the Social Mirror Identity Concept and Local Information for Network-based Epidemic Simulations: National Chiao Tung University, Hsinchu, Taiwan.（Ph.D. Dissertation)</li>
+<li>Huang C.Y. and Sun C.T.（2004）Parameter Adaptation within Co-adaptive Learning Classifier Systems. Lecture Notes in Computer Sciences（LNCS), 3103, 774-784.</li>
+<li>黃崇源，陳尚寬（2002）網際網路與資料庫的對話。青草湖社區大學E化工作坊，新竹市，台灣。</li>
+<li>Huang C.Y.（2000）Classifier System with Long Term Memory and Its Learning through Analogical Recognition: National Chiao Tung University, Hsinchu, Taiwan.（Master Thesis)</li>
+</ol>
+<h3>國內研討會論文</h3>
+<ol><li>賴誠信，黃崇源（2014）以基因演算法及時空間權重模式決定自動體外去顫器之台北市便利商店，2014年台灣地理資訊學會年會暨學術研討會，高雄，台灣。</li>
+<li>許仁賢，黃崇源（2014）基因演算法尋找SHA1碰撞的最佳解，2014年資訊技術應用及管理研討會，義守大學，高雄，台灣。</li>
+<li>賴誠信，黃崇源（2014）以基因演算法及時空間權重模式決定自動體外去顫器之台北市便利商店，2014年資訊技術應用及管理研討會，義守大學，高雄，台灣。</li>
+<li>黃崇源，陳思穎（2013）探討在社群網站上使用者隱私認知的不一致─以Facebook Applications為例，2013年資訊科技應用國際學術研討會，中國科技大學湖口校區，新竹，台灣。</li>
+<li>黃崇源，黃裕浩（2012）主動擴散式對等資源搜尋機制 : 透過資訊同步增進搜尋效率，第十七屆行動計算研討會，新北市三峽區大板根森林溫泉渡假村，新北市，台灣。</li>
+<li>黃崇源，黃逢傑（2012）以基因演算法結合人口統計資訊配置自動體外去顫器—以台北市為例，2012台灣地理資訊年會暨學術研討會，逢甲大學，台中，台灣。</li>
+<li>陳璽文，孫春在，黃崇源，溫在弘（2011）網路拓樸的遞移性 : 以傳染病的風險擴散為例，第二十八屆組和數學與計算理論研討會，澎湖科技大學，馬公市，澎湖，台灣。</li>
+<li>黃崇源，黃裕浩（2008）主動擴散式對等資源搜尋機制 : 透過資訊同步增進搜尋效率，TAAI 2008 第十三屆人工智慧與應用研討會，淡江大學蘭陽校區，宜蘭，台灣。</li>
+<li>鄭家胤，黃崇源，孫春在（2008）複雜網路之橋接式與磚式基調。生物資訊研討會，中華大學，新竹，台灣。</li>
+<li>黃崇源，鄭家胤（2006）橋接式與磚式網絡基調。2006中華決策科學學會年會暨學術研討會，新竹市，台灣，101頁。</li>
+<li>黃崇源，孫春在（2006）基於分類元系統之自適應路由路徑選擇機制。2006中華決策科學學會年會暨學術研討會，新竹市，台灣，102頁。</li>
+<li>黃崇源，孫春在（2006）共適應學習分類元系統。2006中華決策科學學會年會暨學術研討會，新竹市，台灣，103頁。</li>
+<li>黃崇源，孫春在，謝吉隆，陳宜民，林鶴玲（2005）小世界流行病學建模與公衛政策評估。健康與管理學術研討會論文摘要集，新竹市，台灣，87頁。</li>
+<li>孫春在，史馥銘，黃崇源（2005）從線上論文中擷取領域本體資訊。海峽二岸圖書館服務發展與創新高層論壇，北京，中國。</li>
+<li>黃崇源（2001）是否需要一份關於「電腦與網路」學程規劃指南？。全國社區大學教師研習會手冊，新竹市，台灣。</li>
+</ol><ul><li>註：申請人姓名「黃崇源」或Huang C.Y. 後面加上星號 * 表示本人是該篇期刊論文之通訊責任作者。</li></ul>
+</div></div></div>
+
+<div id="q5" class="container-fluid"><div class="row"><div class="col-sm-12">
+<h1>學術活動</h1>
+<h2>活動參與</h2>
+<h3>SCI/SSCI/EI 等級學術期刊論文審稿委員</h3>
+<ol><li>Journal of Artificial Societies and Social Simulations（JASSS)（SSCI, EI）× 12 篇（2006:46:1, 2008:64:1, 2009:43:1, 2009:59:1, 2009:86:2, 2010:96:1, 2012:3:1, 2014:129:1, 2015:27:1, 2015:110:1, &amp; 2016:12:1, 2016:121:1)</li>
+<li>International Journal of Control, Automation, and Systems（IJCAS)（SCI, EI）× 1 篇（06-06-R108)</li>
+<li>Artificial Intelligence in Medicine（AIIM)（SCI, EI）× 2 篇（AIIM-D-08-00003 &amp; P0294)</li>
+<li>Computer Networks（COMNET)（SCI, EI）× 1 篇（COMNET-D-09-3507)</li>
+<li>Journal of Mathematical Sociology（JMS)（SSCI）× 1 篇（GMAS-2009-0043)</li>
+<li>Information Sciences（IS)（SCI, EI）× 2 篇（INS-D-09-1375 &amp; INS-D-11-395R1)</li>
+<li>IEEE Intelligent Systems（IEEE IS)（SCI, EI）× 1 篇（IS-2013-03-0037)</li>
+<li>Simulation: Transactions of the Society for Modeling and Simulation International（SCI, EI）× 2 篇（A-12-0179 &amp; T-14-0048)</li>
+<li>IEEE Transactions on Cybernetics（SCI, EI）× 2 篇（CYB-E-2014-01-0072 &amp; CYB-E-2016-02-0211)</li>
+<li>Abstract and Applied Analysis（SCI）× 3 篇（415043.v1, 340683.v1, &amp; 936398.v1)</li>
+<li>Phsyica A（SCI）× 4 篇（PHYSA-13-1264, PHYSA-151312, PHYSA-16482, &amp; PHYSA-151032)</li>
+<li>Journal of Computational Environmental Sciences × 1 篇（769064.v1)</li>
+<li>Cogent Engineering × 1 篇（COGENTENG-2015-0029)</li>
+<li>Social Science Computer Review × 1 篇（#3326)</li>
+<li>Mathematical Problems in Engineering × 1 篇（3642874)</li>
+<li>Simulation Modelling Practice and Theory × 1 篇（SIMPAT-D-16-480)</li>
+<li>Physics Letters A × 1 篇（PLA_2016_220)</li>
+</ol>
+<h3>國際學術研討會論文審稿委員</h3>
+<ol><li>2006 International Conference on Computational Intelligence and Security（CIS’06).</li>
+<li>2006 International Conference on Computational Intelligence for Modelling, Control and Automation（CIMCA’06).</li>
+<li>2006 International Conference on Intelligent Agents, Web Technologies and Internet Commerce（IAWTIC’06). </li>
+<li>2007 European Computing Conference（ECC’07).</li>
+<li>2008 4th International Symposium on Management, Engineering and Informatics（MEI’08).</li>
+<li>2008 International Conference on Computational Intelligence and Security（CIS’08).</li>
+<li>2008 International Conference on Computational Intelligence for Modelling, Control and Automation（CIMCA’08).</li>
+<li>2009 5th International Symposium on Management, Engineering and Informatics（MEI’09).</li>
+<li>2009 International Conference on Computational Intelligence and Security（CIS’09).</li>
+<li>2010 IEEE World Congress on Computational Intelligence（WCCI’10).</li>
+<li>2010 IEEE Congress on Evolutionary Computation（CEC’10).</li>
+<li>2011 IEEE Congress on Evolutionary Computation（CEC’11).</li>
+<li>2011 7th International Conference on Natural Computation（ICNC’11）and 8th International Conference on Fuzzy Systems and Knowledge Discovery（FSKD’11).</li>
+<li>2011 International Conference on Internet Technology and Applications（iTAP’11)</li>
+<li>2014 Special Track on Management, Engineering and Informatics: MEI 2014 in the context of 18th Multi-Conference on Systemics, Cybernetics and Informations（WMSCI’14).</li>
+<li>2014 10th International Conference on Computational Intelligence and Security（CIS'14).</li>
+<li>2015 Special Track on Management, Engineering and Information: MEI 2015 in the context of 19th Multi-Conference on Systemics, Cybernetics and Informations（WMSCI’15).</li>
+<li>2015 11th International Conference on Computational Intelligence and Security（CIS’15).</li>
+<li>2015 11th International Symposium on Management, Engineering and Informatics（MEI’15).</li>
+<li>2016 12th International Conference on Computational Intelligence and Security（CIS’16).</li>
+<li>2016 The 8th International High Speed Intelligent Communication Forum &amp; 2016 International Conference on Communication Problem-Solving（HSIC &amp; ICCP’16).</li>
+</ol>
+<h3>國際學術研討會主席或議程委員</h3>
+<ol><li>2007 6th International Conference on Applications of Electrical Engineering（AEE’07).</li>
+<li>2007 9th International Conference on Automatic Control, Modeling and Simulation（ACMOS’07).</li>
+<li>2007 6th International Conference on Microelectronics, Nanoelectronics, Optoelectronics（MINO’07).</li>
+<li>2007 11th WSEAS CSCC Multiconference, which consisted of: 11th International Conference on Circuits; 11th International Conference on Systems; 11th International Conference on Communications; 11th International Conference on Computers（CSCC’07).</li>
+<li>2007 4th WSEAS/IASME International Conference on Electroscience and Technology for Naval Engineering（ETNE’07).</li>
+<li>2007 European Computing Conference（ECC’07).</li>
+<li>2007 Applied Mathematics, Simulation, Modelling（ASM’07).</li>
+<li>2007 Circuits, Systems and Signals（CSS’07).</li>
+<li>2008 International Conference on Biomedical Engineering and Informatics（BMEI’08).</li>
+<li>2008 7th WSEAS International Conference on E-ACTIVITIES（E-Learning, E-Communities, E-Commerce, E-Management, E-marketing, E-Governance, Tele-Working)（E-ACTIVITIES’08).</li>
+<li>2008 5th WSEAS/IASME International Conference on Engineering Education（EE’08).</li>
+<li>2008 Applied Mathematics, Simulation, Modelling（ASM’08).</li>
+<li>2008 Communications and Information Technology（CIT’08).</li>
+<li>2008 Circuits, Systems and Signals（CSS’07).</li>
+<li>2008 WSEAS/NAUN International Conference on Advanced Design and Manufacture.</li>
+<li>2008 WSEAS/NAUN International Conference on Applied Mathematics and Computing.</li>
+<li>2008 International Conference on Intelligent Agents, Web Technologies and Internet Commerce（IAWTIC’08).</li>
+<li>2008 12th WSEAS CSCC Multiconference, which consisted of: 12th International Conference on Circuits; 12th International Conference on Systems; 12th International Conference on Communications; 12th International Conference on Computers（CSCC’08).</li>
+<li>2009 Special Session on Linkage in Evolutionary Computation at IEEE Congress on Evolutionary Computation（CEC’09).</li>
+<li>2009 First International Conference on Complex Sciences: Theory and Application（COMPLEX’09).</li>
+<li>2009 13th WSEAS CSCC Multiconference, which consisted of: 13th International Conference on Circuits; 13th International Conference on Systems; 13th International Conference on Communications; 13th International Conference on Computers（CSCC’09).</li>
+<li>2010 IEEE World Congress on Computational Intelligence（WCCI’10).</li>
+<li>2011 IEEE Congress on Evolutionary Computation（CEC’11).</li>
+<li>2011 European Conference of Computer Science（ECCS’11).</li>
+<li>2011 European Conference of Control（ECC’11).</li>
+<li>2012 Mobile Computing Workshop（MC’12).</li>
+<li>2012 1st International Conference on Computing, Information Systems and Communications（CISCO’12).</li>
+<li>2012 1st International Conference on Digital services, Internet and Applications（DSIA’12).</li>
+<li>2012 1st International Conference on Sustainable Development, Sustainable Chemical Industry, Pollution, Hazards and Environment（SD-SCI-PHE’12).</li>
+<li>2012 International Conference on Health Science and Biomedical Systems（HSBS’12).</li>
+<li>2012 International Workshop on Cloud Computing for Bioinformatics and Its Applications（CBA’12).</li>
+<li>2012 6th International Conference on Energy and Development Environment – Biomedicine（EDEB’12).</li>
+<li>2012 3rd International Conference on Geography and Geology（GEO’12).</li>
+<li>2012 6th International Conference on Communications and Information Technology（CIT’12).</li>
+<li>2012 10th International Conference on Applied Electromagnetics, Wireless and Optical Communications（ELECTROSCIENCE’12).</li>
+<li>2012 3rd World Conference on Education and Educational Technologies（WORLD-EDU’12).</li>
+<li>2012 1st International Conference on Networks and Systems for Communications, Education and Data processing.</li>
+<li>2012 Shanghai International Conference on Social Science（SICSS’12).</li>
+<li>2013 International Workshop on Cloud Computing for Bioinformatics and Its Applications（CBA’13).</li>
+<li>2013 9th International Conference on Computational Intelligence and Security（CIS’13).</li>
+<li>2014 Mobile Computing Workshop（MC’14).</li>
+<li>2014 10th International Conference on Computational Intelligence and Security（CIS’14).</li>
+<li>2014 Geo-computational Models in Measuring Vulnerability for Human Health and the Environment（Session ID: s0121）of Asia Global Land Project Conference（GLP’04).</li>
+<li>2016 10th International Conference on Computational Intelligence and Security（CIS’16).</li>
+<li>2016 The 8th International High Speed Intelligent Communication Forum &amp; 2016 International Conference on Communication Problem-Solving（HSIC &amp; ICCP’16).</li>
+</ol>
+<h3>國科會專題研究計畫審查</h3>
+<ol><li>2007 建構全域性遠距醫療行動診察服務平台之研究，國科會工程處資訊學門</li>
+<li>2011 多分類器系統建構之理論與實務，國科會工程處資訊學門</li>
+<li>2016 科技部大專學生研究計畫初審暨複審委員，科技部工程處資訊學門</li>
+</ol>
+<h3>演講者</h3>
+<ol><li>黃崇源，Simulation work on SARS modeling，SARS 的預防及診斷─台灣經驗，台灣預防醫學學會 92 年度學術研討會（2003台灣醫學週），台北國際會議中心。</li>
+<li>黃崇源，流行性傳染病電腦模擬與公衛政策之成效評估 : 以2003 SARS為例，中國醫藥大學風險管理學系 95 學年度學報討論，立夫大樓國際會議廳。</li>
+<li>黃崇源，使用電腦模擬方法來研究流行性傳染病傳播動態與公衛傳染阻絕政策之成效 : 以2003 SARS為例，林口長庚醫院第二會議廳。</li>
+<li>黃崇源，假如H5N1流感侵襲台灣，台灣大學流行病學研究所（溫在弘教授主持），203 教室。</li>
+<li>黃崇源，「生涯達人在龍山」實施計劃，台北市龍山國中，806 教室。</li>
+<li>黃崇源，發現數位世界的無限可能，台北縣縣立雙溪高中，長庚大學第二醫學大樓國際會議廳。</li>
+<li>黃崇源，社會網絡流行病電腦模擬，台北市立教育大學資訊科學學系（謝吉隆教授主持）。</li>
+<li>黃崇源，發現數位世界的無限可能，台北市私立景文高中。</li>
+<li>黃崇源，新型流感侵襲台灣 : 傳染病與防疫策略電腦模擬，交通大學資訊工程學系 99 學年學報討論（胡毓志教授主持）。</li>
+<li>黃崇源，新型流感 H1N1 侵襲台灣 : 傳染病與阻絕策略電腦模擬，台灣大學流行病學所（溫在弘教授主持）。</li>
+<li>黃崇源，新型流感 H1N1 侵襲台灣 : 傳染病與阻絕策略電腦模擬，師範大學圖書資訊所（謝吉隆教授主持）。</li>
+<li>黃崇源，發現數位世界的無限可能，中國科技大學資訊管理學系（林潮文教授主持）。</li>
+<li>黃崇源，發現數位世界的無限可能，台北市私立延平中學。</li>
+<li>黃崇源，發現數位世界的無限可能，台北市立百齡高中。</li>
+<li>黃崇源，利用 GA 決定 AED 在台北市 7-11 最佳設置定點，Biodesign Roundtable 歲末座談，中國醫藥大學健康風險管理學系（藍郁青教授主持）。</li>
+<li>黃崇源，發現數位世界的無限可能，台北市立南湖高中，2014 年。</li>
+<li>黃崇源，發現數位世界的無限可能，台北市立南湖高中，2015 年。</li>
+</ol>
+<h3>國內學術研討會評論人</h3><ol><li>台灣發展研究年會，第八屆發展研究年會 : 環境與永續發展，空間資料與永續發展場次評論人</li><li>台灣發展研究年會，第八屆發展研究年會 : 環境與永續發展，環境與疾病的永續治理場次平論文</li>
+</ol>
+<h3>國內學術期刊論文審稿委員</h3><ol><li>先進工程學刊 1 篇（AE12009)</li><li>圖書館學與資訊科學期刊 1 篇（653)</li>
+</ol>
+<h3>國內學術研討論文審稿委員</h3><ol><li>2007 資訊科技應用學術研討會（Information Technology and Applications Conference, ITAC’07)</li><li>2012 第十七屆行動計算研討會（Mobile Computing, MC’12)</li><li>2015 輔仁大學資訊管理學系第32屆資訊系統專題發表會校外評審委員</li>
+</ol>
+</div></div></div>
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+  <p>Bootstrap Theme Made By <a href="http://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });  
+  $(window).scroll(function() { $(".slideanim").each(function(){
+      var pos = $(this).offset().top, winTop = $(window).scrollTop();
+        if (pos < winTop + 600) { $(this).addClass("slide");}});});
+})
+</script></body></html>
