@@ -41,3 +41,6 @@
 |百點連鎖資訊教室|教學部|主任|80.10 - 81.09|
 ||管理部|總經理特別助理|81.02 - 81.09|
 |鼎眾電腦股份有限公司|軟體開發部|主任|76.09 - 80.09|
+
+<p align="center">
+<a href="https://info.flagcounter.com/4fY3"><img src="https://s01.flagcounter.com/countxl/4fY3/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_100/viewers_10/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a></p>
