@@ -1,5 +1,6 @@
 <h2 align="center">長庚大學工學院資訊工程學系<br>桃園市龜山區文化一路 259 號</h2>
-<h1 align="center">黃 崇 源 教授 / 博士<br>Prof. Chung-Yuan Huang, Ph.D.</h1>
+<h1 align="center">黃 崇 源 教授 / 博士</h1>
+<h1 align="center">Prof. Chung-Yuan Huang, Ph.D.</h1>
 
 ### 電話：(03) 211-8800 #3474 <br> 電郵：<gscott@mail.cgu.edu.tw>
 
