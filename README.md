@@ -1,5 +1,5 @@
-<h1 align="center">黃 崇 源 教授／博士
-<h1 align="center">Prof. Chung-Yuan Huang, Ph.D.
+<h1 align="center">黃 崇 源 教授／博士</h1>
+<h1 align="center">Prof. Chung-Yuan Huang, Ph.D.</h1>
 
 ## 長庚大學工學院資訊工程學系
 ## 桃園市龜山區文化一路 259 號
