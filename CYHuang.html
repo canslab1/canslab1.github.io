@@ -254,7 +254,6 @@
 
     <nav>
         <div class="container">
-            <!-- Navigation Toggle for Mobile -->
             <button class="nav-toggle" onclick="toggleNav()">☰ 導覽</button>
             <div class="nav-container">
                 <button class="nav-item active" onclick="showSection('overview')">概覽</button>
@@ -395,7 +394,8 @@
         });
 
         function toggleNav() {
-            document.querySelector('.nav-container').classList.toggle('show');
+            const nav = document.querySelector('.nav-container');
+            nav.classList.toggle('show');
         }
     </script>
     <script type="application/ld+json">
