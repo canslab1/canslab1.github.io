@@ -26,11 +26,11 @@
 
         /* Header */
         header {
-            background: linear-gradient(135deg, #14532d 0%, #166534 100%);
+            background: linear-gradient(135deg, #14532d 0%, #1a7745 100%);
             color: white;
             padding: 2rem 0;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
         .header-content h1 {
@@ -49,6 +49,16 @@
         .header-content .affiliation {
             font-size: 1.1rem;
             opacity: 0.8;
+        }
+
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin: 1.5rem auto;
+            display: block;
         }
 
         /* Navigation */
@@ -372,15 +382,13 @@
 <body>
     <header>
         <div class="container">
-            <div class="header-content">
-                <h1>長庚大學　黃崇源　教授</h1>
+            <div class="header-content" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 2rem;">
                 <img src="https://canslab1.github.io/IMG-2.jpg" alt="Chung-Yuan Huang" class="profile-photo">
-                <!-- 
-                <div class="subtitle">Prof. Chung-Yuan Huang</div>
-                <div class="affiliation">
-                    複雜適應性網絡與系統實驗室　主持人
+                <div>
+                    <h1>長庚大學　黃崇源　教授</h1>
+                    <!-- <div class="subtitle">Prof. Chung-Yuan Huang</div>
+                    <div class="affiliation">複雜適應性網絡與系統實驗室　主持人</div> -->
                 </div>
-                -->
             </div>
         </div>
     </header>
