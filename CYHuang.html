@@ -67,6 +67,16 @@
             overflow-x: auto;
         }
 
+        .nav-row-1,
+        .nav-row-2 {
+            justify-content: center;
+            margin: 0 auto;
+            padding: 0.25rem 0; /* 控制上下行距 */
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
         .nav-item {
             background: none;
             border: none;
@@ -356,7 +366,7 @@
 
     <nav>
         <div class="container">
-            <div class="nav-container">
+            <div class="nav-container nav-row-1">
                 <button class="nav-item active" onclick="showSection('overview')">概覽</button>
                 <button class="nav-item" onclick="showSection('research')">研究</button>
                 <button class="nav-item" onclick="showSection('publications')">著作</button>
@@ -364,6 +374,8 @@
                 <button class="nav-item" onclick="showSection('teaching')">教學</button>
                 <button class="nav-item" onclick="showSection('awards')">榮譽</button>
                 <button class="nav-item" onclick="showSection('contact')">聯絡</button>
+            </div>
+            <div class="nav-container nav-row-2">
                 <a class="nav-item" href="https://sites.google.com/view/gscott-huang" target="_blank">維基</a>
                 <a class="nav-item" href="https://www.facebook.com/gscott.huang/" target="_blank">臉書</a>
                 <a class="nav-item" href="https://canslab1.github.io/" target="_blank">自傳</a>
