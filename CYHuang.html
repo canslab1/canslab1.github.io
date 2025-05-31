@@ -40,17 +40,6 @@
             font-family: "Noto Serif TC", "微軟正黑體", "Apple LiSung", "標楷體", serif;
         }
 
-        .header-content .subtitle {
-            font-size: 1.3rem;
-            opacity: 0.9;
-            margin-bottom: 1rem;
-        }
-
-        .header-content .affiliation {
-            font-size: 1.1rem;
-            opacity: 0.8;
-        }
-
         .profile-photo {
             width: 180px;
             height: 180px;
@@ -90,16 +79,6 @@
             overflow-x: auto;
         }
 
-        .nav-row-1,
-        .nav-row-2 {
-            justify-content: center;
-            margin: 0 auto;
-            padding: 0.25rem 0; /* 控制上下行距 */
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-        }
-
         .nav-item {
             background: none;
             border: none;
@@ -114,10 +93,6 @@
         .nav-item:hover, .nav-item.active {
             background: #27ae60;
             color: white;
-        }        
-
-        .second-row {
-            margin-top:1px;
         }
 
         /* Main Content */
@@ -154,59 +129,6 @@
             padding-left: 1rem;
         }
 
-        /* Vision Section */
-        .vision-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .vision-card {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 2rem;
-            border-radius: 10px;
-            border: 1px solid #dee2e6;
-            border-left: 4px solid #27ae60;
-            transition: transform 0.3s ease;
-        }
-
-        .vision-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .vision-card h4 {
-            color: #2c3e50;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-        }
-
-        .icon {
-            width: 24px;
-            height: 24px;
-            margin-right: 0.5rem;
-            background: #2ecc71;
-            border-radius: 50%;
-            display: inline-block;
-        }
-
-        /* Research Areas */
-        .research-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .research-item {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #27ae60;
-        }
-
         /* Statistics Cards */
         .stats-grid {
             display: grid;
@@ -236,110 +158,6 @@
             margin-top: 0.5rem;
         }
 
-        /* Tables */
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .data-table th, .data-table td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid #dee2e6;
-        }
-
-        .data-table th {
-            background: #f8f9fa;
-            color: #2c3e50;
-            font-weight: 600;
-        }
-
-        .data-table tr:hover {
-            background: #f8f9fa;
-        }
-
-        /* Publication List */
-        .publication-item {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            border-radius: 8px;
-            border-left: 4px solid #27ae60;
-        }
-
-        .publication-title {
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
-        }
-
-        .publication-details {
-            color: #666;
-            font-size: 0.95rem;
-        }
-
-        .publication-journal {
-            color: #27ae60;
-            font-style: italic;
-        }
-
-        /* Contact Info */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 1.5rem;
-        }
-
-        .contact-card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 10px;
-            border: 1px solid #dee2e6;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-
-        .contact-icon {
-            width: 20px;
-            height: 20px;
-            background: #3498db;
-            border-radius: 50%;
-            margin-right: 1rem;
-        }
-
-        /* Awards Section */
-        .award-item {
-            background: linear-gradient(135deg, #fff5cd 0%, #ffeccd 100%);
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            border-radius: 8px;
-            border-left: 4px solid #f39c12;
-        }
-
-
-        .award-year {
-            color: #e67e22;
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        .award-title {
-            color: #2c3e50;
-            margin-top: 0.5rem;
-            font-weight: 500;
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
             .container {
@@ -363,7 +181,7 @@
                 padding: 1.5rem;
             }
 
-            .stats-grid, .vision-grid, .research-grid {
+            .stats-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -386,8 +204,6 @@
                 <img src="https://canslab1.github.io/IMG-2.jpg" alt="Chung-Yuan Huang" class="profile-photo">
                 <div>
                     <h1>長庚大學　黃崇源　教授</h1>
-                    <!-- <div class="subtitle">Prof. Chung-Yuan Huang</div>
-                    <div class="affiliation">複雜適應性網絡與系統實驗室　主持人</div> -->
                 </div>
             </div>
         </div>
@@ -492,17 +308,6 @@
                 });
                 card.addEventListener('mouseleave', function() {
                     this.style.transform = 'translateY(0) scale(1)';
-                });
-            });
-
-            // Add hover effects to publication items
-            const publicationItems = document.querySelectorAll('.publication-item');
-            publicationItems.forEach(item => {
-                item.addEventListener('mouseenter', function() {
-                    this.style.borderLeftWidth = '6px';
-                });
-                item.addEventListener('mouseleave', function() {
-                    this.style.borderLeftWidth = '4px';
                 });
             });
         });
