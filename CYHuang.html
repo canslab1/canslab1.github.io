@@ -389,8 +389,7 @@
             });
 
             const honors = [
-                '2024.11 榮獲中國科技大學傑出校友',
-                '2000.11 榮獲中國科技大學優秀校友',
+                '2024.11 榮獲中國科技大學傑出校友<br>2000.11 榮獲中國科技大學優秀校友',
                 '2024.10 榮聘第 34 屆臺北市老松國民小學學生家長會榮譽會長',
                 '2023.10 擔任第 33 屆臺北市老松國民小學學生家長會長',
                 '2022.10 擔任第 32 屆臺北市老松國民小學學生家長會長',
@@ -401,7 +400,8 @@
             const honorsContainer = document.getElementById('honors');
             honors.forEach(txt => {
                 const h3 = document.createElement('h3');
-                h3.textContent = txt;
+                h3.setAttribute('role', 'listitem');
+                h3.innerHTML = txt;  // 這裡改用 innerHTML 才能正確換行
                 honorsContainer.appendChild(h3);
             });
         });
