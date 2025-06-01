@@ -155,6 +155,7 @@
             text-align: center;
             box-shadow: 0 4px 8px rgba(39,174,96,0.3);
             outline: none;
+            cursor: pointer;
         }
 
         .stat-card:focus {
@@ -294,51 +295,51 @@
             <section id="overview" class="section active">
                 <h2>貢獻及成就</h2>
                 <div class="stats-grid">
-                    <div class="stat-card" tabindex="0">
+                    <div class="stat-card" tabindex="0" data-url="https://canslab1.github.io/CYHuang.pdf">
                         <span class="stat-number">43篇</span>
                         <div class="stat-label">期刊論文</div>
                     </div>
-                    <div class="stat-card" tabindex="0">
+                    <div class="stat-card" tabindex="0" data-url="https://canslab1.github.io/CYHuang.pdf">
                         <span class="stat-number">49篇</span>
                         <div class="stat-label">國際研討會</div>
                     </div>
-                    <div class="stat-card" tabindex="0">
+                    <div class="stat-card" tabindex="0" data-url="https://canslab1.github.io/CYHuang.pdf">
                         <span class="stat-number">10篇</span>
                         <div class="stat-label">專書專章</div>
                     </div>
-                    <div class="stat-card" tabindex="0">
+                    <div class="stat-card" tabindex="0" data-url="https://canslab1.github.io/CYHuang.pdf">
                         <span class="stat-number">32篇</span>
                         <div class="stat-label">國內研討會</div>
                     </div>
-                    <div class="stat-card" tabindex="0">
+                    <div class="stat-card" tabindex="0" data-url="https://canslab1.github.io/CYHuang.pdf">
                         <span class="stat-number">22次</span>
                         <div class="stat-label">計畫主持人</div>
                     </div>
-                    <div class="stat-card" tabindex="0">
+                    <div class="stat-card" tabindex="0" data-url="https://canslab1.github.io/CYHuang.pdf">
                         <span class="stat-number">14次</span>
                         <div class="stat-label">共同主持人</div>
                     </div>
-                    <div class="stat-card" tabindex="0">
+                    <div class="stat-card" tabindex="0" data-url="https://canslab1.github.io/CYHuang.pdf">
                         <span class="stat-number">965次</span>
                         <div class="stat-label">Citations</div>
                     </div>
-                    <div class="stat-card" tabindex="0">
+                    <div class="stat-card" tabindex="0" data-url="https://canslab1.github.io/CYHuang.pdf">
                         <span class="stat-number">18篇</span>
                         <div class="stat-label">h-index</div>
                     </div>
-                    <div class="stat-card" tabindex="0">
+                    <div class="stat-card" tabindex="0" data-url="https://canslab1.github.io/CYHuang.pdf">
                         <span class="stat-number">30篇</span>
                         <div class="stat-label">i10-index</div>
                     </div>
-                    <div class="stat-card" tabindex="0">
+                    <div class="stat-card" tabindex="0" data-url="https://canslab1.github.io/CYHuang.pdf">
                         <span class="stat-number">3個</span>
                         <div class="stat-label">合聘單位</div>
                     </div>
-                    <div class="stat-card" tabindex="0">
+                    <div class="stat-card" tabindex="0" data-url="https://canslab1.github.io/CYHuang.pdf">
                         <span class="stat-number">3年</span>
                         <div class="stat-label">獨立董事</div>
                     </div>
-                    <div class="stat-card" tabindex="0">
+                    <div class="stat-card" tabindex="0" data-url="https://canslab1.github.io/CYHuang.pdf">
                         <span class="stat-number">4個</span>
                         <div class="stat-label">學生家長會</div>
                     </div>
@@ -414,6 +415,13 @@
                 card.addEventListener('mouseleave', function() {
                     this.style.transform = 'translateY(0) scale(1)';
                 });
+                // 滑鼠左鍵點擊導向外部連結
+                card.addEventListener('click', function(event) {
+                    const url = this.getAttribute('data-url');
+                    if (url) {
+                        window.open(url, '_blank');  // 在新視窗中開啟
+                }
+        });
             });
         });
 
