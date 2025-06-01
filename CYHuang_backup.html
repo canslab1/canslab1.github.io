@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-TW" itemscope itemtype="https://schema.org/WebPage">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="長庚大學資訊工程學系黃崇源教授的個人學術網頁，介紹其研究成果、期刊論文、研究計畫、履歷、自傳與多項教育貢獻。">
+    <meta name="keywords" content="黃崇源, 長庚大學, 資訊工程, 複雜網絡, 系統科學, 演化演算法, 計算社會科學, 教學研究, CY Huang, Chung-Yuan Huang, GSCOTT, 論文, 學術履歷">   
+    <meta name="author" content="Chung-Yuan Huang (黃崇源教授)">
+    
+    <meta property="og:title" content="黃崇源教授 | 長庚大學資訊工程學系">
+    <meta property="og:description" content="探索黃崇源教授的學術旅程，涵蓋其在複雜適應系統與網絡科學領域的重要貢獻與教學實踐。">
+    <meta property="og:image" content="https://canslab1.github.io/IMG-2.jpg">
+    <meta property="og:url" content="https://canslab1.github.io/CYHuang.html">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="黃崇源教授 | 長庚大學資訊工程學系">
+    <meta name="twitter:description" content="介紹黃崇源教授於資訊科學、系統模擬與教育貢獻的完整履歷與代表著作。">
+    <meta name="twitter:image" content="https://canslab1.github.io/IMG-2.jpg">
+
+    <title>長庚大學·資訊工程學系·黃崇源教授 | 複雜適應性網絡與系統實驗室·主持人</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: 
+                linear-gradient(135deg, rgba(20, 83, 45, 0.85) 0%, rgba(26, 119, 69, 0.85) 100%),
+                url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+            font-family: system-ui, -apple-system, 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin: 1rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* Navigation */
+        nav {
+            background: #fff;
+            padding: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            margin: 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+        }
+
+        .nav-item {
+            background: none;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            color: #2c3e50;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background: #27ae60;
+            color: white;
+        }
+
+        /* Main Content */
+        main {
+            padding: 2rem 0;
+        }
+
+        .section {
+            display: none;
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .section.active {
+            display: block;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #27ae60;
+            padding-bottom: 0.5rem;
+        }
+
+        .section h3 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem 0;
+            border-left: 4px solid #27ae60;
+            padding-left: 1rem;
+        }
+
+        /* Statistics Cards */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #27ae60 0%, #219150 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(39,174,96,0.3);
+            outline: none;
+            cursor: pointer;
+        }
+
+        .stat-card:focus {
+            box-shadow: 0 0 0 3px #27ae60;
+        }
+
+        .stat-card:hover {
+            background: linear-gradient(135deg, #1e8449 0%, #186a3b 100%);
+            color: white;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 600;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+
+        .nav-toggle {
+            display: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            }
+
+            .header-content h1 {
+                font-size: 2rem;
+                line-height: 1.4;
+            }
+
+            .profile-photo {
+                width: 140px;
+                height: 140px;
+                margin: 0 auto;
+            }
+
+            .nav-toggle {
+                display: block;
+                padding: 1rem;
+                font-size: 1.5rem;
+                background: none;
+                border: none;
+                color: #2c3e50;
+                cursor: pointer;
+            }
+
+            .nav-container {
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem;
+            }
+
+            .nav-container.show {
+                display: flex;
+            }
+
+            .nav-item {
+                width: 100%;
+                text-align: left;
+                padding: 0.8rem 1rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* 針對小螢幕但仍需水平顯示的情況 */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .nav-item {
+                padding: 0.5rem 0.6rem; /* 中等螢幕的緊密間距 */
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Animation */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 1rem;">
+                <img src="https://canslab1.github.io/IMG-2.jpg" alt="Chung-Yuan Huang" class="profile-photo">
+                <div>
+                    <h1>
+                        長庚大學 黃崇源 教授<br>
+                        Prof. Chung-Yuan Huang
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <button class="nav-toggle" onclick="toggleNav()">☰ 導覽</button>
+            <div class="nav-container">
+                <button class="nav-item active" onclick="showSection('overview')">介紹</button>
+                <a class="nav-item" href="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">著作</a>
+                <a class="nav-item" href="https://arspb.nstc.gov.tw/NSCWebFront/modules/talentSearch/talentSearch.do?action=initRsm17new&rsNo=2a2ef24adef742f58349c3c533bb7402&LANG=chi" target="_blank" rel="noopener noreferrer">計畫</a>
+                <a class="nav-item" href="https://canslab1.github.io/CYHuang.pdf" target="_blank" rel="noopener noreferrer">履歷</a>
+                <a class="nav-item" href="https://sites.google.com/view/gscott-huang" target="_blank" rel="noopener noreferrer">維基</a>
+                <a class="nav-item" href="https://www.facebook.com/gscott.huang/" target="_blank" rel="noopener noreferrer">臉書</a>
+                <a class="nav-item" href="https://canslab1.github.io/" target="_blank" rel="noopener noreferrer">故事</a>
+                <a class="nav-item" href="https://www.dropbox.com/scl/fo/ejwke56gkn1erv7meid4k/AHCPQXAw_RpiEn_PeiBfCuI?rlkey=b8k879fufdh98x2s3fzkatk5y&e=1&utm_campaign=photo&utm_medium=photo&utm_source=dropbox&dl=0" target="_blank" rel="noopener noreferrer">相簿</a>
+                <a class="nav-item" href="https://www.google.com/search?q=%22Huang+Chung-yuan%22+%22Taipei+Times%22+%22Chang+Gung%22+site%3Awww.taipeitimes.com&num=10&newwindow=1&sca_esv=36b1b16fe835e4f2&rlz=1C5CHFA_enTW1033TW1033&sxsrf=AE3TifNZsvLqwILLgN68K2VK4ubWKdOI5Q%3A1748706267068&ei=2yM7aPj5A_TF1e8Ph-6lkQ0&ved=0ahUKEwi40_W-hs6NAxX0YvUHHQd3KdIQ4dUDCBI&uact=5&oq=%22Huang+Chung-yuan%22+%22Taipei+Times%22+%22Chang+Gung%22+site%3Awww.taipeitimes.com&gs_lp=Egxnd3Mtd2l6LXNlcnAiRyJIdWFuZyBDaHVuZy15dWFuIiAiVGFpcGVpIFRpbWVzIiAiQ2hhbmcgR3VuZyIgc2l0ZTp3d3cudGFpcGVpdGltZXMuY29tSNVxUIUyWNZvcAJ4AJABAJgBY6AB5gqqAQIyOLgBA8gBAPgBAZgCC6AC-QTCAggQABiwAxjvBcICCxAAGIAEGLADGKIEwgIHECMYJxiuAsICBRAAGO8FwgIIEAAYgAQYogTCAgUQIRigAZgDAIgGAZAGBJIHBDEwLjGgB7ZBsgcDOC4xuAfzBMIHBTAuOS4yyAcW&sclient=gws-wiz-serp"  target="_blank" rel="noopener noreferrer">評論</a>
+                <a class="nav-item" href="https://www.google.com/search?q=%22%E9%BB%83%E5%B4%87%E6%BA%90%22+%22%E8%87%AA%E7%94%B1%E6%99%82%E5%A0%B1%22+site%3Atalk.ltn.com.tw&num=10&newwindow=1&sca_esv=36b1b16fe835e4f2&rlz=1C5CHFA_enTW1033TW1033&sxsrf=AE3TifNrmmBifb70Mjqwcx6tYgAFEVjSow%3A1748706481736&ei=sSQ7aLraLO_c2roPu9bK8Qc&ved=0ahUKEwj69qOlh86NAxVvrlYBHTurMn4Q4dUDCBI&uact=5&oq=%22%E9%BB%83%E5%B4%87%E6%BA%90%22+%22%E8%87%AA%E7%94%B1%E6%99%82%E5%A0%B1%22+site%3Atalk.ltn.com.tw&gs_lp=Egxnd3Mtd2l6LXNlcnAiLyLpu4PltIfmupAiICLoh6rnlLHmmYLloLEiIHNpdGU6dGFsay5sdG4uY29tLnR3SIkwUJAGWMkscAF4AJABAJgBnwGgAdEJqgEEMTkuMrgBA8gBAPgBAZgCB6AC3ATCAggQABiwAxjvBcICCxAAGLADGKIEGIkFwgILEAAYgAQYsAMYogTCAgUQIRigAcICBRAAGO8FmAMAiAYBkAYFkgcDNS4yoAffFrIHAzQuMrgH2QTCBwMxLjbIBw0&sclient=gws-wiz-serp" target="_blank" rel="noopener noreferrer">投書</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <!-- Overview Section -->
+            <section id="overview" class="section active">
+                <h2>貢獻及成就</h2>
+                <div class="stats-grid">
+                    <div class="stat-card" tabindex="0" data-url="https://canslab1.github.io/CYHuang.pdf#page=21">
+                        <span class="stat-number">43篇</span>
+                        <div class="stat-label">期刊論文</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://canslab1.github.io/CYHuang.pdf#page=24">
+                        <span class="stat-number">49篇</span>
+                        <div class="stat-label">國際研討會</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://canslab1.github.io/CYHuang.pdf#page=27">
+                        <span class="stat-number">10篇</span>
+                        <div class="stat-label">專書專章</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://canslab1.github.io/CYHuang.pdf#page=29">
+                        <span class="stat-number">19篇</span>
+                        <div class="stat-label">國內研討會</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en">
+                        <span class="stat-number">43次</span>
+                        <div class="stat-label">評論及採訪</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://canslab1.github.io/CYHuang.pdf#page=3">
+                        <span class="stat-number">22次</span>
+                        <div class="stat-label">計畫主持人</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://canslab1.github.io/CYHuang.pdf#page=3">
+                        <span class="stat-number">1069萬</span>
+                        <div class="stat-label">計畫預算</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://canslab1.github.io/CYHuang.pdf#page=4">
+                        <span class="stat-number">14次</span>
+                        <div class="stat-label">共同主持人</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en#d=gsc_md_hist&t=1748751167682">
+                        <span class="stat-number">965次</span>
+                        <div class="stat-label">Citations</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en">
+                        <span class="stat-number">18篇</span>
+                        <div class="stat-label">h-index</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en">
+                        <span class="stat-number">30篇</span>
+                        <div class="stat-label">i10-index</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en">
+                        <span class="stat-number">47人</span>
+                        <div class="stat-label">軟硬體專題</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en">
+                        <span class="stat-number">24人</span>
+                        <div class="stat-label">碩士</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en">
+                        <span class="stat-number">2人</span>
+                        <div class="stat-label">博士</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en">
+                        <span class="stat-number">62篇</span>
+                        <div class="stat-label">論文審稿</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en">
+                        <span class="stat-number">26次</span>
+                        <div class="stat-label">會議審稿</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en">
+                        <span class="stat-number">68次</span>
+                        <div class="stat-label">議程委員</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en">
+                        <span class="stat-number">11次</span>
+                        <div class="stat-label">計劃審查</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en">
+                        <span class="stat-number">10次</span>
+                        <div class="stat-label">學術審查</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en">
+                        <span class="stat-number">26次</span>
+                        <div class="stat-label">專題演講</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en">
+                        <span class="stat-number">10年</span>
+                        <div class="stat-label">教授</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en">
+                        <span class="stat-number">5年</span>
+                        <div class="stat-label">副教授</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en">
+                        <span class="stat-number">5年</span>
+                        <div class="stat-label">助理教授</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en">
+                        <span class="stat-number">5年</span>
+                        <div class="stat-label">講師</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en">
+                        <span class="stat-number">11年</span>
+                        <div class="stat-label">業界經驗</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://canslab1.github.io/CYHuang.pdf#page=1">
+                        <span class="stat-number">4個</span>
+                        <div class="stat-label">合聘單位</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://canslab1.github.io/CYHuang.pdf#page=1">
+                        <span class="stat-number">3年</span>
+                        <div class="stat-label">獨立董事</div>
+                    </div>
+                    <div class="stat-card" tabindex="0" data-url="https://canslab1.github.io/CYHuang.pdf#page=1">
+                        <span class="stat-number">7年</span>
+                        <div class="stat-label">學生家長會</div>
+                    </div>
+                </div>
+                <br>
+                <h2>責任與肯定</h2>
+                <h3>
+                    2024.11 榮獲中國科技大學傑出校友<br>
+                    2000.11 榮獲中國科技大學優秀校友
+                </h3>
+                <h3>
+                    2024.10 榮聘第 34 屆臺北市老松國民小學學生家長會榮譽會長<br>
+                    2023.10 擔任第 33 屆臺北市老松國民小學學生家長會長<br>
+                    2022.10 擔任第 32 屆臺北市老松國民小學學生家長會長
+                </h3>
+                <h3>
+                    2024.10 榮登臺北市杏壇芬芳錄<br>
+                    源源不絕無私大愛，守護美好優質老松
+                </h3>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; color: #555;">
+                    &emsp;&emsp;「蘇○○，早安！何○○，早安！」如冬日暖陽般親切地喊出學童姓名的崇源會長，每天早晨總是站在穿堂旁學生家長會辦公室門口，以充滿朝氣的笑容，和藹可親的問候，迎接每一位踏入老松校園的學生。在學童的眼中，他是永遠面帶微笑，樂意彎下腰、蹲下身，傾聽他們說話，關懷他們心情的學生家長會長。<br><br>
+                    &emsp;&emsp;崇源會長是老松校友，畢業於民國七十一年，家族三代都就讀老松，舅舅更長期擔任老松國小訓導主任。崇源會長常掛在嘴邊的一句話：「老松國小的大小事，都是我的大事，能夠協助母校親師生，是畢生的榮幸！」<br><br>
+                    &emsp;&emsp;崇源會長帶著一顆感恩、奉獻、回饋的心，投入老松學生家長會志工服務的行列，期間經歷了家長會委員、志工總幹事、活動組長、常務委員、副會長等職務，非常熟悉會務。在疫情接近尾聲之際，崇源會長結合了一群來自低、中、高年級，橫跨園藝、保健、導護、愛閱、圖書、ＥＱ、學輔所有組別的熱忱家長志工，秉持著自發、互動、共好的教育理念，入校服務，全力支援老松國小於疫後陸續恢復的各項活動，積極協助學童在花木扶疏、綠意盎然的校園環境中探索與學習。<br><br>
+                    &emsp;&emsp;時間是最寶貴的資源。為了協助疫後重返校園的老松師生與愛心志工，崇源會長毫無私心，奉獻出寶貴的時間與無比的愛心，每日坐鎮學生家長會辦公室，用充滿活力與正向積極的任事態度，激勵團隊夥伴，透過集思廣益，淬鍊出多元的趣味創意與靈活想法，盡心盡力辦好學生家長會務，協助校務與教育工作的發展，關心老松孩童的校園生活。<br><br>
+                    &emsp;&emsp;曾是國小校警，如今擔任保全的蕭○○先生，常對崇源會長豎起大姆指說：「會長，您真的很厲害！整日守護在學校，處理會務，關懷親師生，其他學校的家長會辦公室通常大門深鎖很少使用，只有開會和活動才有人氣，兩者差異很大。」<br><br>
+                    &emsp;&emsp;除了獻出寶貴的時間，崇源會長也以大學教授平日從事研究的嚴謹態度，檢視學生家長會辦理的親子成長、親職講座、志工成長、感恩餐會、一日遊等活動。從前置準備，到執行細節，再到預期結果，他總是不厭其煩和團隊夥伴反覆推敲活動的每項細節，可能的意外，以及臨場可行的補救之道。崇源會長常對團隊夥伴說：「舉辦活動，就要辦得熱鬧有意義，讓參與活動的親師生與愛心志工收穫滿滿，身心靈滿載而歸。」<br><br>
+                    &emsp;&emsp;無論在公開場合，還是線上家長討論群組，家長對於高情商的崇源會長的真心讚美不知凡幾。大家的推崇包括以下但不止於：老松國小擁有崇源會長，是親師生的好福氣；崇源會長是一位回來老松國小造福的好會長；崇源會長親和力十足，沒有距離感，是值得安心信賴的會長；崇源會長是我們眼中最用心、最認真、親力親為的滿分會長；從來不曾有過像現在的感受，原來會長和家長的關係可以如此緊密，感謝崇源會長為老松親師生所做的一切，以及造成的美好改變。<br><br>
+                    &emsp;&emsp;羅馬不是一天造成的。家長溢於言表的由衷讚美之辭，源自於崇源會長多年來表裡如一的個人特質。誠如他的團隊夥伴在長時間相處及第一手觀察之後，都異口同聲形容：「崇源會長為人謙沖有禮，出錢出力，不求回報。他是一位願意傾聽、樂於溝通、即時回應、詳細說明、熱心協助、將心比心、身先士卒、以身作則、無私奉獻的會長，是家長與學校之間通暢的溝通者。」陽光又虛懷若谷的崇源會長則是透過實際的作為，屢次在公開場合強調，他是老松國小家長的駐校代表，是家長派駐在老松國小服務親師生的頭號值日生，是可愛的老松學弟妹及家長安心可靠的好夥伴。<br><br>
+                    &emsp;&emsp;在一些家長的眼中，崇源會長好比聞聲救苦，有大智慧的長者。疫後時期，雖然學習活動漸漸步上軌道，但是每位學童的恢復過程快慢不一，許多孩子的學習會突然卡關，家長面臨此類問題需要校方協助，同樣來自教育體系，在大學執教二十餘年的崇源會長總是站在學生學習的教育立場思考，不嫌麻煩主動和家長溝通，詳盡回覆，然後協助家長，向校方傳達問題緣由，提醒關鍵重點，委請學校處室負責人員適時伸出援手，給予學童和家長應有且適當的助益。<br><br>
+                    &emsp;&emsp;不只是家長信賴的代言人與值日生，崇源會長也是學校政策和活動的最佳行銷者。為了促成家長和校方的教育理念、政策方向與教學步伐一致，崇源會長致力於擔任老松親師生之間最佳的溝通橋樑與潤滑劑，協助處室主任，透過適當的傳播管道，向家長詳盡地解釋校方近期正在推展的雙語教學等重要政策及可能的影響層面，以及即將舉辦的國際交流等重要活動及其背後的宗旨和教育目的。除此之外，崇源會長也主動定期向家長說明政策執行與活動辦理的精彩過程與豐碩成果，推展親師合力，共好共榮。<br><br>
+                    &emsp;&emsp;美好的教育環境的營造，需要所有的教育夥伴同心協力，克盡職責，同時，教育現場需要典範，指引教育夥伴堅定向前。崇源會長一直是老松國小正向發展中最給力的教育合夥人，推薦崇源會長參加本年度杏壇芬芳錄評選實為老松國小的榮幸，亦是親師生的期待。<br><br>
+                    &emsp;&emsp;老松國小學生家長會長黃崇源教授，是一位足以成為眾人楷模的教育合夥人，若能獲得委員的肯定與表彰，寫入杏壇芬芳錄裡，必能激發其他教育工作夥伴的熱忱與活力，禮讚杏壇，齊力實現美好健全的教育理想！
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Remove active class from all nav items
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Show selected section
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.add('active', 'fade-in');
+            }
+
+            // Add active class to clicked nav item
+            event.target.classList.add('active');
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add some interactive features
+            const statCards = document.querySelectorAll('.stat-card');
+            statCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.02)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+                // 滑鼠左鍵點擊導向外部連結
+                card.addEventListener('click', function(event) {
+                    const url = this.getAttribute('data-url');
+                    if (url) {
+                        window.open(url, '_blank');  // 在新視窗中開啟
+                }
+        });
+            });
+        });
+
+        function toggleNav() {
+            const nav = document.querySelector('.nav-container');
+            nav.classList.toggle('show');
+        }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Chung-Yuan Huang",
+        "alternateName": "黃崇源",
+        "jobTitle": "Professor",
+        "affiliation": {
+            "@type": "Organization",
+            "name": "Chang Gung University, Department of Computer Science and Information Engineering"
+        },
+        "url": "https://canslab1.github.io/CYHuang.html",
+        "image": "https://canslab1.github.io/IMG-2.jpg",
+        "sameAs": [
+            "https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en",
+            "https://www.facebook.com/gscott.huang/",
+            "https://sites.google.com/view/gscott-huang"
+        ]
+    }
+    </script>
+</body>
+</html>
