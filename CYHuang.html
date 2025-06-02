@@ -532,18 +532,22 @@
                 ? document.getElementById('zh-content')
                 : document.getElementById('en-content');
 
+            // 移除當前語言下所有 section 的 active
             const sections = currentLangContent.querySelectorAll('.section');
             sections.forEach(section => section.classList.remove('active'));
 
+            // 移除當前語言下所有 nav-item 的 active
             const navItems = currentLangContent.querySelectorAll('.nav-item');
             navItems.forEach(item => item.classList.remove('active'));
 
+            // 加入被點選的 section
             const targetSection = currentLangContent.querySelector(`#${sectionId}`);
             if (targetSection) targetSection.classList.add('active', 'fade-in');
 
-            if (event) event.target.classList.add('active');
+            // 加入 active 標記至當前按鈕（僅當 event 存在）
+            if (event && event.target) event.target.classList.add('active');
 
-            // 額外補充：在手機上點選選單後收回選單
+            // 在手機上點選導覽後自動收起選單（否則會蓋住畫面）
             const navContainer = currentLangContent.querySelector('.nav-container');
             if (navContainer && navContainer.classList.contains('show')) {
                 navContainer.classList.remove('show');
