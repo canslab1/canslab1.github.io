@@ -369,28 +369,32 @@
     </style>
 </head>
 <body>
+    <!-- 語言切換按鈕，預設為英文切換，點擊後可切換中英文內容顯示 -->
     <button class="language-toggle" onclick="toggleLanguage()">English</button>
 
-    <!-- Chinese Content -->
+    <!-- 中文內容區塊，預設顯示（class 為 active） -->
     <div id="zh-content" class="lang-content active">
         <header>
             <div class="container">
                 <div class="header-content" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 1rem;">
+                    <!-- 教授大頭照與個人資訊 -->
                     <img src="https://canslab1.github.io/IMG-2.jpg" alt="Chung-Yuan Huang" class="profile-photo">
                     <div>
                         <h1>
                             長庚大學 黃崇源 教授<br>
-                            Prof. Chung-Yuan Huang
+                            複雜適應性網絡與系統實驗室
                         </h1>
                     </div>
                 </div>
             </div>
         </header>
 
+        <!-- 導覽列區塊，包含各個外部連結與介紹切換 -->
         <nav>
             <div class="container">
                 <button class="nav-toggle" onclick="toggleNav()">☰ 導覽</button>
                 <div class="nav-container">
+                    <!-- 第一個按鈕為內部切換，其他為外部連結 -->
                     <button class="nav-item active" onclick="showSection('overview', event)">介紹</button>
                     <a class="nav-item" href="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">著作</a>
                     <a class="nav-item" href="https://arspb.nstc.gov.tw/NSCWebFront/modules/talentSearch/talentSearch.do?action=initRsm17new&rsNo=2a2ef24adef742f58349c3c533bb7402&LANG=chi" target="_blank" rel="noopener noreferrer">計畫</a>
@@ -407,13 +411,16 @@
 
         <main role="main">
             <div class="container">
-                <!-- Overview Section -->
+                <!-- 介紹區塊，預設顯示，內含統計卡片與社會責任敘述 -->
                 <section id="overview" class="section active" role="region" aria-labelledby="section-overview-title">
                     <h2 id="section-overview-title">學術表現及成就</h2>
+                    <!-- 統計資料卡片容器（以 JS 動態生成） -->
                     <div class="stats-grid" id="stats-container-zh"></div>
                     <br>
                     <h2>社會責任與肯定</h2>
+                    <!-- 榮譽記錄容器（以 JS 動態生成） -->
                     <div id="honors-zh"></div>
+                    <!-- 中文事蹟描述段落（手動填寫） -->
                     <p id="honors-paragraph" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; color: #555;">
                         &emsp;&emsp;「蘇○○，早安！何○○，早安！」如冬日暖陽般親切地喊出學童姓名的崇源會長，每天早晨總是站在穿堂旁學生家長會辦公室門口，以充滿朝氣的笑容，和藹可親的問候，迎接每一位踏入老松校園的學生。在學童的眼中，他是永遠面帶微笑，樂意彎下腰、蹲下身，傾聽他們說話，關懷他們心情的學生家長會長。<br><br>
                         &emsp;&emsp;崇源會長是老松校友，畢業於民國七十一年，家族三代都就讀老松，舅舅更長期擔任老松國小訓導主任。崇源會長常掛在嘴邊的一句話：「老松國小的大小事，都是我的大事，能夠協助母校親師生，是畢生的榮幸！」<br><br>
@@ -433,7 +440,7 @@
         </main>
     </div>
 
-    <!-- English Content -->
+    <!-- 英文內容區塊，與 zh-content 對應，初始為隱藏 -->
     <div id="en-content" class="lang-content">
         <header>
             <div class="container">
@@ -471,6 +478,7 @@
                 <!-- Overview Section -->
                 <section id="overview" class="section active" role="region" aria-labelledby="section-overview-title">
                     <h2 id="section-overview-title">Academic Performance and Achievements</h2>
+                    <!-- 英文版統計卡片容器 -->
                     <div class="stats-grid" id="stats-container-en"></div>
                     <br>
                     <h2>Social Commitment and Public Recognition</h2>
@@ -494,8 +502,10 @@
         </main>
     </div>
 
+    <!-- 頁尾：顯示長庚大學與資工系 logo 連結 -->
     <footer class="site-footer">
         <div class="container footer-content">
+            <!-- 兩個連結分別連到大學與系所網站 -->
             <a href="https://www.cgu.edu.tw/" target="_blank" rel="noopener noreferrer" aria-label="前往長庚大學官方網站">
                 <img src="https://canslab1.github.io/cgu.jpeg" alt="長庚大學 logo" class="footer-logo">
             </a>
@@ -505,9 +515,12 @@
         </div>
     </footer>
 
+    <!-- JavaScript 區塊：中英文切換、區塊顯示控制、統計與榮譽資料注入 -->
     <script>
+        // 記錄目前語言狀態
         let currentLanguage = 'zh';
 
+        // 語言切換函式：中英文內容互相切換
         function toggleLanguage() {
             const zhContent = document.getElementById('zh-content');
             const enContent = document.getElementById('en-content');
@@ -528,6 +541,7 @@
             }
         }
 
+        // 顯示指定區塊（目前只用於 "介紹" 區塊切換）
         function showSection(sectionId, event) {
             const currentLangContent = currentLanguage === 'zh'
                 ? document.getElementById('zh-content')
@@ -546,13 +560,15 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
+        // 切換小螢幕導覽列開關
         function toggleNav() {
             const currentNav = currentLanguage === 'zh'
                 ? document.querySelector('#zh-content .nav-container')
                 : document.querySelector('#en-content .nav-container');
             currentNav.classList.toggle('show');
         }
-        
+
+        // DOM 載入後動態建立統計卡片與榮譽欄位
         document.addEventListener('DOMContentLoaded', function() {
             const statsZh = [
                 { number: '43篇',   label: '期刊論文', url: 'https://canslab1.github.io/CYHuang.pdf#page=21' },
