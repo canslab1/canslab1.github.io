@@ -1,38 +1,51 @@
 <!DOCTYPE html>
 <html lang="zh-TW" itemscope itemtype="https://schema.org/WebPage">
 <head>
+    <!-- 設定瀏覽器兼容模式 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 設定網頁使用 UTF-8 編碼 -->
     <meta charset="UTF-8">
+    <!-- 設定網頁在行動裝置的顯示比例與縮放 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO 搜尋引擎描述與關鍵字 -->
     <meta name="description" content="長庚大學資訊工程學系黃崇源教授的個人學術網頁，介紹其研究成果、期刊論文、研究計畫、履歷、自傳與多項教育貢獻。">
     <meta name="keywords" content="黃崇源, 長庚大學, 資訊工程, 複雜網絡, 系統科學, 演化演算法, 計算社會科學, 教學研究, CY Huang, Chung-Yuan Huang, GSCOTT, 論文, 學術履歷">   
     <meta name="author" content="Prof. Chung-Yuan Huang (黃崇源教授)">
     
+    <!-- 社群平台顯示內容的 Open Graph 設定 -->
     <meta property="og:title" content="黃崇源教授 | 長庚大學資訊工程學系">
     <meta property="og:description" content="探索黃崇源教授的學術旅程，涵蓋其在複雜適應系統與網絡科學領域的重要貢獻與教學實踐。">
     <meta property="og:image" content="https://canslab1.github.io/IMG-2.jpg">
     <meta property="og:url" content="https://canslab1.github.io/CYHuang.html">
     <meta property="og:type" content="website">
     
+    <!-- Twitter 卡片資訊設定 -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="黃崇源教授 | 長庚大學資訊工程學系">
     <meta name="twitter:description" content="介紹黃崇源教授於資訊科學、系統模擬與教育貢獻的完整履歷與代表著作。">
     <meta name="twitter:image" content="https://canslab1.github.io/IMG-2.jpg">
-
+    
+    <!-- 設定瀏覽器標題列顯示的標題 -->
     <title>長庚大學·資訊工程學系·黃崇源教授 | 複雜適應性網絡與系統實驗室·主持人</title>
+    
+    <!-- 網頁整體樣式設計 -->
     <style>
+        /* 全域預設樣式重設與 box-sizing 設定 */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        /* 設定 html 與 body 為彈性排版並全高顯示 */
         html, body {
             height: 100%;
             display: flex;
             flex-direction: column;
         }
 
+        /* 設定網頁主體字體、背景與字距 */
         body {
             font-family: system-ui, -apple-system, 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
@@ -40,13 +53,14 @@
             background-color: #f8f9fa;
         }
 
+        /* 容器設定最大寬度與水平置中 */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Language Toggle */
+        /* 語言切換按鈕樣式 */
         .language-toggle {
             position: fixed;
             top: 20px;
@@ -70,7 +84,7 @@
             box-shadow: 0 4px 12px rgba(39,174,96,0.4);
         }
 
-        /* Language Content */
+        /* 中英文語言區塊預設為隱藏，active 時顯示 */
         .lang-content {
             display: none;
         }
@@ -79,7 +93,7 @@
             display: block;
         }
 
-        /* Header */
+        /* 頁首設定，包含背景圖片與文字樣式 */
         header {
             background: 
                 linear-gradient(135deg, rgba(20, 83, 45, 0.85) 0%, rgba(26, 119, 69, 0.85) 100%),
@@ -109,7 +123,7 @@
             display: block;
         }
 
-        /* Navigation */
+        /* 導覽列樣式與互動樣式 */
         nav {
             background: #fff;
             padding: 0;
@@ -144,7 +158,7 @@
             color: white;
         }
 
-        /* Main Content */
+        /* 主要內文區域設定 */
         main {
             flex: 1 0 auto;
             padding-bottom: 80px;
@@ -179,7 +193,7 @@
             padding-left: 1rem;
         }
 
-        /* Statistics Cards */
+        /* 統計卡片區塊排版與樣式 */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -223,7 +237,7 @@
             display: none;
         }
 
-        /* Footer */
+        /* 頁尾樣式與 Logo 顯示 */
         .site-footer {
             position: fixed;
             bottom: 0;
@@ -259,7 +273,7 @@
             opacity: 0.85;
         }
 
-        /* Responsive Design */
+        /* 響應式設計：針對中小螢幕顯示調整 */
         @media (max-width: 768px) {
             .container {
                 padding: 0 15px;
