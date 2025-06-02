@@ -542,6 +542,13 @@
             if (targetSection) targetSection.classList.add('active', 'fade-in');
 
             if (event) event.target.classList.add('active');
+
+            // 額外補充：在手機上點選選單後收回選單
+            const navContainer = currentLangContent.querySelector('.nav-container');
+            if (navContainer && navContainer.classList.contains('show')) {
+                navContainer.classList.remove('show');
+            }
+
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
