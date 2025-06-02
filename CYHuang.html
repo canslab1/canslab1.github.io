@@ -377,7 +377,7 @@
             <div class="container">
                 <button class="nav-toggle" onclick="toggleNav()">☰ 導覽</button>
                 <div class="nav-container">
-                    <button class="nav-item active" onclick="showSection('overview')">介紹</button>
+                    <button class="nav-item active" onclick="showSection('overview', event)">介紹</button>
                     <a class="nav-item" href="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">著作</a>
                     <a class="nav-item" href="https://arspb.nstc.gov.tw/NSCWebFront/modules/talentSearch/talentSearch.do?action=initRsm17new&rsNo=2a2ef24adef742f58349c3c533bb7402&LANG=chi" target="_blank" rel="noopener noreferrer">計畫</a>
                     <a class="nav-item" href="https://canslab1.github.io/CYHuang.pdf" target="_blank" rel="noopener noreferrer">履歷</a>
@@ -439,7 +439,7 @@
             <div class="container">
                 <button class="nav-toggle" onclick="toggleNav()">☰ Navigation</button>
                 <div class="nav-container">
-                    <button class="nav-item active" onclick="showSection('overview')">Overview</button>
+                    <button class="nav-item active" onclick="showSection('overview', event)">Overview</button>
                     <a class="nav-item" href="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Publications</a>
                     <a class="nav-item" href="https://arspb.nstc.gov.tw/NSCWebFront/modules/talentSearch/talentSearch.do?action=initRsm17new&rsNo=2a2ef24adef742f58349c3c533bb7402&LANG=chi" target="_blank" rel="noopener noreferrer">Projects</a>
                     <a class="nav-item" href="https://canslab1.github.io/CYHuang.pdf" target="_blank" rel="noopener noreferrer">CV</a>
@@ -514,6 +514,7 @@
             }
         }
 
+        /*
         function showSection(sectionId) {
             const sections = document.querySelectorAll('.section');
             sections.forEach(section => section.classList.remove('active'));
@@ -522,6 +523,25 @@
             const targetSection = document.getElementById(sectionId);
             if (targetSection) targetSection.classList.add('active', 'fade-in');
             event.target.classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        */
+
+        function showSection(sectionId, event) {
+            const currentLangContent = currentLanguage === 'zh'
+                ? document.getElementById('zh-content')
+                : document.getElementById('en-content');
+
+            const sections = currentLangContent.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            const navItems = currentLangContent.querySelectorAll('.nav-item');
+            navItems.forEach(item => item.classList.remove('active'));
+
+            const targetSection = currentLangContent.querySelector(`#${sectionId}`);
+            if (targetSection) targetSection.classList.add('active', 'fade-in');
+
+            if (event) event.target.classList.add('active');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
