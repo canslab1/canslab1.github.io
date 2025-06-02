@@ -398,10 +398,30 @@
             honors.forEach(txt => {
                 const h3 = document.createElement('h3');
                 h3.setAttribute('role', 'listitem');
-                h3.innerHTML = txt;  // 這裡改用 innerHTML 才能正確換行
+                h3.innerHTML = txt;
                 honorsContainer.appendChild(h3);
             });
         });
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Chung-Yuan Huang",
+        "alternateName": "黃崇源",
+        "jobTitle": "Professor",
+        "affiliation": {
+            "@type": "Organization",
+            "name": "Chang Gung University, Department of Computer Science and Information Engineering"
+        },
+        "url": "https://canslab1.github.io/CYHuang.html",
+        "image": "https://canslab1.github.io/IMG-2.jpg",
+        "sameAs": [
+            "https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en",
+            "https://www.facebook.com/gscott.huang/",
+            "https://sites.google.com/view/gscott-huang"
+        ]
+    }
     </script>
 </body>
 </html>
