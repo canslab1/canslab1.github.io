@@ -556,11 +556,21 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
+        /*
         function toggleNav() {
             const nav = document.querySelector('.nav-container');
             nav.classList.toggle('show');
         }
+        */
 
+        function toggleNav() {
+            const currentNav = currentLanguage === 'zh'
+                ? document.querySelector('#zh-content .nav-container')
+                : document.querySelector('#en-content .nav-container');
+    
+            currentNav.classList.toggle('show');
+        }
+        
         document.addEventListener('DOMContentLoaded', function() {
             const statsZh = [
                 { number: '43篇',   label: '期刊論文', url: 'https://canslab1.github.io/CYHuang.pdf#page=21' },
