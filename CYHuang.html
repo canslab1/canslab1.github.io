@@ -288,6 +288,8 @@
             gap: 0.3rem;
             flex-wrap: wrap;
             padding: 0.3rem 1rem;
+            overflow: visible;
+            position: relative;
         }
 
         .footer-logo {
@@ -299,8 +301,11 @@
         }
 
         .footer-logo:hover {
-            transform: scale(1.05);
+            transform: scale(2);
+            filter: brightness(1.2);
             opacity: 0.85;
+            position: relative;
+            z-index: 10;
         }
 
         /* 響應式設計：針對中小螢幕顯示調整 */
