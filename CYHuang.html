@@ -113,6 +113,22 @@
             font-family: system-ui, -apple-system, 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
         }
 
+        .header-text {
+            text-align: center;
+        }
+
+        .header-text h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+
+        .header-text .subheadline {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
         .profile-photo {
             width: 180px;
             height: 180px;
@@ -284,8 +300,20 @@
                 padding: 0 15px;
             }
 
+            .header-text h1 {
+                font-size: 1.75rem;   /* 原本為 2.5rem，適當縮小 */
+                line-height: 1.4;
+                margin-bottom: 0.3rem;
+            }
+
+            .header-text .subheadline {
+                font-size: 1.1rem;     /* 保持次一層級，同時不過小 */
+                line-height: 1.4;
+            }
+
             .header-content {
                 flex-direction: column;
+                align-items: center;
                 text-align: center;
                 gap: 0.5rem;
             }
@@ -298,7 +326,7 @@
             .profile-photo {
                 width: 140px;
                 height: 140px;
-                margin: 0 auto;
+                margin: 0.5rem;
             }
 
             .language-toggle {
@@ -384,11 +412,9 @@
                 <div class="header-content" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 1rem;">
                     <!-- 教授大頭照與個人資訊 -->
                     <img src="https://canslab1.github.io/IMG-2.jpg" alt="Chung-Yuan Huang" class="profile-photo">
-                    <div>
-                        <h1>
-                            長庚大學 黃崇源 教授<br>
-                            複雜適應性網絡與系統實驗室
-                        </h1>
+                    <div class="header-text">
+                        <h1>長庚大學 黃崇源 教授</h1>
+                        <div class="subheadline">複雜適應性網絡與系統實驗室</div>
                     </div>
                 </div>
             </div>
@@ -451,11 +477,9 @@
             <div class="container">
                 <div class="header-content" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 1rem;">
                     <img src="https://canslab1.github.io/IMG-2.jpg" alt="Chung-Yuan Huang" class="profile-photo">
-                    <div>
-                        <h1>
-                            Prof. Chung-Yuan Huang<br>
-                            @Chang Gung University
-                        </h1>
+                    <div class="header-text">
+                        <h1>Prof. Chung-Yuan Huang</h1>
+                        <div class="subheadline">@CSIE, Chang Gung University</div>
                     </div>
                 </div>
             </div>
