@@ -6,7 +6,11 @@
     <!-- 設定網頁使用 UTF-8 編碼 -->
     <meta charset="UTF-8">
     <!-- 設定網頁在行動裝置的顯示比例與縮放 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     
     <!-- SEO 搜尋引擎描述與關鍵字 -->
     <meta name="description" content="長庚大學資訊工程學系黃崇源教授的個人學術網頁，介紹其研究成果、期刊論文、研究計畫、履歷、自傳與多項教育貢獻。">
@@ -29,7 +33,6 @@
     <!-- 設定瀏覽器標題列顯示的標題 -->
     <title>長庚大學·資工系·黃崇源教授</title>
     <link rel="icon" href="https://canslab1.github.io/csie.png" type="image/png">
-    <link rel="stylesheet" href="style.css?v=20250603094748">
     
     <!-- 網頁整體樣式設計 -->
     <style>
@@ -401,6 +404,14 @@
             to { opacity: 1; transform: translateY(0); }
         }
     </style>
+
+    <script>
+        const timestamp = new Date().getTime();
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = `style.css?v=${timestamp}`;
+        document.head.appendChild(link);
+    </script>
 </head>
 <body>
     <!-- 語言切換按鈕，預設為英文切換，點擊後可切換中英文內容顯示 -->
@@ -480,9 +491,8 @@
                     <img src="https://canslab1.github.io/IMG-2.jpg" alt="Chung-Yuan Huang" class="profile-photo">
                     <div class="header-text">
                         <h1>Prof. Chung-Yuan Huang</h1>
-                        <div class="subheadline">Dept. of Computer Science and Information Engineering</div>
-                        <div class="subheadline">Chang Gung University</div>
-                        <div class="subheadline">Director, Complex Adaptive Networks and Systems Lab.</div>
+                        <div class="subheadline">@CSIE, Chang Gung University</div>
+                        <div class="subheadline">Director, Complex Adaptive Network and System Lab.</div>
                     </div>
                 </div>
             </div>
