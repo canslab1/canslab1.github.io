@@ -1,655 +1,1125 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<!-- 
+    檔案名稱：CYHuang.html
+    功能說明：長庚大學黃崇源教授個人學術網頁
+    建立目的：展示學術成就、研究成果與社會貢獻
+    技術特色：雙語支援、響應式設計、動態內容生成
+    維護重點：內容更新、統計數據同步、連結有效性檢查
+-->
+<html lang="zh-TW" itemscope itemtype="https://schema.org/WebPage">
 <head>
-<meta name="google-site-verification" content="gLoFqEAQHB-xxN_QV0uW_uKbXYBXieaMlk-UksNZS5g" />
-<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+    <!-- ===========================================
+         瀏覽器相容性與編碼設定區塊
+         目的：確保網頁在不同瀏覽器中的一致性表現
+    =========================================== -->
+    
+    <!-- 設定 Internet Explorer 使用最新渲染引擎 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- 指定網頁使用 UTF-8 字元編碼，支援多國語言 -->
+    <meta charset="UTF-8">
+    
+    <!-- 響應式設計視口設定，控制行動裝置顯示比例 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href='https://fonts.loli.net/css?family=Didact+Gothic&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
-.mac-os-11 { --title-bar-height: 28px; }
-html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit; background-repeat: inherit; }
-iframe { margin: auto; }
-a.url { word-break: break-all; }
-a:active, a:hover { outline: 0px; }
-.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
-#write.first-line-indent p { text-indent: 2em; }
-#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
-#write.first-line-indent li { margin-left: 2em; }
-.for-image #write { padding-left: 8px; padding-right: 8px; }
-body.typora-export { padding-left: 30px; padding-right: 30px; }
-.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
-.typora-export .task-list-item input { pointer-events: none; }
-@media screen and (max-width: 500px) { 
-  body.typora-export { padding-left: 0px; padding-right: 0px; }
-  #write { padding-left: 20px; padding-right: 20px; }
-  .CodeMirror-sizer { margin-left: 0px !important; }
-  .CodeMirror-gutters { display: none !important; }
-}
-#write li > figure:last-child { margin-bottom: 0.5rem; }
-#write ol, #write ul { position: relative; }
-img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
-button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
-input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
-*, ::after, ::before { box-sizing: border-box; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
-p { line-height: inherit; }
-h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
-p { orphans: 4; }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.8rem; }
-h3 { font-size: 1.6rem; }
-h4 { font-size: 1.4rem; }
-h5 { font-size: 1.2rem; }
-h6 { font-size: 1rem; }
-.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
-.hidden { display: none; }
-.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
-a { cursor: pointer; }
-sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
-sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
-#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
-figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
-figure > table { margin: 0px; }
-tr { break-inside: avoid; break-after: auto; }
-thead { display: table-header-group; }
-table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
-table.md-table td { min-width: 32px; }
-.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
-.CodeMirror-linenumber { }
-.CodeMirror { text-align: left; }
-.CodeMirror-placeholder { opacity: 0.3; }
-.CodeMirror pre { padding: 0px 4px; }
-.CodeMirror-lines { padding: 0px; }
-div.hr:focus { cursor: none; }
-#write pre { white-space: pre-wrap; }
-#write.fences-no-line-wrapping pre { white-space: pre; }
-#write pre.ty-contain-cm { white-space: normal; }
-.CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit; background-repeat: inherit; }
-.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
-#write .md-fences.mock-cm { white-space: pre-wrap; }
-.md-fences.md-fences-with-lineno { padding-left: 0px; }
-#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
-.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
-.CodeMirror-line, twitterwidget { break-inside: avoid; }
-.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
-.footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; }
-li div { padding-top: 0px; }
-blockquote { margin: 1rem 0px; }
-li .mathjax-block, li p { margin: 0.5rem 0px; }
-li blockquote { margin: 1rem 0px; }
-li { margin: 0px; position: relative; }
-blockquote > :last-child { margin-bottom: 0px; }
-blockquote > :first-child, li > :first-child { margin-top: 0px; }
-.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
-#write .footnote-line { white-space: pre-wrap; }
-@media print { 
-  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
-  .typora-export * { -webkit-print-color-adjust: exact; }
-  .typora-export #write { break-after: avoid; }
-  .typora-export #write::after { height: 0px; }
-  .is-mac table { break-inside: avoid; }
-  .typora-export-show-outline .typora-export-sidebar { display: none; }
-}
-.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
-a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; }
-p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
-#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
-p > .md-image:only-child { display: inline-block; width: 100%; }
-#write .MathJax_Display { margin: 0.8em 0px 0px; }
-.md-math-block { width: 100%; }
-.md-math-block:not(:empty)::after { display: none; }
-.MathJax_ref { fill: currentcolor; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
-.md-task-list-item { position: relative; list-style-type: none; }
-.task-list-item.md-task-list-item { padding-left: 0px; }
-.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
-.math { font-size: 1rem; }
-.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
-.md-toc-content { position: relative; margin-left: 0px; }
-.md-toc-content::after, .md-toc::after { display: none; }
-.md-toc-item { display: block; color: rgb(65, 131, 196); }
-.md-toc-item a { text-decoration: none; }
-.md-toc-inner:hover { text-decoration: underline; }
-.md-toc-inner { display: inline-block; cursor: pointer; }
-.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
-.md-toc-h2 .md-toc-inner { margin-left: 2em; }
-.md-toc-h3 .md-toc-inner { margin-left: 4em; }
-.md-toc-h4 .md-toc-inner { margin-left: 6em; }
-.md-toc-h5 .md-toc-inner { margin-left: 8em; }
-.md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) { 
-  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
-  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
-  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
-  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
-}
-a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
-.footnote-line a:not(.reversefootnote) { color: inherit; }
-.md-attr { display: none; }
-.md-fn-count::after { content: "."; }
-code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
-.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
-code { text-align: left; }
-a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; }
-.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
-.md-diagram-panel > svg { max-width: 100%; }
-[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
-[lang="mermaid"] .node text { font-size: 1rem; }
-table tr th { border-bottom-width: 0px; }
-video { max-width: 100%; display: block; margin: 0px auto; }
-iframe { max-width: 100%; width: 100%; border: none; }
-.highlight td, .highlight tr { border: 0px; }
-mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
-.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
-.md-expand mark .md-meta { opacity: 0.3 !important; }
-mark .md-meta { color: rgb(0, 0, 0); }
-@media print { 
-  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
-}
-.md-diagram-panel .messageText { stroke: none !important; }
-.md-diagram-panel .start-state { fill: var(--node-fill); }
-.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
-.md-fences.md-fences-math { font-size: 1em; }
-.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
-.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
-.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
-.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
-.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
-.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
-@media screen and (max-width: 1024px) { 
-  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
-}
-@media screen and (max-width: 800px) { 
-  .typora-export-sidebar { display: none; }
-}
-.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
-.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
-.outline-content strong { font-weight: 400; }
-.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
-.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
-.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
-.outline-expander:hover::before { content: ""; }
-.outline-h1 > .outline-item { padding-left: 0px; }
-.outline-h2 > .outline-item { padding-left: 1em; }
-.outline-h3 > .outline-item { padding-left: 2em; }
-.outline-h4 > .outline-item { padding-left: 3em; }
-.outline-h5 > .outline-item { padding-left: 4em; }
-.outline-h6 > .outline-item { padding-left: 5em; }
-.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
-.outline-label:hover { text-decoration: underline; }
-.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
-.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
-.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
-.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
-.outline-children { display: none; }
-.info-panel-tab-wrapper { display: none; }
-.outline-item-open > .outline-children { display: block; }
-.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
-.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
-.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
-.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
-.typora-export-collapse-outline .outline-children { display: none; }
-.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
-.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
-.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
-.md-inline-math-container mjx-container { zoom: 0.95; }
+    <!-- ===========================================
+         快取控制設定區塊
+         目的：防止瀏覽器快取過期內容，確保使用者看到最新版本
+    =========================================== -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    
+    <!-- ===========================================
+         SEO 搜尋引擎最佳化區塊
+         目的：提升搜尋引擎排名與點擊率
+    =========================================== -->
+    
+    <!-- 網頁描述：出現在搜尋結果摘要中 -->
+    <meta name="description" content="長庚大學資訊工程學系黃崇源教授的個人學術網頁，介紹其研究成果、期刊論文、研究計畫、履歷、自傳與多項教育貢獻。">
+    
+    <!-- 關鍵字標籤：協助搜尋引擎理解頁面主題 -->
+    <meta name="keywords" content="黃崇源, 長庚大學, 資訊工程, 複雜網絡, 系統科學, 演化演算法, 計算社會科學, 教學研究, CY Huang, Chung-Yuan Huang, GSCOTT, 論文, 學術履歷">   
+    
+    <!-- 作者資訊：標明內容創作者 -->
+    <meta name="author" content="Prof. Chung-Yuan Huang (黃崇源教授)">
+    
+    <!-- ===========================================
+         Open Graph 社群媒體分享最佳化區塊
+         目的：控制在 Facebook、LinkedIn 等平台分享時的顯示效果
+    =========================================== -->
+    <meta property="og:title" content="黃崇源教授 | 長庚大學資訊工程學系">
+    <meta property="og:description" content="探索黃崇源教授的學術旅程，涵蓋其在複雜適應系統與網絡科學領域的重要貢獻與教學實踐。">
+    <meta property="og:image" content="https://canslab1.github.io/IMG-2.jpg">
+    <meta property="og:url" content="https://canslab1.github.io/CYHuang.html">
+    <meta property="og:type" content="website">
+    
+    <!-- ===========================================
+         Twitter Card 設定區塊
+         目的：最佳化在 Twitter 平台的分享顯示效果
+    =========================================== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="黃崇源教授 | 長庚大學資訊工程學系">
+    <meta name="twitter:description" content="介紹黃崇源教授於資訊科學、系統模擬與教育貢獻的完整履歷與代表著作。">
+    <meta name="twitter:image" content="https://canslab1.github.io/IMG-2.jpg">
+    
+    <!-- ===========================================
+         頁面標題與圖示設定
+         目的：顯示在瀏覽器標籤頁的標題與圖示
+    =========================================== -->
+    <title>長庚大學·資工系·黃崇源教授</title>
+    <link rel="icon" href="https://canslab1.github.io/csie.png" type="image/png">
+    
+    <!-- ===========================================
+         CSS 樣式表定義區塊
+         組織原則：全域設定 → 版面配置 → 元件樣式 → 響應式設計
+    =========================================== -->
+    <style>
+        /* ===================================
+           全域預設樣式重設
+           目的：統一不同瀏覽器的預設樣式差異
+        =================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* 確保 padding 和 border 計入元素總寬度 */
+        }
 
+        /* ===================================
+           HTML 與 BODY 基礎版面設定
+           目的：建立彈性排版容器，支援 sticky footer 效果
+        =================================== */
+        html, body {
+            height: 100%; /* 確保最小高度為視窗高度 */
+            display: flex;
+            flex-direction: column; /* 垂直排列：header → main → footer */
+        }
 
-.CodeMirror { height: auto; }
-.CodeMirror.cm-s-inner { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
-.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
-.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
-.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; white-space: nowrap; background-position: inherit; background-repeat: inherit; }
-.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
-.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
-.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
-.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
-.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
-.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
-.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
-.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
-.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
-.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
-.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
-.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
-.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
-.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
-.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
-.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
-.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
-.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
-.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
-.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
-.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
-.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
-.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
-.cm-negative { color: rgb(221, 68, 68); }
-.cm-positive { color: rgb(34, 153, 34); }
-.cm-header, .cm-strong { font-weight: 700; }
-.cm-del { text-decoration: line-through; }
-.cm-em { font-style: italic; }
-.cm-link { text-decoration: underline; }
-.cm-error { color: red; }
-.cm-invalidchar { color: red; }
-.cm-constant { color: rgb(38, 139, 210); }
-.cm-defined { color: rgb(181, 137, 0); }
-div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
-div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
-.cm-s-inner .CodeMirror-activeline-background { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
-.CodeMirror { position: relative; overflow: hidden; }
-.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
-.CodeMirror-sizer { position: relative; }
-.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
-.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
-.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
-.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
-.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
-.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
-.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
-.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; border: none !important; background-position: 0px 0px !important; }
-.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
-.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
-.CodeMirror-lines { cursor: text; }
-.CodeMirror pre { border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; border-width: 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; background-position: 0px 0px; }
-.CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
-.CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: fit-content; }
-.CodeMirror-wrap .CodeMirror-code pre { border-right-style: none; width: auto; }
-.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
-.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
-.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
-.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
-.CodeMirror-measure pre { position: static; }
-.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-style: none; width: 0px; }
-.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
-.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
-.cm-searching { background-color: rgba(255, 255, 0, 0.4); }
-span.cm-underlined { text-decoration: underline; }
-span.cm-strikethrough { text-decoration: line-through; }
-.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
-.cm-tw-deleted { text-decoration: line-through; }
-.cm-tw-header5 { font-weight: 700; }
-.cm-tw-listitem:first-child { padding-left: 10px; }
-.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
-.cm-tw-underline { text-decoration: underline; }
-@media print { 
-  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
-}
+        /* ===================================
+           主體字體與背景設定
+           字體順序：系統字體 → 中文字體 → 英文後備字體
+        =================================== */
+        body {
+            font-family: system-ui, -apple-system, 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6; /* 提升文字可讀性的行高比例 */
+            color: #333;
+            background-color: #f8f9fa; /* 淺灰背景減少眼部疲勞 */
+        }
 
+        /* ===================================
+           容器通用樣式
+           目的：統一內容區塊的最大寬度與水平置中
+        =================================== */
+        .container {
+            max-width: 1200px; /* 防止在超寬螢幕上內容過度伸展 */
+            margin: 0 auto; /* 水平置中 */
+            padding: 0 20px; /* 左右留白確保內容不貼邊 */
+        }
 
-@include-when-export url(https://fonts.loli.net/css?family=Didact+Gothic&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext);
+        /* ===================================
+           語言切換按鈕樣式
+           定位：固定在右上角，確保在任何捲動位置都可見
+        =================================== */
+        .language-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001; /* 確保在所有其他元素之上 */
+            background: #27ae60; /* 綠色主題色 */
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px; /* 圓角設計 */
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease; /* 平滑的懸停動畫 */
+            box-shadow: 0 2px 8px rgba(39,174,96,0.3); /* 輕微陰影增加層次感 */
+        }
 
-/* cyrillic-ext */
-/* cyrillic */
-:root {
-	--window-border: none;
-	--typora-center-window-title: true;
-	--active-file-bg-color: #f3f3f3;
-	--bg-color: #fcfcfc;
-	--control-text-color: #777;
-}
+        /* 語言按鈕懸停效果：顏色變化與輕微上浮 */
+        .language-toggle:hover {
+            background: #219150; /* 深綠色 */
+            transform: translateY(-2px); /* 上浮效果 */
+            box-shadow: 0 4px 12px rgba(39,174,96,0.4); /* 加深陰影 */
+        }
 
-.mac-seamless-mode #typora-sidebar {
-	top: 20px;
-	padding-top: 0;
-	height: auto;
-}
+        /* ===================================
+           語言內容區塊控制
+           機制：透過 .active 類別控制中英文內容的顯示/隱藏
+        =================================== */
+        .lang-content {
+            display: none; /* 預設隱藏 */
+        }
 
-html,
-body,
-#write{
-	background: #fcfcfc;
-	background: var(--bg-color);
-	font-family: 'TeXGyreAdventor', "Century Gothic", "Didact Gothic", "Yu Gothic", 'Segoe UI Emoji', sans-serif;
-	font-weight: 300;
-	-webkit-font-smoothing: antialiased;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	color: #111;
-	font-family: 'TeXGyreAdventor', "Century Gothic", "Didact Gothic", "Yu Gothic", sans-serif;
-}
+        .lang-content.active {
+            display: block; /* 啟用時顯示 */
+        }
 
-html {
-	font-size:16px;
-}
+        /* ===================================
+           頁首區域設計
+           特色：背景圖片疊加漸層色彩，營造專業視覺效果
+        =================================== */
+        header {
+            background: 
+                linear-gradient(135deg, rgba(20, 83, 45, 0.85) 0%, rgba(26, 119, 69, 0.85) 100%), /* 綠色漸層遮罩 */
+                url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; /* 科技感背景圖片 */
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* 底部陰影分隔效果 */
+            position: relative;
+        }
 
-#write {
-	max-width: 914px;
-	text-align: justify;
-}
+        /* 頁首內容排版：彈性佈局支援照片與文字的響應式排列 */
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 400; /* 較細字重呈現優雅感 */
+            font-family: system-ui, -apple-system, 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+        }
 
-@media only screen and (min-width: 1400px) {
-	#write {
-		max-width: 1024px;
-	}
-}
+        .header-text {
+            text-align: center;
+        }
 
-#write>h1:first-child {
-	margin-top: 2.75rem;
-}
-#write>h2:first-child {
-	margin-top: 1.75rem;
-}
-#write>h3:first-child {
-	margin-top: 1rem;
-}
-#write>h4:first-child {
-	margin-top: 0.5rem;
-}
-h1 {
-	font-weight: normal;
-	line-height: 4rem;
-	margin: 0 0 1.75rem;
-	padding: 20px 30px;
-	text-align: center;
-	text-transform: uppercase;
-	margin-top: 4rem;
-}
-h2 {
-	font-weight: normal;
-	line-height: 3rem;
-	margin: 0 0 1.9375rem;
-	padding: 0 30px;
-	text-align: center;
-	text-transform: uppercase;
-	margin-top: 3rem
-}
-h3 {
-	font-weight: normal;
-}
-h4 {
-	font-weight: normal;
-}
-h5 {
-	font-size: 1.125rem;
-	font-weight: normal;
-}
-h6 {
-	font-size: 1rem;
-	font-weight: bold;
-}
-p {
-	color: #111;
-	font-size: 1rem;
-	line-height: 1.75rem;
-	margin: 0 0 1.25rem;
-}
-#write>h3.md-focus:before {
-	left: -1.875rem;
-	top: 0.5rem;
-	padding: 2px;
-}
-#write>h4.md-focus:before {
-	left: -1.875rem;
-	top: 0.3125rem;
-	padding: 2px;
-}
-#write>h5.md-focus:before {
-	left: -1.875rem;
-	top: 0.25rem;
-	padding: 2px;
-}
-#write>h6.md-focus:before {
-	left: -1.875rem;
-	top: .125rem;
-	padding: 2px;
-}
-@media screen and (max-width: 48em) {
-	blockquote {
-		margin-left: 1rem;
-		margin-right: 0;
-		padding: 0.5em;
-	}
-	.h1,
-	h1 {
-		font-size: 2.827rem;
-	}
-	.h2,
-	h2 {
-		font-size: 1.999rem;
-	}
-	.h3,
-	h3 {
-		font-size: 1.413rem;
-	}
-	.h4,
-	h4 {
-		font-size: 1.250rem;
-	}
-	.h5,
-	h5 {
-		font-size: 1.150rem;
-	}
-	.h6,
-	h6 {
-		font-size: 1rem;
-	}
-}
-a,
-.md-def-url {
-	color: #990000;
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: underline;
-}
-table {
-	margin-bottom: 20px
-}
-table th,
-table td {
-	padding: 8px;
-	line-height: 1.25rem;
-	vertical-align: top;
-	border-top: 1px solid #ddd
-}
-table th {
-	font-weight: bold
-}
-table thead th {
-	vertical-align: bottom
-}
-table caption+thead tr:first-child th,
-table caption+thead tr:first-child td,
-table colgroup+thead tr:first-child th,
-table colgroup+thead tr:first-child td,
-table thead:first-child tr:first-child th,
-table thead:first-child tr:first-child td {
-	border-top: 0
-}
-table tbody+tbody {
-	border-top: 2px solid #ddd
-}
-code, .md-fences {
-	padding: .5em;
-	/*background: #f0f0f0;*/
-	border: 1px solid #ccc;
-	padding: .1em;
-	font-size: 0.9em;
-	margin-left: 0.2em;
-	margin-right: 0.2em;
-}
-.md-fences {
-	margin: 0 0 20px;
-	font-size: 1em;
-	padding: 0.3em 1em;
-  	padding-top: 0.4em;
-}
-.task-list{
-	padding-left: 0;
-}
+        .header-text h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 0.3rem;
+        }
 
-.task-list-item {
-	padding-left:2.125rem;
-}
+        /* 副標題樣式：較小字體與透明度營造階層感 */
+        .header-text .subheadline {
+            font-size: 1.5rem;
+            font-weight: 300;
+            font-stretch: condensed;
+            color: hsl(210, 100%, 93%); /* 淺藍白色 */
+            text-shadow: 0 0 2px rgba(255, 255, 255, 0.15); /* 輕微文字陰影增加可讀性 */
+        }
 
-input {
-	border-style: ridge;
-}
+        /* 個人照片樣式：圓形裁切與陰影效果 */
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            object-fit: cover; /* 保持比例裁切 */
+            border-radius: 50%; /* 圓形效果 */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 立體陰影 */
+            margin: 1rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
 
-.task-list-item input {
-	top: 3px;
-}
+        /* ===================================
+           導覽列設計
+           功能：黏性定位導覽，在捲動時始終可見
+        =================================== */
+        nav {
+            background: #fff;
+            padding: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 底部陰影 */
+            position: sticky; /* 黏性定位 */
+            top: 0; /* 黏在頁面頂部 */
+            z-index: 100; /* 確保在內容區塊之上 */
+            margin: 0;
+        }
 
-.md-task-list-item input {
-	margin-left: -1.5em;
-}
+        /* 導覽容器：彈性佈局支援項目水平排列 */
+        .nav-container {
+            display: flex;
+            justify-content: center; /* 項目置中對齊 */
+            flex-wrap: nowrap; /* 防止換行 */
+            overflow-x: auto; /* 小螢幕時允許水平捲動 */
+        }
 
-.task-list-item input:before {
-	content: "";
-	display: inline-block;
-	width: 1rem;
-	height: 1rem;
-	vertical-align: middle;
-	text-align: center;
-	border: 1px solid gray;
-	background-color: #fdfdfd;
-	margin-left: 0;
-	-webkit-appearance: none;
-	margin-top: -1rem;
-}
+        /* 導覽項目基礎樣式 */
+        .nav-item {
+            background: none;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            color: #2c3e50; /* 深藍灰色 */
+            cursor: pointer;
+            transition: all 0.3s ease; /* 平滑過渡效果 */
+            font-weight: 500;
+            white-space: nowrap; /* 防止文字換行 */
+        }
 
-.typora-node .task-list-item input:before {
-	top: 0.3ex;
-	position: absolute;
-}
+        /* 英文版導覽項目：調整間距適應較長的英文單字 */
+        #en-content .nav-item { 
+            padding: 0.5rem 0.6rem; 
+            font-size: 0.9rem; 
+        }
 
-.task-list-item input:checked:before,
-.task-list-item input[checked]:before{
-	content: '\25FC';
-	/*◘*/
-	font-size: 0.8125rem;
-	line-height: 0.9375rem;
-}
+        /* 導覽項目懸停與啟用狀態 */
+        .nav-item:hover, .nav-item.active {
+            background: #27ae60; /* 綠色背景 */
+            color: white;
+        }
 
-/* Chrome 29+ */
-@media screen and (-webkit-min-device-pixel-ratio:0)
-  and (min-resolution:.001dpcm) {
-    .task-list-item input:before {
-    	margin-top: -0.2rem;
-    }
+        /* ===================================
+           主要內容區域設定
+           佈局：彈性成長佔滿剩餘空間，底部留白避免被 footer 遮擋
+        =================================== */
+        main {
+            flex: 1 0 auto; /* 彈性成長，佔滿可用空間 */
+            padding-bottom: 80px; /* 底部留白，避免被固定 footer 遮擋 */
+        }
 
-    .task-list-item input:checked:before,
-	.task-list-item input[checked]:before {
-		margin-top: -0.2rem;
-	}
-}
+        /* 內容區塊基礎樣式 */
+        .section {
+            display: none; /* 預設隱藏 */
+            background: white;
+            border-radius: 10px; /* 圓角設計 */
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 卡片式陰影 */
+        }
 
-blockquote {
-	margin: 0 0 1.11111rem;
-	padding: 0.5rem 1.11111rem 0 1.05556rem;
-	border-left: 1px solid gray;
-}
-blockquote,
-blockquote p {
-	line-height: 1.6;
-	color: #6f6f6f;
-}
-#write pre.md-meta-block {
-	min-height: 30px;
-	background: #f8f8f8;
-	padding: 1.5em;
-	font-weight: 300;
-	font-size: 1em;
-	padding-bottom: 1.5em;
-	padding-top: 3em;
-    margin-top: -1.5em;
-	color: #999;
-	
-	width: 100vw;
-	max-width: calc(100% + 60px);
-	margin-left: -30px;
-	border-left: 30px #f8f8f8 solid;
-	border-right: 30px #f8f8f8 solid;
-}
-.MathJax_Display {
-	font-size: 0.9em;
-	margin-top: 0.5em;
-	margin-bottom: 0;
-}
-p.mathjax-block,
-.mathjax-block {
-	padding-bottom: 0;
-}
-.mathjax-block>.code-tooltip {
-	bottom: 5px;
-	box-shadow: none;
-}
-.md-image>.md-meta {
-	padding-left: 0.5em;
-	padding-right: 0.5em;
-}
-.md-image>img {
-	margin-top: 2px;
-}
-.md-image>.md-meta:first-of-type:before {
-	padding-left: 4px;
-}
+        /* 啟用的內容區塊 */
+        .section.active {
+            display: block;
+        }
+        
+        /* 內容區塊標題樣式 */
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #27ae60; /* 綠色底線強調 */
+            padding-bottom: 0.5rem;
+        }
 
-#typora-source {
-	color: #555;
-}
+        /* 內容區塊副標題樣式 */
+        .section h3 {
+            color: #2c3e50;
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin: 1.5rem 0 1rem 0;
+            border-left: 4px solid #27ae60; /* 左側綠色邊框 */
+            padding-left: 1rem;
+        }
 
-/** ui for windows **/
-#md-searchpanel {
-    border-bottom: 1px solid #ccc;
-}
+        /* ===================================
+           統計數據展示區域
+           佈局：網格系統自動適應不同螢幕尺寸
+        =================================== */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 響應式網格 */
+            gap: 1.5rem; /* 項目間距 */
+            margin-top: 1.5rem;
+        }
 
-#md-searchpanel .btn {
-    border: 1px solid #ccc;
-}
+        /* 統計卡片設計：漸層背景與互動效果 */
+        .stat-card {
+            background: linear-gradient(135deg, #27ae60 0%, #219150 100%); /* 綠色漸層 */
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(39,174,96,0.3); /* 主題色陰影 */
+            outline: none;
+            cursor: pointer; /* 指示可點擊 */
+        }
 
-#md-notification:before {
-	top: 14px;
-}
+        /* 統計卡片鍵盤焦點樣式 */
+        .stat-card:focus {
+            box-shadow: 0 0 0 3px #27ae60; /* 焦點外框 */
+        }
 
-#md-notification {
-	background: #eee;
-}
+        /* 統計卡片懸停效果 */
+        .stat-card:hover {
+            background: linear-gradient(135deg, #1e8449 0%, #186a3b 100%); /* 深綠漸層 */
+            color: white;
+        }
 
-.megamenu-menu-panel .btn {
-	border: 1px solid #ccc;
-}
+        /* 統計數字樣式 */
+        .stat-number {
+            font-size: 1.7rem;
+            font-weight: 500;
+            display: block;
+        }
 
-#typora-sidebar {
-	box-shadow: none;
-}
+        /* 統計標籤樣式 */
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9; /* 輕微透明營造階層感 */
+            margin-top: 0.5rem;
+        }
 
-.file-list-item ,
-.show-folder-name .file-list-item {
-	padding-top: 20px;
-	padding-bottom: 20px;
-	line-height: 20px;
-}
+        /* 行動裝置導覽切換按鈕：桌面版隱藏 */
+        .nav-toggle {
+            display: none;
+        }
 
-.file-list-item-summary {
-	height: 40px;
-	line-height: 20px;
-}
+        /* ===================================
+           頁尾設計
+           定位：固定在底部，包含機構 logo 連結
+        =================================== */
+        .site-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            color: white;
+            padding: 0.3rem 0;
+            font-size: 0.8rem;
+            text-align: center;
+            box-shadow: 0 -2px 6px rgba(0,0,0,0.1); /* 頂部陰影 */
+            border-top: 1px solid #ddd; /* 頂部邊框 */
+            z-index: 1000;
+            pointer-events: auto; /* 確保可以點擊 */
+        }
 
-.ty-table-edit {
-	background: #ededed;
-}
+        /* 頁尾內容佈局 */
+        .footer-content {
+            display: flex;
+            justify-content: space-evenly; /* 均勻分佈 */
+            align-items: center;
+            gap: 0.3rem;
+            flex-wrap: wrap; /* 小螢幕時允許換行 */
+            padding: 0.3rem 1rem;
+            overflow: visible;
+            position: relative;
+        }
 
-.dropdown-menu .divider {
-	border-color: #e5e5e5;
-}
+        /* 頁尾 logo 基礎樣式 */
+        .footer-logo {
+            height: 32px;
+            max-width: 128px;
+            object-fit: contain; /* 保持比例 */
+            transition: transform 0.3s ease, opacity 0.3s ease; /* 平滑動畫 */
+            filter: brightness(1.1); /* 輕微提亮 */
+        }
 
- @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
-</style><title>index</title>
+        /* 頁尾 logo 懸停效果：放大顯示 */
+        .footer-logo:hover {
+            transform: scale(2); /* 放大兩倍 */
+            filter: brightness(1.2); /* 進一步提亮 */
+            opacity: 0.85;
+            position: relative;
+            z-index: 10; /* 確保在其他元素之上 */
+        }
+
+        /* ===================================
+           響應式設計：中小型螢幕適配
+           斷點：768px 以下視為行動裝置
+        =================================== */
+        @media (max-width: 768px) {
+            /* 容器在小螢幕的間距調整 */
+            .container {
+                padding: 0 15px;
+            }
+
+            /* 頁首標題文字縮放：平衡可讀性與螢幕空間 */
+            .header-text h1 {
+                font-size: 1.7rem;   /* 從 2.5rem 適當縮小 */
+                line-height: 1.4;
+                margin-bottom: 0.3rem;
+            }
+
+            .header-text .subheadline {
+                font-size: 1.1rem;     /* 保持階層關係 */
+                line-height: 1.4;
+            }
+
+            /* 頁首內容重新排列：垂直堆疊 */
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 0.5rem;
+            }
+
+            .header-content h1 {
+                font-size: 2rem;
+                line-height: 1.4;
+            }
+
+            /* 個人照片縮小適應小螢幕 */
+            .profile-photo {
+                width: 140px;
+                height: 140px;
+                margin: 0.5rem;
+            }
+
+            /* 語言切換按鈕位置與大小調整 */
+            .language-toggle {
+                top: 10px;
+                right: 10px;
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
+            }
+
+            /* 行動裝置導覽切換按鈕：顯示 */
+            .nav-toggle {
+                display: block;
+                padding: 1rem;
+                font-size: 1.5rem;
+                background: none;
+                border: none;
+                color: #2c3e50;
+                cursor: pointer;
+            }
+
+            /* 行動裝置導覽容器：預設隱藏，垂直排列 */
+            .nav-container {
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem;
+            }
+
+            /* 顯示行動導覽的控制類別 */
+            .nav-container.show {
+                display: flex;
+            }
+
+            /* 行動裝置導覽項目：全寬度排列 */
+            .nav-item {
+                width: 100%;
+                text-align: left;
+                padding: 0.8rem 1rem;
+            }
+
+            /* 內容區塊內距縮小 */
+            .section {
+                padding: 1.5rem;
+            }
+
+            /* 統計網格：單欄排列 */
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* 頁尾改為靜態定位：避免在小螢幕佔用過多空間 */
+            .site-footer {
+                position: static;
+                box-shadow: none;
+                border-top: 1px solid #ccc;
+            }
+
+            /* 主要內容底部間距調整 */
+            main {
+                padding-bottom: 2rem;
+            }
+        }
+
+        /* ===================================
+           響應式設計：中等螢幕適配
+           斷點：769px 到 1024px 之間的平板裝置
+        =================================== */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .nav-item {
+                padding: 0.5rem 0.6rem; /* 緊密間距適應中等螢幕 */
+                font-size: 0.9rem;
+            }
+        }
+
+        /* ===================================
+           動畫效果定義
+           用途：內容切換時的淡入效果
+        =================================== */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(20px); /* 從下方淡入 */
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+    </style>
+
+    <!-- ===================================
+         動態樣式載入腳本
+         目的：為外部 CSS 檔案添加時間戳，防止快取問題
+    =================================== -->
+    <script>
+        const timestamp = new Date().getTime();
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = `style.css?v=${timestamp}`;
+        document.head.appendChild(link);
+    </script>
 </head>
-<body class='typora-export'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='黃崇源的60種手工伍仁餡'><strong><span><a style="color: black;" target="_blank" href="http://bit.ly/3jv7hXO">黃崇源的60種手工伍仁餡</a></span></strong></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n320"><a class="md-toc-inner" style="" href="#黃崇源的60種手工伍仁餡"><strong>黃崇源的60種手工伍仁餡</strong></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n323"><a class="md-toc-inner" style="" href="#依六追阿雲"><strong>依六追阿雲</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n324"><a class="md-toc-inner" style="" href="#從福州來台闖蕩的少年郎"><strong>從福州來台闖蕩的少年郎</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n329"><a class="md-toc-inner" style="" href="#一碗地瓜粥一段好姻緣"><strong>一碗地瓜粥一段好姻緣</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n333"><a class="md-toc-inner" style="" href="#聰明內斂堅強柔韌"><strong>聰明內斂、堅強柔韌</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n338"><a class="md-toc-inner" style="" href="#歌廳秀"><strong>歌廳秀</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n343"><a class="md-toc-inner" style="" href="#家暴"><strong>家暴</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n348"><a class="md-toc-inner" style="" href="#想你"><strong>想你</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n353"><a class="md-toc-inner" style="" href="#三水街買菜"><strong>三水街買菜</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n359"><a class="md-toc-inner" style="" href="#心上人"><strong>心上人</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n368"><a class="md-toc-inner" style="" href="#活菩薩"><strong>活菩薩</strong></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n378"><a class="md-toc-inner" style="" href="#大頭仔"><strong>大頭仔</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n379"><a class="md-toc-inner" style="" href="#西園路上的吉光片羽"><strong>西園路上的吉光片羽</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n388"><a class="md-toc-inner" style="" href="#龍山商場賒帳飆車高手"><strong>龍山商場賒帳飆車高手</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n393"><a class="md-toc-inner" style="" href="#我漂亮嗎"><strong>我漂亮嗎</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n401"><a class="md-toc-inner" style="" href="#少年警察追姊姊阿美珠"><strong>少年警察追姊姊阿美珠</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n406"><a class="md-toc-inner" style="" href="#從雙十國慶閱兵想新冠疫情停課"><strong>從雙十國慶閱兵想新冠疫情停課</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n414"><a class="md-toc-inner" style="" href="#夜市擺攤"><strong>夜市擺攤</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n418"><a class="md-toc-inner" style="" href="#大學教授之前"><strong>大學教授之前</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n423"><a class="md-toc-inner" style="" href="#伍仁是一種餡也是態度"><strong>伍仁，是一種餡，也是態度</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n427"><a class="md-toc-inner" style="" href="#不當教授who-am-i-to-"><strong>不當教授，Who am I to ...</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n434"><a class="md-toc-inner" style="" href="#夜市小鮮肉"><strong>夜市小鮮肉</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n438"><a class="md-toc-inner" style="" href="#小小傳令兵"><strong>小小傳令兵</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n443"><a class="md-toc-inner" style="" href="#愛看書"><strong>愛看書</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n447"><a class="md-toc-inner" style="" href="#閱讀"><strong>閱讀</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n450"><a class="md-toc-inner" style="" href="#穿越世界"><strong>穿越世界</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n457"><a class="md-toc-inner" style="" href="#二本相簿"><strong>二本相簿</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n462"><a class="md-toc-inner" style="" href="#查某-vs-海賊"><strong>查某 vs. 海賊</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n468"><a class="md-toc-inner" style="" href="#龍山國中"><strong>龍山國中</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n475"><a class="md-toc-inner" style="" href="#人生第一桶金"><strong>人生第一桶金</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n482"><a class="md-toc-inner" style="" href="#五專七年級"><strong>五專七年級</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n486"><a class="md-toc-inner" style="" href="#可樂源"><strong>可樂源</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n490"><a class="md-toc-inner" style="" href="#少年人過生日"><strong>少年人過生日</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n494"><a class="md-toc-inner" style="" href="#2005年應徵教職自傳"><strong>2005年應徵教職自傳</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n500"><a class="md-toc-inner" style="" href="#世事無絕對"><strong>世事無絕對</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n506"><a class="md-toc-inner" style="" href="#爬呀爬呀過沙河"><strong>爬呀爬呀過沙河</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n509"><a class="md-toc-inner" style="" href="#幸福的感傷"><strong>幸福的感傷</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n512"><a class="md-toc-inner" style="" href="#守護幸福"><strong>守護幸福</strong></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n516"><a class="md-toc-inner" style="" href="#愛人月如"><strong>愛人月如</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n517"><a class="md-toc-inner" style="" href="#夜市教電腦"><strong>夜市教電腦</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n524"><a class="md-toc-inner" style="" href="#錦囊妙策三則"><strong>錦囊妙策三則</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n533"><a class="md-toc-inner" style="" href="#輔大校園"><strong>輔大校園</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n541"><a class="md-toc-inner" style="" href="#定情物"><strong>定情物</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n546"><a class="md-toc-inner" style="" href="#不想讓你等了"><strong>不想讓你等了</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n552"><a class="md-toc-inner" style="" href="#真少女"><strong>真少女</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n555"><a class="md-toc-inner" style="" href="#結婚十週年"><strong>結婚十週年</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n559"><a class="md-toc-inner" style="" href="#俏魔女"><strong>俏魔女</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n565"><a class="md-toc-inner" style="" href="#時時勤拂拭勿使惹塵埃"><strong>時時勤拂拭，勿使惹塵埃</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n570"><a class="md-toc-inner" style="" href="#像盛開櫻花時時綻放光芒"><strong>像盛開櫻花，時時綻放光芒</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n575"><a class="md-toc-inner" style="" href="#我的瑪法達"><strong>我的瑪法達</strong></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n578"><a class="md-toc-inner" style="" href="#平安福"><strong>平安福</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n579"><a class="md-toc-inner" style="" href="#無價長生寶"><strong>無價長生寶</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n583"><a class="md-toc-inner" style="" href="#小福仙"><strong>小福仙</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n586"><a class="md-toc-inner" style="" href="#抓周"><strong>抓周</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n592"><a class="md-toc-inner" style="" href="#龍山澡堂"><strong>龍山澡堂</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n597"><a class="md-toc-inner" style="" href="#上學了"><strong>上學了</strong></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n601"><a class="md-toc-inner" style="" href="#貴人"><strong>貴人</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n602"><a class="md-toc-inner" style="" href="#奶姆高周金貴女士"><strong>奶姆高周金貴女士</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n607"><a class="md-toc-inner" style="" href="#小學三年級導師蔡幸美老師"><strong>小學三年級導師蔡幸美老師</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n612"><a class="md-toc-inner" style="" href="#工具人"><strong>工具人</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n616"><a class="md-toc-inner" style="" href="#52封寄不出的信"><strong>52封寄不出的信</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n623"><a class="md-toc-inner" style="" href="#超級麻吉吳承育"><strong>超級麻吉吳承育</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n626"><a class="md-toc-inner" style="" href="#好友就數陳兆芳最寶最古怪了"><strong>好友就數「陳兆芳」最寶最古怪了</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n629"><a class="md-toc-inner" style="" href="#練家子"><strong>練家子</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n633"><a class="md-toc-inner" style="" href="#親愛的大姨"><strong>親愛的大姨</strong></a></span></p></div><h2 id='依六追阿雲'><strong><span>依六追阿雲</span></strong></h2><h3 id='從福州來台闖蕩的少年郎'><strong><span>從福州來台闖蕩的少年郎</span></strong></h3><p><span>黃依六，生於福建省林森縣忠義鄉尚保村19號，家中排行16。出生時，父親歲數已過60，13歲前由家中兄嫂照顧長大。在那個戰亂和瘟疫頻傳的大時代裡，經濟拮据人口過多的農村大家庭實在沒多餘的錢供家中老么上學唸書，所以，他一輩子沒上過學，不識字，只在兄嫂的教導下，識得自己的姓名「黃依六」三個字。</span></p><p><span>13歲那年，從台灣回福州短暫探親的遠房親戚隨口問他，要不要跟他一起去大海對面的台灣島打拼，他打赤膊穿著兄長不要的破舊開襠褲，想都沒想就回「好」。就這樣，在遠房親戚好心資助下，第一次搭大船過黑水溝來到當時正在開墾發展，遠景一片看好的台灣南部打狗港，落腳在一家鐘錶店當學徒。</span></p><p><span>過了半年，他打聽到家鄉另一位表親在台北開皮鞋工廠，所以辭掉高雄鐘錶店學徒工作，跟朋友借了點錢，搭火車來台北依親，在表親的皮鞋工廠當學徒，學習製作男女皮鞋。學徒的薪資很低，為了多存點錢，他跟表親老闆商量，利用工廠下班後，在西門町表親開的一家皮鞋店門口旁擺攤賣糖果賺外快。表親看在眼裡，對他的生意頭腦讚許有加且溢於言表，甚至希望將其中一位女兒許配給他。</span></p><p><span>可惜依六早先在中華路天橋上認識了一位修理皮鞋匠的女兒，並且在女孩父親默許下開始交往，所以他委婉拒絕了這門親事，只想多存點錢，等當完兵回來後，娶女孩為妻。</span></p><h3 id='一碗地瓜粥一段好姻緣'><strong><span>一碗地瓜粥一段好姻緣</span></strong></h3><p><span>依六和阿雲是透過「皮鞋」結緣認識的。</span></p><p><span>郭雪雲，小學畢業考取初中，為了家中生計，放棄升學，跟著養父每日在現今中華路和內江街口旁擺攤修理皮鞋。一日，黃依六下工後散步途經中華路，看到一位漂亮姑娘和一位長者在人行道旁修理皮鞋，忙到不可開交，便不假思索立馬停下腳步，主動毛遂自薦蹲下來幫忙修理皮鞋，等到所有皮鞋修理妥當交至客人手中時，已經過了晚餐時間。長者邀請這位好心年輕人到家中作客吃頓便餐。當晚郭家煮地瓜粥，是黃依六這小伙子生平愛吃的食物之一，便多喝了幾碗粥，也有了日後天天去皮鞋修理攤幫忙的最佳理由。因為地瓜粥好吃，想天天吃，所以希望天天下工後來攤子義務幫忙。</span></p><p><span>養父覺得這小伙子手腳頭腦都靈活，幫得上忙，就默許不再說甚麼。飯桌一旁的郭雪雲小火慢熱，並非第一眼就喜歡這個男生。她是聰明人，知道眼前這位帥哥想追求她，自己對他的印象也不差，就看下一步他怎麼做再說吧！</span></p><h3 id='聰明內斂堅強柔韌'><strong><span>聰明內斂、堅強柔韌</span></strong></h3><p><span>我出生後，父親沈迷賭博，不斷敗光過往十多年累積的存款、房屋及數間龍山商場店面。母親表面不動聲色，每天照常煮三餐，幫我們洗澡，午餐過後帶我們去商場和姊姊一同顧店，心底卻思索要怎麼暗存私房錢，保全眼下三個小孩的良策。</span></p><p><span>母親的第一步需要已懂事的姊姊配合，把每天開店頭幾雙賣出去的皮鞋收入偷存下來，這是月底一定要付給皮鞋製造商的貨款，不能挪用，自斷生路。之後賣的數雙皮鞋的利潤也會私藏起來，這是每天家裏生活開銷的必要費用，沒這筆錢，全家人只能喝西北風，露宿街頭。有了前面二筆錢，後面賣的皮鞋才會寫入給爸爸看的帳冊，記載每雙皮鞋的型號、顏色、尺寸、成本與利潤，月底好跟廠商叫貨，補充店裡貨源。</span></p><p><span>生活費用有著落後，母親的第二步是貸款買房預防家產被父親散盡後無屋可住。只是，房屋不能登記在自己或小孩名下，一旦父親發現，就會被迫交出房契拿去揮霍輸光。母親事先想到這一步，所以把房子登記在五舅媽名下，直到父親搞壞身體因腦溢血過世許久後才重新回到母親手裡。弟弟阿峰婚後，母親把那間房屋重新裝潢過戶給弟弟，作為他們夫妻起居處。</span></p><p><span>這間父親在世母親偷買的救命房連我們都不知道，直到父親腦溢血頻臨死亡躺在醫院借助機器呼吸時，為了讓父親走得安心，母親才在病床前跟父親透露：「依六，你免擔心我跟孩子，放心跟菩薩前往西方，幾年前我在板橋買一間厝，孩子跟著我吃住都沒問題，你放心！」說完沒多久，爸爸的呼吸逐漸停息。母親說這段話時，我和弟弟阿峰寄住在奶姆家，沒有親耳聽到，都是長大後母親娘家親戚告訴我，然後跟母親求證才得知原貌。</span></p><h3 id='歌廳秀'><strong><span>歌廳秀</span></strong></h3><p><span>出生後小學前，父母親常帶我看歌廳秀。每當他們把我打扮得光鮮帥氣一身勁裝模樣，我就知道，今晚，全家要去歌廳看秀吃大餐。父親知道我偷偷尬意隔壁人家一位漂亮小姊姊，每次看秀時，也會帶上那位姊姊，讓我們兩個小孩有伴可玩，也讓我整場看秀過程喜孜孜甜蜜在心頭，巴不得秀就這樣一直表演下去，姊姊可以一直坐在我身旁，不要散場。</span></p><p><span>人生就像一場歌廳秀，有開場，一定也有謝幕時。</span></p><p><span>好景不常。出生沒多久，父親被過去同樣是皮鞋工廠學徒的師兄弟帶壞，設局染上嫖賭。不用幾年光景，已輸光婚後多年和母親一同努力開店賣皮鞋賺的積蓄與買的數間房子與店面，甚至賭輸欠了一屁股債後才認真開店賺錢還債，等到還完賭債手上有餘錢時，故態復萌，又跑去賭個幾天幾夜，非到脫褲輸光不肯回家。這種徹夜賭博沒餐沒日賺錢的惡性循環生活終於搞壞父親的身體，死前幾年，常因各種病痛或水腫住進仁濟醫院。</span></p><p><span>11歲大年初三晚上，父母親兩人經過廣州街西園路交叉口寶島鐘錶店門口時，父親突然腦溢血昏倒在路旁，透過路人協助，送到仁濟醫院急救處置。六天後，仍然沒起色，母親與娘家親人討論後，決定拔管放棄救治，讓只靠機器呼吸的父親沒病沒痛一路好走。死時父親47歲，正值壯年，欠下200萬賭債。</span></p><h3 id='家暴'><strong><span>家暴</span></strong></h3><p><span>在我出生後不久，父親被皮鞋工廠同門師兄弟帶壞，染上賭癮，家道開始中落。等弟弟阿峰出生後，父親變本加厲，晚上皮鞋店打烊後徹夜未歸，和豬朋狗友一同去爛賭，賭贏了繼續賭，直到帶去的錢輸光為止，有時候心不甘，不想空手而歸，想回本，就跟賭場高利貸借錢繼續賭，直到天亮了，身體累壞了，賭場高利貸不借了，欠一屁股債了，才拖著一副疲憊的身軀，敗興而歸，回家喝悶酒。</span></p><p><span>那幾年，每天開鞋店辛苦賺的錢，努力攢存的積蓄，買的房子和店面，就這樣蠶食鯨吞、一點一滴、大把大把、完完全全敗光光了。母親有時忍不住多說幾句責備話，抱怨下週廠商要來領取的大筆貨款，連同微薄生活費統統被拿走輸得精光，家裡沒剩幾個錢，明天這個家要怎麼生活過日子？爸爸自知理虧，常會借酒裝瘋，做賊喊抓賊，回頭破口大聲數落母親，有時愈罵愈兇，還起身動手毆打母親，拳腳相向。母親常常被打到一把鼻涕一把淚，困坐在客廳角落姊姊的單人木板床上獨自落淚。</span></p><p><span>當年，驚恐看著床邊落淚哭泣的母親，以及暴跳如雷，酒醉不斷大聲碎碎念，瘋子似亂罵人的父親，我和弟弟都不敢出聲，只能站在臥室連通客廳的窗戶邊，小聲安慰母親：「媽，不要哭啦！」然後靜靜地陪在母親身旁。姊姊阿美珠年紀稍長懂事，每次都會默默拿一條濕毛巾給母親，擦臉擦拭眼淚。這種駭人景象在父親過世前幾年每隔一陣子就上演一回，直到爸爸爛賭酗酒徹夜未眠搞壞身體，住進醫院沒了元氣後，家人才逐漸從這場惡夢中甦醒，深怕再次睡著。</span></p><p><span>11歲四年級那年春節，47歲正值壯年的父親突然腦溢血昏倒在廣州街寶島鐘錶公司門前路口，來不及給枕邊人一個好好的道歉，也來不及彌補過往十年他的荒唐行徑對妻兒所造成的傷害與缺憾。死了，就這樣死了，一種最輕率也最沈重的懲罰！</span></p><h3 id='想你'><strong><span>想你</span></strong></h3><p><span>前陣子和小福兩人獨處時常想一個問題，如果明天我過世了，他會察覺家裡少一個人嗎？知道阿爸已經不在世了嗎？會想念我嗎？想我那一個部分呢？想多久？一年？三年？十年？還是一輩子？</span></p><p><span>2017年八月生日一過，就滿四十七歲了。36年前，父親在我這個年紀因為賭博酗酒加上工作過度操勞腦溢血而過世，當時，我才11歲小學四年級，似懂非懂聽著許多親戚長輩邊哭泣邊對我說：「你老爸過身了，以後要聽阿母的話，用功讀書，和弟弟好好相處，不許再吵架，知道了嗎？」</span></p><p><span>那時候的我不難過，雖然知道父親過世了，但是對於死亡這事懵懵懂懂，天真地以為只要母親與奶姆兩個疼愛我的人常在身旁就萬事俱足；以為父親在世最後幾年對母親的糟蹋終於結束了；以為他留下的影響微不足道。所以，當他的遺體火化時，當他的身體燒到只剩下頭手腳看得見的大骨與細粒骨灰被我們撿入骨甕時，當親朋好友出現在殯儀館家祭公祭跪拜他哭得死去活來時，我都沒有哭過，甚至一滴眼淚也沒流下。現在，我終於體會小時候我冷眼背後的害怕與無助，其實，我愛他，想他，需要他，我的許多行為模式承自於他，我的個性簡直就是一個小黃依六，毋需認證！</span></p><p><span>47年混過了，沒什麼成就，過去的雄心壯志早已被現實社會與日常生活磨平，如今唯一值得慶賀珍惜的是還擁有一個美滿家庭，吾愛娟娟與可愛小福常伴左右，如果許願可以實現的話，希望再活40年，用我走下坡但人生經驗豐富的40年陪伴可愛的嬌妻與人生最輝煌燦爛40年間的小福。我不要他懷念我，我要他跟我玩一起，吃一起，睡一起，活一起，直到他長大成人結婚生子買車置產工作有成，直到我終老死去！</span></p><h3 id='三水街買菜'><strong><span>三水街買菜</span></strong></h3><p><span>小學低年級例假日早上，總愛跟著母親去三水街菜市場買菜，那時的三水街市場長度是現在的二倍。隔著康定路，二旁的三水街都是菜市場，其中一邊緊鄰龍山商場，穿過走出來就是車水馬龍熱鬧非凡的西園路公車站牌。</span></p><p><span>每次買菜，母親總有固定路線和購買順序，先到熟悉的魚攤，買一條我愛吃的黃魚，請老闆娘務必把鱗片削乾淨，稍後回來拿，再走去中間段的豬肉攤詢問老闆今天有什麼部位的肉較新鮮，可以拿來炒豆乾？豬肉攤不遠處就是販賣豆乾豆腐醬菜攤，母親挑了幾塊黃豆乾，也買了之後幾天早上配稀飯的幾樣醬菜。回程路上，除了拿削好鱗片的黃魚，也跟遠房親戚（姨婆）菜攤買幾把青菜和皎白筍，順道站著閒聊幾句。</span></p><p><span>買菜過程中，我總緊緊牽著母親的手，東張西望，不是怕踩到髒髒的水窟隆，或者被騎得很快的腳踏車激起的水濺到，就是怕跟丟，時常一抬頭發現牽手的人怎麼不是母親，馬上「哇」一聲在市場大哭起來，叫喊著：「媽媽，我要媽媽啦！」還好，那個年代大夥都是點頭之交，再加上我們家開的六明皮鞋從龍山商場紅到三水街菜市場，只要我一哭，馬上就有叔伯阿姨跑來關心，把我帶到他們的攤子旁，並透過一攤傳話過一攤比現在通訊軟體還快的速度，要我母親放心，他的兒子大頭仔現在在某一攤子上，不用急，買完菜再過來帶走。有時候，攤子老闆娘還會遞給我一杯冬瓜茶或熱桂圓甜湯，要我坐在攤子裡的矮凳上，邊喝邊等母親過來。</span></p><p><span>成年後，也常跟著母親去三水街菜市場，還是一樣緊緊牽著母親的手，一邊逗她開心，讓他又哭又笑罵我：「大頭仔，你真伍仁，我不跟你說了啦！」一邊詢問她今天想買什麼菜回去煮，我可以幫忙喔。母親聽到我要幫忙，總是笑著說：「免免免，你越幫越忙，煮湯都給我亂加料，害我整鍋湯喝不下，得倒掉，真浪費！」這樣的牽手買菜場景，一遍又一遍在三水街菜市場上演，大家看到我陪著母親一起上市場，都對著她誇讚我，說阿雲KUMO有我這樣一個孝順又有出息的孩子，實在真值得！</span></p><p><span>三水街菜市場有我和母親太多買菜的回憶，每次走在三水街菜市場裡，那些從小時候販售到現在的菜攤，是我一幕又一幕清晰記憶的泉源。感謝他們，讓母親直到現在還活生生活在我的腦海裡，一遍又一遍，牽著我的手，來三水街菜市場買菜！</span></p><h3 id='心上人'><strong><span>心上人</span></strong></h3><p><span>母親17歲認識父親，兩人相差4歲。父親47歲過世時，母親43歲，兩人一同生活了26年。26年後半段光陰，由於父親染上賭博壞習慣，將前半段兩人辛苦積蓄下來買的房子和店面全輸光光，再加上熬夜抽菸喝酒後脾氣大壞，經常拿母親當出氣筒，打罵母親。當時年紀小，依稀記得，母親常被喝醉酒的父親打罵到哭，坐在床邊啜泣，我和姊姊其中一人會遞上濕毛巾，讓母親擦臉擦拭眼淚，三個小孩陪在她身旁，小聲安慰：「媽～不要再哭了！」</span></p><p><span>母親32歲剖腹產下我，到2010年10月1日過世時，我已40歲有餘了。母子倆一起生活了40年，遠比父母倆在一起的時間長了許多。足見我才是母親生命中的第一名。</span></p><p><span>她在世的最後幾年，每早我出門去長庚大學任教，經過母親身旁時，她總是問：「今天天氣很冷，你外套穿了沒？」或「今天天氣變冷了，你有沒有穿毛衣？」我總是又好氣又好笑回答：「沒有，我今天脫光光去上班。」她也總是笑著說：「你要是敢脫光衣服去長庚，我五千摳給你。」我裝瘋賣傻回應：「才不要！如果脫光光去上班，你要給我十萬元才行。」她知道我激伍仁愛說笑，我也明白他的關心，只是時常跟她說：「媽，我都40歲了，就算我今天脫光身體去長庚，感冒了，也是我自己要負責任啊，你不需要再管我這麼多事了！」</span></p><p><span>我心底明白，我是她生命中相處最久的男人。她一生中花許多時間在照顧及擔心我許多瑣碎事上面，如果叫她不要像過去一樣關心我，操煩我的事，那不是剝奪她生活的重心嗎？所以，就算我怎麼說，她還是一如往常關心我、碎念我、操煩我的大小事，上至穿衣，下至摩托車是否乖乖停在機車格內，天天過問，從不覺得煩。</span></p><p><span>這幾年，我常想，不知道我母親年輕時跟我父親相處時是一個怎樣的女人，溫柔體貼嗎？還是跟現在一樣，每一件事都操煩到底？我不知道答案，因為她前半生我沒參與，而知道答案的父親又過世太早，我來不及問他關於母親年輕時的個性與他們相處的細節。</span></p><p><span>母親過世前一個月，我時常在病床旁唱歌給她聽，有時他是清醒的，知道我在唱甚麼，有時她是昏迷的，任憑我唱甚麼也喚不醒。我唱兒歌，唱軍歌，唱愛國八股歌曲，唱民歌，唱台語歌曲，唱國語老歌，唱老松國小和龍山國中的校歌，唱所有我知道的歌，就只是希望她清醒過來對我說一聲她過去常說的話：「拜託，也沒有人叫你唱啊！我給你一塊錢，你不要再唱下去了好不好？」因為我五音不全，所有歌曲從我口中唱出，完全變調走樣，不像原來曲調，但是我愛在洗澡間高歌，從進浴室唱到洗完澡，而且是放開喉嚨來唱，每次母親聽到我在浴室唱歌，總是從一樓大聲喊向二樓：「沒人講你是ㄟ吿（啞吧），你不要再唱了，再唱下去，促逼（鄰居）就要來抗議了！」我聽她這麼一說，總是唱得更大聲，深怕鄰居不來抗議似的。想起這一段，我眼眶又紅了起來，忍不住又想哭了。</span></p><p><span>二月底有一天，騎摩托車從萬華去長庚，一邊騎車一邊唱歌，唱到青山路時，忽然想到母親這段話，我開始哭了，一邊哭一邊唱，此時好希望用這副破嗓子把母親喚回來，雖然我知道，這是永遠不可能發生的事了。</span></p><p><span>媽，我又忘記日本桃太郎的歌詞了，怎麼辦？現在沒有人告訴我了啦！</span></p><h3 id='活菩薩'><strong><span>活菩薩</span></strong></h3><p><span>第一次是2005年10月。</span></p><p><span>那年夏天我離開任教五年的中國科大資工系，轉去元培科大資工系擔任助理教授兼系主任。元培在新竹香山，所以和同事在香山租屋合住，一週三晚在新竹，四晚回台北陪母親，上午買菜逛市場和街坊鄰居聊天，下午看民視肥皂劇聽電台講古，晚間一起觀賞國興衛視料理東西軍配飯菜。</span></p><p><span>一晚，我在元培主任辦公室簽公文時，不小心摔斷鏡框。雖然隔早大學部有課，還是乖乖收拾背包，搭客運回台北換備用眼鏡，預計隔日搭早班車回校。翌日清晨著好服下樓準備出門時，發現母親昏躺在客廳藤椅，叫了幾聲沒回應，趕緊打119請救護車送去家附近一間區域醫院急診室。</span></p><p><span>急診室醫生診斷後，語重心長說：「你是他兒子嗎？」我說對，他繼續：「目前情況十分危急，先住院治療，但是胸部腫瘤太大太硬，目測超過15公斤，無法開刀拿掉，你要有心理準備，她的時間剩不多了，要做什麼趕快處理。」說完便交由護理師處理後續住院治療事宜。</span></p><p><span>無巧不成書，那天下午四點，我和（學生時代的指導教授）交大資工所孫春在教授一同出席那家醫院召開的一場內部會議，討論2003年SARS流行期間院內感染的可能傳播路徑及其管控措施。院長看我愁眉苦臉一付無精打采樣，便開口詢問發生何事，孫教授代回答：「他母親現在病危住在你們醫院樓上，主治醫生說時日不多，他心情複雜，萬事提不起勁。」等孫教授說完，我趁機央求院長務必救我母親，千拜託萬拜託！</span></p><p><span>會後，院長隨即帶秘書和護理長探訪剛甦醒的母親，請我們母子安心，醫院會全力救治，割除胸部惡性腫瘤，並期待母親年底前康復出院。開刀和術後住院那段期間，護理站都叫我光頭孝子，因為我每天往返台北新竹兩地，凌晨幫母親換尿布、潔淨身體、交代看護工昨晚母親的睡眠狀況後，就搭客運赴元培授課，下課立馬回醫院，一邊跑實驗做研究寫論文，一邊陪伴體重在腫瘤切除後只剩31公斤的母親躺在病床上，和隔壁床長輩及其家人開港。</span></p><p><span>母親愛乾淨，記得有一晚他趕不及大便在尿布中，小聲喚醒我，扶她到病房浴室，幫她擦拭屁股，沖澡擦乾，重新換上乾淨衣物，他虛弱對我說：「大頭仔，謝謝，我好舒服！」我強忍淚水扶他回床繼續入睡。出院回家後，為了照料母親的起居生活，遵照醫師囑咐每日按時餵藥消毒傷口換紗布，我退回元培的系主任二年聘書，重新尋找家附近的大學教職。母親在我細心照顧和長期陪伴下，半年內，體重從31公斤恢復到術前46公斤，臉頰兩旁也長出肉來，令人歡喜不已！</span></p><p><span>術後多年，母親常對來家裡探訪的親友和左鄰右舍說，感謝神明保佑！如果前晚阿源的鏡框沒斷，如果阿源的的博士論文跟SARS無關，如果阿源不認識那位院長，自己很可能過不了那關，大頭仔像活菩薩，救了她一命！每次在旁聽他這麼說，都會臉紅不好意思，激伍仁說：「郭小姐，妳才是自己的活菩薩啦，若不是妳生下我，把我養大成人，那天早晨我就無法送妳去醫院急救治療，你太神了，竟能預知多年後發生的事！」說完，母子倆相視哈哈大笑，令在場親友丈二金剛摸不著頭緒！</span></p><p><span>第二次報恩是五年後2010年初的事了！</span></p><h2 id='大頭仔'><strong><span>大頭仔</span></strong></h2><h3 id='西園路上的吉光片羽'><strong><span>西園路上的吉光片羽</span></strong></h3><p><span>孩童時期，父母親原本在康定路、廣州街交叉的合會門口擺攤修理皮鞋，由於夫妻倆功夫好、手腳勤快、待客和氣，很快就攢了些積蓄，買下龍山商場正中央面對龍山寺正門口王興義唱片行隔壁的一家小店面賣男鞋。</span></p><p><span>好景不常，父親後來嗜賭，輸光所有積蓄與房產，只剩一間店面，只好在西園路龍山佛具店樓上二樓租了二間中間有一扇窗戶連通的雅房，一間客廳，一間臥室，煮飯、燒開水、上廁所和洗澡都得到那層樓走道最後面和另外二戶人家共用廚房和浴室。那時期，我暗戀隔壁房人家一位大我幾歲的姊姊。父母親知道我的心思，看歌廳秀時偶爾會帶她一起去，一路上讓我倆手牽手走在一起，當時我覺得好甜蜜。</span></p><p><span>客廳兩扇窗戶面對龍山寺側門，除了簡陋的桌椅與神桌，還擺了一張單人木板床給姊姊阿美珠睡覺，我和母親睡在臥室沒擺彈簧床墊的雙人床上，父親和弟弟阿峰則睡在雙人床旁另外一塊直接放地上的大木板。每晚睡前，弟弟阿峰都得摸父親的耳垂許久才能入睡，只有最疼愛他的父親才能忍受他睡前長時間的撫摸，其餘人都受不了，不想和他一起睡。</span></p><p><span>姊姊的床和臥室之間有一扇木框玻璃窗，我們兄弟每天起床後，不是打開臥室門走去客廳，而是直接跨爬二個房間中間的那扇窗來回，一下子跳到姊姊的床上玩耍吵鬧打架，一下子爬回臥室，叫賴床的爸爸趕快起床吃午餐，趕快出門去開店。</span></p><p><span>民國70年之前，家中有冷氣吹的人少之又少，就算我們家是開店做生意，也只有電風扇轉啊轉，吹出一股股黏踢踢的熱風，不像現在的商家，鎮日開足冷氣，舒服坐在店裡等客人上門。那時期的夏日，龍山寺側門對街西園路（佛具街）上，常見的黃昏景況是，晚餐後，大人小孩人手一扇，幾張板凳，三三兩兩群聚坐在家門口附近，冷眼瞧著來來往往的汽機車，緩緩搖扇驅蚊，放聲聊天罵小孩。</span></p><p><span>有一段時期的夏日，晚餐後，母親總是牽著我和弟弟阿峰的手，走去同樣在佛具街上和我們家隔了幾間房的旅館門口坐著搖扇乘涼。那間旅館整天開著冷氣，雖然門口有道玻璃門，門下卻有一長條細縫，冷氣就從細縫中一直不斷湧出來，我們母子三人和鄰居一同圍坐在旅館門口的騎樓，大人們一邊搖扇享受稀微的冷氣，一邊道聽塗說今天發生在這條街上的大小事，小孩們則跑過來追過去玩在一起，跑累了，追到腿酸了，就整群回來旅館門口趴坐在玻璃門前，讓冷氣吹過頭，吹過滿身大汗的臉龐，吹過整件濕透的吊嘎啊，然後等著媽媽們來罵人趕我們回家洗澡睡覺，叫我們不要擋在旅館門口，妨礙客人進出。</span></p><p><span>這種生活過了十年。</span></p><p><span>四年級寒假，父親在廣州街上寶島鐘錶店門口￼突然腦溢血倒地送醫急救數日無效往生後，才搬離西園路。姊姊國中畢業去外縣市美髮理容店當學徒，母親帶著我和年幼弟弟在西昌街夜市近桂林路口租了一間數坪大的雅房，每天風雨無阻出門獨自一人辛苦在龍山國小旁（現今全聯門市的對面）的夜市擺攤叫賣皮鞋。</span></p><h3 id='龍山商場賒帳飆車高手'><strong><span>龍山商場賒帳飆車高手</span></strong></h3><p><span>龍山商場腹地非常大，隔著一條窄窄的廣州街和龍山寺對望，四周圍騎樓環伺，常常吸引了許多外地果農與菜販來此地，一邊擺攤叫賣販售討價還價，一邊躲警察。西園路一側道路兩旁的公車站牌密集，是往返雙北的重要交通集散地。商場內，店與店之間的走道寬暢，商場後半部緊鄰著晨間叫賣聲不絕的三水街菜市場和布市，接鄰處還規劃了一個小型公園及公廁供人休憩。</span></p><p><span>11歲前，父母親在龍山商場開了二家店賣了好些年的男鞋，整個商場都是我和弟弟阿峰的遊樂園。從睡醒吃飽飯被母親帶來商場，到父親關店打烊吃完宵夜回家洗澡睡覺前，吃喝拉撒玩全在商場裡。每日下午吃點心、晚上回家睡覺前吃宵夜，只要到商場任何一家小吃店門口喊：「我是六明皮鞋店的後生，我媽媽叫我來吃草莓奶油吐司和一碗熱牛奶加泡餅」或「我是美冠皮鞋店的後生，晚餐我要吃滷肉飯和下水冬粉湯，還有一顆鹹鴨蛋」，店家會出餐記賬不收錢，等母親空閒時再來付清。吃到後來每家店上至老闆下至伙計都熟識我們後，連說都不用，點了食物吃飽後說聲「謝謝老闆」即跑開。</span></p><p><span>我們這些在商場出生長大的小孩每天的娛樂就是騎著單人三輪車橫衝直撞，和同樣是商場小孩騎的三輪車競速賽車，又或者騎一輛後面載著弟妹的雙人三輪車，慢慢閒逛商場的每條通道走廊，穿梭繞行各個店家，好似閱兵，又好像花車遊街似向每一位認識我們或我們認識的叔叔伯伯阿姨們逐一揮手大聲打招呼。有時候，有些跟我父母親要好的店家老闆還會在店門口招手要我們停車，從店裡拿出自家食物或餅乾糖果給我們，當場吃不完或兩手拿不夠時，還撕日曆紙幫我們打包帶走。有時候，他們會追出來，遞給我們一些簡單的玩具，或者故意戲弄我們做一些稀奇古怪的事情如抽煙才放行。</span></p><p><span>前陣子，看到老婆阿娟帶小福去家附近龍山國小圍牆邊人行道上騎三輪車，又勾起這段童年往事。趁記憶猶新，趕緊紀錄，好讓長大後的小福知道，阿爸跟他一樣，都有過一段輝煌的三輪車飆速歲月！</span></p><h3 id='我漂亮嗎'><strong><span>我漂亮嗎</span></strong></h3><p><span>大約四、五歲吧，有天凌晨，做夢驚醒，我哭鬧吵著要吃霜淇淋。「這麼晚了那裏買，應該所有賣霜淇淋的店都關門了吧。」父母親一邊說一邊哄：「明天一大早，我們就去吃，好不好？」哭鬧中我硬是不肯，持續大吵大鬧：「我要吃霜淇淋，我要吃霜淇淋，哇哇哇～～～」</span></p><p><span>眼看哭鬧下去不是辦法，左鄰右舍可能被吵醒，父親只好幫我穿上衣褲外套，背我出門找凌晨還有賣霜淇淋的店家，走啊走啊，走了許久只看到黑矇矇一片，所有店家鐵門都拉下未開，絲毫看不到還在營業的店。當時，可能哭鬧累了，就不自覺趴在父親背上睡著了。</span></p><p><span>由於凌晨吵鬧晚睡，當日睡過頭趕不及幼稚園上課，父母倆特別帶我去廣州街康定路交叉口附近一家曉有名氣的小美冰淇淋西餐廳吃豐盛豪華的香蕉船，然後再上學。當香蕉船端上桌那一刻，我好滿足，看著各種顏色的冰淇淋球與水果，好不快樂，巴不得一口吃下整盤香蕉船。</span></p><p><span>吃完香蕉船，繼續上學。到了蘭心幼稚園門口，才發現剛剛吃得太忘我了，把書包遺忘在西餐廳，還得麻煩父親往返跑一趟，幫我拿回書包。然而，整件事未結束，由於中午吃太多冰淇淋，當天下午快放學時肚子痛得受不了，來不及跟老師說就全數拉在褲中，讓幼稚園老師及工友伯伯裡外忙得團團轉，不僅要聯絡爸媽帶換洗衣服來，還要緊急帶我去浴室沖澡，擦乾身體，等著穿上父母親匆忙帶過來的衣褲。</span></p><p><span>幼兒時期，我長得非常高，可愛有人緣。在幼稚園，我可是全班最高最得老師疼愛的小朋友！記得在幼稚園畢業典禮上，我們班表演山地舞，所有參與演出的小朋友都要化妝。母親委託乾媽幫忙上妝，等妝好了穿上表演服後照鏡子，連我自己都覺得美到不行，好像國劇花旦一樣靚。整場山地舞表演就只看到我一個既帥又美的小男生高出所有小朋友一顆頭，好像其他小朋友是來伴舞陪襯的，而我才是這場山地舞表演的唯一主角。</span></p><p><span>娘家親戚常說，父母親結婚多年才生下我這個寶貝兒子，所以非常疼愛我，甚至在我滿月時興高采烈準備幾大桶數百斤油飯放在龍山商場騎樓讓路過行人及商家自由取用。等我稍微長大，學走路到處晃時，龍山商場的店家老闆與一干夥計都認識我，看到我都會說「依六ㄟ兒，你要幹嘛？」去商場店家吃飯，只要報上父母親姓名，就不用付錢，先吃再說，等母親有空來付錢。整個商場就是我玩耍活動的勢力範圍，在這地盤裡，父母親待人和善，我也處處受歡迎！</span></p><p><span>這些往事已過了幾十個年頭了，多年前，我常利用早上送老婆上班前空檔，在餐桌旁詢問母親一些她與父親倆年輕時發生的事，或者求證依稀還記得的事。將我記得的跟她告訴我的拼湊成一片片完整圖樣，希望假以時日，書寫下來，紀念所有跟這些往事相關的人事物。</span></p><h3 id='少年警察追姊姊阿美珠'><strong><span>少年警察追姊姊阿美珠</span></strong></h3><p><span>姊姊美珠眼睛大，人漂亮，嘴甜，很會做生意。從小，他就是父親的得力助手，每天幫忙開店、賣皮鞋、整理皮鞋、顧店、關店，小小年紀，每一項工作都得做，但都做得很好，深得父親疼愛。</span></p><p><span>父親嗜賭時期，為了貼補家用，姊姊每天走遍停在龍山寺側門停車場每一輛滿載日本觀光客的遊覽車，用稚嫩童音說著不標準的日語，兜售青箭口香糖和玉蘭花。有一段時期，我跟在姊姊後面，一起上遊覽車兜售，才發現姊姊生意頭腦好，許多觀光客被他逗得眉開眼笑，常常一口氣買了好幾串玉蘭花和數條口香糖，有時候，才兜售了幾輛遊覽車，手邊的口香糖和玉蘭花就販售一空，生意好得不得了。</span></p><p><span>姊姊很照顧我們，每晚，她都負責帶我和弟弟阿峰回西園路的家，燒熱水，幫我們兄弟倆洗臉、洗手腳，然後等我們熟睡後再回龍山商場店裡，和父母親一同打烊。關店後，母親通常回家打掃整理住家，父親則帶著姊姊去住家附近還營業的美食攤或華西街夜市吃宵夜，回程再買些食物回去給母親吃。這些住事都是長大後，聽母親說了才知道的秘辛，聽完也嫉妒爸爸如此疼愛姊姊。</span></p><p><span>小學畢業，姊姊在龍山商場外圍騎樓人行道上擺攤賣東西貼補家用。當所有攤販一聽到哨音立馬收攤跑給警察追，害怕被抓到要罰款加扣留攤子時，只有姊姊不用跑、不用躲，跑了躲起來也沒用，因為少年警察眼裡只有姊姊，姊姊躲到那追到那，抓到了不罰款不扣留攤子，只想找機會找話題跟姊姊聊天說上個幾句話，就開心不得了。我們家人看在眼裡，歡喜在心裡，覺得這些少年警察真促咪，到底是在執行公務，還是被派來追女孩的，實在令人哭笑不得！？</span></p><h3 id='從雙十國慶閱兵想新冠疫情停課'><strong><span>從雙十國慶閱兵想新冠疫情停課</span></strong></h3><p><span>小學時期，每年雙十國慶前一週，總統府附近幾間校園佔地大一點的學校都會放假一週，讓雙十國慶當天要參與總統府前閱兵的軍隊駐紮，借用校園諾大方正的操場練習踢正步。</span></p><p><span>到了高年級，有幾次經驗了，每學年上學期開學後，只要有同學想到這檔事，班上男同學就會聚攏在一起七嘴八舌討論，每一位同學都堅持己見，斬釘截鐵說應該是十月Ｘ日學校就會開始放假了，誰也不讓誰。</span></p><p><span>這是那一代生活在萬華、就讀老松國小及其附近大間學校的孩童的共同記憶。成年後不曾聽老松學弟妹說過有這麼好康的事情。</span></p><p><span>很難忘記，每年雙十國慶後，我們復校上課時所看到的那場景，每個班級的課桌椅不是被擺放到走廊一側，就是集中在走廊盡頭某一陰暗的角落裡，整間教室除了黑板和無法移動的窗戶等，空無一物。每間教室或多或少遺留阿兵哥忘記帶走的隨身物品，有時是一隻襪、一條鬆緊繫帶，有時較稀罕，是一個腰帶銅釦、一個鋼杯。第一個到校的同學就好像人人稱羨的大探險家，到處撿寶，到處炫耀，晚到的同學只好跟在後頭，東張西望瞄向教室各個角落，期盼能撿到一些前面同學落掉沒看到的寶，回家炫耀。</span></p><p><span>每一世代的孩童都會記得專屬於他們自己的共同美好回憶。</span></p><p><span>從2020年初新冠肺炎世界大流行開始，這一代的兒童從此踏上一條與前人完全不同的童年回憶之路，在他們日後的回憶裡，透過他們話語和記憶的拼湊，許多人將明瞭，2021年5月，每間學校、每位老師八仙過海各顯神通，架起一間又一間線上教室，每天早上，全台絕大多數的學童換了一個地點，同時在家中，又同時在線上教室，在父母親的陪伴下，和同學一起學習，一起聆聽遠方老師的授課，一起在網路上討論老師交代的課業，這是一件我們這些成年人無法想像，有生之年竟然陪著孩子一起做到的一件神奇之事。</span></p><p><span>許多美好的意外與回憶還在明日等著我們去撿寶呢！我們的孩童正在創造專屬於他們可供日後一遍又一遍述說的回憶呢！</span></p><h3 id='夜市擺攤'><strong><span>夜市擺攤</span></strong></h3><p><span>小學四年級結業，父親甫過世半年，每晚寫完功課，就幫母親在龍山夜市皮鞋攤賣男鞋。暑假前，母親知悉我想買台越野車，就鼓勵我，跟我約定，賣一雙200元的皮鞋，給2元，如果是350元的皮鞋，給3元。有了買車慾望，加上獎金誘惑，每晚帶弟弟回家洗澡睡覺前，我都努力向客人推銷，並偷偷觀察母親厲害內斂的賣鞋手法和推銷話術。開學前，存了1300元的賣鞋獎金，距離越野車售價2550元還差了一半，只好找母親協商，可否預支1250元賣鞋獎金，之後再利用週末假日努力賣鞋償還借款，母親嘴巴雖然唸了許久，最後還是答應我，接下來的假日就帶我去康定路上賊仔市車行買車。</span></p><p><span>從此，只要晚上有空，我都開心在夜市賣鞋，獎金從初期2至3元慢慢漲到5至10元，一晚賣掉的皮鞋也從十餘雙變成20至30雙，最高紀錄是民國75年除夕，當年仍是五專一年級生的我從除夕夜九點賣到隔日凌晨一點，短短四小時賣出數百雙皮鞋，令母親刮目相看、讚不絕口。母親2010年10月過世前只要逢人聊到母子倆在夜市攜手賣皮鞋往事，一定提及這段豐功偉業。</span></p><p><span>我是賣過皮鞋、襪子、涼鞋、鞋油、柳橙汁、香水筆、春聯、吊飾等商品的夜市之子，阿源。夜市讓我賺到第一台腳踏車，也助我娶到同為夜市之子的老婆施娟娟！</span></p><h3 id='大學教授之前'><strong><span>大學教授之前</span></strong></h3><p><span>從小學四年級暑假在萬華夜市幫母親賣出第一雙皮鞋，就愛上在夜市販售的過程，並樂於沈浸在生意連續成交後幫母親點鈔記帳理貨的喜悅之中。</span></p><p><span>五專一年級，我已經是母親在夜市擺攤販售皮鞋的唯一好幫手，從客人駐足在攤前觀看皮鞋樣式、詢問價格那一刻起，我的眼睛就來回穿梭在客人的腳和臉之間；我的腦不停地轉動，觀察這位客人的穿著與講話習慣，推測他可能的喜好和品味；我的身體和言語同時展開行動，以最大熱忱和十足誠意，解釋他手上拿著的這雙皮鞋的特點，甚至搶在客人詢問有否適合他腳穿的尺寸之前，已經拿好鞋子半蹲在地，請他坐在板凳上，幫他脫鞋，為他穿鞋，並將食指深入鞋中腳後跟處，面帶笑容滿臉自信告訴他，這雙鞋嘟嘟好，不信的話，可以起身走看看，好穿再買。</span></p><p><span>我，是不是一位優秀的學術研究人員與適任的大學教授，目前未定論。但是，五專畢業前，夜市裡許多擺攤的長輩早對著母親豎起大拇指說：「阿雲，恁好命啊啦，生得這種生意仔，那麼會做生意，白天一邊讀書，一邊在電腦公司上班做主管賺錢回來給你，晚上還在攤子做生意，這款生意仔要去兜位找？」母親聽了心裡高興，可是嘴巴總回：「做夜市生意甘苦，我還是希望他去上班，固定上班，領固定薪水，這樣比較輕鬆啦！」不然就是笑笑回：「等到大頭仔可以賺錢，我的骨頭麩早已經不知埋放在那裡了。」有時聽到夜市長輩這樣誇，我會想，是不是畢業在資訊業界工作一段時間，就回來接手母親的皮鞋攤，不管繼續賣皮鞋，還是賣別樣東西，以我的推銷販售能力，只要肯努力，掙得好生活應該不成問題。</span></p><p><span>最近晚餐後，詢問小福，等他長大，阿爸從大學退休了，帶他去夜市一起擺攤做生意，他想賣什麼？誰知道他不假思索笑著回：「賣皮鞋！」我和阿娟聽了都笑開了，邊笑邊說：「小福，你說真的假的？這可是阿爸的老本行喔，沒問題，阿爸陪你做伙去擺攤賺錢！」</span></p><h3 id='伍仁是一種餡也是態度'><strong><span>伍仁，是一種餡，也是態度</span></strong></h3><p><span>從小到大，長輩都說我「激伍仁」。舉個例，跟母親在夜市擺攤賣皮鞋時，她常一邊擦拭擺放在攤架上的皮鞋，一邊語重心長說：「阿源，你多要努力讀冊，後擺大漢才能多賺錢，娶某生子過好日子。」我常瞪大眼睛扮鬼臉作古怪動作，一付左耳進右耳出有聽沒到回應她：「錢不重要啦，媽～健康和名譽才是最重要的。」母親常被我這番話氣到不知說什麼才好，只好假裝生氣，轉頭不理我，專心手邊事。</span></p><p><span>這種對話常出現在廣州街夜市龍山國小旁我們家攤子前，一直到我讀五專三年級在陳金柱先生經營的鼎眾電腦有限公司擔任軟體開發部主任，才改口：「媽～我認為身體健康和名譽才是最重要的，但是我也知道，錢對許多人很重要，所以我會保持身體健康和好名聲，努力賺錢花用在每一位我所重視的人，讓他們開心快樂之餘，也享受身體健康和好名聲帶來的眾多好處！」</span></p><p><span>直到現在，仍然如此，身體力行。你，是我重視的人嗎？如果是，賺到了！</span></p><h3 id='不當教授who-am-i-to-'><strong><span>不當教授，Who am I to ...</span></strong></h3><p><span>如果不是岳父當年的刺激，不會回校園攻讀碩博士學位，也不會是長庚大學教授，最可能是先從夜市擺攤做生意，累積人生第一桶金，再創業。</span></p><p><span>青少年時期，去夜市幫母親叫賣亮光鞋油，站在攤子前，只要看到遠遠走來的男士穿皮鞋，我一定小跑步到客人面前，大聲叫賣：「快來買好用的亮光油喔，一個20，三個50元。」同時勤快蹲下來，打開亮光油蓋子，仔細擦拭客人的一隻鞋。</span></p><p><span>等到那隻鞋擦得無比晶亮時，馬上起身，拿出三個亮光油兜售：「你看，輕輕擦，馬上亮晶晶，鞋子穿起來體面，又保護鞋面，延長壽命，一舉數得。」</span></p><p><span>客人看著光亮如新的那一隻鞋，又看看灰矇矇的另一隻，還在皺眉頭想說些什麼時，我馬上補一句：「先生，要不要買三個回去備用，另外一隻鞋，我馬上擦，讓你走路逛街都有風，穿新鞋夜市趴趴走。」</span></p><p><span>聽我這麼一說，客人若非笑著掏出50元買三個，就是有如打賞一次買六個，然後看著一雙被我擦拭得亮晶晶的鞋子，滿意地離開攤子繼續逛夜市。</span></p><p><span>只要我出馬販售亮光鞋油，那晚營業額通常近萬，甚至破萬，利潤是營業額的一半。夜市隔壁攤￼總是誇母親：「阿雲，你好命啦，生到一個生意子，後世人靠伊穿吃就有夠啊！」母親總是笑笑回應：「等到他賺錢養我，我已經去跟菩薩了！」我只能在旁邊苦笑：「不會啦！媽，我會好好孝順你，賺錢給你用，讓你吃喝玩樂享受不盡。」大人聽我這樣說，總是樂不可開支，直誇我是孝子，阿雲有這種後生是福氣。</span></p><h3 id='夜市小鮮肉'><strong><span>夜市小鮮肉</span></strong></h3><p><span>從小在萬華龍山商場及廣州街夜市混大的我有一個許多人都沒有的一技之長，那就是擺路邊攤做夜市生意販賣東西，我的擺攤經驗豐富，從皮鞋，涼鞋，襪子，柳丁汁，香水筆，到春聯都賣過，我的販售技巧承自父母，最輝煌紀錄曾經在五專一年級除夕夜裡從晚上九點到凌晨一點賣出快二百雙每雙200元共四萬元的包仔鞋。</span></p><p><span>因為專科時期幫忙母親顧攤賣皮鞋，或者後來自己跟學弟吳承育、游政憲、謝清淵一起擺攤，才有機會認識隔壁玉米攤夫婦（阿娟的父母親）施爸媽，取得他們的信任，日後退伍在秦玉玲總經理主持的新加坡外商宇博電腦公司任職時，拜託我教導他們女兒電腦操作（其實只是PE2文書處理與倚天中文系統）。</span></p><p><span>我熱愛學術研究生活，也樂意脫掉襯衫，捲起褲管，在夜市叫賣販售各式商品；我是電腦科學家，也是貨真價實的夜市小販，搭不搭？</span></p><h3 id='小小傳令兵'><strong><span>小小傳令兵</span></strong></h3><p><span>小學二年級開始，我一直是歷任導師眼前紅人。六年級，男女分班，導師呂御榮身兼學年主任，需要班上二位同學於課堂間跑腿，協助傳達臨時校務指示。我是其中一位小小傳令兵，固定跑女生班級。同學說這是福利，羨慕不已，只有了解內情的人才不這麼認為。</span></p><p><span>整整一學年，每天跑遍女生教室數次，傳達老師的臨時指示。每到一間女生班教室，固定程序就是先在教室門口立正大聲喊報告，等班級老師允許後，再大聲說出呂老師要我們傳達的事項。報告過程中，不管是站著的老師，還是坐著的五十多位女同學，每個人眼睛睜得大大的看著我，好像我是一個插隊不守秩序的外人，硬生生打亂了他們原本的上課節奏與寧靜。</span></p><p><span>所有事都有正反二面，有缺點就會伴隨優點，好處是，當所有同學坐在教室聽課時，只有我和另一位傳令兵可以遊走在各個班級之間，活動筋骨，偶爾還可以喘口氣、上廁所、喝口水、休息一下，再慢慢走回教室，繼續上課。另外一項專屬我的好康是，可以利用每次的傳達機會偷瞧當初心儀暗戀的女同學。</span></p><p><span>假日常帶小福走在老松國小校園裡，小學時期的陳年往事就會一點一滴湧出，畫面鮮活無比！</span></p><h3 id='愛看書'><strong><span>愛看書</span></strong></h3><p><span>母親很常帶我們兄弟母子三人一起搭公車去重慶南路東方出版社門市，一待就是整個下午，母親翻閱他感興趣的書，例如「大陸尋奇」和「汪洋中一條船」之類的書，弟弟阿峰還小，看不懂書卻很忙碌，忙著跟東方出版社二樓參考書玩大風吹，吹什麼，吹那些被他可愛小胖手拿出來錯位的書。我則是一個人靜靜地坐在角落邊矮板凳上，翻著東方出版社印行有注音大字版的中西方世界名著系列，一頁一頁專心看，插圖也不放過。通常，離開東方出版社前，母親會選購幾本書，也會讓我挑幾本書買回家繼續看，這些書，包含母親常翻閱的「大陸尋奇」與「汪洋中一條船」，過了40年完好如初，立在我家書櫃上排排站，最近一次短暫離開書櫃則是好友燕玲大兒子皓騫借回家閱讀。</span></p><p><span>小學三年級寒假最誇張了。蔡幸美導師從母親那裡了解我愛看書，為了深化我的閱讀興趣，並鼓勵我和他的二個同年齡孩子一起大量閱讀，每週都從老松國小圖書館借回60本書。我們三個剛近視戴眼鏡的小孩輪流閱讀這些只能借回來一週的書，所以每隔2</span><sub><span>3天就看完20</span></sub><span>30本書，再交換看。就這樣早看，午看，晚也看，除了吃飯、睡覺及上廁所非得做的事情，整個人異常安靜地坐在龍山商場皮鞋店內角落邊，埋首於水牛出版社及東方出版社印行的童書。「埃及豔后」、「七俠五義」、「西遊記」及「簡愛」都是在那個寒假讀過。短短三週寒假，三個小朋友每人看了快200本書，閱讀速度驚人。但也因為這種奇特經驗，養成日後我擁有快速閱讀的能力。</span></p><p><span>母親到老還是喜歡閱讀，還是常買書。衷心感謝母親與老松國小三年級蔡幸美導師培養我閱讀的習慣和喜好，謝謝您們！</span></p><h3 id='閱讀'><strong><span>閱讀</span></strong></h3><p><span>小學前，母親常買手繪本給我，雖然看不懂插畫旁的注音及文字，卻翻得津津有味，每天下午都從皮鞋店的大抽屜拿出來逐一翻閱一遍。小學時，東方出版社與水牛出版社是我的好朋友，他們二家出版的童書幾乎都讀過，甚至有些故事書現在還拿出來看。升國中後，我開始迷上金庸武俠小說與倪匡軟科幻小說，很快地，我發現租書店借回來的衛斯理與白素傳奇冒險故事無法滿足我的期待與想像，開始搜尋國內找得到已翻成中文版的科幻小說，這時候皇冠出版社與國家出版社取而代之，成為我家書櫃的新寵兒。</span></p><p><span>如果同時來過我家與辦公室，一定發現近萬本中英文藏書粗略分成三大類。第一類，從五專時期開始購買，開始閱讀，每隔一陣子就過時整批拋棄的電腦書。目前這類書籍約剩二千本，不是歷久彌新永不過時的經典教科書，就是眼下研究需要的參考書籍。第二類是科普書，從宇宙天文、物理化學、生物環境、社會經濟，到人文歷史的科普書我都有，涉獵範圍之廣，連自己都佩服。第三類是小說與童書，又以科幻小說居多。如果你有小孩，我歡迎你帶他們來我家借這些童書回去親子共讀，如果你跟我一樣是科粉，我們可以成為書友，一起遨遊在無垠無邊的想像銀河裡，成為耀眼星孩。</span></p><h3 id='穿越世界'><strong><span>穿越世界</span></strong></h3><p><span>看到了嗎？</span></p><p><span>我們生活在一個由數不清的世界所組成的其中一個世界中。想通往其它平行世界很簡單，只需要閱讀。一旦翻開書本封面，你就進入了那本書的造物主（作者）所精心建構的美妙奇幻世界，慢慢閱讀，細細思索，重複體驗，瞧見那奇幻世界所有的美好事物，聽見那些美好事物發出的種種悅耳聲音，緊跟在書中主角後面，一起冒險，一起遨遊，一起歡笑與悲傷。</span></p><p><span>愛看書的小孩，心靈富有。</span></p><p><span>從小，在母親與學校老師的協助與鼓勵下，穿越大大小小數以萬計的世界，有些世界是江湖，我在裡面看破人情義理與紅塵羈絆，最後選擇出家，遠避中原；有些世界號稱中土，我和一群身材壯碩的同族夥伴終年穿著烏絲盔甲，拿著斧頭躲藏在地底洞穴，深怕那不可言喻的惡魔再度降臨，奴役我們成為他制霸中土的馬前卒；有些世界佈滿星河宇宙，我是剛走馬上任的指揮官，領航著一群太空母艦穿梭銀河，前往未知星系探險，暗中維持聯盟的繁榮與和平。</span></p><p><span>在這些世界面前，我知足，因為有些世界裡的住民比我還痛苦悲傷，遭遇更多苦難；我訝異，因為有些世界裡的主角引領我穿越不同文化社群，告訴我各種特殊詭譎的政治哲學觀如何影響及形塑一個又一個社群的生活風貌，形成迥異的歷史觀；我痛哭，因為有些世界裡的殺戮太過恐怖，導致我深陷其中，久久無法自拔。</span></p><p><span>想和你分享每一個我所經歷過的世界，一杯咖啡，一塊蛋糕，再挑選一個你想進入的一個奇幻世界，我們一起遨遊飛翔！</span></p><h3 id='二本相簿'><strong><span>二本相簿</span></strong></h3><p><span>在我們很小的時候，母親就把家中相片分成兩大本，分別整齊存放我們兩兄弟從小到大拍的照片。除此之外，他很公平把自己和爸爸兩人從年輕開始每個時期的照片分成兩堆，分別放入專屬於我和弟弟的大相簿中。</span></p><p><span>在那個還沒有數位相機更不用說照相手機為何物的底片年代裡，我們的家庭樂趣就是把放在大衣櫥上層的兩本大相簿搬下來，然後全家人圍坐一起，一頁一頁開心瀏覽，一張一張細細回味，然後弟弟小蜜蜂一言，姊姊黃美珠一句，嘰哩呱啦搶著說照片中的我們這些小主角們當時發生了什麼事情才會留下這副生動表情。那時候的時間忽快忽慢，當我們沈浸在照片的回憶時光裡，時間過得很慢，慢到無法察覺過了多久，等到我們看完厚厚二大本相簿時，才發覺時間怎麼過得這麼快，轉眼間一個下午被我們翻閱完畢。</span></p><p><span>弟弟小蜜蜂婚後搬到母親買給他們小倆口的板橋江子翠房子住，也把專屬他的相簿一起帶走。所以，民國88年之後，我再也沒機會翻閱他帶走的那本相簿。雖然弟弟小蜜蜂常回來萬華陪母親散步聊天，但是也找不到機會大夥坐下來一起翻閱屬於我的這本相簿，實在可惜。今夜，我突發奇想，找弟弟討論，把分開20年的二本相簿按照拍攝先後順序重新整合成一本大相簿。</span></p><p><span>當然，弟弟小蜜蜂一定會說，整合之前，找外甥女阿瑄過來把所有照片掃描起來，轉成數位檔案存放在雲端供所有黃家人隨時欣賞。對於這個提議，我欣然接受，只看苦主阿瑄何時有空囉。</span></p><h3 id='查某-vs-海賊'><strong><span>查某 vs. 海賊</span></strong></h3><p><span>小時候，我有許多綽號，例如貢丸、大頭仔，最特別是「查某」，每次母親帶我在龍山商場閒逛，總會有認識的商家老闆遠遠就對我們母子招手大喊：「來，依六ㄟ查某你過來，要不要吃糖果？這些全部給你。」說完自己跑過來抱起我叫我親他臉頰，並把手上所有情人果塞進我口袋中。每天中午過後，總有吃不完的糖果和親不完的臉頰。</span></p><p><span>這種情況等弟弟黃國峰出生後出現矛盾甚至鬧分裂。許多商場鄰居一而再探詢母親，明明弟弟長得更漂亮，更像女生，為什麼（指著我）查某的乾爹阿水每次來店裡都叫妳第二ㄟ「海賊」？</span></p><p><span>理由很戲劇，弟弟出生前，我們家道中落，和另外一家人，也是我乾爹，住在西園路佛具街二樓不同間的雅房，我們住前頭窗戶面向龍山寺側門，他們住後頭和西園路一段136巷的房子屁股對屁股。有一天下午，剛學會爬的弟弟趁母親整理房間不注意時從我們家爬了快20公尺，爬進乾爹家偷抓乾媽要吃的午餐。乾媽迷糊睡醒之際，看到一個漂亮又可愛的小孩一手撐著床頭櫃一手抓滿碗裡的食物往嘴裡塞，笑到合不攏嘴，趕忙呼喚乾爹和我媽，一起來看這幅太經典的畫面。從那次起，弟弟的綽號就是「海賊」，我還是被叫「查某」，直到小學三四年級，龍山商場店家老闆才愈來愈少人叫我「查某」，改叫大頭仔。</span></p><p><span>弟弟很害羞，時常看我激伍仁，這二張照片就是母親下午帶我們去商場對面龍山寺放風拍的。我那時迷上恐龍，總是邊走邊裝成暴龍，一路發出吼叫聲，弟弟是我的好觀眾，總是站一旁靜靜看我，有時候，母親鼓勵他學我也來一下恐龍是怎麼走路大聲吼的，弟弟總是羞澀說不要，我就會走到弟弟後面，牽起弟弟的雙手，叫他跟著我擺，學我大聲吼叫。</span></p><p><span>弟弟若在世，今45歲，二年前腦溢血去世，我傷心欲絕￼，此文懷念他，希望他在另一個世界盡情吼叫。</span></p><h3 id='龍山國中'><strong><span>龍山國中</span></strong></h3><p><span>昔日艋舺，今之龍山，人文薈萃源流長，...，錦繡前程在四方。</span></p><p><span>直到今天，仍清楚記得由陳水穆校長填詞、洪雨田先生作曲的這首龍山國中校歌。每當心情煩悶、情緒低潮，想大聲唱歌來振奮自己的心情時，我都不假思索地哼起母校的校歌，尤其唱到「積極進取，樂觀奮鬥，...，披荊斬棘，不屈不撓」這些歌詞，整個人就會變得很HIGH，多希望自己像歌詞所描述的一樣「龍中學子志氣昂」，也期待自己的所作所為能讓「龍中我校譽飛揚」。</span></p><p><span>記得國中時我的自願是成為一名對人類社會有貢獻的科學家。如今雖然距離當初的願望又接近了一步，在長庚大學資訊工程學系任教，帶領研究生利用電腦的強大運算能力來模擬新興傳染疾病的傳播動態，研究各項公共衛生政策的防疫成效與最佳實施策略，並戰戰兢兢與流行病學研究社群分享最新成果，但是，我知道若沒有當年練瑞安恩師的開導與教誨，就沒有今日的黃崇源。國中三年，在他不厭其煩、深入淺出講解下，不僅讓我從國一起就喜歡數學課，迷上「苦思、頓悟、喜悅」這個難與外人說明白的解題過程，也奠下日後學習電腦科學所需的數理邏輯基礎。</span></p><p><span>回首過去，發現自己的許多專長與興趣，都是在多位國中老師的引領下，慢慢挖掘、培養出來，例如，在黃麗雲等多位國文老師的鼓勵協助下，我寫下第一首白話文新詩，完成第一部中篇科幻小說「謎」；在阮麗玉、謝育台兩位老師活潑有趣的教學活動中，讓我對生物、理化課程產生莫大興趣，直到現在，閱讀時下最新的生物學、物理學及化學等科普著作都還是我的主要活動與樂趣，並對我的研究工作助益甚深。利用這個版面，再次感謝過去曾經教導過我的每一位老師，有了您們的付出，才有今日健全的我；也希望您們以我的表現為榮。</span></p><p><span>若問我，除了龍山國中老師的指導與大力協助之外，要怎麼做，才可以成為一名電腦科學家，探索許多有趣且對人類社會有貢獻的研究？我的回答很簡單：一、從現在起，培養閱讀習慣，利用課餘時間多多閱讀課外讀物。閱讀一本好書，不僅讓你領略如何欣賞英倫康橋的美，也讓你在浴室泡澡時發現真理，找到如何在宇宙中撐起地球的簡單方法。二、永遠保持好奇心，千萬不要對任何的人、事、物習以為常，少講「早知道、就是這樣」，多問「為什麼？為什麼？」唯有抱持一顆好奇心，才能揭開隱藏在人們生活週遭中的科學新發現。</span></p><p><span>「思考、創造、忍耐」是我的座右銘，更是自我鞭策的目標！</span></p><h3 id='人生第一桶金'><strong><span>人生第一桶金</span></strong></h3><p><span>民國76年，我17歲，剛放暑假的某一個早晨，陪母親上三水街菜市場買菜，在康定路廣州街交叉路口現剝皮寮騎樓等紅綠燈時，發現馬路斜對面三光眼鏡店旁一家宏碁資訊廣場（鼎眾電腦公司）剛開幕，店內窗明几淨，陳設嶄新。我站著看了一會兒，轉頭對母親微笑說，明天去問他們缺不缺工讀生，也許暑假可以去那邊打工賺錢，開學後買一台新電腦。</span></p><p><span>隔了二天，我開始在資訊廣場擔任門市工讀生，向上門參觀的客人促銷宏碁700型XT和900型AT二種電腦的功能和優點，以及如何在開機後啟動倚天中文系統。這個門市工讀生工作難不倒長年在萬華夜市賣鞋每晚賣出數十雙的我，每當門市沒客人，主管吩咐我整理展示台的電腦和印表機時，我就會一邊將電腦螢幕鍵盤印表紙歸位擺好，一邊觀察公司其他的員工在做些什麼事。</span></p><p><span>有一天下午，我發現包括老闆在內許多幹部都擠在辦公室一台電腦前，個個急得像熱鍋上螞蟻，輪流上前操作一番，嘗試解決一個臨時發生的系統問題。暗中觀察許久，發現他們無力解決，還圍成一團七嘴八舌胡亂猜測原因。從眾人雜亂無章急切的交談中我約略猜出問題的癥結所在，熟知解決方案不難，只需重建索引檔，重整資料庫即可。我鼓起勇氣毛遂自薦探詢，讓我試看看，我有把握讓程式恢復正常運轉。他們半信半疑將鍵盤交給我，沒多久，在一陣驚訝聲中程式正常啟動，問題迎刃而解了！</span></p><p><span>那次事件後，公司老闆兼總經理陳先生問我，沒有沒興趣轉到軟體開發部門？這正符合我意，想都不想一口答應。隔天，我告別門市，成為軟體開發部的一名程式設計師，每天17:00上班22:00下班，負責開發萬華大理街服飾業進銷存管理資訊系統。</span></p><p><span>從民國76年暑假起，到民國81年雙十入伍前，五年中歷經多項職務，從軟體開發部的程式設計師像坐直升機一樣被快速升到軟體開發部主任，從軟體開發部主任被老闆賞識和指定跟在他身旁擔任特別助理，在總經理特別助理任內為了解決教學部捅下的簍子，臨危授命改調電腦教室教學部主任，重整招生問題。薪資從一開始的程式設計師二萬三千元，隨著職務改變不斷調升，離職前夕，每個月薪資實領四萬五千元，以及總經理額外給的許多獎金。30年前，這種薪資水準已經羨煞多少上班族了！</span></p><p><span>常拿這段經歷鼓勵長庚資工的大學部修課學生，希望他們在低年級時努力學習，高年級時勇敢表現，未來個個成就遠超過我，心滿意足！</span></p><h3 id='五專七年級'><strong><span>五專七年級</span></strong></h3><p><span>我讀五專，讀了七年，剛好是別人的高中三年加大學四年。前面二年，為了學習電腦軟硬體相關知識，除了教科書，每天還額外提著一大袋沈甸甸的電腦書，一大早從萬華經公館轉二班公車去木柵的中國工商專校，不管這堂課上什麼科目，總是埋首在自己帶來的電腦書。就這樣自學學會了許多程式語言，以及相關的資訊理論。</span></p><p><span>中間三年，我幾乎天天遲到、早退及翹課，每天跑去鼎眾電腦公司上班。從原本的暑期工讀生，變成正式的程式設計師，從程式設計師跳級成為軟體開發部主任，從原本的軟體開發部主任被拔擢為總經理特助，跟在總經理陳金柱先生身旁，參與公司各項經營擴展計劃。在那三年裡，我與軟體開發部夥伴一同完成多套商用軟體系統，也和公司管理階層在北台灣各地快速展店，透過傳銷及贈送電腦教室免費教學等模式販售電腦軟硬體。</span></p><p><span>最後二年，別人早拿到畢業證書跑去就業、服兵役或結婚生子時，我回到校園重修近八十個學分。除了電腦相關科目鐵定不會被當而且高分過關之餘，所有的國文、英語、英會、數學、軍訓、體育、三民主義、憲法、國父思想、會計、行銷、打字，以及你想不到的必修科目，統統被死當，統統得回去和專一學弟妹一起上課。我的學生生涯是從專六開始的，在那二年期間，我認識許多小我五屆的學弟妹，和他們一起上課一起下課一起擠公車回家，一起去公館麥當勞打屁聊天，一起去中華路商場吃世界豆漿大王，一起去青年公園泡沫紅茶店閒扯蛋整晚，這二年絕對是我人生最快樂的時期之一。</span></p><h3 id='可樂源'><strong><span>可樂源</span></strong></h3><p><span>小時候很少喝可樂，逢年過節，母親總是買黑松汽水或沙士祭拜神明。直到念（中國工商專校電子資料處理科）五專時，科主任為了招待客人或科內老師時常叫我去福利社買整箱可樂，買回來後，就順便分一瓶給我，久而久之，就養成我愛喝可樂非可樂不喝的壞習慣。喝可樂的全盛時期，平均每天喝兩罐以上的可樂，這還不包括其它的無氣泡飲料（例如：奶茶或舒跑），真誇張！</span></p><p><span>記得有一次和娟娟去香港旅遊，當時娟娟不希望我喝太多可樂，為了解癮喝一口，我竟然答應只要當下讓我買一瓶可樂，之後的兩個月內我半滴可樂不碰，想當然耳，軟心的娟娟還是讓我喝可愛，而我也破功，守不到幾天就把誓言拋到腦後繼續狂喝可樂。</span></p><p><span>隨著年紀變老，漸漸發現可樂不能再喝多了，因為身體無法負荷這麼多且這麼甜的碳酸飲料，只是，積習難改，要把過去累積二十五年喝可樂的壞習慣在一夕之內改掉，實屬比登天還難之事。不過，為了小福，我還是要把這個黏在我身上的壞習慣一點一滴改掉，才能活久一點和娟娟及小福等家人共享天倫之樂啊！</span></p><h3 id='少年人過生日'><strong><span>少年人過生日</span></strong></h3><p><span>父親在世，我很喜歡慶生。每年八月十三日，母親總把我打扮的趴哩啪哩，不是搭上一套紅西裝，就是腳踩一雙父母親特地請工廠老師傅客製的閃亮亮紅皮鞋，再配上一件新買的襯衫和吊帶西裝褲，活脫脫像一位從電視機走出來的混血小童星。當晚，父母親一定休息不開店，專程帶我去看歌廳秀，吃大餐，讓我樂得合不攏嘴，開心的不得了。</span></p><p><span>五專後幾年，我在鼎眾電腦公司擔任總經理特助。那幾年生日，公司總是在萬華門市舉辦雞尾酒自助宴會，邀請客戶、學員以及我要好的朋友一起來公司同歡，邊吃外燴邊聊天，最後再齊唱生日快樂歌許願吹蠟燭吃蛋糕。當天男主角不消說，一定是我，男主角旁羞答答的女主角就是苦追許久的明仁藥局大女兒陳雅雯。如今回想起，記憶中還殘留些許淡淡的哀傷與絲絲的甜美，難以忘懷。</span></p><p><span>人生25歲前的生日回憶，隨著時間漸漸模糊。謝謝各位的祝福，我統統收到了，也一定如願，天天過得充實快樂！希望大家和我一樣，就算半百，一樣搞笑，一樣伍仁，一樣滿腔熱血，一樣愛老婆如初識時！</span></p><h3 id='2005年應徵教職自傳'><strong><span>2005年應徵教職自傳</span></strong></h3><p><span>黃崇源博士，西元1970年8月出生。十歲時，父親因長年累月辛勤工作，導致腦溢血而過世。自此，母親身兼數職，同時擔負家庭生計與養育教導之責。父親過世時，未遺留任何財物，致使母親必須在台北市廣州街夜市擺路邊攤賣皮鞋，早出晚歸，賺取微薄毛利，供我們兩兄弟生活及上學。儘管生活艱苦，在母親嚴格正確的教育下，從小養成獨立自主的精神與明辨是非的能力。</span></p><p><span>1985年完成九年國民義務教育後，就讀中國工商專校（中國科技大學前身）電子資料處理科（資訊管理系前身）五專部。在1994年8月退伍且工作四年後，因為對分散式人工智慧、演化式計算領域懷有崇高的研究熱誠與興趣，決定重回校園，攻讀碩、博士學位。修業期間，選修跟研究領域、興趣相符之課程，藉由七年的研究所生涯，向師長學習做學問的方法與研究領域之精髓，主動挖掘研究課題，針對疑難議題大膽提出想法與建議。唯有如此，一分耕耘一分收獲，才能擁有令人滿意的大豐收。</span></p><p><span>如今取得博士學位，衷心感謝每一位教導過的師長，從他們身上，本人學到許多寶貴知識與經驗，就好像一艘揚帆等待出航的船，準備面臨人生下一個階段的挑戰。記得Red Hat公司董事長羅伯特．楊（Robert Yang）在「紅帽旋風：Linux」書中形容他的工作為「做這麼有趣的工作，還能因此得到報酬，簡直是違法行為」。期盼自己像他一樣，找到可以發揮所長且樂在其中的學術研究與教職工作。</span></p><p><span>本人個性樂觀開朗，做事積極負責，自信有能力擔任教學、研究與行政等工作。由於學生時期承蒙許多師長適時地提攜與教誨，本人擔任教職以來，亦秉持同樣的熱忱與認真的態度授課，主動關心學生的各項問題。對未來的期許，希望兼顧學術研究、教學輔導、行政服務三方面，隨時開創富挑戰性的研究工作與成果，一展抱負及所長，將過去所學到的寶貴經驗貢獻給工作單位與社會。</span></p><p><span>「思考、創造、忍耐」是我的座右銘，更是自我鞭策的目標！</span></p><h3 id='世事無絕對'><strong><span>世事無絕對</span></strong></h3><p><span>24歲八月中旬，義務役退伍，進入新加坡外商宇博電腦公司擔任程式設計師，每天朝九晚五專注於空運承攬系統的系統規範與實作細節中，從來沒有想到有一天會因為娟娟父母親反對我倆交往，跑去報考資訊工程研究所碩士班，還因為考試策略運用得當，順利考取交通大學資訊科學研究所。</span></p><p><span>28歲，攻讀交通大學資訊科學研究所碩士學位，加入學習科技實驗室，接受人文理工樣樣博學精深的孫春在教授的指導，每週往返台北新竹二地數趟，過著半工半讀，在長榮關係企業「環世」和「交大資科」兩邊跑的緊湊日子，從來沒有想過兩年後會因為領略指導教授為我開啟的一扇研究曼妙之窗，而決定碩士畢業後不去竹科工作當新貴，繼續留在交大攻讀博士學位。</span></p><p><span>30歲，我的身分是交通大學資訊科學研究所博士生，也是中國技術學院（目前為中國科技大學）資訊工程學系專任講師，每天除了研究與教學，還要抽空回台北，白天陪伴母親，晚上騎車飛去輔大陪伴吾愛娟娟，兩人手牽手親密漫步在美麗浪漫的校園中，談情說愛，和一群輔大好友暢談家事國事電影事，從來沒有想過取得博士學位後會落腳元培科技大學資訊工程學系一年，擔任專任助理教授兼任系主任，以及從2006年至現在任教的長庚大學資訊工程學系。</span></p><p><span>33歲，本來博士學位畢業論文的研究主軸是演化式計算之理論改良與實務應用，從來沒想過2002～2003年一場SARS流行風暴把我的博士論文主題變成了「流行性傳染病電腦模擬與公衛政策成效評估」，還因此幸運地認識和平醫院璩大成院長、陽明大學陳宜民教授、中國醫藥大學風管系藍郁青教授，以及主要合作夥伴台灣大學地理系溫在弘教授，這些歷程與結果都是當時的我所無法預見的機遇。</span></p><p><span>目前，任教於長庚大學資訊工程學系，2015年8月升等正教授。我熱愛工作，也喜歡和系上同事共事，一起努力打拼，一起胡言亂語練肖話，然而，就像標題所言，未來會怎麼變化，無法預知。從過往經歷中只能略窺一二，就是世上沒有永遠，也沒有絕對不可能的事，日後會如何？誰也說不準，唯有努力充實自己，正面迎接驚奇人生才是上策！</span></p><h3 id='爬呀爬呀過沙河'><strong><span>爬呀爬呀過沙河</span></strong></h3><p><span>小時候，家住龍山寺側門對面龍山佛具店樓上，每天都是父親與姊姊阿美珠先去龍山商場開店賣皮鞋（六明皮鞋店，生意鼎盛時期，聘請三位女店員），母親總是等午飯吃飽後再帶我們兄弟倆去店裡協助父親照顧生意，或接手讓父親休息去對街寶島鐘錶樓上的茶店看摔角喝茶去。有時候下午生意清淡時，母親會帶著三個小孩穿越馬路到對街的龍山寺廣場散步，順便讓我們兄弟倆活動活動筋骨，繞著偌大的廣場跑啊跳啊，活像運動會五千公尺長跑賽一般。</span></p><p><span>有一回，應母親要求，在龍山寺廣場靠近大門口處留下一張搞笑紀念照，照片中我就是面對鏡頭和弟弟一起擺出半蹲螃蟹照，從此，這種半蹲螃蟹照也變成我的招牌動作，到每一個著名景點時都要擺一次，請娟娟幫我留影紀念，頗有到此一遊意味！</span></p><h3 id='幸福的感傷'><strong><span>幸福的感傷</span></strong></h3><p><span>2010年8月母親住院時，看著她的記憶一點一滴慢慢流失，內心很難過。隔年初小福出生後，這種難過不時襲上心頭，害怕將來有一天自己跟我媽一樣，忘記許多美好事物，忘記美麗可愛又得人疼的老婆娟娟、古靈精怪又調皮又愛搗蛋的小福，以及週遭我愛或愛我的親朋好友。</span></p><p><span>如果有一天，我真的忘了各位，請不要難過，也不要生氣，唯一要做的事情是「記住我」，記住曾經有這麼一個人叫黃崇源，小時候很可愛，眼睛大大顆的，像一個巴西外國小男孩，整天在龍山商場騎腳踏車到處串門子，自稱「六明皮鞋店」黃依六的兒子，長大後愛搞笑，奉行母親黃媽媽郭雪雲的「吃人半斤，還人一斤」樂天助人哲學，明明不是很有錢，卻好像億萬富翁似地兩肋插刀到處幫忙別人。</span></p><h3 id='守護幸福'><strong><span>守護幸福</span></strong></h3><p><span>最近幾年，小福入睡後，阿娟在樓下刷洗晚餐留下的鍋碗瓢盆，以及整潔廚房恢復原有的乾淨與秩序之時，我總會一個人靜靜坐在二樓書房電腦桌螢幕前深切反省，我是一個好丈夫嗎？我是一個好爸爸嗎？諸如此類的重要問題。</span></p><p><span>這些問題從來沒有令自己滿意的答案，我總是過於緊迫叮嚀，以至於阿娟承受過多壓力，情緒無從宣洩；我總是過度保護小福，以至於阿娟得花更多時間與力氣來訓練他、鍛鍊他，補足我對小福造成的影響。</span></p><p><span>活得愈久，愈能體察妻子與小孩的重要性，而且這個重要性不斷在放大，逐漸充滿整個生活的每分每秒每個角落。為了這個家，為了他們可愛的母子倆，為了我們一家三口可以圓滿地生活在一起，我樂意放棄我的夢想、我的志願、我的野心、我的虛榮心，騰出最多的時間和精力，換取最微薄但也最重要的家庭幸福。</span></p><h2 id='愛人月如'><strong><span>愛人月如</span></strong></h2><h3 id='夜市教電腦'><strong><span>夜市教電腦</span></strong></h3><p><span>民國84年，我25歲，萬華夜市賣水煮玉米的阿姨拜託我教她女兒電腦，我一口答應。教電腦那晚，我提前去夜市玉米攤旁等，只見一位綁馬尾巴穿小件Ｔ恤寬鬆牛仔褲大頭鞋抱著一堆書的嬌小女孩從人群中走出來，叫我一聲哥哥。</span></p><p><span>玉米攤阿姨邊剝玉米鬚邊看著我倆說：「這是阿娟，我叫阿源哥哥教你電腦，你電腦書有帶出來嗎？有什麼問題你問阿源，他在電腦公司上班，電腦很厲害，不會的他可以教你。」說完，為了不妨礙生意，我們拿了二張椅凳，到夜市旁人行道上坐，我一邊翻閱她帶來的電腦書，一邊想要怎麼開頭教才好。</span></p><p><span>女孩帶來三本厚厚的書，分別是MS-DOS作業系統手冊、倚天中文使用手冊和PE2文書處理手冊。我隨意翻著書問她，那裡不懂？他害羞淺笑回答：「也不知道？只知道學校用這些，可是我都不懂，也不知道要問什麼？我媽說你很厲害，可以教我！」</span></p><p><span>已經忘記那晚教她什麼了，只記得對女孩說過：「吾愛吾師，吾更愛真理！」我們坐在人潮絡繹不絕的夜市從電腦人工生命談到古希臘哲學，從古希臘三哲人蘇格拉底、柏拉圖、亞理斯多德的流派歧異點講到好萊塢電影網路上身的劇情，從網路上身女主角珊卓．布拉克演出的電影角色跳到媲美西班牙魔幻現實主義代表作百年孤寂的另一本好書精靈之屋，哩哩渣渣一整晚就是沒講她帶來的三本書的任何半點內容。</span></p><p><span>那晚約定，之後每個星期六晚上七點半，她來我家學電腦，學校教的如果不懂，我就再講一遍。現在我倆常提這事開玩笑，不是學生笨，就是老師差，到現在電腦沒半撇，卻成一對夫妻了！</span></p><p><span>如果當年我家沒在夜市賣皮鞋，如果當年她家沒在我家攤子前馬路中央賣水煮玉米，就不會有這段美好姻緣。感謝月老施媽，在我倆之間繫上一條鋼鐵姻緣線，就算後來阻饒重重，也化不開我和這位純潔女孩之間濃濃的感情。俗話說得好，夜市可以賺到人生致富的半桶金，今晚我補下半句，夜市也可以娶到一位美嬌娘，和擁有一個幸福的家庭生活。</span></p><h3 id='錦囊妙策三則'><strong><span>錦囊妙策三則</span></strong></h3><p><span>她父親知道我倆交往後，非常不贊同，理由二個。第一，擔心娟娟年紀小受騙被欺負，要談戀愛得等大學或研究所畢業，這時候尚早，不會有結果。再來是擔心我，五專讀七年好不容易畢業，雖然有份穩定的工作，薪水四萬五不錯，但這樣的學歷不夠用，日後有無發展，能否養家，會否失業，都無法保證。為了徹底斬斷我倆剛孵育出來的感情，甚至凌晨四點找我母親出來談，雙方家長同時曉以大義，要我知所進退，早日分手乾淨。</span></p><p><span>我對娟娟的愛有多深，只有她知！</span></p><p><span>為了化解她父親的重重阻擾，我拿出錦囊妙策三則。第一，用空間換取時間，表面上不再來往，各過各的生活，實際上化明為暗，轉成地下情，持續在一起。每晚要和她約定隔日約會地點和時間，總是請小了五屆的五專學弟幫忙，先打電話到她家，若是她父母親接起來，一概自稱學校同學，找娟娟討論功課，然後轉告她，在電話邊等，電話一掛斷半分鐘內我馬上打進來。</span></p><p><span>第二項妙策師法當時民進黨路數，地方包圍中央。我清楚知道，施家只有娟娟父親明確反對，如果我各個擊破，先將她弟妹一個一個拉攏過來，擔任內應，居間協助我暗地聯絡她們的大姐娟娟，並說服她們的母親認同我，有朝一日我倆一定可以正大光明走在萬華街頭接受街坊鄰居的祝福。</span></p><p><span>最後一項，山不轉路轉，路不轉人轉，既然認為五專學歷低，擔憂日後升遷和養家活口可能出問題，那我就來證明，憑我的電腦專業和程式設計能力，拿一個國立大學資工碩士學位絕非難題。原本打算退伍先工作數年再去讀碩班，後來提早實現，還得感謝她父親給了我一口真氣！</span></p><p><span>在地下情那七年裡，娟娟常反覆問：「我們在一起會有結果嗎？到現在我父親還反對，每天得躲躲藏藏在一起，只能約在離家很遠的地方見面，害怕路上碰到熟識我父母親的人，我們真的會像你說的一樣有好結局嗎？我快沒信心了，怎麼辦？」</span></p><p><span>我總一派樂觀眼神堅定回應：「寶貝，相信我，一切掌握中。所有狀況顯示愈來愈好，你的弟妹我們的朋友都在幫我們，你媽媽雖然不贊同，現在也不反對了。如果妳父親知道，我一邊讀博班，一邊在中國科大任教，擔任專任講師，應該不會像過去一樣￼擔憂了！繼續下去，我們要沉得住氣！」</span></p><p><span>事後證明，當初擬定的三項錦囊妙策都對！</span></p><h3 id='輔大校園'><strong><span>輔大校園</span></strong></h3><p><span>常有人問，你是不是輔大畢業的？我的回答總是一成不變微笑說：「不是，但我老婆娟娟是輔大畢業的。」</span></p><p><span>25歲那年，追求輔大法文系青春正盛的新鮮人娟娟，由於年假、補休假積太多，放也放不完，乾脆跟公司講好，每週五固定休年假，早上騎車載她去輔大，她上課時，我就待在理圖旁輔園餐廳看書，或是到處走走隨意閒逛校園。中午下課鐘響前，一定趕回外語學院小巴黎椅子前樹蔭下等她下課，每當看到她和同學一整群走下樓，我總興高采烈三步併二步快跑到她面前，道別所有同學，十指交扣牽著她去文學院的文園或文德餐廳飽餐一頓。</span></p><p><span>下午，他回去上課時，我改去文園餐廳等待，一邊思索放學後要獻給她讓她驚喜的情詩，一邊大口啃著文園麵包部剛出爐熱騰騰的大蒜麵包，大口喝著文園福利社整天供應不斷的冰涼綠豆湯。傍晚，我們去輔大旁邊514巷或對面的建國路吃晚餐，有時也去水龍頭餐館打打牙祭，邊吃邊談情說愛打情罵俏，和現在的年輕人沒兩樣，牽手親嘴摟抱樣樣來，才不管旁人如何看待。吃飽飯，我們散步回校園，或繞去校門旁的野聲樓看電影社正播放的歐陸藝術電影。</span></p><p><span>輔大校園有太多我倆的回憶、秘密與朋友，我們一起吃便宜又大支的霜淇淋，一起觀賞法文系學弟妹的年度戲劇公演，一起手牽手閒逛校園高談闊論，編織著只屬於年輕人才敢瘋狂裁剪的異端夢想。輔大，就好像是我的母校，可以如數家珍細說輔大校園的四季變化與歷年趣事，也可以跟著娟娟的同班同學一起大聲抱怨輔大差勁處，記憶最深刻的回憶之一是，輔大夏天的蚊子特別多，我常笑說，每位輔大同學背後平均可分到五隻蚊子緊跟隨，趕也趕不走，愈趕來愈多啊！</span></p><p><span>追求娟娟的頭一年，寫了近百首情詩，其中一首「幸福」如下：</span></p><pre class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.428571701049805px; left: 42.000003814697266px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 38px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -38.000003814697266px; width: 38px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -38.000003814697266px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 29px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">一天二十四小時</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -38.000003814697266px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">我在等待最後的　幸福</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -38.000003814697266px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">是妳那　甜蜜的　盈盈的　秋波</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -38.000003814697266px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">溫柔地對我展露無限幸福</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -38.000003814697266px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">喔　言語是一種多麼拙劣的東西</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -38.000003814697266px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">只要它一出現</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -38.000003814697266px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">美麗的　蝴蝶就翩翩飛逝</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -38.000003814697266px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">可是你的秋波卻是汪洋無際</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -38.000003814697266px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">他會使我的心胸</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -38.000003814697266px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 29px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">擴展到無邊無際</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -38.000003814697266px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 29px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">就像那滿佈幸福星辰的天地</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 251px;"></div><div class="CodeMirror-gutters" style="height: 251px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 37px;"></div></div></div></div></pre><p><span>這些年，只要從萬華騎車去長庚大學，都會經過輔大，我總忍不住在停紅燈時轉頭多望校門口幾眼，有一股衝動想掉頭一轉把摩托車騎進大門旁新蓋的立體停車場，然後去小巴黎尋找當年娟娟留下的美麗倩影，或是站在走廊邊偷望她上課時托腮認真聽講模樣。勿笑我到現在還沒做，也不要認為不可能，也許有一天，我將悠閒坐在小巴黎樹下，等著娟娟牽著兒子小福的手，從中美堂漫步過來和我會合，然後輕聲細語說：「走吧，我們帶小福去吃家園好嗎？小福餓壞囉！」</span></p><h3 id='定情物'><strong><span>定情物</span></strong></h3><p><span>雙方第一次見面，是隔壁水煮玉米攤阿姨（未來岳母）找我教她女兒電腦，我們約好在廣州街夜市他家攤子後面的人行道碰面，她帶來厚厚三本電腦書，但整晚在吵雜夜市裡我們聊了希臘三傑對於西方哲學的影響，聊珊卓．布拉克主演的電影「網路上身」背後的隱喻，聊拉美文學「精靈之屋」與馬奎斯的「百年孤寂」兩者的風格差異，就是沒聊當次見面的主題「電腦」。</span></p><p><span>那天後，我們約定每週日晚間七點在我家二樓書房教電腦。每次星期日晚上吃飽飯，我就像隻耐不住性子的小浣熊，走過來走過去，頻頻回首看牆上的時鐘，豎起耳朵聆聽屋外叫門聲。我倆總在短短二小時裡分享彼此最近看過的好書。記得有一次，我急著跟他說「蘇菲的世界」與「達爾文大震撼」這些書籍的內容精彩處與讀後心得，他則興高采烈對我說「停車暫借問」如何好看，下次想帶來借我閱讀，再一起討論。每一次，我們都沒聊當次見面的主題「電腦」。</span></p><p><span>半年後，也就是隔年四月，去西門町獅子林百貨公司樓上看了一場電影，我們正式手牽手成為情侶。公開交往時期，我們常跑中國各大城市。每到一個城市，我們就撥空一整天悠哉閒逛當地最大的新華書局，搜刮還沒有看過的科幻小說，她則逐一翻閱世界名著，例如「巴黎聖母院」與「高老頭」，看到不錯的譯本再買回家慢慢閱讀。記得某一年我倆在廣州買太多書裝不下行李箱拖回台灣，就請在大陸工作的弟弟阿峰幫忙分批寄回台灣老家。婚前那幾年她買的簡體書在婚後也跟著她一起住進我們家，和我的書籍整合後排在一起，非常壯觀。</span></p><p><span>現在，福家許多書是娟娟的，是我年輕時送給娟娟的，是娟娟婚後從娘家帶來的嫁妝之一，現在和其它簡體書一同放在福家書櫃，非常好看，值得推薦！</span></p><h3 id='不想讓你等了'><strong><span>不想讓你等了</span></strong></h3><p><span>年輕時和吾愛娟娟交往，每次她邀我一起做某事或去某地玩時，我常一臉抱歉樣說：「寶貝，可不可以不要這個時候，我目前忙得焦頭爛額，等告一段落，就有時間陪你了，再等一段時間好不好？」</span></p><p><span>這個爛到底的理由從年輕講到中年，從開始交往到之前，從碩博士研究生時期一路到正教授升等前，多少時光歲月蹉跎在個人的短視近利與學術功名利祿方面，無助於兩人的情感與一家三口的幸福生活，讓吾愛娟娟一路等等等。</span></p><p><span>我覺悟了，不再說這個爛理由，也不願你始終陪伴在我身旁無怨無悔等下去，從玲瓏有致的身材等成瘦巴巴令人疼惜的模樣，從俏佳人等成美魔女，從天真無瑕強說愁的瑪法達等成廚藝佳有愛心負責任的模範媽咪。</span></p><p><span>現在，我要把握剩餘人生，和妳及我倆愛的結晶，小福，廝守在一起，日復一日，度過每一個平淡無奇卻幸福無比的早晨與黃昏，細心品嚐妳用心烹煮的每一道菜、每一鍋飯、每一條麵包、每一粒饅頭，一家三口輕鬆圍坐餐桌，話家常品生活，舒服躺在床上，側頭細察家人容貌變化，然後安穩入睡！</span></p><p><span>我愛妳，而且只剩數十年可以愛妳了，我不想再浪費可以愛妳的任何一絲光陰了，我愛妳，從妳18歲起到未來每一天，永永遠遠！</span></p><h3 id='真少女'><strong><span>真少女</span></strong></h3><p><span>想像一下，時間如果倒著流轉會是怎樣的光景？首先，我躺在某家醫院病床上復活出生，好不容易撐開沈重的眼皮，映入眼瞼的第一人是未來越變越年輕可愛俏麗的老伴阿娟，一個就算第一次見面年齡已過七十的小老太婆，外表看起來還是跟四十出頭的美魔女沒什麼兩樣。</span></p><p><span>稍微偏一下頭，看到的第二人是一位中年帥哥，他一手緊握我的手，另一手扶著我的老伴阿娟，神情激動地說，阿爸，你終於出生醒過來了，我和媽等你好久了。原來，這帥哥是我兒小福，一個未來將成為我和老伴阿娟前半輩子生活重心的臭小夥子。十五年前，五十五歲的他被通知來這家醫院迎接她母親，今日，又扶著他媽阿娟再來同樣的一家醫院迎接我回家。根據年紀推算，我們父子倆還可以在同一屋簷下生活四十年，直到他變成小嬰孩爬進阿娟的子宮消逝為止。</span></p><h3 id='結婚十週年'><strong><span>結婚十週年</span></strong></h3><p><span>維持一個乾淨的家庭，教養一位可愛的小孩，料理家人愛吃的餐點，改善居家生活的環境，確實是一件辛苦但做了絕對有回饋的工作。</span></p><p><span>感謝吾愛無敵寶娟承擔了大部分的家庭日常勞動。每日起床後，洗收晾折衣服，烹煮三餐飯菜湯，手作健康美味的麵包、饅頭、餅乾、甜湯、點心，收拾廚房餐廳，全由她一人包辦，就算頭痛、胃痛、生理痛，還是得忍痛照三餐排時間帶小福玩遊戲，學認知，懂禮節，做運動，說故事，並按表操課帶小福去醫院療育或上課。</span></p><p><span>如果比喻其他的小孩為汽車，自來自往，吾兒小福則是一台起步慢的火車，我與娟娟兩人願意一輩子攜手合作心無旁騖埋首擔任二條永遠平行往前延伸的鋼軌，讓小福快樂有序上路，有朝一日開往自己創造的未來！</span></p><h3 id='俏魔女'><strong><span>俏魔女</span></strong></h3><p><span>認識阿娟的人有否發現，她愈來愈年輕，愈來愈俏麗了？隨著小福一日一日緩慢成長與學習，我的研究一年一年固定執行與發表，才驚覺阿娟不動聲色、無時無刻靜靜地變年輕，變得愈來愈可愛了。</span></p><p><span>奇怪的地方就在這，阿娟從早忙到晚一刻不得閒，所有家事與管教，包括教導小福學校功課與社會互動規矩、根據醫院治療師指示訓練小福、洗晾衣、煮飯菜、手作小福愛吃的麵包、蛋糕、布丁、奶酪等愛心營養點心等，全部一手包，每晚睡覺前把家裡打點得乾乾淨淨、整整齊齊，沒半點時間和朋友風花雪月、聊天打屁、喝茶吃飯串門子了，更甭說每週還得忙裡抽空不時複習對福家長年日本自助旅遊非常重要的日語會話了。</span></p><p><span>照理說，每天忙得像陀螺一直轉啊轉騰不出空保養的阿娟理應老得累得像阿婆似的有深度，可是，恰巧相反，她逆齡成長，不僅外表沒老，愈來愈亮麗，而且頭腦還愈來愈有料，思考愈來愈成熟了。當然，這不全然是我的功勞啦！雖然，我努力賺錢，給他們母子倆一個避風遮雨安居舒適的生活空間，可是，這只是極小影響因素之一。也許有人猜，是不是阿源嘴巴甜，每天讓他心情漾，笑呵呵，才會相由心生，就算再怎麼辛苦做家事，訓練小福，也會逆齡生長，愈來愈可愛呢？我只能雙手一攤，表情無奈地回答，你問我，我問誰！？</span></p><p><span>阿娟的可愛與俏麗隨著時光流逝與日俱增，最大受益者除了阿娟應該是她的老公我吧！我不能得了便宜還賣乖，把到手的水姑娘阿娟與功勞往外推，只能順水推舟，全部乖乖承認，擁入懷中囉。</span></p><p><span>我愛阿娟，無論何時的阿娟都是當時阿源的最愛，從過去到未來，永遠成立！</span></p><h3 id='時時勤拂拭勿使惹塵埃'><strong><span>時時勤拂拭，勿使惹塵埃</span></strong></h3><p><span>喜歡一個人不難，困難之處在於兩人共組家庭後，如何維護這份得來不易的感情。婚前是戀人時，你說了多少肉麻話語？做了多少感動體貼的甜蜜事？結婚當日，你在雙方親友面前，牽起她的手，承諾守護她一輩子，約定和她白頭偕老，永遠相愛。種種承諾，竟隨著時間的推演、孩子的出生、工作的疲憊、上司的責難、部屬的懶散、經濟的負荷等種種大小問題，消逝得無影無蹤。</span></p><p><span>那個當初她摯愛的男孩跑去那了？那個當初動不動擁她入懷，逗她開心的男孩身影為什麼愈來愈模糊了？那個當初捧她上天，為她摘月，大獻殷勤的男孩為什麼婚後沒多久嘴裡吐出來的開頭詞總是：再等我一下、我也不想這樣、我在忙，有事以後再說、很煩ㄟ。哎，到頭來才明白，原來嫁的並非眼前這位男士，而是嫁給了一場夢。</span></p><p><span>不要忘記，她是你最愛的人之一，不然不會和她共結連理，生活一世。但是，你有多久沒輕輕托起她的臉，深情凝視十分鐘了呢？談戀愛，不是婚前年輕男女朋友的權利，而是婚前婚後一輩子的生活調情劑。那怕再忙，那怕再老，那怕變禿，那怕變胖，都要像個初交往容易衝動的小伙子，靠近她，凝視她，擁緊她，然後深深吻下去，直到天荒地老，然後硬生生被湊趣的兒子打斷！</span></p><p><span>我愛娟娟，三不五時凝視她，欣賞她的美，咀嚼我們的愛情！</span></p><h3 id='像盛開櫻花時時綻放光芒'><strong><span>像盛開櫻花，時時綻放光芒</span></strong></h3><p><span>當愛情昇華成親情，當過往濃密情感只待成追憶時，婚姻就可能走鐘或變質了。維持夫妻感情不被柴油鹽米醬醋茶等瑣事淹沒的好方法之一，就是保持衝動與隨時激情，不斷用熱情的身體和行動來重溫年輕氣盛時的甜蜜生活。</span></p><p><span>討小可愛阿娟歡心的方式有1000種，最厲害的招數莫過於帶她去滿園盛開的櫻花林下野餐，過往九年日本從南到北的追櫻行動已成功了九次，讓我年復一年從年頭幸福到年尾，去年疫情緣故被迫中斷，今年勢必得在台灣複製一次成功經驗，讓我倆愛情持續加溫。</span></p><p><span>早在去年十月初中秋連假從澎湖旅遊回來後，就著手策劃這趟228連假賞櫻行。皇天不負苦心人，無論是雲品溫泉酒店的套房住宿，還是三天行程的規劃安排，以及九族文化村的花開狀況，都讓小可愛讚不絕口，愛意橫生，讓我有飄飄然神仙英雄之概！</span></p><p><span>如果你問我，為什麼我的精力充沛，能夠在學術研究之餘，不斷用思考與行動帶給另一半愛的驚喜？我只能雙手一攤，用天機不可洩的神秘口吻告訴你，阿娟是我的真命天女，我的生命中不能沒有她，只要能夠讓她開心，看她開心，要我拼命都可以！</span></p><h3 id='我的瑪法達'><strong><span>我的瑪法達</span></strong></h3><p><span>多年前認識娟娟時，她18歲，長髮，綁著一串馬尾巴，穿著一件又短又可愛的Ｔ、一條直筒拖地牛仔褲及一雙硬殼大頭鞋，立志要當一個頭腦會發光的知識份子，超像漫畫「娃娃看天下」的主角瑪法達，也就是這付天真無邪、可愛志氣高的俏模樣讓我不自覺愛上她，想好好保護她，給她溫暖，給她我全部的愛。</span></p><p><span>多年後，雖然可愛的娟娟已經剪成短髮，不再綁著一串馬尾巴，不再穿著又短又可愛的Ｔ，不再拖著一條直筒牛仔褲，只有在下雨天才會穿起硬殼大頭鞋，也很少想起頭腦會發光的知識份子這件往事，然而，她仍然保有一顆赤子之心，仍然以誠相待週遭朋友，仍然支持女權運動、贊成兩性平等、反對不公不義之事，仍然跟多年前一樣，凡事盡心盡力，認真到底，也就是這付一路走來始終如一的可愛俏模樣讓我的愛繼續深陷其中，無怨無悔快樂付出。</span></p><h2 id='平安福'><strong><span>平安福</span></strong></h2><h3 id='無價長生寶'><strong><span>無價長生寶</span></strong></h3><p><span>小福從出生到現在三歲有餘，在台大兒童醫院的病歷資料隨著年紀增長也累積十公分厚，無論多努力就醫，就是查不出小福發育延緩、體重過輕、個子嬌小等諸多症狀的背後原因。</span></p><p><span>然而，禍兮，福之所倚；福兮，禍之所伏，白話就是塞翁失馬，焉知非福。根據小福已做的各項醫學檢測與目前的發育情況，高度懷疑小福擁有兩千多年前第一個統一中國的秦始皇朝思暮想夢寐以求的長生不老體質。一般人就算長壽，活個七八十歲，甚至九十來歲就已經偷笑了，更不用說百歲人瑞幾乎是每一個社會的寶了，但是，根據去年照的Ｘ光片來看，小福的骨齡只有一歲多，骨化情況特別緩慢，換句話說，一般小嬰孩從一歲開始骨頭開始分化老化，愈來愈像大人樣，小福卻有如神助，出生前三個月在娟娟母體中不知從何得到一股能有效延緩生長及抑制老化速率的神奇配方，以一種雖非常規卻有自己一套的生長速率緩慢發育與成長，如果按照這種成長速度來合理推斷，小福可能就是台灣民俗傳說中的彭祖再世，活個三四百歲絕對沒問題。到時候就算人世已非，我們及多代子孫都入土為安時，小福仍然強健地活在世上，笑看人生百態！</span></p><p><span>既然小福是寶，我們夫妻倆更要愛護照顧這個無價之寶，讓這個長生寶健健康康平平安安成長，見證未來台灣數百年的變遷與發展！</span></p><h3 id='小福仙'><strong><span>小福仙</span></strong></h3><p><span>四年多前，小福奉命下凡來度化父母親，為了讓父母親潛心修行，遂於福家四周結一個仙界，將界裡界外強力分隔開來，形成仙界修煉一年凡間已熬三年的時空特異現象。</span></p><p><span>感謝小福仙提供一個修羅道場時時刻刻試煉我們夫妻的身心，也不斷在修行過程用燦爛的微笑頑皮的動作向我們展示正果後的美好正道就在身邊，隨手可得，讓我們時時頓悟成為仙父仙母是如此幸福與美好，甘願拋棄許多凡世的虛榮與財物，只為了求他回眸璀璨一笑！</span></p><h3 id='抓周'><strong><span>抓周</span></strong></h3><p><span>2月16日小福滿周歲。為了讓小福的外公外婆福阿姨舅舅擁有歡度小福生日的感覺，我們決定周歲當晚舉行抓周大典。傍晚七點，福媽忙著準備我們兩人的晚餐及小福稍後吃的副食品，我負責布置抓周會場。我們在一樓小客房雙人床上放滿東西，有算盤、手電筒、原子筆、布書、收音機、鏡子、iPad、手機、布球、塑膠球、裝在透明塑膠袋中的生玉米、電池、玩具鋼琴、玩具貓等奇奇怪怪的東西。小福的阿姨們七嘴八舌問我：「如果拿手電筒表示什麼？」我不加思索回答：「應該是消防員吧！也許是專門抓姦的私人偵探。」舅舅跟著問：「如果是玉米呢？」我快人快語回應：「接下小福阿公的施爸香烤玉米攤，長大後在萬華夜市烤玉米！」</span></p><p><span>緊張時刻來臨了，當我把小福放到床上坐在那一堆東西面前時，小福看傻了，東看看西看看，至少看了五分鐘，不知道該怎麼辦。過了好久，小福決定出手拿球，我們幾個大人內心暗自叫好，以後不是王建民就是林書豪的翻版，肯定又是一位「台灣之光」囉，可惜，球是圓的，手是方的，當小福的胖手碰到球，球就滾開了，絲毫不給小福半點機會。小福自討沒趣後，轉頭看到正在播卡通片聲光效果十足的iPad，決定下半輩子跟福爸一樣從事程式設計，或是當個懶蟲一輩子透過iPad與兩根手指頭滑過餘生，於是往前一趴，雙手伸得直直的抓住iPad抱得緊緊的。小福的阿姨舅舅們覺得我作弊，怎麼可以利用卡通片的聲光效果來迷惑小福呢？所以決定剛剛抓的iPad不算，且關掉iPad的螢幕重來。面對強大的輿論壓力，只好順從。</span></p><p><span>小福重新面對一大堆東西及一台關掉螢幕的廢鐵iPad，這次，小福豁然開朗了，他真的知道他要什麼，我們只見他往前一撲，抓住施小妹帶來的生玉米，正當我們高興小福要繼承外公的烤玉米攤時，出人意表的事情又發生了，小福甩掉塑膠袋中的生玉米，緊緊抓著空塑膠袋一直揮一直揮，堅定地告訴我們，抓周結果揭曉了，他決定抓「塑膠袋」了。</span></p><p><span>一群大人開始陷入長考，討論抓塑膠袋表示什麼？有人說，小福決定長大後跟外婆去做慈濟，從事環保事業，也有人認為，小福就跟大愛電視台的連續劇主角塑膠林一樣，以後在市場賣塑膠日常用品，更有人大膽預測，小福長大後將會創造一個比台塑集團還大的塑膠王國。我與福媽則覺得抓周真有趣，等小福長大後，又多一個笑話可以告訴他囉。</span></p><p><span>抓周後，小福多了一個外號「塑膠福」，希望他像塑膠袋一樣的長命百歲，也像塑膠袋一樣的萬用，長大後可以承載所有認識他的人的心事。</span></p><h3 id='龍山澡堂'><strong><span>龍山澡堂</span></strong></h3><p><span>小學四年級前，家住龍山寺側門對面佛具街上的大樓，往桂林路方向走十幾公尺有一間大眾浴池，爸爸常帶我一起去那裡的男湯泡澡。當時年紀小，目不轉睛盯著周遭叔伯大哥哥們脫光衣服沖洗身體，然後頭頂毛巾慢慢下池泡澡，覺得非常有趣，直至今日印象深刻！</span></p><p><span>今日，我們一家人要去日本最古老距今有3000年歷史，同時是日本皇室與許多知名文人雅士經常光顧的道後溫泉本館泡湯。過去幾次留宿溫泉鄉，都由娟娟帶小福一起泡女湯，這次不同，娟娟、岳母施媽及外甥女品瑄三位女生去泡女湯，消除過往五天旅途累積的疲勞，我們父子倆手牽手一起下樓泡男湯，來場 men&#39;s talk。</span></p><p><span>泡完溫泉，一家人著浴衣悠閒坐在溫泉館二樓休息，享用館方提供的綠茶及煎餅，閒話家常。休息夠了，我們選在道後商店街「魚武」餐廳用餐，這家餐廳不僅裏外環境乾淨舒爽，而且食物色香味俱全，吃得好開心！逛完商店街，一行人繼續本日第二個行程，搭乘伊予私鐵到古泉站旁邊四國最大的購物中心血拼採買。</span></p><p><span>下回來松山，會再訪道後溫泉館，舒服泡湯一整日！</span></p><h3 id='上學了'><strong><span>上學了</span></strong></h3><p><span>上週五是小福人生第一個開學日，除了一位小朋友有事無法到校（由媽媽代出席），其餘小朋友和家庭成員（爸比媽咪阿嬤哥哥姐姐）統統到齊，擠在龍山國小附幼角落一間教室裡相見歡，乖乖比鄰而坐聽兩位老師宣布重要事項。</span></p><p><span>今天星期一，是小福正式上學日，中午去接小福回家時，兩位老師都誇小福乖，不哭鬧，完全配合老師指示，甚至課間休息時間小福一看到教學助理員拿乾淨尿布來檢查有否噓噓時就馬上找空地墊乖乖躺好，笑咪咪舉腿等老師來檢查。和老師私下討論後，發現小福不僅是一個愛笑、愛跟人打招呼的小嬰孩，也是一個喜愛上學、容易討老師歡心的可人兒。</span></p><p><span>許多小朋友第一次去幼稚園上課都會哭（一陣子），這不奇怪，奇異之處是小福今天去上學時沒哭，反到是我回家後一個人躲在二樓書房裡電腦桌前偷偷小哭一番，現在回想真是有趣好笑！我們初步計畫是小福這學期先讀半天班，中午回家洗澡、吃飯、玩耍、睡午覺和吃點心與水果，等到全家調整好作息，小福走路較穩當後，下學期再改成全天班，屆時我會不會哭成一個淚人兒，誰也不知！</span></p><h2 id='貴人'><strong><span>貴人</span></strong></h2><h3 id='奶姆高周金貴女士'><strong><span>奶姆高周金貴女士</span></strong></h3><p><span>從小，我們兄弟倆跟別家小孩不同，別人只有照顧一到二年的保姆，我們有一位從小帶大陪伴我們成長的慈祥奶姆。奶姆超級疼愛我們，只要我們愛吃的食物，例如其中一面煎得酥酥脆脆另一面軟綿滑溜的菜頭粿、超多超厚超大朵吸飽雞油的香菇雞湯，以及兩面都煎得金黃酥脆整條完整如初不破碎的大黃魚，一定像變魔術般出現在午晚餐桌上，然後氣定神閒心滿意足坐著看我們大快朵頤，爭吵吃每一樣菜。</span></p><p><span>小學畢業前，週末在奶姆家過夜，都是她幫我洗澡。我記得，奶姆先在瓦斯爐燒好一大壺熱水，再混合事先備好的一桶冷水一同倒入大澡盆中，然後在灶腳旁幫我從頭到腳抹好肥皂並用溫水沖洗乾淨，再叫我坐進大澡盆中浸泡，現在回想起來還有熱呼呼好舒服的感覺！</span></p><p><span>奶姆像親媽媽，是第二個媽，所以我們叫他兒子一聲「哥哥」，長大後才知道哥哥這稱呼表示我們三人親如手足。不過，哥哥年紀比我們兄弟倆大很多，我五歲時，哥哥已經服完兵役了，每天下午，弟弟黃國峰總吵著哥哥帶我們外出在奶姆住家附近閒逛，從現在早已改建多時的復興戲院逛到東園國小萬大路附近，沿路買沿路吃，三兄弟好不快樂！</span></p><p><span>父親過世時，我只有小學四年級，不懂難過，沒流一滴淚，可是奶姆過世時我已五專畢業。出殯當天，我哭得好傷心好難過好悲痛，像一個決堤淚人兒，哭得沒完沒了。奶姆，我跟弟弟阿峰都好想您！好想再吃妳煮的食物，好想再被你細細疼愛，就像剛出世的小貝比一樣被你呵護在懷中！我愛你，永永遠遠懷念您！</span></p><h3 id='小學三年級導師蔡幸美老師'><strong><span>小學三年級導師蔡幸美老師</span></strong></h3><p><span>小學二升三年級，學校重新編班，我被編入三年八班，導師是蔡幸美老師。她對我很好，全班只有我一個人每天接受他的免費課後指導，今日說出來沒人會相信。</span></p><p><span>每天放學前，她把家裡鑰匙交給我，先去她家寫作業及當天早上出門前他事先放在客廳書桌上的數張考卷。等到她忙完班務回家，家事還沒碰，就先檢查我的功課完成否，並訂正我剛寫完的考卷，如果寫錯，就一題一題講解演練，除非我點頭說「了解」，不然就換一種方式說明。通常，訂正完作業與考卷，都近六點半了。除了寒暑假及週六日不需要去她家，這樣的日子過了整整一年。</span></p><p><span>升上四年級，導師換成姚嘉奉老師，但是我和母親仍然和蔡幸美老師及其家人互動頻繁，熟若家人。今日，若我的表現有一絲絲值得驕傲之處，其中一位必須深深鞠躬，磕頭感謝的人就是小學三年級蔡幸美導師。</span></p><p><span>謝謝您，有您，才有喜愛閱讀的黃崇源，希望我的表現值得您驕傲！</span></p><h3 id='工具人'><strong><span>工具人</span></strong></h3><p><span>五專前三年（民國74~77年），我單戀同班同學潘啟詅。開學新生訓練第一天，導師安排座位，她坐我旁邊，我第四排第二位，她第三排第二位，從那天她不經意轉頭對我璀璨一笑起，我不自禁喜歡上了她，朝思暮想，期盼有天能像倪匡筆下衛斯理與白素一樣，比翼雙飛，令人稱羨。她長得高、聲音嗲、皮白膚嫩、標緻漂亮，身旁不乏殷勤的追求者。每當漫步在校園，身後總跟著校內許多男生渴慕的眼神，我是其中一位。</span></p><p><span>當時有自知之明，單憑口才與外貌，想要博取她的注意，進而獲得她的青睞，比登天還難，所以改採迂迴戰術，匍匐前進，利用電腦專業和程式設計專長爭取和她共處聊天的機會。只要任何電腦專業科目需要繳交期末程式作業，就是我英雄救美、大展身手的好時機。</span></p><p><span>那三年，每學期期末程式作業我都主動積極爭取和她同組，組隊後由我一人獨自撰寫所有程式和報告。無論寫得多努力、使用者介面多吸睛，繳交的程式作業得到多高的分數，就是無法換取她的青睞，甚至一絲憐憫也落不到我身上，真是大好人一個！直到專四，在鼎眾電腦公司邂逅此生無緣的初戀情人小學同學陳雅雯後，才徹底擺脫這場單戀噩夢。</span></p><h3 id='52封寄不出的信'><strong><span>52封寄不出的信</span></strong></h3><p><span>初戀情人陳雅雯是我心中永遠的女神！</span></p><p><span>小學畢業再次看到她，已18歲，在鼎眾電腦有限公司擔任軟體開發部主任。那晚，她走進門市報名最近一期的電腦基礎課程，報名完成，我在門口攔下她，問認不認得我，她張大眼驚訝說：「我不知道你是誰ㄟ？」我尷尬不好意思說：「小學三年級運動會入場跳小白兔愛跳舞，我八班，你九班，我們被安排兩個人手牽手一起跳的啊！你有印象嗎？」想了好久，她才瞇著眼狐疑回答：「好像有！？」</span></p><p><span>那天起，我開始熱烈追求她，就像一杯法式拿鐵中的牛奶和咖啡，繞著圓心逐漸調和成一體，濃密無懈可擊。</span></p><p><span>五專讀七年畢業後，我在澎湖服役，11月13日晚間，收假回到營區，就接到小學二年級導師張月娥老師（也是陳雅雯一家的鋼琴老師）的信，告知雅雯已於11月12日星期四凌晨誤食藥品離世，追思禮拜將於隔週週末11月20日假第二殯儀館懷恩廳舉行。信裡，他叮囑我不要難過，真誠祝禱雅雯安息在主耶穌的懷裡。</span></p><p><span>那晚收到信，我在營區辦公室哭得像淚人兒，不願相信老師的話是事實。我大哭大叫大鬧，想把信撕碎，當作從來沒有收到這封信，也恨不得馬上收拾行李，趕赴馬公機場最後一班飛機直奔台北西園路陳雅雯的房間，確認這是一場惡作劇。然而，整個晚上躲在一旁的理智也趁機輕聲細語說，張月娥老師絕對不會把她摯愛學生的死當玩笑來惡作劇，這事千真萬確，無論現在怎麼做，都挽回不了發生的憾事了！</span></p><p><span>告別式後，我欺騙自己，陳雅雯沒死，活得好好的，只是不告而別，一個人離家獨自遠行了，無論在那，我都和過去一樣每週寫一次信，有時對她傾訴我的濃濃思念與情意，盼她早日回國與我再聚；有時描述軍中的生活狀況，以及未來倆人的生涯規劃。就這樣，一寫寫了一年，整整52封寄不出的信，至今還整整齊齊疊放在抽屜中，等無緣的愛人陳雅雯歸來拆信閱讀！</span></p><h3 id='超級麻吉吳承育'><strong><span>超級麻吉吳承育</span></strong></h3><p><span>五專五年級結束，眼睜睜看著同學順順利利高高興興領取畢業證書合拍團體照，只有我一個人欠70學分，無法畢業。除了資訊專業科目以極高分過關，其餘科目，包括國文、英文、微積分、三民主義、憲法、體育及打字等課程，通通被當，連憲法老師都開玩笑說我一定是長大後才從對岸過來的「黃匪崇源」，否則像中華民國憲法這麼容易過關的科目怎麼還會被死當？</span></p><p><span>延修時，由於每學期選修二十多個學分，必須每天搭公車去學校上課，就是在1路公車上結識了延修班級同樣也住萬華的學弟吳承育，並且和他成為麻吉。我常跟老婆娟娟說，如果我和吳承育都不是異性戀的話，也許會情不自禁愛上他，甚至做出令人驚訝且瘋狂的舉動。老婆娟娟常吃乾醋，看著我或吳承育大膽地在對方的胸膛上磨蹭，相互依偎在一起。</span></p><h3 id='好友就數陳兆芳最寶最古怪了'><strong><span>好友就數「陳兆芳」最寶最古怪了</span></strong></h3><p><span>民國87年母親節前夕，我考上交大資科所，九月初，剛踏進七舍315室，就發現一個人大熱天蓋著一條厚厚棉被躺在下舖睡覺，而且臉頰還熱呼呼、紅通通的，好像中暑。細問下，才知道這是他的習慣，無論天多熱多冷，他都蓋著一條既大又厚中的棉被才覺得溫暖，才能安然入睡。不過，他的臉頰可不是只有蓋厚棉被才紅通通的，根據我貼身觀察了兩年，發現從出生後，他的臉頰就像抹了腮紅，泛紅一片，就算現在已經當爸爸有了小陳兆芳，他的臉頰還是一如往常，像他兒子的皮膚，吹彈可破，熱呼呼、紅通通的。</span></p><p><span>當我們的友情愈來愈好，每天同進同出宿舍，我開始叫他小鳥，他喚我小雞，他最愛開玩笑：「我是一個見過大場面的人。」我回他：「每一個人都看過大腸麵，也吃過大腸麵，你只有看過大腸麵，這算什麼！」多年後回憶起和他一起生活的兩年同窗生涯，還是津津有味，幕幕鮮明。</span></p><h3 id='練家子'><strong><span>練家子</span></strong></h3><p><span>剛和娟娟戀在一起，就聽說施爸是練家子，拳腳功夫了得，卻始終沒機會一窺究竟。2007年11月和娟娟帶施爸媽出國去香港西貢大啖海鮮坐舢舨船出遊時，趁休憩空檔在堤防邊探詢施爸功夫一事，只見他不說一句話，背包外套也不脫掉，就當場紮紮實實、虎虎生風完整演練一套拳術，讓旁觀者只有嘖嘖稱奇，拍手叫好之份！</span></p><p><span>隔幾天，我們原班底四人北上廣州逛完越秀公園正準備找地方解決午餐時，剛好發現路上一家餐館的招牌人物是李小龍，正是施爸鍾愛的電影武打明星之一！為了向他致敬，施爸不管路上有多少行人側目，直接在照相機前面擺出起手式，讓娟娟拍個過癮。</span></p><p><span>最近小福正在學走路，跌跌撞撞，每次施爸來探望小福時，都會喜孜孜摸著金孫小福的手，邊笑邊說，等你再長大一點走路走穩後，阿公就教你打拳，保證你的身子骨變硬，將來長得又高又壯，和外公一樣！我與娟娟真的很希望小福不僅能從施爸身上學些拳腳功夫，也能像他一樣精壯！</span></p><h3 id='親愛的大姨'><strong><span>親愛的大姨</span></strong></h3><p><span>20年前，我和阿娟像羅密歐與茱麗葉，只能偷偷交往，無法公開戀情，必須隱瞞雙方父母親時，阿娟就先帶我下高雄鳳山，讓聰明有大智慧的您鑒定我的人品。</span></p><p><span>那次起，在我心底，您不僅是一位和藹可親的長者，阿娟的大姨，也像是我的親大姨，更像是小時候照顧我和弟弟阿峰無微不至，有如母親的奶母高周金貴女士。</span></p><p><span>20年來，每回離開您家，我就像個孩子似的，總要和您緊緊擁抱在一起，依依不捨道別離，期待下回來高雄時，能跟您相處久一點，和您話家常，聽您細說我們這一輩孩子的故事，又或者大口大口吃您煮的家常美味好菜，看您心滿意足笑開懷。</span></p><p><span>您已在我和阿娟的心底面留下永難磨滅愛的痕跡，我們會不時提起和您在一起發生的種種有趣事件，也會不時想起你說的話語，以及每一次聚會時，您展現在我們面前的和藹笑容。</span></p><p><span>我們愛您！我們會永遠永遠想念您！有一天，我和阿娟會手牽手去您現在去的地方找您，再一次和您團圓聚在一起，擁抱在一起，不再分離！</span></p><p><span>就像思念我母親一樣開始思念您的阿源</span></p></div></div>
-</body>
-</html>
+<body>
+    <!-- ===================================
+         語言切換控制按鈕
+         功能：觸發中英文內容的切換顯示
+         位置：固定在右上角，所有頁面狀態下都可見
+    =================================== -->
+    <button class="language-toggle" onclick="toggleLanguage()">English</button>
+
+    <!-- ===================================
+         中文內容區塊
+         預設狀態：顯示（具有 active 類別）
+         結構：頁首 → 導覽 → 主要內容
+    =================================== -->
+    <div id="zh-content" class="lang-content active">
+        <!-- 頁首區域：包含個人照片、姓名、職稱 -->
+        <header>
+            <div class="container">
+                <div class="header-content" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 1rem;">
+                    <!-- 教授個人照片 -->
+                    <img src="https://canslab1.github.io/IMG-2.jpg" alt="Chung-Yuan Huang" class="profile-photo">
+                    <div class="header-text">
+                        <h1>長庚大學 黃崇源 教授</h1>
+                        <div class="subheadline">複雜適應性網絡與系統實驗室 主持人</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- 導覽列區域：混合內部頁面切換與外部連結 -->
+        <nav>
+            <div class="container">
+                <!-- 行動裝置導覽切換按鈕 -->
+                <button class="nav-toggle" onclick="toggleNav()">☰ 導覽</button>
+                <div class="nav-container">
+                    <!-- 
+                        導覽項目說明：
+                        - 第一個為內部頁面切換按鈕（onclick 事件）
+                        - 其餘為外部連結（href 屬性，新視窗開啟）
+                        - target="_blank" 確保外部連結在新視窗開啟
+                        - rel="noopener noreferrer" 提升安全性
+                    -->
+                    <button class="nav-item active" onclick="showSection('overview', event)">介紹</button>
+                    <a class="nav-item" href="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">著作</a>
+                    <a class="nav-item" href="https://arspb.nstc.gov.tw/NSCWebFront/modules/talentSearch/talentSearch.do?action=initRsm17new&rsNo=2a2ef24adef742f58349c3c533bb7402&LANG=chi" target="_blank" rel="noopener noreferrer">計畫</a>
+                    <a class="nav-item" href="https://canslab1.github.io/CYHuang.pdf" target="_blank" rel="noopener noreferrer">履歷</a>
+                    <a class="nav-item" href="https://sites.google.com/view/gscott-huang" target="_blank" rel="noopener noreferrer">維基</a>
+                    <a class="nav-item" href="https://www.facebook.com/gscott.huang/" target="_blank" rel="noopener noreferrer">臉書</a>
+                    <a class="nav-item" href="https://canslab1.github.io/" target="_blank" rel="noopener noreferrer">故事</a>
+                    <a class="nav-item" href="https://www.dropbox.com/scl/fo/ejwke56gkn1erv7meid4k/AHCPQXAw_RpiEn_PeiBfCuI?rlkey=b8k879fufdh98x2s3fzkatk5y&e=1&utm_campaign=photo&utm_medium=photo&utm_source=dropbox&dl=0" target="_blank" rel="noopener noreferrer">相簿</a>
+                    <a class="nav-item" href="https://www.google.com/search?q=%22Huang+Chung-yuan%22+%22Taipei+Times%22+%22Chang+Gung%22+site%3Awww.taipeitimes.com&num=10&newwindow=1&sca_esv=36b1b16fe835e4f2&rlz=1C5CHFA_enTW1033TW1033&sxsrf=AE3TifNZsvLqwILLgN68K2VK4ubWKdOI5Q%3A1748706267068&ei=2yM7aPj5A_TF1e8Ph-6lkQ0&ved=0ahUKEwi40_W-hs6NAxX0YvUHHQd3KdIQ4dUDCBI&uact=5&oq=%22Huang+Chung-yuan%22+%22Taipei+Times%22+%22Chang+Gung%22+site%3Awww.taipeitimes.com&gs_lp=Egxnd3Mtd2l6LXNlcnAiRyJIdWFuZyBDaHVuZy15dWFuIiAiVGFpcGVpIFRpbWVzIiAiQ2hhbmcgR3VuZyIgc2l0ZTp3d3cudGFpcGVpdGltZXMuY29tSNVxUIUyWNZvcAJ4AJABAJgBY6AB5gqqAQIyOLgBA8gBAPgBAZgCC6AC-QTCAggQABiwAxjvBcICCxAAGIAEGLADGKIEwgIHECMYJxiuAsICBRAAGO8FwgIIEAAYgAQYogTCAgUQIRigAZgDAIgGAZAGBJIHBDEwLjGgB7ZBsgcDOC4xyAcW&sclient=gws-wiz-serp"  target="_blank" rel="noopener noreferrer">評論</a>
+                    <a class="nav-item" href="https://www.google.com/search?q=%22%E9%BB%83%E5%B4%87%E6%BA%90%22+%22%E8%87%AA%E7%94%B1%E6%99%82%E5%A0%B1%22+site%3Atalk.ltn.com.tw&num=10&newwindow=1&sca_esv=36b1b16fe835e4f2&rlz=1C5CHFA_enTW1033TW1033&sxsrf=AE3TifNrmmBifb70Mjqwcx6tYgAFEVjSow%3A1748706481736&ei=sSQ7aLraLO_c2roPu9bK8Qc&ved=0ahUKEwj69qOlh86NAxVvrlYBHTurMn4Q4dUDCBI&uact=5&oq=%22%E9%BB%83%E5%B4%87%E6%BA%90%22+%22%E8%87%AA%E7%94%B1%E6%99%82%E5%A0%B1%22+site%3Atalk.ltn.com.tw&gs_lp=Egxnd3Mtd2l6LXNlcnAiLyLpu4PltIfmupAiICLoh6rnlLHmmYLloLEiIHNpdGU6dGFsay5sdG4uY29tLnR3SIkwUJAGWMkscAF4AJABAJgBnwGgAdEJqgEEMTkuMrgBA8gBAPgBAZgCB6AC3ATCAggQABiwAxjvBcICCxAAGLADGKIEGIkFwgILEAAYgAQYsAMYogTCAgUQIRigAcICBRAAGO8FmAMAiAYBkAYFkgcDNS4yoAffFrIHAzQuMrgH2QTCBwMxLjbIBw0&sclient=gws-wiz-serp" target="_blank" rel="noopener noreferrer">投書</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 主要內容區域 -->
+        <main role="main">
+            <div class="container">
+                <!-- 
+                    介紹區塊：預設顯示的主要內容
+                    包含：統計數據卡片、榮譽記錄、詳細介紹文字
+                -->
+                <section id="overview" class="section active" role="region" aria-labelledby="section-overview-title">
+                    <h2 id="section-overview-title">學術表現及成就</h2>
+                    
+                    <!-- 統計資料卡片容器：由 JavaScript 動態填入內容 -->
+                    <div class="stats-grid" id="stats-container-zh"></div>
+                    
+                    <br><br>
+                    <h2>社會責任與肯定</h2>
+                    
+                    <!-- 榮譽記錄容器：由 JavaScript 動態填入內容 -->
+                    <div id="honors-zh"></div>
+                    
+                    <!-- 詳細介紹段落：手動撰寫的個人事蹟描述 -->
+                    <p id="honors-paragraph" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; color: #555;">
+                        <br>
+                        &emsp;&emsp;「蘇○○，早安！何○○，早安！」<br><br>
+                        &emsp;&emsp;如冬日暖陽般親切地喊出學童姓名的崇源會長，每天早晨總是站在穿堂旁學生家長會辦公室門口，以充滿朝氣的笑容，和藹可親的問候，迎接每一位踏入老松校園的學生。在學童的眼中，他是永遠面帶微笑，樂意彎下腰、蹲下身，傾聽他們說話，關懷他們心情的學生家長會長。<br><br>
+                        &emsp;&emsp;崇源會長是老松校友，畢業於民國七十一年，家族三代都就讀老松，舅舅更長期擔任老松國小訓導主任。崇源會長常掛在嘴邊的一句話：「老松國小的大小事，都是我的大事，能夠協助母校親師生，是畢生的榮幸！」<br><br>
+                        &emsp;&emsp;崇源會長帶著一顆感恩、奉獻、回饋的心，投入老松學生家長會志工服務的行列，期間經歷了家長會委員、志工總幹事、活動組長、常務委員、副會長等職務，非常熟悉會務。在疫情接近尾聲之際，崇源會長結合了一群來自低、中、高年級，橫跨園藝、保健、導護、愛閱、圖書、ＥＱ、學輔所有組別的熱忱家長志工，秉持著自發、互動、共好的教育理念，入校服務，全力支援老松國小於疫後陸續恢復的各項活動，積極協助學童在花木扶疏、綠意盎然的校園環境中探索與學習。<br><br>
+                        &emsp;&emsp;時間是最寶貴的資源。為了協助疫後重返校園的老松師生與愛心志工，崇源會長毫無私心，奉獻出寶貴的時間與無比的愛心，每日坐鎮學生家長會辦公室，用充滿活力與正向積極的任事態度，激勵團隊夥伴，透過集思廣益，淬鍊出多元的趣味創意與靈活想法，盡心盡力辦好學生家長會務，協助校務與教育工作的發展，關心老松孩童的校園生活。<br><br>
+                        &emsp;&emsp;曾是國小校警，如今擔任保全的蕭○○先生，常對崇源會長豎起大姆指說：「會長，您真的很厲害！整日守護在學校，處理會務，關懷親師生，其他學校的家長會辦公室通常大門深鎖很少使用，只有開會和活動才有人氣，兩者差異很大。」<br><br>
+                        &emsp;&emsp;除了獻出寶貴的時間，崇源會長也以大學教授平日從事研究的嚴謹態度，檢視學生家長會辦理的親子成長、親職講座、志工成長、感恩餐會、一日遊等活動。從前置準備，到執行細節，再到預期結果，他總是不厭其煩和團隊夥伴反覆推敲活動的每項細節，可能的意外，以及臨場可行的補救之道。崇源會長常對團隊夥伴說：「舉辦活動，就要辦得熱鬧有意義，讓參與活動的親師生與愛心志工收穫滿滿，身心靈滿載而歸。」<br><br>
+                        &emsp;&emsp;無論在公開場合，還是線上家長討論群組，家長對於高情商的崇源會長的真心讚美不知凡幾。大家的推崇包括以下但不止於：老松國小擁有崇源會長，是親師生的好福氣；崇源會長是一位回來老松國小造福的好會長；崇源會長親和力十足，沒有距離感，是值得安心信賴的會長；崇源會長是我們眼中最用心、最認真、親力親為的滿分會長；從來不曾有過像現在的感受，原來會長和家長的關係可以如此緊密，感謝崇源會長為老松親師生所做的一切，以及造成的美好改變。<br><br>
+                        &emsp;&emsp;羅馬不是一天造成的。家長溢於言表的由衷讚美之辭，源自於崇源會長多年來表裡如一的個人特質。誠如他的團隊夥伴在長時間相處及第一手觀察之後，都異口同聲形容：「崇源會長為人謙沖有禮，出錢出力，不求回報。他是一位願意傾聽、樂於溝通、即時回應、詳細說明、熱心協助、將心比心、身先士卒、以身作則、無私奉獻的會長，是家長與學校之間通暢的溝通者。」陽光又虛懷若谷的崇源會長則是透過實際的作為，屢次在公開場合強調，他是老松國小家長的駐校代表，是家長派駐在老松國小服務親師生的頭號值日生，是可愛的老松學弟妹及家長安心可靠的好夥伴。<br><br>
+                        &emsp;&emsp;在一些家長的眼中，崇源會長好比聞聲救苦，有大智慧的長者。疫後時期，雖然學習活動漸漸步上軌道，但是每位學童的恢復過程快慢不一，許多孩子的學習會突然卡關，家長面臨此類問題需要校方協助，同樣來自教育體系，在大學執教二十餘年的崇源會長總是站在學生學習的教育立場思考，不嫌麻煩主動和家長溝通，詳盡回覆，然後協助家長，向校方傳達問題緣由，提醒關鍵重點，委請學校處室負責人員適時伸出援手，給予學童和家長應有且適當的助益。<br><br>
+                        &emsp;&emsp;不只是家長信賴的代言人與值日生，崇源會長也是學校政策和活動的最佳行銷者。為了促成家長和校方的教育理念、政策方向與教學步伐一致，崇源會長致力於擔任老松親師生之間最佳的溝通橋樑與潤滑劑，協助處室主任，透過適當的傳播管道，向家長詳盡地解釋校方近期正在推展的雙語教學等重要政策及可能的影響層面，以及即將舉辦的國際交流等重要活動及其背後的宗旨和教育目的。除此之外，崇源會長也主動定期向家長說明政策執行與活動辦理的精彩過程與豐碩成果，推展親師合力，共好共榮。<br><br>
+                        &emsp;&emsp;美好的教育環境的營造，需要所有的教育夥伴同心協力，克盡職責，同時，教育現場需要典範，指引教育夥伴堅定向前。崇源會長一直是老松國小正向發展中最給力的教育合夥人，推薦崇源會長參加本年度杏壇芬芳錄評選實為老松國小的榮幸，亦是親師生的期待。<br><br>
+                        &emsp;&emsp;老松國小學生家長會長黃崇源教授，是一位足以成為眾人楷模的教育合夥人，若能獲得委員的肯定與表彰，寫入杏壇芬芳錄裡，必能激發其他教育工作夥伴的熱忱與活力，禮讚杏壇，齊力實現美好健全的教育理想！
+                    </p>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- ===================================
+         英文內容區塊
+         結構：與中文版相同，但初始為隱藏狀態
+         內容：對應的英文翻譯版本
+    =================================== -->
+    <div id="en-content" class="lang-content">
+        <header>
+            <div class="container">
+                <div class="header-content" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 1rem;">
+                    <img src="https://canslab1.github.io/IMG-2.jpg" alt="Chung-Yuan Huang" class="profile-photo">
+                    <div class="header-text">
+                        <h1>Prof. Chung-Yuan Huang</h1>
+                        <div class="subheadline">@CSIE, Chang Gung University</div>
+                        <div class="subheadline">Director, Complex Adaptive Network and System Lab.</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav>
+            <div class="container">
+                <button class="nav-toggle" onclick="toggleNav()">☰ Navigation</button>
+                <div class="nav-container">
+                    <button class="nav-item active" onclick="showSection('overview', event)">Overview</button>
+                    <a class="nav-item" href="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Publications</a>
+                    <a class="nav-item" href="https://arspb.nstc.gov.tw/NSCWebFront/modules/talentSearch/talentSearch.do?action=initRsm17new&rsNo=2a2ef24adef742f58349c3c533bb7402&LANG=chi" target="_blank" rel="noopener noreferrer">Projects</a>
+                    <a class="nav-item" href="https://canslab1.github.io/CYHuang.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+                    <a class="nav-item" href="https://sites.google.com/view/gscott-huang" target="_blank" rel="noopener noreferrer">Wiki</a>
+                    <a class="nav-item" href="https://www.facebook.com/gscott.huang/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a class="nav-item" href="https://canslab1.github.io/" target="_blank" rel="noopener noreferrer">Stories</a>
+                    <a class="nav-item" href="https://www.google.com/search?q=%22Huang+Chung-yuan%22+%22Taipei+Times%22+%22Chang+Gung%22+site%3Awww.taipeitimes.com&num=10&newwindow=1&sca_esv=36b1b16fe835e4f2&rlz=1C5CHFA_enTW1033TW1033&sxsrf=AE3TifNZsvLqwILLgN68K2VK4ubWKdOI5Q%3A1748706267068&ei=2yM7aPj5A_TF1e8Ph-6lkQ0&ved=0ahUKEwi40_W-hs6NAxX0YvUHHQd3KdIQ4dUDCBI&uact=5&oq=%22Huang+Chung-yuan%22+%22Taipei+Times%22+%22Chang+Gung%22+site%3Awww.taipeitimes.com&gs_lp=Egxnd3Mtd2l6LXNlcnAiRyJIdWFuZyBDaHVuZy15dWFuIiAiVGFpcGVpIFRpbWVzIiAiQ2hhbmcgR3VuZyIgc2l0ZTp3d3cudGFpcGVpdGltZXMuY29tSNVxUIUyWNZvcAJ4AJABAJgBY6AB5gqqAQIyOLgBA8gBAPgBAZgCC6AC-QTCAggQABiwAxjvBcICCxAAGIAEGLADGKIEwgIHECMYJxiuAsICBRAAGO8FwgIIEAAYgAQYogTCAgUQIRigAZgDAIgGAZAGBJIHBDEwLjGgB7ZBsgcDOC4xyAcW&sclient=gws-wiz-serp"  target="_blank" rel="noopener noreferrer">Commentaries</a>
+                    <a class="nav-item" href="https://www.google.com/search?q=%22%E9%BB%83%E5%B4%87%E6%BA%90%22+%22%E8%87%AA%E7%94%B1%E6%99%82%E5%A0%B1%22+site%3Atalk.ltn.com.tw&num=10&newwindow=1&sca_esv=36b1b16fe835e4f2&rlz=1C5CHFA_enTW1033TW1033&sxsrf=AE3TifNrmmBifb70Mjqwcx6tYgAFEVjSow%3A1748706481736&ei=sSQ7aLraLO_c2roPu9bK8Qc&ved=0ahUKEwi40_W-hs6NAxVvrlYBHTurMn4Q4dUDCBI&uact=5&oq=%22%E9%BB%83%E5%B4%87%E6%BA%90%22+%22%E8%87%AA%E7%94%B1%E6%99%82%E5%A0%B1%22+site%3Atalk.ltn.com.tw&gs_lp=Egxnd3Mtd2l6LXNlcnAiLyLpu4PltIfmupAiICLoh6rnlLHmmYLloLEiIHNpdGU6dGFsay5sdG4uY29tLnR3SIkwUJAGWMkscAF4AJABAJgBnwGgAdEJqgEEMTkuMrgBA8gBAPgBAZgCB6AC3ATCAggQABiwAxjvBcICCxAAGLADGKIEGIkFwgILEAAYgAQYsAMYogTCAgUQIRigAcICBRAAGO8FmAMAiAYBkAYFkgcDNS4yoAffFrIHAzQuMrgH2QTCBwMxLjbIBw0&sclient=gws-wiz-serp" target="_blank" rel="noopener noreferrer">Op-Eds</a>
+                </div>
+            </div>
+        </nav>
+
+        <main role="main">
+            <div class="container">
+                <!-- 英文版介紹區塊 -->
+                <section id="overview" class="section active" role="region" aria-labelledby="section-overview-title">
+                    <h2 id="section-overview-title">Academic Performance and Achievements</h2>
+                    
+                    <!-- 英文版統計卡片容器 -->
+                    <div class="stats-grid" id="stats-container-en"></div>
+                    
+                    <br><br>
+                    <h2>Social Commitment and Public Recognition</h2>
+                    <div id="honors-en"></div>
+                    <p id="honors-paragraph-en" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; color: #555;">
+                        <!-- 英文版詳細介紹內容 -->
+                        <br>
+                        &emsp;&emsp;Good morning, Su! Good morning, Ho!<br><br>
+                        &emsp;&emsp;Every morning, President Chung-Yuan stands at the entrance of the Parents' Association office next to the auditorium, and greets every student entering the Lao-Song Campus by name and with a warm, cheerful smile. In the minds of Taipei Lao-Song Elementary School students, he is the man who always has a smile on his face, and who is always willing to bend down to the students' level to hear what's on their minds.<br><br>
+                        &emsp;&emsp;President Chung-Yuan graduated from Lao-Song in 1982, one of three generations in his family to attend. His uncle has been the Director of Student Affairs at the school for many years. That's why President Chung-Yuan frequently says, "Everything that happens at Lao-Song is my business, and it's my honor to help my alma mater, its teachers, and its students."<br><br>
+                        &emsp;&emsp;His gratitude, dedication, and positive feedback is evident in his devotion to serving as a volunteer for the Lao-song Parents' Association. Over the years he has served as the Association's Vice-President, Standing Committee member, and Chief of Volunteer Activities and Volunteer Programs. He knows the business of the Association inside and out. Toward the end of the epidemic he came into contact with parents of children at all grade levels, with backgrounds in horticulture, health care, guidance counseling, academic counseling, and books and reading, and promoted the educational philosophy of self-initiative, interaction, and the common good. The goal: to actively assist children in exploring and learning.<br><br>
+                        &emsp;&emsp;President Chung-Yuan has always been willing to share one of his most valuable resources: time. To help Lao-Song students, teachers, and volunteers with the transition back to in-class learning after the COVID-19 pandemic, he selflessly took on the task of sitting in the Parents' Association office every day, encouraging those around him with his energy, positive attitude, and skill at brainstorming creative ideas. Showing his care for the lives and efforts of Lao-Song students, he helped reorganize the Parents' Association to assist in all school affairs, especially educational work.<br><br>
+                        &emsp;&emsp;Mr. Hsiao, a former police officer assigned to Lao-Song who now serves as a security guard, often points his finger at President Chung-Yuan and says, "President, you are really great! You're at the school all day long, holding meetings and caring for teachers and students. In other schools the PA office is usually locked and only used for meetings and events. There's a big difference between the two!"<br><br>
+                        &emsp;&emsp;In addition to contributing his valuable time, President Chung-Yuan oversees parent-child development, parenting seminars, volunteer development, Thanksgiving meals, day trips, and other PA-sponsored activities with the same rigor that university professors dedicate to their research. From preparation to implementation, he takes great pain to review all activity details with his fellow volunteers, deal with surprises, and come up with remedies for problems. He often tells his teammates, "When organizing an event, we must make it lively and meaningful, so that everyone who participates can feel the full benefits, and return home with a sense of fulfillment."<br><br>
+                        &emsp;&emsp;Whether in person or in online discussion groups, parents have given President Chung-Yuan countless compliments for the way he deals with them and others. Some example comments include, "Lao-Song Elementary is blessed to have President Chung-Yuan"; "President Chung-Yuan is full of empathy, with no sense of separating differences, and can be trusted to achieve peace of mind"; "he is the most sincere, serious, and personally involved president"; "there has never been a relationship between the PA president and parents like the one we have right now"; and "we thank him for the wonderful changes he has brought about."<br><br>
+                        &emsp;&emsp;Rome was not built in a day, and the parents of Lao-Song students clearly appreciate President Chung-Yuan's long-term commitment to the school, in addition to his personal qualities. After spending time with him and observing him firsthand, some of his fellow volunteers described him as "humble and courteous, contributing without asking for anything in return"; "willing to listen, willing to communicate, responds immediately, explains in detail, is eager to help"; "puts his heart and soul into his work, leads by good example"; and "a skilled communicator who connects parents with teachers and school employees." He cheerfully describes himself in public as the Number One Duty Officer assigned by Lao-Song parents to serve teachers and students at the school, and a reliable partner for both parents and teachers.<br><br>
+                        &emsp;&emsp;In the minds of some parents, President Chung-Yuan acts like a wise elder who listens and responds with the goal of reducing suffering. He understands that students in post-pandemic classrooms are recovering academically at different rates, with a significant number of children feeling stuck. He also understands that the parents of such students need help from the school, and maybe from other sources. As a university educator for over 20 years, he thinks in terms of the learning needs of students. He willfully takes the time to reply to the questions of parents in detail, as well as assist them in navigating the various offices of school authorities. He helps parents convey their concerns and key points to school administrators, and provides assistance to staff members if they request it.<br><br>
+                        &emsp;&emsp;As a trusted parent advocate and duty officer, President Chung-Yuan is a skilled marketer of school policies and programs. To promote consistency between the needs of parents and the educational philosophy of Lao-Song, he is committed to serving as a safe bridge between teachers and students, assisting school officials with the task of explaining their policies to parents in detail, using appropriate communication channels that respect the needs of all parties. He is especially concerned about supporting the success of new initiatives such as bilingual education and international exchanges, explaining their objectives and possible impacts. In addition, he goes out of his way to keep parents informed of progress and the fruitful results of programs and policies, both old and new, thus promoting parent-teacher cooperation for the common good of all in the Lao-Song community.<br><br>
+                        &emsp;&emsp;Creating positive educational environments requires cooperation among all concerned partners, as well as the presence of role models to guide forward progress. Outside of teachers and staff, President Chung-Yuan has been the most active and contributing agent to the positive development of Lao-Song Elementary. Therefore we, the teachers and students of Lao-Song, enthusiastically endorse his participation in this year's Taipei Honored Contributors to Education Selection. Both the education sector and Lao-Song Elementary will benefit from his involvement.<br><br>
+                    </p>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- ===================================
+         頁尾區域
+         功能：顯示相關機構的 logo 連結
+         設計：固定在底部，懸停時 logo 會放大顯示
+    =================================== -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <!-- 
+                Logo 連結說明：
+                - 每個連結都在新視窗開啟（target="_blank"）
+                - aria-label 提升無障礙設計
+                - 懸停時會觸發 CSS 放大效果
+            -->
+            <a href="https://www.cgu.edu.tw/" target="_blank" rel="noopener noreferrer" aria-label="前往長庚大學官方網站">
+                <img src="https://canslab1.github.io/cgu.png" alt="長庚大學 logo" class="footer-logo">
+            </a>
+            <a href="https://www.cgu.edu.tw/csie/" target="_blank" rel="noopener noreferrer" aria-label="前往長庚大學資訊工程學系">
+                <img src="https://canslab1.github.io/csie.png" alt="長庚資工系 logo" class="footer-logo">
+            </a>
+            <a href="https://web.tlsps.tp.edu.tw/nss/p/index" target="_blank" rel="noopener noreferrer" aria-label="前往老松國小">
+                <img src="https://canslab1.github.io/laosong.png" alt="老松國小 logo" class="footer-logo">
+            </a>
+            <a href="https://www.cute.edu.tw/" target="_blank" rel="noopener noreferrer" aria-label="前往中國科技大學">
+                <img src="https://canslab1.github.io/cute.jpg" alt="中國科技大學 logo" class="footer-logo">
+            </a>
+            <a href="https://xingtan.tiec.tp.edu.tw/Register/Profile/20240715152009039506" target="_blank" rel="noopener noreferrer" aria-label="前往臺北市杏壇芬芳錄">
+                <img src="https://canslab1.github.io/favicon.ico" alt="臺北市杏壇芬芳錄 logo" class="footer-logo">
+            </a>
+        </div>
+    </footer>
+
+    <!-- ===================================
+         JavaScript 程式區塊
+         功能：中英文切換、導覽控制、動態內容生成
+         組織：全域變數 → 核心函數 → 事件處理 → 初始化
+    =================================== -->
+    <script>
+        // ===================================
+        // 全域變數定義
+        // ===================================
+        
+        /**
+         * 記錄目前顯示的語言狀態
+         * @type {string} 'zh' 代表中文，'en' 代表英文
+         */
+        let currentLanguage = 'zh';
+
+        // ===================================
+        // 核心功能函數
+        // ===================================
+
+        /**
+         * 語言切換函數
+         * 目標：在中英文內容之間進行切換顯示
+         * 機制：
+         * 1. 切換內容區塊的 active 類別
+         * 2. 更新切換按鈕的文字
+         * 3. 更新全域語言狀態變數
+         * 4. 修改 HTML 文件的 lang 屬性（提升 SEO 與無障礙）
+         * 
+         * 參數：無
+         * 回傳：無
+         * 
+         * 副作用：
+         * - 修改 DOM 元素的 class 屬性
+         * - 修改按鈕文字內容
+         * - 修改 HTML 根元素的 lang 屬性
+         */
+        function toggleLanguage() {
+            // 取得中英文內容區塊的 DOM 元素
+            const zhContent = document.getElementById('zh-content');
+            const enContent = document.getElementById('en-content');
+            const toggleButton = document.querySelector('.language-toggle');
+            
+            // 根據目前語言狀態進行切換
+            if (currentLanguage === 'zh') {
+                // 切換到英文：隱藏中文，顯示英文
+                zhContent.classList.remove('active');
+                enContent.classList.add('active');
+                toggleButton.textContent = '中文'; // 按鈕顯示下一個可切換的語言
+                currentLanguage = 'en'; // 更新全域狀態
+                document.documentElement.lang = 'en'; // 更新文件語言屬性
+            } else {
+                // 切換到中文：隱藏英文，顯示中文
+                enContent.classList.remove('active');
+                zhContent.classList.add('active');
+                toggleButton.textContent = 'English'; // 按鈕顯示下一個可切換的語言
+                currentLanguage = 'zh'; // 更新全域狀態
+                document.documentElement.lang = 'zh-TW'; // 更新文件語言屬性
+            }
+        }
+
+        /**
+         * 頁面區塊顯示函數
+         * 目標：控制不同內容區塊的顯示與隱藏（目前僅用於 "介紹" 區塊）
+         * 機制：
+         * 1. 隱藏目前語言版本中的所有區塊
+         * 2. 移除所有導覽項目的 active 狀態
+         * 3. 顯示指定的目標區塊
+         * 4. 為觸發的導覽項目添加 active 狀態
+         * 5. 隱藏行動裝置的導覽選單
+         * 6. 平滑捲動到頁面頂部
+         * 
+         * @param {string} sectionId - 要顯示的區塊 ID（如 'overview'）
+         * @param {Event|null} event - 觸發事件物件，用於取得點擊的導覽項目
+         * 
+         * 回傳：無
+         * 
+         * 注意事項：
+         * - 函數會自動偵測目前顯示的語言版本
+         * - 支援鍵盤導覽（透過 event.target 判斷）
+         * - 具備容錯機制（targetSection 不存在時不會報錯）
+         */
+        function showSection(sectionId, event) {
+            // 根據目前語言取得對應的內容區塊
+            const currentLangContent = currentLanguage === 'zh'
+                ? document.getElementById('zh-content')
+                : document.getElementById('en-content');
+            
+            // 隱藏當前語言版本中的所有區塊
+            const sections = currentLangContent.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            
+            // 移除所有導覽項目的啟用狀態
+            const navItems = currentLangContent.querySelectorAll('.nav-item');
+            navItems.forEach(item => item.classList.remove('active'));
+            
+            // 顯示目標區塊並添加淡入動畫
+            const targetSection = currentLangContent.querySelector(`#${sectionId}`);
+            if (targetSection) {
+                targetSection.classList.add('active', 'fade-in');
+            }
+            
+            // 為觸發的導覽項目添加啟用狀態
+            if (event && event.target) {
+                event.target.classList.add('active');
+            }
+            
+            // 自動隱藏行動裝置的導覽選單
+            const navContainer = currentLangContent.querySelector('.nav-container');
+            if (navContainer && navContainer.classList.contains('show')) {
+                navContainer.classList.remove('show');
+            }
+            
+            // 平滑捲動至頁面頂部，提升使用者體驗
+            window.scrollTo({ 
+                top: 0, 
+                behavior: 'smooth' 
+            });
+        }
+
+        /**
+         * 行動裝置導覽選單切換函數
+         * 目標：在小螢幕裝置上切換導覽選單的顯示/隱藏狀態
+         * 機制：切換導覽容器的 'show' 類別
+         * 
+         * 參數：無
+         * 回傳：無
+         * 
+         * 使用時機：
+         * - 使用者點擊漢堡選單按鈕（☰）
+         * - 僅在 768px 以下的螢幕寬度生效（透過 CSS 媒體查詢控制）
+         */
+        function toggleNav() {
+            // 根據目前語言取得對應的導覽容器
+            const currentNav = currentLanguage === 'zh'
+                ? document.querySelector('#zh-content .nav-container')
+                : document.querySelector('#en-content .nav-container');
+            
+            // 切換顯示/隱藏狀態
+            currentNav.classList.toggle('show');
+        }
+
+        // ===================================
+        // DOM 載入完成後的初始化處理
+        // ===================================
+
+        /**
+         * 頁面初始化事件監聽器
+         * 執行時機：DOM 完全載入後
+         * 功能：
+         * 1. 建立中英文版本的統計數據卡片
+         * 2. 建立中英文版本的榮譽記錄內容
+         * 3. 為統計卡片添加互動事件監聽器
+         */
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // ===================================
+            // 統計數據陣列定義
+            // ===================================
+            
+            /**
+             * 中文版統計數據
+             * 資料結構：
+             * - number: 顯示的數字（字串，可包含單位）
+             * - label: 說明標籤
+             * - url: 點擊後跳轉的連結
+             */
+            const statsZh = [
+                { number: '43篇',   label: '期刊論文', url: 'https://canslab1.github.io/CYHuang.pdf#page=21' },
+                { number: '49篇',   label: '國際研討會', url: 'https://canslab1.github.io/CYHuang.pdf#page=24' },
+                { number: '10篇',   label: '專書專章', url: 'https://canslab1.github.io/CYHuang.pdf#page=27' },
+                { number: '19篇',   label: '國內研討會', url: 'https://canslab1.github.io/CYHuang.pdf#page=29' },
+                { number: '43次',   label: '評論及採訪', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '22次',   label: '計畫主持人', url: 'https://canslab1.github.io/CYHuang.pdf#page=3' },
+                { number: '1408萬', label: '國科會預算', url: 'https://canslab1.github.io/CYHuang.pdf#page=3' },
+                { number: '14次',   label: '共同主持人', url: 'https://canslab1.github.io/CYHuang.pdf#page=4' },
+                { number: '965次',  label: 'Citations', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en#d=gsc_md_hist&t=1748751167682' },
+                { number: '18篇',   label: 'h-index', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '30篇',   label: 'i10-index', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '47人',   label: '指導專題生', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '24人',   label: '指導碩士', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '2人',    label: '指導博士', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '62篇',   label: '論文審稿', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '26次',   label: '會議審稿', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '68次',   label: '議程委員', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '11次',   label: '計劃審查', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '10次',   label: '學術審查', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '26次',   label: '專題演講', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '10年',   label: '教授', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '5年',    label: '副教授', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '5年',    label: '助理教授', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '5年',    label: '講師', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '11年',   label: '業界經驗', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '4個',    label: '合聘單位', url: 'https://canslab1.github.io/CYHuang.pdf#page=1' },
+                { number: '3年',    label: '獨立董事', url: 'https://canslab1.github.io/CYHuang.pdf#page=1' },
+                { number: '7年',    label: '學生家長會', url: 'https://canslab1.github.io/CYHuang.pdf#page=1' }
+            ];
+
+            /**
+             * 英文版統計數據
+             * 對應中文版數據，但使用英文標籤
+             */
+            const statsEn = [
+                { number: '43',   label: 'Journal Papers', url: 'https://canslab1.github.io/CYHuang.pdf#page=21' },
+                { number: '49',   label: 'Int\'l Conferences', url: 'https://canslab1.github.io/CYHuang.pdf#page=24' },
+                { number: '10',   label: 'Book Chapters', url: 'https://canslab1.github.io/CYHuang.pdf#page=27' },
+                { number: '19',   label: 'Domestic Conferences', url: 'https://canslab1.github.io/CYHuang.pdf#page=29' },
+                { number: '43',   label: 'Commentaries & Op-Eds', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '22',   label: 'PI Projects', url: 'https://canslab1.github.io/CYHuang.pdf#page=3' },
+                { number: '$14.08M', label: 'NSTC Budget', url: 'https://canslab1.github.io/CYHuang.pdf#page=3' },
+                { number: '14',   label: 'Co-PI Projects', url: 'https://canslab1.github.io/CYHuang.pdf#page=4' },
+                { number: '965',  label: 'Citations', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en#d=gsc_md_hist&t=1748751167682' },
+                { number: '18',   label: 'h-index', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '30',   label: 'i10-index', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '47',   label: 'Undergraduate Students', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '24',   label: 'Master\'s Students', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '2',    label: 'PhD Students', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '62',   label: 'Paper Reviews', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '26',   label: 'Conference Reviews', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '68',   label: 'Program Committee', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '11',   label: 'Project Reviews', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '10',   label: 'Academic Reviews', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '26',   label: 'Invited Talks', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '10 yrs',   label: 'Full Professor', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '5 yrs',    label: 'Associate Professor', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '5 yrs',    label: 'Assistant Professor', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '5 yrs',    label: 'Lecturer', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '11 yrs',   label: 'Industry Experience', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '4',    label: 'Joint Appointments', url: 'https://canslab1.github.io/CYHuang.pdf#page=1' },
+                { number: '3 yrs',    label: 'Independent Director', url: 'https://canslab1.github.io/CYHuang.pdf#page=1' },
+                { number: '7 yrs',    label: 'Parent Association', url: 'https://canslab1.github.io/CYHuang.pdf#page=1' }
+            ];
+
+            /**
+             * 統計卡片建立函數
+             * 目標：根據資料陣列動態建立統計卡片並添加互動功能
+             * 
+             * @param {Array} stats - 統計資料陣列，每個元素包含 number、label、url 屬性
+             * @param {string} containerId - 目標容器的 DOM ID
+             * 
+             * 功能：
+             * 1. 清空目標容器
+             * 2. 為每筆統計資料建立卡片元素
+             * 3. 設定無障礙屬性（tabindex、role、aria-label）
+             * 4. 添加點擊事件監聽器（開啟外部連結）
+             * 5. 添加滑鼠懸停動畫效果
+             */
+            function createStatsCards(stats, containerId) {
+                const container = document.getElementById(containerId);
+                container.innerHTML = ''; // 清空現有內容
+                
+                stats.forEach((item, index) => {
+                    // 建立卡片元素
+                    const card = document.createElement('div');
+                    card.className = 'stat-card';
+                    
+                    // 設定無障礙屬性
+                    card.setAttribute('tabindex', '0'); // 支援鍵盤導覽
+                    card.setAttribute('role', 'button'); // 標明為可點擊元素
+                    card.setAttribute('aria-label', `點選查看 ${item.label}`); // 螢幕報讀器說明
+                    card.setAttribute('data-url', item.url); // 儲存連結資訊
+                    
+                    // 設定卡片內容
+                    card.innerHTML = `
+                        <span class="stat-number">${item.number}</span>
+                        <div class="stat-label">${item.label}</div>
+                    `;
+                    
+                    // 添加點擊事件：在新視窗開啟連結
+                    card.addEventListener('click', () => window.open(item.url, '_blank'));
+                    
+                    // 添加滑鼠懸停動畫效果
+                    card.addEventListener('mouseenter', () => {
+                        card.style.transform = 'translateY(-5px) scale(1.02)';
+                    });
+                    card.addEventListener('mouseleave', () => {
+                        card.style.transform = 'translateY(0) scale(1)';
+                    });
+                    
+                    // 將卡片加入容器
+                    container.appendChild(card);
+                });
+            }
+
+            // 建立中英文版統計卡片
+            createStatsCards(statsZh, 'stats-container-zh');
+            createStatsCards(statsEn, 'stats-container-en');
+
+            // ===================================
+            // 榮譽記錄內容定義與建立
+            // ===================================
+
+            /**
+             * 中文版榮譽記錄內容
+             * 格式：HTML 字串，支援 span 標籤的顏色樣式
+             */
+            const honorsZh = [
+                '<span style="color: #2980b9;">中國科技大學</span><br>2024.11 榮獲傑出校友<br>2000.11 榮獲優秀校友<br>校史唯一先後獲頒傑出與優秀校友',
+                '<span style="color: #2980b9;">臺北市杏壇芬芳獎</span><br>2024.11 榮獲臺北市教育局公開表揚',
+                '<span style="color: #2980b9;">臺北市老松國民小學學生家長會</span><br>2024.10 榮膺第 34 屆榮譽會長<br>2023.10 擔任臺北市小聯會常務理事<br>2022.10 擔任第 32 和 33 屆會長',
+                '<span style="color: #2980b9;">所羅門股份有限公司</span><br>2022.06 榮膺第十二屆董事會獨立董事<br>2022.06 擔任薪資報酬、審計、永續發展委員<br>',
+                '<span style="color: #2980b9;">中華民國斐陶斐榮譽學會獎</span><br>2006.06 榮獲國立交通大學公開頒發<br>表彰卓越學術成就與優異品德操守',
+                '<span style="color: #2980b9;">臺北市杏壇芬芳獎推薦文</span><br>源源不絕無私大愛，守護美好優質老松'
+            ];
+
+            /**
+             * 英文版榮譽記錄內容
+             */
+            const honorsEn = [
+                '<span style="color: #2980b9;">China University of Technology</span><br>2024.11 Distinguished Alumni Award<br>2000.11 Outstanding Alumni Award<br>the only recipient in university history of both Distinguished and Outstanding Alumni honors.',
+                '<span style="color: #2980b9;">2024.10 Taipei City Fragrant Chronicle of the Apricot Altar</span><br>Bottomless Devotion to Taipei Lao-Song Elementary School',
+                '<span style="color: #2980b9;">Laosong Elementary School, Taipei City</span><br>2024.10 Honorary President, 34th Parents&#39; Association<br>2022.10-2024.10 President of the 32nd and 33rd Parents&#39; Association',
+                '<span style="color: #2980b9;">Solomon Technology Corporation</span><br>2022.06 Served as Independent Director on the 12th Board of Directors of Solomon Co., Ltd.',
+                '<span style="color: #2980b9;">Phi Tau Phi Honor Award</span><br> 2006.06 Awarded by National Chiao Tung University,<br>in recognition of academic excellence and exemplary character',
+                '<span style="color: #2980b9;">Recommendation Article for the Taipei City Fragrant Record of Education</span>'
+            ];
+
+            /**
+             * 榮譽記錄建立函數
+             * 目標：將榮譽內容陣列轉換為 h3 標題元素
+             * 
+             * @param {Array} honors - 榮譽內容陣列，每個元素為 HTML 字串
+             * @param {string} containerId - 目標容器的 DOM ID
+             * 
+             * 功能：
+             * 1. 清空目標容器
+             * 2. 為每筆榮譽記錄建立 h3 元素
+             * 3. 設定無障礙屬性（role="listitem"）
+             * 4. 插入 HTML 內容
+             */
+            function createHonors(honors, containerId) {
+                const container = document.getElementById(containerId);
+                container.innerHTML = ''; // 清空現有內容
+                
+                honors.forEach(txt => {
+                    const h3 = document.createElement('h3');
+                    h3.setAttribute('role', 'listitem'); // 無障礙設計
+                    h3.innerHTML = txt; // 插入 HTML 內容（支援 span 等標籤）
+                    container.appendChild(h3); // 加入容器
+                });
+            }
+
+            // ===================================
+            // 執行初始化：建立統計卡片與榮譽記錄
+            // ===================================
+            
+            // 建立中英文版榮譽記錄
+            createHonors(honorsZh, 'honors-zh');
+            createHonors(honorsEn, 'honors-en');
+        });
+    </script>
+    
+    <!-- ===================================
+         結構化資料標記
+         目的：提供搜尋引擎豐富的語意資訊
+         格式：JSON-LD（Google 推薦格式）
+    =================================== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Chung-Yuan Huang",
+        "alternateName": "黃崇源",
+        "jobTitle": "Professor",
+        "affiliation": {
+            "@type": "Organization",
+            "name": "Chang Gung University, Department of Computer Science and Information Engineering"
+        },
+        "url": "https://canslab1.github.io/CYHuang.html",
+        "image": "https://canslab1.github.io/IMG-2.jpg",
+        "sameAs": [
+            "https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en",
+            "https://www.facebook.com/gscott.huang/",
+            "https://sites.google.com/view/gscott-huang"
+        ]
+    }
