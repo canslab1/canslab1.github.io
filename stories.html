@@ -409,11 +409,13 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.5s ease-out;
+            pointer-events: none;
         }
 
         .toc-content.expanded {
             max-height: 2000px;
             transition: max-height 0.8s ease-in;
+            pointer-events: auto;
         }
 
         .toc-chapter {
@@ -1520,6 +1522,32 @@
 
         document.querySelectorAll('.chapter, .section').forEach((el) => {
             observer.observe(el);
+        });
+
+        // 確保目錄連結在動態展開後也能正常工作
+        document.addEventListener('DOMContentLoaded', function() {
+            // 重新綁定目錄內的連結事件
+            const tocContent = document.getElementById('tocContent');
+            if (tocContent) {
+                tocContent.addEventListener('click', function(e) {
+                    if (e.target.classList.contains('toc-link')) {
+                        e.preventDefault();
+                        const targetId = e.target.getAttribute('href');
+                        const target = document.querySelector(targetId);
+                
+                        if (target) {
+                            const nav = document.querySelector('nav');
+                            const navHeight = nav ? nav.offsetHeight : 0;
+                            const targetPosition = target.offsetTop - navHeight - 20;
+                    
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            }
         });
     </script>
 </body>
