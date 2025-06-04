@@ -27,12 +27,16 @@
             padding: 1 rem;
         }
 
+        /* 個人照片樣式：圓形裁切與陰影效果 */
         .profile-photo {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            width: 180px;
+            height: 180px;
+            object-fit: cover; /* 保持比例裁切 */
+            border-radius: 50%; /* 圓形效果 */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 立體陰影 */
+            margin: 1rem;
+            margin-bottom: 0.5rem;
+            display: block;
         }
 
         header {
@@ -63,15 +67,19 @@
         }
 
         .header-text h1 {
-            font-size: 1.8rem;
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 0.3rem;
             margin: 0;
             color: white;
         }
 
         .subheadline {
-            font-size: 1.1rem;
-            color: white;
-            margin-top: 0.3rem;
+            font-size: 1.5rem;
+            font-weight: 300;
+            font-stretch: condensed;
+            color: hsl(210, 100%, 93%); /* 淺藍白色 */
+            text-shadow: 0 0 2px rgba(255, 255, 255, 0.15); /* 輕微文字陰影增加可讀性 */
         }
 
         .header-content {
