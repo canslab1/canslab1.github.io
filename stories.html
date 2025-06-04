@@ -1457,7 +1457,7 @@
             const tocContent = document.getElementById('tocContent');
             const arrow = document.querySelector('.toc-arrow');
             const hint = document.querySelector('.toc-hint');
-            
+    
             if (tocContent.classList.contains('expanded')) {
                 tocContent.classList.remove('expanded');
                 arrow.classList.remove('expanded');
@@ -1486,28 +1486,47 @@
             });
         }
 
-        // 平滑滾動到錨點
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+        // 統一的錨點滾動處理函數
+        function scrollToTarget(targetId) {
+            const target = document.querySelector(targetId);
+            if (target) {
+                const nav = document.querySelector('nav');
+                const navHeight = nav ? nav.offsetHeight : 0;
+                const targetPosition = target.offsetTop - navHeight - 20;
         
-                const targetId = this.getAttribute('href');
-                const target = document.querySelector(targetId);
-        
-                if (target) {
-                    // 獲取導航欄高度
-                    const nav = document.querySelector('nav');
-                    const navHeight = nav ? nav.offsetHeight : 0;
-            
-                    // 計算目標位置，減去導航欄高度和額外的邊距
-                    const targetPosition = target.offsetTop - navHeight - 20;
-            
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+                return true;
+            }
+            return false;
+        }
+
+        // 初始化所有錨點連結
+        document.addEventListener('DOMContentLoaded', function() {
+            // 處理導航欄的錨點連結
+            document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    scrollToTarget(targetId);
+                });
             });
+    
+            // 處理目錄中的錨點連結 - 使用事件委託
+            const tocContent = document.getElementById('tocContent');
+            if (tocContent) {
+                tocContent.addEventListener('click', function(e) {
+                    // 檢查點擊的是否為目錄連結
+                    if (e.target.matches('a.toc-link[href^="#"]')) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const targetId = e.target.getAttribute('href');
+                        scrollToTarget(targetId);
+                    }
+                });
+            }
         });
 
         // 增加閱讀進度動畫
@@ -1522,32 +1541,6 @@
 
         document.querySelectorAll('.chapter, .section').forEach((el) => {
             observer.observe(el);
-        });
-
-        // 確保目錄連結在動態展開後也能正常工作
-        document.addEventListener('DOMContentLoaded', function() {
-            // 重新綁定目錄內的連結事件
-            const tocContent = document.getElementById('tocContent');
-            if (tocContent) {
-                tocContent.addEventListener('click', function(e) {
-                    if (e.target.classList.contains('toc-link')) {
-                        e.preventDefault();
-                        const targetId = e.target.getAttribute('href');
-                        const target = document.querySelector(targetId);
-                
-                        if (target) {
-                            const nav = document.querySelector('nav');
-                            const navHeight = nav ? nav.offsetHeight : 0;
-                            const targetPosition = target.offsetTop - navHeight - 20;
-                    
-                            window.scrollTo({
-                                top: targetPosition,
-                                behavior: 'smooth'
-                            });
-                        }
-                    }
-                });
-            }
         });
     </script>
 </body>
