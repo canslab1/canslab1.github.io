@@ -157,6 +157,17 @@
             box-shadow: 0 5px 15px rgba(76, 29, 149, 0.4);
         }
 
+        .nav-toggle {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: #4c1d95;
+            cursor: pointer;
+            padding: 10px 15px;
+            margin-left: 1rem;
+        }
+
         main {
             padding: 40px 0;
         }
@@ -419,7 +430,24 @@
             }
             
             .nav-links {
-                gap: 15px;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                background: white;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                z-index: 99;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: block;
             }
             
             .nav-link {
@@ -450,7 +478,8 @@
 
     <nav>
         <div class="container">
-            <div class="nav-links">
+            <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+            <div class="nav-links" id="navLinks">
                 <a href="#chapter1" class="nav-link">依六追阿雲</a>
                 <a href="#chapter2" class="nav-link">大頭仔</a>
                 <a href="#chapter3" class="nav-link">愛人月如</a>
@@ -1391,6 +1420,11 @@
     <button class="back-to-top" onclick="scrollToTop()">↑</button>
 
     <script>
+        function toggleMenu() {
+            const nav = document.getElementById("navLinks");
+            nav.classList.toggle("show");
+        }    
+        
         function toggleTOC() {
             const tocContent = document.getElementById('tocContent');
             const arrow = document.querySelector('.toc-arrow');
