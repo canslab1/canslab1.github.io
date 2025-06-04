@@ -24,7 +24,15 @@
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 1 rem;
+        }
+
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
         }
 
         header {
@@ -52,6 +60,27 @@
                 radial-gradient(circle at 40% 80%, rgba(255,255,255,0.06) 1.5px, transparent 1.5px);
             background-size: 200px 200px, 150px 150px, 300px 300px, 250px 250px;
             opacity: 0.8;
+        }
+
+        .header-text h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            color: #333;
+        }
+
+        .subheadline {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 0.3rem;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            text-align: center;
         }
 
         .title {
@@ -417,6 +446,19 @@
     </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <div class="header-content" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 1rem;">
+                <!-- 教授個人照片 -->
+                <img src="https://canslab1.github.io/IMG-2.jpg" alt="Chung-Yuan Huang" class="profile-photo">
+                <div class="header-text">
+                    <h1>大頭仔ㄟ手工伍仁餡</h1>
+                    <div class="subheadline">60 篇龍山寺旁西園路佛具街樓上的軼事</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
     <header>
         <div class="container">
             <h1 class="title">大頭仔ㄟ手工伍仁餡</h1>
