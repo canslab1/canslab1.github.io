@@ -121,13 +121,14 @@
         }
 
         nav {
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(10px);
-            padding: 4px 0;
+            background: #fff;
+            /* backdrop-filter: blur(10px); */
+            padding: 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 0;
         }
 
         .nav-links {
@@ -139,13 +140,15 @@
         }
 
         .nav-link {
-            color: #4c1d95;
+            color: #2c3e50;
             text-decoration: none;
-            font-weight: 600;
-            padding: 4px 10px;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
             font-size: 1rem;
             line-height: 1.4;
-            border-radius: 20px;
+            background: none;
+            border: none;
+            border-radius: 0;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -309,7 +312,7 @@
         }
 
         .table-of-contents {
-            background: linear-gradient(135deg, rgba(20, 83, 45, 0.85) 0%, rgba(26, 119, 69, 0.85) 100%);
+            background: linear-gradient(135deg, #27ae60 0%, #219150 100%);
             color: white;
             padding: 30px;
             border-radius: 15px;
