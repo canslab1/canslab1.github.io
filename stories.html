@@ -26,11 +26,13 @@
         }
 
         header {
-            background: linear-gradient(135deg, #3b2e5a 0%, #2e1f47 100%);
+            background: 
+                linear-gradient(135deg, rgba(20, 83, 45, 0.85) 0%, rgba(26, 119, 69, 0.85) 100%),
+                url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             color: white;
             padding: 60px 0;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             position: relative;
         }
 
@@ -51,17 +53,19 @@
         }
 
         .title {
-            font-size: 3em;
+            font-size: 2.8rem;
             font-weight: 400;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            animation: fadeInDown 1s ease-out;
+            font-family: system-ui, -apple-system, 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+            text-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
         }
 
         .subtitle {
-            font-size: 1.5em;
+            font-size: 1.6rem;
+            font-weight: 300;
+            color: hsl(210, 100%, 93%);
+            text-shadow: 0 0 2px rgba(255, 255, 255, 0.15);
             opacity: 0.95;
-            animation: fadeInUp 1s ease-out 0.5s both;
         }
 
         nav {
@@ -408,21 +412,13 @@
             }
         }
 
-        .story-count {
-            text-align: center;
-            color: white;
-            font-weight: bold;
-            margin: 20px 0;
-            font-size: 1.4em;
-        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
             <h1 class="title">大頭仔ㄟ手工伍仁餡</h1>
-            <p class="subtitle">龍山寺旁西園路佛具街樓上的故事</p>
-            <div class="story-count">60 篇軼事</div>
+            <p class="subtitle">60 篇龍山寺旁西園路佛具街樓上的軼事</p>
         </div>
     </header>
 
