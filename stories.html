@@ -1,9 +1,24 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-TW" itemscope itemtype="https://schema.org/WebPage">
 <head>
+    <!-- ===========================================
+         瀏覽器相容性與編碼設定區塊
+         目的：確保網頁在不同瀏覽器中的一致性表現
+         =========================================== -->
+
+    <!-- 指定網頁使用 UTF-8 字元編碼，支援多國語言 -->
     <meta charset="UTF-8">
+
+     <!-- 設定 Internet Explorer 使用最新渲染引擎 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- 響應式設計視口設定，控制行動裝置顯示比例 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===========================================
+         頁面標題與圖示設定
+         目的：顯示在瀏覽器標籤頁的標題與圖示
+         =========================================== -->
     <title>黃崇源的60道手工伍仁餡</title>
     <link rel="icon" href="https://canslab1.github.io/csie.png" type="image/png">
 
@@ -14,32 +29,56 @@
     <meta name="keywords" content="黃崇源, 家族故事, 手工書寫, 台北龍山寺, 西園路, 阿雲, 大頭仔, 家暴, 愛人, 平安福, 貴人, 記憶傳承, 傳統文化, Chung-Yuan Huang, family memoir">
     <meta name="author" content="Prof. Chung-Yuan Huang (黃崇源教授)">
 
-    <!-- ================================
-         Open Graph 社群媒體分享最佳化
-         ================================ -->
+    <!-- ===========================================
+         Open Graph 社群媒體分享最佳化區塊
+         目的：控制在 Facebook、LinkedIn 等平台分享時的顯示效果
+         =========================================== -->
     <meta property="og:title" content="大頭仔的60道手工伍仁餡故事集">
     <meta property="og:description" content="60則從台北龍山寺到福州鄉村的生命記憶，重構家族歷史、悲喜交織、情感豐沛的軼事軌跡。">
     <meta property="og:image" content="https://canslab1.github.io/IMG-2.jpg">
     <meta property="og:url" content="https://canslab1.github.io/stories.html">
     <meta property="og:type" content="article">
 
-    <!-- ================================
-         Twitter Card 設定
-         ================================ -->
+    <!-- ===========================================
+         Twitter Card 設定區塊
+         目的：最佳化在 Twitter 平台的分享顯示效果
+         =========================================== -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="大頭仔的60道手工伍仁餡故事集">
     <meta name="twitter:description" content="橫跨三代的生命故事，講述一位台灣教授的成長與記憶書寫，情感細膩，充滿台味人情。">
     <meta name="twitter:image" content="https://canslab1.github.io/IMG-2.jpg">
 
+    <!-- ===========================================
+         快取控制設定區塊
+         目的：防止瀏覽器快取過期內容，確保使用者看到最新版本
+         =========================================== -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    
+
+    <!-- ===========================================
+         CSS 樣式表定義區塊
+         組織原則：全域設定 → 版面配置 → 元件樣式 → 響應式設計
+         =========================================== -->
     <style>
+        /* ===================================
+           全域預設樣式重設
+           目的：統一不同瀏覽器的預設樣式差異
+           =================================== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        /* ===================================
+           HTML 與 BODY 基礎版面設定
+           目的：建立彈性排版容器，支援 sticky footer 效果
+           =================================== */
+        html, body {
+            height: 100%; /* 確保最小高度為視窗高度 */
+            display: flex;
+            flex-direction: column; /* 垂直排列：header → main → footer */
         }
 
         body {
