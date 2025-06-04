@@ -81,15 +81,22 @@
             flex-direction: column; /* 垂直排列：header → main → footer */
         }
 
+        /* ===================================
+           主體字體與背景設定
+           字體順序：系統字體 → 中文字體 → 英文後備字體
+           =================================== */
         body {
             font-family: system-ui, -apple-system, 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #333; /* #2c3e50; */
+            color: #333;
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             background-color: #f8f9fa;
-            /* min-height: 100vh; */
         }
 
+        /* ===================================
+           容器通用樣式
+           目的：統一內容區塊的最大寬度與水平置中
+           =================================== */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -108,6 +115,10 @@
             display: block;
         }
 
+        /* ===================================
+           頁首區域設計
+           特色：背景圖片疊加漸層色彩，營造專業視覺效果
+           =================================== */        
         header {
             background: 
                 linear-gradient(135deg, rgba(20, 83, 45, 0.85) 0%, rgba(26, 119, 69, 0.85) 100%),
@@ -139,14 +150,10 @@
             font-size: 2.5rem;
             font-weight: 400;
             margin-bottom: 0.3rem;
-            /*
-            margin: 0;
-            color: white;
-            */
         }
 
         .subheadline {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             font-weight: 300;
             font-stretch: condensed;
             color: hsl(210, 100%, 93%); /* 淺藍白色 */
@@ -161,7 +168,11 @@
             gap: 1rem;
             text-align: center;
         }
-
+        
+        /* ===================================
+           導覽列設計
+           功能：黏性定位導覽，在捲動時始終可見
+           =================================== */
         nav {
             background: #fff;
             padding: 0;
@@ -172,6 +183,7 @@
             margin: 0;
         }
 
+        /* 導覽容器：彈性佈局支援項目水平排列 */
         .nav-links {
             display: flex;
             justify-content: center;
@@ -179,6 +191,7 @@
             overflow-x: auto;
         }
 
+        /* 導覽項目基礎樣式 */
         .nav-link {
             color: #2c3e50;
             font-weight: 500;
@@ -193,6 +206,7 @@
             text-decoration: none;
         }
 
+        /* 導覽項目懸停與啟用狀態 */
         .nav-link:hover {
             background: #27ae60;
             color: white;
@@ -209,7 +223,10 @@
             padding: 10px 15px;
             margin-left: 1rem;
         }
-
+        
+        /* ===================================
+           主要內容區域設定
+           =================================== */
         main {
             padding: 40px 0;
         }
@@ -1455,7 +1472,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 黃崇源的故事集。這些珍貴的回憶，承載著一個家族的愛與希望。</p>
+            <p>&copy; 2025 長庚大學．資訊工程學系．黃崇源．故事集。這些珍貴的回憶，承載著黃家大院的愛與希望。</p>
         </div>
     </footer>
 
