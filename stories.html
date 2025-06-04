@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
@@ -284,17 +283,6 @@
             box-shadow: 0 8px 20px rgba(76, 29, 149, 0.6);
         }
 
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -472,7 +460,7 @@
                 <img src="https://canslab1.github.io/IMG-2.jpg" alt="Chung-Yuan Huang" class="profile-photo">
                 <div class="header-text">
                     <h1>大頭仔ㄟ手工伍仁餡</h1>
-                    <div class="subheadline">60篇龍山寺旁西園路佛具街上的軼事</div>
+                    <div class="subheadline">60 篇龍山寺旁西園路佛具街上的軼事</div>
                 </div>
             </div>
         </div>
@@ -1421,12 +1409,11 @@
     <button class="back-to-top" onclick="scrollToTop()">↑</button>
 
     <script>
-        // 目錄展開/收縮功能
         function toggleTOC() {
             const tocContent = document.getElementById('tocContent');
             const arrow = document.querySelector('.toc-arrow');
             const hint = document.querySelector('.toc-hint');
-            
+
             if (tocContent.classList.contains('expanded')) {
                 tocContent.classList.remove('expanded');
                 arrow.classList.remove('expanded');
@@ -1439,7 +1426,7 @@
         }
 
         // 回到頂部功能
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const backToTop = document.querySelector('.back-to-top');
             if (window.pageYOffset > 300) {
                 backToTop.classList.add('visible');
@@ -1455,28 +1442,33 @@
             });
         }
 
-        // 平滑滾動到錨點
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-        
-                const targetId = this.getAttribute('href');
-                const target = document.querySelector(targetId);
-        
-                if (target) {
-                    const nav = document.querySelector('nav');
-                    const navHeight = nav ? nav.offsetHeight : 0;
-                    const targetPosition = target.offsetTop - navHeight - 20;
-            
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
+        // 統一處理所有錨點平滑跳轉
+        function smoothScrollToAnchor(anchorElement) {
+            const targetId = anchorElement.getAttribute('href');
+            const target = document.querySelector(targetId);
+            if (target) {
+                // 延遲執行，確保 TOC 展開完成
+                setTimeout(() => {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    history.pushState(null, '', targetId); // 同步網址 hash
+                }, 300); // 對應 .toc-content transition-duration
+            }
+        }
+
+        // 綁定所有 anchor click
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    // 只處理內部錨點
+                    if (this.getAttribute('href').length > 1) {
+                        e.preventDefault();
+                        smoothScrollToAnchor(this);
+                    }
+                });
             });
         });
 
-        // 增加閱讀進度動畫
+        // 動畫進場觸發
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
@@ -1489,31 +1481,6 @@
         document.querySelectorAll('.chapter, .section').forEach((el) => {
             observer.observe(el);
         });
-
-        // 確保目錄連結在動態展開後也能正常工作
-        document.addEventListener('DOMContentLoaded', function() {
-            const tocContent = document.getElementById('tocContent');
-            if (tocContent) {
-                tocContent.addEventListener('click', function(e) {
-                    if (e.target.classList.contains('toc-link')) {
-                        e.preventDefault();
-                        const targetId = e.target.getAttribute('href');
-                        const target = document.querySelector(targetId);
-                
-                        if (target) {
-                            const nav = document.querySelector('nav');
-                            const navHeight = nav ? nav.offsetHeight : 0;
-                            const targetPosition = target.offsetTop - navHeight - 20;
-                    
-                            window.scrollTo({
-                                top: targetPosition,
-                                behavior: 'smooth'
-                            });
-                        }
-                    }
-                });
-            }
-        });
-    </script>
+</script>
 </body>
 </html>
