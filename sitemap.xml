@@ -9,12 +9,17 @@
     <priority>1.0</priority>
   </url>
 
-  <url>
+<url>
     <loc>https://canslab1.github.io/stories.html</loc>
     <lastmod>2025-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
+    <image:image xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        <image:loc>https://canslab1.github.io/images/IMG-2.jpg</image:loc>
+        <image:caption>Chung-Yuan Huang 教授個人官方網站代表照片</image:caption>
+        <image:title>Chung-Yuan Huang 長庚大學教授</image:title>
+    </image:image>
+</url>
 
   <url>
     <loc>https://canslab1.github.io/CYHuang.html</loc>
