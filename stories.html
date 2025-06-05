@@ -515,13 +515,35 @@
             color: #e9d5ff;
         }
 
+        /* ===================================
+           響應式設計：中小型螢幕適配
+           斷點：768px 以下視為行動裝置
+           =================================== */
         @media (max-width: 768px) {
+            /*
             .section {
                 scroll-margin-top: 100px;
             }
+            */
+            .section {
+                padding: 0 15px;
+            }
             
             .header-text h1 {
-                font-size: 2em;
+                font-size: 1.7rem;
+                line-height: 1.4;
+                margin-bottom: 0.3rem;
+            }
+
+            .subheadline {
+                font-size: 1.1rem;
+                line-height: 1.4;
+            }
+
+            .profile-photo {
+                width: 140px;
+                height: 140px;
+                margin: 0.5rem;
             }
             
             .chapter {
@@ -561,6 +583,17 @@
             
             .toc-list {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===================================
+           響應式設計：中等螢幕適配
+           斷點：769px 到 1024px 之間的平板裝置
+           =================================== */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .nav-item {
+                padding: 0.5rem 0.6rem; /* 緊密間距適應中等螢幕 */
+                font-size: 0.9rem;
             }
         }
 
