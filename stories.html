@@ -15,11 +15,26 @@
     <!-- 響應式設計視口設定，控制行動裝置顯示比例 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- 地理定位 -->
+    <meta name="geo.region" content="TW-TPE">
+    <meta name="geo.placename" content="台北市, 台灣">
+
+    <!-- 作者和發布者信息 -->
+    <meta name="author" content="黃崇源教授 Prof. Chung-Yuan Huang">
+    <meta name="publisher" content="長庚大學資訊工程學系">
+
+    <!-- 內容分類 -->
+    <meta name="subject" content="個人傳記, 家族故事, 學術人物">
+    <meta name="coverage" content="台灣台北萬華區">
+
+    <!-- 機器人指令 -->
+    <meta name="robots" content="index, follow, max-image-preview:large">
+
     <!-- ===========================================
          頁面標題與圖示設定
          目的：顯示在瀏覽器標籤頁的標題與圖示
          =========================================== -->
-    <title>黃崇源的60道手工伍仁餡</title>
+    <title>黃崇源教授 Chung-Yuan Huang - 60道手工伍仁餡家族故事集 | 長庚大學資訊工程</title>
     <link rel="icon" href="https://canslab1.github.io/images/csie.png" type="image/png">
     <link rel="canonical" href="https://canslab1.github.io/stories.html">
     <link rel="preload" as="image" href="https://canslab1.github.io/images/IMG-2.jpg">
@@ -27,8 +42,8 @@
     <!-- ================================
          SEO 搜尋引擎最佳化區塊
          ================================ -->
-    <meta name="description" content="60篇手工書寫的家族故事，橫跨三代記憶，從龍山寺旁的西園路到福州祖籍，展現真摯情感與時代記憶。">
-    <meta name="keywords" content="黃崇源, 家族故事, 手工書寫, 台北龍山寺, 西園路, 阿雲, 大頭仔, 家暴, 愛人, 平安福, 貴人, 記憶傳承, 傳統文化, Chung-Yuan Huang, family memoir">
+    <meta name="description" content="黃崇源教授 (Prof. Chung-Yuan Huang) 長庚大學資訊工程學系教授的60篇家族故事。從龍山寺西園路到福州祖籍，記錄三代人生命歷程與台灣記憶，展現真摯情感與時代變遷。">
+    <meta name="keywords" content="黃崇源, Chung-Yuan Huang, 長庚大學, 資訊工程, 教授, 家族故事, 龍山寺, 西園路, 台北萬華, 生命故事, 台灣記憶, 個人傳記, 學者故事, CGU">
     <meta name="author" content="Prof. Chung-Yuan Huang (黃崇源教授)">
 
     <!-- ===========================================
@@ -40,6 +55,10 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://canslab1.github.io/stories.html">
     <meta property="og:image" content="https://canslab1.github.io/images/IMG-2.jpg">
+    <meta property="og:site_name" content="黃崇源教授個人網站">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="article:author" content="黃崇源教授 Prof. Chung-Yuan Huang">
+    <meta property="article:section" content="個人傳記">
 
     <!-- ===========================================
          Twitter Card 設定區塊
@@ -62,7 +81,7 @@
     {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
-        "name": "黃崇源的60道手工伍仁餡故事集",
+        "name": "黃崇源",
         "alternateName": "大頭仔的60道手工伍仁餡",
         "url": "https://canslab1.github.io/stories.html",
         "inLanguage": "zh-TW",
@@ -73,7 +92,8 @@
             "url": "https://canslab1.github.io/"
         },
         "publisher": {
-            "@type": "Person",
+            "@context": "https://schema.org",
+            "@type": ["Person", "CollectionPage"],
             "name": "Chung-Yuan Huang",
             "alternateName": "黃崇源教授",
             "affiliation": {
