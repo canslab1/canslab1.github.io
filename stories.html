@@ -113,39 +113,41 @@
     <style>
         /* ===================================
            全域預設樣式重設
-           目的：統一不同瀏覽器的預設樣式差異
+           用途：清除瀏覽器內建的 margin 與 padding，統一 box model 行為
+           影響範圍：所有 HTML 元素
            =================================== */
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            box-sizing: border-box; /* 包含 padding 與 border 於寬度內，避免版面誤差 */
         }
 
         /* ===================================
            HTML 與 BODY 基礎版面設定
-           目的：建立彈性排版容器，支援 sticky footer 效果
+           用途：支援 sticky footer 與 flex 垂直排列
+           影響範圍：全頁面結構骨架
            =================================== */
         html, body {
             height: 100%; /* 確保最小高度為視窗高度 */
             display: flex;
-            flex-direction: column; /* 垂直排列：header → main → footer */
+            flex-direction: column; /* header → main → footer */
         }
 
         /* ===================================
            主體字體與背景設定
-           字體順序：系統字體 → 中文字體 → 英文後備字體
+           用途：設定全站字體風格與視覺背景漸層
            =================================== */
         body {
             font-family: system-ui, -apple-system, 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* 背景漸層 */
+            background-color: #f8f9fa; /* 備援純色背景 */
         }
 
         /* ===================================
            容器通用樣式
-           目的：統一內容區塊的最大寬度與水平置中
+           用途：控制內容最大寬度並置中，適用於 header、main、footer
            =================================== */
         .container {
             max-width: 1200px;
@@ -153,7 +155,10 @@
             padding: 0 20px; /* 修正：移除空格 */
         }
 
-        /* 個人照片樣式：圓形裁切與陰影效果 */
+        /* ===================================
+           個人照片樣式
+           用途：將圖片裁成圓形並加上陰影效果
+           =================================== */
         .profile-photo {
             width: 180px;
             height: 180px;
@@ -167,8 +172,8 @@
 
         /* ===================================
            頁首區域設計
-           特色：背景圖片疊加漸層色彩，營造專業視覺效果
-           =================================== */        
+           用途：以圖片搭配色彩疊加營造視覺吸引力
+           =================================== */       
         header {
             background: 
                 linear-gradient(135deg, rgba(20, 83, 45, 0.85) 0%, rgba(26, 119, 69, 0.85) 100%),
@@ -180,6 +185,7 @@
             position: relative;
         }
 
+        /* header::before 建立光暈紋理的前景圖層裝飾 */
         header::before {
             content: '';
             position: absolute;
@@ -221,7 +227,7 @@
         
         /* ===================================
            導覽列設計
-           功能：黏性定位導覽，在捲動時始終可見
+           用途：使用 sticky 效果維持在視窗頂端，支援捲動中快速切換章節
            =================================== */
         nav {
             background: #fff;
@@ -233,7 +239,7 @@
             margin: 0;
         }
 
-        /* 導覽容器：彈性佈局支援項目水平排列 */
+        /* nav-links 為導覽項目容器，水平方向彈性排布 */
         .nav-links {
             display: flex;
             justify-content: center;
@@ -241,7 +247,7 @@
             overflow-x: auto;
         }
 
-        /* 導覽項目基礎樣式 */
+        /* 單一導覽項目的樣式 */
         .nav-link {
             color: #2c3e50;
             font-weight: 500;
@@ -263,6 +269,7 @@
             text-decoration: none;
         }
 
+        /* 導覽列在行動裝置顯示用的 toggle button */
         .nav-toggle {
             display: none;
             font-size: 1.5rem;
