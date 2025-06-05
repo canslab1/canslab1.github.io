@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<!-- 
+    檔案名稱：CYHuang.html
+    功能說明：長庚大學黃崇源教授個人學術網頁
+    建立目的：展示學術成就、研究成果與社會貢獻
+    技術特色：雙語支援、響應式設計、動態內容生成
+    維護重點：內容更新、統計數據同步、連結有效性檢查
+-->
+<html lang="zh-TW" itemscope itemtype="https://schema.org/WebPage">
+<head>
+    <!-- ===========================================
+         瀏覽器相容性與編碼設定區塊
+         目的：確保網頁在不同瀏覽器中的一致性表現
+    =========================================== -->
+    
+    <!-- 設定 Internet Explorer 使用最新渲染引擎 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- 指定網頁使用 UTF-8 字元編碼，支援多國語言 -->
+    <meta charset="UTF-8">
+    
+    <!-- 響應式設計視口設定，控制行動裝置顯示比例 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===========================================
+         快取控制設定區塊
+         目的：防止瀏覽器快取過期內容，確保使用者看到最新版本
+    =========================================== -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    
+    <!-- ===========================================
+         SEO 搜尋引擎最佳化區塊
+         目的：提升搜尋引擎排名與點擊率
+    =========================================== -->
+    
+    <!-- 網頁描述：出現在搜尋結果摘要中 -->
+    <meta name="description" content="長庚大學資訊工程學系黃崇源教授的個人學術網頁，介紹其研究成果、期刊論文、研究計畫、履歷、自傳與多項教育貢獻。">
+    
+    <!-- 關鍵字標籤：協助搜尋引擎理解頁面主題 -->
+    <meta name="keywords" content="黃崇源, 長庚大學, 資訊工程, 複雜網絡, 系統科學, 演化演算法, 計算社會科學, 教學研究, CY Huang, Chung-Yuan Huang, GSCOTT, 論文, 學術履歷">   
+    
+    <!-- 作者資訊：標明內容創作者 -->
+    <meta name="author" content="Prof. Chung-Yuan Huang (黃崇源教授)">
+    
+    <!-- ===========================================
+         Open Graph 社群媒體分享最佳化區塊
+         目的：控制在 Facebook、LinkedIn 等平台分享時的顯示效果
+    =========================================== -->
+    <meta property="og:title" content="黃崇源教授 | 長庚大學資訊工程學系">
+    <meta property="og:description" content="探索黃崇源教授的學術旅程，涵蓋其在複雜適應系統與網絡科學領域的重要貢獻與教學實踐。">
+    <meta property="og:image" content="https://canslab1.github.io/images/IMG-2.jpg">
+    <meta property="og:url" content="https://canslab1.github.io/CYHuang.html">
+    <meta property="og:type" content="website">
+    
+    <!-- ===========================================
+         Twitter Card 設定區塊
+         目的：最佳化在 Twitter 平台的分享顯示效果
+    =========================================== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="黃崇源教授 | 長庚大學資訊工程學系">
+    <meta name="twitter:description" content="介紹黃崇源教授於資訊科學、系統模擬與教育貢獻的完整履歷與代表著作。">
+    <meta name="twitter:image" content="https://canslab1.github.io/images/IMG-2.jpg">
+    
+    <!-- ===========================================
+         頁面標題與圖示設定
+         目的：顯示在瀏覽器標籤頁的標題與圖示
+    =========================================== -->
+    <title>長庚大學·資工系·黃崇源教授</title>
+    <link rel="icon" href="https://canslab1.github.io/images/csie.png" type="image/png">
+    <link rel="preload" as="image" href="https://canslab1.github.io/images/IMG-2.jpg">
+    
+    <!-- ===========================================
+         CSS 樣式表定義區塊
+         組織原則：全域設定 → 版面配置 → 元件樣式 → 響應式設計
+    =========================================== -->
+    <style>
+        /* ===================================
+           全域預設樣式重設
+           目的：統一不同瀏覽器的預設樣式差異
+        =================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* 確保 padding 和 border 計入元素總寬度 */
+        }
+
+        /* ===================================
+           HTML 與 BODY 基礎版面設定
+           目的：建立彈性排版容器，支援 sticky footer 效果
+        =================================== */
+        html, body {
+            height: 100%; /* 確保最小高度為視窗高度 */
+            display: flex;
+            flex-direction: column; /* 垂直排列：header → main → footer */
+        }
+
+        /* ===================================
+           主體字體與背景設定
+           字體順序：系統字體 → 中文字體 → 英文後備字體
+        =================================== */
+        body {
+            font-family: system-ui, -apple-system, 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6; /* 提升文字可讀性的行高比例 */
+            color: #333;
+            background-color: #f8f9fa; /* 淺灰背景減少眼部疲勞 */
+        }
+
+        /* ===================================
+           容器通用樣式
+           目的：統一內容區塊的最大寬度與水平置中
+        =================================== */
+        .container {
+            max-width: 1200px; /* 防止在超寬螢幕上內容過度伸展 */
+            margin: 0 auto; /* 水平置中 */
+            padding: 0 20px; /* 左右留白確保內容不貼邊 */
+        }
+
+        /* ===================================
+           語言切換按鈕樣式
+           定位：固定在右上角，確保在任何捲動位置都可見
+        =================================== */
+        .language-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001; /* 確保在所有其他元素之上 */
+            background: #27ae60; /* 綠色主題色 */
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px; /* 圓角設計 */
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease; /* 平滑的懸停動畫 */
+            box-shadow: 0 2px 8px rgba(39,174,96,0.3); /* 輕微陰影增加層次感 */
+        }
+
+        /* 語言按鈕懸停效果：顏色變化與輕微上浮 */
+        .language-toggle:hover {
+            background: #219150; /* 深綠色 */
+            transform: translateY(-2px); /* 上浮效果 */
+            box-shadow: 0 4px 12px rgba(39,174,96,0.4); /* 加深陰影 */
+        }
+
+        /* ===================================
+           語言內容區塊控制
+           機制：透過 .active 類別控制中英文內容的顯示/隱藏
+        =================================== */
+        .lang-content {
+            display: none; /* 預設隱藏 */
+        }
+
+        .lang-content.active {
+            display: block; /* 啟用時顯示 */
+        }
+
+        /* ===================================
+           頁首區域設計
+           特色：背景圖片疊加漸層色彩，營造專業視覺效果
+        =================================== */
+        header {
+            background: 
+                linear-gradient(135deg, rgba(20, 83, 45, 0.85) 0%, rgba(26, 119, 69, 0.85) 100%), /* 綠色漸層遮罩 */
+                url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; /* 科技感背景圖片 */
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* 底部陰影分隔效果 */
+            position: relative;
+        }
+
+        /* 頁首內容排版：彈性佈局支援照片與文字的響應式排列 */
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 400; /* 較細字重呈現優雅感 */
+            font-family: system-ui, -apple-system, 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .header-text {
+            text-align: center;
+        }
+
+        .header-text h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 0.3rem;
+        }
+
+        /* 副標題樣式：較小字體與透明度營造階層感 */
+        .header-text .subheadline {
+            font-size: 1.5rem;
+            font-weight: 300;
+            font-stretch: condensed;
+            color: hsl(210, 100%, 93%); /* 淺藍白色 */
+            text-shadow: 0 0 2px rgba(255, 255, 255, 0.15); /* 輕微文字陰影增加可讀性 */
+        }
+
+        /* 個人照片樣式：圓形裁切與陰影效果 */
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            object-fit: cover; /* 保持比例裁切 */
+            border-radius: 50%; /* 圓形效果 */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 立體陰影 */
+            margin: 1rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* ===================================
+           導覽列設計
+           功能：黏性定位導覽，在捲動時始終可見
+        =================================== */
+        nav {
+            background: #fff;
+            padding: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 底部陰影 */
+            position: sticky; /* 黏性定位 */
+            top: 0; /* 黏在頁面頂部 */
+            z-index: 100; /* 確保在內容區塊之上 */
+            margin: 0;
+        }
+
+        /* 導覽容器：彈性佈局支援項目水平排列 */
+        .nav-container {
+            display: flex;
+            justify-content: center; /* 項目置中對齊 */
+            flex-wrap: nowrap; /* 防止換行 */
+            overflow-x: auto; /* 小螢幕時允許水平捲動 */
+        }
+
+        /* 導覽項目基礎樣式 */
+        .nav-item {
+            background: none;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            color: #2c3e50; /* 深藍灰色 */
+            cursor: pointer;
+            transition: all 0.3s ease; /* 平滑過渡效果 */
+            font-weight: 500;
+            white-space: nowrap; /* 防止文字換行 */
+            text-decoration: none;
+        }
+
+        /* 英文版導覽項目：調整間距適應較長的英文單字 */
+        #en-content .nav-item { 
+            padding: 0.5rem 0.6rem; 
+            font-size: 0.9rem; 
+        }
+
+        /* 導覽項目懸停與啟用狀態 */
+        .nav-item:hover, .nav-item.active {
+            background: #27ae60; /* 綠色背景 */
+            color: white;
+            text-decoration: none;
+        }
+
+        /* ===================================
+           主要內容區域設定
+           佈局：彈性成長佔滿剩餘空間，底部留白避免被 footer 遮擋
+        =================================== */
+        main {
+            flex: 1 0 auto; /* 彈性成長，佔滿可用空間 */
+            padding-bottom: 80px; /* 底部留白，避免被固定 footer 遮擋 */
+        }
+
+        /* 內容區塊基礎樣式 */
+        .section {
+            display: none; /* 預設隱藏 */
+            background: white;
+            border-radius: 10px; /* 圓角設計 */
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 卡片式陰影 */
+        }
+
+        /* 啟用的內容區塊 */
+        .section.active {
+            display: block;
+        }
+        
+        /* 內容區塊標題樣式 */
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #27ae60; /* 綠色底線強調 */
+            padding-bottom: 0.5rem;
+        }
+
+        /* 內容區塊副標題樣式 */
+        .section h3 {
+            color: #2c3e50;
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin: 1.5rem 0 1rem 0;
+            border-left: 4px solid #27ae60; /* 左側綠色邊框 */
+            padding-left: 1rem;
+        }
+
+        /* ===================================
+           統計數據展示區域
+           佈局：網格系統自動適應不同螢幕尺寸
+        =================================== */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 響應式網格 */
+            gap: 1.5rem; /* 項目間距 */
+            margin-top: 1.5rem;
+        }
+
+        /* 統計卡片設計：漸層背景與互動效果 */
+        .stat-card {
+            background: linear-gradient(135deg, #27ae60 0%, #219150 100%); /* 綠色漸層 */
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(39,174,96,0.3); /* 主題色陰影 */
+            outline: none;
+            cursor: pointer; /* 指示可點擊 */
+        }
+
+        /* 統計卡片鍵盤焦點樣式 */
+        .stat-card:focus {
+            box-shadow: 0 0 0 3px #27ae60; /* 焦點外框 */
+        }
+
+        /* 統計卡片懸停效果 */
+        .stat-card:hover {
+            background: linear-gradient(135deg, #1e8449 0%, #186a3b 100%); /* 深綠漸層 */
+            color: white;
+        }
+
+        /* 統計數字樣式 */
+        .stat-number {
+            font-size: 1.7rem;
+            font-weight: 500;
+            display: block;
+        }
+
+        /* 統計標籤樣式 */
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9; /* 輕微透明營造階層感 */
+            margin-top: 0.5rem;
+        }
+
+        /* 行動裝置導覽切換按鈕：桌面版隱藏 */
+        .nav-toggle {
+            display: none;
+        }
+
+        /* ===================================
+           頁尾設計
+           定位：固定在底部，包含機構 logo 連結
+        =================================== */
+        .site-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            color: white;
+            padding: 0.3rem 0;
+            font-size: 0.8rem;
+            text-align: center;
+            box-shadow: 0 -2px 6px rgba(0,0,0,0.1); /* 頂部陰影 */
+            border-top: 1px solid #ddd; /* 頂部邊框 */
+            z-index: 1000;
+            pointer-events: auto; /* 確保可以點擊 */
+        }
+
+        /* 頁尾內容佈局 */
+        .footer-content {
+            display: flex;
+            justify-content: space-evenly; /* 均勻分佈 */
+            align-items: center;
+            gap: 0.3rem;
+            flex-wrap: wrap; /* 小螢幕時允許換行 */
+            padding: 0.3rem 1rem;
+            overflow: visible;
+            position: relative;
+        }
+
+        /* 頁尾 logo 基礎樣式 */
+        .footer-logo {
+            height: 32px;
+            max-width: 128px;
+            object-fit: contain; /* 保持比例 */
+            transition: transform 0.3s ease, opacity 0.3s ease; /* 平滑動畫 */
+            filter: brightness(1.1); /* 輕微提亮 */
+        }
+
+        /* 頁尾 logo 懸停效果：放大顯示 */
+        .footer-logo:hover {
+            transform: scale(2); /* 放大兩倍 */
+            filter: brightness(1.2); /* 進一步提亮 */
+            opacity: 0.85;
+            position: relative;
+            z-index: 10; /* 確保在其他元素之上 */
+        }
+
+        /* ===================================
+           響應式設計：中小型螢幕適配
+           斷點：768px 以下視為行動裝置
+        =================================== */
+        @media (max-width: 768px) {
+            /* 容器在小螢幕的間距調整 */
+            .container {
+                padding: 0 15px;
+            }
+
+            /* 頁首標題文字縮放：平衡可讀性與螢幕空間 */
+            .header-text h1 {
+                font-size: 1.7rem;   /* 從 2.5rem 適當縮小 */
+                line-height: 1.4;
+                margin-bottom: 0.3rem;
+            }
+
+            .header-text .subheadline {
+                font-size: 1.1rem;     /* 保持階層關係 */
+                line-height: 1.4;
+            }
+
+            /* 頁首內容重新排列：垂直堆疊 */
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 0.5rem;
+            }
+
+            .header-content h1 {
+                font-size: 2rem;
+                line-height: 1.4;
+            }
+
+            /* 個人照片縮小適應小螢幕 */
+            .profile-photo {
+                width: 140px;
+                height: 140px;
+                margin: 0.5rem;
+            }
+
+            /* 語言切換按鈕位置與大小調整 */
+            .language-toggle {
+                top: 10px;
+                right: 10px;
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
+            }
+
+            /* 行動裝置導覽切換按鈕：顯示 */
+            .nav-toggle {
+                display: block;
+                padding: 1rem;
+                font-size: 1.5rem;
+                background: none;
+                border: none;
+                color: #2c3e50;
+                cursor: pointer;
+            }
+
+            /* 行動裝置導覽容器：預設隱藏，垂直排列 */
+            .nav-container {
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem;
+            }
+
+            /* 顯示行動導覽的控制類別 */
+            .nav-container.show {
+                display: flex;
+            }
+
+            /* 行動裝置導覽項目：全寬度排列 */
+            .nav-item {
+                width: 100%;
+                text-align: left;
+                padding: 0.8rem 1rem;
+            }
+
+            /* 內容區塊內距縮小 */
+            .section {
+                padding: 1.5rem;
+            }
+
+            /* 統計網格：單欄排列 */
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* 頁尾改為靜態定位：避免在小螢幕佔用過多空間 */
+            .site-footer {
+                position: static;
+                box-shadow: none;
+                border-top: 1px solid #ccc;
+            }
+
+            /* 主要內容底部間距調整 */
+            main {
+                padding-bottom: 2rem;
+            }
+        }
+
+        /* ===================================
+           響應式設計：中等螢幕適配
+           斷點：769px 到 1024px 之間的平板裝置
+        =================================== */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .nav-item {
+                padding: 0.5rem 0.6rem; /* 緊密間距適應中等螢幕 */
+                font-size: 0.9rem;
+            }
+        }
+
+        /* ===================================
+           動畫效果定義
+           用途：內容切換時的淡入效果
+        =================================== */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(20px); /* 從下方淡入 */
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+    </style>
+
+    <!-- ===================================
+         動態樣式載入腳本
+         目的：為外部 CSS 檔案添加時間戳，防止快取問題
+    =================================== -->
+    <script>
+        const timestamp = new Date().getTime();
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = `style.css?v=${timestamp}`;
+        document.head.appendChild(link);
+    </script>
+</head>
+<body>
+    <!-- ===================================
+         語言切換控制按鈕
+         功能：觸發中英文內容的切換顯示
+         位置：固定在右上角，所有頁面狀態下都可見
+    =================================== -->
+    <button class="language-toggle" onclick="toggleLanguage()">English</button>
+
+    <!-- ===================================
+         中文內容區塊
+         預設狀態：顯示（具有 active 類別）
+         結構：頁首 → 導覽 → 主要內容
+    =================================== -->
+    <div id="zh-content" class="lang-content active">
+        <!-- 頁首區域：包含個人照片、姓名、職稱 -->
+        <header>
+            <div class="container">
+                <div class="header-content" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 1rem;">
+                    <!-- 教授個人照片 -->
+                    <img src="https://canslab1.github.io/images/IMG-2.jpg" alt="Chung-Yuan Huang（黃崇源），長庚大學資訊工程學系教授，個人官方網站大頭照" class="profile-photo">
+                    <div class="header-text">
+                        <h1>長庚大學 黃崇源 教授</h1>
+                        <div class="subheadline">複雜適應性網絡與系統實驗室 主持人</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- 導覽列區域：混合內部頁面切換與外部連結 -->
+        <nav>
+            <div class="container">
+                <!-- 行動裝置導覽切換按鈕 -->
+                <button class="nav-toggle" onclick="toggleNav()">☰ 導覽</button>
+                <div class="nav-container">
+                    <!-- 
+                        導覽項目說明：
+                        - 第一個為內部頁面切換按鈕（onclick 事件）
+                        - 其餘為外部連結（href 屬性，新視窗開啟）
+                        - target="_blank" 確保外部連結在新視窗開啟
+                        - rel="noopener noreferrer" 提升安全性
+                    -->
+                    <button class="nav-item active" onclick="showSection('overview', event)">介紹</button>
+                    <a class="nav-item" href="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">著作</a>
+                    <a class="nav-item" href="https://arspb.nstc.gov.tw/NSCWebFront/modules/talentSearch/talentSearch.do?action=initRsm17new&rsNo=2a2ef24adef742f58349c3c533bb7402&LANG=chi" target="_blank" rel="noopener noreferrer">計畫</a>
+                    <a class="nav-item" href="https://canslab1.github.io/CYHuang.pdf" target="_blank" rel="noopener noreferrer">履歷</a>
+                    <a class="nav-item" href="https://sites.google.com/view/gscott-huang" target="_blank" rel="noopener noreferrer">維基</a>
+                    <a class="nav-item" href="https://www.facebook.com/gscott.huang/" target="_blank" rel="noopener noreferrer">臉書</a>
+                    <a class="nav-item" href="https://canslab1.github.io/stories.html" target="_blank" rel="noopener noreferrer">故事</a>
+                    <a class="nav-item" href="https://www.dropbox.com/scl/fo/ejwke56gkn1erv7meid4k/AHCPQXAw_RpiEn_PeiBfCuI?rlkey=b8k879fufdh98x2s3fzkatk5y&e=1&utm_campaign=photo&utm_medium=photo&utm_source=dropbox&dl=0" target="_blank" rel="noopener noreferrer">相簿</a>
+                    <a class="nav-item" href="https://www.google.com/search?q=%22Huang+Chung-yuan%22+%22Taipei+Times%22+%22Chang+Gung%22+site%3Awww.taipeitimes.com&num=10&newwindow=1&sca_esv=36b1b16fe835e4f2&rlz=1C5CHFA_enTW1033TW1033&sxsrf=AE3TifNZsvLqwILLgN68K2VK4ubWKdOI5Q%3A1748706267068&ei=2yM7aPj5A_TF1e8Ph-6lkQ0&ved=0ahUKEwi40_W-hs6NAxX0YvUHHQd3KdIQ4dUDCBI&uact=5&oq=%22Huang+Chung-yuan%22+%22Taipei+Times%22+%22Chang+Gung%22+site%3Awww.taipeitimes.com&gs_lp=Egxnd3Mtd2l6LXNlcnAiRyJIdWFuZyBDaHVuZy15dWFuIiAiVGFpcGVpIFRpbWVzIiAiQ2hhbmcgR3VuZyIgc2l0ZTp3d3cudGFpcGVpdGltZXMuY29tSNVxUIUyWNZvcAJ4AJABAJgBY6AB5gqqAQIyOLgBA8gBAPgBAZgCC6AC-QTCAggQABiwAxjvBcICCxAAGIAEGLADGKIEwgIHECMYJxiuAsICBRAAGO8FwgIIEAAYgAQYogTCAgUQIRigAZgDAIgGAZAGBJIHBDEwLjGgB7ZBsgcDOC4xyAcW&sclient=gws-wiz-serp"  target="_blank" rel="noopener noreferrer">評論</a>
+                    <a class="nav-item" href="https://www.google.com/search?q=%22%E9%BB%83%E5%B4%87%E6%BA%90%22+%22%E8%87%AA%E7%94%B1%E6%99%82%E5%A0%B1%22+site%3Atalk.ltn.com.tw&num=10&newwindow=1&sca_esv=36b1b16fe835e4f2&rlz=1C5CHFA_enTW1033TW1033&sxsrf=AE3TifNrmmBifb70Mjqwcx6tYgAFEVjSow%3A1748706481736&ei=sSQ7aLraLO_c2roPu9bK8Qc&ved=0ahUKEwj69qOlh86NAxVvrlYBHTurMn4Q4dUDCBI&uact=5&oq=%22%E9%BB%83%E5%B4%87%E6%BA%90%22+%22%E8%87%AA%E7%94%B1%E6%99%82%E5%A0%B1%22+site%3Atalk.ltn.com.tw&gs_lp=Egxnd3Mtd2l6LXNlcnAiLyLpu4PltIfmupAiICLoh6rnlLHmmYLloLEiIHNpdGU6dGFsay5sdG4uY29tLnR3SIkwUJAGWMkscAF4AJABAJgBnwGgAdEJqgEEMTkuMrgBA8gBAPgBAZgCB6AC3ATCAggQABiwAxjvBcICCxAAGLADGKIEGIkFwgILEAAYgAQYsAMYogTCAgUQIRigAcICBRAAGO8FmAMAiAYBkAYFkgcDNS4yoAffFrIHAzQuMrgH2QTCBwMxLjbIBw0&sclient=gws-wiz-serp" target="_blank" rel="noopener noreferrer">投書</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 主要內容區域 -->
+        <main role="main">
+            <div class="container">
+                <!-- 
+                    介紹區塊：預設顯示的主要內容
+                    包含：統計數據卡片、榮譽記錄、詳細介紹文字
+                -->
+                <section id="overview" class="section active" role="region" aria-labelledby="section-overview-title">
+                    <h2 id="section-overview-title">學術表現及成就</h2>
+                    
+                    <!-- 統計資料卡片容器：由 JavaScript 動態填入內容 -->
+                    <div class="stats-grid" id="stats-container-zh"></div>
+                    
+                    <br><br>
+                    <h2>社會責任與肯定</h2>
+                    
+                    <!-- 榮譽記錄容器：由 JavaScript 動態填入內容 -->
+                    <div id="honors-zh"></div>
+                    
+                    <!-- 詳細介紹段落：手動撰寫的個人事蹟描述 -->
+                    <p id="honors-paragraph" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; color: #555;">
+                        <br>
+                        &emsp;&emsp;「蘇○○，早安！何○○，早安！」<br><br>
+                        &emsp;&emsp;如冬日暖陽般親切地喊出學童姓名的崇源會長，每天早晨總是站在穿堂旁學生家長會辦公室門口，以充滿朝氣的笑容，和藹可親的問候，迎接每一位踏入老松校園的學生。在學童的眼中，他是永遠面帶微笑，樂意彎下腰、蹲下身，傾聽他們說話，關懷他們心情的學生家長會長。<br><br>
+                        &emsp;&emsp;崇源會長是老松校友，畢業於民國七十一年，家族三代都就讀老松，舅舅更長期擔任老松國小訓導主任。崇源會長常掛在嘴邊的一句話：「老松國小的大小事，都是我的大事，能夠協助母校親師生，是畢生的榮幸！」<br><br>
+                        &emsp;&emsp;崇源會長帶著一顆感恩、奉獻、回饋的心，投入老松學生家長會志工服務的行列，期間經歷了家長會委員、志工總幹事、活動組長、常務委員、副會長等職務，非常熟悉會務。在疫情接近尾聲之際，崇源會長結合了一群來自低、中、高年級，橫跨園藝、保健、導護、愛閱、圖書、ＥＱ、學輔所有組別的熱忱家長志工，秉持著自發、互動、共好的教育理念，入校服務，全力支援老松國小於疫後陸續恢復的各項活動，積極協助學童在花木扶疏、綠意盎然的校園環境中探索與學習。<br><br>
+                        &emsp;&emsp;時間是最寶貴的資源。為了協助疫後重返校園的老松師生與愛心志工，崇源會長毫無私心，奉獻出寶貴的時間與無比的愛心，每日坐鎮學生家長會辦公室，用充滿活力與正向積極的任事態度，激勵團隊夥伴，透過集思廣益，淬鍊出多元的趣味創意與靈活想法，盡心盡力辦好學生家長會務，協助校務與教育工作的發展，關心老松孩童的校園生活。<br><br>
+                        &emsp;&emsp;曾是國小校警，如今擔任保全的蕭○○先生，常對崇源會長豎起大姆指說：「會長，您真的很厲害！整日守護在學校，處理會務，關懷親師生，其他學校的家長會辦公室通常大門深鎖很少使用，只有開會和活動才有人氣，兩者差異很大。」<br><br>
+                        &emsp;&emsp;除了獻出寶貴的時間，崇源會長也以大學教授平日從事研究的嚴謹態度，檢視學生家長會辦理的親子成長、親職講座、志工成長、感恩餐會、一日遊等活動。從前置準備，到執行細節，再到預期結果，他總是不厭其煩和團隊夥伴反覆推敲活動的每項細節，可能的意外，以及臨場可行的補救之道。崇源會長常對團隊夥伴說：「舉辦活動，就要辦得熱鬧有意義，讓參與活動的親師生與愛心志工收穫滿滿，身心靈滿載而歸。」<br><br>
+                        &emsp;&emsp;無論在公開場合，還是線上家長討論群組，家長對於高情商的崇源會長的真心讚美不知凡幾。大家的推崇包括以下但不止於：老松國小擁有崇源會長，是親師生的好福氣；崇源會長是一位回來老松國小造福的好會長；崇源會長親和力十足，沒有距離感，是值得安心信賴的會長；崇源會長是我們眼中最用心、最認真、親力親為的滿分會長；從來不曾有過像現在的感受，原來會長和家長的關係可以如此緊密，感謝崇源會長為老松親師生所做的一切，以及造成的美好改變。<br><br>
+                        &emsp;&emsp;羅馬不是一天造成的。家長溢於言表的由衷讚美之辭，源自於崇源會長多年來表裡如一的個人特質。誠如他的團隊夥伴在長時間相處及第一手觀察之後，都異口同聲形容：「崇源會長為人謙沖有禮，出錢出力，不求回報。他是一位願意傾聽、樂於溝通、即時回應、詳細說明、熱心協助、將心比心、身先士卒、以身作則、無私奉獻的會長，是家長與學校之間通暢的溝通者。」陽光又虛懷若谷的崇源會長則是透過實際的作為，屢次在公開場合強調，他是老松國小家長的駐校代表，是家長派駐在老松國小服務親師生的頭號值日生，是可愛的老松學弟妹及家長安心可靠的好夥伴。<br><br>
+                        &emsp;&emsp;在一些家長的眼中，崇源會長好比聞聲救苦，有大智慧的長者。疫後時期，雖然學習活動漸漸步上軌道，但是每位學童的恢復過程快慢不一，許多孩子的學習會突然卡關，家長面臨此類問題需要校方協助，同樣來自教育體系，在大學執教二十餘年的崇源會長總是站在學生學習的教育立場思考，不嫌麻煩主動和家長溝通，詳盡回覆，然後協助家長，向校方傳達問題緣由，提醒關鍵重點，委請學校處室負責人員適時伸出援手，給予學童和家長應有且適當的助益。<br><br>
+                        &emsp;&emsp;不只是家長信賴的代言人與值日生，崇源會長也是學校政策和活動的最佳行銷者。為了促成家長和校方的教育理念、政策方向與教學步伐一致，崇源會長致力於擔任老松親師生之間最佳的溝通橋樑與潤滑劑，協助處室主任，透過適當的傳播管道，向家長詳盡地解釋校方近期正在推展的雙語教學等重要政策及可能的影響層面，以及即將舉辦的國際交流等重要活動及其背後的宗旨和教育目的。除此之外，崇源會長也主動定期向家長說明政策執行與活動辦理的精彩過程與豐碩成果，推展親師合力，共好共榮。<br><br>
+                        &emsp;&emsp;美好的教育環境的營造，需要所有的教育夥伴同心協力，克盡職責，同時，教育現場需要典範，指引教育夥伴堅定向前。崇源會長一直是老松國小正向發展中最給力的教育合夥人，推薦崇源會長參加本年度杏壇芬芳錄評選實為老松國小的榮幸，亦是親師生的期待。<br><br>
+                        &emsp;&emsp;老松國小學生家長會長黃崇源教授，是一位足以成為眾人楷模的教育合夥人，若能獲得委員的肯定與表彰，寫入杏壇芬芳錄裡，必能激發其他教育工作夥伴的熱忱與活力，禮讚杏壇，齊力實現美好健全的教育理想！
+                    </p>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- ===================================
+         英文內容區塊
+         結構：與中文版相同，但初始為隱藏狀態
+         內容：對應的英文翻譯版本
+    =================================== -->
+    <div id="en-content" class="lang-content">
+        <header>
+            <div class="container">
+                <div class="header-content" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 1rem;">
+                    <img src="https://canslab1.github.io/images/IMG-2.jpg" alt="Chung-Yuan Huang（黃崇源），長庚大學資訊工程學系教授，個人官方網站大頭照" class="profile-photo">
+                    <div class="header-text">
+                        <h1>Prof. Chung-Yuan Huang</h1>
+                        <div class="subheadline">@CSIE, Chang Gung University</div>
+                        <div class="subheadline">Director, Complex Adaptive Network and System Lab.</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav>
+            <div class="container">
+                <button class="nav-toggle" onclick="toggleNav()">☰ Navigation</button>
+                <div class="nav-container">
+                    <button class="nav-item active" onclick="showSection('overview', event)">Overview</button>
+                    <a class="nav-item" href="https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Publications</a>
+                    <a class="nav-item" href="https://arspb.nstc.gov.tw/NSCWebFront/modules/talentSearch/talentSearch.do?action=initRsm17new&rsNo=2a2ef24adef742f58349c3c533bb7402&LANG=chi" target="_blank" rel="noopener noreferrer">Projects</a>
+                    <a class="nav-item" href="https://canslab1.github.io/CYHuang.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+                    <a class="nav-item" href="https://sites.google.com/view/gscott-huang" target="_blank" rel="noopener noreferrer">Wiki</a>
+                    <a class="nav-item" href="https://www.facebook.com/gscott.huang/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a class="nav-item" href="https://canslab1.github.io/stories.html" target="_blank" rel="noopener noreferrer">Stories</a>
+                    <a class="nav-item" href="https://www.dropbox.com/scl/fo/ejwke56gkn1erv7meid4k/AHCPQXAw_RpiEn_PeiBfCuI?rlkey=b8k879fufdh98x2s3fzkatk5y&e=1&utm_campaign=photo&utm_medium=photo&utm_source=dropbox&dl=0" target="_blank" rel="noopener noreferrer">Photos</a>
+                    <a class="nav-item" href="https://www.google.com/search?q=%22Huang+Chung-yuan%22+%22Taipei+Times%22+%22Chang+Gung%22+site%3Awww.taipeitimes.com&num=10&newwindow=1&sca_esv=36b1b16fe835e4f2&rlz=1C5CHFA_enTW1033TW1033&sxsrf=AE3TifNZsvLqwILLgN68K2VK4ubWKdOI5Q%3A1748706267068&ei=2yM7aPj5A_TF1e8Ph-6lkQ0&ved=0ahUKEwi40_W-hs6NAxX0YvUHHQd3KdIQ4dUDCBI&uact=5&oq=%22Huang+Chung-yuan%22+%22Taipei+Times%22+%22Chang+Gung%22+site%3Awww.taipeitimes.com&gs_lp=Egxnd3Mtd2l6LXNlcnAiRyJIdWFuZyBDaHVuZy15dWFuIiAiVGFpcGVpIFRpbWVzIiAiQ2hhbmcgR3VuZyIgc2l0ZTp3d3cudGFpcGVpdGltZXMuY29tSNVxUIUyWNZvcAJ4AJABAJgBY6AB5gqqAQIyOLgBA8gBAPgBAZgCC6AC-QTCAggQABiwAxjvBcICCxAAGIAEGLADGKIEwgIHECMYJxiuAsICBRAAGO8FwgIIEAAYgAQYogTCAgUQIRigAZgDAIgGAZAGBJIHBDEwLjGgB7ZBsgcDOC4xyAcW&sclient=gws-wiz-serp"  target="_blank" rel="noopener noreferrer">Commentaries</a>
+                    <a class="nav-item" href="https://www.google.com/search?q=%22%E9%BB%83%E5%B4%87%E6%BA%90%22+%22%E8%87%AA%E7%94%B1%E6%99%82%E5%A0%B1%22+site%3Atalk.ltn.com.tw&num=10&newwindow=1&sca_esv=36b1b16fe835e4f2&rlz=1C5CHFA_enTW1033TW1033&sxsrf=AE3TifNrmmBifb70Mjqwcx6tYgAFEVjSow%3A1748706481736&ei=sSQ7aLraLO_c2roPu9bK8Qc&ved=0ahUKEwi40_W-hs6NAxVvrlYBHTurMn4Q4dUDCBI&uact=5&oq=%22%E9%BB%83%E5%B4%87%E6%BA%90%22+%22%E8%87%AA%E7%94%B1%E6%99%82%E5%A0%B1%22+site%3Atalk.ltn.com.tw&gs_lp=Egxnd3Mtd2l6LXNlcnAiLyLpu4PltIfmupAiICLoh6rnlLHmmYLloLEiIHNpdGU6dGFsay5sdG4uY29tLnR3SIkwUJAGWMkscAF4AJABAJgBnwGgAdEJqgEEMTkuMrgBA8gBAPgBAZgCB6AC3ATCAggQABiwAxjvBcICCxAAGLADGKIEGIkFwgILEAAYgAQYsAMYogTCAgUQIRigAcICBRAAGO8FmAMAiAYBkAYFkgcDNS4yoAffFrIHAzQuMrgH2QTCBwMxLjbIBw0&sclient=gws-wiz-serp" target="_blank" rel="noopener noreferrer">Op-Eds</a>
+                </div>
+            </div>
+        </nav>
+
+        <main role="main">
+            <div class="container">
+                <!-- 英文版介紹區塊 -->
+                <section id="overview" class="section active" role="region" aria-labelledby="section-overview-title">
+                    <h2 id="section-overview-title">Academic Performance and Achievements</h2>
+                    
+                    <!-- 英文版統計卡片容器 -->
+                    <div class="stats-grid" id="stats-container-en"></div>
+                    
+                    <br><br>
+                    <h2>Social Commitment and Public Recognition</h2>
+                    <div id="honors-en"></div>
+                    <p id="honors-paragraph-en" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; color: #555;">
+                        <!-- 英文版詳細介紹內容 -->
+                        <br>
+                        &emsp;&emsp;Good morning, Su! Good morning, Ho!<br><br>
+                        &emsp;&emsp;Every morning, President Chung-Yuan stands at the entrance of the Parents' Association office next to the auditorium, and greets every student entering the Lao-Song Campus by name and with a warm, cheerful smile. In the minds of Taipei Lao-Song Elementary School students, he is the man who always has a smile on his face, and who is always willing to bend down to the students' level to hear what's on their minds.<br><br>
+                        &emsp;&emsp;President Chung-Yuan graduated from Lao-Song in 1982, one of three generations in his family to attend. His uncle has been the Director of Student Affairs at the school for many years. That's why President Chung-Yuan frequently says, "Everything that happens at Lao-Song is my business, and it's my honor to help my alma mater, its teachers, and its students."<br><br>
+                        &emsp;&emsp;His gratitude, dedication, and positive feedback is evident in his devotion to serving as a volunteer for the Lao-song Parents' Association. Over the years he has served as the Association's Vice-President, Standing Committee member, and Chief of Volunteer Activities and Volunteer Programs. He knows the business of the Association inside and out. Toward the end of the epidemic he came into contact with parents of children at all grade levels, with backgrounds in horticulture, health care, guidance counseling, academic counseling, and books and reading, and promoted the educational philosophy of self-initiative, interaction, and the common good. The goal: to actively assist children in exploring and learning.<br><br>
+                        &emsp;&emsp;President Chung-Yuan has always been willing to share one of his most valuable resources: time. To help Lao-Song students, teachers, and volunteers with the transition back to in-class learning after the COVID-19 pandemic, he selflessly took on the task of sitting in the Parents' Association office every day, encouraging those around him with his energy, positive attitude, and skill at brainstorming creative ideas. Showing his care for the lives and efforts of Lao-Song students, he helped reorganize the Parents' Association to assist in all school affairs, especially educational work.<br><br>
+                        &emsp;&emsp;Mr. Hsiao, a former police officer assigned to Lao-Song who now serves as a security guard, often points his finger at President Chung-Yuan and says, "President, you are really great! You're at the school all day long, holding meetings and caring for teachers and students. In other schools the PA office is usually locked and only used for meetings and events. There's a big difference between the two!"<br><br>
+                        &emsp;&emsp;In addition to contributing his valuable time, President Chung-Yuan oversees parent-child development, parenting seminars, volunteer development, Thanksgiving meals, day trips, and other PA-sponsored activities with the same rigor that university professors dedicate to their research. From preparation to implementation, he takes great pain to review all activity details with his fellow volunteers, deal with surprises, and come up with remedies for problems. He often tells his teammates, "When organizing an event, we must make it lively and meaningful, so that everyone who participates can feel the full benefits, and return home with a sense of fulfillment."<br><br>
+                        &emsp;&emsp;Whether in person or in online discussion groups, parents have given President Chung-Yuan countless compliments for the way he deals with them and others. Some example comments include, "Lao-Song Elementary is blessed to have President Chung-Yuan"; "President Chung-Yuan is full of empathy, with no sense of separating differences, and can be trusted to achieve peace of mind"; "he is the most sincere, serious, and personally involved president"; "there has never been a relationship between the PA president and parents like the one we have right now"; and "we thank him for the wonderful changes he has brought about."<br><br>
+                        &emsp;&emsp;Rome was not built in a day, and the parents of Lao-Song students clearly appreciate President Chung-Yuan's long-term commitment to the school, in addition to his personal qualities. After spending time with him and observing him firsthand, some of his fellow volunteers described him as "humble and courteous, contributing without asking for anything in return"; "willing to listen, willing to communicate, responds immediately, explains in detail, is eager to help"; "puts his heart and soul into his work, leads by good example"; and "a skilled communicator who connects parents with teachers and school employees." He cheerfully describes himself in public as the Number One Duty Officer assigned by Lao-Song parents to serve teachers and students at the school, and a reliable partner for both parents and teachers.<br><br>
+                        &emsp;&emsp;In the minds of some parents, President Chung-Yuan acts like a wise elder who listens and responds with the goal of reducing suffering. He understands that students in post-pandemic classrooms are recovering academically at different rates, with a significant number of children feeling stuck. He also understands that the parents of such students need help from the school, and maybe from other sources. As a university educator for over 20 years, he thinks in terms of the learning needs of students. He willfully takes the time to reply to the questions of parents in detail, as well as assist them in navigating the various offices of school authorities. He helps parents convey their concerns and key points to school administrators, and provides assistance to staff members if they request it.<br><br>
+                        &emsp;&emsp;As a trusted parent advocate and duty officer, President Chung-Yuan is a skilled marketer of school policies and programs. To promote consistency between the needs of parents and the educational philosophy of Lao-Song, he is committed to serving as a safe bridge between teachers and students, assisting school officials with the task of explaining their policies to parents in detail, using appropriate communication channels that respect the needs of all parties. He is especially concerned about supporting the success of new initiatives such as bilingual education and international exchanges, explaining their objectives and possible impacts. In addition, he goes out of his way to keep parents informed of progress and the fruitful results of programs and policies, both old and new, thus promoting parent-teacher cooperation for the common good of all in the Lao-Song community.<br><br>
+                        &emsp;&emsp;Creating positive educational environments requires cooperation among all concerned partners, as well as the presence of role models to guide forward progress. Outside of teachers and staff, President Chung-Yuan has been the most active and contributing agent to the positive development of Lao-Song Elementary. Therefore we, the teachers and students of Lao-Song, enthusiastically endorse his participation in this year's Taipei Honored Contributors to Education Selection. Both the education sector and Lao-Song Elementary will benefit from his involvement.<br><br>
+                    </p>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- ===================================
+         頁尾區域
+         功能：顯示相關機構的 logo 連結
+         設計：固定在底部，懸停時 logo 會放大顯示
+    =================================== -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <!-- 
+                Logo 連結說明：
+                - 每個連結都在新視窗開啟（target="_blank"）
+                - aria-label 提升無障礙設計
+                - 懸停時會觸發 CSS 放大效果
+            -->
+            <a href="https://www.cgu.edu.tw/" target="_blank" rel="noopener noreferrer" aria-label="前往長庚大學官方網站">
+                <img src="https://canslab1.github.io/images/cgu.png" alt="長庚大學 logo" class="footer-logo">
+            </a>
+            <a href="https://www.cgu.edu.tw/csie/" target="_blank" rel="noopener noreferrer" aria-label="前往長庚大學資訊工程學系">
+                <img src="https://canslab1.github.io/images/csie.png" alt="長庚資工系 logo" class="footer-logo">
+            </a>
+            <a href="https://web.tlsps.tp.edu.tw/nss/p/index" target="_blank" rel="noopener noreferrer" aria-label="前往老松國小">
+                <img src="https://canslab1.github.io/images/laosong.png" alt="老松國小 logo" class="footer-logo">
+            </a>
+            <a href="https://www.cute.edu.tw/" target="_blank" rel="noopener noreferrer" aria-label="前往中國科技大學">
+                <img src="https://canslab1.github.io/images/cute.jpg" alt="中國科技大學 logo" class="footer-logo">
+            </a>
+            <a href="https://xingtan.tiec.tp.edu.tw/Register/Profile/20240715152009039506" target="_blank" rel="noopener noreferrer" aria-label="前往臺北市杏壇芬芳錄">
+                <img src="https://canslab1.github.io/images/favicon.ico" alt="臺北市杏壇芬芳錄 logo" class="footer-logo">
+            </a>
+        </div>
+    </footer>
+
+    <!-- ===================================
+         JavaScript 程式區塊
+         功能：中英文切換、導覽控制、動態內容生成
+         組織：全域變數 → 核心函數 → 事件處理 → 初始化
+    =================================== -->
+    <script>
+        // ===================================
+        // 全域變數定義
+        // ===================================
+        
+        /**
+         * 記錄目前顯示的語言狀態
+         * @type {string} 'zh' 代表中文，'en' 代表英文
+         */
+        let currentLanguage = 'zh';
+
+        // ===================================
+        // 核心功能函數
+        // ===================================
+
+        /**
+         * 語言切換函數
+         * 目標：在中英文內容之間進行切換顯示
+         * 機制：
+         * 1. 切換內容區塊的 active 類別
+         * 2. 更新切換按鈕的文字
+         * 3. 更新全域語言狀態變數
+         * 4. 修改 HTML 文件的 lang 屬性（提升 SEO 與無障礙）
+         * 
+         * 參數：無
+         * 回傳：無
+         * 
+         * 副作用：
+         * - 修改 DOM 元素的 class 屬性
+         * - 修改按鈕文字內容
+         * - 修改 HTML 根元素的 lang 屬性
+         */
+        function toggleLanguage() {
+            // 取得中英文內容區塊的 DOM 元素
+            const zhContent = document.getElementById('zh-content');
+            const enContent = document.getElementById('en-content');
+            const toggleButton = document.querySelector('.language-toggle');
+            
+            // 根據目前語言狀態進行切換
+            if (currentLanguage === 'zh') {
+                // 切換到英文：隱藏中文，顯示英文
+                zhContent.classList.remove('active');
+                enContent.classList.add('active');
+                toggleButton.textContent = '中文'; // 按鈕顯示下一個可切換的語言
+                currentLanguage = 'en'; // 更新全域狀態
+                document.documentElement.lang = 'en'; // 更新文件語言屬性
+            } else {
+                // 切換到中文：隱藏英文，顯示中文
+                enContent.classList.remove('active');
+                zhContent.classList.add('active');
+                toggleButton.textContent = 'English'; // 按鈕顯示下一個可切換的語言
+                currentLanguage = 'zh'; // 更新全域狀態
+                document.documentElement.lang = 'zh-TW'; // 更新文件語言屬性
+            }
+        }
+
+        /**
+         * 頁面區塊顯示函數
+         * 目標：控制不同內容區塊的顯示與隱藏（目前僅用於 "介紹" 區塊）
+         * 機制：
+         * 1. 隱藏目前語言版本中的所有區塊
+         * 2. 移除所有導覽項目的 active 狀態
+         * 3. 顯示指定的目標區塊
+         * 4. 為觸發的導覽項目添加 active 狀態
+         * 5. 隱藏行動裝置的導覽選單
+         * 6. 平滑捲動到頁面頂部
+         * 
+         * @param {string} sectionId - 要顯示的區塊 ID（如 'overview'）
+         * @param {Event|null} event - 觸發事件物件，用於取得點擊的導覽項目
+         * 
+         * 回傳：無
+         * 
+         * 注意事項：
+         * - 函數會自動偵測目前顯示的語言版本
+         * - 支援鍵盤導覽（透過 event.target 判斷）
+         * - 具備容錯機制（targetSection 不存在時不會報錯）
+         */
+        function showSection(sectionId, event) {
+            // 根據目前語言取得對應的內容區塊
+            const currentLangContent = currentLanguage === 'zh'
+                ? document.getElementById('zh-content')
+                : document.getElementById('en-content');
+            
+            // 隱藏當前語言版本中的所有區塊
+            const sections = currentLangContent.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            
+            // 移除所有導覽項目的啟用狀態
+            const navItems = currentLangContent.querySelectorAll('.nav-item');
+            navItems.forEach(item => item.classList.remove('active'));
+            
+            // 顯示目標區塊並添加淡入動畫
+            const targetSection = currentLangContent.querySelector(`#${sectionId}`);
+            if (targetSection) {
+                targetSection.classList.add('active', 'fade-in');
+            }
+            
+            // 為觸發的導覽項目添加啟用狀態
+            if (event && event.target) {
+                event.target.classList.add('active');
+            }
+            
+            // 自動隱藏行動裝置的導覽選單
+            const navContainer = currentLangContent.querySelector('.nav-container');
+            if (navContainer && navContainer.classList.contains('show')) {
+                navContainer.classList.remove('show');
+            }
+            
+            // 平滑捲動至頁面頂部，提升使用者體驗
+            window.scrollTo({ 
+                top: 0, 
+                behavior: 'smooth' 
+            });
+        }
+
+        /**
+         * 行動裝置導覽選單切換函數
+         * 目標：在小螢幕裝置上切換導覽選單的顯示/隱藏狀態
+         * 機制：切換導覽容器的 'show' 類別
+         * 
+         * 參數：無
+         * 回傳：無
+         * 
+         * 使用時機：
+         * - 使用者點擊漢堡選單按鈕（☰）
+         * - 僅在 768px 以下的螢幕寬度生效（透過 CSS 媒體查詢控制）
+         */
+        function toggleNav() {
+            // 根據目前語言取得對應的導覽容器
+            const currentNav = currentLanguage === 'zh'
+                ? document.querySelector('#zh-content .nav-container')
+                : document.querySelector('#en-content .nav-container');
+            
+            // 切換顯示/隱藏狀態
+            currentNav.classList.toggle('show');
+        }
+
+        // ===================================
+        // DOM 載入完成後的初始化處理
+        // ===================================
+
+        /**
+         * 頁面初始化事件監聽器
+         * 執行時機：DOM 完全載入後
+         * 功能：
+         * 1. 建立中英文版本的統計數據卡片
+         * 2. 建立中英文版本的榮譽記錄內容
+         * 3. 為統計卡片添加互動事件監聽器
+         */
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // ===================================
+            // 統計數據陣列定義
+            // ===================================
+            
+            /**
+             * 中文版統計數據
+             * 資料結構：
+             * - number: 顯示的數字（字串，可包含單位）
+             * - label: 說明標籤
+             * - url: 點擊後跳轉的連結
+             */
+            const statsZh = [
+                { number: '43篇',   label: '期刊論文', url: 'https://canslab1.github.io/CYHuang.pdf#page=21' },
+                { number: '49篇',   label: '國際研討會', url: 'https://canslab1.github.io/CYHuang.pdf#page=24' },
+                { number: '10篇',   label: '專書專章', url: 'https://canslab1.github.io/CYHuang.pdf#page=27' },
+                { number: '19篇',   label: '國內研討會', url: 'https://canslab1.github.io/CYHuang.pdf#page=29' },
+                { number: '43次',   label: '評論及採訪', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '22次',   label: '計畫主持人', url: 'https://canslab1.github.io/CYHuang.pdf#page=3' },
+                { number: '1408萬', label: '國科會預算', url: 'https://canslab1.github.io/CYHuang.pdf#page=3' },
+                { number: '14次',   label: '共同主持人', url: 'https://canslab1.github.io/CYHuang.pdf#page=4' },
+                { number: '965次',  label: 'Citations', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en#d=gsc_md_hist&t=1748751167682' },
+                { number: '18篇',   label: 'h-index', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '30篇',   label: 'i10-index', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '47人',   label: '指導專題生', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '24人',   label: '指導碩士', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '2人',    label: '指導博士', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '62篇',   label: '論文審稿', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '26次',   label: '會議審稿', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '68次',   label: '議程委員', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '11次',   label: '計劃審查', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '10次',   label: '學術審查', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '26次',   label: '專題演講', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '10年',   label: '教授', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '5年',    label: '副教授', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '5年',    label: '助理教授', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '5年',    label: '講師', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '11年',   label: '業界經驗', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '4個',    label: '合聘單位', url: 'https://canslab1.github.io/CYHuang.pdf#page=1' },
+                { number: '3年',    label: '獨立董事', url: 'https://canslab1.github.io/CYHuang.pdf#page=1' },
+                { number: '7年',    label: '學生家長會', url: 'https://canslab1.github.io/CYHuang.pdf#page=1' }
+            ];
+
+            /**
+             * 英文版統計數據
+             * 對應中文版數據，但使用英文標籤
+             */
+            const statsEn = [
+                { number: '43',   label: 'Journal Papers', url: 'https://canslab1.github.io/CYHuang.pdf#page=21' },
+                { number: '49',   label: 'Int\'l Conferences', url: 'https://canslab1.github.io/CYHuang.pdf#page=24' },
+                { number: '10',   label: 'Book Chapters', url: 'https://canslab1.github.io/CYHuang.pdf#page=27' },
+                { number: '19',   label: 'Domestic Conferences', url: 'https://canslab1.github.io/CYHuang.pdf#page=29' },
+                { number: '43',   label: 'Commentaries & Op-Eds', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '22',   label: 'PI Projects', url: 'https://canslab1.github.io/CYHuang.pdf#page=3' },
+                { number: '$14.08M', label: 'NSTC Budget', url: 'https://canslab1.github.io/CYHuang.pdf#page=3' },
+                { number: '14',   label: 'Co-PI Projects', url: 'https://canslab1.github.io/CYHuang.pdf#page=4' },
+                { number: '965',  label: 'Citations', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en#d=gsc_md_hist&t=1748751167682' },
+                { number: '18',   label: 'h-index', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '30',   label: 'i10-index', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '47',   label: 'Undergraduate Students', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '24',   label: 'Master\'s Students', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '2',    label: 'PhD Students', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '62',   label: 'Paper Reviews', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '26',   label: 'Conference Reviews', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '68',   label: 'Program Committee', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '11',   label: 'Project Reviews', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '10',   label: 'Academic Reviews', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '26',   label: 'Invited Talks', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '10 yrs',   label: 'Full Professor', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '5 yrs',    label: 'Associate Professor', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '5 yrs',    label: 'Assistant Professor', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '5 yrs',    label: 'Lecturer', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '11 yrs',   label: 'Industry Experience', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+                { number: '4',    label: 'Joint Appointments', url: 'https://canslab1.github.io/CYHuang.pdf#page=1' },
+                { number: '3 yrs',    label: 'Independent Director', url: 'https://canslab1.github.io/CYHuang.pdf#page=1' },
+                { number: '7 yrs',    label: 'Parent Association', url: 'https://canslab1.github.io/CYHuang.pdf#page=1' }
+            ];
+
+            /**
+             * 統計卡片建立函數
+             * 目標：根據資料陣列動態建立統計卡片並添加互動功能
+             * 
+             * @param {Array} stats - 統計資料陣列，每個元素包含 number、label、url 屬性
+             * @param {string} containerId - 目標容器的 DOM ID
+             * 
+             * 功能：
+             * 1. 清空目標容器
+             * 2. 為每筆統計資料建立卡片元素
+             * 3. 設定無障礙屬性（tabindex、role、aria-label）
+             * 4. 添加點擊事件監聽器（開啟外部連結）
+             * 5. 添加滑鼠懸停動畫效果
+             */
+            function createStatsCards(stats, containerId) {
+                const container = document.getElementById(containerId);
+                container.innerHTML = ''; // 清空現有內容
+                
+                stats.forEach((item, index) => {
+                    // 建立卡片元素
+                    const card = document.createElement('div');
+                    card.className = 'stat-card';
+                    
+                    // 設定無障礙屬性
+                    card.setAttribute('tabindex', '0'); // 支援鍵盤導覽
+                    card.setAttribute('role', 'button'); // 標明為可點擊元素
+                    card.setAttribute('aria-label', `點選查看 ${item.label}`); // 螢幕報讀器說明
+                    card.setAttribute('data-url', item.url); // 儲存連結資訊
+                    
+                    // 設定卡片內容
+                    card.innerHTML = `
+                        <span class="stat-number">${item.number}</span>
+                        <div class="stat-label">${item.label}</div>
+                    `;
+                    
+                    // 添加點擊事件：在新視窗開啟連結
+                    card.addEventListener('click', () => window.open(item.url, '_blank'));
+                    
+                    // 添加滑鼠懸停動畫效果
+                    card.addEventListener('mouseenter', () => {
+                        card.style.transform = 'translateY(-5px) scale(1.02)';
+                    });
+                    card.addEventListener('mouseleave', () => {
+                        card.style.transform = 'translateY(0) scale(1)';
+                    });
+                    
+                    // 將卡片加入容器
+                    container.appendChild(card);
+                });
+            }
+
+            // 建立中英文版統計卡片
+            createStatsCards(statsZh, 'stats-container-zh');
+            createStatsCards(statsEn, 'stats-container-en');
+
+            // ===================================
+            // 榮譽記錄內容定義與建立
+            // ===================================
+
+            /**
+             * 中文版榮譽記錄內容
+             * 格式：HTML 字串，支援 span 標籤的顏色樣式
+             */
+            const honorsZh = [
+                '<span style="color: #2980b9;">中國科技大學</span><br>2024.11 榮獲傑出校友<br>2000.11 榮獲優秀校友<br>校史唯一先後獲頒傑出與優秀校友',
+                '<span style="color: #2980b9;">臺北市杏壇芬芳獎</span><br>2024.11 榮獲臺北市教育局公開表揚',
+                '<span style="color: #2980b9;">臺北市老松國民小學學生家長會</span><br>2024.10 榮膺第 34 屆榮譽會長<br>2023.10 擔任臺北市小聯會常務理事<br>2022.10 擔任第 32 和 33 屆會長',
+                '<span style="color: #2980b9;">所羅門股份有限公司</span><br>2022.06 榮膺第十二屆董事會獨立董事<br>2022.06 擔任薪資報酬、審計、永續發展委員<br>',
+                '<span style="color: #2980b9;">中華民國斐陶斐榮譽學會獎</span><br>2006.06 榮獲國立交通大學公開頒發<br>表彰卓越學術成就與優異品德操守',
+                '<span style="color: #2980b9;">臺北市杏壇芬芳獎推薦文</span><br>源源不絕無私大愛，守護美好優質老松'
+            ];
+
+            /**
+             * 英文版榮譽記錄內容
+             */
+            const honorsEn = [
+                '<span style="color: #2980b9;">China University of Technology</span><br>2024.11 Distinguished Alumni Award<br>2000.11 Outstanding Alumni Award<br>the only recipient in university history of both Distinguished and Outstanding Alumni honors.',
+                '<span style="color: #2980b9;">2024.10 Taipei City Fragrant Chronicle of the Apricot Altar</span><br>Bottomless Devotion to Taipei Lao-Song Elementary School',
+                '<span style="color: #2980b9;">Laosong Elementary School, Taipei City</span><br>2024.10 Honorary President, 34th Parents&#39; Association<br>2022.10-2024.10 President of the 32nd and 33rd Parents&#39; Association',
+                '<span style="color: #2980b9;">Solomon Technology Corporation</span><br>2022.06 Served as Independent Director on the 12th Board of Directors of Solomon Co., Ltd.',
+                '<span style="color: #2980b9;">Phi Tau Phi Honor Award</span><br> 2006.06 Awarded by National Chiao Tung University,<br>in recognition of academic excellence and exemplary character',
+                '<span style="color: #2980b9;">Recommendation Article for the Taipei City Fragrant Record of Education</span>'
+            ];
+
+            /**
+             * 榮譽記錄建立函數
+             * 目標：將榮譽內容陣列轉換為 h3 標題元素
+             * 
+             * @param {Array} honors - 榮譽內容陣列，每個元素為 HTML 字串
+             * @param {string} containerId - 目標容器的 DOM ID
+             * 
+             * 功能：
+             * 1. 清空目標容器
+             * 2. 為每筆榮譽記錄建立 h3 元素
+             * 3. 設定無障礙屬性（role="listitem"）
+             * 4. 插入 HTML 內容
+             */
+            function createHonors(honors, containerId) {
+                const container = document.getElementById(containerId);
+                container.innerHTML = ''; // 清空現有內容
+                
+                honors.forEach(txt => {
+                    const h3 = document.createElement('h3');
+                    h3.setAttribute('role', 'listitem'); // 無障礙設計
+                    h3.innerHTML = txt; // 插入 HTML 內容（支援 span 等標籤）
+                    container.appendChild(h3); // 加入容器
+                });
+            }
+
+            // ===================================
+            // 執行初始化：建立統計卡片與榮譽記錄
+            // ===================================
+            
+            // 建立中英文版榮譽記錄
+            createHonors(honorsZh, 'honors-zh');
+            createHonors(honorsEn, 'honors-en');
+        });
+    </script>
+
+        <!-- ===================================
+         結構化資料標記
+         目的：提供搜尋引擎豐富的語意資訊
+         格式：JSON-LD（Google 推薦格式）
+         =================================== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Chung-Yuan Huang",
+        "alternateName": "黃崇源",
+        "jobTitle": "Professor",
+        "affiliation": {
+            "@type": "Organization",
+            "name": "Chang Gung University, Department of Computer Science and Information Engineering"
+        },
+        "url": "https://canslab1.github.io/CYHuang.html",
+        "image": "https://canslab1.github.io/images/IMG-2.jpg",
+        "sameAs": [
+            "https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en",
+            "https://www.facebook.com/gscott.huang/",
+            "https://sites.google.com/view/gscott-huang"
+        ]
+    }

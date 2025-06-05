@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="zh-TW" itemscope itemtype="https://schema.org/WebPage">
+<head>
+    <!-- ===========================================
+         瀏覽器相容性與編碼設定區塊
+         目的：確保網頁在不同瀏覽器中的一致性表現
+         =========================================== -->
+
+    <!-- 指定網頁使用 UTF-8 字元編碼，支援多國語言 -->
+    <meta charset="UTF-8">
+
+     <!-- 設定 Internet Explorer 使用最新渲染引擎 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- 響應式設計視口設定，控制行動裝置顯示比例 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===========================================
+         頁面標題與圖示設定
+         目的：顯示在瀏覽器標籤頁的標題與圖示
+         =========================================== -->
+    <title>黃崇源的60道手工伍仁餡</title>
+    <link rel="icon" href="https://canslab1.github.io/images/csie.png" type="image/png">
+    <link rel="canonical" href="https://canslab1.github.io/stories.html">
+    <link rel="preload" as="image" href="https://canslab1.github.io/images/IMG-2.jpg">
+
+    <!-- ================================
+         SEO 搜尋引擎最佳化區塊
+         ================================ -->
+    <meta name="description" content="60篇手工書寫的家族故事，橫跨三代記憶，從龍山寺旁的西園路到福州祖籍，展現真摯情感與時代記憶。">
+    <meta name="keywords" content="黃崇源, 家族故事, 手工書寫, 台北龍山寺, 西園路, 阿雲, 大頭仔, 家暴, 愛人, 平安福, 貴人, 記憶傳承, 傳統文化, Chung-Yuan Huang, family memoir">
+    <meta name="author" content="Prof. Chung-Yuan Huang (黃崇源教授)">
+
+    <!-- ===========================================
+         Open Graph 社群媒體分享最佳化區塊
+         目的：控制在 Facebook、LinkedIn 等平台分享時的顯示效果
+         =========================================== -->
+    <meta property="og:title" content="大頭仔的60道手工伍仁餡故事集">
+    <meta property="og:description" content="60則從台北龍山寺到福州鄉村的生命記憶，重構家族歷史、悲喜交織、情感豐沛的軼事軌跡。">
+    <meta property="og:image" content="https://canslab1.github.io/images/IMG-2.jpg">
+    <meta property="og:url" content="https://canslab1.github.io/stories.html">
+    <meta property="og:type" content="article">
+
+    <!-- ===========================================
+         Twitter Card 設定區塊
+         目的：最佳化在 Twitter 平台的分享顯示效果
+         =========================================== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="大頭仔的60道手工伍仁餡故事集">
+    <meta name="twitter:description" content="橫跨三代的生命故事，講述一位台灣教授的成長與記憶書寫，情感細膩，充滿台味人情。">
+    <meta name="twitter:image" content="https://canslab1.github.io/images/IMG-2.jpg">
+
+    <!-- ===========================================
+         快取控制設定區塊
+         目的：防止瀏覽器快取過期內容，確保使用者看到最新版本
+         =========================================== -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "黃崇源的60道手工伍仁餡故事集",
+        "alternateName": "大頭仔的60道手工伍仁餡",
+        "url": "https://canslab1.github.io/stories.html",
+        "inLanguage": "zh-TW",
+        "description": "60篇手工書寫的家族故事，橫跨三代記憶，從龍山寺旁的西園路到福州祖籍，展現真摯情感與時代記憶。",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "黃崇源教授個人網站",
+            "url": "https://canslab1.github.io/"
+        },
+        "publisher": {
+            "@type": "Person",
+            "name": "Chung-Yuan Huang",
+            "alternateName": "黃崇源教授",
+            "affiliation": {
+                "@type": "Organization",
+                "name": "Chang Gung University"
+            }
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Chung-Yuan Huang",
+            "alternateName": "黃崇源教授",
+            "image": "https://canslab1.github.io/images/IMG-2.jpg",
+            "jobTitle": "Professor",
+            "affiliation": {
+                "@type": "Organization",
+                "name": "Chang Gung University"
+            }
+        },
+        "mainEntity": {
+            "@type": "CreativeWorkSeries",
+            "name": "大頭仔的60道手工伍仁餡",
+            "description": "本系列為作者親自撰寫的家族回憶錄，透過手工書寫的故事講述跨越時代的親情、貧困與奮鬥歷程。",
+            "genre": "家族故事、台灣記憶、回憶錄",
+            "image": "https://canslab1.github.io/images/IMG-2.jpg",
+            "author": {
+                "@type": "Person",
+                "name": "Chung-Yuan Huang"
+            }
+        }
+    }
+    </script>
+    
+    <!-- ===========================================
+         CSS 樣式表定義區塊
+         組織原則：全域設定 → 版面配置 → 元件樣式 → 響應式設計
+         =========================================== -->
+    <style>
+        /* ===================================
+           全域預設樣式重設
+           目的：統一不同瀏覽器的預設樣式差異
+           =================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ===================================
+           HTML 與 BODY 基礎版面設定
+           目的：建立彈性排版容器，支援 sticky footer 效果
+           =================================== */
+        html, body {
+            height: 100%; /* 確保最小高度為視窗高度 */
+            display: flex;
+            flex-direction: column; /* 垂直排列：header → main → footer */
+        }
+
+        /* ===================================
+           主體字體與背景設定
+           字體順序：系統字體 → 中文字體 → 英文後備字體
+           =================================== */
+        body {
+            font-family: system-ui, -apple-system, 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background-color: #f8f9fa;
+        }
+
+        /* ===================================
+           容器通用樣式
+           目的：統一內容區塊的最大寬度與水平置中
+           =================================== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px; /* 修正：移除空格 */
+        }
+
+        /* 個人照片樣式：圓形裁切與陰影效果 */
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin: 1rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* ===================================
+           頁首區域設計
+           特色：背景圖片疊加漸層色彩，營造專業視覺效果
+           =================================== */        
+        header {
+            background: 
+                linear-gradient(135deg, rgba(20, 83, 45, 0.85) 0%, rgba(26, 119, 69, 0.85) 100%),
+                url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            position: relative;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 1px, transparent 1px),
+                radial-gradient(circle at 80% 70%, rgba(255,255,255,0.08) 2px, transparent 2px),
+                radial-gradient(circle at 60% 20%, rgba(0,0,0,0.05) 1px, transparent 1px),
+                radial-gradient(circle at 40% 80%, rgba(255,255,255,0.06) 1.5px, transparent 1.5px);
+            background-size: 200px 200px, 150px 150px, 300px 300px, 250px 250px;
+            opacity: 0.8;
+        }
+
+        .header-text h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 0.3rem;
+        }
+
+        .subheadline {
+            font-size: 1.4rem;
+            font-weight: 300;
+            font-stretch: condensed;
+            color: hsl(210, 100%, 93%);
+            text-shadow: 0 0 2px rgba(255, 255, 255, 0.15);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            text-align: center;
+        }
+        
+        /* ===================================
+           導覽列設計
+           功能：黏性定位導覽，在捲動時始終可見
+           =================================== */
+        nav {
+            background: #fff;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 0;
+        }
+
+        /* 導覽容器：彈性佈局支援項目水平排列 */
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+        }
+
+        /* 導覽項目基礎樣式 */
+        .nav-link {
+            color: #2c3e50;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            background: none;
+            border: none;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            white-space: nowrap;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        /* 導覽項目懸停與啟用狀態 */
+        .nav-link:hover {
+            background: #27ae60;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-toggle {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: #4c1d95;
+            cursor: pointer;
+            padding: 10px 15px;
+            margin-left: 1rem;
+        }
+        
+        /* ===================================
+           主要內容區域設定
+           =================================== */
+        main {
+            padding: 40px 0;
+        }
+
+        .chapter {
+            background: white;
+            margin: 40px 0;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .chapter:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .chapter-title {
+            font-size: 2.5em;
+            color: #4c1d95;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .chapter-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(135deg, #4c1d95, #6b21a8);
+            border-radius: 2px;
+        }
+
+        .section {
+            margin: 30px 0;
+            scroll-margin-top: 70px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #4c1d95;
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 4px solid #4c1d95;
+            position: relative;
+        }
+
+        .story-content {
+            font-size: 1.1em;
+            line-height: 1.9;
+            text-align: justify;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9ff;
+            border-radius: 10px;
+            border-left: 4px solid #e3e8ff;
+            transition: all 0.3s ease;
+            text-indent: 2em;
+        }
+
+        .story-content:hover {
+            background: #f0f4ff;
+            border-left-color: #4c1d95;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #e9d5ff 0%, #f3e8ff 100%);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .poem {
+            background: linear-gradient(135deg, #4c1d95, #6b21a8);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+            font-style: italic;
+            line-height: 2;
+            box-shadow: 0 10px 25px rgba(76, 29, 149, 0.3);
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #4c1d95;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(76, 29, 149, 0.4);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: #6b21a8;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(76, 29, 149, 0.6);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .table-of-contents {
+            background: linear-gradient(135deg, #27ae60 0%, #219150 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .table-of-contents::before {
+            content: none;
+        }
+
+        .toc-title {
+            font-size: 1.7em;
+            font-weight: 500;
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            padding-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .toc-title:hover {
+            color: #e9d5ff;
+            transform: translateY(-2px);
+        }
+
+        .toc-arrow {
+            display: inline-block;
+            transition: transform 0.3s ease;
+            margin-right: 10px;
+            font-size: 0.8em;
+            color: #e9d5ff;
+        }
+
+        .toc-arrow.expanded {
+            transform: rotate(90deg);
+        }
+
+        .toc-hint {
+            font-size: 0.5em;
+            opacity: 0.7;
+            margin-left: 10px;
+            font-style: italic;
+        }
+
+        .toc-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+            pointer-events: none;
+        }
+
+        .toc-content.expanded {
+            max-height: none;
+            transition: none;
+            pointer-events: auto;
+        }
+
+        .toc-chapter {
+            margin-bottom: 25px;
+        }
+
+        .toc-chapter-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #e9d5ff;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 8px;
+        }
+
+        .toc-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 10px;
+        }
+
+        .toc-item {
+            margin: 5px 0;
+            padding: 8px 12px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .toc-item:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateX(5px);
+        }
+
+        .toc-link {
+            color: white;
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .toc-link:hover {
+            color: #e9d5ff;
+        }
+
+        /* ===================================
+           響應式設計：中小型螢幕適配
+           斷點：768px 以下視為行動裝置
+           =================================== */
+        @media (max-width: 768px) {
+            /*
+            .section {
+                scroll-margin-top: 100px;
+            }
+            */
+            .section {
+                padding: 0 15px;
+            }
+            
+            .header-text h1 {
+                font-size: 1.7rem;
+                line-height: 1.4;
+                margin-bottom: 0.3rem;
+            }
+
+            .subheadline {
+                font-size: 1.1rem;
+                line-height: 1.4;
+            }
+
+            .profile-photo {
+                width: 140px;
+                height: 140px;
+                margin: 0.5rem;
+            }
+            
+            .chapter {
+                padding: 25px;
+                margin: 20px 0;
+            }
+            
+            .chapter-title {
+                font-size: 1.8em;
+            }
+            
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                background: white;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                z-index: 99;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+            
+            .nav-link {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+            
+            .toc-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===================================
+           響應式設計：中等螢幕適配
+           斷點：769px 到 1024px 之間的平板裝置
+           =================================== */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .nav-link {
+                padding: 0.5rem 0.6rem; /* 緊密間距適應中等螢幕 */
+                font-size: 0.9rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <!-- 教授個人照片 -->
+                <img src="https://canslab1.github.io/images/IMG-2.jpg" alt="Chung-Yuan Huang（黃崇源），長庚大學資訊工程學系教授，個人官方網站大頭照" class="profile-photo">
+                <div class="header-text">
+                    <h1>大頭仔 ㄟ 手工伍仁餡</h1>
+                    <div class="subheadline">60 篇龍山寺旁西園路佛具街上的軼事</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <button class="nav-toggle" onclick="toggleMenu()">☰ 章節</button>
+            <div class="nav-links" id="navLinks">
+                <a href="#chapter1" class="nav-link">依六追阿雲</a>
+                <a href="#chapter2" class="nav-link">大頭仔</a>
+                <a href="#chapter3" class="nav-link">愛人月如</a>
+                <a href="#chapter4" class="nav-link">平安福</a>
+                <a href="#chapter5" class="nav-link">貴人</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div id="toc" class="table-of-contents">
+            <div class="toc-title" onclick="toggleTOC()">
+                <span class="toc-arrow">▶</span>
+                目　　錄
+                <span class="toc-hint">點擊展開</span>
+            </div>
+            
+            <div class="toc-content" id="tocContent">
+            <div class="toc-chapter">
+                <div class="toc-chapter-title">依六追阿雲</div>
+                <div class="toc-list">
+                    <div class="toc-item"><a href="#section1-1" class="toc-link">從福州來台闖蕩的少年郎</a></div>
+                    <div class="toc-item"><a href="#section1-2" class="toc-link">一碗地瓜粥一段好姻緣</a></div>
+                    <div class="toc-item"><a href="#section1-3" class="toc-link">聰明內斂、堅強柔韌</a></div>
+                    <div class="toc-item"><a href="#section1-4" class="toc-link">歌廳秀</a></div>
+                    <div class="toc-item"><a href="#section1-5" class="toc-link">家暴</a></div>
+                    <div class="toc-item"><a href="#section1-6" class="toc-link">想你</a></div>
+                    <div class="toc-item"><a href="#section1-7" class="toc-link">三水街買菜</a></div>
+                    <div class="toc-item"><a href="#section1-8" class="toc-link">心上人</a></div>
+                    <div class="toc-item"><a href="#section1-9" class="toc-link">活菩薩</a></div>
+                </div>
+            </div>
+
+            <div class="toc-chapter">
+                <div class="toc-chapter-title">大頭仔</div>
+                <div class="toc-list">
+                    <div class="toc-item"><a href="#section2-1" class="toc-link">西園路上的吉光片羽</a></div>
+                    <div class="toc-item"><a href="#section2-2" class="toc-link">龍山商場賒帳飆車高手</a></div>
+                    <div class="toc-item"><a href="#section2-3" class="toc-link">我漂亮嗎</a></div>
+                    <div class="toc-item"><a href="#section2-4" class="toc-link">少年警察追姊姊阿美珠</a></div>
+                    <div class="toc-item"><a href="#section2-5" class="toc-link">從雙十國慶閱兵想新冠疫情停課</a></div>
+                    <div class="toc-item"><a href="#section2-6" class="toc-link">夜市擺攤</a></div>
+                    <div class="toc-item"><a href="#section2-7" class="toc-link">大學教授之前</a></div>
+                    <div class="toc-item"><a href="#section2-8" class="toc-link">伍仁，是一種餡，也是態度</a></div>
+                    <div class="toc-item"><a href="#section2-9" class="toc-link">不當教授，Who am I to ...</a></div>
+                    <div class="toc-item"><a href="#section2-10" class="toc-link">夜市小鮮肉</a></div>
+                    <div class="toc-item"><a href="#section2-11" class="toc-link">小小傳令兵</a></div>
+                    <div class="toc-item"><a href="#section2-12" class="toc-link">愛看書</a></div>
+                    <div class="toc-item"><a href="#section2-13" class="toc-link">閱讀</a></div>
+                    <div class="toc-item"><a href="#section2-14" class="toc-link">穿越世界</a></div>
+                    <div class="toc-item"><a href="#section2-15" class="toc-link">二本相簿</a></div>
+                    <div class="toc-item"><a href="#section2-16" class="toc-link">查某 vs. 海賊</a></div>
+                    <div class="toc-item"><a href="#section2-17" class="toc-link">龍山國中</a></div>
+                    <div class="toc-item"><a href="#section2-18" class="toc-link">人生第一桶金</a></div>
+                    <div class="toc-item"><a href="#section2-19" class="toc-link">五專七年級</a></div>
+                    <div class="toc-item"><a href="#section2-20" class="toc-link">可樂源</a></div>
+                    <div class="toc-item"><a href="#section2-21" class="toc-link">少年人過生日</a></div>
+                    <div class="toc-item"><a href="#section2-22" class="toc-link">2005年應徵教職自傳</a></div>
+                    <div class="toc-item"><a href="#section2-23" class="toc-link">世事無絕對</a></div>
+                    <div class="toc-item"><a href="#section2-24" class="toc-link">爬呀爬呀過沙河</a></div>
+                    <div class="toc-item"><a href="#section2-25" class="toc-link">幸福的感傷</a></div>
+                    <div class="toc-item"><a href="#section2-26" class="toc-link">守護幸福</a></div>
+                </div>
+            </div>
+
+            <div class="toc-chapter">
+                <div class="toc-chapter-title">愛人月如</div>
+                <div class="toc-list">
+                    <div class="toc-item"><a href="#section3-1" class="toc-link">夜市教電腦</a></div>
+                    <div class="toc-item"><a href="#section3-2" class="toc-link">錦囊妙策三則</a></div>
+                    <div class="toc-item"><a href="#section3-3" class="toc-link">輔大校園</a></div>
+                    <div class="toc-item"><a href="#section3-4" class="toc-link">定情物</a></div>
+                    <div class="toc-item"><a href="#section3-5" class="toc-link">不想讓你等了</a></div>
+                    <div class="toc-item"><a href="#section3-6" class="toc-link">真少女</a></div>
+                    <div class="toc-item"><a href="#section3-7" class="toc-link">結婚十週年</a></div>
+                    <div class="toc-item"><a href="#section3-8" class="toc-link">俏魔女</a></div>
+                    <div class="toc-item"><a href="#section3-9" class="toc-link">時時勤拂拭，勿使惹塵埃</a></div>
+                    <div class="toc-item"><a href="#section3-10" class="toc-link">像盛開櫻花，時時綻放光芒</a></div>
+                    <div class="toc-item"><a href="#section3-11" class="toc-link">我的瑪法達</a></div>
+                </div>
+            </div>
+
+            <div class="toc-chapter">
+                <div class="toc-chapter-title">平安福</div>
+                <div class="toc-list">
+                    <div class="toc-item"><a href="#section4-1" class="toc-link">無價長生寶</a></div>
+                    <div class="toc-item"><a href="#section4-2" class="toc-link">小福仙</a></div>
+                    <div class="toc-item"><a href="#section4-3" class="toc-link">抓周</a></div>
+                    <div class="toc-item"><a href="#section4-4" class="toc-link">龍山澡堂</a></div>
+                    <div class="toc-item"><a href="#section4-5" class="toc-link">上學了</a></div>
+                </div>
+            </div>
+
+            <div class="toc-chapter">
+                <div class="toc-chapter-title">貴人</div>
+                <div class="toc-list">
+                    <div class="toc-item"><a href="#section5-1" class="toc-link">奶姆高周金貴女士</a></div>
+                    <div class="toc-item"><a href="#section5-2" class="toc-link">小學三年級導師蔡幸美老師</a></div>
+                    <div class="toc-item"><a href="#section5-3" class="toc-link">工具人</a></div>
+                    <div class="toc-item"><a href="#section5-4" class="toc-link">52封寄不出的信</a></div>
+                    <div class="toc-item"><a href="#section5-5" class="toc-link">超級麻吉吳承育</a></div>
+                    <div class="toc-item"><a href="#section5-6" class="toc-link">好友就數陳兆芳最寶最古怪了</a></div>
+                    <div class="toc-item"><a href="#section5-7" class="toc-link">練家子</a></div>
+                    <div class="toc-item"><a href="#section5-8" class="toc-link">親愛的大姨</a></div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <section id="chapter1" class="chapter">
+            <h2 class="chapter-title">依六追阿雲</h2>
+            
+            <div id="section1-1" class="section">
+                <h3 class="section-title">從福州來台闖蕩的少年郎</h3>
+                <div class="story-content">
+                    黃依六，生於福建省林森縣忠義鄉尚保村19號，家中排行16。出生時，父親歲數已過60，13歲前由家中兄嫂照顧長大。在那個戰亂和瘟疫頻傳的大時代裡，經濟拮据人口過多的農村大家庭實在沒多餘的錢供家中老么上學唸書，所以，他一輩子沒上過學，不識字，只在兄嫂的教導下，識得自己的姓名「黃依六」三個字。
+                </div>
+                <div class="story-content">
+                    13歲那年，從台灣回福州短暫探親的遠房親戚隨口問他，要不要跟他一起去大海對面的台灣島打拼，他打赤膊穿著兄長不要的破舊開襠褲，想都沒想就回「好」。就這樣，在遠房親戚好心資助下，第一次搭大船過黑水溝來到當時正在開墾發展，遠景一片看好的台灣南部打狗港，落腳在一家鐘錶店當學徒。
+                </div>
+                <div class="story-content">
+                    過了半年，他打聽到家鄉另一位表親在台北開皮鞋工廠，所以辭掉高雄鐘錶店學徒工作，跟朋友借了點錢，搭火車來台北依親，在表親的皮鞋工廠當學徒，學習製作男女皮鞋。學徒的薪資很低，為了多存點錢，他跟表親老闆商量，利用工廠下班後，在西門町表親開的一家皮鞋店門口旁擺攤賣糖果賺外快。表親看在眼裡，對他的生意頭腦讚許有加且溢於言表，甚至希望將其中一位女兒許配給他。
+                </div>
+                <div style="text-align: center; margin: 30px 0;">
+                    <img src="https://canslab1.github.io/images/Photos1-1.jpeg" alt="黃依六年輕時期留影" style="width: 600px; max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);" loading="lazy">
+                    <figcaption style="margin-top: 8px; font-size: 0.95em; color: #555;">
+                        ▲ 黃依六少年時期在台北西門町工作的皮鞋店前和友人合影
+                    </figcaption>
+                </div>
+                <div class="story-content">
+                    可惜依六早先在中華路天橋上認識了一位修理皮鞋匠的女兒，並且在女孩父親默許下開始交往，所以他委婉拒絕了這門親事，只想多存點錢，等當完兵回來後，娶女孩為妻。
+                </div>
+            </div>
+
+            <div id="section1-2" class="section">
+                <h3 class="section-title">一碗地瓜粥一段好姻緣</h3>
+                <div class="story-content">
+                    依六和阿雲是透過「皮鞋」結緣認識的。郭雪雲，小學畢業考取初中，為了家中生計，放棄升學，跟著養父每日在現今中華路和內江街口旁擺攤修理皮鞋。一日，黃依六下工後散步途經中華路，看到一位漂亮姑娘和一位長者在人行道旁修理皮鞋，忙到不可開交，便不假思索立馬停下腳步，主動毛遂自薦蹲下來幫忙修理皮鞋，等到所有皮鞋修理妥當交至客人手中時，已經過了晚餐時間。
+                </div>
+                <div style="text-align: center; margin: 30px 0;">
+                    <img src="https://canslab1.github.io/images/Photos1-2.jpg" alt="郭雪雲年輕時期留影" style="width: 600px; max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);" loading="lazy">
+                    <figcaption style="margin-top: 8px; font-size: 0.95em; color: #555;">▲ 郭雪雲在中華路自家皮鞋修理攤前和父親、兄長及友人合影</figcaption>
+                </div>
+                <div class="story-content">
+                    長者邀請這位好心年輕人到家中作客吃頓便餐。當晚郭家煮地瓜粥，是黃依六這小伙子生平愛吃的食物之一，便多喝了幾碗粥，也有了日後天天去皮鞋修理攤幫忙的最佳理由。因為地瓜粥好吃，想天天吃，所以希望天天下工後來攤子義務幫忙。
+                </div>
+                <div class="story-content">
+                    養父覺得這小伙子手腳頭腦都靈活，幫得上忙，就默許不再說甚麼。飯桌一旁的郭雪雲小火慢熱，並非第一眼就喜歡這個男生。她是聰明人，知道眼前這位帥哥想追求她，自己對他的印象也不差，就看下一步他怎麼做再說吧！
+                </div>
+            </div>
+
+            <div id="section1-3" class="section">
+                <h3 class="section-title">聰明內斂、堅強柔韌</h3>
+                <div class="story-content">
+                    我出生後，父親沈迷賭博，不斷敗光過往十多年累積的存款、房屋及數間龍山商場店面。母親表面不動聲色，每天照常煮三餐，幫我們洗澡，午餐過後帶我們去商場和姊姊一同顧店，心底卻思索要怎麼暗存私房錢，保全眼下三個小孩的良策。
+                </div>
+                <div class="story-content">
+                    母親的第一步需要已懂事的姊姊配合，把每天開店頭幾雙賣出去的皮鞋收入偷存下來，這是月底一定要付給皮鞋製造商的貨款，不能挪用，自斷生路。之後賣的數雙皮鞋的利潤也會私藏起來，這是每天家裏生活開銷的必要費用，沒這筆錢，全家人只能喝西北風，露宿街頭。有了前面二筆錢，後面賣的皮鞋才會寫入給爸爸看的帳冊，記載每雙皮鞋的型號、顏色、尺寸、成本與利潤，月底好跟廠商叫貨，補充店裡貨源。
+                </div>
+                <div class="story-content">
+                    生活費用有著落後，母親的第二步是貸款買房預防家產被父親散盡後無屋可住。只是，房屋不能登記在自己或小孩名下，一旦父親發現，就會被迫交出房契拿去揮霍輸光。母親事先想到這一步，所以把房子登記在五舅媽名下，直到父親搞壞身體因腦溢血過世許久後才重新回到母親手裡。弟弟阿峰婚後，母親把那間房屋重新裝潢過戶給弟弟，作為他們夫妻起居處。
+                </div>
+                <div class="story-content">
+                    這間父親在世母親偷買的救命房連我們都不知道，直到父親腦溢血頻臨死亡躺在醫院借助機器呼吸時，為了讓父親走得安心，母親才在病床前跟父親透露：<span class="highlight">「依六，你免擔心我跟孩子，放心跟菩薩前往西方，幾年前我在板橋買一間厝，孩子跟著我吃住都沒問題，你放心！」</span>說完沒多久，爸爸的呼吸逐漸停息。母親說這段話時，我和弟弟阿峰寄住在奶姆家，沒有親耳聽到，都是長大後母親娘家親戚告訴我，然後跟母親求證才得知原貌。
+                </div>
+            </div>
+
+            <div id="section1-4" class="section">
+                <h3 class="section-title">歌廳秀</h3>
+                <div class="story-content">
+                    出生後小學前，父母親常帶我看歌廳秀。每當他們把我打扮得光鮮帥氣一身勁裝模樣，我就知道，今晚，全家要去歌廳看秀吃大餐。父親知道我偷偷尬意隔壁人家一位漂亮小姊姊，每次看秀時，也會帶上那位姊姊，讓我們兩個小孩有伴可玩，也讓我整場看秀過程喜孜孜甜蜜在心頭，巴不得秀就這樣一直表演下去，姊姊可以一直坐在我身旁，不要散場。
+                </div>
+                <div class="story-content">
+                    人生就像一場歌廳秀，有開場，一定也有謝幕時。好景不常。出生沒多久，父親被過去同樣是皮鞋工廠學徒的師兄弟帶壞，設局染上嫖賭。不用幾年光景，已輸光婚後多年和母親一同努力開店賣皮鞋賺的積蓄與買的數間房子與店面，甚至賭輸欠了一屁股債後才認真開店賺錢還債，等到還完賭債手上有餘錢時，故態復萌，又跑去賭個幾天幾夜，非到脫褲輸光不肯回家。這種徹夜賭博沒餐沒日賺錢的惡性循環生活終於搞壞父親的身體，死前幾年，常因各種病痛或水腫住進仁濟醫院。
+                </div>
+                <div class="story-content">
+                    11歲大年初三晚上，父母親兩人經過廣州街西園路交叉口寶島鐘錶店門口時，父親突然腦溢血昏倒在路旁，透過路人協助，送到仁濟醫院急救處置。六天後，仍然沒起色，母親與娘家親人討論後，決定拔管放棄救治，讓只靠機器呼吸的父親沒病沒痛一路好走。死時父親47歲，正值壯年，欠下200萬賭債。
+                </div>
+            </div>
+
+            <div id="section1-5" class="section">
+                <h3 class="section-title">家暴</h3>
+                <div class="story-content">
+                    在我出生後不久，父親被皮鞋工廠同門師兄弟帶壞，染上賭癮，家道開始中落。等弟弟阿峰出生後，父親變本加厲，晚上皮鞋店打烊後徹夜未歸，和豬朋狗友一同去爛賭，賭贏了繼續賭，直到帶去的錢輸光為止，有時候心不甘，不想空手而歸，想回本，就跟賭場高利貸借錢繼續賭，直到天亮了，身體累壞了，賭場高利貸不借了，欠一屁股債了，才拖著一副疲憊的身軀，敗興而歸，回家喝悶酒。
+                </div>
+                <div class="story-content">
+                    那幾年，每天開鞋店辛苦賺的錢，努力攢存的積蓄，買的房子和店面，就這樣蠶食鯨吞、一點一滴、大把大把、完完全全敗光光了。母親有時忍不住多說幾句責備話，抱怨下週廠商要來領取的大筆貨款，連同微薄生活費統統被拿走輸得精光，家裡沒剩幾個錢，明天這個家要怎麼生活過日子？爸爸自知理虧，常會借酒裝瘋，做賊喊抓賊，回頭破口大聲數落母親，有時愈罵愈兇，還起身動手毆打母親，拳腳相向。母親常常被打到一把鼻涕一把淚，困坐在客廳角落姊姊的單人木板床上獨自落淚。
+                </div>
+                <div class="story-content">
+                    當年，驚恐看著床邊落淚哭泣的母親，以及暴跳如雷，酒醉不斷大聲碎碎念，瘋子似亂罵人的父親，我和弟弟都不敢出聲，只能站在臥室連通客廳的窗戶邊，小聲安慰母親：「媽，不要哭啦！」然後靜靜地陪在母親身旁。姊姊阿美珠年紀稍長懂事，每次都會默默拿一條濕毛巾給母親，擦臉擦拭眼淚。這種駭人景象在父親過世前幾年每隔一陣子就上演一回，直到爸爸爛賭酗酒徹夜未眠搞壞身體，住進醫院沒了元氣後，家人才逐漸從這場惡夢中甦醒，深怕再次睡著。
+                </div>
+                <div class="story-content">
+                    11歲四年級那年春節，47歲正值壯年的父親突然腦溢血昏倒在廣州街寶島鐘錶公司門前路口，來不及給枕邊人一個好好的道歉，也來不及彌補過往十年他的荒唐行徑對妻兒所造成的傷害與缺憾。死了，就這樣死了，一種最輕率也最沈重的懲罰！
+                </div>
+            </div>
+
+            <div id="section1-6" class="section">
+                <h3 class="section-title">想你</h3>
+                <div class="story-content">
+                    前陣子和小福兩人獨處時常想一個問題，如果明天我過世了，他會察覺家裡少一個人嗎？知道阿爸已經不在世了嗎？會想念我嗎？想我那一個部分呢？想多久？一年？三年？十年？還是一輩子？
+                </div>
+                <div class="story-content">
+                    2017年八月生日一過，就滿四十七歲了。36年前，父親在我這個年紀因為賭博酗酒加上工作過度操勞腦溢血而過世，當時，我才11歲小學四年級，似懂非懂聽著許多親戚長輩邊哭泣邊對我說：「你老爸過身了，以後要聽阿母的話，用功讀書，和弟弟好好相處，不許再吵架，知道了嗎？」
+                </div>
+                <div class="story-content">
+                    那時候的我不難過，雖然知道父親過世了，但是對於死亡這事懵懵懂懂，天真地以為只要母親與奶姆兩個疼愛我的人常在身旁就萬事俱足；以為父親在世最後幾年對母親的糟蹋終於結束了；以為他留下的影響微不足道。所以，當他的遺體火化時，當他的身體燒到只剩下頭手腳看得見的大骨與細粒骨灰被我們撿入骨甕時，當親朋好友出現在殯儀館家祭公祭跪拜他哭得死去活來時，我都沒有哭過，甚至一滴眼淚也沒流下。現在，我終於體會小時候我冷眼背後的害怕與無助，其實，我愛他，想他，需要他，我的許多行為模式承自於他，我的個性簡直就是一個小黃依六，毋需認證！
+                </div>
+                <div class="story-content">
+                    47年混過了，沒什麼成就，過去的雄心壯志早已被現實社會與日常生活磨平，如今唯一值得慶賀珍惜的是還擁有一個美滿家庭，吾愛娟娟與可愛小福常伴左右，如果許願可以實現的話，希望再活40年，用我走下坡但人生經驗豐富的40年陪伴可愛的嬌妻與人生最輝煌燦爛40年間的小福。我不要他懷念我，我要他跟我玩一起，吃一起，睡一起，活一起，直到他長大成人結婚生子買車置產工作有成，直到我終老死去！
+                </div>
+            </div>
+
+            <div id="section1-7" class="section">
+                <h3 class="section-title">三水街買菜</h3>
+                <div class="story-content">
+                    小學低年級例假日早上，總愛跟著母親去三水街菜市場買菜，那時的三水街市場長度是現在的二倍。隔著康定路，二旁的三水街都是菜市場，其中一邊緊鄰龍山商場，穿過走出來就是車水馬龍熱鬧非凡的西園路公車站牌。
+                </div>
+                <div class="story-content">
+                    每次買菜，母親總有固定路線和購買順序，先到熟悉的魚攤，買一條我愛吃的黃魚，請老闆娘務必把鱗片削乾淨，稍後回來拿，再走去中間段的豬肉攤詢問老闆今天有什麼部位的肉較新鮮，可以拿來炒豆乾？豬肉攤不遠處就是販賣豆乾豆腐醬菜攤，母親挑了幾塊黃豆乾，也買了之後幾天早上配稀飯的幾樣醬菜。回程路上，除了拿削好鱗片的黃魚，也跟遠房親戚（姨婆）菜攤買幾把青菜和皎白筍，順道站著閒聊幾句。
+                </div>
+                <div class="story-content">
+                    買菜過程中，我總緊緊牽著母親的手，東張西望，不是怕踩到髒髒的水窟隆，或者被騎得很快的腳踏車激起的水濺到，就是怕跟丟，時常一抬頭發現牽手的人怎麼不是母親，馬上「哇」一聲在市場大哭起來，叫喊著：「媽媽，我要媽媽啦！」還好，那個年代大夥都是點頭之交，再加上我們家開的六明皮鞋從龍山商場紅到三水街菜市場，只要我一哭，馬上就有叔伯阿姨跑來關心，把我帶到他們的攤子旁，並透過一攤傳話過一攤比現在通訊軟體還快的速度，要我母親放心，他的兒子大頭仔現在在某一攤子上，不用急，買完菜再過來帶走。有時候，攤子老闆娘還會遞給我一杯冬瓜茶或熱桂圓甜湯，要我坐在攤子裡的矮凳上，邊喝邊等母親過來。
+                </div>
+                <div class="story-content">
+                    成年後，也常跟著母親去三水街菜市場，還是一樣緊緊牽著母親的手，一邊逗她開心，讓他又哭又笑罵我：「大頭仔，你真伍仁，我不跟你說了啦！」一邊詢問她今天想買什麼菜回去煮，我可以幫忙喔。母親聽到我要幫忙，總是笑著說：「免免免，你越幫越忙，煮湯都給我亂加料，害我整鍋湯喝不下，得倒掉，真浪費！」這樣的牽手買菜場景，一遍又一遍在三水街菜市場上演，大家看到我陪著母親一起上市場，都對著她誇讚我，說阿雲KUMO有我這樣一個孝順又有出息的孩子，實在真值得！
+                </div>
+                <div class="story-content">
+                    三水街菜市場有我和母親太多買菜的回憶，每次走在三水街菜市場裡，那些從小時候販售到現在的菜攤，是我一幕又一幕清晰記憶的泉源。感謝他們，讓母親直到現在還活生生活在我的腦海裡，一遍又一遍，牽著我的手，來三水街菜市場買菜！
+                </div>
+            </div>
+
+            <div id="section1-8" class="section">
+                <h3 class="section-title">心上人</h3>
+                <div class="story-content">
+                    母親17歲認識父親，兩人相差4歲。父親47歲過世時，母親43歲，兩人一同生活了26年。26年後半段光陰，由於父親染上賭博壞習慣，將前半段兩人辛苦積蓄下來買的房子和店面全輸光光，再加上熬夜抽菸喝酒後脾氣大壞，經常拿母親當出氣筒，打罵母親。當時年紀小，依稀記得，母親常被喝醉酒的父親打罵到哭，坐在床邊啜泣，我和姊姊其中一人會遞上濕毛巾，讓母親擦臉擦拭眼淚，三個小孩陪在她身旁，小聲安慰：「媽～不要再哭了！」
+                </div>
+                <div class="story-content">
+                    母親32歲剖腹產下我，到2010年10月1日過世時，我已40歲有餘了。母子倆一起生活了40年，遠比父母倆在一起的時間長了許多。足見我才是母親生命中的第一名。
+                </div>
+                <div class="story-content">
+                    她在世的最後幾年，每早我出門去長庚大學任教，經過母親身旁時，她總是問：「今天天氣很冷，你外套穿了沒？」或「今天天氣變冷了，你有沒有穿毛衣？」我總是又好氣又好笑回答：「沒有，我今天脫光光去上班。」她也總是笑著說：「你要是敢脫光衣服去長庚，我五千摳給你。」我裝瘋賣傻回應：「才不要！如果脫光光去上班，你要給我十萬元才行。」她知道我激伍仁愛說笑，我也明白他的關心，只是時常跟她說：「媽，我都40歲了，就算我今天脫光身體去長庚，感冒了，也是我自己要負責任啊，你不需要再管我這麼多事了！」
+                </div>
+                <div class="story-content">
+                    我心底明白，我是她生命中相處最久的男人。她一生中花許多時間在照顧及擔心我許多瑣碎事上面，如果叫她不要像過去一樣關心我，操煩我的事，那不是剝奪她生活的重心嗎？所以，就算我怎麼說，她還是一如往常關心我、碎念我、操煩我的大小事，上至穿衣，下至摩托車是否乖乖停在機車格內，天天過問，從不覺得煩。
+                </div>
+                <div class="story-content">
+                    這幾年，我常想，不知道我母親年輕時跟我父親相處時是一個怎樣的女人，溫柔體貼嗎？還是跟現在一樣，每一件事都操煩到底？我不知道答案，因為她前半生我沒參與，而知道答案的父親又過世太早，我來不及問他關於母親年輕時的個性與他們相處的細節。
+                </div>
+                <div class="story-content">
+                    母親過世前一個月，我時常在病床旁唱歌給她聽，有時他是清醒的，知道我在唱甚麼，有時她是昏迷的，任憑我唱甚麼也喚不醒。我唱兒歌，唱軍歌，唱愛國八股歌曲，唱民歌，唱台語歌曲，唱國語老歌，唱老松國小和龍山國中的校歌，唱所有我知道的歌，就只是希望她清醒過來對我說一聲她過去常說的話：「拜託，也沒有人叫你唱啊！我給你一塊錢，你不要再唱下去了好不好？」因為我五音不全，所有歌曲從我口中唱出，完全變調走樣，不像原來曲調，但是我愛在洗澡間高歌，從進浴室唱到洗完澡，而且是放開喉嚨來唱，每次母親聽到我在浴室唱歌，總是從一樓大聲喊向二樓：「沒人講你是ㄟ吿（啞吧），你不要再唱了，再唱下去，促逼（鄰居）就要來抗議了！」我聽她這麼一說，總是唱得更大聲，深怕鄰居不來抗議似的。想起這一段，我眼眶又紅了起來，忍不住又想哭了。
+                </div>
+                <div class="story-content">
+                    二月底有一天，騎摩托車從萬華去長庚，一邊騎車一邊唱歌，唱到青山路時，忽然想到母親這段話，我開始哭了，一邊哭一邊唱，此時好希望用這副破嗓子把母親喚回來，雖然我知道，這是永遠不可能發生的事了。媽，我又忘記日本桃太郎的歌詞了，怎麼辦？現在沒有人告訴我了啦！
+                </div>
+            </div>
+
+            <div id="section1-9" class="section">
+                <h3 class="section-title">活菩薩</h3>
+                <div class="story-content">
+                    第一次是2005年10月。那年夏天我離開任教五年的中國科大資工系，轉去元培科大資工系擔任助理教授兼系主任。元培在新竹香山，所以和同事在香山租屋合住，一週三晚在新竹，四晚回台北陪母親，上午買菜逛市場和街坊鄰居聊天，下午看民視肥皂劇聽電台講古，晚間一起觀賞國興衛視料理東西軍配飯菜。
+                </div>
+                <div class="story-content">
+                    一晚，我在元培主任辦公室簽公文時，不小心摔斷鏡框。雖然隔早大學部有課，還是乖乖收拾背包，搭客運回台北換備用眼鏡，預計隔日搭早班車回校。翌日清晨著好服下樓準備出門時，發現母親昏躺在客廳藤椅，叫了幾聲沒回應，趕緊打119請救護車送去家附近一間區域醫院急診室。
+                </div>
+                <div class="story-content">
+                    急診室醫生診斷後，語重心長說：「你是他兒子嗎？」我說對，他繼續：「目前情況十分危急，先住院治療，但是胸部腫瘤太大太硬，目測超過15公斤，無法開刀拿掉，你要有心理準備，她的時間剩不多了，要做什麼趕快處理。」說完便交由護理師處理後續住院治療事宜。
+                </div>
+                <div class="story-content">
+                    無巧不成書，那天下午四點，我和（學生時代的指導教授）交大資工所孫春在教授一同出席那家醫院召開的一場內部會議，討論2003年SARS流行期間院內感染的可能傳播路徑及其管控措施。院長看我愁眉苦臉一付無精打采樣，便開口詢問發生何事，孫教授代回答：「他母親現在病危住在你們醫院樓上，主治醫生說時日不多，他心情複雜，萬事提不起勁。」等孫教授說完，我趁機央求院長務必救我母親，千拜託萬拜託！
+                </div>
+                <div class="story-content">
+                    會後，院長隨即帶秘書和護理長探訪剛甦醒的母親，請我們母子安心，醫院會全力救治，割除胸部惡性腫瘤，並期待母親年底前康復出院。開刀和術後住院那段期間，護理站都叫我光頭孝子，因為我每天往返台北新竹兩地，凌晨幫母親換尿布、潔淨身體、交代看護工昨晚母親的睡眠狀況後，就搭客運赴元培授課，下課立馬回醫院，一邊跑實驗做研究寫論文，一邊陪伴體重在腫瘤切除後只剩31公斤的母親躺在病床上，和隔壁床長輩及其家人開港。
+                </div>
+                <div class="story-content">
+                    母親愛乾淨，記得有一晚他趕不及大便在尿布中，小聲喚醒我，扶她到病房浴室，幫她擦拭屁股，沖澡擦乾，重新換上乾淨衣物，他虛弱對我說：「大頭仔，謝謝，我好舒服！」我強忍淚水扶他回床繼續入睡。出院回家後，為了照料母親的起居生活，遵照醫師囑咐每日按時餵藥消毒傷口換紗布，我退回元培的系主任二年聘書，重新尋找家附近的大學教職。母親在我細心照顧和長期陪伴下，半年內，體重從31公斤恢復到術前46公斤，臉頰兩旁也長出肉來，令人歡喜不已！
+                </div>
+                <div class="story-content">
+                    術後多年，母親常對來家裡探訪的親友和左鄰右舍說，感謝神明保佑！如果前晚阿源的鏡框沒斷，如果阿源的的博士論文跟SARS無關，如果阿源不認識那位院長，自己很可能過不了那關，大頭仔像活菩薩，救了她一命！每次在旁聽他這麼說，都會臉紅不好意思，激伍仁說：「郭小姐，妳才是自己的活菩薩啦，若不是妳生下我，把我養大成人，那天早晨我就無法送妳去醫院急救治療，你太神了，竟能預知多年後發生的事！」說完，母子倆相視哈哈大笑，令在場親友丈二金剛摸不著頭緒！
+                </div>
+                <div class="story-content">
+                    第二次報恩是五年後2010年初的事了！
+                </div>
+            </div>
+        </section>
+
+        <section id="chapter2" class="chapter">
+            <h2 class="chapter-title">大頭仔</h2>
+            
+            <div id="section2-1" class="section">
+                <h3 class="section-title">西園路上的吉光片羽</h3>
+                <div class="story-content">
+                    孩童時期，父母親原本在康定路、廣州街交叉的合會門口擺攤修理皮鞋，由於夫妻倆功夫好、手腳勤快、待客和氣，很快就攢了些積蓄，買下龍山商場正中央面對龍山寺正門口王興義唱片行隔壁的一家小店面賣男鞋。
+                </div>
+                <div class="story-content">
+                    好景不常，父親後來嗜賭，輸光所有積蓄與房產，只剩一間店面，只好在西園路龍山佛具店樓上二樓租了二間中間有一扇窗戶連通的雅房，一間客廳，一間臥室，煮飯、燒開水、上廁所和洗澡都得到那層樓走道最後面和另外二戶人家共用廚房和浴室。那時期，我暗戀隔壁房人家一位大我幾歲的姊姊。父母親知道我的心思，看歌廳秀時偶爾會帶她一起去，一路上讓我倆手牽手走在一起，當時我覺得好甜蜜。
+                </div>
+                <div class="story-content">
+                    客廳兩扇窗戶面對龍山寺側門，除了簡陋的桌椅與神桌，還擺了一張單人木板床給姊姊阿美珠睡覺，我和母親睡在臥室沒擺彈簧床墊的雙人床上，父親和弟弟阿峰則睡在雙人床旁另外一塊直接放地上的大木板。每晚睡前，弟弟阿峰都得摸父親的耳垂許久才能入睡，只有最疼愛他的父親才能忍受他睡前長時間的撫摸，其餘人都受不了，不想和他一起睡。
+                </div>
+                <div class="story-content">
+                    姊姊的床和臥室之間有一扇木框玻璃窗，我們兄弟每天起床後，不是打開臥室門走去客廳，而是直接跨爬二個房間中間的那扇窗來回，一下子跳到姊姊的床上玩耍吵鬧打架，一下子爬回臥室，叫賴床的爸爸趕快起床吃午餐，趕快出門去開店。
+                </div>
+                <div class="story-content">
+                    民國70年之前，家中有冷氣吹的人少之又少，就算我們家是開店做生意，也只有電風扇轉啊轉，吹出一股股黏踢踢的熱風，不像現在的商家，鎮日開足冷氣，舒服坐在店裡等客人上門。那時期的夏日，龍山寺側門對街西園路（佛具街）上，常見的黃昏景況是，晚餐後，大人小孩人手一扇，幾張板凳，三三兩兩群聚坐在家門口附近，冷眼瞧著來來往往的汽機車，緩緩搖扇驅蚊，放聲聊天罵小孩。
+                </div>
+                <div class="story-content">
+                    有一段時期的夏日，晚餐後，母親總是牽著我和弟弟阿峰的手，走去同樣在佛具街上和我們家隔了幾間房的旅館門口坐著搖扇乘涼。那間旅館整天開著冷氣，雖然門口有道玻璃門，門下卻有一長條細縫，冷氣就從細縫中一直不斷湧出來，我們母子三人和鄰居一同圍坐在旅館門口的騎樓，大人們一邊搖扇享受稀微的冷氣，一邊道聽塗說今天發生在這條街上的大小事，小孩們則跑過來追過去玩在一起，跑累了，追到腿酸了，就整群回來旅館門口趴坐在玻璃門前，讓冷氣吹過頭，吹過滿身大汗的臉龐，吹過整件濕透的吊嘎啊，然後等著媽媽們來罵人趕我們回家洗澡睡覺，叫我們不要擋在旅館門口，妨礙客人進出。
+                </div>
+                <div class="story-content">
+                    這種生活過了十年。四年級寒假，父親在廣州街上寶島鐘錶店門口突然腦溢血倒地送醫急救數日無效往生後，才搬離西園路。姊姊國中畢業去外縣市美髮理容店當學徒，母親帶著我和年幼弟弟在西昌街夜市近桂林路口租了一間數坪大的雅房，每天風雨無阻出門獨自一人辛苦在龍山國小旁（現今全聯門市的對面）的夜市擺攤叫賣皮鞋。
+                </div>
+            </div>
+
+            <div id="section2-2" class="section">
+                <h3 class="section-title">龍山商場賒帳飆車高手</h3>
+                <div class="story-content">
+                    龍山商場腹地非常大，隔著一條窄窄的廣州街和龍山寺對望，四周圍騎樓環伺，常常吸引了許多外地果農與菜販來此地，一邊擺攤叫賣販售討價還價，一邊躲警察。西園路一側道路兩旁的公車站牌密集，是往返雙北的重要交通集散地。商場內，店與店之間的走道寬暢，商場後半部緊鄰著晨間叫賣聲不絕的三水街菜市場和布市，接鄰處還規劃了一個小型公園及公廁供人休憩。
+                </div>
+                <div class="story-content">
+                    11歲前，父母親在龍山商場開了二家店賣了好些年的男鞋，整個商場都是我和弟弟阿峰的遊樂園。從睡醒吃飽飯被母親帶來商場，到父親關店打烊吃完宵夜回家洗澡睡覺前，吃喝拉撒玩全在商場裡。每日下午吃點心、晚上回家睡覺前吃宵夜，只要到商場任何一家小吃店門口喊：<span class="highlight">「我是六明皮鞋店的後生，我媽媽叫我來吃草莓奶油吐司和一碗熱牛奶加泡餅」</span>或<span class="highlight">「我是美冠皮鞋店的後生，晚餐我要吃滷肉飯和下水冬粉湯，還有一顆鹹鴨蛋」</span>，店家會出餐記賬不收錢，等母親空閒時再來付清。吃到後來每家店上至老闆下至伙計都熟識我們後，連說都不用，點了食物吃飽後說聲「謝謝老闆」即跑開。
+                </div>
+                <div class="story-content">
+                    我們這些在商場出生長大的小孩每天的娛樂就是騎著單人三輪車橫衝直撞，和同樣是商場小孩騎的三輪車競速賽車，又或者騎一輛後面載著弟妹的雙人三輪車，慢慢閒逛商場的每條通道走廊，穿梭繞行各個店家，好似閱兵，又好像花車遊街似向每一位認識我們或我們認識的叔叔伯伯阿姨們逐一揮手大聲打招呼。有時候，有些跟我父母親要好的店家老闆還會在店門口招手要我們停車，從店裡拿出自家食物或餅乾糖果給我們，當場吃不完或兩手拿不夠時，還撕日曆紙幫我們打包帶走。有時候，他們會追出來，遞給我們一些簡單的玩具，或者故意戲弄我們做一些稀奇古怪的事情如抽煙才放行。
+                </div>
+                <div class="story-content">
+                    前陣子，看到老婆阿娟帶小福去家附近龍山國小圍牆邊人行道上騎三輪車，又勾起這段童年往事。趁記憶猶新，趕緊紀錄，好讓長大後的小福知道，阿爸跟他一樣，都有過一段輝煌的三輪車飆速歲月！
+                </div>
+            </div>
+
+            <div id="section2-3" class="section">
+                <h3 class="section-title">我漂亮嗎</h3>
+                <div class="story-content">
+                    大約四、五歲吧，有天凌晨，做夢驚醒，我哭鬧吵著要吃霜淇淋。「這麼晚了那裏買，應該所有賣霜淇淋的店都關門了吧。」父母親一邊說一邊哄：「明天一大早，我們就去吃，好不好？」哭鬧中我硬是不肯，持續大吵大鬧：「我要吃霜淇淋，我要吃霜淇淋，哇哇哇～～～」
+                </div>
+                <div class="story-content">
+                    眼看哭鬧下去不是辦法，左鄰右舍可能被吵醒，父親只好幫我穿上衣褲外套，背我出門找凌晨還有賣霜淇淋的店家，走啊走啊，走了許久只看到黑矇矇一片，所有店家鐵門都拉下未開，絲毫看不到還在營業的店。當時，可能哭鬧累了，就不自覺趴在父親背上睡著了。
+                </div>
+                <div class="story-content">
+                    由於凌晨吵鬧晚睡，當日睡過頭趕不及幼稚園上課，父母倆特別帶我去廣州街康定路交叉口附近一家曉有名氣的小美冰淇淋西餐廳吃豐盛豪華的香蕉船，然後再上學。當香蕉船端上桌那一刻，我好滿足，看著各種顏色的冰淇淋球與水果，好不快樂，巴不得一口吃下整盤香蕉船。
+                </div>
+                <div class="story-content">
+                    吃完香蕉船，繼續上學。到了蘭心幼稚園門口，才發現剛剛吃得太忘我了，把書包遺忘在西餐廳，還得麻煩父親往返跑一趟，幫我拿回書包。然而，整件事未結束，由於中午吃太多冰淇淋，當天下午快放學時肚子痛得受不了，來不及跟老師說就全數拉在褲中，讓幼稚園老師及工友伯伯裡外忙得團團轉，不僅要聯絡爸媽帶換洗衣服來，還要緊急帶我去浴室沖澡，擦乾身體，等著穿上父母親匆忙帶過來的衣褲。
+                </div>
+                <div class="story-content">
+                    幼兒時期，我長得非常高，可愛有人緣。在幼稚園，我可是全班最高最得老師疼愛的小朋友！記得在幼稚園畢業典禮上，我們班表演山地舞，所有參與演出的小朋友都要化妝。母親委託乾媽幫忙上妝，等妝好了穿上表演服後照鏡子，連我自己都覺得美到不行，好像國劇花旦一樣靚。整場山地舞表演就只看到我一個既帥又美的小男生高出所有小朋友一顆頭，好像其他小朋友是來伴舞陪襯的，而我才是這場山地舞表演的唯一主角。
+                </div>
+                <div class="story-content">
+                    娘家親戚常說，父母親結婚多年才生下我這個寶貝兒子，所以非常疼愛我，甚至在我滿月時興高采烈準備幾大桶數百斤油飯放在龍山商場騎樓讓路過行人及商家自由取用。等我稍微長大，學走路到處晃時，龍山商場的店家老闆與一干夥計都認識我，看到我都會說「依六ㄟ兒，你要幹嘛？」去商場店家吃飯，只要報上父母親姓名，就不用付錢，先吃再說，等母親有空來付錢。整個商場就是我玩耍活動的勢力範圍，在這地盤裡，父母親待人和善，我也處處受歡迎！
+                </div>
+                <div class="story-content">
+                    這些往事已過了幾十個年頭了，多年前，我常利用早上送老婆上班前空檔，在餐桌旁詢問母親一些她與父親倆年輕時發生的事，或者求證依稀還記得的事。將我記得的跟她告訴我的拼湊成一片片完整圖樣，希望假以時日，書寫下來，紀念所有跟這些往事相關的人事物。
+                </div>
+            </div>
+
+            <div id="section2-4" class="section">
+                <h3 class="section-title">少年警察追姊姊阿美珠</h3>
+                <div class="story-content">
+                    姊姊美珠眼睛大，人漂亮，嘴甜，很會做生意。從小，他就是父親的得力助手，每天幫忙開店、賣皮鞋、整理皮鞋、顧店、關店，小小年紀，每一項工作都得做，但都做得很好，深得父親疼愛。父親嗜賭時期，為了貼補家用，姊姊每天走遍停在龍山寺側門停車場每一輛滿載日本觀光客的遊覽車，用稚嫩童音說著不標準的日語，兜售青箭口香糖和玉蘭花。有一段時期，我跟在姊姊後面，一起上遊覽車兜售，才發現姊姊生意頭腦好，許多觀光客被他逗得眉開眼笑，常常一口氣買了好幾串玉蘭花和數條口香糖，有時候，才兜售了幾輛遊覽車，手邊的口香糖和玉蘭花就販售一空，生意好得不得了。
+                </div>
+                <div class="story-content">
+                    姊姊很照顧我們，每晚，她都負責帶我和弟弟阿峰回西園路的家，燒熱水，幫我們兄弟倆洗臉、洗手腳，然後等我們熟睡後再回龍山商場店裡，和父母親一同打烊。關店後，母親通常回家打掃整理住家，父親則帶著姊姊去住家附近還營業的美食攤或華西街夜市吃宵夜，回程再買些食物回去給母親吃。這些住事都是長大後，聽母親說了才知道的秘辛，聽完也嫉妒爸爸如此疼愛姊姊。
+                </div>
+                <div class="story-content">
+                    小學畢業，姊姊在龍山商場外圍騎樓人行道上擺攤賣東西貼補家用。當所有攤販一聽到哨音立馬收攤跑給警察追，害怕被抓到要罰款加扣留攤子時，只有姊姊不用跑、不用躲，跑了躲起來也沒用，因為少年警察眼裡只有姊姊，姊姊躲到那追到那，抓到了不罰款不扣留攤子，只想找機會找話題跟姊姊聊天說上個幾句話，就開心不得了。我們家人看在眼裡，歡喜在心裡，覺得這些少年警察真促咪，到底是在執行公務，還是被派來追女孩的，實在令人哭笑不得！？
+                </div>
+            </div>
+
+            <div id="section2-5" class="section">
+                <h3 class="section-title">從雙十國慶閱兵想新冠疫情停課</h3>
+                <div class="story-content">
+                    小學時期，每年雙十國慶前一週，總統府附近幾間校園佔地大一點的學校都會放假一週，讓雙十國慶當天要參與總統府前閱兵的軍隊駐紮，借用校園諾大方正的操場練習踢正步。到了高年級，有幾次經驗了，每學年上學期開學後，只要有同學想到這檔事，班上男同學就會聚攏在一起七嘴八舌討論，每一位同學都堅持己見，斬釘截鐵說應該是十月Ｘ日學校就會開始放假了，誰也不讓誰。
+                </div>
+                <div class="story-content">
+                    這是那一代生活在萬華、就讀老松國小及其附近大間學校的孩童的共同記憶。成年後不曾聽老松學弟妹說過有這麼好康的事情。很難忘記，每年雙十國慶後，我們復校上課時所看到的那場景，每個班級的課桌椅不是被擺放到走廊一側，就是集中在走廊盡頭某一陰暗的角落裡，整間教室除了黑板和無法移動的窗戶等，空無一物。每間教室或多或少遺留阿兵哥忘記帶走的隨身物品，有時是一隻襪、一條鬆緊繫帶，有時較稀罕，是一個腰帶銅釦、一個鋼杯。第一個到校的同學就好像人人稱羨的大探險家，到處撿寶，到處炫耀，晚到的同學只好跟在後頭，東張西望瞄向教室各個角落，期盼能撿到一些前面同學落掉沒看到的寶，回家炫耀。
+                </div>
+                <div class="story-content">
+                    每一世代的孩童都會記得專屬於他們自己的共同美好回憶。從2020年初新冠肺炎世界大流行開始，這一代的兒童從此踏上一條與前人完全不同的童年回憶之路，在他們日後的回憶裡，透過他們話語和記憶的拼湊，許多人將明瞭，2021年5月，每間學校、每位老師八仙過海各顯神通，架起一間又一間線上教室，每天早上，全台絕大多數的學童換了一個地點，同時在家中，又同時在線上教室，在父母親的陪伴下，和同學一起學習，一起聆聽遠方老師的授課，一起在網路上討論老師交代的課業，這是一件我們這些成年人無法想像，有生之年竟然陪著孩子一起做到的一件神奇之事。許多美好的意外與回憶還在明日等著我們去撿寶呢！我們的孩童正在創造專屬於他們可供日後一遍又一遍述說的回憶呢！
+                </div>
+            </div>
+
+            <div id="section2-6" class="section">
+                <h3 class="section-title">夜市擺攤</h3>
+                <div class="story-content">
+                    小學四年級結業，父親甫過世半年，每晚寫完功課，就幫母親在龍山夜市皮鞋攤賣男鞋。暑假前，母親知悉我想買台越野車，就鼓勵我，跟我約定，賣一雙200元的皮鞋，給2元，如果是350元的皮鞋，給3元。有了買車慾望，加上獎金誘惑，每晚帶弟弟回家洗澡睡覺前，我都努力向客人推銷，並偷偷觀察母親厲害內斂的賣鞋手法和推銷話術。開學前，存了1300元的賣鞋獎金，距離越野車售價2550元還差了一半，只好找母親協商，可否預支1250元賣鞋獎金，之後再利用週末假日努力賣鞋償還借款，母親嘴巴雖然唸了許久，最後還是答應我，接下來的假日就帶我去康定路上賊仔市車行買車。
+                </div>
+                <div class="story-content">
+                    從此，只要晚上有空，我都開心在夜市賣鞋，獎金從初期2至3元慢慢漲到5至10元，一晚賣掉的皮鞋也從十餘雙變成20至30雙，最高紀錄是民國75年除夕，當年仍是五專一年級生的我從除夕夜九點賣到隔日凌晨一點，短短四小時賣出數百雙皮鞋，令母親刮目相看、讚不絕口。母親2010年10月過世前只要逢人聊到母子倆在夜市攜手賣皮鞋往事，一定提及這段豐功偉業。我是賣過皮鞋、襪子、涼鞋、鞋油、柳橙汁、香水筆、春聯、吊飾等商品的夜市之子，阿源。夜市讓我賺到第一台腳踏車，也助我娶到同為夜市之子的老婆施娟娟！
+                </div>
+            </div>
+
+            <div id="section2-7" class="section">
+                <h3 class="section-title">大學教授之前</h3>
+                <div class="story-content">
+                    從小學四年級暑假在萬華夜市幫母親賣出第一雙皮鞋，就愛上在夜市販售的過程，並樂於沈浸在生意連續成交後幫母親點鈔記帳理貨的喜悅之中。五專一年級，我已經是母親在夜市擺攤販售皮鞋的唯一好幫手，從客人駐足在攤前觀看皮鞋樣式、詢問價格那一刻起，我的眼睛就來回穿梭在客人的腳和臉之間；我的腦不停地轉動，觀察這位客人的穿著與講話習慣，推測他可能的喜好和品味；我的身體和言語同時展開行動，以最大熱忱和十足誠意，解釋他手上拿著的這雙皮鞋的特點，甚至搶在客人詢問有否適合他腳穿的尺寸之前，已經拿好鞋子半蹲在地，請他坐在板凳上，幫他脫鞋，為他穿鞋，並將食指深入鞋中腳後跟處，面帶笑容滿臉自信告訴他，這雙鞋嘟嘟好，不信的話，可以起身走看看，好穿再買。
+                </div>
+                <div class="story-content">
+                    我，是不是一位優秀的學術研究人員與適任的大學教授，目前未定論。但是，五專畢業前，夜市裡許多擺攤的長輩早對著母親豎起大拇指說：「阿雲，恁好命啊啦，生得這種生意仔，那麼會做生意，白天一邊讀書，一邊在電腦公司上班做主管賺錢回來給你，晚上還在攤子做生意，這款生意仔要去兜位找？」母親聽了心裡高興，可是嘴巴總回：「做夜市生意甘苦，我還是希望他去上班，固定上班，領固定薪水，這樣比較輕鬆啦！」不然就是笑笑回：「等到大頭仔可以賺錢，我的骨頭麩早已經不知埋放在那裡了。」有時聽到夜市長輩這樣誇，我會想，是不是畢業在資訊業界工作一段時間，就回來接手母親的皮鞋攤，不管繼續賣皮鞋，還是賣別樣東西，以我的推銷販售能力，只要肯努力，掙得好生活應該不成問題。
+                </div>
+                <div class="story-content">
+                    最近晚餐後，詢問小福，等他長大，阿爸從大學退休了，帶他去夜市一起擺攤做生意，他想賣什麼？誰知道他不假思索笑著回：「賣皮鞋！」我和阿娟聽了都笑開了，邊笑邊說：「小福，你說真的假的？這可是阿爸的老本行喔，沒問題，阿爸陪你做伙去擺攤賺錢！」
+                </div>
+            </div>
+
+            <div id="section2-8" class="section">
+                <h3 class="section-title">伍仁，是一種餡，也是態度</h3>
+                <div class="story-content">
+                    從小到大，長輩都說我「激伍仁」。舉個例，跟母親在夜市擺攤賣皮鞋時，她常一邊擦拭擺放在攤架上的皮鞋，一邊語重心長說：「阿源，你多要努力讀冊，後擺大漢才能多賺錢，娶某生子過好日子。」我常瞪大眼睛扮鬼臉作古怪動作，一付左耳進右耳出有聽沒到回應她：「錢不重要啦，媽～健康和名譽才是最重要的。」母親常被我這番話氣到不知說什麼才好，只好假裝生氣，轉頭不理我，專心手邊事。
+                </div>
+                <div class="story-content">
+                    這種對話常出現在廣州街夜市龍山國小旁我們家攤子前，一直到我讀五專三年級在陳金柱先生經營的鼎眾電腦有限公司擔任軟體開發部主任，才改口：「媽～我認為身體健康和名譽才是最重要的，但是我也知道，錢對許多人很重要，所以我會保持身體健康和好名聲，努力賺錢花用在每一位我所重視的人，讓他們開心快樂之餘，也享受身體健康和好名聲帶來的眾多好處！」直到現在，仍然如此，身體力行。你，是我重視的人嗎？如果是，賺到了！
+                </div>
+            </div>
+
+            <div id="section2-9" class="section">
+                <h3 class="section-title">不當教授，Who am I to ...</h3>
+                <div class="story-content">
+                    如果不是岳父當年的刺激，不會回校園攻讀碩博士學位，也不會是長庚大學教授，最可能是先從夜市擺攤做生意，累積人生第一桶金，再創業。青少年時期，去夜市幫母親叫賣亮光鞋油，站在攤子前，只要看到遠遠走來的男士穿皮鞋，我一定小跑步到客人面前，大聲叫賣：「快來買好用的亮光油喔，一個20，三個50元。」同時勤快蹲下來，打開亮光油蓋子，仔細擦拭客人的一隻鞋。
+                </div>
+                <div class="story-content">
+                    等到那隻鞋擦得無比晶亮時，馬上起身，拿出三個亮光油兜售：「你看，輕輕擦，馬上亮晶晶，鞋子穿起來體面，又保護鞋面，延長壽命，一舉數得。」客人看著光亮如新的那一隻鞋，又看看灰矇矇的另一隻，還在皺眉頭想說些什麼時，我馬上補一句：「先生，要不要買三個回去備用，另外一隻鞋，我馬上擦，讓你走路逛街都有風，穿新鞋夜市趴趴走。」
+                </div>
+                <div class="story-content">
+                    聽我這麼一說，客人若非笑著掏出50元買三個，就是有如打賞一次買六個，然後看著一雙被我擦拭得亮晶晶的鞋子，滿意地離開攤子繼續逛夜市。只要我出馬販售亮光鞋油，那晚營業額通常近萬，甚至破萬，利潤是營業額的一半。夜市隔壁攤總是誇母親：「阿雲，你好命啦，生到一個生意子，後世人靠伊穿吃就有夠啊！」母親總是笑笑回應：「等到他賺錢養我，我已經去跟菩薩了！」我只能在旁邊苦笑：「不會啦！媽，我會好好孝順你，賺錢給你用，讓你吃喝玩樂享受不盡。」大人聽我這樣說，總是樂不可開支，直誇我是孝子，阿雲有這種後生是福氣。
+                </div>
+            </div>
+
+            <div id="section2-10" class="section">
+                <h3 class="section-title">夜市小鮮肉</h3>
+                <div class="story-content">
+                    從小在萬華龍山商場及廣州街夜市混大的我有一個許多人都沒有的一技之長，那就是擺路邊攤做夜市生意販賣東西，我的擺攤經驗豐富，從皮鞋，涼鞋，襪子，柳丁汁，香水筆，到春聯都賣過，我的販售技巧承自父母，最輝煌紀錄曾經在五專一年級除夕夜裡從晚上九點到凌晨一點賣出快二百雙每雙200元共四萬元的包仔鞋。
+                </div>
+                <div class="story-content">
+                    因為專科時期幫忙母親顧攤賣皮鞋，或者後來自己跟學弟吳承育、游政憲、謝清淵一起擺攤，才有機會認識隔壁玉米攤夫婦（阿娟的父母親）施爸媽，取得他們的信任，日後退伍在秦玉玲總經理主持的新加坡外商宇博電腦公司任職時，拜託我教導他們女兒電腦操作（其實只是PE2文書處理與倚天中文系統）。我熱愛學術研究生活，也樂意脫掉襯衫，捲起褲管，在夜市叫賣販售各式商品；我是電腦科學家，也是貨真價實的夜市小販，搭不搭？
+                </div>
+            </div>
+
+            <div id="section2-11" class="section">
+                <h3 class="section-title">小小傳令兵</h3>
+                <div class="story-content">
+                    小學二年級開始，我一直是歷任導師眼前紅人。六年級，男女分班，導師呂御榮身兼學年主任，需要班上二位同學於課堂間跑腿，協助傳達臨時校務指示。我是其中一位小小傳令兵，固定跑女生班級。同學說這是福利，羨慕不已，只有了解內情的人才不這麼認為。
+                </div>
+                <div class="story-content">
+                    整整一學年，每天跑遍女生教室數次，傳達老師的臨時指示。每到一間女生班教室，固定程序就是先在教室門口立正大聲喊報告，等班級老師允許後，再大聲說出呂老師要我們傳達的事項。報告過程中，不管是站著的老師，還是坐著的五十多位女同學，每個人眼睛睜得大大的看著我，好像我是一個插隊不守秩序的外人，硬生生打亂了他們原本的上課節奏與寧靜。
+                </div>
+                <div class="story-content">
+                    所有事都有正反二面，有缺點就會伴隨優點，好處是，當所有同學坐在教室聽課時，只有我和另一位傳令兵可以遊走在各個班級之間，活動筋骨，偶爾還可以喘口氣、上廁所、喝口水、休息一下，再慢慢走回教室，繼續上課。另外一項專屬我的好康是，可以利用每次的傳達機會偷瞧當初心儀暗戀的女同學。假日常帶小福走在老松國小校園裡，小學時期的陳年往事就會一點一滴湧出，畫面鮮活無比！
+                </div>
+            </div>
+
+            <div id="section2-12" class="section">
+                <h3 class="section-title">愛看書</h3>
+                <div class="story-content">
+                    母親很常帶我們兄弟母子三人一起搭公車去重慶南路東方出版社門市，一待就是整個下午，母親翻閱他感興趣的書，例如「大陸尋奇」和「汪洋中一條船」之類的書，弟弟阿峰還小，看不懂書卻很忙碌，忙著跟東方出版社二樓參考書玩大風吹，吹什麼，吹那些被他可愛小胖手拿出來錯位的書。我則是一個人靜靜地坐在角落邊矮板凳上，翻著東方出版社印行有注音大字版的中西方世界名著系列，一頁一頁專心看，插圖也不放過。通常，離開東方出版社前，母親會選購幾本書，也會讓我挑幾本書買回家繼續看，這些書，包含母親常翻閱的「大陸尋奇」與「汪洋中一條船」，過了40年完好如初，立在我家書櫃上排排站，最近一次短暫離開書櫃則是好友燕玲大兒子皓騫借回家閱讀。
+                </div>
+                <div class="story-content">
+                    小學三年級寒假最誇張了。蔡幸美導師從母親那裡了解我愛看書，為了深化我的閱讀興趣，並鼓勵我和他的二個同年齡孩子一起大量閱讀，每週都從老松國小圖書館借回60本書。我們三個剛近視戴眼鏡的小孩輪流閱讀這些只能借回來一週的書，所以每隔2~3天就看完20~30本書，再交換看。就這樣早看，午看，晚也看，除了吃飯、睡覺及上廁所非得做的事情，整個人異常安靜地坐在龍山商場皮鞋店內角落邊，埋首於水牛出版社及東方出版社印行的童書。「埃及豔后」、「七俠五義」、「西遊記」及「簡愛」都是在那個寒假讀過。短短三週寒假，三個小朋友每人看了快200本書，閱讀速度驚人。但也因為這種奇特經驗，養成日後我擁有快速閱讀的能力。
+                </div>
+                <div class="story-content">
+                    母親到老還是喜歡閱讀，還是常買書。衷心感謝母親與老松國小三年級蔡幸美導師培養我閱讀的習慣和喜好，謝謝您們！
+                </div>
+            </div>
+
+            <div id="section2-13" class="section">
+                <h3 class="section-title">閱讀</h3>
+                <div class="story-content">
+                    小學前，母親常買手繪本給我，雖然看不懂插畫旁的注音及文字，卻翻得津津有味，每天下午都從皮鞋店的大抽屜拿出來逐一翻閱一遍。小學時，東方出版社與水牛出版社是我的好朋友，他們二家出版的童書幾乎都讀過，甚至有些故事書現在還拿出來看。升國中後，我開始迷上金庸武俠小說與倪匡軟科幻小說，很快地，我發現租書店借回來的衛斯理與白素傳奇冒險故事無法滿足我的期待與想像，開始搜尋國內找得到已翻成中文版的科幻小說，這時候皇冠出版社與國家出版社取而代之，成為我家書櫃的新寵兒。
+                </div>
+                <div class="story-content">
+                    如果同時來過我家與辦公室，一定發現近萬本中英文藏書粗略分成三大類。第一類，從五專時期開始購買，開始閱讀，每隔一陣子就過時整批拋棄的電腦書。目前這類書籍約剩二千本，不是歷久彌新永不過時的經典教科書，就是眼下研究需要的參考書籍。第二類是科普書，從宇宙天文、物理化學、生物環境、社會經濟，到人文歷史的科普書我都有，涉獵範圍之廣，連自己都佩服。第三類是小說與童書，又以科幻小說居多。如果你有小孩，我歡迎你帶他們來我家借這些童書回去親子共讀，如果你跟我一樣是科粉，我們可以成為書友，一起遨遊在無垠無邊的想像銀河裡，成為耀眼星孩。
+                </div>
+            </div>
+
+            <div id="section2-14" class="section">
+                <h3 class="section-title">穿越世界</h3>
+                <div class="story-content">
+                    看到了嗎？我們生活在一個由數不清的世界所組成的其中一個世界中。想通往其它平行世界很簡單，只需要閱讀。一旦翻開書本封面，你就進入了那本書的造物主（作者）所精心建構的美妙奇幻世界，慢慢閱讀，細細思索，重複體驗，瞧見那奇幻世界所有的美好事物，聽見那些美好事物發出的種種悅耳聲音，緊跟在書中主角後面，一起冒險，一起遨遊，一起歡笑與悲傷。
+                </div>
+                <div class="story-content">
+                    愛看書的小孩，心靈富有。從小，在母親與學校老師的協助與鼓勵下，穿越大大小小數以萬計的世界，有些世界是江湖，我在裡面看破人情義理與紅塵羈絆，最後選擇出家，遠避中原；有些世界號稱中土，我和一群身材壯碩的同族夥伴終年穿著烏絲盔甲，拿著斧頭躲藏在地底洞穴，深怕那不可言喻的惡魔再度降臨，奴役我們成為他制霸中土的馬前卒；有些世界佈滿星河宇宙，我是剛走馬上任的指揮官，領航著一群太空母艦穿梭銀河，前往未知星系探險，暗中維持聯盟的繁榮與和平。
+                </div>
+                <div class="story-content">
+                    在這些世界面前，我知足，因為有些世界裡的住民比我還痛苦悲傷，遭遇更多苦難；我訝異，因為有些世界裡的主角引領我穿越不同文化社群，告訴我各種特殊詭譎的政治哲學觀如何影響及形塑一個又一個社群的生活風貌，形成迥異的歷史觀；我痛哭，因為有些世界裡的殺戮太過恐怖，導致我深陷其中，久久無法自拔。想和你分享每一個我所經歷過的世界，一杯咖啡，一塊蛋糕，再挑選一個你想進入的一個奇幻世界，我們一起遨遊飛翔！
+                </div>
+            </div>
+
+            <div id="section2-15" class="section">
+                <h3 class="section-title">二本相簿</h3>
+                <div class="story-content">
+                    在我們很小的時候，母親就把家中相片分成兩大本，分別整齊存放我們兩兄弟從小到大拍的照片。除此之外，他很公平把自己和爸爸兩人從年輕開始每個時期的照片分成兩堆，分別放入專屬於我和弟弟的大相簿中。在那個還沒有數位相機更不用說照相手機為何物的底片年代裡，我們的家庭樂趣就是把放在大衣櫥上層的兩本大相簿搬下來，然後全家人圍坐一起，一頁一頁開心瀏覽，一張一張細細回味，然後弟弟小蜜蜂一言，姊姊黃美珠一句，嘰哩呱啦搶著說照片中的我們這些小主角們當時發生了什麼事情才會留下這副生動表情。那時候的時間忽快忽慢，當我們沈浸在照片的回憶時光裡，時間過得很慢，慢到無法察覺過了多久，等到我們看完厚厚二大本相簿時，才發覺時間怎麼過得這麼快，轉眼間一個下午被我們翻閱完畢。
+                </div>
+                <div class="story-content">
+                    弟弟小蜜蜂婚後搬到母親買給他們小倆口的板橋江子翠房子住，也把專屬他的相簿一起帶走。所以，民國88年之後，我再也沒機會翻閱他帶走的那本相簿。雖然弟弟小蜜蜂常回來萬華陪母親散步聊天，但是也找不到機會大夥坐下來一起翻閱屬於我的這本相簿，實在可惜。今夜，我突發奇想，找弟弟討論，把分開20年的二本相簿按照拍攝先後順序重新整合成一本大相簿。當然，弟弟小蜜蜂一定會說，整合之前，找外甥女阿瑄過來把所有照片掃描起來，轉成數位檔案存放在雲端供所有黃家人隨時欣賞。對於這個提議，我欣然接受，只看苦主阿瑄何時有空囉。
+                </div>
+            </div>
+
+            <div id="section2-16" class="section">
+                <h3 class="section-title">查某 vs. 海賊</h3>
+                <div class="story-content">
+                    小時候，我有許多綽號，例如貢丸、大頭仔，最特別是「查某」，每次母親帶我在龍山商場閒逛，總會有認識的商家老闆遠遠就對我們母子招手大喊：「來，依六ㄟ查某你過來，要不要吃糖果？這些全部給你。」說完自己跑過來抱起我叫我親他臉頰，並把手上所有情人果塞進我口袋中。每天中午過後，總有吃不完的糖果和親不完的臉頰。
+                </div>
+                <div class="story-content">
+                    這種情況等弟弟黃國峰出生後出現矛盾甚至鬧分裂。許多商場鄰居一而再探詢母親，明明弟弟長得更漂亮，更像女生，為什麼（指著我）查某的乾爹阿水每次來店裡都叫妳第二ㄟ「海賊」？理由很戲劇，弟弟出生前，我們家道中落，和另外一家人，也是我乾爹，住在西園路佛具街二樓不同間的雅房，我們住前頭窗戶面向龍山寺側門，他們住後頭和西園路一段136巷的房子屁股對屁股。有一天下午，剛學會爬的弟弟趁母親整理房間不注意時從我們家爬了快20公尺，爬進乾爹家偷抓乾媽要吃的午餐。乾媽迷糊睡醒之際，看到一個漂亮又可愛的小孩一手撐著床頭櫃一手抓滿碗裡的食物往嘴裡塞，笑到合不攏嘴，趕忙呼喚乾爹和我媽，一起來看這幅太經典的畫面。從那次起，弟弟的綽號就是「海賊」，我還是被叫「查某」，直到小學三四年級，龍山商場店家老闆才愈來愈少人叫我「查某」，改叫大頭仔。
+                </div>
+                <div class="story-content">
+                    弟弟很害羞，時常看我激伍仁，這二張照片就是母親下午帶我們去商場對面龍山寺放風拍的。我那時迷上恐龍，總是邊走邊裝成暴龍，一路發出吼叫聲，弟弟是我的好觀眾，總是站一旁靜靜看我，有時候，母親鼓勵他學我也來一下恐龍是怎麼走路大聲吼的，弟弟總是羞澀說不要，我就會走到弟弟後面，牽起弟弟的雙手，叫他跟著我擺，學我大聲吼叫。弟弟若在世，今45歲，二年前腦溢血去世，我傷心欲絕，此文懷念他，希望他在另一個世界盡情吼叫。
+                </div>
+            </div>
+
+            <div id="section2-17" class="section">
+                <h3 class="section-title">龍山國中</h3>
+                <div class="story-content">
+                    昔日艋舺，今之龍山，人文薈萃源流長，...，錦繡前程在四方。直到今天，仍清楚記得由陳水穆校長填詞、洪雨田先生作曲的這首龍山國中校歌。每當心情煩悶、情緒低潮，想大聲唱歌來振奮自己的心情時，我都不假思索地哼起母校的校歌，尤其唱到「積極進取，樂觀奮鬥，...，披荊斬棘，不屈不撓」這些歌詞，整個人就會變得很HIGH，多希望自己像歌詞所描述的一樣「龍中學子志氣昂」，也期待自己的所作所為能讓「龍中我校譽飛揚」。
+                </div>
+                <div class="story-content">
+                    記得國中時我的自願是成為一名對人類社會有貢獻的科學家。如今雖然距離當初的願望又接近了一步，在長庚大學資訊工程學系任教，帶領研究生利用電腦的強大運算能力來模擬新興傳染疾病的傳播動態，研究各項公共衛生政策的防疫成效與最佳實施策略，並戰戰兢兢與流行病學研究社群分享最新成果，但是，我知道若沒有當年練瑞安恩師的開導與教誨，就沒有今日的黃崇源。國中三年，在他不厭其煩、深入淺出講解下，不僅讓我從國一起就喜歡數學課，迷上「苦思、頓悟、喜悅」這個難與外人說明白的解題過程，也奠下日後學習電腦科學所需的數理邏輯基礎。
+                </div>
+                <div class="story-content">
+                    回首過去，發現自己的許多專長與興趣，都是在多位國中老師的引領下，慢慢挖掘、培養出來，例如，在黃麗雲等多位國文老師的鼓勵協助下，我寫下第一首白話文新詩，完成第一部中篇科幻小說「謎」；在阮麗玉、謝育台兩位老師活潑有趣的教學活動中，讓我對生物、理化課程產生莫大興趣，直到現在，閱讀時下最新的生物學、物理學及化學等科普著作都還是我的主要活動與樂趣，並對我的研究工作助益甚深。利用這個版面，再次感謝過去曾經教導過我的每一位老師，有了您們的付出，才有今日健全的我；也希望您們以我的表現為榮。
+                </div>
+                <div class="story-content">
+                    若問我，除了龍山國中老師的指導與大力協助之外，要怎麼做，才可以成為一名電腦科學家，探索許多有趣且對人類社會有貢獻的研究？我的回答很簡單：一、從現在起，培養閱讀習慣，利用課餘時間多多閱讀課外讀物。閱讀一本好書，不僅讓你領略如何欣賞英倫康橋的美，也讓你在浴室泡澡時發現真理，找到如何在宇宙中撐起地球的簡單方法。二、永遠保持好奇心，千萬不要對任何的人、事、物習以為常，少講「早知道、就是這樣」，多問「為什麼？為什麼？」唯有抱持一顆好奇心，才能揭開隱藏在人們生活週遭中的科學新發現。<span class="highlight">「思考、創造、忍耐」是我的座右銘，更是自我鞭策的目標！</span>
+                </div>
+            </div>
+
+            <div id="section2-18" class="section">
+                <h3 class="section-title">人生第一桶金</h3>
+                <div class="story-content">
+                    民國76年，我17歲，剛放暑假的某一個早晨，陪母親上三水街菜市場買菜，在康定路廣州街交叉路口現剝皮寮騎樓等紅綠燈時，發現馬路斜對面三光眼鏡店旁一家宏碁資訊廣場（鼎眾電腦公司）剛開幕，店內窗明几淨，陳設嶄新。我站著看了一會兒，轉頭對母親微笑說，明天去問他們缺不缺工讀生，也許暑假可以去那邊打工賺錢，開學後買一台新電腦。
+                </div>
+                <div class="story-content">
+                    隔了二天，我開始在資訊廣場擔任門市工讀生，向上門參觀的客人促銷宏碁700型XT和900型AT二種電腦的功能和優點，以及如何在開機後啟動倚天中文系統。這個門市工讀生工作難不倒長年在萬華夜市賣鞋每晚賣出數十雙的我，每當門市沒客人，主管吩咐我整理展示台的電腦和印表機時，我就會一邊將電腦螢幕鍵盤印表紙歸位擺好，一邊觀察公司其他的員工在做些什麼事。
+                </div>
+                <div class="story-content">
+                    有一天下午，我發現包括老闆在內許多幹部都擠在辦公室一台電腦前，個個急得像熱鍋上螞蟻，輪流上前操作一番，嘗試解決一個臨時發生的系統問題。暗中觀察許久，發現他們無力解決，還圍成一團七嘴八舌胡亂猜測原因。從眾人雜亂無章急切的交談中我約略猜出問題的癥結所在，熟知解決方案不難，只需重建索引檔，重整資料庫即可。我鼓起勇氣毛遂自薦探詢，讓我試看看，我有把握讓程式恢復正常運轉。他們半信半疑將鍵盤交給我，沒多久，在一陣驚訝聲中程式正常啟動，問題迎刃而解了！
+                </div>
+                <div class="story-content">
+                    那次事件後，公司老闆兼總經理陳先生問我，沒有沒興趣轉到軟體開發部門？這正符合我意，想都不想一口答應。隔天，我告別門市，成為軟體開發部的一名程式設計師，每天17:00上班22:00下班，負責開發萬華大理街服飾業進銷存管理資訊系統。從民國76年暑假起，到民國81年雙十入伍前，五年中歷經多項職務，從軟體開發部的程式設計師像坐直升機一樣被快速升到軟體開發部主任，從軟體開發部主任被老闆賞識和指定跟在他身旁擔任特別助理，在總經理特別助理任內為了解決教學部捅下的簍子，臨危授命改調電腦教室教學部主任，重整招生問題。薪資從一開始的程式設計師二萬三千元，隨著職務改變不斷調升，離職前夕，每個月薪資實領四萬五千元，以及總經理額外給的許多獎金。30年前，這種薪資水準已經羨煞多少上班族了！
+                </div>
+                <div class="story-content">
+                    常拿這段經歷鼓勵長庚資工的大學部修課學生，希望他們在低年級時努力學習，高年級時勇敢表現，未來個個成就遠超過我，心滿意足！
+                </div>
+            </div>
+
+            <div id="section2-19" class="section">
+                <h3 class="section-title">五專七年級</h3>
+                <div class="story-content">
+                    我讀五專，讀了七年，剛好是別人的高中三年加大學四年。前面二年，為了學習電腦軟硬體相關知識，除了教科書，每天還額外提著一大袋沈甸甸的電腦書，一大早從萬華經公館轉二班公車去木柵的中國工商專校，不管這堂課上什麼科目，總是埋首在自己帶來的電腦書。就這樣自學學會了許多程式語言，以及相關的資訊理論。
+                </div>
+                <div class="story-content">
+                    中間三年，我幾乎天天遲到、早退及翹課，每天跑去鼎眾電腦公司上班。從原本的暑期工讀生，變成正式的程式設計師，從程式設計師跳級成為軟體開發部主任，從原本的軟體開發部主任被拔擢為總經理特助，跟在總經理陳金柱先生身旁，參與公司各項經營擴展計劃。在那三年裡，我與軟體開發部夥伴一同完成多套商用軟體系統，也和公司管理階層在北台灣各地快速展店，透過傳銷及贈送電腦教室免費教學等模式販售電腦軟硬體。
+                </div>
+                <div class="story-content">
+                    最後二年，別人早拿到畢業證書跑去就業、服兵役或結婚生子時，我回到校園重修近八十個學分。除了電腦相關科目鐵定不會被當而且高分過關之餘，所有的國文、英語、英會、數學、軍訓、體育、三民主義、憲法、國父思想、會計、行銷、打字，以及你想不到的必修科目，統統被死當，統統得回去和專一學弟妹一起上課。我的學生生涯是從專六開始的，在那二年期間，我認識許多小我五屆的學弟妹，和他們一起上課一起下課一起擠公車回家，一起去公館麥當勞打屁聊天，一起去中華路商場吃世界豆漿大王，一起去青年公園泡沫紅茶店閒扯蛋整晚，這二年絕對是我人生最快樂的時期之一。
+                </div>
+            </div>
+
+            <div id="section2-20" class="section">
+                <h3 class="section-title">可樂源</h3>
+                <div class="story-content">
+                    小時候很少喝可樂，逢年過節，母親總是買黑松汽水或沙士祭拜神明。直到念（中國工商專校電子資料處理科）五專時，科主任為了招待客人或科內老師時常叫我去福利社買整箱可樂，買回來後，就順便分一瓶給我，久而久之，就養成我愛喝可樂非可樂不喝的壞習慣。喝可樂的全盛時期，平均每天喝兩罐以上的可樂，這還不包括其它的無氣泡飲料（例如：奶茶或舒跑），真誇張！
+                </div>
+                <div class="story-content">
+                    記得有一次和娟娟去香港旅遊，當時娟娟不希望我喝太多可樂，為了解癮喝一口，我竟然答應只要當下讓我買一瓶可樂，之後的兩個月內我半滴可樂不碰，想當然耳，軟心的娟娟還是讓我喝可愛，而我也破功，守不到幾天就把誓言拋到腦後繼續狂喝可樂。隨著年紀變老，漸漸發現可樂不能再喝多了，因為身體無法負荷這麼多且這麼甜的碳酸飲料，只是，積習難改，要把過去累積二十五年喝可樂的壞習慣在一夕之內改掉，實屬比登天還難之事。不過，為了小福，我還是要把這個黏在我身上的壞習慣一點一滴改掉，才能活久一點和娟娟及小福等家人共享天倫之樂啊！
+                </div>
+            </div>
+
+            <div id="section2-21" class="section">
+                <h3 class="section-title">少年人過生日</h3>
+                <div class="story-content">
+                    父親在世，我很喜歡慶生。每年八月十三日，母親總把我打扮的趴哩啪哩，不是搭上一套紅西裝，就是腳踩一雙父母親特地請工廠老師傅客製的閃亮亮紅皮鞋，再配上一件新買的襯衫和吊帶西裝褲，活脫脫像一位從電視機走出來的混血小童星。當晚，父母親一定休息不開店，專程帶我去看歌廳秀，吃大餐，讓我樂得合不攏嘴，開心的不得了。
+                </div>
+                <div class="story-content">
+                    五專後幾年，我在鼎眾電腦公司擔任總經理特助。那幾年生日，公司總是在萬華門市舉辦雞尾酒自助宴會，邀請客戶、學員以及我要好的朋友一起來公司同歡，邊吃外燴邊聊天，最後再齊唱生日快樂歌許願吹蠟燭吃蛋糕。當天男主角不消說，一定是我，男主角旁羞答答的女主角就是苦追許久的明仁藥局大女兒陳雅雯。如今回想起，記憶中還殘留些許淡淡的哀傷與絲絲的甜美，難以忘懷。
+                </div>
+                <div class="story-content">
+                    人生25歲前的生日回憶，隨著時間漸漸模糊。謝謝各位的祝福，我統統收到了，也一定如願，天天過得充實快樂！希望大家和我一樣，就算半百，一樣搞笑，一樣伍仁，一樣滿腔熱血，一樣愛老婆如初識時！
+                </div>
+            </div>
+
+            <div id="section2-22" class="section">
+                <h3 class="section-title">2005年應徵教職自傳</h3>
+                <div class="story-content">
+                    黃崇源博士，西元1970年8月出生。十歲時，父親因長年累月辛勤工作，導致腦溢血而過世。自此，母親身兼數職，同時擔負家庭生計與養育教導之責。父親過世時，未遺留任何財物，致使母親必須在台北市廣州街夜市擺路邊攤賣皮鞋，早出晚歸，賺取微薄毛利，供我們兩兄弟生活及上學。儘管生活艱苦，在母親嚴格正確的教育下，從小養成獨立自主的精神與明辨是非的能力。
+                </div>
+                <div class="story-content">
+                    1985年完成九年國民義務教育後，就讀中國工商專校（中國科技大學前身）電子資料處理科（資訊管理系前身）五專部。在1994年8月退伍且工作四年後，因為對分散式人工智慧、演化式計算領域懷有崇高的研究熱誠與興趣，決定重回校園，攻讀碩、博士學位。修業期間，選修跟研究領域、興趣相符之課程，藉由七年的研究所生涯，向師長學習做學問的方法與研究領域之精髓，主動挖掘研究課題，針對疑難議題大膽提出想法與建議。唯有如此，一分耕耘一分收獲，才能擁有令人滿意的大豐收。
+                </div>
+                <div class="story-content">
+                    如今取得博士學位，衷心感謝每一位教導過的師長，從他們身上，本人學到許多寶貴知識與經驗，就好像一艘揚帆等待出航的船，準備面臨人生下一個階段的挑戰。記得Red Hat公司董事長羅伯特．楊（Robert Yang）在「紅帽旋風：Linux」書中形容他的工作為「做這麼有趣的工作，還能因此得到報酬，簡直是違法行為」。期盼自己像他一樣，找到可以發揮所長且樂在其中的學術研究與教職工作。
+                </div>
+                <div class="story-content">
+                    本人個性樂觀開朗，做事積極負責，自信有能力擔任教學、研究與行政等工作。由於學生時期承蒙許多師長適時地提攜與教誨，本人擔任教職以來，亦秉持同樣的熱忱與認真的態度授課，主動關心學生的各項問題。對未來的期許，希望兼顧學術研究、教學輔導、行政服務三方面，隨時開創富挑戰性的研究工作與成果，一展抱負及所長，將過去所學到的寶貴經驗貢獻給工作單位與社會。<span class="highlight">「思考、創造、忍耐」是我的座右銘，更是自我鞭策的目標！</span>
+                </div>
+            </div>
+
+            <div id="section2-23" class="section">
+                <h3 class="section-title">世事無絕對</h3>
+                <div class="story-content">
+                    24歲八月中旬，義務役退伍，進入新加坡外商宇博電腦公司擔任程式設計師，每天朝九晚五專注於空運承攬系統的系統規範與實作細節中，從來沒有想到有一天會因為娟娟父母親反對我倆交往，跑去報考資訊工程研究所碩士班，還因為考試策略運用得當，順利考取交通大學資訊科學研究所。
+                </div>
+                <div class="story-content">
+                    28歲，攻讀交通大學資訊科學研究所碩士學位，加入學習科技實驗室，接受人文理工樣樣博學精深的孫春在教授的指導，每週往返台北新竹二地數趟，過著半工半讀，在長榮關係企業「環世」和「交大資科」兩邊跑的緊湊日子，從來沒有想過兩年後會因為領略指導教授為我開啟的一扇研究曼妙之窗，而決定碩士畢業後不去竹科工作當新貴，繼續留在交大攻讀博士學位。
+                </div>
+                <div class="story-content">
+                    30歲，我的身分是交通大學資訊科學研究所博士生，也是中國技術學院（目前為中國科技大學）資訊工程學系專任講師，每天除了研究與教學，還要抽空回台北，白天陪伴母親，晚上騎車飛去輔大陪伴吾愛娟娟，兩人手牽手親密漫步在美麗浪漫的校園中，談情說愛，和一群輔大好友暢談家事國事電影事，從來沒有想過取得博士學位後會落腳元培科技大學資訊工程學系一年，擔任專任助理教授兼任系主任，以及從2006年至現在任教的長庚大學資訊工程學系。
+                </div>
+                <div class="story-content">
+                    33歲，本來博士學位畢業論文的研究主軸是演化式計算之理論改良與實務應用，從來沒想過2002～2003年一場SARS流行風暴把我的博士論文主題變成了「流行性傳染病電腦模擬與公衛政策成效評估」，還因此幸運地認識和平醫院璩大成院長、陽明大學陳宜民教授、中國醫藥大學風管系藍郁青教授，以及主要合作夥伴台灣大學地理系溫在弘教授，這些歷程與結果都是當時的我所無法預見的機遇。
+                </div>
+                <div class="story-content">
+                    目前，任教於長庚大學資訊工程學系，2015年8月升等正教授。我熱愛工作，也喜歡和系上同事共事，一起努力打拼，一起胡言亂語練肖話，然而，就像標題所言，未來會怎麼變化，無法預知。從過往經歷中只能略窺一二，就是世上沒有永遠，也沒有絕對不可能的事，日後會如何？誰也說不準，唯有努力充實自己，正面迎接驚奇人生才是上策！
+                </div>
+            </div>
+
+            <div id="section2-24" class="section">
+                <h3 class="section-title">爬呀爬呀過沙河</h3>
+                <div class="story-content">
+                    小時候，家住龍山寺側門對面龍山佛具店樓上，每天都是父親與姊姊阿美珠先去龍山商場開店賣皮鞋（六明皮鞋店，生意鼎盛時期，聘請三位女店員），母親總是等午飯吃飽後再帶我們兄弟倆去店裡協助父親照顧生意，或接手讓父親休息去對街寶島鐘錶樓上的茶店看摔角喝茶去。有時候下午生意清淡時，母親會帶著三個小孩穿越馬路到對街的龍山寺廣場散步，順便讓我們兄弟倆活動活動筋骨，繞著偌大的廣場跑啊跳啊，活像運動會五千公尺長跑賽一般。
+                </div>
+                <div class="story-content">
+                    有一回，應母親要求，在龍山寺廣場靠近大門口處留下一張搞笑紀念照，照片中我就是面對鏡頭和弟弟一起擺出半蹲螃蟹照，從此，這種半蹲螃蟹照也變成我的招牌動作，到每一個著名景點時都要擺一次，請娟娟幫我留影紀念，頗有到此一遊意味！
+                </div>
+            </div>
+
+            <div id="section2-25" class="section">
+                <h3 class="section-title">幸福的感傷</h3>
+                <div class="story-content">
+                    2010年8月母親住院時，看著她的記憶一點一滴慢慢流失，內心很難過。隔年初小福出生後，這種難過不時襲上心頭，害怕將來有一天自己跟我媽一樣，忘記許多美好事物，忘記美麗可愛又得人疼的老婆娟娟、古靈精怪又調皮又愛搗蛋的小福，以及週遭我愛或愛我的親朋好友。
+                </div>
+                <div class="story-content">
+                    如果有一天，我真的忘了各位，請不要難過，也不要生氣，唯一要做的事情是「記住我」，記住曾經有這麼一個人叫黃崇源，小時候很可愛，眼睛大大顆的，像一個巴西外國小男孩，整天在龍山商場騎腳踏車到處串門子，自稱「六明皮鞋店」黃依六的兒子，長大後愛搞笑，奉行母親黃媽媽郭雪雲的「吃人半斤，還人一斤」樂天助人哲學，明明不是很有錢，卻好像億萬富翁似地兩肋插刀到處幫忙別人。
+                </div>
+            </div>
+
+            <div id="section2-26" class="section">
+                <h3 class="section-title">守護幸福</h3>
+                <div class="story-content">
+                    最近幾年，小福入睡後，阿娟在樓下刷洗晚餐留下的鍋碗瓢盆，以及整潔廚房恢復原有的乾淨與秩序之時，我總會一個人靜靜坐在二樓書房電腦桌螢幕前深切反省，我是一個好丈夫嗎？我是一個好爸爸嗎？諸如此類的重要問題。這些問題從來沒有令自己滿意的答案，我總是過於緊迫叮嚀，以至於阿娟承受過多壓力，情緒無從宣洩；我總是過度保護小福，以至於阿娟得花更多時間與力氣來訓練他、鍛鍊他，補足我對小福造成的影響。
+                </div>
+                <div class="story-content">
+                    活得愈久，愈能體察妻子與小孩的重要性，而且這個重要性不斷在放大，逐漸充滿整個生活的每分每秒每個角落。為了這個家，為了他們可愛的母子倆，為了我們一家三口可以圓滿地生活在一起，我樂意放棄我的夢想、我的志願、我的野心、我的虛榮心，騰出最多的時間和精力，換取最微薄但也最重要的家庭幸福。
+                </div>
+            </div>
+        </section>
+
+        <section id="chapter3" class="chapter">
+            <h2 class="chapter-title">愛人月如</h2>
+            
+            <div id="section3-1" class="section">
+                <h3 class="section-title">夜市教電腦</h3>
+                <div class="story-content">
+                    民國84年，我25歲，萬華夜市賣水煮玉米的阿姨拜託我教她女兒電腦，我一口答應。教電腦那晚，我提前去夜市玉米攤旁等，只見一位綁馬尾巴穿小件Ｔ恤寬鬆牛仔褲大頭鞋抱著一堆書的嬌小女孩從人群中走出來，叫我一聲哥哥。
+                </div>
+                <div class="story-content">
+                    玉米攤阿姨邊剝玉米鬚邊看著我倆說：「這是阿娟，我叫阿源哥哥教你電腦，你電腦書有帶出來嗎？有什麼問題你問阿源，他在電腦公司上班，電腦很厲害，不會的他可以教你。」說完，為了不妨礙生意，我們拿了二張椅凳，到夜市旁人行道上坐，我一邊翻閱她帶來的電腦書，一邊想要怎麼開頭教才好。
+                </div>
+                <div class="story-content">
+                    女孩帶來三本厚厚的書，分別是MS-DOS作業系統手冊、倚天中文使用手冊和PE2文書處理手冊。我隨意翻著書問她，那裡不懂？他害羞淺笑回答：「也不知道？只知道學校用這些，可是我都不懂，也不知道要問什麼？我媽說你很厲害，可以教我！」
+                </div>
+                <div class="story-content">
+                    已經忘記那晚教她什麼了，只記得對女孩說過：<span class="highlight">「吾愛吾師，吾更愛真理！」</span>我們坐在人潮絡繹不絕的夜市從電腦人工生命談到古希臘哲學，從古希臘三哲人蘇格拉底、柏拉圖、亞理斯多德的流派歧異點講到好萊塢電影網路上身的劇情，從網路上身女主角珊卓．布拉克演出的電影角色跳到媲美西班牙魔幻現實主義代表作百年孤寂的另一本好書精靈之屋，哩哩渣渣一整晚就是沒講她帶來的三本書的任何半點內容。
+                </div>
+                <div class="story-content">
+                    那晚約定，之後每個星期六晚上七點半，她來我家學電腦，學校教的如果不懂，我就再講一遍。現在我倆常提這事開玩笑，不是學生笨，就是老師差，到現在電腦沒半撇，卻成一對夫妻了！如果當年我家沒在夜市賣皮鞋，如果當年她家沒在我家攤子前馬路中央賣水煮玉米，就不會有這段美好姻緣。感謝月老施媽，在我倆之間繫上一條鋼鐵姻緣線，就算後來阻饒重重，也化不開我和這位純潔女孩之間濃濃的感情。俗話說得好，夜市可以賺到人生致富的半桶金，今晚我補下半句，夜市也可以娶到一位美嬌娘，和擁有一個幸福的家庭生活。
+                </div>
+            </div>
+
+            <div id="section3-2" class="section">
+                <h3 class="section-title">錦囊妙策三則</h3>
+                <div class="story-content">
+                    她父親知道我倆交往後，非常不贊同，理由二個。第一，擔心娟娟年紀小受騙被欺負，要談戀愛得等大學或研究所畢業，這時候尚早，不會有結果。再來是擔心我，五專讀七年好不容易畢業，雖然有份穩定的工作，薪水四萬五不錯，但這樣的學歷不夠用，日後有無發展，能否養家，會否失業，都無法保證。為了徹底斬斷我倆剛孵育出來的感情，甚至凌晨四點找我母親出來談，雙方家長同時曉以大義，要我知所進退，早日分手乾淨。
+                </div>
+                <div class="story-content">
+                    我對娟娟的愛有多深，只有她知！為了化解她父親的重重阻擾，我拿出錦囊妙策三則。第一，用空間換取時間，表面上不再來往，各過各的生活，實際上化明為暗，轉成地下情，持續在一起。每晚要和她約定隔日約會地點和時間，總是請小了五屆的五專學弟幫忙，先打電話到她家，若是她父母親接起來，一概自稱學校同學，找娟娟討論功課，然後轉告她，在電話邊等，電話一掛斷半分鐘內我馬上打進來。
+                </div>
+                <div class="story-content">
+                    第二項妙策師法當時民進黨路數，地方包圍中央。我清楚知道，施家只有娟娟父親明確反對，如果我各個擊破，先將她弟妹一個一個拉攏過來，擔任內應，居間協助我暗地聯絡她們的大姐娟娟，並說服她們的母親認同我，有朝一日我倆一定可以正大光明走在萬華街頭接受街坊鄰居的祝福。
+                </div>
+                <div class="story-content">
+                    最後一項，山不轉路轉，路不轉人轉，既然認為五專學歷低，擔憂日後升遷和養家活口可能出問題，那我就來證明，憑我的電腦專業和程式設計能力，拿一個國立大學資工碩士學位絕非難題。原本打算退伍先工作數年再去讀碩班，後來提早實現，還得感謝她父親給了我一口真氣！在地下情那七年裡，娟娟常反覆問：「我們在一起會有結果嗎？到現在我父親還反對，每天得躲躲藏藏在一起，只能約在離家很遠的地方見面，害怕路上碰到熟識我父母親的人，我們真的會像你說的一樣有好結局嗎？我快沒信心了，怎麼辦？」我總一派樂觀眼神堅定回應：「寶貝，相信我，一切掌握中。所有狀況顯示愈來愈好，你的弟妹我們的朋友都在幫我們，你媽媽雖然不贊同，現在也不反對了。如果妳父親知道，我一邊讀博班，一邊在中國科大任教，擔任專任講師，應該不會像過去一樣擔憂了！繼續下去，我們要沉得住氣！」事後證明，當初擬定的三項錦囊妙策都對！
+                </div>
+            </div>
+
+            <div id="section3-3" class="section">
+                <h3 class="section-title">輔大校園</h3>
+                <div class="story-content">
+                    常有人問，你是不是輔大畢業的？我的回答總是一成不變微笑說：「不是，但我老婆娟娟是輔大畢業的。」25歲那年，追求輔大法文系青春正盛的新鮮人娟娟，由於年假、補休假積太多，放也放不完，乾脆跟公司講好，每週五固定休年假，早上騎車載她去輔大，她上課時，我就待在理圖旁輔園餐廳看書，或是到處走走隨意閒逛校園。中午下課鐘響前，一定趕回外語學院小巴黎椅子前樹蔭下等她下課，每當看到她和同學一整群走下樓，我總興高采烈三步併二步快跑到她面前，道別所有同學，十指交扣牽著她去文學院的文園或文德餐廳飽餐一頓。
+                </div>
+                <div class="story-content">
+                    下午，他回去上課時，我改去文園餐廳等待，一邊思索放學後要獻給她讓她驚喜的情詩，一邊大口啃著文園麵包部剛出爐熱騰騰的大蒜麵包，大口喝著文園福利社整天供應不斷的冰涼綠豆湯。傍晚，我們去輔大旁邊514巷或對面的建國路吃晚餐，有時也去水龍頭餐館打打牙祭，邊吃邊談情說愛打情罵俏，和現在的年輕人沒兩樣，牽手親嘴摟抱樣樣來，才不管旁人如何看待。吃飽飯，我們散步回校園，或繞去校門旁的野聲樓看電影社正播放的歐陸藝術電影。
+                </div>
+                <div class="story-content">
+                    輔大校園有太多我倆的回憶、秘密與朋友，我們一起吃便宜又大支的霜淇淋，一起觀賞法文系學弟妹的年度戲劇公演，一起手牽手閒逛校園高談闊論，編織著只屬於年輕人才敢瘋狂裁剪的異端夢想。輔大，就好像是我的母校，可以如數家珍細說輔大校園的四季變化與歷年趣事，也可以跟著娟娟的同班同學一起大聲抱怨輔大差勁處，記憶最深刻的回憶之一是，輔大夏天的蚊子特別多，我常笑說，每位輔大同學背後平均可分到五隻蚊子緊跟隨，趕也趕不走，愈趕來愈多啊！
+                </div>
+                <div class="poem">
+                    追求娟娟的頭一年，寫了近百首情詩，其中一首「幸福」如下：<br><br>
+                    一天二十四小時<br>
+                    我在等待最後的　幸福<br>
+                    是妳那　甜蜜的　盈盈的　秋波<br>
+                    溫柔地對我展露無限幸福<br>
+                    喔　言語是一種多麼拙劣的東西<br>
+                    只要它一出現<br>
+                    美麗的　蝴蝶就翩翩飛逝<br>
+                    可是你的秋波卻是汪洋無際<br>
+                    他會使我的心胸<br>
+                    擴展到無邊無際<br>
+                    就像那滿佈幸福星辰的天地
+                </div>
+                <div class="story-content">
+                    這些年，只要從萬華騎車去長庚大學，都會經過輔大，我總忍不住在停紅燈時轉頭多望校門口幾眼，有一股衝動想掉頭一轉把摩托車騎進大門旁新蓋的立體停車場，然後去小巴黎尋找當年娟娟留下的美麗倩影，或是站在走廊邊偷望她上課時托腮認真聽講模樣。勿笑我到現在還沒做，也不要認為不可能，也許有一天，我將悠閒坐在小巴黎樹下，等著娟娟牽著兒子小福的手，從中美堂漫步過來和我會合，然後輕聲細語說：「走吧，我們帶小福去吃家園好嗎？小福餓壞囉！」
+                </div>
+            </div>
+
+            <div id="section3-4" class="section">
+                <h3 class="section-title">定情物</h3>
+                <div class="story-content">
+                    雙方第一次見面，是隔壁水煮玉米攤阿姨（未來岳母）找我教她女兒電腦，我們約好在廣州街夜市他家攤子後面的人行道碰面，她帶來厚厚三本電腦書，但整晚在吵雜夜市裡我們聊了希臘三傑對於西方哲學的影響，聊珊卓．布拉克主演的電影「網路上身」背後的隱喻，聊拉美文學「精靈之屋」與馬奎斯的「百年孤寂」兩者的風格差異，就是沒聊當次見面的主題「電腦」。
+                </div>
+                <div class="story-content">
+                    那天後，我們約定每週日晚間七點在我家二樓書房教電腦。每次星期日晚上吃飽飯，我就像隻耐不住性子的小浣熊，走過來走過去，頻頻回首看牆上的時鐘，豎起耳朵聆聽屋外叫門聲。我倆總在短短二小時裡分享彼此最近看過的好書。記得有一次，我急著跟他說「蘇菲的世界」與「達爾文大震撼」這些書籍的內容精彩處與讀後心得，他則興高采烈對我說「停車暫借問」如何好看，下次想帶來借我閱讀，再一起討論。每一次，我們都沒聊當次見面的主題「電腦」。
+                </div>
+                <div class="story-content">
+                    半年後，也就是隔年四月，去西門町獅子林百貨公司樓上看了一場電影，我們正式手牽手成為情侶。公開交往時期，我們常跑中國各大城市。每到一個城市，我們就撥空一整天悠哉閒逛當地最大的新華書局，搜刮還沒有看過的科幻小說，她則逐一翻閱世界名著，例如「巴黎聖母院」與「高老頭」，看到不錯的譯本再買回家慢慢閱讀。記得某一年我倆在廣州買太多書裝不下行李箱拖回台灣，就請在大陸工作的弟弟阿峰幫忙分批寄回台灣老家。婚前那幾年她買的簡體書在婚後也跟著她一起住進我們家，和我的書籍整合後排在一起，非常壯觀。現在，福家許多書是娟娟的，是我年輕時送給娟娟的，是娟娟婚後從娘家帶來的嫁妝之一，現在和其它簡體書一同放在福家書櫃，非常好看，值得推薦！
+                </div>
+            </div>
+
+            <div id="section3-5" class="section">
+                <h3 class="section-title">不想讓你等了</h3>
+                <div class="story-content">
+                    年輕時和吾愛娟娟交往，每次她邀我一起做某事或去某地玩時，我常一臉抱歉樣說：「寶貝，可不可以不要這個時候，我目前忙得焦頭爛額，等告一段落，就有時間陪你了，再等一段時間好不好？」這個爛到底的理由從年輕講到中年，從開始交往到之前，從碩博士研究生時期一路到正教授升等前，多少時光歲月蹉跎在個人的短視近利與學術功名利祿方面，無助於兩人的情感與一家三口的幸福生活，讓吾愛娟娟一路等等等。
+                </div>
+                <div class="story-content">
+                    我覺悟了，不再說這個爛理由，也不願你始終陪伴在我身旁無怨無悔等下去，從玲瓏有致的身材等成瘦巴巴令人疼惜的模樣，從俏佳人等成美魔女，從天真無瑕強說愁的瑪法達等成廚藝佳有愛心負責任的模範媽咪。現在，我要把握剩餘人生，和妳及我倆愛的結晶，小福，廝守在一起，日復一日，度過每一個平淡無奇卻幸福無比的早晨與黃昏，細心品嚐妳用心烹煮的每一道菜、每一鍋飯、每一條麵包、每一粒饅頭，一家三口輕鬆圍坐餐桌，話家常品生活，舒服躺在床上，側頭細察家人容貌變化，然後安穩入睡！我愛妳，而且只剩數十年可以愛妳了，我不想再浪費可以愛妳的任何一絲光陰了，我愛妳，從妳18歲起到未來每一天，永永遠遠！
+                </div>
+            </div>
+
+            <div id="section3-6" class="section">
+                <h3 class="section-title">真少女</h3>
+                <div class="story-content">
+                    想像一下，時間如果倒著流轉會是怎樣的光景？首先，我躺在某家醫院病床上復活出生，好不容易撐開沈重的眼皮，映入眼瞼的第一人是未來越變越年輕可愛俏麗的老伴阿娟，一個就算第一次見面年齡已過七十的小老太婆，外表看起來還是跟四十出頭的美魔女沒什麼兩樣。稍微偏一下頭，看到的第二人是一位中年帥哥，他一手緊握我的手，另一手扶著我的老伴阿娟，神情激動地說，阿爸，你終於出生醒過來了，我和媽等你好久了。原來，這帥哥是我兒小福，一個未來將成為我和老伴阿娟前半輩子生活重心的臭小夥子。十五年前，五十五歲的他被通知來這家醫院迎接她母親，今日，又扶著他媽阿娟再來同樣的一家醫院迎接我回家。根據年紀推算，我們父子倆還可以在同一屋簷下生活四十年，直到他變成小嬰孩爬進阿娟的子宮消逝為止。
+                </div>
+            </div>
+
+            <div id="section3-7" class="section">
+                <h3 class="section-title">結婚十週年</h3>
+                <div class="story-content">
+                    維持一個乾淨的家庭，教養一位可愛的小孩，料理家人愛吃的餐點，改善居家生活的環境，確實是一件辛苦但做了絕對有回饋的工作。感謝吾愛無敵寶娟承擔了大部分的家庭日常勞動。每日起床後，洗收晾折衣服，烹煮三餐飯菜湯，手作健康美味的麵包、饅頭、餅乾、甜湯、點心，收拾廚房餐廳，全由她一人包辦，就算頭痛、胃痛、生理痛，還是得忍痛照三餐排時間帶小福玩遊戲，學認知，懂禮節，做運動，說故事，並按表操課帶小福去醫院療育或上課。
+                </div>
+                <div class="story-content">
+                    如果比喻其他的小孩為汽車，自來自往，吾兒小福則是一台起步慢的火車，我與娟娟兩人願意一輩子攜手合作心無旁騖埋首擔任二條永遠平行往前延伸的鋼軌，讓小福快樂有序上路，有朝一日開往自己創造的未來！
+                </div>
+            </div>
+
+            <div id="section3-8" class="section">
+                <h3 class="section-title">俏魔女</h3>
+                <div class="story-content">
+                    認識阿娟的人有否發現，她愈來愈年輕，愈來愈俏麗了？隨著小福一日一日緩慢成長與學習，我的研究一年一年固定執行與發表，才驚覺阿娟不動聲色、無時無刻靜靜地變年輕，變得愈來愈可愛了。奇怪的地方就在這，阿娟從早忙到晚一刻不得閒，所有家事與管教，包括教導小福學校功課與社會互動規矩、根據醫院治療師指示訓練小福、洗晾衣、煮飯菜、手作小福愛吃的麵包、蛋糕、布丁、奶酪等愛心營養點心等，全部一手包，每晚睡覺前把家裡打點得乾乾淨淨、整整齊齊，沒半點時間和朋友風花雪月、聊天打屁、喝茶吃飯串門子了，更甭說每週還得忙裡抽空不時複習對福家長年日本自助旅遊非常重要的日語會話了。
+                </div>
+                <div class="story-content">
+                    照理說，每天忙得像陀螺一直轉啊轉騰不出空保養的阿娟理應老得累得像阿婆似的有深度，可是，恰巧相反，她逆齡成長，不僅外表沒老，愈來愈亮麗，而且頭腦還愈來愈有料，思考愈來愈成熟了。當然，這不全然是我的功勞啦！雖然，我努力賺錢，給他們母子倆一個避風遮雨安居舒適的生活空間，可是，這只是極小影響因素之一。也許有人猜，是不是阿源嘴巴甜，每天讓他心情漾，笑呵呵，才會相由心生，就算再怎麼辛苦做家事，訓練小福，也會逆齡生長，愈來愈可愛呢？我只能雙手一攤，表情無奈地回答，你問我，我問誰！？阿娟的可愛與俏麗隨著時光流逝與日俱增，最大受益者除了阿娟應該是她的老公我吧！我不能得了便宜還賣乖，把到手的水姑娘阿娟與功勞往外推，只能順水推舟，全部乖乖承認，擁入懷中囉。我愛阿娟，無論何時的阿娟都是當時阿源的最愛，從過去到未來，永遠成立！
+                </div>
+            </div>
+
+            <div id="section3-9" class="section">
+                <h3 class="section-title">時時勤拂拭，勿使惹塵埃</h3>
+                <div class="story-content">
+                    喜歡一個人不難，困難之處在於兩人共組家庭後，如何維護這份得來不易的感情。婚前是戀人時，你說了多少肉麻話語？做了多少感動體貼的甜蜜事？結婚當日，你在雙方親友面前，牽起她的手，承諾守護她一輩子，約定和她白頭偕老，永遠相愛。種種承諾，竟隨著時間的推演、孩子的出生、工作的疲憊、上司的責難、部屬的懶散、經濟的負荷等種種大小問題，消逝得無影無蹤。
+                </div>
+                <div class="story-content">
+                    那個當初她摯愛的男孩跑去那了？那個當初動不動擁她入懷，逗她開心的男孩身影為什麼愈來愈模糊了？那個當初捧她上天，為她摘月，大獻殷勤的男孩為什麼婚後沒多久嘴裡吐出來的開頭詞總是：再等我一下、我也不想這樣、我在忙，有事以後再說、很煩ㄟ。哎，到頭來才明白，原來嫁的並非眼前這位男士，而是嫁給了一場夢。不要忘記，她是你最愛的人之一，不然不會和她共結連理，生活一世。但是，你有多久沒輕輕托起她的臉，深情凝視十分鐘了呢？談戀愛，不是婚前年輕男女朋友的權利，而是婚前婚後一輩子的生活調情劑。那怕再忙，那怕再老，那怕變禿，那怕變胖，都要像個初交往容易衝動的小伙子，靠近她，凝視她，擁緊她，然後深深吻下去，直到天荒地老，然後硬生生被湊趣的兒子打斷！我愛娟娟，三不五時凝視她，欣賞她的美，咀嚼我們的愛情！
+                </div>
+            </div>
+
+            <div id="section3-10" class="section">
+                <h3 class="section-title">像盛開櫻花，時時綻放光芒</h3>
+                <div class="story-content">
+                    當愛情昇華成親情，當過往濃密情感只待成追憶時，婚姻就可能走鐘或變質了。維持夫妻感情不被柴油鹽米醬醋茶等瑣事淹沒的好方法之一，就是保持衝動與隨時激情，不斷用熱情的身體和行動來重溫年輕氣盛時的甜蜜生活。討小可愛阿娟歡心的方式有1000種，最厲害的招數莫過於帶她去滿園盛開的櫻花林下野餐，過往九年日本從南到北的追櫻行動已成功了九次，讓我年復一年從年頭幸福到年尾，去年疫情緣故被迫中斷，今年勢必得在台灣複製一次成功經驗，讓我倆愛情持續加溫。
+                </div>
+                <div class="story-content">
+                    早在去年十月初中秋連假從澎湖旅遊回來後，就著手策劃這趟228連假賞櫻行。皇天不負苦心人，無論是雲品溫泉酒店的套房住宿，還是三天行程的規劃安排，以及九族文化村的花開狀況，都讓小可愛讚不絕口，愛意橫生，讓我有飄飄然神仙英雄之概！如果你問我，為什麼我的精力充沛，能夠在學術研究之餘，不斷用思考與行動帶給另一半愛的驚喜？我只能雙手一攤，用天機不可洩的神秘口吻告訴你，阿娟是我的真命天女，我的生命中不能沒有她，只要能夠讓她開心，看她開心，要我拼命都可以！
+                </div>
+            </div>
+
+            <div id="section3-11" class="section">
+                <h3 class="section-title">我的瑪法達</h3>
+                <div class="story-content">
+                    多年前認識娟娟時，她18歲，長髮，綁著一串馬尾巴，穿著一件又短又可愛的Ｔ、一條直筒拖地牛仔褲及一雙硬殼大頭鞋，立志要當一個頭腦會發光的知識份子，超像漫畫「娃娃看天下」的主角瑪法達，也就是這付天真無邪、可愛志氣高的俏模樣讓我不自覺愛上她，想好好保護她，給她溫暖，給她我全部的愛。
+                </div>
+                <div class="story-content">
+                    多年後，雖然可愛的娟娟已經剪成短髮，不再綁著一串馬尾巴，不再穿著又短又可愛的Ｔ，不再拖著一條直筒牛仔褲，只有在下雨天才會穿起硬殼大頭鞋，也很少想起頭腦會發光的知識份子這件往事，然而，她仍然保有一顆赤子之心，仍然以誠相待週遭朋友，仍然支持女權運動、贊成兩性平等、反對不公不義之事，仍然跟多年前一樣，凡事盡心盡力，認真到底，也就是這付一路走來始終如一的可愛俏模樣讓我的愛繼續深陷其中，無怨無悔快樂付出。
+                </div>
+            </div>
+        </section>
+
+        <section id="chapter4" class="chapter">
+            <h2 class="chapter-title">平安福</h2>
+            
+            <div id="section4-1" class="section">
+                <h3 class="section-title">無價長生寶</h3>
+                <div class="story-content">
+                    小福從出生到現在三歲有餘，在台大兒童醫院的病歷資料隨著年紀增長也累積十公分厚，無論多努力就醫，就是查不出小福發育延緩、體重過輕、個子嬌小等諸多症狀的背後原因。然而，禍兮，福之所倚；福兮，禍之所伏，白話就是塞翁失馬，焉知非福。根據小福已做的各項醫學檢測與目前的發育情況，高度懷疑小福擁有兩千多年前第一個統一中國的秦始皇朝思暮想夢寐以求的長生不老體質。
+                </div>
+                <div class="story-content">
+                    一般人就算長壽，活個七八十歲，甚至九十來歲就已經偷笑了，更不用說百歲人瑞幾乎是每一個社會的寶了，但是，根據去年照的Ｘ光片來看，小福的骨齡只有一歲多，骨化情況特別緩慢，換句話說，一般小嬰孩從一歲開始骨頭開始分化老化，愈來愈像大人樣，小福卻有如神助，出生前三個月在娟娟母體中不知從何得到一股能有效延緩生長及抑制老化速率的神奇配方，以一種雖非常規卻有自己一套的生長速率緩慢發育與成長，如果按照這種成長速度來合理推斷，小福可能就是台灣民俗傳說中的彭祖再世，活個三四百歲絕對沒問題。到時候就算人世已非，我們及多代子孫都入土為安時，小福仍然強健地活在世上，笑看人生百態！
+                </div>
+                <div class="story-content">
+                    既然小福是寶，我們夫妻倆更要愛護照顧這個無價之寶，讓這個長生寶健健康康平平安安成長，見證未來台灣數百年的變遷與發展！
+                </div>
+            </div>
+
+            <div id="section4-2" class="section">
+                <h3 class="section-title">小福仙</h3>
+                <div class="story-content">
+                    四年多前，小福奉命下凡來度化父母親，為了讓父母親潛心修行，遂於福家四周結一個仙界，將界裡界外強力分隔開來，形成仙界修煉一年凡間已熬三年的時空特異現象。感謝小福仙提供一個修羅道場時時刻刻試煉我們夫妻的身心，也不斷在修行過程用燦爛的微笑頑皮的動作向我們展示正果後的美好正道就在身邊，隨手可得，讓我們時時頓悟成為仙父仙母是如此幸福與美好，甘願拋棄許多凡世的虛榮與財物，只為了求他回眸璀璨一笑！
+                </div>
+            </div>
+
+            <div id="section4-3" class="section">
+                <h3 class="section-title">抓周</h3>
+                <div class="story-content">
+                    2月16日小福滿周歲。為了讓小福的外公外婆福阿姨舅舅擁有歡度小福生日的感覺，我們決定周歲當晚舉行抓周大典。傍晚七點，福媽忙著準備我們兩人的晚餐及小福稍後吃的副食品，我負責布置抓周會場。我們在一樓小客房雙人床上放滿東西，有算盤、手電筒、原子筆、布書、收音機、鏡子、iPad、手機、布球、塑膠球、裝在透明塑膠袋中的生玉米、電池、玩具鋼琴、玩具貓等奇奇怪怪的東西。小福的阿姨們七嘴八舌問我：「如果拿手電筒表示什麼？」我不加思索回答：「應該是消防員吧！也許是專門抓姦的私人偵探。」舅舅跟著問：「如果是玉米呢？」我快人快語回應：「接下小福阿公的施爸香烤玉米攤，長大後在萬華夜市烤玉米！」
+                </div>
+                <div class="story-content">
+                    緊張時刻來臨了，當我把小福放到床上坐在那一堆東西面前時，小福看傻了，東看看西看看，至少看了五分鐘，不知道該怎麼辦。過了好久，小福決定出手拿球，我們幾個大人內心暗自叫好，以後不是王建民就是林書豪的翻版，肯定又是一位「台灣之光」囉，可惜，球是圓的，手是方的，當小福的胖手碰到球，球就滾開了，絲毫不給小福半點機會。小福自討沒趣後，轉頭看到正在播卡通片聲光效果十足的iPad，決定下半輩子跟福爸一樣從事程式設計，或是當個懶蟲一輩子透過iPad與兩根手指頭滑過餘生，於是往前一趴，雙手伸得直直的抓住iPad抱得緊緊的。小福的阿姨舅舅們覺得我作弊，怎麼可以利用卡通片的聲光效果來迷惑小福呢？所以決定剛剛抓的iPad不算，且關掉iPad的螢幕重來。面對強大的輿論壓力，只好順從。
+                </div>
+                <div class="story-content">
+                    小福重新面對一大堆東西及一台關掉螢幕的廢鐵iPad，這次，小福豁然開朗了，他真的知道他要什麼，我們只見他往前一撲，抓住施小妹帶來的生玉米，正當我們高興小福要繼承外公的烤玉米攤時，出人意表的事情又發生了，小福甩掉塑膠袋中的生玉米，緊緊抓著空塑膠袋一直揮一直揮，堅定地告訴我們，抓周結果揭曉了，他決定抓「塑膠袋」了。一群大人開始陷入長考，討論抓塑膠袋表示什麼？有人說，小福決定長大後跟外婆去做慈濟，從事環保事業，也有人認為，小福就跟大愛電視台的連續劇主角塑膠林一樣，以後在市場賣塑膠日常用品，更有人大膽預測，小福長大後將會創造一個比台塑集團還大的塑膠王國。我與福媽則覺得抓周真有趣，等小福長大後，又多一個笑話可以告訴他囉。抓周後，小福多了一個外號「塑膠福」，希望他像塑膠袋一樣的長命百歲，也像塑膠袋一樣的萬用，長大後可以承載所有認識他的人的心事。
+                </div>
+            </div>
+
+            <div id="section4-4" class="section">
+                <h3 class="section-title">龍山澡堂</h3>
+                <div class="story-content">
+                    小學四年級前，家住龍山寺側門對面佛具街上的大樓，往桂林路方向走十幾公尺有一間大眾浴池，爸爸常帶我一起去那裡的男湯泡澡。當時年紀小，目不轉睛盯著周遭叔伯大哥哥們脫光衣服沖洗身體，然後頭頂毛巾慢慢下池泡澡，覺得非常有趣，直至今日印象深刻！今日，我們一家人要去日本最古老距今有3000年歷史，同時是日本皇室與許多知名文人雅士經常光顧的道後溫泉本館泡湯。過去幾次留宿溫泉鄉，都由娟娟帶小福一起泡女湯，這次不同，娟娟、岳母施媽及外甥女品瑄三位女生去泡女湯，消除過往五天旅途累積的疲勞，我們父子倆手牽手一起下樓泡男湯，來場 men's talk。
+                </div>
+                <div class="story-content">
+                    泡完溫泉，一家人著浴衣悠閒坐在溫泉館二樓休息，享用館方提供的綠茶及煎餅，閒話家常。休息夠了，我們選在道後商店街「魚武」餐廳用餐，這家餐廳不僅裏外環境乾淨舒爽，而且食物色香味俱全，吃得好開心！逛完商店街，一行人繼續本日第二個行程，搭乘伊予私鐵到古泉站旁邊四國最大的購物中心血拼採買。下回來松山，會再訪道後溫泉館，舒服泡湯一整日！
+                </div>
+            </div>
+
+            <div id="section4-5" class="section">
+                <h3 class="section-title">上學了</h3>
+                <div class="story-content">
+                    上週五是小福人生第一個開學日，除了一位小朋友有事無法到校（由媽媽代出席），其餘小朋友和家庭成員（爸比媽咪阿嬤哥哥姐姐）統統到齊，擠在龍山國小附幼角落一間教室裡相見歡，乖乖比鄰而坐聽兩位老師宣布重要事項。今天星期一，是小福正式上學日，中午去接小福回家時，兩位老師都誇小福乖，不哭鬧，完全配合老師指示，甚至課間休息時間小福一看到教學助理員拿乾淨尿布來檢查有否噓噓時就馬上找空地墊乖乖躺好，笑咪咪舉腿等老師來檢查。和老師私下討論後，發現小福不僅是一個愛笑、愛跟人打招呼的小嬰孩，也是一個喜愛上學、容易討老師歡心的可人兒。
+                </div>
+                <div class="story-content">
+                    許多小朋友第一次去幼稚園上課都會哭（一陣子），這不奇怪，奇異之處是小福今天去上學時沒哭，反到是我回家後一個人躲在二樓書房裡電腦桌前偷偷小哭一番，現在回想真是有趣好笑！我們初步計畫是小福這學期先讀半天班，中午回家洗澡、吃飯、玩耍、睡午覺和吃點心與水果，等到全家調整好作息，小福走路較穩當後，下學期再改成全天班，屆時我會不會哭成一個淚人兒，誰也不知！
+                </div>
+            </div>
+        </section>
+
+        <section id="chapter5" class="chapter">
+            <h2 class="chapter-title">貴人</h2>
+            
+            <div id="section5-1" class="section">
+                <h3 class="section-title">奶姆高周金貴女士</h3>
+                <div class="story-content">
+                    從小，我們兄弟倆跟別家小孩不同，別人只有照顧一到二年的保姆，我們有一位從小帶大陪伴我們成長的慈祥奶姆。奶姆超級疼愛我們，只要我們愛吃的食物，例如其中一面煎得酥酥脆脆另一面軟綿滑溜的菜頭粿、超多超厚超大朵吸飽雞油的香菇雞湯，以及兩面都煎得金黃酥脆整條完整如初不破碎的大黃魚，一定像變魔術般出現在午晚餐桌上，然後氣定神閒心滿意足坐著看我們大快朵頤，爭吵吃每一樣菜。
+                </div>
+                <div class="story-content">
+                    小學畢業前，週末在奶姆家過夜，都是她幫我洗澡。我記得，奶姆先在瓦斯爐燒好一大壺熱水，再混合事先備好的一桶冷水一同倒入大澡盆中，然後在灶腳旁幫我從頭到腳抹好肥皂並用溫水沖洗乾淨，再叫我坐進大澡盆中浸泡，現在回想起來還有熱呼呼好舒服的感覺！奶姆像親媽媽，是第二個媽，所以我們叫他兒子一聲「哥哥」，長大後才知道哥哥這稱呼表示我們三人親如手足。不過，哥哥年紀比我們兄弟倆大很多，我五歲時，哥哥已經服完兵役了，每天下午，弟弟黃國峰總吵著哥哥帶我們外出在奶姆住家附近閒逛，從現在早已改建多時的復興戲院逛到東園國小萬大路附近，沿路買沿路吃，三兄弟好不快樂！
+                </div>
+                <div class="story-content">
+                    父親過世時，我只有小學四年級，不懂難過，沒流一滴淚，可是奶姆過世時我已五專畢業。出殯當天，我哭得好傷心好難過好悲痛，像一個決堤淚人兒，哭得沒完沒了。奶姆，我跟弟弟阿峰都好想您！好想再吃妳煮的食物，好想再被你細細疼愛，就像剛出世的小貝比一樣被你呵護在懷中！我愛你，永永遠遠懷念您！
+                </div>
+            </div>
+
+            <div id="section5-2" class="section">
+                <h3 class="section-title">小學三年級導師蔡幸美老師</h3>
+                <div class="story-content">
+                    小學二升三年級，學校重新編班，我被編入三年八班，導師是蔡幸美老師。她對我很好，全班只有我一個人每天接受他的免費課後指導，今日說出來沒人會相信。每天放學前，她把家裡鑰匙交給我，先去她家寫作業及當天早上出門前他事先放在客廳書桌上的數張考卷。等到她忙完班務回家，家事還沒碰，就先檢查我的功課完成否，並訂正我剛寫完的考卷，如果寫錯，就一題一題講解演練，除非我點頭說「了解」，不然就換一種方式說明。通常，訂正完作業與考卷，都近六點半了。除了寒暑假及週六日不需要去她家，這樣的日子過了整整一年。
+                </div>
+                <div class="story-content">
+                    升上四年級，導師換成姚嘉奉老師，但是我和母親仍然和蔡幸美老師及其家人互動頻繁，熟若家人。今日，若我的表現有一絲絲值得驕傲之處，其中一位必須深深鞠躬，磕頭感謝的人就是小學三年級蔡幸美導師。謝謝您，有您，才有喜愛閱讀的黃崇源，希望我的表現值得您驕傲！
+                </div>
+            </div>
+
+            <div id="section5-3" class="section">
+                <h3 class="section-title">工具人</h3>
+                <div class="story-content">
+                    五專前三年（民國74~77年），我單戀同班同學潘啟詅。開學新生訓練第一天，導師安排座位，她坐我旁邊，我第四排第二位，她第三排第二位，從那天她不經意轉頭對我璀璨一笑起，我不自禁喜歡上了她，朝思暮想，期盼有天能像倪匡筆下衛斯理與白素一樣，比翼雙飛，令人稱羨。她長得高、聲音嗲、皮白膚嫩、標緻漂亮，身旁不乏殷勤的追求者。每當漫步在校園，身後總跟著校內許多男生渴慕的眼神，我是其中一位。
+                </div>
+                <div class="story-content">
+                    當時有自知之明，單憑口才與外貌，想要博取她的注意，進而獲得她的青睞，比登天還難，所以改採迂迴戰術，匍匐前進，利用電腦專業和程式設計專長爭取和她共處聊天的機會。只要任何電腦專業科目需要繳交期末程式作業，就是我英雄救美、大展身手的好時機。那三年，每學期期末程式作業我都主動積極爭取和她同組，組隊後由我一人獨自撰寫所有程式和報告。無論寫得多努力、使用者介面多吸睛，繳交的程式作業得到多高的分數，就是無法換取她的青睞，甚至一絲憐憫也落不到我身上，真是大好人一個！直到專四，在鼎眾電腦公司邂逅此生無緣的初戀情人小學同學陳雅雯後，才徹底擺脫這場單戀噩夢。
+                </div>
+            </div>
+
+            <div id="section5-4" class="section">
+                <h3 class="section-title">52封寄不出的信</h3>
+                <div class="story-content">
+                    初戀情人陳雅雯是我心中永遠的女神！小學畢業再次看到她，已18歲，在鼎眾電腦有限公司擔任軟體開發部主任。那晚，她走進門市報名最近一期的電腦基礎課程，報名完成，我在門口攔下她，問認不認得我，她張大眼驚訝說：「我不知道你是誰ㄟ？」我尷尬不好意思說：「小學三年級運動會入場跳小白兔愛跳舞，我八班，你九班，我們被安排兩個人手牽手一起跳的啊！你有印象嗎？」想了好久，她才瞇著眼狐疑回答：「好像有！？」那天起，我開始熱烈追求她，就像一杯法式拿鐵中的牛奶和咖啡，繞著圓心逐漸調和成一體，濃密無懈可擊。
+                </div>
+                <div class="story-content">
+                    五專讀七年畢業後，我在澎湖服役，11月13日晚間，收假回到營區，就接到小學二年級導師張月娥老師（也是陳雅雯一家的鋼琴老師）的信，告知雅雯已於11月12日星期四凌晨誤食藥品離世，追思禮拜將於隔週週末11月20日假第二殯儀館懷恩廳舉行。信裡，他叮囑我不要難過，真誠祝禱雅雯安息在主耶穌的懷裡。那晚收到信，我在營區辦公室哭得像淚人兒，不願相信老師的話是事實。我大哭大叫大鬧，想把信撕碎，當作從來沒有收到這封信，也恨不得馬上收拾行李，趕赴馬公機場最後一班飛機直奔台北西園路陳雅雯的房間，確認這是一場惡作劇。然而，整個晚上躲在一旁的理智也趁機輕聲細語說，張月娥老師絕對不會把她摯愛學生的死當玩笑來惡作劇，這事千真萬確，無論現在怎麼做，都挽回不了發生的憾事了！
+                </div>
+                <div class="story-content">
+                    告別式後，我欺騙自己，陳雅雯沒死，活得好好的，只是不告而別，一個人離家獨自遠行了，無論在那，我都和過去一樣每週寫一次信，有時對她傾訴我的濃濃思念與情意，盼她早日回國與我再聚；有時描述軍中的生活狀況，以及未來倆人的生涯規劃。就這樣，一寫寫了一年，整整52封寄不出的信，至今還整整齊齊疊放在抽屜中，等無緣的愛人陳雅雯歸來拆信閱讀！
+                </div>
+            </div>
+
+            <div id="section5-5" class="section">
+                <h3 class="section-title">超級麻吉吳承育</h3>
+                <div class="story-content">
+                    五專五年級結束，眼睜睜看著同學順順利利高高興興領取畢業證書合拍團體照，只有我一個人欠70學分，無法畢業。除了資訊專業科目以極高分過關，其餘科目，包括國文、英文、微積分、三民主義、憲法、體育及打字等課程，通通被當，連憲法老師都開玩笑說我一定是長大後才從對岸過來的「黃匪崇源」，否則像中華民國憲法這麼容易過關的科目怎麼還會被死當？延修時，由於每學期選修二十多個學分，必須每天搭公車去學校上課，就是在1路公車上結識了延修班級同樣也住萬華的學弟吳承育，並且和他成為麻吉。我常跟老婆娟娟說，如果我和吳承育都不是異性戀的話，也許會情不自禁愛上他，甚至做出令人驚訝且瘋狂的舉動。老婆娟娟常吃乾醋，看著我或吳承育大膽地在對方的胸膛上磨蹭，相互依偎在一起。
+                </div>
+            </div>
+
+            <div id="section5-6" class="section">
+                <h3 class="section-title">好友就數陳兆芳最寶最古怪了</h3>
+                <div class="story-content">
+                    民國87年母親節前夕，我考上交大資科所，九月初，剛踏進七舍315室，就發現一個人大熱天蓋著一條厚厚棉被躺在下舖睡覺，而且臉頰還熱呼呼、紅通通的，好像中暑。細問下，才知道這是他的習慣，無論天多熱多冷，他都蓋著一條既大又厚中的棉被才覺得溫暖，才能安然入睡。不過，他的臉頰可不是只有蓋厚棉被才紅通通的，根據我貼身觀察了兩年，發現從出生後，他的臉頰就像抹了腮紅，泛紅一片，就算現在已經當爸爸有了小陳兆芳，他的臉頰還是一如往常，像他兒子的皮膚，吹彈可破，熱呼呼、紅通通的。
+                </div>
+                <div class="story-content">
+                    當我們的友情愈來愈好，每天同進同出宿舍，我開始叫他小鳥，他喚我小雞，他最愛開玩笑：「我是一個見過大場面的人。」我回他：「每一個人都看過大腸麵，也吃過大腸麵，你只有看過大腸麵，這算什麼！」多年後回憶起和他一起生活的兩年同窗生涯，還是津津有味，幕幕鮮明。
+                </div>
+            </div>
+
+            <div id="section5-7" class="section">
+                <h3 class="section-title">練家子</h3>
+                <div class="story-content">
+                    剛和娟娟戀在一起，就聽說施爸是練家子，拳腳功夫了得，卻始終沒機會一窺究竟。2007年11月和娟娟帶施爸媽出國去香港西貢大啖海鮮坐舢舨船出遊時，趁休憩空檔在堤防邊探詢施爸功夫一事，只見他不說一句話，背包外套也不脫掉，就當場紮紮實實、虎虎生風完整演練一套拳術，讓旁觀者只有嘖嘖稱奇，拍手叫好之份！隔幾天，我們原班底四人北上廣州逛完越秀公園正準備找地方解決午餐時，剛好發現路上一家餐館的招牌人物是李小龍，正是施爸鍾愛的電影武打明星之一！為了向他致敬，施爸不管路上有多少行人側目，直接在照相機前面擺出起手式，讓娟娟拍個過癮。
+                </div>
+                <div class="story-content">
+                    最近小福正在學走路，跌跌撞撞，每次施爸來探望小福時，都會喜孜孜摸著金孫小福的手，邊笑邊說，等你再長大一點走路走穩後，阿公就教你打拳，保證你的身子骨變硬，將來長得又高又壯，和外公一樣！我與娟娟真的很希望小福不僅能從施爸身上學些拳腳功夫，也能像他一樣精壯！
+                </div>
+            </div>
+
+            <div id="section5-8" class="section">
+                <h3 class="section-title">親愛的大姨</h3>
+                <div class="story-content">
+                    20年前，我和阿娟像羅密歐與茱麗葉，只能偷偷交往，無法公開戀情，必須隱瞞雙方父母親時，阿娟就先帶我下高雄鳳山，讓聰明有大智慧的您鑒定我的人品。那次起，在我心底，您不僅是一位和藹可親的長者，阿娟的大姨，也像是我的親大姨，更像是小時候照顧我和弟弟阿峰無微不至，有如母親的奶母高周金貴女士。20年來，每回離開您家，我就像個孩子似的，總要和您緊緊擁抱在一起，依依不捨道別離，期待下回來高雄時，能跟您相處久一點，和您話家常，聽您細說我們這一輩孩子的故事，又或者大口大口吃您煮的家常美味好菜，看您心滿意足笑開懷。
+                </div>
+                <div class="story-content">
+                    您已在我和阿娟的心底面留下永難磨滅愛的痕跡，我們會不時提起和您在一起發生的種種有趣事件，也會不時想起你說的話語，以及每一次聚會時，您展現在我們面前的和藹笑容。我們愛您！我們會永遠永遠想念您！有一天，我和阿娟會手牽手去您現在去的地方找您，再一次和您團圓聚在一起，擁抱在一起，不再分離！就像思念我母親一樣開始思念您的阿源
+                </div>
+            </div>
+        </section>
+    </main>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 長庚大學．資訊工程學系．黃崇源．故事集。這些珍貴的回憶，承載著黃家大院的愛與希望。</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById("navLinks");
+            nav.classList.toggle("show");
+        }    
+        
+        function toggleTOC() {
+            const tocContent = document.getElementById('tocContent');
+            const arrow = document.querySelector('.toc-arrow');
+            const hint = document.querySelector('.toc-hint');
+
+            if (tocContent.classList.contains('expanded')) {
+                tocContent.classList.remove('expanded');
+                arrow.classList.remove('expanded');
+                hint.textContent = '點擊展開';
+            } else {
+                tocContent.classList.add('expanded');
+                arrow.classList.add('expanded');
+                hint.textContent = '點擊收起';
+            }
+        }
+
+        // 回到頂部功能
+        window.addEventListener('scroll', function () {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // 統一處理所有錨點平滑跳轉
+        function smoothScrollToAnchor(anchorElement) {
+            const targetId = anchorElement.getAttribute('href');
+            const target = document.querySelector(targetId);
+            if (target) {
+                // 延遲執行，確保 TOC 展開完成
+                setTimeout(() => {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    history.pushState(null, '', targetId); // 同步網址 hash
+                }, 300); // 對應 .toc-content transition-duration
+            }
+        }
+
+        // 綁定所有 anchor click
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    // 只處理內部錨點
+                    if (this.getAttribute('href').length > 1) {
+                        e.preventDefault();
+                        smoothScrollToAnchor(this);
+                    }
+                });
+            });
+        });
+
+        // 動畫進場觸發
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0s';
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        });
+
+        document.querySelectorAll('.chapter, .section').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!-- 
+    檔案名稱：a.html
+    功能說明：自動重定向頁面
+    目標網址：https://canslab1.github.io/index.html
+    建立目的：將訪問此頁面的流量自動導向主要首頁
+    技術特色：雙重重定向機制（JavaScript + Meta Refresh）
+-->
+<html lang="zh-TW">
+<head>
+    <!-- ===================================
+         基本網頁設定
+         目的：快速載入並執行重定向
+    =================================== -->
+    
+    <!-- 設定網頁使用 UTF-8 編碼 -->
+    <meta charset="UTF-8">
+    
+    <!-- 設定網頁在行動裝置的顯示比例 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 頁面標題（使用者通常看不到，因為會立即重定向） -->
+    <title>重定向中...</title>
+    
+    <!-- ===================================
+         立即重定向機制
+         執行順序：JavaScript → Meta Refresh
+    =================================== -->
+    
+    <!-- 
+         主要重定向方案：JavaScript 立即執行
+         優點：最快速的重定向方式
+         執行時機：腳本載入後立即執行
+    -->
+    <script>
+        /**
+         * 立即重定向函數
+         * 目標：將訪問者重定向到指定的目標網址
+         * 方法：window.location.replace() 
+         * 
+         * 使用 replace() 的原因：
+         * 1. 不會在瀏覽器歷史記錄中留下 a.html
+         * 2. 使用者無法透過「上一頁」回到重定向頁面
+         * 3. 對 SEO 更友善，避免重複內容問題
+         */
+        (function() {
+            // 立即執行重定向到目標網址
+            window.location.replace('https://canslab1.github.io/index.html');
+        })();
+    </script>
+    
+    <!-- 
+         備用重定向方案：HTML Meta Refresh
+         執行時機：JavaScript 被禁用或執行失敗時
+         content="0" 表示 0 秒後跳轉（立即跳轉）
+         
+         為什麼需要備用方案：
+         1. 某些使用者可能禁用了 JavaScript
+         2. 某些舊瀏覽器可能不支援現代 JavaScript
+         3. 提供額外的安全保障
+    -->
+    <meta http-equiv="refresh" content="0; url=https://canslab1.github.io/index.html">
+    
+    <!-- ===================================
+         SEO 與社群媒體最佳化
+         目的：如果被搜尋引擎索引，提供適當的說明
+    =================================== -->
+    
+    <!-- 告知搜尋引擎這是重定向頁面 -->
+    <meta name="description" content="此頁面會自動重定向到黃崇源教授的官方網站首頁">
+    
+    <!-- 防止搜尋引擎索引此重定向頁面 -->
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- ===================================
+         快取控制設定
+         目的：避免重定向頁面被快取，確保始終執行最新的重定向邏輯
+    =================================== -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <!-- ===================================
+         最小化 CSS 樣式
+         目的：僅在極少數情況下（重定向失敗）為使用者提供基本的視覺回饋
+    =================================== -->
+    <style>
+        /* 
+           緊急情況下的基本樣式
+           僅在重定向失敗時顯示
+        */
+        body {
+            font-family: system-ui, -apple-system, 'PingFang TC', 'Microsoft JhengHei', Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+        
+        .redirect-message {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-width: 400px;
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #27ae60;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 1rem auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .manual-link {
+            color: #27ae60;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .manual-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ===================================
+         緊急備用內容
+         顯示條件：當所有重定向機制都失敗時
+         目的：提供手動連結讓使用者自行前往目標頁面
+    =================================== -->
+    
+    <div class="redirect-message">
+        <!-- 載入動畫 -->
+        <div class="spinner"></div>
+        
+        <!-- 重定向狀態說明 -->
+        <h2>正在重定向...</h2>
+        <p>請稍候，正在將您導向黃崇源教授的官方網站。</p>
+        
+        <!-- 手動連結（備用方案） -->
+        <p>
+            如果頁面沒有自動跳轉，請
+            <a href="https://canslab1.github.io/index.html" class="manual-link">
+                點擊這裡前往
+            </a>
+        </p>
+    </div>
+    
+    <!-- ===================================
+         額外的 JavaScript 備用檢查
+         目的：確保重定向確實執行
+    =================================== -->
+    <script>
+        /**
+         * 延遲備用重定向檢查
+         * 執行時機：頁面載入後 1 秒
+         * 目的：如果前面的重定向方法都失敗，進行最後一次嘗試
+         * 
+         * 為什麼需要延遲檢查：
+         * 1. 給前面的重定向方法足夠的執行時間
+         * 2. 處理可能的網路延遲問題
+         * 3. 作為最後的安全網
+         */
+        setTimeout(function() {
+            // 如果 1 秒後使用者還在這個頁面，強制跳轉
+            if (window.location.href.indexOf('a.html') !== -1) {
+                window.location.href = 'https://canslab1.github.io/index.html';
+            }
+        }, 1000);
+        
+        /**
+         * 頁面載入完成後的檢查
+         * 執行時機：DOM 完全載入後
+         * 目的：確保所有元素都已載入完成後再進行檢查
+         */
+        document.addEventListener('DOMContentLoaded', function() {
+            // 如果頁面已完全載入但還沒重定向，立即跳轉
+            window.location.replace('https://canslab1.github.io/index.html');
+        });
+    </script>
+    
+    <!-- ===================================
+         無 JavaScript 環境的額外說明
+         顯示條件：當瀏覽器不支援 JavaScript 時
+    =================================== -->
+    <noscript>
+        <div style="text-align: center; padding: 2rem; font-family: Arial, sans-serif;">
+            <h2>重定向中...</h2>
+            <p>正在將您導向黃崇源教授的官方網站。</p>
+            <p>
+                如果沒有自動跳轉，請
+                <a href="https://canslab1.github.io/index.html" style="color: #27ae60;">
+                    點擊這裡前往
+                </a>
+            </p>
+        </div>
+    </noscript>
+</body>
+</html>
