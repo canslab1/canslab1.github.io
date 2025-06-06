@@ -1,34 +1,182 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW" itemscope itemtype="https://schema.org/WebPage">
 <head>
+  <!-- ===========================================
+       404 頁面 - Chung-Yuan Huang 個人網站專屬
+       目的：提供找不到頁面的友善提示與導引
+       註解：參照 index.html、stories.html 統一風格
+  =========================================== -->
   <meta charset="UTF-8">
-  <title>404 - 找不到頁面</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO最佳化 -->
+  <meta name="robots" content="noindex, follow">
+  <meta name="description" content="很抱歉，您要找的頁面不存在！歡迎回到黃崇源教授的個人首頁或閱讀家族故事。">
+  <meta name="author" content="Prof. Chung-Yuan Huang (黃崇源教授)">
+  <title>404 找不到頁面 | 黃崇源教授個人網站</title>
+  <link rel="icon" href="https://canslab1.github.io/images/csie.png" type="image/png">
+  <link rel="canonical" href="https://canslab1.github.io/404.html">
+  <link rel="preload" as="image" href="https://canslab1.github.io/images/IMG-2.jpg">
+  <!-- 主題樣式：延用主站配色與背景 -->
   <style>
-    body { 
-      font-family: Arial, sans-serif;
+    /* 全域預設樣式重設 */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+    }
+    /* header區塊 - 與主站統一風格 */
+    header {
+      background:
+        linear-gradient(135deg, rgba(20, 83, 45, 0.85) 0%, rgba(26, 119, 69, 0.85) 100%),
+        url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      color: white;
+      padding: 2.5rem 0 1.2rem 0;
       text-align: center;
-      padding: 60px;
-      background-color: #f8f8f8;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      position: relative;
     }
-    h1 {
-      font-size: 4em;
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      text-align: center;
+    }
+    .profile-photo {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.18);
+      margin-bottom: 0.5rem;
+      background: #fff;
+    }
+    .header-text h1 {
+      font-size: 2.3rem;
+      font-weight: 400;
+      margin-bottom: 0.3rem;
+    }
+    .subheadline {
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: hsl(210, 100%, 93%);
+      text-shadow: 0 0 2px rgba(255,255,255,0.15);
+      margin-bottom: 0.5rem;
+    }
+    /* 404主體區塊 */
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem 1rem 1.5rem 1rem;
+    }
+    .error-code {
+      font-size: 6rem;
+      font-weight: bold;
       color: #e74c3c;
+      text-shadow: 2px 2px 8px rgba(231,76,60,0.12);
+      margin-bottom: 0.5rem;
     }
-    p {
-      font-size: 1.5em;
+    .error-message {
+      font-size: 1.7rem;
+      color: #333;
+      margin-bottom: 1.1rem;
+    }
+    .error-desc {
+      font-size: 1.1rem;
       color: #555;
+      margin-bottom: 2.2rem;
+      text-align: center;
     }
-    a {
-      color: #3498db;
+    .links {
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+    }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #27ae60 0%, #219150 100%);
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 500;
       text-decoration: none;
-      font-size: 1.2em;
+      padding: 0.7rem 1.7rem;
+      border-radius: 28px;
+      box-shadow: 0 2px 8px rgba(39,174,96,0.13);
+      transition: all 0.2s;
+    }
+    .btn:hover {
+      background: linear-gradient(135deg, #1e8449 0%, #186a3b 100%);
+      box-shadow: 0 4px 12px rgba(39,174,96,0.20);
+      transform: translateY(-2px);
+    }
+    /* footer區塊 */
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0 0.7rem 0;
+      font-size: 0.9rem;
+      margin-top: auto;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.08);
+      border-top: 1px solid #ddd;
+    }
+    /* 響應式設計 */
+    @media (max-width: 768px) {
+      .header-text h1 { font-size: 1.6rem; }
+      .subheadline { font-size: 1rem; }
+      .error-code { font-size: 4rem; }
+      .container { padding: 1.5rem 0.5rem 1rem 0.5rem; }
     }
   </style>
 </head>
 <body>
-  <h1>404</h1>
-  <p>很抱歉，您要找的頁面不存在。</p>
-  <p><a href="/">回到首頁</a></p>
+  <!-- Header：延續主站形象 -->
+  <header>
+    <div class="container header-content">
+      <!-- 個人肖像照 -->
+      <img src="https://canslab1.github.io/images/IMG-2.jpg" alt="Chung-Yuan Huang（黃崇源）個人肖像" class="profile-photo">
+      <div class="header-text">
+        <h1>黃崇源教授個人網站</h1>
+        <div class="subheadline">很抱歉，您似乎迷路了...</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- 404 錯誤大標題 -->
+    <div class="error-code">404</div>
+    <div class="error-message">找不到頁面</div>
+    <div class="error-desc">
+      抱歉，您要找的頁面不存在或已被移除。<br>
+      請檢查網址是否正確，或回到下方連結繼續探索。
+    </div>
+    <!-- 主要導覽按鈕 -->
+    <div class="links">
+      <a class="btn" href="/">回首頁</a>
+      <a class="btn" href="https://canslab1.github.io/stories.html">閱讀家族故事</a>
+      <a class="btn" href="mailto:cyhuang@mail.cgu.edu.tw">聯絡網站管理者</a>
+    </div>
+  </main>
+
+  <!-- Footer：與主站一致 -->
+  <footer>
+    &copy; 2025 Prof. Chung-Yuan Huang | 長庚大學資工系 | <a href="https://canslab1.github.io/" style="color:#e9d5ff;text-decoration:underline;">個人首頁</a>
+  </footer>
 </body>
 </html>
