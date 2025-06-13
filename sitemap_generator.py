@@ -4,7 +4,7 @@ from urllib.parse import urljoin, urlparse
 from datetime import datetime
 
 BASE_URL = "https://canslab1.github.io/"
-ALLOWED_EXTENSIONS = {'.html', '.pdf', '.md'}
+ALLOWED_EXTENSIONS = {'.html', '.pdf'}
 
 def is_valid_file(url):
     parsed = urlparse(url)
