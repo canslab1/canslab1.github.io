@@ -18,6 +18,12 @@
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+    <url>
+    <loc>https://canslab1.github.io/index.html</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
   <url>
     <loc>https://canslab1.github.io/</loc>
     <lastmod>2025-06-13</lastmod>
