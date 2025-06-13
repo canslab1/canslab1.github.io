@@ -4,7 +4,7 @@ from urllib.parse import urljoin, urlparse
 from datetime import datetime
 
 BASE_URL = "https://canslab1.github.io/"
-ALLOWED_EXTENSIONS = {'.html', '.pdf'}
+ALLOWED_EXTENSIONS = {'.html', '.pdf', '.md', '.jpg', '.png'}
 
 def is_valid_file(url):
     parsed = urlparse(url)
@@ -32,7 +32,7 @@ def generate_sitemap_xml(urls, base_url):
         xml.append(f"    <loc>{url}</loc>")
         xml.append(f"    <lastmod>{today}</lastmod>")
         xml.append("    <changefreq>daily</changefreq>")
-        xml.append("    <priority>0.8</priority>")
+        xml.append("    <priority>1.0</priority>")
         xml.append("  </url>")
 
     # Always include root
