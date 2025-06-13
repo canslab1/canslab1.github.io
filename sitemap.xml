@@ -1,46 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset 
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-
-  <url>
-    <loc>https://canslab1.github.io/</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://canslab1.github.io/stories.html</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    <image:image>
-        <image:loc>https://canslab1.github.io/images/IMG-2.jpg</image:loc>
-        <image:caption>Chung-Yuan Huang 教授個人官方網站代表照片</image:caption>
-        <image:title>Chung-Yuan Huang 長庚大學教授</image:title>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://canslab1.github.io/CYHuang.html</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://canslab1.github.io/CYHuang.pdf</loc>
     <lastmod>2025-06-13</lastmod>
-    <changefreq>daily</changefreq>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://canslab1.github.io/stories.html</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://canslab1.github.io/</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <url>
-    <loc>https://canslab1.github.io/google9ba7e621fca59b66.html</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.1</priority>
-  </url>
-
 </urlset>
