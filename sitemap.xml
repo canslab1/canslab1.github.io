@@ -5,15 +5,15 @@
 
   <url>
     <loc>https://canslab1.github.io/</loc>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://canslab1.github.io/stories.html</loc>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
         <image:loc>https://canslab1.github.io/images/IMG-2.jpg</image:loc>
@@ -24,22 +24,22 @@
 
   <url>
     <loc>https://canslab1.github.io/CYHuang.html</loc>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://canslab1.github.io/CYHuang.pdf</loc>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>yearly</changefreq>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://canslab1.github.io/google9ba7e621fca59b66.html</loc>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>yearly</changefreq>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.1</priority>
   </url>
 
