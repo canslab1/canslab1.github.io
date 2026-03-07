@@ -44,34 +44,54 @@
     <!-- 作者資訊：標明內容創作者 -->
     <meta name="author" content="Prof. Chung-Yuan Huang (黃崇源教授)">
     <meta name="ahrefs-site-verification" content="b1f1573b895ead5763166ba77346fa86ecb9449ac31144c6786475fa1c2e1e5f">
-    
+
+    <!-- 機器人索引指令 -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+    <!-- 正規網址：避免重複內容問題 -->
+    <link rel="canonical" href="https://canslab1.github.io/">
+
     <!-- ===========================================
          Open Graph 社群媒體分享最佳化區塊
          目的：控制在 Facebook、LinkedIn 等平台分享時的顯示效果
          =========================================== -->
-    <meta property="og:title" content="黃崇源教授 | 長庚大學資訊工程學系">
-    <meta property="og:description" content="探索黃崇源教授的學術旅程，涵蓋其在複雜適應系統與網絡科學領域的重要貢獻與教學實踐。">
+    <meta property="og:title" content="黃崇源教授 Prof. Chung-Yuan Huang | 長庚大學資訊工程學系">
+    <meta property="og:description" content="長庚大學資訊工程學系教授，專長複雜適應系統、網絡科學、演化計算與計算社會科學。Google Scholar h-index 18，970+ 次引用，43 篇期刊論文。">
     <meta property="og:image" content="https://canslab1.github.io/images/IMG-2.jpg">
-    <meta property="og:url" content="https://canslab1.github.io/index.html">
-    <meta property="og:type" content="website">
-    
+    <meta property="og:url" content="https://canslab1.github.io/">
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="黃崇源教授個人網站">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="profile:first_name" content="Chung-Yuan">
+    <meta property="profile:last_name" content="Huang">
+
     <!-- ===========================================
          Twitter Card 設定區塊
          目的：最佳化在 Twitter 平台的分享顯示效果
          =========================================== -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="黃崇源教授 | 長庚大學資訊工程學系">
-    <meta name="twitter:description" content="介紹黃崇源教授於資訊科學、系統模擬與教育貢獻的完整履歷與代表著作。">
+    <meta name="twitter:title" content="黃崇源教授 Prof. Chung-Yuan Huang | 長庚大學資訊工程學系">
+    <meta name="twitter:description" content="長庚大學資訊工程學系教授，專長複雜適應系統、網絡科學、演化計算。h-index 18，970+ citations。">
     <meta name="twitter:image" content="https://canslab1.github.io/images/IMG-2.jpg">
-    
+
     <!-- ===========================================
          頁面標題與圖示設定
          目的：顯示在瀏覽器標籤頁的標題與圖示
          =========================================== -->
-    <title>長庚大學·資工系·黃崇源教授</title>
+    <title>黃崇源教授 Prof. Chung-Yuan Huang | 長庚大學資訊工程學系</title>
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="XXjnJNtZV6bAICAw3Uqc6A" async></script>
     <link rel="icon" href="https://canslab1.github.io/images/csie.png" type="image/png">
     <link rel="preload" as="image" href="https://canslab1.github.io/images/IMG-2.jpg">
+
+    <!-- ===========================================
+         效能優化：預連線外部資源
+         目的：減少 DNS 查詢與 TLS 握手延遲
+         =========================================== -->
+    <link rel="dns-prefetch" href="https://scholar.google.com">
+    <link rel="dns-prefetch" href="https://www.clarity.ms">
+    <link rel="dns-prefetch" href="https://analytics.ahrefs.com">
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
     
     <!-- ===========================================
          CSS 樣式表定義區塊
@@ -1196,21 +1216,88 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Chung-Yuan Huang",
-        "alternateName": "黃崇源",
-        "jobTitle": "Professor",
-        "affiliation": {
-            "@type": "Organization",
-            "name": "Chang Gung University, Department of Computer Science and Information Engineering"
-        },
-        "url": "https://canslab1.github.io/index.html",
-        "image": "https://canslab1.github.io/images/IMG-2.jpg",
-        "sameAs": [
-            "https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en",
-            "https://www.facebook.com/gscott.huang/",
-            "https://sites.google.com/view/gscott-huang"
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "name": "黃崇源教授個人網站",
+                "alternateName": "Prof. Chung-Yuan Huang Academic Website",
+                "url": "https://canslab1.github.io/",
+                "inLanguage": ["zh-TW", "en"],
+                "description": "長庚大學資訊工程學系黃崇源教授個人學術網站，展示複雜網絡、演化計算與計算社會科學領域研究成果。"
+            },
+            {
+                "@type": "ProfilePage",
+                "mainEntity": {
+                    "@type": "Person",
+                    "@id": "https://canslab1.github.io/#person",
+                    "name": "Chung-Yuan Huang",
+                    "alternateName": ["黃崇源", "CY Huang", "GSCOTT"],
+                    "givenName": "Chung-Yuan",
+                    "familyName": "Huang",
+                    "jobTitle": "Professor",
+                    "honorificPrefix": "Prof.",
+                    "description": "Professor of Computer Science and Information Engineering at Chang Gung University, Taiwan. Research focuses on complex adaptive systems, network science, evolutionary computation, and computational social science. Google Scholar h-index: 18, 970+ citations, 43 journal papers, 49 international conference papers.",
+                    "affiliation": [
+                        {
+                            "@type": "Organization",
+                            "name": "Chang Gung University",
+                            "alternateName": "長庚大學",
+                            "department": {
+                                "@type": "Organization",
+                                "name": "Department of Computer Science and Information Engineering",
+                                "alternateName": "資訊工程學系"
+                            },
+                            "url": "https://www.cgu.edu.tw/"
+                        }
+                    ],
+                    "alumniOf": [
+                        {
+                            "@type": "CollegeOrUniversity",
+                            "name": "National Chiao Tung University",
+                            "alternateName": "國立交通大學"
+                        },
+                        {
+                            "@type": "CollegeOrUniversity",
+                            "name": "China University of Technology",
+                            "alternateName": "中國科技大學"
+                        }
+                    ],
+                    "knowsAbout": [
+                        "Complex Adaptive Systems",
+                        "Network Science",
+                        "Evolutionary Computation",
+                        "Computational Social Science",
+                        "Agent-Based Modeling",
+                        "System Simulation",
+                        "Epidemic Simulation",
+                        "複雜適應系統",
+                        "網絡科學",
+                        "演化計算",
+                        "計算社會科學"
+                    ],
+                    "url": "https://canslab1.github.io/",
+                    "image": "https://canslab1.github.io/images/IMG-2.jpg",
+                    "sameAs": [
+                        "https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en",
+                        "https://orcid.org/0000-0002-8680-6755",
+                        "https://www.facebook.com/gscott.huang/",
+                        "https://sites.google.com/view/gscott-huang",
+                        "https://pure.lib.cgu.edu.tw/zh/persons/chung-yuan-huang-2"
+                    ],
+                    "award": [
+                        "China University of Technology Distinguished Alumni Award (2024)",
+                        "Taipei Honored Contributors to Education Award (2024)",
+                        "Phi Tau Phi Honor Award, National Chiao Tung University (2006)",
+                        "China University of Technology Outstanding Alumni Award (2000)"
+                    ],
+                    "nationality": {
+                        "@type": "Country",
+                        "name": "Taiwan"
+                    }
+                }
+            }
         ]
     }
+    </script>
 </body>
 </html>

@@ -44,34 +44,46 @@
     <!-- 作者資訊：標明內容創作者 -->
     <meta name="author" content="Prof. Chung-Yuan Huang (黃崇源教授)">
     <meta name="ahrefs-site-verification" content="b1f1573b895ead5763166ba77346fa86ecb9449ac31144c6786475fa1c2e1e5f">
-    
+
+    <!-- 機器人索引指令 -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+    <!-- 正規網址 -->
+    <link rel="canonical" href="https://canslab1.github.io/lab.html">
+
     <!-- ===========================================
          Open Graph 社群媒體分享最佳化區塊
          目的：控制在 Facebook、LinkedIn 等平台分享時的顯示效果
          =========================================== -->
-    <meta property="og:title" content="黃崇源教授 | 長庚大學資訊工程學系">
-    <meta property="og:description" content="探索黃崇源教授的學術旅程，涵蓋其在複雜適應系統與網絡科學領域的重要貢獻與教學實踐。">
+    <meta property="og:title" content="CANS Lab 複雜適應性網絡與系統實驗室 | 黃崇源教授">
+    <meta property="og:description" content="長庚大學黃崇源教授主持的 CANS 實驗室，研究複雜網絡、演化計算及系統模擬，歡迎學生與合作夥伴聯繫交流。">
     <meta property="og:image" content="https://canslab1.github.io/images/CANS.png">
-    <meta property="og:url" content="https://canslab1.github.io/CYHuang.html">
+    <meta property="og:url" content="https://canslab1.github.io/lab.html">
     <meta property="og:type" content="website">
-    
+    <meta property="og:site_name" content="黃崇源教授個人網站">
+    <meta property="og:locale" content="zh_TW">
+
     <!-- ===========================================
          Twitter Card 設定區塊
          目的：最佳化在 Twitter 平台的分享顯示效果
          =========================================== -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="黃崇源教授 | 長庚大學資訊工程學系">
-    <meta name="twitter:description" content="介紹黃崇源教授於資訊科學、系統模擬與教育貢獻的完整履歷與代表著作。">
+    <meta name="twitter:title" content="CANS Lab 複雜適應性網絡與系統實驗室 | 黃崇源教授">
+    <meta name="twitter:description" content="長庚大學黃崇源教授主持的 CANS 實驗室，專攻複雜網絡、演化計算及系統模擬。">
     <meta name="twitter:image" content="https://canslab1.github.io/images/CANS.png">
-    
+
     <!-- ===========================================
          頁面標題與圖示設定
-         目的：顯示在瀏覽器標籤頁的標題與圖示
     =========================================== -->
-    <title>長庚大學·資工系·黃崇源教授</title>
+    <title>CANS Lab 複雜適應性網絡與系統實驗室 | 黃崇源教授 · 長庚大學資工系</title>
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="XXjnJNtZV6bAICAw3Uqc6A" async></script>
     <link rel="icon" href="https://canslab1.github.io/images/csie.png" type="image/png">
     <link rel="preload" as="image" href="https://canslab1.github.io/images/CANS.png">
+
+    <!-- 效能優化：預連線 -->
+    <link rel="dns-prefetch" href="https://scholar.google.com">
+    <link rel="dns-prefetch" href="https://www.clarity.ms">
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
     
     <!-- ===========================================
          CSS 樣式表定義區塊
@@ -1197,19 +1209,52 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Chung-Yuan Huang",
-        "alternateName": "黃崇源",
-        "jobTitle": "Professor",
-        "affiliation": {
-            "@type": "Organization",
-            "name": "Chang Gung University, Department of Computer Science and Information Engineering"
-        },
-        "url": "https://canslab1.github.io/CYHuang.html",
-        "image": "https://canslab1.github.io/images/CANS.png",
-        "sameAs": [
-            "https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en",
-            "https://www.facebook.com/gscott.huang/",
-            "https://sites.google.com/view/gscott-huang"
+        "@graph": [
+            {
+                "@type": "ResearchOrganization",
+                "name": "Complex Adaptive Networks and Systems Laboratory",
+                "alternateName": ["CANS Lab", "複雜適應性網絡與系統實驗室"],
+                "url": "https://canslab1.github.io/lab.html",
+                "image": "https://canslab1.github.io/images/CANS.png",
+                "parentOrganization": {
+                    "@type": "CollegeOrUniversity",
+                    "name": "Chang Gung University",
+                    "alternateName": "長庚大學",
+                    "url": "https://www.cgu.edu.tw/"
+                },
+                "member": {
+                    "@type": "Person",
+                    "@id": "https://canslab1.github.io/#person",
+                    "name": "Chung-Yuan Huang",
+                    "alternateName": "黃崇源",
+                    "jobTitle": "Professor and Principal Investigator"
+                },
+                "knowsAbout": [
+                    "Complex Adaptive Systems",
+                    "Network Science",
+                    "Evolutionary Computation",
+                    "Computational Social Science",
+                    "Agent-Based Modeling",
+                    "Epidemic Simulation"
+                ]
+            },
+            {
+                "@type": "Person",
+                "@id": "https://canslab1.github.io/#person",
+                "name": "Chung-Yuan Huang",
+                "alternateName": "黃崇源",
+                "jobTitle": "Professor",
+                "url": "https://canslab1.github.io/",
+                "image": "https://canslab1.github.io/images/CANS.png",
+                "sameAs": [
+                    "https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en",
+                    "https://orcid.org/0000-0002-8680-6755",
+                    "https://www.facebook.com/gscott.huang/",
+                    "https://sites.google.com/view/gscott-huang"
+                ]
+            }
         ]
     }
+    </script>
+</body>
+</html>

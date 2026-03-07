@@ -1,0 +1,75 @@
+# Prof. Chung-Yuan Huang (黃崇源教授)
+
+> Professor of Computer Science and Information Engineering at Chang Gung University, Taiwan. Principal Investigator of the Complex Adaptive Networks and Systems (CANS) Lab.
+
+## About
+
+Prof. Chung-Yuan Huang (黃崇源) is a full professor in the Department of Computer Science and Information Engineering at Chang Gung University (長庚大學), Taiwan. His research focuses on complex adaptive systems, network science, evolutionary computation, computational social science, agent-based modeling, and epidemic simulation.
+
+## Academic Metrics
+
+- Google Scholar Citations: 970+
+- h-index: 18
+- i10-index: 30
+- Journal Papers: 43
+- International Conference Papers: 49
+- Book Chapters: 10
+- Domestic Conference Papers: 19
+- PI Research Projects: 22
+- Co-PI Research Projects: 14
+- NSTC Research Budget: NT$14.08 million
+- Supervised Master's Students: 25
+- Supervised PhD Students: 2
+- Supervised Undergraduate Projects: 51
+- Paper Reviews: 68
+- Conference Reviews: 27
+- Program Committee Service: 77
+- Invited Talks: 35
+
+## Career
+
+- Full Professor: 10 years
+- Associate Professor: 5 years
+- Assistant Professor: 5 years
+- Lecturer: 5 years
+- Industry Experience: 11 years
+- Joint Appointments: 4 units
+- Independent Director (Solomon Technology Corporation): 3 years
+- Elementary School Parents' Association President: 7 years
+
+## Research Areas
+
+- Complex Adaptive Systems (複雜適應系統)
+- Network Science (網絡科學)
+- Evolutionary Computation (演化計算)
+- Computational Social Science (計算社會科學)
+- Agent-Based Modeling (代理人基模型)
+- System Simulation (系統模擬)
+- Epidemic Simulation (流行病模擬)
+- EpiRank Algorithm
+
+## Awards and Honors
+
+- 2024: China University of Technology Distinguished Alumni Award (中國科技大學傑出校友)
+- 2024: Taipei Honored Contributors to Education Award (臺北市杏壇芬芳獎)
+- 2024: Honorary President, 34th Laosong Elementary School Parents' Association
+- 2006: Phi Tau Phi Honor Award, National Chiao Tung University (斐陶斐榮譽學會獎)
+- 2000: China University of Technology Outstanding Alumni Award (中國科技大學優秀校友)
+
+## Affiliations
+
+- Chang Gung University, Department of CSIE (長庚大學資訊工程學系)
+- CANS Lab - Complex Adaptive Networks and Systems Laboratory
+
+## Links
+
+- Homepage: https://canslab1.github.io/
+- Lab Page: https://canslab1.github.io/lab.html
+- Google Scholar: https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en
+- ORCID: https://orcid.org/0000-0002-8680-6755
+- CV (PDF): https://canslab1.github.io/CV.pdf
+- Facebook: https://www.facebook.com/gscott.huang/
+- Wiki: https://sites.google.com/view/gscott-huang
+- Chang Gung University PURE: https://pure.lib.cgu.edu.tw/zh/persons/chung-yuan-huang-2
+- Family Stories (家族故事): https://canslab1.github.io/stories.html
+- EpiRank on GitHub: https://github.com/canslab1/EpiRank
