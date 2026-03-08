@@ -1,57 +1,25 @@
 <!DOCTYPE html>
 <html lang="zh-TW" itemscope itemtype="https://schema.org/WebPage">
 <head>
-    <!-- ===========================================
-         瀏覽器相容性與編碼設定區塊
-         目的：確保網頁在不同瀏覽器中的一致性表現
-         =========================================== -->
-
-    <!-- 指定網頁使用 UTF-8 字元編碼，支援多國語言 -->
     <meta charset="UTF-8">
-
-     <!-- 設定 Internet Explorer 使用最新渲染引擎 -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- 響應式設計視口設定，控制行動裝置顯示比例 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- 地理定位 -->
-    <meta name="geo.region" content="TW-TPE">
-    <meta name="geo.placename" content="台北市, 台灣">
-
-    <!-- 作者和發布者信息 -->
     <meta name="author" content="黃崇源教授 Prof. Chung-Yuan Huang">
     <meta name="publisher" content="長庚大學資訊工程學系">
 
-    <!-- 內容分類 -->
     <meta name="subject" content="個人傳記, 家族故事, 學術人物">
     <meta name="coverage" content="台灣台北萬華區">
 
-    <!-- 機器人指令 -->
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="ahrefs-site-verification" content="b1f1573b895ead5763166ba77346fa86ecb9449ac31144c6786475fa1c2e1e5f">
 
-    <!-- ===========================================
-         頁面標題與圖示設定
-         目的：顯示在瀏覽器標籤頁的標題與圖示
-         =========================================== -->
     <title>黃崇源教授 Chung-Yuan Huang - 60道手工伍仁餡家族故事集 | 長庚大學資訊工程</title>
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="XXjnJNtZV6bAICAw3Uqc6A" async></script>
     <link rel="icon" href="https://canslab1.github.io/images/csie.png" type="image/png">
     <link rel="canonical" href="https://canslab1.github.io/stories.html">
     <link rel="preload" as="image" href="https://canslab1.github.io/images/IMG-2.jpg">
 
-    <!-- ================================
-         SEO 搜尋引擎最佳化區塊
-         ================================ -->
     <meta name="description" content="黃崇源教授 (Prof. Chung-Yuan Huang) 精選60篇家族故事，從台北龍山寺旁的西園路到福建福州祖地，細膩描繪三代人跨越時代的生活軌跡與情感連結。文章記錄祖輩離鄉背景、家庭奮鬥與社會變遷，重現台灣社會與家族文化的珍貴記憶。邀您一起閱讀這些真摯的回憶，感受親情與時代變遷中的人性光輝。">
     <meta name="keywords" content="黃崇源, Chung-Yuan Huang, 長庚大學, 資訊工程, 教授, 家族故事, 龍山寺, 西園路, 台北萬華, 生命故事, 台灣記憶, 個人傳記, 學者故事, CGU">
-    <meta name="author" content="Prof. Chung-Yuan Huang (黃崇源教授)">
-
-    <!-- ===========================================
-         Open Graph 社群媒體分享最佳化區塊
-         目的：控制在 Facebook、LinkedIn 等平台分享時的顯示效果
-         =========================================== -->
     <meta property="og:title" content="黃崇源教授家庭故事專頁">
     <meta property="og:description" content="60篇手工家族故事，記錄三代人生命歷程，橫跨龍山寺與福州祖地的情感連結。">
     <meta property="og:type" content="website">
@@ -62,23 +30,10 @@
     <meta property="article:author" content="黃崇源教授 Prof. Chung-Yuan Huang">
     <meta property="article:section" content="個人傳記">
 
-    <!-- ===========================================
-         Twitter Card 設定區塊
-         目的：最佳化在 Twitter 平台的分享顯示效果
-         =========================================== -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="黃崇源教授的60道手工家族故事">
     <meta name="twitter:description" content="從龍山寺到福州，六十篇記憶交織而成的時代故事。">
     <meta name="twitter:image" content="https://canslab1.github.io/images/IMG-2.jpg">
-
-    <!-- ===========================================
-         快取控制設定區塊
-         目的：防止瀏覽器快取過期內容，確保使用者看到最新版本
-         =========================================== -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -94,8 +49,7 @@
             "url": "https://canslab1.github.io/"
         },
         "publisher": {
-            "@context": "https://schema.org",
-            "@type": ["Person", "CollectionPage"],
+            "@type": "Person",
             "name": "Chung-Yuan Huang",
             "alternateName": "黃崇源教授",
             "affiliation": {
@@ -128,64 +82,38 @@
     }
     </script>
     
-    <!-- ===========================================
-         CSS 樣式表定義區塊
-         組織原則：全域設定 → 版面配置 → 元件樣式 → 響應式設計
-         =========================================== -->
-    <style>
-        /* ===================================
-           全域預設樣式重設
-           用途：清除瀏覽器內建的 margin 與 padding，統一 box model 行為
-           影響範圍：所有 HTML 元素
-           =================================== */
+<style>
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* ===================================
-           主體字體與背景設定
-           用途：設定全站字體風格與視覺背景漸層
-           =================================== */
         body {
             min-height: 100vh;
             font-family: system-ui, -apple-system, 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             color: #333;
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            background-color: #f8f9fa;
         }
 
-        /* ===================================
-           容器通用樣式
-           用途：控制內容最大寬度並置中，適用於 header、main、footer
-           =================================== */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px; /* 修正：移除空格 */
+            padding: 0 20px; 
         }
 
-        /* ===================================
-           個人照片樣式
-           用途：將圖片裁成圓形並加上陰影效果
-           =================================== */
         .profile-photo {
             width: 180px;
             height: 180px;
             object-fit: cover;
             border-radius: 50%;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            margin: 1rem;
-            margin-bottom: 0.5rem;
+            margin: 1rem 1rem 0.5rem;
             display: block;
         }
 
-        /* ===================================
-           頁首區域設計
-           用途：以圖片搭配色彩疊加營造視覺吸引力
-           =================================== */       
         header {
             background: 
                 linear-gradient(135deg, rgba(20, 83, 45, 0.85) 0%, rgba(26, 119, 69, 0.85) 100%),
@@ -197,7 +125,6 @@
             position: relative;
         }
 
-        /* header::before 建立光暈紋理的前景圖層裝飾 */
         header::before {
             content: '';
             position: absolute;
@@ -237,21 +164,14 @@
             text-align: center;
         }
         
-        /* ===================================
-           導覽列設計
-           用途：使用 sticky 效果維持在視窗頂端，支援捲動中快速切換章節
-           =================================== */
         nav {
             background: #fff;
-            padding: 0;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
-            margin: 0;
         }
 
-        /* nav-links 為導覽項目容器，水平方向彈性排布 */
         .nav-links {
             display: flex;
             justify-content: center;
@@ -259,7 +179,6 @@
             overflow-x: auto;
         }
 
-        /* 單一導覽項目的樣式 */
         .nav-link {
             background: none;
             border: none;
@@ -273,14 +192,12 @@
             text-decoration: none;
         }
 
-        /* 導覽項目懸停與啟用狀態 */
         .nav-link:hover {
             background: #27ae60;
             color: white;
             text-decoration: none;
         }
 
-        /* 導覽列在行動裝置顯示用的 toggle button */
         .nav-toggle {
             display: none;
             font-size: 1.5rem;
@@ -291,9 +208,6 @@
             padding: 1rem;
         }
         
-        /* ===================================
-           主要內容區域設定
-           =================================== */
         main {
             padding: 40px 0;
         }
@@ -441,11 +355,6 @@
             margin: 30px 0;
             position: relative;
         }
-
-        .table-of-contents::before {
-            content: none;
-        }
-
         .toc-title {
             font-size: 1.7em;
             font-weight: 500;
@@ -538,12 +447,8 @@
             color: #e9d5ff;
         }
 
-        /* ===================================
-           響應式設計：中小型螢幕適配
-           斷點：768px 以下視為行動裝置
-           =================================== */
         @media (max-width: 768px) {
-            /* 容器在小螢幕的間距調整 */
+            
             .section {
                 padding: 0 15px;
             }
@@ -577,7 +482,7 @@
             .nav-links {
                 display: none;
                 flex-direction: column;
-                align-items: flex-start; /* center; */
+                align-items: flex-start; 
                 background: white;
                 box-shadow: 0 2px 10px rgba(0,0,0,0.1);
                 position: absolute;
@@ -605,20 +510,22 @@
             }
         }
 
-        /* ===================================
-           響應式設計：中等螢幕適配
-           斷點：769px 到 1024px 之間的平板裝置
-           =================================== */
         @media (max-width: 1024px) and (min-width: 769px) {
             .nav-link {
-                padding: 0.5rem 0.6rem; /* 緊密間距適應中等螢幕 */
+                padding: 0.5rem 0.6rem; 
                 font-size: 0.9rem;
             }
         }
 
+        .story-image {
+            width: 600px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
     </style>
-    <!-- Clarity tracking code for https://canslab1.github.io/ -->
-    <script>
+<script>
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
@@ -767,10 +674,10 @@
                     過了半年，他打聽到家鄉另一位表親在台北開皮鞋工廠，所以辭掉高雄鐘錶店學徒工作，跟朋友借了點錢，搭火車來台北依親，在表親的皮鞋工廠當學徒，學習製作男女皮鞋。學徒的薪資很低，為了多存點錢，他跟表親老闆商量，利用工廠下班後，在西門町表親開的一家皮鞋店門口旁擺攤賣糖果賺外快。表親看在眼裡，對他的生意頭腦讚許有加且溢於言表，甚至希望將其中一位女兒許配給他。
                 </div>
                 <div style="text-align: center; margin: 30px 0;">
-                    <img src="https://canslab1.github.io/images/Photos1-1.jpeg" alt="黃依六年輕時期留影" style="width: 600px; max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);" loading="lazy">
-                    <figcaption style="margin-top: 8px; font-size: 0.95em; color: #555;">
+                    <img src="https://canslab1.github.io/images/Photos1-1.jpeg" alt="黃依六年輕時期留影" class="story-image" loading="lazy">
+                    <p style="margin-top: 8px; font-size: 0.95em; color: #555;">
                         ▲ 黃依六少年時期在台北西門町工作的皮鞋店前和友人合影
-                    </figcaption>
+                    </p>
                 </div>
                 <div class="story-content">
                     可惜依六早先在中華路天橋上認識了一位修理皮鞋匠的女兒，並且在女孩父親默許下開始交往，所以他委婉拒絕了這門親事，只想多存點錢，等當完兵回來後，娶女孩為妻。
@@ -783,8 +690,8 @@
                     依六和阿雲是透過「皮鞋」結緣認識的。郭雪雲，小學畢業考取初中，為了家中生計，放棄升學，跟著養父每日在現今中華路和內江街口旁擺攤修理皮鞋。一日，黃依六下工後散步途經中華路，看到一位漂亮姑娘和一位長者在人行道旁修理皮鞋，忙到不可開交，便不假思索立馬停下腳步，主動毛遂自薦蹲下來幫忙修理皮鞋，等到所有皮鞋修理妥當交至客人手中時，已經過了晚餐時間。
                 </div>
                 <div style="text-align: center; margin: 30px 0;">
-                    <img src="https://canslab1.github.io/images/Photos1-2.jpg" alt="郭雪雲年輕時期留影" style="width: 600px; max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);" loading="lazy">
-                    <figcaption style="margin-top: 8px; font-size: 0.95em; color: #555;">▲ 郭雪雲在中華路自家皮鞋修理攤前和父親、兄長及友人合影</figcaption>
+                    <img src="https://canslab1.github.io/images/Photos1-2.jpg" alt="郭雪雲年輕時期留影" class="story-image" loading="lazy">
+                    <p style="margin-top: 8px; font-size: 0.95em; color: #555;">▲ 郭雪雲在中華路自家皮鞋修理攤前和父親、兄長及友人合影</p>
                 </div>
                 <div class="story-content">
                     長者邀請這位好心年輕人到家中作客吃頓便餐。當晚郭家煮地瓜粥，是黃依六這小伙子生平愛吃的食物之一，便多喝了幾碗粥，也有了日後天天去皮鞋修理攤幫忙的最佳理由。因為地瓜粥好吃，想天天吃，所以希望天天下工後來攤子義務幫忙。
@@ -1580,8 +1487,6 @@
                 </div>
             </div>
         </section>
-    </main>
-
     </main>
 
     <footer>

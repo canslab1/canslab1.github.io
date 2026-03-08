@@ -1,39 +1,24 @@
 <!DOCTYPE html>
-<html lang="zh-TW" itemscope itemtype="https://schema.org/WebPage">
+<html lang="zh-TW">
 <head>
-  <!-- ===========================================
-       404 頁面 - Chung-Yuan Huang 個人網站專屬
-       目的：提供找不到頁面的友善提示與導引
-       註解：參照 index.html、stories.html 統一風格
-  =========================================== -->
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, follow">
-  <!-- SEO最佳化 -->
-  <meta name="robots" content="noindex, follow">
-  <meta name="description" content="抱歉，您所尋找的頁面已移除或連結失效。請透過導覽選單返回黃崇源教授的學術首頁或前往家族故事專欄，了解其在複雜網絡與系統科學領域的研究成果以及三代家族歷史。本站提供完整履歷、自傳與教學資源，歡迎分享與交流。若問題持續存在，請以網站底部的聯絡資訊告知，我們將盡快協助處理，同時歡迎瀏覽其他頁面探索更多研究計畫與學術著作。">
+  <meta name="description" content="找不到頁面，請返回首頁或瀏覽其他內容。">
   <meta name="author" content="Prof. Chung-Yuan Huang (黃崇源教授)">
   <title>404 找不到頁面 | 黃崇源教授學術網站</title>
   <link rel="icon" href="https://canslab1.github.io/images/csie.png" type="image/png">
-  <link rel="canonical" href="https://canslab1.github.io/404.html">
-  <link rel="preload" as="image" href="https://canslab1.github.io/images/IMG-2.jpg">
-  <!-- 主題樣式：延用主站配色與背景 -->
   <style>
-    /* 全域預設樣式重設 */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { height: 100%; }
     body {
       min-height: 100vh;
       font-family: system-ui, -apple-system, 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
       line-height: 1.6;
       color: #333;
       background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-      background-color: #f8f9fa;
       display: flex;
       flex-direction: column;
     }
-    /* header區塊 - 與主站統一風格 */
     header {
       background:
         linear-gradient(135deg, rgba(20, 83, 45, 0.85) 0%, rgba(26, 119, 69, 0.85) 100%),
@@ -50,7 +35,6 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 1.5rem;
-      text-align: center;
     }
     .profile-photo {
       width: 140px;
@@ -67,7 +51,6 @@
       margin-bottom: 0.2rem;
     }
 
-    /* 404主體區塊 */
     .container {
       max-width: 700px;
       margin: 0 auto;
@@ -120,7 +103,6 @@
       box-shadow: 0 4px 12px rgba(39,174,96,0.20);
       transform: translateY(-2px);
     }
-    /* footer區塊 */
     footer {
       background: #2c3e50;
       color: #fff;
@@ -131,7 +113,10 @@
       box-shadow: 0 -2px 6px rgba(0,0,0,0.08);
       border-top: 1px solid #ddd;
     }
-    /* 響應式設計 */
+    footer a {
+      color: #e9d5ff;
+      text-decoration: underline;
+    }
     @media (max-width: 768px) {
       .header-text h1 { font-size: 1.6rem; }
       .error-code { font-size: 4rem; }
@@ -147,10 +132,8 @@
   </script>
 </head>
 <body>
-  <!-- Header：延續主站形象 -->
   <header>
     <div class="container header-content">
-      <!-- 個人肖像照 -->
       <img src="https://canslab1.github.io/images/IMG-2.jpg" alt="Chung-Yuan Huang（黃崇源）個人肖像" class="profile-photo">
       <div class="header-text">
         <h1>長庚大學 黃崇源 教授</h1>
@@ -159,22 +142,19 @@
   </header>
 
   <main class="container">
-    <!-- 404 錯誤大標題 -->
     <div class="error-code">404</div>
     <div class="error-message">找不到頁面</div>
     <div class="error-desc">
       檢查網址是否正確，或回到下方連結開始了解黃崇源。
     </div>
-    <!-- 主要導覽按鈕 -->
     <div class="links">
       <a class="btn" href="/">回首頁</a>
       <a class="btn" href="https://canslab1.github.io/stories.html">閱讀家族故事</a>
     </div>
   </main>
 
-  <!-- Footer：與主站一致 -->
   <footer>
-    &copy; 2025 <a href="https://www.cgu.edu.tw/" style="color:#e9d5ff;text-decoration:underline;">長庚大學</a> <a href="https://www.cgu.edu.tw/csie/" style="color:#e9d5ff;text-decoration:underline;">資訊工程學系</a> | <a href="https://canslab1.github.io/" style="color:#e9d5ff;text-decoration:underline;">黃崇源教授</a>
+    &copy; 2025 <a href="https://www.cgu.edu.tw/">長庚大學</a> <a href="https://www.cgu.edu.tw/csie/">資訊工程學系</a> | <a href="https://canslab1.github.io/">黃崇源教授</a>
   </footer>
 </body>
 </html>
