@@ -100,20 +100,20 @@
 
     <nav>
         <div class="container">
-            <button class="nav-toggle" onclick="toggleMenu()">☰ 章節</button>
-            <div class="nav-links" id="navLinks">
-                <a href="#chapter1" class="nav-link">依六追阿雲</a>
-                <a href="#chapter2" class="nav-link">大頭仔</a>
-                <a href="#chapter3" class="nav-link">愛人月如</a>
-                <a href="#chapter4" class="nav-link">平安福</a>
-                <a href="#chapter5" class="nav-link">貴人</a>
+            <button class="nav-toggle" id="navToggle">☰ 章節</button>
+            <div class="nav-container" id="navLinks">
+                <a href="#chapter1" class="nav-item">依六追阿雲</a>
+                <a href="#chapter2" class="nav-item">大頭仔</a>
+                <a href="#chapter3" class="nav-item">愛人月如</a>
+                <a href="#chapter4" class="nav-item">平安福</a>
+                <a href="#chapter5" class="nav-item">貴人</a>
             </div>
         </div>
     </nav>
 
     <main class="container">
         <div id="toc" class="table-of-contents">
-            <button class="toc-title" onclick="toggleTOC()" aria-expanded="false" aria-controls="tocContent">
+            <button class="toc-title" id="tocToggle" aria-expanded="false" aria-controls="tocContent">
                 <span class="toc-arrow">▶</span>
                 目　　錄
                 <span class="toc-hint">點擊展開</span>
@@ -1047,7 +1047,7 @@
         </div>
     </footer>
 
-    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+    <button class="back-to-top" id="backToTop">↑</button>
 
     <script src="stories.js"></script>
 </body>

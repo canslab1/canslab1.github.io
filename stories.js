@@ -63,6 +63,19 @@ function smoothScrollToAnchor(anchorElement) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+    /* Bind nav toggle button */
+    const navToggle = document.getElementById('navToggle');
+    if (navToggle) navToggle.addEventListener('click', toggleMenu);
+
+    /* Bind TOC toggle button */
+    const tocToggle = document.getElementById('tocToggle');
+    if (tocToggle) tocToggle.addEventListener('click', toggleTOC);
+
+    /* Bind back-to-top button */
+    const backToTop = document.getElementById('backToTop');
+    if (backToTop) backToTop.addEventListener('click', scrollToTop);
+
+    /* Smooth anchor scrolling */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             if (this.getAttribute('href').length > 1) {

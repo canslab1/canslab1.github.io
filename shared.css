@@ -86,7 +86,7 @@ header {
 .header-text .subheadline {
     font-size: 1.5rem;
     font-weight: 300;
-    font-stretch: condensed;
+    letter-spacing: -0.02em;
     color: hsl(210, 100%, 93%);
     text-shadow: 0 0 2px rgba(255, 255, 255, 0.15);
 }
@@ -307,7 +307,7 @@ figure {
 /* ===== Lab Page Header ===== */
 body.lab-page .header-text h1 {
     font-size: 2rem;
-    font-stretch: condensed;
+    letter-spacing: -0.02em;
 }
 
 /* ===== Animation ===== */
