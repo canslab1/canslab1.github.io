@@ -50,6 +50,7 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
+    pointer-events: none;
     background:
         radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 1px, transparent 1px),
         radial-gradient(circle at 80% 70%, rgba(255,255,255,0.08) 2px, transparent 2px),
@@ -289,11 +290,16 @@ footer {
     font-weight: 500;
     margin-bottom: 25px;
     text-align: center;
+    border: none;
     border-bottom: 2px solid rgba(255,255,255,0.3);
     padding-bottom: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
+    background: none;
+    color: inherit;
+    width: 100%;
+    display: block;
 }
 
 .toc-title:hover {
@@ -374,6 +380,18 @@ footer {
 
 .toc-link:hover {
     color: #e9d5ff;
+}
+
+/* ===== Story Figure ===== */
+.story-figure {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.story-caption {
+    margin-top: 8px;
+    font-size: 0.95em;
+    color: #555;
 }
 
 /* ===== Story Image ===== */

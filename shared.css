@@ -304,6 +304,12 @@ figure {
     z-index: 10;
 }
 
+/* ===== Lab Page Header ===== */
+body.lab-page .header-text h1 {
+    font-size: 2rem;
+    font-stretch: condensed;
+}
+
 /* ===== Animation ===== */
 .fade-in {
     animation: fadeIn 0.5s ease-in;

@@ -158,7 +158,8 @@ function showSection(sectionId, event) {
 }
 
 function toggleNav() {
-    document.querySelector('.nav-container').classList.toggle('show');
+    const navContainer = document.querySelector('.nav-container');
+    if (navContainer) navContainer.classList.toggle('show');
 }
 
 /* ===== Render Functions ===== */
