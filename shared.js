@@ -133,13 +133,6 @@ function toggleLanguage() {
     html.lang = isZh ? 'en' : 'zh-TW';
     btn.textContent = isZh ? '中文' : 'English';
 
-    document.querySelectorAll('.en').forEach(el => {
-        el.style.display = isZh ? '' : 'none';
-    });
-    document.querySelectorAll('.zh').forEach(el => {
-        el.style.display = isZh ? 'none' : '';
-    });
-
     renderStats();
     renderHonors();
     renderHonorsArticle();
@@ -220,19 +213,9 @@ function renderNav() {
         </div>
     `;
 
-    // Fix language display inside nav-toggle
-    const toggleSpans = nav.querySelectorAll('.nav-toggle span');
-    toggleSpans.forEach(span => {
-        if (span.classList.contains('en')) {
-            span.style.display = isEn ? 'inline' : 'none';
-        } else {
-            span.style.display = isEn ? 'none' : 'inline';
-        }
-    });
-
     const container = nav.querySelector('.nav-container');
 
-    items.forEach((item, i) => {
+    items.forEach(item => {
         if (item.section) {
             // "介紹/Overview" button — links to index page section
             if (_currentPage === 'index') {
