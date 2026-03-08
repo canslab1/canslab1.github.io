@@ -21,7 +21,6 @@ body {
 /* ===== Language Toggle ===== */
 .en { display: none; }
 html[lang="en"] .en { display: inline; }
-html[lang="en"] .en-block { display: block; }
 html[lang="en"] .zh { display: none; }
 
 .language-toggle {
@@ -339,11 +338,6 @@ figure {
         align-items: center;
         text-align: center;
         gap: 0.5rem;
-    }
-
-    .header-content h1 {
-        font-size: 2rem;
-        line-height: 1.4;
     }
 
     .profile-photo {
