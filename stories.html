@@ -100,24 +100,24 @@
 
     <nav>
         <div class="container">
-            <button class="nav-toggle" onclick="toggleMenu()">☰ 章節</button>
-            <div class="nav-links" id="navLinks">
-                <a href="#chapter1" class="nav-link">依六追阿雲</a>
-                <a href="#chapter2" class="nav-link">大頭仔</a>
-                <a href="#chapter3" class="nav-link">愛人月如</a>
-                <a href="#chapter4" class="nav-link">平安福</a>
-                <a href="#chapter5" class="nav-link">貴人</a>
+            <button class="nav-toggle" id="navToggle">☰ 章節</button>
+            <div class="nav-container" id="navLinks">
+                <a href="#chapter1" class="nav-item">依六追阿雲</a>
+                <a href="#chapter2" class="nav-item">大頭仔</a>
+                <a href="#chapter3" class="nav-item">愛人月如</a>
+                <a href="#chapter4" class="nav-item">平安福</a>
+                <a href="#chapter5" class="nav-item">貴人</a>
             </div>
         </div>
     </nav>
 
     <main class="container">
         <div id="toc" class="table-of-contents">
-            <div class="toc-title" onclick="toggleTOC()">
+            <button class="toc-title" id="tocToggle" aria-expanded="false" aria-controls="tocContent">
                 <span class="toc-arrow">▶</span>
                 目　　錄
                 <span class="toc-hint">點擊展開</span>
-            </div>
+            </button>
             
             <div class="toc-content" id="tocContent">
             <div class="toc-chapter">
@@ -225,9 +225,9 @@
                 <div class="story-content">
                     過了半年，他打聽到家鄉另一位表親在台北開皮鞋工廠，所以辭掉高雄鐘錶店學徒工作，跟朋友借了點錢，搭火車來台北依親，在表親的皮鞋工廠當學徒，學習製作男女皮鞋。學徒的薪資很低，為了多存點錢，他跟表親老闆商量，利用工廠下班後，在西門町表親開的一家皮鞋店門口旁擺攤賣糖果賺外快。表親看在眼裡，對他的生意頭腦讚許有加且溢於言表，甚至希望將其中一位女兒許配給他。
                 </div>
-                <div style="text-align: center; margin: 30px 0;">
+                <div class="story-figure">
                     <img src="https://canslab1.github.io/images/Photos1-1.jpeg" alt="黃依六年輕時期留影" class="story-image" loading="lazy">
-                    <p style="margin-top: 8px; font-size: 0.95em; color: #555;">
+                    <p class="story-caption">
                         ▲ 黃依六少年時期在台北西門町工作的皮鞋店前和友人合影
                     </p>
                 </div>
@@ -241,9 +241,9 @@
                 <div class="story-content">
                     依六和阿雲是透過「皮鞋」結緣認識的。郭雪雲，小學畢業考取初中，為了家中生計，放棄升學，跟著養父每日在現今中華路和內江街口旁擺攤修理皮鞋。一日，黃依六下工後散步途經中華路，看到一位漂亮姑娘和一位長者在人行道旁修理皮鞋，忙到不可開交，便不假思索立馬停下腳步，主動毛遂自薦蹲下來幫忙修理皮鞋，等到所有皮鞋修理妥當交至客人手中時，已經過了晚餐時間。
                 </div>
-                <div style="text-align: center; margin: 30px 0;">
+                <div class="story-figure">
                     <img src="https://canslab1.github.io/images/Photos1-2.jpg" alt="郭雪雲年輕時期留影" class="story-image" loading="lazy">
-                    <p style="margin-top: 8px; font-size: 0.95em; color: #555;">▲ 郭雪雲在中華路自家皮鞋修理攤前和父親、兄長及友人合影</p>
+                    <p class="story-caption">▲ 郭雪雲在中華路自家皮鞋修理攤前和父親、兄長及友人合影</p>
                 </div>
                 <div class="story-content">
                     長者邀請這位好心年輕人到家中作客吃頓便餐。當晚郭家煮地瓜粥，是黃依六這小伙子生平愛吃的食物之一，便多喝了幾碗粥，也有了日後天天去皮鞋修理攤幫忙的最佳理由。因為地瓜粥好吃，想天天吃，所以希望天天下工後來攤子義務幫忙。
@@ -1047,7 +1047,7 @@
         </div>
     </footer>
 
-    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+    <button class="back-to-top" id="backToTop">↑</button>
 
     <script src="stories.js"></script>
 </body>

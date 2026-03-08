@@ -50,6 +50,7 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
+    pointer-events: none;
     background:
         radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 1px, transparent 1px),
         radial-gradient(circle at 80% 70%, rgba(255,255,255,0.08) 2px, transparent 2px),
@@ -68,7 +69,7 @@ header::before {
 .subheadline {
     font-size: 1.4rem;
     font-weight: 300;
-    font-stretch: condensed;
+    letter-spacing: -0.02em;
     color: hsl(210, 100%, 93%);
     text-shadow: 0 0 2px rgba(255, 255, 255, 0.15);
 }
@@ -91,14 +92,14 @@ nav {
     z-index: 1000;
 }
 
-.nav-links {
+.nav-container {
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
     overflow-x: auto;
 }
 
-.nav-link {
+.nav-item {
     background: none;
     border: none;
     padding: 0.5rem 1rem;
@@ -111,7 +112,7 @@ nav {
     text-decoration: none;
 }
 
-.nav-link:hover {
+.nav-item:hover {
     background: #27ae60;
     color: white;
     text-decoration: none;
@@ -289,11 +290,16 @@ footer {
     font-weight: 500;
     margin-bottom: 25px;
     text-align: center;
+    border: none;
     border-bottom: 2px solid rgba(255,255,255,0.3);
     padding-bottom: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
+    background: none;
+    color: inherit;
+    width: 100%;
+    display: block;
 }
 
 .toc-title:hover {
@@ -376,6 +382,18 @@ footer {
     color: #e9d5ff;
 }
 
+/* ===== Story Figure ===== */
+.story-figure {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.story-caption {
+    margin-top: 8px;
+    font-size: 0.95em;
+    color: #555;
+}
+
 /* ===== Story Image ===== */
 .story-image {
     width: 600px;
@@ -417,7 +435,7 @@ footer {
         font-size: 1.8em;
     }
 
-    .nav-links {
+    .nav-container {
         display: none;
         flex-direction: column;
         align-items: flex-start;
@@ -430,7 +448,7 @@ footer {
         z-index: 999;
     }
 
-    .nav-links.show {
+    .nav-container.show {
         display: flex;
     }
 
@@ -438,7 +456,7 @@ footer {
         display: block;
     }
 
-    .nav-link {
+    .nav-item {
         padding: 8px 15px;
         font-size: 0.9em;
     }
@@ -450,7 +468,7 @@ footer {
 
 /* ===== Responsive: Tablet ===== */
 @media (max-width: 1024px) and (min-width: 769px) {
-    .nav-link {
+    .nav-item {
         padding: 0.5rem 0.6rem;
         font-size: 0.9rem;
     }

@@ -158,7 +158,8 @@ function showSection(sectionId, event) {
 }
 
 function toggleNav() {
-    document.querySelector('.nav-container').classList.toggle('show');
+    const navContainer = document.querySelector('.nav-container');
+    if (navContainer) navContainer.classList.toggle('show');
 }
 
 /* ===== Render Functions ===== */
@@ -194,8 +195,8 @@ function renderHonors() {
     });
 }
 
-/* currentPage: 'index' or 'lab' */
-let _currentPage = 'index';
+/* currentPage: 'index' or 'lab' — scoped via closure in initShared */
+var _currentPage = 'index';
 
 function renderNav() {
     const nav = document.getElementById('main-nav');
@@ -206,12 +207,15 @@ function renderNav() {
 
     nav.innerHTML = `
         <div class="container">
-            <button class="nav-toggle" onclick="toggleNav()">
+            <button class="nav-toggle">
                 <span class="zh">☰ 導覽</span><span class="en">☰ Navigation</span>
             </button>
             <div class="nav-container"></div>
         </div>
     `;
+
+    const navToggleBtn = nav.querySelector('.nav-toggle');
+    if (navToggleBtn) navToggleBtn.addEventListener('click', toggleNav);
 
     const container = nav.querySelector('.nav-container');
 
@@ -353,29 +357,53 @@ function renderHonorsArticle() {
     const isEn = document.documentElement.lang === 'en';
     const paragraphs = isEn ? honorsArticleEn : honorsArticleZh;
 
-    let html = '<p class="honors-paragraph">';
+    container.innerHTML = '';
+
+    const p = document.createElement('p');
+    p.className = 'honors-paragraph';
     paragraphs.forEach((text, i) => {
-        html += '<br>\u2003\u2003' + text;
-        if (i < paragraphs.length - 1) html += '<br>';
+        p.appendChild(document.createElement('br'));
+        p.appendChild(document.createTextNode('\u2003\u2003' + text));
+        if (i < paragraphs.length - 1) p.appendChild(document.createElement('br'));
     });
-    html += '</p>';
+    container.appendChild(p);
 
     honorsFigures.forEach(fig => {
-        html += '<figure>';
-        html += '<img src="' + fig.src + '" alt="' + fig.alt + '" class="honors-image" loading="lazy">';
-        html += '<figcaption class="honors-caption">';
-        html += '<span class="zh">' + fig.captionZh + '</span>';
-        html += '<span class="en">' + fig.captionEn + '</span>';
-        html += '</figcaption></figure>';
-    });
+        const figure = document.createElement('figure');
 
-    container.innerHTML = html;
+        const img = document.createElement('img');
+        img.src = fig.src;
+        img.alt = fig.alt;
+        img.className = 'honors-image';
+        img.loading = 'lazy';
+        figure.appendChild(img);
+
+        const caption = document.createElement('figcaption');
+        caption.className = 'honors-caption';
+
+        const zhSpan = document.createElement('span');
+        zhSpan.className = 'zh';
+        zhSpan.textContent = fig.captionZh;
+        caption.appendChild(zhSpan);
+
+        const enSpan = document.createElement('span');
+        enSpan.className = 'en';
+        enSpan.textContent = fig.captionEn;
+        caption.appendChild(enSpan);
+
+        figure.appendChild(caption);
+        container.appendChild(figure);
+    });
 }
 
 /* ===== Initialization ===== */
 
 function initShared(currentPage) {
     _currentPage = currentPage || 'index';
+
+    const langBtn = document.querySelector('.language-toggle');
+    if (langBtn) langBtn.addEventListener('click', toggleLanguage);
+
     renderStats();
     renderHonors();
     renderHonorsArticle();
