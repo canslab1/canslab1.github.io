@@ -80,6 +80,33 @@
         }
         .software-meta a { color: #1a73e8; text-decoration: none; }
         .software-meta a:hover { text-decoration: underline; }
+        .software-gallery {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+            overflow-x: auto;
+            padding-bottom: 0.5rem;
+        }
+        .software-gallery a {
+            flex: 1 1 0;
+            min-width: 0;
+        }
+        .software-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+        .software-gallery img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        @media (max-width: 600px) {
+            .software-gallery { flex-direction: column; }
+            .software-gallery a { flex: none; }
+        }
     </style>
 </head>
 <body class="software-page">
@@ -126,6 +153,11 @@
                             <span class="software-tag">Python</span>
                             <span class="software-tag">GUI</span>
                         </div>
+                        <div class="software-gallery">
+                            <a href="images/software/epirank-ranking.png" target="_blank"><img src="images/software/epirank-ranking.png" alt="EpiRank Top 30 Townships ranking bar chart" loading="lazy"></a>
+                            <a href="images/software/epirank-scatter.png" target="_blank"><img src="images/software/epirank-scatter.png" alt="EpiRank vs Influenza scatter plot" loading="lazy"></a>
+                            <a href="images/software/epirank-degree.png" target="_blank"><img src="images/software/epirank-degree.png" alt="Commuting network degree distribution" loading="lazy"></a>
+                        </div>
                         <div class="software-meta"><a href="https://github.com/canslab1/EpiRank" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License</div>
                     </li>
 
@@ -142,6 +174,11 @@
                             <span class="software-tag">Python</span>
                             <span class="software-tag">GUI + CLI</span>
                         </div>
+                        <div class="software-gallery">
+                            <a href="images/software/heta-network.png" target="_blank"><img src="images/software/heta-network.png" alt="HETA network visualization with edge type classification" loading="lazy"></a>
+                            <a href="images/software/heta-degree.png" target="_blank"><img src="images/software/heta-degree.png" alt="HETA degree distribution analysis" loading="lazy"></a>
+                            <a href="images/software/heta-pagerank.png" target="_blank"><img src="images/software/heta-pagerank.png" alt="HETA PageRank analysis" loading="lazy"></a>
+                        </div>
                         <div class="software-meta"><a href="https://github.com/canslab1/HETA" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License</div>
                     </li>
 
@@ -156,6 +193,11 @@
                             <span class="software-tag">Arc Classification</span>
                             <span class="software-tag">Complex Networks</span>
                             <span class="software-tag">Python</span>
+                        </div>
+                        <div class="software-gallery">
+                            <a href="images/software/hata-network.png" target="_blank"><img src="images/software/hata-network.png" alt="HATA directed network visualization with arc type classification" loading="lazy"></a>
+                            <a href="images/software/hata-degree.png" target="_blank"><img src="images/software/hata-degree.png" alt="HATA degree distribution analysis" loading="lazy"></a>
+                            <a href="images/software/hata-betweenness.png" target="_blank"><img src="images/software/hata-betweenness.png" alt="HATA betweenness centrality analysis" loading="lazy"></a>
                         </div>
                         <div class="software-meta"><a href="https://github.com/canslab1/HATA" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License</div>
                     </li>
@@ -173,6 +215,11 @@
                             <span class="software-tag">Python</span>
                             <span class="software-tag">NetLogo</span>
                         </div>
+                        <div class="software-gallery">
+                            <a href="images/software/bcat-overview.png" target="_blank"><img src="images/software/bcat-overview.png" alt="BCAT simulation overview with multiple charts" loading="lazy"></a>
+                            <a href="images/software/bcat-network.png" target="_blank"><img src="images/software/bcat-network.png" alt="BCAT small-world network visualization" loading="lazy"></a>
+                            <a href="images/software/bcat-attitudes.png" target="_blank"><img src="images/software/bcat-attitudes.png" alt="BCAT attitude distribution histogram" loading="lazy"></a>
+                        </div>
                         <div class="software-meta"><a href="https://github.com/canslab1/BCAT" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License</div>
                     </li>
 
@@ -189,6 +236,11 @@
                             <span class="software-tag">Agent-Based Model</span>
                             <span class="software-tag">Python</span>
                         </div>
+                        <div class="software-gallery">
+                            <a href="images/software/srac-strategies.png" target="_blank"><img src="images/software/srac-strategies.png" alt="SRAC-Agent four key strategies dynamics chart" loading="lazy"></a>
+                            <a href="images/software/srac-fitness.png" target="_blank"><img src="images/software/srac-fitness.png" alt="SRAC-Agent average fitness per generation" loading="lazy"></a>
+                            <a href="images/software/srac-lattice.png" target="_blank"><img src="images/software/srac-lattice.png" alt="SRAC-Agent final strategy lattice distribution" loading="lazy"></a>
+                        </div>
                         <div class="software-meta"><a href="https://github.com/canslab1/SRAC-Agent" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License</div>
                     </li>
 
@@ -203,6 +255,11 @@
                             <span class="software-tag">AED Placement</span>
                             <span class="software-tag">Public Health</span>
                             <span class="software-tag">Optimization</span>
+                        </div>
+                        <div class="software-gallery">
+                            <a href="images/software/aed2-map.png" target="_blank"><img src="images/software/aed2-map.png" alt="AED2 Taipei OHCA and AED location map" loading="lazy"></a>
+                            <a href="images/software/aed2-density.png" target="_blank"><img src="images/software/aed2-density.png" alt="AED2 OHCA density vs suggested AED placement density" loading="lazy"></a>
+                            <a href="images/software/aed2-distribution.png" target="_blank"><img src="images/software/aed2-distribution.png" alt="AED2 distance and coverage distribution histograms" loading="lazy"></a>
                         </div>
                         <div class="software-meta"><a href="https://github.com/canslab1/AED2" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License</div>
                     </li>
