@@ -87,6 +87,7 @@ const honorsEn = [
 const navItemsZh = [
     { label: '介紹', href: null, section: 'overview' },
     { label: '實驗室', href: 'https://canslab1.github.io/lab.html', page: 'lab' },
+    { label: '程式', href: 'https://canslab1.github.io/software.html', page: 'software' },
     { label: '著作', href: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
     { label: '計畫', href: 'https://arspb.nstc.gov.tw/NSCWebFront/modules/talentSearch/talentSearch.do?action=initRsm17new&rsNo=2a2ef24adef742f58349c3c533bb7402&LANG=chi' },
     { label: '履歷', href: 'https://canslab1.github.io/CV.pdf' },
@@ -101,6 +102,7 @@ const navItemsZh = [
 const navItemsEn = [
     { label: 'About', href: null, section: 'overview' },
     { label: 'Lab', href: 'https://canslab1.github.io/lab.html', page: 'lab' },
+    { label: 'Software', href: 'https://canslab1.github.io/software.html', page: 'software' },
     { label: 'Papers', href: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
     { label: 'Projects', href: 'https://arspb.nstc.gov.tw/NSCWebFront/modules/talentSearch/talentSearch.do?action=initRsm17new&rsNo=2a2ef24adef742f58349c3c533bb7402&LANG=chi' },
     { label: 'CV', href: 'https://canslab1.github.io/CV.pdf' },
@@ -235,8 +237,8 @@ function renderNav() {
                 a.textContent = item.label;
                 container.appendChild(a);
             }
-        } else if (item.page === 'lab') {
-            if (_currentPage === 'lab') {
+        } else if (item.page) {
+            if (_currentPage === item.page) {
                 const a = document.createElement('a');
                 a.className = 'nav-item active';
                 a.href = '#';

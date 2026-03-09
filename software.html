@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-TW" itemscope itemtype="https://schema.org/WebPage">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="黃崇源教授及 CANS 實驗室開發的開源研究軟體與工具：EpiRank 疫情風險分析、HETA/HATA 網絡邊分類、BCAT 意見動態模擬、SRAC-Agent 演化賽局模擬、AED2 最佳化 AED 配置。所有程式碼皆以 MIT 授權公開於 GitHub。">
+    <meta name="keywords" content="黃崇源, CANS Lab, 開源軟體, 研究工具, EpiRank, HETA, HATA, BCAT, SRAC-Agent, AED, complex networks, epidemic simulation, network analysis, agent-based model, evolutionary computation, open source, GitHub">
+
+    <meta name="author" content="Prof. Chung-Yuan Huang (黃崇源教授)">
+    <meta name="ahrefs-site-verification" content="b1f1573b895ead5763166ba77346fa86ecb9449ac31144c6786475fa1c2e1e5f">
+
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+    <link rel="canonical" href="https://canslab1.github.io/software.html">
+    <link rel="alternate" hreflang="zh-TW" href="https://canslab1.github.io/software.html">
+    <link rel="alternate" hreflang="en" href="https://canslab1.github.io/software.html">
+    <link rel="alternate" hreflang="x-default" href="https://canslab1.github.io/software.html">
+
+    <meta property="og:title" content="研究軟體 Research Software | 黃崇源教授 CANS Lab">
+    <meta property="og:description" content="CANS 實驗室開發的開源研究軟體：EpiRank、HETA、HATA、BCAT、SRAC-Agent、AED2。MIT 授權，公開於 GitHub。">
+    <meta property="og:image" content="https://canslab1.github.io/images/CANS.png">
+    <meta property="og:url" content="https://canslab1.github.io/software.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="黃崇源教授個人網站">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="研究軟體 Research Software | 黃崇源教授 CANS Lab">
+    <meta name="twitter:description" content="CANS 實驗室開發的開源研究軟體與工具，所有程式碼以 MIT 授權公開於 GitHub。">
+    <meta name="twitter:image" content="https://canslab1.github.io/images/CANS.png">
+
+    <title>研究軟體 Research Software | 黃崇源教授 CANS Lab · 長庚大學資工系</title>
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="XXjnJNtZV6bAICAw3Uqc6A" async></script>
+    <link rel="icon" href="https://canslab1.github.io/images/csie.png" type="image/png">
+
+    <link rel="dns-prefetch" href="https://scholar.google.com">
+    <link rel="dns-prefetch" href="https://www.clarity.ms">
+    <link rel="dns-prefetch" href="https://analytics.ahrefs.com">
+
+    <link rel="stylesheet" href="shared.css">
+    <style>
+        .software-list { list-style: none; padding: 0; margin: 2rem 0; }
+        .software-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .software-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+        .software-card h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.4rem;
+        }
+        .software-card h3 a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        .software-card h3 a:hover { text-decoration: underline; }
+        .software-desc { color: #444; line-height: 1.7; margin: 0.5rem 0; }
+        .software-tags { margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+        .software-tag {
+            display: inline-block;
+            background: #e8f0fe;
+            color: #1a73e8;
+            font-size: 0.8rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+        }
+        .software-meta {
+            margin-top: 0.75rem;
+            font-size: 0.85rem;
+            color: #888;
+        }
+        .software-meta a { color: #1a73e8; text-decoration: none; }
+        .software-meta a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body class="software-page">
+    <button class="language-toggle">English</button>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="https://canslab1.github.io/images/CANS.png" alt="CANS Lab，複雜適應性網絡與系統實驗室，長庚大學資訊工程學系" class="profile-photo">
+                <div class="header-text">
+                    <h1><span class="zh">研究軟體與工具</span><span class="en">Research Software &amp; Tools</span></h1>
+                    <div class="subheadline"><span class="zh">CANS 實驗室 · 黃崇源教授</span><span class="en">CANS Lab · Prof. Chung-Yuan Huang</span></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav id="main-nav"></nav>
+
+    <main>
+        <div class="container">
+            <section id="overview" class="section active" role="region" aria-labelledby="section-software-title">
+                <h2 id="section-software-title">
+                    <span class="zh">開源研究程式</span>
+                    <span class="en">Open-Source Research Software</span>
+                </h2>
+                <p class="software-desc">
+                    <span class="zh">以下為黃崇源教授及 CANS 實驗室團隊所開發的研究軟體與工具，所有程式碼皆以 MIT 授權公開於 GitHub，歡迎學術研究與教學使用。</span>
+                    <span class="en">The following research software and tools were developed by Prof. Chung-Yuan Huang and the CANS Lab team. All source code is released under the MIT License on GitHub for academic research and educational use.</span>
+                </p>
+
+                <ul class="software-list">
+
+                    <li class="software-card">
+                        <h3><a href="https://github.com/canslab1/EpiRank" target="_blank" rel="noopener noreferrer">EpiRank</a></h3>
+                        <p class="software-desc">
+                            <span class="zh">基於非對稱通勤網絡的疫情風險分析桌面應用程式。借鏡 Google PageRank 的哲學，EpiRank 同時模擬通勤的去程與回程方向，僅需單一通勤 OD 矩陣即可預測流感、腸病毒、SARS 三種疾病在臺灣 353 個鄉鎮的空間風險分布。</span>
+                            <span class="en">A desktop application for epidemic risk analysis across Taiwan's 353 townships based on asymmetric commuting networks. Inspired by Google's PageRank, EpiRank simultaneously models forward and return commuting trips to predict the spatial risk distribution of Influenza, Enterovirus, and SARS using a single commuting OD matrix.</span>
+                        </p>
+                        <div class="software-tags">
+                            <span class="software-tag">Epidemic Simulation</span>
+                            <span class="software-tag">PageRank</span>
+                            <span class="software-tag">Commuting Network</span>
+                            <span class="software-tag">Python</span>
+                            <span class="software-tag">GUI</span>
+                        </div>
+                        <div class="software-meta"><a href="https://github.com/canslab1/EpiRank" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License</div>
+                    </li>
+
+                    <li class="software-card">
+                        <h3><a href="https://github.com/canslab1/HETA" target="_blank" rel="noopener noreferrer">HETA — Hierarchical Edge Type Analysis</a></h3>
+                        <p class="software-desc">
+                            <span class="zh">無參數的複雜網絡邊分類工具。HETA 純粹依據網絡拓撲結構，將每條邊分類為 BOND、SINK、LOCAL BRIDGE 或 GLOBAL BRIDGE 四種類型，無需預先定義社群標籤或邊權重。支援 PySide6 圖形介面與命令列雙模式。</span>
+                            <span class="en">A parameter-free tool for classifying every edge in a complex network into one of four structural types (BOND, SINK, LOCAL BRIDGE, GLOBAL BRIDGE) driven entirely by network topology, without requiring pre-defined community labels or edge weights. Offers both a PySide6 GUI and a full-featured CLI.</span>
+                        </p>
+                        <div class="software-tags">
+                            <span class="software-tag">Network Analysis</span>
+                            <span class="software-tag">Edge Classification</span>
+                            <span class="software-tag">Complex Networks</span>
+                            <span class="software-tag">Python</span>
+                            <span class="software-tag">GUI + CLI</span>
+                        </div>
+                        <div class="software-meta"><a href="https://github.com/canslab1/HETA" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License</div>
+                    </li>
+
+                    <li class="software-card">
+                        <h3><a href="https://github.com/canslab1/HATA" target="_blank" rel="noopener noreferrer">HATA — Hierarchical Arc Type Analysis</a></h3>
+                        <p class="software-desc">
+                            <span class="zh">有向網絡弧分類工具。HATA 將 HETA 框架擴展至有向圖，以方向性自我網絡取代「共同朋友」概念，將每條有向弧分類為 BOND、Silk、Local Bridge 或 Global Bridge。</span>
+                            <span class="en">A tool for classifying directed arcs in complex networks into four hierarchical types (BOND, Silk, Local Bridge, Global Bridge). HATA extends the HETA framework to directed networks by replacing the "common friends" concept with directional ego networks.</span>
+                        </p>
+                        <div class="software-tags">
+                            <span class="software-tag">Directed Networks</span>
+                            <span class="software-tag">Arc Classification</span>
+                            <span class="software-tag">Complex Networks</span>
+                            <span class="software-tag">Python</span>
+                        </div>
+                        <div class="software-meta"><a href="https://github.com/canslab1/HATA" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License</div>
+                    </li>
+
+                    <li class="software-card">
+                        <h3><a href="https://github.com/canslab1/BCAT" target="_blank" rel="noopener noreferrer">BCAT — Bounded Confidence and Adoption Threshold Model</a></h3>
+                        <p class="software-desc">
+                            <span class="zh">結合有界信心意見動態與採用門檻創新擴散的混合模擬模型，用於探索「最佳遊戲卻無人問津」現象。支援正規格子、小世界網絡、隨機網絡及無標度網絡四種拓撲。提供 Python 3 與 NetLogo 4.0.5 兩種實作。</span>
+                            <span class="en">A mixed opinion dynamics and innovation diffusion simulation model for exploring the "best game no one played" phenomenon. Supports Regular Lattice, Small-World, Random, and Scale-Free network topologies. Implementations available in Python 3 (with Tkinter GUI) and NetLogo 4.0.5.</span>
+                        </p>
+                        <div class="software-tags">
+                            <span class="software-tag">Opinion Dynamics</span>
+                            <span class="software-tag">Innovation Diffusion</span>
+                            <span class="software-tag">Agent-Based Model</span>
+                            <span class="software-tag">Python</span>
+                            <span class="software-tag">NetLogo</span>
+                        </div>
+                        <div class="software-meta"><a href="https://github.com/canslab1/BCAT" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License</div>
+                    </li>
+
+                    <li class="software-card">
+                        <h3><a href="https://github.com/canslab1/SRAC-Agent" target="_blank" rel="noopener noreferrer">SRAC-Agent</a></h3>
+                        <p class="software-desc">
+                            <span class="zh">演化空間囚徒困境賽局中自我聲譽感知機制的模擬器。研究代理人如何評估自身適應度與聲譽並據此調整策略。支援 50×50 格網上 2,500 個代理人的即時視覺化模擬，提供 GUI 與 CLI 雙模式及批次實驗功能。</span>
+                            <span class="en">A Python 3 simulator for studying the influence of self-reputation awareness on agent behavior in evolutionary spatial Iterated Prisoner's Dilemma (IPD) games. Simulates 2,500 agents on a 50×50 grid with real-time visualization, supporting both GUI and CLI modes with batch experiment capabilities.</span>
+                        </p>
+                        <div class="software-tags">
+                            <span class="software-tag">Game Theory</span>
+                            <span class="software-tag">Prisoner's Dilemma</span>
+                            <span class="software-tag">Evolutionary Computation</span>
+                            <span class="software-tag">Agent-Based Model</span>
+                            <span class="software-tag">Python</span>
+                        </div>
+                        <div class="software-meta"><a href="https://github.com/canslab1/SRAC-Agent" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License</div>
+                    </li>
+
+                    <li class="software-card">
+                        <h3><a href="https://github.com/canslab1/AED2" target="_blank" rel="noopener noreferrer">AED2 — AED Placement Optimization</a></h3>
+                        <p class="software-desc">
+                            <span class="zh">使用基因演算法最佳化自動體外心臟電擊去顫器（AED）的配置地點。基於臺北市 2010 年院外心跳停止（OHCA）案例資料，在超商網絡中找出最佳 AED 部署位置，以最大化 OHCA 存活率並提升成本效益。</span>
+                            <span class="en">A genetic algorithm for optimizing Automated External Defibrillator (AED) placement at convenience stores to maximize Out-of-Hospital Cardiac Arrest (OHCA) survival rates. Uses Taipei 2010 EMS data to identify optimal deployment locations with improved cost-effectiveness.</span>
+                        </p>
+                        <div class="software-tags">
+                            <span class="software-tag">Genetic Algorithm</span>
+                            <span class="software-tag">AED Placement</span>
+                            <span class="software-tag">Public Health</span>
+                            <span class="software-tag">Optimization</span>
+                        </div>
+                        <div class="software-meta"><a href="https://github.com/canslab1/AED2" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License</div>
+                    </li>
+
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer id="main-footer" class="site-footer"></footer>
+
+    <script src="shared.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => initShared('software'));</script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "CollectionPage",
+                "name": "Research Software & Tools — CANS Lab",
+                "alternateName": "研究軟體與工具 — CANS 實驗室",
+                "url": "https://canslab1.github.io/software.html",
+                "description": "Open-source research software developed by Prof. Chung-Yuan Huang and the CANS Lab at Chang Gung University.",
+                "author": {
+                    "@type": "Person",
+                    "@id": "https://canslab1.github.io/#person",
+                    "name": "Chung-Yuan Huang",
+                    "alternateName": "黃崇源"
+                },
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "url": "https://canslab1.github.io/"
+                }
+            },
+            {
+                "@type": "SoftwareSourceCode",
+                "name": "EpiRank",
+                "description": "A desktop application implementing the EpiRank algorithm for epidemic risk analysis across Taiwan's 353 townships based on asymmetric commuting networks.",
+                "codeRepository": "https://github.com/canslab1/EpiRank",
+                "programmingLanguage": "Python",
+                "license": "https://opensource.org/licenses/MIT",
+                "author": { "@type": "Person", "@id": "https://canslab1.github.io/#person" },
+                "keywords": ["epidemic simulation", "PageRank", "commuting network", "public health", "Taiwan"]
+            },
+            {
+                "@type": "SoftwareSourceCode",
+                "name": "HETA",
+                "alternateName": "Hierarchical Edge Type Analysis",
+                "description": "A topology-driven tool for classifying every edge in a complex network into one of four structural types, without requiring any pre-defined community labels or edge weights.",
+                "codeRepository": "https://github.com/canslab1/HETA",
+                "programmingLanguage": "Python",
+                "license": "https://opensource.org/licenses/MIT",
+                "author": { "@type": "Person", "@id": "https://canslab1.github.io/#person" },
+                "keywords": ["complex networks", "edge classification", "network analysis", "community detection"]
+            },
+            {
+                "@type": "SoftwareSourceCode",
+                "name": "HATA",
+                "alternateName": "Hierarchical Arc Type Analysis",
+                "description": "A tool for classifying directed arcs in complex networks into four hierarchical types: BOND, Silk, Local Bridge, and Global Bridge.",
+                "codeRepository": "https://github.com/canslab1/HATA",
+                "programmingLanguage": "Python",
+                "license": "https://opensource.org/licenses/MIT",
+                "author": { "@type": "Person", "@id": "https://canslab1.github.io/#person" },
+                "keywords": ["directed networks", "arc classification", "complex networks", "graph theory"]
+            },
+            {
+                "@type": "SoftwareSourceCode",
+                "name": "BCAT",
+                "alternateName": "Bounded Confidence and Adoption Threshold Model",
+                "description": "A mixed opinion dynamics and innovation diffusion simulation model for exploring the 'best game no one played' phenomenon.",
+                "codeRepository": "https://github.com/canslab1/BCAT",
+                "programmingLanguage": ["Python", "NetLogo"],
+                "license": "https://opensource.org/licenses/MIT",
+                "author": { "@type": "Person", "@id": "https://canslab1.github.io/#person" },
+                "keywords": ["opinion dynamics", "innovation diffusion", "agent-based model", "social network"]
+            },
+            {
+                "@type": "SoftwareSourceCode",
+                "name": "SRAC-Agent",
+                "description": "A Python 3 simulator for studying the influence of self-reputation awareness on agent behavior in evolutionary spatial Iterated Prisoner's Dilemma games.",
+                "codeRepository": "https://github.com/canslab1/SRAC-Agent",
+                "programmingLanguage": "Python",
+                "license": "https://opensource.org/licenses/MIT",
+                "author": { "@type": "Person", "@id": "https://canslab1.github.io/#person" },
+                "keywords": ["game theory", "prisoner's dilemma", "evolutionary computation", "agent-based model", "reputation system"]
+            },
+            {
+                "@type": "SoftwareSourceCode",
+                "name": "AED2",
+                "alternateName": "AED Placement Optimization",
+                "description": "A genetic algorithm for optimizing AED placement at convenience stores to maximize OHCA survival rates, using Taipei 2010 EMS data.",
+                "codeRepository": "https://github.com/canslab1/AED2",
+                "programmingLanguage": "Python",
+                "license": "https://opensource.org/licenses/MIT",
+                "author": { "@type": "Person", "@id": "https://canslab1.github.io/#person" },
+                "keywords": ["genetic algorithm", "AED placement", "OHCA", "public health", "optimization"]
+            }
+        ]
+    }
+    </script>
+</body>
+</html>
