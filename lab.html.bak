@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-TW" itemscope itemtype="https://schema.org/WebPage">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="長庚大學資訊工程學系黃崇源教授主持的實驗室專屬網頁，詳載研究團隊在複雜網絡、演化計算及系統模擬方面的最新成果與正在進行的研究計畫，並介紹核心成員、已發表期刊論文和指導學生專題。頁面提供教授完整履歷與自傳，以及實驗室招募訊息和開放教材，歡迎有志於跨領域研究與創新應用的學生或合作夥伴聯繫交流，期待共創前瞻科技。">
+    <meta name="keywords" content="黃崇源, 長庚大學, 資訊工程, 複雜網絡, 系統科學, 演化演算法, 計算社會科學, 教學研究, CY Huang, Chung-Yuan Huang, GSCOTT, 論文, 學術履歷">
+
+    <meta name="author" content="Prof. Chung-Yuan Huang (黃崇源教授)">
+    <meta name="ahrefs-site-verification" content="b1f1573b895ead5763166ba77346fa86ecb9449ac31144c6786475fa1c2e1e5f">
+
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+    <link rel="canonical" href="https://canslab1.github.io/lab.html">
+    <link rel="alternate" hreflang="zh-TW" href="https://canslab1.github.io/lab.html">
+    <link rel="alternate" hreflang="en" href="https://canslab1.github.io/lab.html">
+    <link rel="alternate" hreflang="x-default" href="https://canslab1.github.io/lab.html">
+
+    <meta property="og:title" content="CANS Lab 複雜適應性網絡與系統實驗室 | 黃崇源教授">
+    <meta property="og:description" content="長庚大學黃崇源教授主持的 CANS 實驗室，研究複雜網絡、演化計算及系統模擬，歡迎學生與合作夥伴聯繫交流。">
+    <meta property="og:image" content="https://canslab1.github.io/images/CANS.png">
+    <meta property="og:url" content="https://canslab1.github.io/lab.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="黃崇源教授個人網站">
+    <meta property="og:locale" content="zh_TW">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CANS Lab 複雜適應性網絡與系統實驗室 | 黃崇源教授">
+    <meta name="twitter:description" content="長庚大學黃崇源教授主持的 CANS 實驗室，專攻複雜網絡、演化計算及系統模擬。">
+    <meta name="twitter:image" content="https://canslab1.github.io/images/CANS.png">
+
+    <title>CANS Lab 複雜適應性網絡與系統實驗室 | 黃崇源教授 · 長庚大學資工系</title>
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="XXjnJNtZV6bAICAw3Uqc6A" async></script>
+    <link rel="icon" href="https://canslab1.github.io/images/csie.png" type="image/png">
+    <link rel="preload" as="image" href="https://canslab1.github.io/images/CANS.png">
+
+    <link rel="dns-prefetch" href="https://scholar.google.com">
+    <link rel="dns-prefetch" href="https://www.clarity.ms">
+    <link rel="dns-prefetch" href="https://analytics.ahrefs.com">
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+
+    <link rel="stylesheet" href="shared.css">
+</head>
+<body class="lab-page">
+    <button class="language-toggle">English</button>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="https://canslab1.github.io/images/CANS.png" alt="CANS Lab，複雜適應性網絡與系統實驗室，長庚大學資訊工程學系" class="profile-photo">
+                <div class="header-text">
+                    <h1><span class="zh">複雜適應性網絡與系統實驗室</span><span class="en">Complex Adaptive Networks and Systems Lab</span></h1>
+                    <div class="subheadline"><span class="zh">主持人 黃崇源教授</span><span class="en">Prof. Chung-Yuan Huang</span></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav id="main-nav"></nav>
+
+    <main>
+        <div class="container">
+            <section id="overview" class="section active" role="region" aria-labelledby="section-overview-title">
+                <h2 id="section-overview-title"><span class="zh">學術表現及成就</span><span class="en">Academic Performance and Achievements</span></h2>
+
+                <div class="stats-grid" id="stats-container"></div>
+
+                <h2><span class="zh">社會責任與肯定</span><span class="en">Social Commitment and Public Recognition</span></h2>
+
+                <ul id="honors-list" class="honors-list"></ul>
+
+                <div id="honors-article"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer id="main-footer" class="site-footer"></footer>
+
+    <script src="shared.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => initShared('lab'));</script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "ResearchOrganization",
+                "name": "Complex Adaptive Networks and Systems Laboratory",
+                "alternateName": ["CANS Lab", "複雜適應性網絡與系統實驗室"],
+                "url": "https://canslab1.github.io/lab.html",
+                "image": "https://canslab1.github.io/images/CANS.png",
+                "parentOrganization": {
+                    "@type": "CollegeOrUniversity",
+                    "name": "Chang Gung University",
+                    "alternateName": "長庚大學",
+                    "url": "https://www.cgu.edu.tw/"
+                },
+                "member": {
+                    "@type": "Person",
+                    "@id": "https://canslab1.github.io/#person",
+                    "name": "Chung-Yuan Huang",
+                    "alternateName": "黃崇源",
+                    "jobTitle": "Professor and Principal Investigator"
+                },
+                "knowsAbout": [
+                    "Complex Adaptive Systems",
+                    "Network Science",
+                    "Evolutionary Computation",
+                    "Computational Social Science",
+                    "Agent-Based Modeling",
+                    "Epidemic Simulation"
+                ]
+            },
+            {
+                "@type": "Person",
+                "@id": "https://canslab1.github.io/#person",
+                "name": "Chung-Yuan Huang",
+                "alternateName": "黃崇源",
+                "jobTitle": "Professor",
+                "url": "https://canslab1.github.io/",
+                "image": "https://canslab1.github.io/images/CANS.png",
+                "sameAs": [
+                    "https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en",
+                    "https://orcid.org/0000-0002-8680-6755",
+                    "https://www.facebook.com/gscott.huang/",
+                    "https://sites.google.com/view/gscott-huang"
+                ]
+            }
+        ]
+    }
+    </script>
+</body>
+</html>
