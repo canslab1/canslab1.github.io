@@ -60,13 +60,16 @@
 | 檔案 | 頁面 | 說明 |
 |------|------|------|
 | `index.html` | 首頁 | 學術表現、社會責任與榮譽、杏壇芬芳獎推薦文 |
-| `lab.html` | 實驗室 | CANS Lab 介紹、研究方向 |
+| `lab.html` | 實驗室 | CANS Lab 介紹、獲獎與榮譽、專業經歷 |
+| `software.html` | 研究軟體 | 開源研究軟體與工具（EpiRank、HETA、HATA、BCAT、SRAC-Agent、AED2） |
 | `stories.html` | 家族故事 | 個人家族故事集 |
 | `CYHuang.html` | 重導向 | 自動導向 `index.html` |
 | `404.html` | 錯誤頁 | 自訂 404 頁面 |
 | `CV.pdf` | 履歷 | 完整學術履歷（PDF） |
-| `shared.css` | 共用樣式 | 兩頁面共用的 CSS 樣式表 |
+| `shared.css` | 共用樣式 | 各頁面共用的 CSS 樣式表 |
 | `shared.js` | 共用腳本 | 資料陣列、渲染函式、語言切換、導覽列/Footer |
+| `stories.css` | 故事樣式 | 家族故事頁面專屬 CSS |
+| `stories.js` | 故事腳本 | 家族故事頁面專屬 JS |
 
 ## 首頁（index.html）內容區段
 
@@ -156,15 +159,20 @@
 ### 檔案結構
 ```
 canslab1.github.io/
-├── index.html          # 首頁（~233 行）
-├── lab.html            # 實驗室頁面（~198 行）
-├── shared.css          # 共用 CSS 樣式（~414 行）
-├── shared.js           # 共用 JS 資料與函式（~321 行）
+├── index.html          # 首頁
+├── lab.html            # 實驗室頁面
+├── software.html       # 研究軟體頁面
 ├── stories.html        # 家族故事
+├── stories.css         # 故事頁面專屬 CSS
+├── stories.js          # 故事頁面專屬 JS
+├── shared.css          # 共用 CSS 樣式
+├── shared.js           # 共用 JS 資料與函式
 ├── 404.html            # 自訂錯誤頁
 ├── CYHuang.html        # 重導向頁
 ├── CV.pdf              # 學術履歷
 ├── README.md           # 本文件
+├── LICENSE             # MIT 授權條款
+├── .gitignore          # Git 忽略規則
 ├── robots.txt          # 爬蟲規則
 ├── sitemap.xml         # 網站地圖
 ├── llms.txt            # LLM 搜尋摘要
@@ -180,7 +188,14 @@ canslab1.github.io/
     ├── cute.jpg        # 中國科技大學 logo
     ├── laosong.png     # 老松國小 logo
     ├── favicon.ico     # 杏壇芬芳錄 logo
-    └── honors1–4.png   # 杏壇芬芳獎照片
+    ├── honors1–4.png   # 杏壇芬芳獎照片
+    └── software/       # 研究軟體截圖與論文縮圖
+        ├── epirank-*.png   # EpiRank 相關圖片
+        ├── heta-*.png      # HETA 相關圖片
+        ├── hata-*.png      # HATA 相關圖片
+        ├── bcat-*.png      # BCAT 相關圖片
+        ├── srac-*.png      # SRAC-Agent 相關圖片
+        └── aed2-*.png      # AED2 相關圖片
 ```
 
 ### 共用檔案說明
@@ -226,6 +241,21 @@ canslab1.github.io/
 3. 底部呼叫 `initShared('新頁面名稱')` 初始化
 4. 如需特殊樣式，在 HTML 中用 `<style>` 加入頁面專屬 CSS
 5. 更新 `sitemap.xml` 加入新頁面
+
+## 研究軟體頁面（software.html）
+
+展示 CANS 實驗室開發的六套開源研究軟體，每套皆附論文縮圖、應用截圖與 GitHub 連結。所有程式碼以 MIT 授權公開。
+
+| 軟體 | 說明 | 語言 | GitHub |
+|------|------|------|--------|
+| **EpiRank** | 基於非對稱通勤網絡的疫情風險分析 | Python | [canslab1/EpiRank](https://github.com/canslab1/EpiRank) |
+| **HETA** | 無參數複雜網絡邊分類（BOND / SINK / LOCAL BRIDGE / GLOBAL BRIDGE） | Python | [canslab1/HETA](https://github.com/canslab1/HETA) |
+| **HATA** | 有向網絡弧分類工具，將 HETA 擴展至有向圖 | Python | [canslab1/HATA](https://github.com/canslab1/HATA) |
+| **BCAT** | 有界信心意見動態與採用門檻創新擴散混合模擬模型 | Python / NetLogo | [canslab1/BCAT](https://github.com/canslab1/BCAT) |
+| **SRAC-Agent** | 演化空間囚徒困境賽局中自我聲譽感知機制模擬器 | Python | [canslab1/SRAC-Agent](https://github.com/canslab1/SRAC-Agent) |
+| **AED2** | 使用基因演算法最佳化 AED 配置地點 | C++ / Python | [canslab1/AED2](https://github.com/canslab1/AED2) |
+
+> **維護提示**：軟體項目更新請直接修改 `software.html`，每張卡片包含中英文描述、標籤、截圖畫廊、論文引用及 GitHub 連結。
 
 ## SEO 設定
 
@@ -279,6 +309,7 @@ canslab1.github.io/
 |------|--------|----------|
 | `/` 和 `/index.html` | 1.0 | weekly |
 | `/lab.html` | 0.9 | weekly |
+| `/software.html` | 0.9 | monthly |
 | `/stories.html` | 0.8 | monthly |
 | `/CV.pdf` | 0.7 | monthly |
 | `/llms.txt` | 0.6 | monthly |
@@ -295,6 +326,11 @@ canslab1.github.io/
 | Wiki | https://sites.google.com/view/gscott-huang |
 | NSTC 學術研究 | https://arspb.nstc.gov.tw/（查詢黃崇源） |
 | EpiRank（GitHub） | https://github.com/canslab1/EpiRank |
+| HETA（GitHub） | https://github.com/canslab1/HETA |
+| HATA（GitHub） | https://github.com/canslab1/HATA |
+| BCAT（GitHub） | https://github.com/canslab1/BCAT |
+| SRAC-Agent（GitHub） | https://github.com/canslab1/SRAC-Agent |
+| AED2（GitHub） | https://github.com/canslab1/AED2 |
 
 ## 常見維護操作
 
@@ -304,6 +340,7 @@ canslab1.github.io/
 | 新增榮譽獎項 | `shared.js` → `honorsZh[]` / `honorsEn[]` |
 | 修改導覽列連結 | `shared.js` → `navItemsZh[]` / `navItemsEn[]` |
 | 新增 Footer logo | `shared.js` → `footerLinks[]` |
+| 新增/修改研究軟體 | `software.html` 中對應的 `.software-card` 區塊 |
 | 更新履歷 | 替換 `CV.pdf` 檔案 |
 | 修改頁面樣式 | `shared.css`（共用）或頁面內 `<style>`（專屬） |
 | 更新 SEO 資訊 | `index.html` `<head>` 的 meta 標籤和 JSON-LD |

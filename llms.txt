@@ -71,5 +71,20 @@ Prof. Chung-Yuan Huang (黃崇源) is a full professor in the Department of Comp
 - Facebook: https://www.facebook.com/gscott.huang/
 - Wiki: https://sites.google.com/view/gscott-huang
 - Chang Gung University PURE: https://pure.lib.cgu.edu.tw/zh/persons/chung-yuan-huang-2
+- Research Software (研究軟體): https://canslab1.github.io/software.html
 - Family Stories (家族故事): https://canslab1.github.io/stories.html
 - EpiRank on GitHub: https://github.com/canslab1/EpiRank
+- HETA on GitHub: https://github.com/canslab1/HETA
+- HATA on GitHub: https://github.com/canslab1/HATA
+- BCAT on GitHub: https://github.com/canslab1/BCAT
+- SRAC-Agent on GitHub: https://github.com/canslab1/SRAC-Agent
+- AED2 on GitHub: https://github.com/canslab1/AED2
+
+## Open-Source Research Software
+
+- EpiRank: Epidemic risk analysis using asymmetric commuting networks (Python, Scientific Reports 2019)
+- HETA: Parameter-free edge classification for complex networks (Python, Physica A 2019)
+- HATA: Directed arc classification extending HETA to directed graphs (Python, IEEE Access 2020)
+- BCAT: Bounded confidence and adoption threshold model for opinion dynamics (Python/NetLogo, IEEE Access 2022)
+- SRAC-Agent: Self-reputation awareness in evolutionary spatial Prisoner's Dilemma (Python, PLOS ONE 2014)
+- AED2: Genetic algorithm for optimizing AED placement (C++/Python, Applied Geography 2012)
