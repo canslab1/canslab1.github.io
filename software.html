@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="黃崇源教授及 CANS 實驗室開發的開源研究軟體與工具：EpiRank 疫情風險分析、HETA/HATA 網絡邊分類、BCAT 意見動態模擬、SRAC-Agent 演化賽局模擬、AED2 最佳化 AED 配置。所有程式碼皆以 MIT 授權公開於 GitHub。">
-    <meta name="keywords" content="黃崇源, CANS Lab, 開源軟體, 研究工具, EpiRank, HETA, HATA, BCAT, SRAC-Agent, AED, complex networks, epidemic simulation, network analysis, agent-based model, evolutionary computation, open source, GitHub">
+    <meta name="description" content="黃崇源教授及 CANS 實驗室開發的開源研究軟體與工具：EpiRank 疫情風險分析、CASMIM SARS 疫情模擬、HETA/HATA 網絡邊分類、BCAT 意見動態模擬、SRAC-Agent 演化賽局模擬、AED2 最佳化 AED 配置。所有程式碼皆以 MIT 授權公開於 GitHub。">
+    <meta name="keywords" content="黃崇源, CANS Lab, 開源軟體, 研究工具, EpiRank, CASMIM, SARS, HETA, HATA, BCAT, SRAC-Agent, AED, complex networks, epidemic simulation, network analysis, agent-based model, evolutionary computation, open source, GitHub">
 
     <meta name="author" content="Prof. Chung-Yuan Huang (黃崇源教授)">
     <meta name="ahrefs-site-verification" content="b1f1573b895ead5763166ba77346fa86ecb9449ac31144c6786475fa1c2e1e5f">
@@ -18,7 +18,7 @@
     <link rel="alternate" hreflang="x-default" href="https://canslab1.github.io/software.html">
 
     <meta property="og:title" content="研究軟體 Research Software | 黃崇源教授 CANS Lab">
-    <meta property="og:description" content="CANS 實驗室開發的開源研究軟體：EpiRank、HETA、HATA、BCAT、SRAC-Agent、AED2。MIT 授權，公開於 GitHub。">
+    <meta property="og:description" content="CANS 實驗室開發的開源研究軟體：EpiRank、CASMIM、HETA、HATA、BCAT、SRAC-Agent、AED2。MIT 授權，公開於 GitHub。">
     <meta property="og:image" content="https://canslab1.github.io/images/CANS.png">
     <meta property="og:url" content="https://canslab1.github.io/software.html">
     <meta property="og:type" content="website">
@@ -28,7 +28,7 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="研究軟體 Research Software | 黃崇源教授 CANS Lab">
-    <meta name="twitter:description" content="CANS 實驗室開發的開源研究軟體與工具，所有程式碼以 MIT 授權公開於 GitHub。">
+    <meta name="twitter:description" content="CANS 實驗室開發的開源研究軟體與工具（EpiRank、CASMIM、HETA、HATA、BCAT、SRAC-Agent、AED2），所有程式碼以 MIT 授權公開於 GitHub。">
     <meta name="twitter:image" content="https://canslab1.github.io/images/CANS.png">
 
     <title>研究軟體 Research Software | 黃崇源教授 CANS Lab · 長庚大學資工系</title>
@@ -183,6 +183,34 @@
                             <a href="https://doi.org/10.1038/s41598-019-41719-8" target="_blank" rel="noopener noreferrer">doi:10.1038/s41598-019-41719-8</a>
                         </div>
                         <div class="software-meta"><a href="https://github.com/canslab1/EpiRank" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License</div>
+                    </li>
+
+                    <li class="software-card">
+                        <h3><a href="https://github.com/canslab1/CASMIM" target="_blank" rel="noopener noreferrer">CASMIM — SARS Epidemic Simulation</a></h3>
+                        <p class="software-desc">
+                            <span class="zh">結合細胞自動機與社會鏡像身份機制的 SARS 疫情模擬模型。每個人在 500×500 環面格網上擁有多個「社會分身」，代表其在不同社交場域（家庭、工作場所、醫院等）的存在。模型使用 SEIR+D 分室架構，搭配 8 項可動態啟停的公共衛生政策、BFS 接觸者追蹤、超級傳播者建模及年齡分層死亡率，可模擬新加坡、臺北和多倫多的 SARS 疫情情境。</span>
+                            <span class="en">A small-world epidemiological simulation model combining cellular automata with a "social mirror identity" mechanism for SARS transmission dynamics. Each person owns multiple agents scattered across a 500×500 torus lattice, representing their presence in different social spheres. Uses an SEIR+D compartmental framework with 8 dynamically toggleable public health policies, BFS-based contact tracing, super-spreader modeling, and age-stratified mortality.</span>
+                        </p>
+                        <div class="software-tags">
+                            <span class="software-tag">Epidemic Simulation</span>
+                            <span class="software-tag">SARS</span>
+                            <span class="software-tag">Cellular Automata</span>
+                            <span class="software-tag">SEIR Model</span>
+                            <span class="software-tag">Agent-Based Model</span>
+                            <span class="software-tag">Python</span>
+                            <span class="software-tag">GUI</span>
+                        </div>
+                        <div class="software-ref">
+                            <span class="zh">論文：</span><span class="en">Paper: </span>
+                            Huang, C.-Y., Sun, C.-T., Hsieh, J.-L., Chen, Y.-M. A., &amp; Lin, H. (2005). A Novel Small-World Model: Using Social Mirror Identities for Epidemic Simulations. <em>SIMULATION</em>, 81(10), 671–699.
+                            <a href="https://doi.org/10.1177/0037549705061519" target="_blank" rel="noopener noreferrer">doi:10.1177/0037549705061519</a>
+                        </div>
+                        <div class="software-ref">
+                            <span class="zh">論文：</span><span class="en">Paper: </span>
+                            Huang, C.-Y., Sun, C.-T., Hsieh, J.-L., &amp; Lin, H. (2004). Simulating SARS: Small-World Epidemiological Modeling and Public Health Policy Assessments. <em>Journal of Artificial Societies and Social Simulation</em>, 7(4), 2.
+                            <a href="http://jasss.soc.surrey.ac.uk/7/4/2.html" target="_blank" rel="noopener noreferrer">JASSS 7(4)</a>
+                        </div>
+                        <div class="software-meta"><a href="https://github.com/canslab1/CASMIM" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License</div>
                     </li>
 
                     <li class="software-card">
@@ -358,6 +386,17 @@
                 "license": "https://opensource.org/licenses/MIT",
                 "author": { "@type": "Person", "@id": "https://canslab1.github.io/#person" },
                 "keywords": ["epidemic simulation", "PageRank", "commuting network", "public health", "Taiwan"]
+            },
+            {
+                "@type": "SoftwareSourceCode",
+                "name": "CASMIM",
+                "alternateName": "Cellular Automata with Social Mirror Identities Model",
+                "description": "A small-world epidemiological simulation model combining cellular automata with social mirror identities to simulate SARS transmission dynamics and evaluate public health policy interventions.",
+                "codeRepository": "https://github.com/canslab1/CASMIM",
+                "programmingLanguage": "Python",
+                "license": "https://opensource.org/licenses/MIT",
+                "author": { "@type": "Person", "@id": "https://canslab1.github.io/#person" },
+                "keywords": ["SARS", "epidemic simulation", "cellular automata", "social mirror identity", "SEIR model", "agent-based model", "public health"]
             },
             {
                 "@type": "SoftwareSourceCode",
