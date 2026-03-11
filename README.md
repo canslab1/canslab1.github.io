@@ -59,17 +59,36 @@
 
 | 檔案 | 頁面 | 說明 |
 |------|------|------|
-| `index.html` | 首頁 | 學術表現、社會責任與榮譽、杏壇芬芳獎推薦文 |
-| `lab.html` | 實驗室 | CANS Lab 介紹、獲獎與榮譽、專業經歷 |
+| `index.html` | 首頁 | 社會責任與肯定、杏壇芬芳獎推薦文 |
+| `lab.html` | 實驗室 | CANS Lab 介紹、學術表現及成就（28 張數據卡片） |
 | `software.html` | 研究軟體 | 開源研究軟體與工具（EpiRank、HETA、HATA、BCAT、SRAC-Agent、AED2） |
 | `stories.html` | 家族故事 | 個人家族故事集 |
 | `CYHuang.html` | 重導向 | 自動導向 `index.html` |
 | `404.html` | 錯誤頁 | 自訂 404 頁面 |
 | `CV.pdf` | 履歷 | 完整學術履歷（PDF） |
 | `shared.css` | 共用樣式 | 各頁面共用的 CSS 樣式表 |
-| `shared.js` | 共用腳本 | 資料陣列、渲染函式、語言切換、導覽列/Footer |
+| `stats-data.js` | 卡片資料 | 28 張學術數據卡片的中英文資料（僅 lab.html 載入） |
+| `shared.js` | 共用腳本 | 渲染函式、語言切換、導覽列/Footer |
 | `stories.css` | 故事樣式 | 家族故事頁面專屬 CSS |
 | `stories.js` | 故事腳本 | 家族故事頁面專屬 JS |
+
+## 實驗室頁面（lab.html）內容區段
+
+### 學術表現及成就（28 張數據卡片）
+- 期刊論文：44 篇
+- 國際研討會：50 篇
+- 專書專章：10 篇
+- 國內研討會：19 篇
+- 文章及採訪：49 次
+- 計畫主持人：22 次（國科會預算 1,408 萬）
+- 共同主持人：14 次
+- Google Scholar：Citations 994、h-index 18、i10-index 30
+- 指導學生：專題生 51 人、碩士 25 人、博士 2 人
+- 學術服務：論文審稿 68 篇、會議審稿 27 次、議程委員 77 次、計劃審查 11 次、學術審查 10 次、專題演講 35 次
+- 教職年資：教授 10 年、副教授 5 年、助理教授 5 年、講師 5 年
+- 其他經歷：業界 11 年、合聘 4 單位、獨立董事 3 年、學生家長會 8 年
+
+> **維護提示**：數據更新請修改 `stats-data.js` 中的 `statsZh[]` 和 `statsEn[]` 陣列，不需異動 `lab.html` 或 `shared.js`。
 
 ## 首頁（index.html）內容區段
 
@@ -81,22 +100,6 @@
 ### 導覽列
 中文：介紹 | 實驗室 | 著作 | 計畫 | 履歷 | 維基 | 臉書 | 故事 | 相簿 | 評論 | 投書
 英文：About | Lab | Papers | Projects | CV | Wiki | FB | Stories | Photos | Press | Op-Eds
-
-### 學術表現及成就（數據卡片）
-- 期刊論文：43 篇
-- 國際研討會：49 篇
-- 專書專章：10 篇
-- 國內研討會：19 篇
-- 文章及採訪：49 次
-- 計畫主持人：22 次（國科會預算 1,408 萬）
-- 共同主持人：14 次
-- Google Scholar：Citations 970+、h-index 18、i10-index 30
-- 指導學生：專題生 51 人、碩士 25 人、博士 2 人
-- 學術服務：論文審稿 68 篇、會議審稿 27 次、議程委員 77 次、計劃審查 11 次、學術審查 10 次、專題演講 35 次
-- 教職年資：教授 10 年、副教授 5 年、助理教授 5 年、講師 5 年
-- 其他經歷：業界 11 年、合聘 4 單位、獨立董事 3 年、學生家長會 7 年
-
-> **維護提示**：數據更新請修改 `shared.js` 中的 `statsZh[]` 和 `statsEn[]` 陣列。
 
 ### 社會責任與肯定（榮譽列表）
 - 2024 中國科技大學傑出校友（校史唯一先後獲頒傑出與優秀校友）
@@ -166,7 +169,8 @@ canslab1.github.io/
 ├── stories.css         # 故事頁面專屬 CSS
 ├── stories.js          # 故事頁面專屬 JS
 ├── shared.css          # 共用 CSS 樣式
-├── shared.js           # 共用 JS 資料與函式
+├── shared.js           # 共用 JS 渲染函式
+├── stats-data.js       # 28 張學術數據卡片資料（僅 lab.html 載入）
 ├── 404.html            # 自訂錯誤頁
 ├── CYHuang.html        # 重導向頁
 ├── CV.pdf              # 學術履歷
@@ -208,13 +212,21 @@ canslab1.github.io/
 - 語言切換規則（`.zh` / `.en` class）
 - 響應式斷點：手機 ≤768px、平板 769–1024px
 
+#### `stats-data.js`
+28 張學術數據卡片的中英文資料，僅由 `lab.html` 載入：
+
+| 陣列 | 用途 | 更新時機 |
+|------|------|---------|
+| `statsZh[]` / `statsEn[]` | 學術數據卡片 | 論文/計畫數量變動時 |
+
+> **維護提示**：日後更新卡片數據只需修改此檔，不需異動 `lab.html` 或 `shared.js`。
+
 #### `shared.js`
-共用的 JavaScript 資料與函式：
+共用的 JavaScript 渲染函式與資料：
 
 **資料陣列（修改數據請改這裡）：**
 | 陣列 | 用途 | 更新時機 |
 |------|------|---------|
-| `statsZh[]` / `statsEn[]` | 學術數據卡片 | 論文/計畫數量變動時 |
 | `honorsZh[]` / `honorsEn[]` | 榮譽列表 | 獲得新獎項時 |
 | `navItemsZh[]` / `navItemsEn[]` | 導覽列項目 | 新增/修改頁面連結時 |
 | `footerLinks[]` | Footer logo 連結 | 新增合作單位時 |
@@ -336,7 +348,7 @@ canslab1.github.io/
 
 | 操作 | 修改位置 |
 |------|---------|
-| 更新學術數據（論文數、引用數等） | `shared.js` → `statsZh[]` / `statsEn[]` |
+| 更新學術數據（論文數、引用數等） | `stats-data.js` → `statsZh[]` / `statsEn[]` |
 | 新增榮譽獎項 | `shared.js` → `honorsZh[]` / `honorsEn[]` |
 | 修改導覽列連結 | `shared.js` → `navItemsZh[]` / `navItemsEn[]` |
 | 新增 Footer logo | `shared.js` → `footerLinks[]` |
