@@ -66,6 +66,7 @@
 | `CYHuang.html` | 重導向 | 自動導向 `index.html` |
 | `404.html` | 錯誤頁 | 自訂 404 頁面 |
 | `CV.pdf` | 履歷 | 完整學術履歷（PDF） |
+| `indexnow-submit.sh` | IndexNow 提交 | 批次通知搜尋引擎內容更新（Bing、Yandex、Naver） |
 | `shared.css` | 共用樣式 | 各頁面共用的 CSS 樣式表 |
 | `stats-data.js` | 卡片資料 | 28 張學術數據卡片的中英文資料（僅 lab.html 載入） |
 | `shared.js` | 共用腳本 | 渲染函式、語言切換、導覽列/Footer |
@@ -174,6 +175,8 @@ canslab1.github.io/
 ├── 404.html            # 自訂錯誤頁
 ├── CYHuang.html        # 重導向頁
 ├── CV.pdf              # 學術履歷
+├── indexnow-submit.sh  # IndexNow 批次提交腳本
+├── d22a81b3...52.txt   # IndexNow API key 驗證檔
 ├── README.md           # 本文件
 ├── LICENSE             # MIT 授權條款
 ├── .gitignore          # Git 忽略規則
@@ -301,6 +304,11 @@ canslab1.github.io/
 - `Bytespider`（ByteDance）
 - `CCBot`（Common Crawl）
 - `cohere-ai`（Cohere）
+- `Applebot-Extended`（Apple Intelligence）
+- `Meta-ExternalAgent`（Meta AI）
+- `Amazonbot`（Amazon）
+- `YouBot`（You.com）
+- `Baiduspider`（百度）
 
 ### 網域驗證檔
 | 檔案 | 用途 |
@@ -309,6 +317,39 @@ canslab1.github.io/
 | `BingSiteAuth.xml` | Bing Webmaster Tools 驗證 |
 | `ahrefs_b1f1573b...` | Ahrefs SEO 工具驗證 |
 | `openai-domain-verification=dv-...` | OpenAI 網域驗證 |
+| `d22a81b36ccb45e085fe6679a822df52.txt` | IndexNow API key 驗證 |
+
+## IndexNow 即時索引
+
+### 簡介
+IndexNow 是一個開放協議，可即時通知搜尋引擎（Bing、Yandex、Naver 等）網站內容已更新，加速索引收錄。
+
+### 設定檔案
+| 檔案 | 用途 |
+|------|------|
+| `d22a81b36ccb45e085fe6679a822df52.txt` | API key 驗證檔（放在根目錄供搜尋引擎驗證） |
+| `indexnow-submit.sh` | 批次提交腳本 |
+
+### 使用方式
+
+```bash
+# 提交所有頁面（預設 6 個主要頁面）
+./indexnow-submit.sh
+
+# 只提交特定頁面
+./indexnow-submit.sh https://canslab1.github.io/lab.html
+
+# 提交多個指定頁面
+./indexnow-submit.sh https://canslab1.github.io/lab.html https://canslab1.github.io/software.html
+```
+
+### 建議的工作流程
+每次 `git push` 後執行：
+```bash
+git push origin master && ./indexnow-submit.sh
+```
+
+> **注意**：IndexNow 每天提交次數有上限，一般使用不會超過。建議在內容有實質更新時再提交，避免頻繁提交相同頁面。
 
 ## 分析工具
 
@@ -358,4 +399,5 @@ canslab1.github.io/
 | 更新 SEO 資訊 | `index.html` `<head>` 的 meta 標籤和 JSON-LD |
 | 更新 LLM 摘要 | `llms.txt` |
 | 更新網站地圖 | `sitemap.xml` |
+| 通知搜尋引擎內容更新 | `./indexnow-submit.sh`（推送後執行） |
 | 更換 Clarity 追蹤碼 | `shared.js` 底部 Clarity 初始化區塊 |
