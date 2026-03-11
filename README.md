@@ -24,7 +24,7 @@ git clone https://github.com/canslab1/canslab1.github.io.git
 cd canslab1.github.io
 
 # 2. 啟動本機伺服器（任選一種）
-python3 -m http.server 8000          # Python
+python3 -m http.server 8000           # Python
 npx serve .                           # Node.js（需先安裝 Node.js）
 open index.html                       # 或直接用瀏覽器開啟（部分功能可能受限於 CORS）
 
