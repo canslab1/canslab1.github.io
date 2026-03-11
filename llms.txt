@@ -88,3 +88,11 @@ Prof. Chung-Yuan Huang (黃崇源) is a full professor in the Department of Comp
 - BCAT: Bounded confidence and adoption threshold model for opinion dynamics (Python/NetLogo, IEEE Access 2022)
 - SRAC-Agent: Self-reputation awareness in evolutionary spatial Prisoner's Dilemma (Python, PLOS ONE 2014)
 - AED2: Genetic algorithm for optimizing AED placement (C++/Python, Applied Geography 2012)
+
+## Site Structure
+
+- / (index.html): Homepage — social commitment, public recognition, honors, and the Taipei Honored Contributors to Education recommendation article
+- /lab.html: CANS Lab — 28 academic performance stat cards (publications, citations, h-index, projects, students, service, career)
+- /software.html: Research Software — 7 open-source tools (EpiRank, CASMIM, HETA, HATA, BCAT, SRAC-Agent, AED2) with paper references and GitHub links
+- /stories.html: Family Stories — 60 personal family stories spanning three generations in Taipei Wanhua
+- /CV.pdf: Full academic curriculum vitae (PDF)
