@@ -1,0 +1,78 @@
+# ──────────────────────────────────────────────
+#  IndexNow 自動提交 workflow
+#  觸發條件：
+#    1. 每次 push 到 master（內容更新後立即通知搜尋引擎）
+#    2. 每週一早上 9:00（台灣時間）定期提交
+#    3. 手動觸發（workflow_dispatch）
+# ──────────────────────────────────────────────
+name: IndexNow Submit
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - '*.html'
+      - '*.css'
+      - '*.js'
+      - '*.pdf'
+      - 'llms.txt'
+      - 'sitemap.xml'
+      - 'images/**'
+  schedule:
+    # 每週一 01:00 UTC = 台灣時間 09:00
+    - cron: '0 1 * * 1'
+  workflow_dispatch:
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit URLs to IndexNow
+        run: |
+          HOST="canslab1.github.io"
+          KEY="d22a81b36ccb45e085fe6679a822df52"
+
+          URLS=(
+            "https://${HOST}/"
+            "https://${HOST}/index.html"
+            "https://${HOST}/lab.html"
+            "https://${HOST}/software.html"
+            "https://${HOST}/stories.html"
+            "https://${HOST}/llms.txt"
+          )
+
+          # 組合 JSON 陣列
+          URL_JSON="["
+          for i in "${!URLS[@]}"; do
+            [ $i -gt 0 ] && URL_JSON+=","
+            URL_JSON+="\"${URLS[$i]}\""
+          done
+          URL_JSON+="]"
+
+          echo "══════════════════════════════════════"
+          echo "  IndexNow 自動提交"
+          echo "  提交頁數: ${#URLS[@]}"
+          echo "══════════════════════════════════════"
+
+          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" -X POST \
+            "https://api.indexnow.org/IndexNow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{
+              \"host\": \"${HOST}\",
+              \"key\": \"${KEY}\",
+              \"keyLocation\": \"https://${HOST}/${KEY}.txt\",
+              \"urlList\": ${URL_JSON}
+            }")
+
+          echo ""
+          for url in "${URLS[@]}"; do
+            echo "  ✓ ${url}"
+          done
+
+          echo ""
+          if [ "$RESPONSE" = "200" ] || [ "$RESPONSE" = "202" ]; then
+            echo "✅ 提交成功 (HTTP ${RESPONSE})"
+          else
+            echo "⚠️ 回應碼: HTTP ${RESPONSE}"
+            exit 1
+          fi
