@@ -4,6 +4,37 @@
 
 > **最後更新**：2026-03-11 ｜ **更新歷史**：[Commit Log](https://github.com/canslab1/canslab1.github.io/commits/master)
 
+## 目錄
+
+- [網站概覽](#網站概覽)
+- [快速開始（本機開發）](#快速開始本機開發)
+- [教授簡歷](#教授簡歷)
+- [頁面結構](#頁面結構)
+- [實驗室頁面（lab.html）內容區段](#實驗室頁面labhtmlp內容區段)
+- [首頁（index.html）內容區段](#首頁indexhtml內容區段)
+- [研究計畫摘要（CV.pdf 內容）](#研究計畫摘要cvpdf-內容)
+- [獎項與榮譽完整列表](#獎項與榮譽完整列表)
+- [技術架構](#技術架構)
+- [部署與發佈流程](#部署與發佈流程)
+- [瀏覽器相容性](#瀏覽器相容性)
+- [研究軟體頁面（software.html）](#研究軟體頁面softwarehtml)
+- [家族故事頁面（stories.html）](#家族故事頁面storieshtml)
+- [404 錯誤頁面](#404-錯誤頁面)
+- [SEO 設定](#seo-設定)
+- [LLM 搜尋設定](#llm-搜尋設定)
+- [IndexNow 即時索引](#indexnow-即時索引)
+- [分析工具與搜尋引擎管理](#分析工具與搜尋引擎管理)
+- [第三方外部資源](#第三方外部資源)
+- [無障礙設計（Accessibility）](#無障礙設計accessibility)
+- [網站地圖（sitemap.xml）](#網站地圖sitemapxml)
+- [外部連結](#外部連結)
+- [內容管理指南](#內容管理指南)
+- [常見維護操作](#常見維護操作)
+- [授權說明](#授權說明)
+- [貢獻指南](#貢獻指南)
+- [備份與災難復原](#備份與災難復原)
+- [疑難排解（Troubleshooting）](#疑難排解troubleshooting)
+
 ## 網站概覽
 
 | 項目 | 說明 |
@@ -83,7 +114,7 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 |------|------|------|
 | `index.html` | 首頁 | 社會責任與肯定、杏壇芬芳獎推薦文 |
 | `lab.html` | 實驗室 | CANS Lab 介紹、學術表現及成就（28 張數據卡片） |
-| `software.html` | 研究軟體 | 開源研究軟體與工具（EpiRank、HETA、HATA、BCAT、SRAC-Agent、AED2） |
+| `software.html` | 研究軟體 | 開源研究軟體與工具（EpiRank、CASMIM、HETA、HATA、BCAT、SRAC-Agent、AED2） |
 | `stories.html` | 家族故事 | 個人家族故事集 |
 | `CYHuang.html` | 重導向 | 自動導向 `index.html` |
 | `404.html` | 錯誤頁 | 自訂 404 頁面 |
@@ -330,11 +361,12 @@ canslab1.github.io/
 
 ## 研究軟體頁面（software.html）
 
-展示 CANS 實驗室開發的六套開源研究軟體，每套皆附論文縮圖、應用截圖與 GitHub 連結。所有程式碼以 MIT 授權公開。
+展示 CANS 實驗室開發的七套開源研究軟體，每套皆附論文縮圖、應用截圖與 GitHub 連結。所有程式碼以 MIT 授權公開。
 
 | 軟體 | 說明 | 語言 | GitHub |
 |------|------|------|--------|
 | **EpiRank** | 基於非對稱通勤網絡的疫情風險分析 | Python | [canslab1/EpiRank](https://github.com/canslab1/EpiRank) |
+| **CASMIM** | 結合細胞自動機與社會鏡像身份的 SARS 疫情模擬 | Python | [canslab1/CASMIM](https://github.com/canslab1/CASMIM) |
 | **HETA** | 無參數複雜網絡邊分類（BOND / SINK / LOCAL BRIDGE / GLOBAL BRIDGE） | Python | [canslab1/HETA](https://github.com/canslab1/HETA) |
 | **HATA** | 有向網絡弧分類工具，將 HETA 擴展至有向圖 | Python | [canslab1/HATA](https://github.com/canslab1/HATA) |
 | **BCAT** | 有界信心意見動態與採用門檻創新擴散混合模擬模型 | Python / NetLogo | [canslab1/BCAT](https://github.com/canslab1/BCAT) |
@@ -343,23 +375,78 @@ canslab1.github.io/
 
 > **維護提示**：軟體項目更新請直接修改 `software.html`，每張卡片包含中英文描述、標籤、截圖畫廊、論文引用及 GitHub 連結。
 
+## 家族故事頁面（stories.html）
+
+| 項目 | 說明 |
+|------|------|
+| 路徑 | `stories.html` |
+| 副標題 | 大頭仔的 60 道手工伍仁餡 |
+| 用途 | 黃崇源教授親筆撰寫的 60 篇家族故事集 |
+| 內容主題 | 從台北龍山寺旁的西園路到福建福州祖地，描繪三代人跨越時代的生活軌跡與情感連結 |
+| 專屬樣式 | `stories.css`（獨立 CSS，不共用 `shared.css`） |
+| 專屬腳本 | `stories.js`（獨立 JS，不共用 `shared.js`） |
+| JSON-LD | `CollectionPage` + `CreativeWorkSeries`，標註作者、出版者、所屬網站 |
+| og:type | `website` |
+| og:image | `images/IMG-2.jpg`（教授大頭照） |
+| 目錄功能 | 可收合的故事目錄（TOC），使用 `aria-expanded` / `aria-controls` 控制展開與收合 |
+
+> **注意**：此頁面為完全獨立頁面，故事內容直接寫在 HTML 中（非透過 JS 陣列渲染），不依賴 `shared.css` / `shared.js`。
+
+## 404 錯誤頁面
+
+| 項目 | 說明 |
+|------|------|
+| 路徑 | `404.html` |
+| 用途 | GitHub Pages 自訂 404 錯誤頁面 |
+| 設計 | 自包含頁面，所有 CSS 以 `<style>` 內嵌（不引用外部樣式表） |
+| robots | `noindex, follow`（不索引但允許追蹤連結） |
+| 元素 | 教授大頭照、404 錯誤碼、提示訊息 |
+| 導覽連結 | 「回首頁」（`/`）、「閱讀家族故事」（`stories.html`） |
+| 背景圖片 | Header 使用 Unsplash 外部圖片（數位科技主題） |
+| 分析追蹤 | Microsoft Clarity（ID: `rzlnthqbys`），以行內腳本載入 |
+| 字型 | `system-ui` 系統字型堆疊（無外部字型依賴） |
+| 響應式 | ≤768px 自動調整標題與錯誤碼字級 |
+
+> **注意**：404.html 不引用 `shared.css` / `shared.js`，修改共用樣式不會影響此頁面。
+
 ## SEO 設定
 
-### Meta 標籤（index.html `<head>`）
-- `description`：頁面描述（中文）
-- `keywords`：黃崇源、長庚大學、資訊工程、複雜網絡 等
-- `robots`：`index, follow, max-image-preview:large, max-snippet:-1`
-- `canonical`：`https://canslab1.github.io/`
-- Open Graph（`og:title`, `og:description`, `og:image`, `og:type=profile` 等）
-- Twitter Card（`summary_large_image`）
+### 各頁面 Meta 總覽
 
-### 結構化資料（JSON-LD）
-`index.html` 底部包含 `application/ld+json`，定義：
+| 頁面 | og:type | og:image | JSON-LD 類型 | robots |
+|------|---------|----------|-------------|--------|
+| `index.html` | `profile` | `IMG-2.jpg`（大頭照） | `WebSite` + `ProfilePage` → `Person` | `index, follow` |
+| `lab.html` | `website` | `CANS.png`（Lab logo） | `ResearchOrganization` + `Person` | `index, follow` |
+| `software.html` | `website` | `CANS.png`（Lab logo） | `CollectionPage` + 7× `SoftwareSourceCode` | `index, follow` |
+| `stories.html` | `website` | `IMG-2.jpg`（大頭照） | `CollectionPage` + `CreativeWorkSeries` | `index, follow` |
+| `404.html` | —（未設定） | —（未設定） | —（無） | `noindex, follow` |
+
+### 共通 SEO 設定（所有可索引頁面）
+- `og:locale`：`zh_TW`（主語言）
+- `og:locale:alternate`：`en_US`（替代語言）
+- `og:site_name`：`黃崇源教授個人網站`
+- `twitter:card`：`summary_large_image`
+- `hreflang`：`zh-TW`、`en`、`x-default` 三組互指
+- `canonical`：各頁面指向自身完整 URL
+- Schema.org：`<html>` 標籤加上 `itemscope itemtype="https://schema.org/WebPage"`
+
+### 結構化資料（JSON-LD）詳細
+
+**index.html**：
 - `WebSite`：網站名稱、語言、描述
-- `ProfilePage` → `Person`：姓名、別名（黃崇源、CY Huang、GSCOTT）、職稱、服務機構、學歷、研究領域、Google Scholar 連結、ORCID 等
+- `ProfilePage` → `Person`：姓名、別名（黃崇源、CY Huang、GSCOTT）、職稱、服務機構、學歷、研究領域、Google Scholar、ORCID
 
-### Schema.org
-`<html>` 標籤使用 `itemscope itemtype="https://schema.org/WebPage"`。
+**lab.html**：
+- `ResearchOrganization`：CANS Lab 組織資訊，隸屬長庚大學
+- `Person`：教授個人資料、學術表現指標
+
+**software.html**：
+- `CollectionPage`：軟體合集頁面
+- 7 個 `SoftwareSourceCode`：每套軟體的名稱、描述、程式語言、授權、GitHub 連結
+
+**stories.html**：
+- `CollectionPage`：故事合集頁面
+- `CreativeWorkSeries`：60 篇家族故事系列的名稱、描述、類型、作者
 
 ## LLM 搜尋設定
 
@@ -448,6 +535,48 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 - 每月查看 Google Search Console 的「涵蓋範圍」確認所有頁面已被索引
 - 每月查看「成效」報告了解搜尋排名與點擊趨勢
 - 如發現頁面未被索引，使用「網址審查」工具手動提交
+
+## 第三方外部資源
+
+本網站引用的外部服務與資源如下，全部以非同步方式載入，不阻塞頁面渲染：
+
+| 資源 | 類型 | 載入位置 | 說明 |
+|------|------|---------|------|
+| **Ahrefs Analytics** | 流量分析 | 各頁面 `<head>`（`analytics.ahrefs.com/analytics.js`） | SEO 排名追蹤與流量分析 |
+| **Microsoft Clarity** | 行為分析 | `shared.js` 底部 / `404.html` 行內腳本（`clarity.ms`，ID: `rzlnthqbys`） | 熱力圖、點擊分析、錄影回放 |
+| **Unsplash 圖片** | 背景圖片 | `404.html` header（`images.unsplash.com`） | 數位科技主題背景圖（僅 404 頁面使用） |
+
+### 字型策略
+- 全站使用 `system-ui` 系統字型堆疊，**不依賴外部字型 CDN**（如 Google Fonts）
+- 字型堆疊：`system-ui, -apple-system, 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif`
+- 優點：零額外 HTTP 請求、更快的首次繪製、自動適配使用者作業系統
+
+### DNS 預連接
+各頁面 `<head>` 中設定 DNS 預取與預連接，減少第三方資源延遲：
+- `dns-prefetch`：`scholar.google.com`、`www.clarity.ms`、`analytics.ahrefs.com`
+- `preconnect`：`images.unsplash.com`
+
+## 無障礙設計（Accessibility）
+
+### 目前已實作的無障礙特性
+
+| 特性 | 使用頁面 | 說明 |
+|------|---------|------|
+| `role="region"` | index / lab / software | 主要內容區段標記為語意區域 |
+| `aria-labelledby` | index / lab / software | 區段以標題 ID 作為可存取名稱 |
+| `aria-expanded` | stories | 故事目錄展開/收合狀態通知螢幕閱讀器 |
+| `aria-controls` | stories | 目錄按鈕與目錄內容區域的關聯 |
+| `lang="zh-TW"` | 所有頁面 | 宣告頁面主語言，輔助螢幕閱讀器發音 |
+| `alt` 屬性 | 所有頁面 | 所有 `<img>` 皆提供描述性替代文字 |
+| 語意標記 | 所有頁面 | 使用 `<header>`、`<main>`、`<footer>`、`<section>`、`<nav>` 語意元素 |
+| 鍵盤操作 | 所有頁面 | 語言切換按鈕、導覽連結均可透過鍵盤 Tab 鍵操作 |
+| 響應式設計 | 所有頁面 | 手機 / 平板 / 桌面三種斷點自動適配 |
+
+### 改善建議（未來可強化項目）
+- 加入 skip navigation 連結（跳過導覽列直達主要內容）
+- 為語言切換按鈕加入 `aria-label`（例如 `aria-label="切換至英文"`）
+- 確保色彩對比度符合 WCAG 2.1 AA 標準（對比度 ≥4.5:1）
+- 增加 `<main>` landmark 在所有頁面（目前 `404.html` 已使用，其他頁面可跟進）
 
 ## 網站地圖（sitemap.xml）
 
@@ -569,6 +698,62 @@ sips --resampleWidth 800 images/my-photo.jpg
 | Facebook | [gscott.huang](https://www.facebook.com/gscott.huang/) |
 | GitHub Issues | [canslab1.github.io/issues](https://github.com/canslab1/canslab1.github.io/issues) |
 | 學校網頁 | [長庚大學資工系](https://csie.cgu.edu.tw/) |
+
+## 備份與災難復原
+
+### 備份策略
+
+本網站以 Git 為核心版本控管，GitHub 遠端倉庫即為主要備份：
+
+| 備份層級 | 說明 |
+|---------|------|
+| **Git 版本紀錄** | 每次 commit 都是完整快照，可隨時回溯任何歷史版本 |
+| **GitHub 遠端倉庫** | `push` 後即自動同步至雲端，即使本機遺失仍可恢復 |
+| **本機工作副本** | `/Users/gscott/Dropbox/...` 路徑下的工作目錄（Dropbox 自帶雲端同步） |
+
+### 災難復原步驟
+
+**情境一：本機檔案遺失**
+```bash
+# 重新從 GitHub 克隆
+git clone https://github.com/canslab1/canslab1.github.io.git
+```
+
+**情境二：誤改檔案，想回到前一個版本**
+```bash
+# 查看某檔案的修改紀錄
+git log --oneline -- 檔案名稱
+
+# 恢復某檔案到特定 commit
+git checkout <commit-hash> -- 檔案名稱
+
+# 恢復後提交
+git add 檔案名稱
+git commit -m "Restore: 還原 檔案名稱 到 <commit-hash> 版本"
+```
+
+**情境三：想完整回退到某個 commit**
+```bash
+# 查看近期 commit
+git log --oneline -10
+
+# 建立回退 commit（安全方式，不改寫歷史）
+git revert <commit-hash>
+```
+
+**情境四：GitHub Pages 部署異常**
+1. 到 GitHub → Settings → Pages 確認部署分支為 `master`
+2. 查看 Actions 面板是否有建置失敗
+3. 如需強制重新部署，可做一個空 commit：
+```bash
+git commit --allow-empty -m "Trigger rebuild"
+git push origin master
+```
+
+### 建議的額外備份措施
+- 定期將 `CV.pdf` 等不在 Git 版控的重要檔案另行備份
+- 考慮設定 GitHub 的 repository archive（Settings → Archive this repository）作為永久保存
+- `images/` 目錄中的原始高解析圖片建議保留一份在本機或雲端硬碟
 
 ## 疑難排解（Troubleshooting）
 
