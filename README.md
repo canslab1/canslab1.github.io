@@ -2,6 +2,8 @@
 
 黃崇源教授（Prof. Chung-Yuan Huang, Ph.D.）個人學術網站，託管於 GitHub Pages。
 
+> **最後更新**：2026-03-11 ｜ **更新歷史**：[Commit Log](https://github.com/canslab1/canslab1.github.io/commits/master)
+
 ## 網站概覽
 
 | 項目 | 說明 |
@@ -11,6 +13,26 @@
 | 語言 | 中文 / English（即時切換） |
 | 託管 | GitHub Pages |
 | 電郵 | gscott@mail.cgu.edu.tw |
+
+## 快速開始（本機開發）
+
+本網站為純靜態網站，無需安裝任何套件。
+
+```bash
+# 1. 取得原始碼
+git clone https://github.com/canslab1/canslab1.github.io.git
+cd canslab1.github.io
+
+# 2. 啟動本機伺服器（任選一種）
+python3 -m http.server 8000          # Python
+npx serve .                           # Node.js（需先安裝 Node.js）
+open index.html                       # 或直接用瀏覽器開啟（部分功能可能受限於 CORS）
+
+# 3. 瀏覽
+# 前往 http://localhost:8000
+```
+
+> **注意**：直接用瀏覽器開啟 `index.html`（`file://` 協議）時，某些瀏覽器可能因 CORS 限制導致 JS 載入失敗，建議使用本機伺服器。
 
 ## 教授簡歷
 
@@ -259,6 +281,53 @@ canslab1.github.io/
 4. 如需特殊樣式，在 HTML 中用 `<style>` 加入頁面專屬 CSS
 5. 更新 `sitemap.xml` 加入新頁面
 
+## 部署與發佈流程
+
+本網站使用 GitHub Pages 自動部署，流程如下：
+
+```
+本機修改 → git add → git commit → git push origin master
+                                        ↓
+                              GitHub Pages 自動建置（約 30–60 秒）
+                                        ↓
+                              https://canslab1.github.io/ 生效
+                                        ↓
+                              IndexNow workflow 自動通知搜尋引擎
+```
+
+| 項目 | 說明 |
+|------|------|
+| 分支 | `master`（預設部署分支） |
+| 建置方式 | GitHub Pages 內建（無需 Jekyll 或其他建置工具） |
+| 生效時間 | push 後約 30–60 秒 |
+| 快取 | GitHub CDN 快取約 10 分鐘，若未更新可嘗試 hard refresh（Ctrl+Shift+R） |
+| 自訂域名 | 未設定（使用預設 `canslab1.github.io`） |
+| HTTPS | GitHub Pages 自動提供 |
+
+> **提示**：可在 GitHub → Settings → Pages 查看部署狀態，或透過 `gh run list` 查看 Actions 紀錄。
+
+## 瀏覽器相容性
+
+| 瀏覽器 | 最低版本 | 備註 |
+|--------|---------|------|
+| Chrome | 80+ | 完整支援 |
+| Firefox | 78+ | 完整支援 |
+| Safari | 14+ | 完整支援 |
+| Edge | 80+ | 完整支援（Chromium 核心） |
+| IE | ❌ 不支援 | 使用 ES6 語法及 CSS Grid |
+| iOS Safari | 14+ | 響應式佈局已測試 |
+| Android Chrome | 80+ | 響應式佈局已測試 |
+
+### 響應式設計
+- **手機**（≤768px）：單欄排列，卡片堆疊
+- **平板**（769–1024px）：雙欄排列
+- **桌面**（>1024px）：多欄排列，完整導覽列
+
+### 效能考量
+- 無框架依賴，純 HTML/CSS/JS，首次載入快速
+- 圖片建議壓縮至 200KB 以下（詳見「圖片管理」章節）
+- 外部資源：Ahrefs Analytics、Microsoft Clarity（非同步載入，不阻塞渲染）
+
 ## 研究軟體頁面（software.html）
 
 展示 CANS 實驗室開發的六套開源研究軟體，每套皆附論文縮圖、應用截圖與 GitHub 連結。所有程式碼以 MIT 授權公開。
@@ -358,10 +427,27 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 ./indexnow-submit.sh https://canslab1.github.io/lab.html https://canslab1.github.io/software.html
 ```
 
-## 分析工具
+## 分析工具與搜尋引擎管理
 
-- **Ahrefs Analytics**：`analytics.ahrefs.com/analytics.js`（載入於 `index.html` `<head>`）
-- **Microsoft Clarity**：用戶行為熱力圖與點擊分析（初始化於 `shared.js` 底部，ID: `rzlnthqbys`）
+### 流量與行為分析
+
+| 工具 | 用途 | 設定位置 |
+|------|------|---------|
+| **Ahrefs Analytics** | 流量分析、SEO 排名追蹤 | `index.html` `<head>` 載入 `analytics.ahrefs.com/analytics.js` |
+| **Microsoft Clarity** | 用戶行為熱力圖、點擊分析、錄影回放 | `shared.js` 底部初始化，ID: `rzlnthqbys` |
+
+### 搜尋引擎管理台
+
+| 平台 | 網址 | 用途 |
+|------|------|------|
+| **Google Search Console** | [search.google.com/search-console](https://search.google.com/search-console) | 查看 Google 索引狀態、搜尋排名、點擊率、提交 sitemap |
+| **Bing Webmaster Tools** | [bing.com/webmasters](https://www.bing.com/webmasters) | 查看 Bing/Yahoo 索引狀態、提交 URL、SEO 報告 |
+| **Ahrefs Webmaster Tools** | [ahrefs.com/webmaster-tools](https://ahrefs.com/webmaster-tools) | 反向連結分析、SEO 健康度檢查 |
+
+**建議定期檢查項目：**
+- 每月查看 Google Search Console 的「涵蓋範圍」確認所有頁面已被索引
+- 每月查看「成效」報告了解搜尋排名與點擊趨勢
+- 如發現頁面未被索引，使用「網址審查」工具手動提交
 
 ## 網站地圖（sitemap.xml）
 
@@ -392,6 +478,46 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 | SRAC-Agent（GitHub） | https://github.com/canslab1/SRAC-Agent |
 | AED2（GitHub） | https://github.com/canslab1/AED2 |
 
+## 內容管理指南
+
+### 新增家族故事（stories.html）
+
+`stories.html` 為獨立頁面，使用專屬的 `stories.css` 和 `stories.js`。
+
+新增故事步驟：
+1. 開啟 `stories.html`
+2. 在故事列表區塊中，依照現有故事的 HTML 結構新增一筆
+3. 故事內容直接寫在 HTML 中（非透過 JS 陣列渲染）
+4. 如需新增圖片，放在 `images/` 目錄下
+5. 更新 `sitemap.xml` 的 `stories.html` lastmod 日期
+
+### 圖片管理
+
+| 項目 | 建議 |
+|------|------|
+| 格式 | 照片使用 `.jpg`（壓縮率高）；logo / 圖示使用 `.png`（支援透明） |
+| 尺寸 | 大頭照 / 活動照：最大寬度 800px；logo：最大寬度 200px |
+| 檔案大小 | 單張建議 ≤200KB，大圖 ≤500KB |
+| 命名規則 | 全小寫、用連字號分隔，例如 `honors1.png`、`epirank-screenshot.png` |
+| 存放位置 | 一般圖片放 `images/`；軟體相關圖片放 `images/software/` |
+| 壓縮工具 | 推薦 [TinyPNG](https://tinypng.com/)（線上）或 `sips`（macOS 內建） |
+
+**macOS 快速壓縮指令：**
+```bash
+# 將圖片寬度縮至 800px（等比縮放）
+sips --resampleWidth 800 images/my-photo.jpg
+```
+
+### 更新學術數據卡片
+
+修改 `stats-data.js` 中的 `statsZh[]` 和 `statsEn[]` 陣列即可，每筆資料格式：
+```javascript
+{ number: '44', label: '期刊論文', url: 'https://...' }
+```
+- `number`：顯示的數字
+- `label`：卡片標題
+- `url`：點擊後前往的連結（可為空字串 `''`）
+
 ## 常見維護操作
 
 | 操作 | 修改位置 |
@@ -406,5 +532,82 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 | 更新 SEO 資訊 | `index.html` `<head>` 的 meta 標籤和 JSON-LD |
 | 更新 LLM 摘要 | `llms.txt` |
 | 更新網站地圖 | `sitemap.xml` |
-| 通知搜尋引擎內容更新 | `./indexnow-submit.sh`（推送後執行） |
+| 通知搜尋引擎內容更新 | `./indexnow-submit.sh`（推送後執行）或由 GitHub Actions 自動執行 |
 | 更換 Clarity 追蹤碼 | `shared.js` 底部 Clarity 初始化區塊 |
+
+## 授權說明
+
+本專案採用 [MIT License](LICENSE)，但以下資源**不包含**在 MIT 授權範圍內：
+
+| 資源類型 | 授權狀態 |
+|----------|---------|
+| HTML / CSS / JavaScript 程式碼 | ✅ MIT 授權，可自由使用 |
+| 研究軟體（EpiRank、HETA 等） | ✅ 各自 GitHub repo 採 MIT 授權 |
+| 教授個人照片（`images/IMG-2.jpg`、`honors1–4.png`） | ❌ 個人肖像權，未經授權不得使用 |
+| `CV.pdf` 學術履歷 | ❌ 個人文件，僅供閱覽 |
+| 各機構 logo（`cgu.png`、`csie.png`、`laosong.png` 等） | ❌ 各機構商標，僅限本網站使用 |
+| 家族故事內容（`stories.html`） | ❌ 個人著作，版權所有 |
+
+## 貢獻指南
+
+本網站為個人學術網站，歡迎透過以下方式提供建議：
+
+### 回報問題
+- 前往 [GitHub Issues](https://github.com/canslab1/canslab1.github.io/issues) 建立新的 issue
+- 請說明：問題描述、重現步驟、使用的瀏覽器與作業系統
+
+### 提交修改
+1. Fork 本專案
+2. 建立新分支：`git checkout -b fix/issue-description`
+3. 修改後提交：`git commit -m "Fix: 描述修改內容"`
+4. 推送並建立 Pull Request
+
+### 聯絡方式
+| 管道 | 資訊 |
+|------|------|
+| 電子郵件 | gscott@mail.cgu.edu.tw |
+| Facebook | [gscott.huang](https://www.facebook.com/gscott.huang/) |
+| GitHub Issues | [canslab1.github.io/issues](https://github.com/canslab1/canslab1.github.io/issues) |
+| 學校網頁 | [長庚大學資工系](https://csie.cgu.edu.tw/) |
+
+## 疑難排解（Troubleshooting）
+
+### 語言切換無效
+- **現象**：點擊中/英切換按鈕後頁面內容未改變
+- **排查**：
+  1. 開啟瀏覽器開發者工具（F12）→ Console 查看是否有 JS 錯誤
+  2. 確認 `shared.js` 已正確載入（Network 面板）
+  3. 確認 HTML 中 `.zh` / `.en` class 正確套用
+
+### 學術數據卡片未顯示
+- **現象**：`lab.html` 頁面只有標題，沒有 28 張卡片
+- **排查**：
+  1. 確認 `stats-data.js` 在 `shared.js` 之前載入
+  2. 確認 `stats-data.js` 語法正確（無多餘逗號或缺少引號）
+  3. Console 是否出現 `ReferenceError: statsZh is not defined`
+
+### 樣式破裂 / 排版異常
+- **現象**：頁面排版混亂、卡片未對齊
+- **排查**：
+  1. 確認 `shared.css` 正確載入
+  2. 嘗試 hard refresh：`Ctrl+Shift+R`（Windows）或 `Cmd+Shift+R`（Mac）
+  3. 確認是否有 `<style>` 標籤衝突
+
+### GitHub Pages 部署失敗
+- **現象**：push 後網站未更新
+- **排查**：
+  1. 到 GitHub → Settings → Pages 確認部署分支為 `master`
+  2. 查看 Actions 面板的 `pages build and deployment` 是否成功
+  3. 等待 1–2 分鐘，GitHub Pages 需要時間建置
+  4. 嘗試 hard refresh 清除瀏覽器快取
+
+### IndexNow 提交失敗
+- **現象**：`./indexnow-submit.sh` 回傳非 200/202 的 HTTP 狀態碼
+- **常見狀態碼**：
+  | HTTP 狀態碼 | 說明 | 解決方式 |
+  |------------|------|---------|
+  | 200 / 202 | 成功 | 無需處理 |
+  | 400 | 請求格式錯誤 | 檢查 JSON 格式 |
+  | 403 | key 驗證失敗 | 確認 `d22a81b3...52.txt` 已部署至網站根目錄 |
+  | 422 | URL 無效 | 確認提交的 URL 可正常存取 |
+  | 429 | 頻率限制 | 稍後再試，避免短時間內重複提交 |
