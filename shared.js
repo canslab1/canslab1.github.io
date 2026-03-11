@@ -1,67 +1,3 @@
-/* ===== Academic Stats Data ===== */
-
-const statsZh = [
-    { number: '43篇',   label: '期刊論文', url: 'https://pure.lib.cgu.edu.tw/zh/persons/chung-yuan-huang-2/publications/?type=%2Fdk%2Fatira%2Fpure%2Fresearchoutput%2Fresearchoutputtypes%2Fcontributiontojournal%2Farticle' },
-    { number: '49篇',   label: '國際研討會', url: 'https://pure.lib.cgu.edu.tw/zh/persons/chung-yuan-huang-2/publications/?type=%2Fdk%2Fatira%2Fpure%2Fresearchoutput%2Fresearchoutputtypes%2Fcontributiontoconference%2Finternational_conference_report' },
-    { number: '10篇',   label: '專書專章', url: 'https://canslab1.github.io/CV.pdf' },
-    { number: '19篇',   label: '國內研討會', url: 'https://canslab1.github.io/CV.pdf' },
-    { number: '49次',   label: '文章及採訪', url: 'https://canslab1.github.io/CV.pdf' },
-    { number: '22次',   label: '計畫主持人', url: 'https://pure.lib.cgu.edu.tw/zh/persons/chung-yuan-huang-2/projects/' },
-    { number: '1408萬', label: '國科會預算', url: 'https://arspb.nstc.gov.tw/NSCWebFront/modules/talentSearch/talentSearch.do?action=initRsm17new&rsNo=2a2ef24adef742f58349c3c533bb7402&LANG=chi' },
-    { number: '14次',   label: '共同主持人', url: 'https://canslab1.github.io/CV.pdf' },
-    { number: '970次',  label: 'Citations', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '18篇',   label: 'h-index', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '30篇',   label: 'i10-index', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '51人',   label: '指導專題生', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '25人',   label: '指導碩士', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '2人',    label: '指導博士', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '68篇',   label: '論文審稿', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '27次',   label: '會議審稿', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '77次',   label: '議程委員', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '11次',   label: '計劃審查', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '10次',   label: '學術審查', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '35次',   label: '專題演講', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '10年',   label: '教授', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '5年',    label: '副教授', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '5年',    label: '助理教授', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '5年',    label: '講師', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '11年',   label: '業界經驗', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '4個',    label: '合聘單位', url: 'https://canslab1.github.io/CV.pdf' },
-    { number: '3年',    label: '獨立董事', url: 'https://canslab1.github.io/CV.pdf' },
-    { number: '7年',    label: '學生家長會', url: 'https://canslab1.github.io/CV.pdf' }
-];
-
-const statsEn = [
-    { number: '43',   label: 'Journal Papers', url: 'https://canslab1.github.io/CV.pdf#page=21' },
-    { number: '49',   label: "Int'l Conferences", url: 'https://canslab1.github.io/CV.pdf#page=24' },
-    { number: '10',   label: 'Book Chapters', url: 'https://canslab1.github.io/CV.pdf#page=27' },
-    { number: '19',   label: 'Dom. Conferences', url: 'https://canslab1.github.io/CV.pdf#page=29' },
-    { number: '49',   label: 'Commentaries & Op-Eds', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '22',   label: 'PI Projects', url: 'https://canslab1.github.io/CV.pdf#page=3' },
-    { number: '$14M', label: 'NSTC Budget', url: 'https://canslab1.github.io/CV.pdf#page=3' },
-    { number: '14',   label: 'Co-PI Projects', url: 'https://canslab1.github.io/CV.pdf#page=4' },
-    { number: '970',  label: 'Citations', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '18',   label: 'h-index', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '30',   label: 'i10-index', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '51',   label: 'UG Students', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '25',   label: 'Msc Students', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '2',    label: 'PhD Students', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '68',   label: 'Paper Reviews', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '27',   label: 'Conference Reviews', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '77',   label: 'Program Committee', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '11',   label: 'Project Reviews', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '10',   label: 'Academic Reviews', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '35',   label: 'Invited Talks', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '10 yrs',   label: 'Full Professor', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '5 yrs',    label: 'Assoc. Prof.', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '5 yrs',    label: 'Asst. Prof.', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '5 yrs',    label: 'Lecturer', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '11 yrs',   label: 'Industry Experience', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '4',    label: 'Joint Appointments', url: 'https://canslab1.github.io/CV.pdf#page=1' },
-    { number: '3 yrs',    label: 'Independent Director', url: 'https://canslab1.github.io/CV.pdf#page=1' },
-    { number: '7 yrs',    label: 'Parent Association', url: 'https://canslab1.github.io/CV.pdf#page=1' }
-];
-
 /* ===== Honors Data ===== */
 
 const honorsZh = [
@@ -167,10 +103,10 @@ function toggleNav() {
 /* ===== Render Functions ===== */
 
 function renderStats() {
-    const isEn = document.documentElement.lang === 'en';
-    const stats = isEn ? statsEn : statsZh;
     const container = document.getElementById('stats-container');
     if (!container) return;
+    const isEn = document.documentElement.lang === 'en';
+    const stats = isEn ? statsEn : statsZh;
     container.innerHTML = '';
 
     stats.forEach(item => {
