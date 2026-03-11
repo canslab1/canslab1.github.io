@@ -179,6 +179,8 @@ canslab1.github.io/
 ├── d22a81b3...52.txt   # IndexNow API key 驗證檔
 ├── README.md           # 本文件
 ├── LICENSE             # MIT 授權條款
+├── .github/workflows/
+│   └── indexnow.yml    # IndexNow 自動提交 workflow
 ├── .gitignore          # Git 忽略規則
 ├── robots.txt          # 爬蟲規則
 ├── sitemap.xml         # 網站地圖
@@ -328,9 +330,22 @@ IndexNow 是一個開放協議，可即時通知搜尋引擎（Bing、Yandex、N
 | 檔案 | 用途 |
 |------|------|
 | `d22a81b36ccb45e085fe6679a822df52.txt` | API key 驗證檔（放在根目錄供搜尋引擎驗證） |
-| `indexnow-submit.sh` | 批次提交腳本 |
+| `indexnow-submit.sh` | 本機手動批次提交腳本 |
+| `.github/workflows/indexnow.yml` | GitHub Actions 自動提交 workflow |
 
-### 使用方式
+### 自動提交（GitHub Actions）
+
+workflow 會在以下時機自動執行，**不需要手動操作**：
+
+| 觸發條件 | 說明 |
+|----------|------|
+| `push` 到 master | 當 `.html`、`.css`、`.js`、`.pdf`、`llms.txt`、`sitemap.xml`、`images/` 有變更時自動提交 |
+| 每週一 09:00（台灣時間） | 定期排程，確保搜尋引擎持續收錄最新內容 |
+| 手動觸發 | 在 GitHub → Actions → IndexNow Submit → Run workflow |
+
+> **注意**：push 時只有內容檔案（html/css/js/pdf/images）變更才會觸發，修改 README.md 等非內容檔案不會觸發。
+
+### 手動提交（本機腳本）
 
 ```bash
 # 提交所有頁面（預設 6 個主要頁面）
@@ -342,14 +357,6 @@ IndexNow 是一個開放協議，可即時通知搜尋引擎（Bing、Yandex、N
 # 提交多個指定頁面
 ./indexnow-submit.sh https://canslab1.github.io/lab.html https://canslab1.github.io/software.html
 ```
-
-### 建議的工作流程
-每次 `git push` 後執行：
-```bash
-git push origin master && ./indexnow-submit.sh
-```
-
-> **注意**：IndexNow 每天提交次數有上限，一般使用不會超過。建議在內容有實質更新時再提交，避免頻繁提交相同頁面。
 
 ## 分析工具
 
