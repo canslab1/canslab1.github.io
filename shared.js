@@ -347,9 +347,7 @@ function renderHonorsArticle() {
 
 function formatPaperText(text) {
     var html = text
-        .replace(/Huang C\.Y\.\*/g, '<strong>Huang C.Y.*</strong>')
-        .replace(/Huang C\.Y\.\b/g, '<strong>Huang C.Y.</strong>')
-        .replace(/Huang C\.Y\.,/g, '<strong>Huang C.Y.</strong>,')
+        .replace(/Huang C\.Y\.(\*?)/g, '<strong>Huang C.Y.$1</strong>')
         .replace(/黃崇源/g, '<strong>黃崇源</strong>');
 
     html = html.replace(/(https?:\/\/[^\s,)]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');

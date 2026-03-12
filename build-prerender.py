@@ -242,9 +242,7 @@ def esc(s):
 def format_paper_text(text):
     html = text.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
 
-    html = re.sub(r'Huang C\.Y\.\*', '<strong>Huang C.Y.*</strong>', html)
-    html = re.sub(r'Huang C\.Y\.(\b)', r'<strong>Huang C.Y.</strong>\1', html)
-    html = re.sub(r'Huang C\.Y\.,', '<strong>Huang C.Y.</strong>,', html)
+    html = re.sub(r'Huang C\.Y\.(\*?)', r'<strong>Huang C.Y.\1</strong>', html)
     html = re.sub(r'黃崇源', '<strong>黃崇源</strong>', html)
 
     html = re.sub(r'(https?://[^\s,)]+)', r'<a href="\1" target="_blank" rel="noopener noreferrer">\1</a>', html)
