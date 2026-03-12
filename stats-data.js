@@ -1,6 +1,6 @@
 /* ===== Academic Stats Data =====
- * 維護 lab.html 的 28 張學術表現卡片內容
- * 修改本檔即可更新卡片，不需異動 lab.html 或 shared.js
+ * 維護 index.html「實驗室」區段的 28 張學術表現卡片內容
+ * 修改本檔即可更新卡片，不需異動 index.html 或 shared.js
  */
 
 const statsZh = [

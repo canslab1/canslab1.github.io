@@ -2,7 +2,7 @@
 
 黃崇源教授（Prof. Chung-Yuan Huang, Ph.D.）個人學術網站，託管於 GitHub Pages。
 
-> **最後更新**：2026-03-11 ｜ **更新歷史**：[Commit Log](https://github.com/canslab1/canslab1.github.io/commits/master)
+> **最後更新**：2026-03-12 ｜ **更新歷史**：[Commit Log](https://github.com/canslab1/canslab1.github.io/commits/master)
 
 ## 目錄
 
@@ -10,14 +10,12 @@
 - [快速開始（本機開發）](#快速開始本機開發)
 - [教授簡歷](#教授簡歷)
 - [頁面結構](#頁面結構)
-- [實驗室頁面（lab.html）內容區段](#實驗室頁面labhtmlp內容區段)
 - [首頁（index.html）內容區段](#首頁indexhtml內容區段)
 - [研究計畫摘要（CV.pdf 內容）](#研究計畫摘要cvpdf-內容)
 - [獎項與榮譽完整列表](#獎項與榮譽完整列表)
 - [技術架構](#技術架構)
 - [部署與發佈流程](#部署與發佈流程)
 - [瀏覽器相容性](#瀏覽器相容性)
-- [研究軟體頁面（software.html）](#研究軟體頁面softwarehtml)
 - [家族故事頁面（stories.html）](#家族故事頁面storieshtml)
 - [404 錯誤頁面](#404-錯誤頁面)
 - [SEO 設定](#seo-設定)
@@ -110,25 +108,51 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 ## 頁面結構
 
+本網站採用**單頁式架構**（Single Page Application），`index.html` 包含三個可切換的內容區段（介紹 / 實驗室 / 程式），透過導覽列按鈕切換，不重新載入頁面。
+
 | 檔案 | 頁面 | 說明 |
 |------|------|------|
-| `index.html` | 首頁 | 社會責任與肯定、杏壇芬芳獎推薦文 |
-| `lab.html` | 實驗室 | CANS Lab 介紹、學術表現及成就（28 張數據卡片） |
-| `software.html` | 研究軟體 | 開源研究軟體與工具（EpiRank、CASMIM、HETA、HATA、BCAT、SRAC-Agent、AED2） |
+| `index.html` | 首頁（單頁式） | 包含三個區段：介紹（社會責任與肯定）、實驗室（28 張學術成就卡片）、程式（8 套開源研究軟體） |
 | `stories.html` | 家族故事 | 個人家族故事集 |
 | `CYHuang.html` | 重導向 | 自動導向 `index.html` |
 | `404.html` | 錯誤頁 | 自訂 404 頁面 |
 | `CV.pdf` | 履歷 | 完整學術履歷（PDF） |
 | `indexnow-submit.sh` | IndexNow 提交 | 批次通知搜尋引擎內容更新（Bing、Yandex、Naver） |
 | `shared.css` | 共用樣式 | 各頁面共用的 CSS 樣式表 |
-| `stats-data.js` | 卡片資料 | 28 張學術數據卡片的中英文資料（僅 lab.html 載入） |
-| `shared.js` | 共用腳本 | 渲染函式、語言切換、導覽列/Footer |
+| `stats-data.js` | 卡片資料 | 28 張學術數據卡片的中英文資料 |
+| `shared.js` | 共用腳本 | 渲染函式、語言切換、導覽列/Footer、區段切換 |
 | `stories.css` | 故事樣式 | 家族故事頁面專屬 CSS |
 | `stories.js` | 故事腳本 | 家族故事頁面專屬 JS |
 
-## 實驗室頁面（lab.html）內容區段
+## 首頁（index.html）內容區段
 
-### 學術表現及成就（28 張數據卡片）
+### Header
+- 大頭照（`images/IMG-2.jpg`）
+- 姓名：長庚大學 黃崇源 教授
+- 副標：複雜適應性網絡與系統實驗室 主持人
+
+### 導覽列
+中文：介紹 | 實驗室 | 程式 | 著作 | 計畫 | 履歷 | 維基 | 臉書 | 故事 | 相簿 | 評論 | 投書
+英文：About | Lab | Software | Papers | Projects | CV | Wiki | FB | Stories | Photos | Press | Op-Eds
+
+前三項（介紹 / 實驗室 / 程式）為頁面內區段切換，其餘為外部連結。
+
+### 區段一：社會責任與肯定（介紹，預設顯示）
+- 2024 中國科技大學傑出校友（校史唯一先後獲頒傑出與優秀校友）
+- 2024 臺北市杏壇芬芳獎
+- 2022–2024 老松國小學生家長會第 32、33 屆會長，第 34 屆榮譽會長
+- 2022 所羅門股份有限公司獨立董事（薪酬、審計、永續發展委員）
+- 2006 中華民國斐陶斐榮譽學會獎（國立交通大學）
+- 2000 中國科技大學優秀校友
+
+> **維護提示**：榮譽更新請修改 `shared.js` 中的 `honorsZh[]` 和 `honorsEn[]` 陣列。
+
+### 杏壇芬芳獎推薦文
+「介紹」區段下方收錄完整的臺北市杏壇芬芳獎推薦文（中英文），記述崇源會長於老松國小學生家長會的奉獻，以及四張活動照片（`honors1–4.png`）。
+
+### 區段二：學術表現及成就（實驗室）
+
+28 張數據卡片，涵蓋：
 - 期刊論文：44 篇
 - 國際研討會：50 篇
 - 專書專章：10 篇
@@ -142,31 +166,24 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 - 教職年資：教授 10 年、副教授 5 年、助理教授 5 年、講師 5 年
 - 其他經歷：業界 11 年、合聘 4 單位、獨立董事 3 年、學生家長會 8 年
 
-> **維護提示**：數據更新請修改 `stats-data.js` 中的 `statsZh[]` 和 `statsEn[]` 陣列，不需異動 `lab.html` 或 `shared.js`。
+> **維護提示**：數據更新請修改 `stats-data.js` 中的 `statsZh[]` 和 `statsEn[]` 陣列，不需異動 `index.html` 或 `shared.js`。
 
-## 首頁（index.html）內容區段
+### 區段三：開源研究程式（程式）
 
-### Header
-- 大頭照（`images/IMG-2.jpg`）
-- 姓名：長庚大學 黃崇源 教授
-- 副標：複雜適應性網絡與系統實驗室 主持人
+展示 CANS 實驗室開發的 8 套開源研究軟體，每套皆附論文縮圖、應用截圖與 GitHub 連結。所有程式碼以 MIT 授權公開。
 
-### 導覽列
-中文：介紹 | 實驗室 | 著作 | 計畫 | 履歷 | 維基 | 臉書 | 故事 | 相簿 | 評論 | 投書
-英文：About | Lab | Papers | Projects | CV | Wiki | FB | Stories | Photos | Press | Op-Eds
+| 軟體 | 說明 | 語言 | GitHub |
+|------|------|------|--------|
+| **EpiRank** | 基於非對稱通勤網絡的疫情風險分析 | Python | [canslab1/EpiRank](https://github.com/canslab1/EpiRank) |
+| **MV17** | 以 K-core 為基礎的多屬性節點重要性排序 | Python | [canslab1/MV17](https://github.com/canslab1/MV17) |
+| **CASMIM** | 結合細胞自動機與社會鏡像身份的 SARS 疫情模擬 | Python | [canslab1/CASMIM](https://github.com/canslab1/CASMIM) |
+| **HETA** | 無參數複雜網絡邊分類 | Python | [canslab1/HETA](https://github.com/canslab1/HETA) |
+| **HATA** | 有向網絡弧分類工具 | Python | [canslab1/HATA](https://github.com/canslab1/HATA) |
+| **BCAT** | 有界信心意見動態與採用門檻創新擴散混合模擬模型 | Python / NetLogo | [canslab1/BCAT](https://github.com/canslab1/BCAT) |
+| **SRAC-Agent** | 演化空間囚徒困境賽局中自我聲譽感知機制模擬器 | Python | [canslab1/SRAC-Agent](https://github.com/canslab1/SRAC-Agent) |
+| **AED2** | 使用基因演算法最佳化 AED 配置地點 | C++ / Python | [canslab1/AED2](https://github.com/canslab1/AED2) |
 
-### 社會責任與肯定（榮譽列表）
-- 2024 中國科技大學傑出校友（校史唯一先後獲頒傑出與優秀校友）
-- 2024 臺北市杏壇芬芳獎
-- 2022–2024 老松國小學生家長會第 32、33 屆會長，第 34 屆榮譽會長
-- 2022 所羅門股份有限公司獨立董事（薪酬、審計、永續發展委員）
-- 2006 中華民國斐陶斐榮譽學會獎（國立交通大學）
-- 2000 中國科技大學優秀校友
-
-> **維護提示**：榮譽更新請修改 `shared.js` 中的 `honorsZh[]` 和 `honorsEn[]` 陣列。
-
-### 杏壇芬芳獎推薦文
-首頁下方收錄完整的臺北市杏壇芬芳獎推薦文（中英文），記述崇源會長於老松國小學生家長會的奉獻，以及四張活動照片（`honors1–4.png`）。
+> **維護提示**：軟體項目更新請直接修改 `index.html` 中「程式」區段（`<section id="software">`）的 `.software-card` 區塊。
 
 ### Footer
 長庚大學、長庚資工系、老松國小、中國科技大學、杏壇芬芳錄、ORCiD 等 logo 連結。
@@ -216,15 +233,13 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 ### 檔案結構
 ```
 canslab1.github.io/
-├── index.html          # 首頁
-├── lab.html            # 實驗室頁面
-├── software.html       # 研究軟體頁面
+├── index.html          # 首頁（單頁式，含介紹/實驗室/程式三個區段）
 ├── stories.html        # 家族故事
 ├── stories.css         # 故事頁面專屬 CSS
 ├── stories.js          # 故事頁面專屬 JS
 ├── shared.css          # 共用 CSS 樣式
-├── shared.js           # 共用 JS 渲染函式
-├── stats-data.js       # 28 張學術數據卡片資料（僅 lab.html 載入）
+├── shared.js           # 共用 JS 渲染函式與區段切換
+├── stats-data.js       # 28 張學術數據卡片資料
 ├── 404.html            # 自訂錯誤頁
 ├── CYHuang.html        # 重導向頁
 ├── CV.pdf              # 學術履歷
@@ -253,6 +268,7 @@ canslab1.github.io/
     ├── honors1–4.png   # 杏壇芬芳獎照片
     └── software/       # 研究軟體截圖與論文縮圖
         ├── epirank-*.png   # EpiRank 相關圖片
+        ├── mv17-*.png      # MV17 相關圖片
         ├── heta-*.png      # HETA 相關圖片
         ├── hata-*.png      # HATA 相關圖片
         ├── bcat-*.png      # BCAT 相關圖片
@@ -263,21 +279,22 @@ canslab1.github.io/
 ### 共用檔案說明
 
 #### `shared.css`
-從 `index.html` 和 `lab.html` 抽取的共用 CSS，包含：
+全站共用 CSS，包含：
 - Reset 樣式、Layout 容器
 - Header、導覽列、Footer 樣式
 - 學術數據卡片（`.stat-card`）、榮譽列表（`.honors-list`）
+- 軟體卡片（`.software-card`、`.software-gallery`、`.software-tag` 等）
 - 語言切換規則（`.zh` / `.en` class）
 - 響應式斷點：手機 ≤768px、平板 769–1024px
 
 #### `stats-data.js`
-28 張學術數據卡片的中英文資料，僅由 `lab.html` 載入：
+28 張學術數據卡片的中英文資料：
 
 | 陣列 | 用途 | 更新時機 |
 |------|------|---------|
 | `statsZh[]` / `statsEn[]` | 學術數據卡片 | 論文/計畫數量變動時 |
 
-> **維護提示**：日後更新卡片數據只需修改此檔，不需異動 `lab.html` 或 `shared.js`。
+> **維護提示**：日後更新卡片數據只需修改此檔，不需異動 `index.html` 或 `shared.js`。
 
 #### `shared.js`
 共用的 JavaScript 渲染函式與資料：
@@ -293,24 +310,23 @@ canslab1.github.io/
 | 函式 | 用途 |
 |------|------|
 | `toggleLanguage()` | 中英文即時切換 |
-| `showSection(id, event)` | 區段切換（目前僅 overview） |
+| `showSection(id, event)` | 切換介紹 / 實驗室 / 程式區段 |
 | `renderStats()` | 渲染學術數據卡片 |
 | `renderHonors()` | 渲染榮譽列表 |
-| `renderNav()` | 渲染導覽列（依 `_currentPage` 高亮當前頁） |
+| `renderNav()` | 渲染導覽列（高亮當前區段） |
 | `renderFooter()` | 渲染 Footer logo |
-| `initShared(page)` | 初始化入口，參數為 `'index'` 或 `'lab'` |
+| `initShared()` | 初始化入口（無參數，自動偵測頁面） |
 
 ### 語言切換機制
 - 使用 `.zh` / `.en` CSS class 控制元素顯示隱藏
 - `html[lang="en"]` 時 `.en` 顯示、`.zh` 隱藏；預設中文時相反
 - 切換時同步重新渲染 stats、honors、nav（因資料陣列有中英文版本）
 
-### 新增頁面步驟
-1. 建立新 HTML 檔案，引用 `shared.css` 和 `shared.js`
-2. 在 `shared.js` 的 `navItemsZh[]` 和 `navItemsEn[]` 加入新項目
-3. 底部呼叫 `initShared('新頁面名稱')` 初始化
-4. 如需特殊樣式，在 HTML 中用 `<style>` 加入頁面專屬 CSS
-5. 更新 `sitemap.xml` 加入新頁面
+### 新增內容區段步驟
+1. 在 `index.html` 的 `<main>` 中新增 `<section id="新區段" class="section">`
+2. 在 `shared.js` 的 `navItemsZh[]` 和 `navItemsEn[]` 加入新項目（設定 `section: '新區段'`）
+3. 如需額外樣式，在 `shared.css` 中新增
+4. 更新 `sitemap.xml` 的 `index.html` lastmod 日期
 
 ## 部署與發佈流程
 
@@ -359,13 +375,14 @@ canslab1.github.io/
 - 圖片建議壓縮至 200KB 以下（詳見「圖片管理」章節）
 - 外部資源：Ahrefs Analytics、Microsoft Clarity（非同步載入，不阻塞渲染）
 
-## 研究軟體頁面（software.html）
+## 開源研究軟體
 
-展示 CANS 實驗室開發的七套開源研究軟體，每套皆附論文縮圖、應用截圖與 GitHub 連結。所有程式碼以 MIT 授權公開。
+展示 CANS 實驗室開發的 8 套開源研究軟體（位於 `index.html`「程式」區段），每套皆附論文縮圖、應用截圖與 GitHub 連結。所有程式碼以 MIT 授權公開。
 
 | 軟體 | 說明 | 語言 | GitHub |
 |------|------|------|--------|
 | **EpiRank** | 基於非對稱通勤網絡的疫情風險分析 | Python | [canslab1/EpiRank](https://github.com/canslab1/EpiRank) |
+| **MV17** | 以 K-core 為基礎的多屬性節點重要性排序 | Python | [canslab1/MV17](https://github.com/canslab1/MV17) |
 | **CASMIM** | 結合細胞自動機與社會鏡像身份的 SARS 疫情模擬 | Python | [canslab1/CASMIM](https://github.com/canslab1/CASMIM) |
 | **HETA** | 無參數複雜網絡邊分類（BOND / SINK / LOCAL BRIDGE / GLOBAL BRIDGE） | Python | [canslab1/HETA](https://github.com/canslab1/HETA) |
 | **HATA** | 有向網絡弧分類工具，將 HETA 擴展至有向圖 | Python | [canslab1/HATA](https://github.com/canslab1/HATA) |
@@ -373,7 +390,7 @@ canslab1.github.io/
 | **SRAC-Agent** | 演化空間囚徒困境賽局中自我聲譽感知機制模擬器 | Python | [canslab1/SRAC-Agent](https://github.com/canslab1/SRAC-Agent) |
 | **AED2** | 使用基因演算法最佳化 AED 配置地點 | C++ / Python | [canslab1/AED2](https://github.com/canslab1/AED2) |
 
-> **維護提示**：軟體項目更新請直接修改 `software.html`，每張卡片包含中英文描述、標籤、截圖畫廊、論文引用及 GitHub 連結。
+> **維護提示**：軟體項目更新請直接修改 `index.html` 中「程式」區段（`<section id="software">`）的 `.software-card` 區塊，每張卡片包含中英文描述、標籤、截圖畫廊、論文引用及 GitHub 連結。
 
 ## 家族故事頁面（stories.html）
 
@@ -415,9 +432,7 @@ canslab1.github.io/
 
 | 頁面 | og:type | og:image | JSON-LD 類型 | robots |
 |------|---------|----------|-------------|--------|
-| `index.html` | `profile` | `IMG-2.jpg`（大頭照） | `WebSite` + `ProfilePage` → `Person` | `index, follow` |
-| `lab.html` | `website` | `CANS.png`（Lab logo） | `ResearchOrganization` + `Person` | `index, follow` |
-| `software.html` | `website` | `CANS.png`（Lab logo） | `CollectionPage` + 7× `SoftwareSourceCode` | `index, follow` |
+| `index.html` | `profile` | `IMG-2.jpg`（大頭照） | `WebSite` + `ProfilePage` → `Person` + `ResearchOrganization` + 8× `SoftwareSourceCode` | `index, follow` |
 | `stories.html` | `website` | `IMG-2.jpg`（大頭照） | `CollectionPage` + `CreativeWorkSeries` | `index, follow` |
 | `404.html` | —（未設定） | —（未設定） | —（無） | `noindex, follow` |
 
@@ -432,17 +447,11 @@ canslab1.github.io/
 
 ### 結構化資料（JSON-LD）詳細
 
-**index.html**：
+**index.html**（整合三區段）：
 - `WebSite`：網站名稱、語言、描述
 - `ProfilePage` → `Person`：姓名、別名（黃崇源、CY Huang、GSCOTT）、職稱、服務機構、學歷、研究領域、Google Scholar、ORCID
-
-**lab.html**：
 - `ResearchOrganization`：CANS Lab 組織資訊，隸屬長庚大學
-- `Person`：教授個人資料、學術表現指標
-
-**software.html**：
-- `CollectionPage`：軟體合集頁面
-- 7 個 `SoftwareSourceCode`：每套軟體的名稱、描述、程式語言、授權、GitHub 連結
+- 8 個 `SoftwareSourceCode`：每套軟體的名稱、描述、程式語言、授權、GitHub 連結
 
 **stories.html**：
 - `CollectionPage`：故事合集頁面
@@ -504,14 +513,14 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 ### 手動提交（本機腳本）
 
 ```bash
-# 提交所有頁面（預設 6 個主要頁面）
+# 提交所有頁面（預設 4 個主要頁面）
 ./indexnow-submit.sh
 
 # 只提交特定頁面
-./indexnow-submit.sh https://canslab1.github.io/lab.html
+./indexnow-submit.sh https://canslab1.github.io/index.html
 
 # 提交多個指定頁面
-./indexnow-submit.sh https://canslab1.github.io/lab.html https://canslab1.github.io/software.html
+./indexnow-submit.sh https://canslab1.github.io/index.html https://canslab1.github.io/stories.html
 ```
 
 ## 分析工具與搜尋引擎管理
@@ -562,8 +571,8 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 
 | 特性 | 使用頁面 | 說明 |
 |------|---------|------|
-| `role="region"` | index / lab / software | 主要內容區段標記為語意區域 |
-| `aria-labelledby` | index / lab / software | 區段以標題 ID 作為可存取名稱 |
+| `role="region"` | index / stories | 主要內容區段標記為語意區域 |
+| `aria-labelledby` | index / stories | 區段以標題 ID 作為可存取名稱 |
 | `aria-expanded` | stories | 故事目錄展開/收合狀態通知螢幕閱讀器 |
 | `aria-controls` | stories | 目錄按鈕與目錄內容區域的關聯 |
 | `lang="zh-TW"` | 所有頁面 | 宣告頁面主語言，輔助螢幕閱讀器發音 |
@@ -583,8 +592,6 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 | 頁面 | 優先度 | 更新頻率 |
 |------|--------|----------|
 | `/` 和 `/index.html` | 1.0 | weekly |
-| `/lab.html` | 0.9 | weekly |
-| `/software.html` | 0.9 | monthly |
 | `/stories.html` | 0.8 | monthly |
 | `/CV.pdf` | 0.7 | monthly |
 | `/llms.txt` | 0.6 | monthly |
@@ -601,6 +608,8 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 | Wiki | https://sites.google.com/view/gscott-huang |
 | NSTC 學術研究 | https://arspb.nstc.gov.tw/（查詢黃崇源） |
 | EpiRank（GitHub） | https://github.com/canslab1/EpiRank |
+| MV17（GitHub） | https://github.com/canslab1/MV17 |
+| CASMIM（GitHub） | https://github.com/canslab1/CASMIM |
 | HETA（GitHub） | https://github.com/canslab1/HETA |
 | HATA（GitHub） | https://github.com/canslab1/HATA |
 | BCAT（GitHub） | https://github.com/canslab1/BCAT |
@@ -655,7 +664,7 @@ sips --resampleWidth 800 images/my-photo.jpg
 | 新增榮譽獎項 | `shared.js` → `honorsZh[]` / `honorsEn[]` |
 | 修改導覽列連結 | `shared.js` → `navItemsZh[]` / `navItemsEn[]` |
 | 新增 Footer logo | `shared.js` → `footerLinks[]` |
-| 新增/修改研究軟體 | `software.html` 中對應的 `.software-card` 區塊 |
+| 新增/修改研究軟體 | `index.html`「程式」區段（`<section id="software">`）中的 `.software-card` 區塊 |
 | 更新履歷 | 替換 `CV.pdf` 檔案 |
 | 修改頁面樣式 | `shared.css`（共用）或頁面內 `<style>`（專屬） |
 | 更新 SEO 資訊 | `index.html` `<head>` 的 meta 標籤和 JSON-LD |
@@ -765,7 +774,7 @@ git push origin master
   3. 確認 HTML 中 `.zh` / `.en` class 正確套用
 
 ### 學術數據卡片未顯示
-- **現象**：`lab.html` 頁面只有標題，沒有 28 張卡片
+- **現象**：點選「實驗室」區段後只有標題，沒有 28 張卡片
 - **排查**：
   1. 確認 `stats-data.js` 在 `shared.js` 之前載入
   2. 確認 `stats-data.js` 語法正確（無多餘逗號或缺少引號）

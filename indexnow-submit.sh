@@ -4,7 +4,7 @@
 #  用途：通知搜尋引擎（Bing、Yandex、Naver 等）網站內容已更新
 #  使用方式：
 #    提交所有頁面：  ./indexnow-submit.sh
-#    提交單一頁面：  ./indexnow-submit.sh https://canslab1.github.io/lab.html
+#    提交單一頁面：  ./indexnow-submit.sh https://canslab1.github.io/stories.html
 # ──────────────────────────────────────────────
 
 HOST="canslab1.github.io"
@@ -16,8 +16,6 @@ ENDPOINT="https://api.indexnow.org/IndexNow"
 ALL_URLS=(
     "https://${HOST}/"
     "https://${HOST}/index.html"
-    "https://${HOST}/lab.html"
-    "https://${HOST}/software.html"
     "https://${HOST}/stories.html"
     "https://${HOST}/llms.txt"
 )

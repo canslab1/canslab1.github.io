@@ -35,8 +35,6 @@ jobs:
           URLS=(
             "https://${HOST}/"
             "https://${HOST}/index.html"
-            "https://${HOST}/lab.html"
-            "https://${HOST}/software.html"
             "https://${HOST}/stories.html"
             "https://${HOST}/llms.txt"
           )
