@@ -11,6 +11,8 @@
 - [教授簡歷](#教授簡歷)
 - [頁面結構](#頁面結構)
 - [首頁（index.html）內容區段](#首頁indexhtml內容區段)
+- [著作列表（papers-data.js）](#著作列表papers-datajs)
+- [計畫列表（projects-data.js）](#計畫列表projects-datajs)
 - [研究計畫摘要（CV.pdf 內容）](#研究計畫摘要cvpdf-內容)
 - [獎項與榮譽完整列表](#獎項與榮譽完整列表)
 - [技術架構](#技術架構)
@@ -112,15 +114,17 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 | 檔案 | 頁面 | 說明 |
 |------|------|------|
-| `index.html` | 首頁（單頁式） | 包含三個區段：介紹（社會責任與肯定）、實驗室（28 張學術成就卡片）、程式（8 套開源研究軟體） |
+| `index.html` | 首頁（單頁式） | 包含三個區段：介紹（責任與肯定）、學術（表現與成就）、程式（開源程式） |
 | `stories.html` | 家族故事 | 個人家族故事集 |
 | `CYHuang.html` | 重導向 | 自動導向 `index.html` |
 | `404.html` | 錯誤頁 | 自訂 404 頁面 |
 | `CV.pdf` | 履歷 | 完整學術履歷（PDF） |
-| `indexnow-submit.sh` | IndexNow 提交 | 批次通知搜尋引擎內容更新（Bing、Yandex、Naver） |
 | `shared.css` | 共用樣式 | 各頁面共用的 CSS 樣式表 |
-| `stats-data.js` | 卡片資料 | 28 張學術數據卡片的中英文資料 |
 | `shared.js` | 共用腳本 | 渲染函式、語言切換、導覽列/Footer、區段切換 |
+| `stats-data.js` | 卡片資料 | 28 張學術數據卡片的中英文資料 |
+| `papers-data.js` | 論文資料 | 171 篇著作列表（5 大類，中英文） |
+| `projects-data.js` | 計畫資料 | 37 件研究計畫列表（3 種角色，中英文） |
+| `build-prerender.py` | 建構工具 | 解析 JS 資料檔，產生預渲染 HTML 及 JSON-LD 結構化資料 |
 | `stories.css` | 故事樣式 | 家族故事頁面專屬 CSS |
 | `stories.js` | 故事腳本 | 家族故事頁面專屬 JS |
 
@@ -132,12 +136,12 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 - 副標：複雜適應性網絡與系統實驗室 主持人
 
 ### 導覽列
-中文：介紹 | 實驗室 | 程式 | 著作 | 計畫 | 履歷 | 維基 | 臉書 | 故事 | 相簿 | 評論 | 投書
-英文：About | Lab | Software | Papers | Projects | CV | Wiki | FB | Stories | Photos | Press | Op-Eds
+中文：介紹 | 學術 | 程式 | 著作 | 計畫 | 履歷 | 維基 | 臉書 | 故事 | 相簿 | 評論 | 投書
+英文：About | Academic | Software | Papers | Projects | CV | Wiki | FB | Stories | Photos | Press | Op-Eds
 
-前三項（介紹 / 實驗室 / 程式）為頁面內區段切換，其餘為外部連結。
+前三項（介紹 / 學術 / 程式）為頁面內區段切換，著作與計畫為頁面內滾動至對應區段，其餘為外部連結。
 
-### 區段一：社會責任與肯定（介紹，預設顯示）
+### 區段一：責任與肯定（介紹，預設顯示）
 - 2024 中國科技大學傑出校友（校史唯一先後獲頒傑出與優秀校友）
 - 2024 臺北市杏壇芬芳獎
 - 2022–2024 老松國小學生家長會第 32、33 屆會長，第 34 屆榮譽會長
@@ -150,7 +154,7 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 ### 杏壇芬芳獎推薦文
 「介紹」區段下方收錄完整的臺北市杏壇芬芳獎推薦文（中英文），記述崇源會長於老松國小學生家長會的奉獻，以及四張活動照片（`honors1–4.png`）。
 
-### 區段二：學術表現及成就（實驗室）
+### 區段二：表現與成就（學術）
 
 28 張數據卡片，涵蓋：
 - 期刊論文：44 篇
@@ -168,7 +172,7 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 > **維護提示**：數據更新請修改 `stats-data.js` 中的 `statsZh[]` 和 `statsEn[]` 陣列，不需異動 `index.html` 或 `shared.js`。
 
-### 區段三：開源研究程式（程式）
+### 區段三：開源程式（程式）
 
 展示 CANS 實驗室開發的 8 套開源研究軟體，每套皆附論文縮圖、應用截圖與 GitHub 連結。所有程式碼以 MIT 授權公開。
 
@@ -189,6 +193,35 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 長庚大學、長庚資工系、老松國小、中國科技大學、杏壇芬芳錄、ORCiD 等 logo 連結。
 
 > **維護提示**：Footer 連結更新請修改 `shared.js` 中的 `footerLinks[]` 陣列。
+
+## 著作列表（papers-data.js）
+
+首頁「著作」區段顯示黃崇源教授 171 篇著作，資料儲存於 `papers-data.js`，分為 5 大類別：
+
+| # | 類別 | 篇數 | 期別分組 |
+|---|------|------|---------|
+| 1 | SCI / SSCI / EI 等級期刊論文 | 44 | 依教職時期分 5 組 |
+| 2 | 國際會議論文 | 49 | 單一列表 |
+| 3 | 專章、學位及其它論文 | 10 | 單一列表 |
+| 4 | 國內外媒體投書及採訪 | 49 | 單一列表 |
+| 5 | 國內研討會論文 | 19 | 單一列表 |
+
+- 論文內容會由 `build-prerender.py` 預渲染為靜態 HTML，嵌入 `index.html` 的 `<div id="papers-container">`
+- 瀏覽器載入後 `shared.js` 的 `renderPapers()` 會重新渲染（支援語言切換）
+- 作者名 "Huang C.Y." 自動加粗，帶 DOI 的論文自動產生超連結
+
+## 計畫列表（projects-data.js）
+
+首頁「計畫」區段顯示黃崇源教授 37 件研究計畫，資料儲存於 `projects-data.js`，分為 3 種角色：
+
+| 角色 | 件數 | 包含資訊 |
+|------|------|---------|
+| 主持人 | 22 | 期間、來源、計畫編號、校內編號、經費、名稱 |
+| 共同主持人 | 14 | 期間、來源、計畫編號、名稱 |
+| 研究人員 | 1 | 期間、來源、計畫編號、名稱 |
+
+- 計畫內容由 `build-prerender.py` 預渲染為靜態 HTML，嵌入 `index.html` 的 `<div id="projects-container">`
+- 瀏覽器載入後 `shared.js` 的 `renderProjects()` 會重新渲染（支援語言切換）
 
 ## 研究計畫摘要（CV.pdf 內容）
 
@@ -233,20 +266,22 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 ### 檔案結構
 ```
 canslab1.github.io/
-├── index.html          # 首頁（單頁式，含介紹/實驗室/程式三個區段）
-├── stories.html        # 家族故事
-├── stories.css         # 故事頁面專屬 CSS
-├── stories.js          # 故事頁面專屬 JS
-├── shared.css          # 共用 CSS 樣式
-├── shared.js           # 共用 JS 渲染函式與區段切換
-├── stats-data.js       # 28 張學術數據卡片資料
-├── 404.html            # 自訂錯誤頁
-├── CYHuang.html        # 重導向頁
-├── CV.pdf              # 學術履歷
-├── indexnow-submit.sh  # IndexNow 批次提交腳本
-├── d22a81b3...52.txt   # IndexNow API key 驗證檔
-├── README.md           # 本文件
-├── LICENSE             # MIT 授權條款
+├── index.html           # 首頁（單頁式，含介紹/學術/程式/著作/計畫五個區段）
+├── stories.html         # 家族故事
+├── stories.css          # 故事頁面專屬 CSS
+├── stories.js           # 故事頁面專屬 JS
+├── shared.css           # 共用 CSS 樣式
+├── shared.js            # 共用 JS 渲染函式與區段切換
+├── stats-data.js        # 28 張學術數據卡片資料
+├── papers-data.js       # 171 篇著作列表資料
+├── projects-data.js     # 37 件研究計畫列表資料
+├── build-prerender.py   # 預渲染建構工具（產生靜態 HTML 及 JSON-LD）
+├── 404.html             # 自訂錯誤頁
+├── CYHuang.html         # 重導向頁
+├── CV.pdf               # 學術履歷
+├── d22a81b3...52.txt    # IndexNow API key 驗證檔
+├── README.md            # 本文件
+├── LICENSE              # MIT 授權條款
 ├── .github/workflows/
 │   └── indexnow.yml    # IndexNow 自動提交 workflow
 ├── .gitignore          # Git 忽略規則
@@ -296,6 +331,38 @@ canslab1.github.io/
 
 > **維護提示**：日後更新卡片數據只需修改此檔，不需異動 `index.html` 或 `shared.js`。
 
+#### `papers-data.js`
+171 篇著作列表（5 大類別，含期別分組），中英文標題：
+
+| 類別 | 篇數 |
+|------|------|
+| SCI / SSCI / EI 期刊論文 | 44 |
+| 國際會議論文 | 49 |
+| 專章、學位及其它論文 | 10 |
+| 國內外媒體投書及採訪 | 49 |
+| 國內研討會論文 | 19 |
+
+> **維護提示**：新增或修改論文只需編輯此檔，然後執行 `python3 build-prerender.py` 重新產生預渲染 HTML。
+
+#### `projects-data.js`
+37 件研究計畫列表（3 種角色分類），含計畫名稱、期間、經費來源、編號、金額：
+
+| 角色 | 件數 |
+|------|------|
+| 主持人 | 22 |
+| 共同主持人 | 14 |
+| 研究人員 | 1 |
+
+> **維護提示**：新增或修改計畫只需編輯此檔，然後執行 `python3 build-prerender.py` 重新產生預渲染 HTML。
+
+#### `build-prerender.py`
+Python 建構工具，解析 `papers-data.js` 和 `projects-data.js`，將論文與計畫資料預渲染為靜態 HTML 並插入 `index.html`，同時產生 JSON-LD 結構化資料（ScholarlyArticle + ResearchProject），讓所有搜尋引擎（包括不執行 JavaScript 的爬蟲）都能索引完整內容。
+
+```bash
+# 更新論文或計畫資料後，執行以下指令重新產生預渲染 HTML
+python3 build-prerender.py
+```
+
 #### `shared.js`
 共用的 JavaScript 渲染函式與資料：
 
@@ -310,9 +377,11 @@ canslab1.github.io/
 | 函式 | 用途 |
 |------|------|
 | `toggleLanguage()` | 中英文即時切換 |
-| `showSection(id, event)` | 切換介紹 / 實驗室 / 程式區段 |
+| `showSection(id, event)` | 切換介紹 / 學術 / 程式區段 |
 | `renderStats()` | 渲染學術數據卡片 |
 | `renderHonors()` | 渲染榮譽列表 |
+| `renderPapers()` | 渲染著作列表（讀取 `papers-data.js`） |
+| `renderProjects()` | 渲染計畫列表（讀取 `projects-data.js`） |
 | `renderNav()` | 渲染導覽列（高亮當前區段） |
 | `renderFooter()` | 渲染 Footer logo |
 | `initShared()` | 初始化入口（無參數，自動偵測頁面） |
@@ -326,7 +395,8 @@ canslab1.github.io/
 1. 在 `index.html` 的 `<main>` 中新增 `<section id="新區段" class="section">`
 2. 在 `shared.js` 的 `navItemsZh[]` 和 `navItemsEn[]` 加入新項目（設定 `section: '新區段'`）
 3. 如需額外樣式，在 `shared.css` 中新增
-4. 更新 `sitemap.xml` 的 `index.html` lastmod 日期
+4. 如有資料需預渲染，更新 `build-prerender.py` 並執行
+5. 更新 `sitemap.xml` 的 `index.html` lastmod 日期
 
 ## 部署與發佈流程
 
@@ -375,7 +445,7 @@ canslab1.github.io/
 - 圖片建議壓縮至 200KB 以下（詳見「圖片管理」章節）
 - 外部資源：Ahrefs Analytics、Microsoft Clarity（非同步載入，不阻塞渲染）
 
-## 開源研究軟體
+## 開源程式
 
 展示 CANS 實驗室開發的 8 套開源研究軟體（位於 `index.html`「程式」區段），每套皆附論文縮圖、應用截圖與 GitHub 連結。所有程式碼以 MIT 授權公開。
 
@@ -432,7 +502,7 @@ canslab1.github.io/
 
 | 頁面 | og:type | og:image | JSON-LD 類型 | robots |
 |------|---------|----------|-------------|--------|
-| `index.html` | `profile` | `IMG-2.jpg`（大頭照） | `WebSite` + `ProfilePage` → `Person` + `ResearchOrganization` + 8× `SoftwareSourceCode` | `index, follow` |
+| `index.html` | `profile` | `IMG-2.jpg`（大頭照） | `WebSite` + `ProfilePage` → `Person` + `ResearchOrganization` + 8× `SoftwareSourceCode` + `ItemList`（42 ScholarlyArticle + 22 ResearchProject） | `index, follow` |
 | `stories.html` | `website` | `IMG-2.jpg`（大頭照） | `CollectionPage` + `CreativeWorkSeries` | `index, follow` |
 | `404.html` | —（未設定） | —（未設定） | —（無） | `noindex, follow` |
 
@@ -447,11 +517,12 @@ canslab1.github.io/
 
 ### 結構化資料（JSON-LD）詳細
 
-**index.html**（整合三區段）：
+**index.html**（整合五區段）：
 - `WebSite`：網站名稱、語言、描述
 - `ProfilePage` → `Person`：姓名、別名（黃崇源、CY Huang、GSCOTT）、職稱、服務機構、學歷、研究領域、Google Scholar、ORCID
 - `ResearchOrganization`：CANS Lab 組織資訊，隸屬長庚大學
 - 8 個 `SoftwareSourceCode`：每套軟體的名稱、描述、程式語言、授權、GitHub 連結
+- `ItemList`：42 篇 `ScholarlyArticle`（SCI/SSCI/EI 期刊論文）+ 22 個 `ResearchProject`（主持人計畫）— 由 `build-prerender.py` 自動產生
 
 **stories.html**：
 - `CollectionPage`：故事合集頁面
@@ -495,7 +566,6 @@ IndexNow 是一個開放協議，可即時通知搜尋引擎（Bing、Yandex、N
 | 檔案 | 用途 |
 |------|------|
 | `d22a81b36ccb45e085fe6679a822df52.txt` | API key 驗證檔（放在根目錄供搜尋引擎驗證） |
-| `indexnow-submit.sh` | 本機手動批次提交腳本 |
 | `.github/workflows/indexnow.yml` | GitHub Actions 自動提交 workflow |
 
 ### 自動提交（GitHub Actions）
@@ -510,18 +580,9 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 
 > **注意**：push 時只有內容檔案（html/css/js/pdf/images）變更才會觸發，修改 README.md 等非內容檔案不會觸發。
 
-### 手動提交（本機腳本）
+### 手動提交
 
-```bash
-# 提交所有頁面（預設 4 個主要頁面）
-./indexnow-submit.sh
-
-# 只提交特定頁面
-./indexnow-submit.sh https://canslab1.github.io/index.html
-
-# 提交多個指定頁面
-./indexnow-submit.sh https://canslab1.github.io/index.html https://canslab1.github.io/stories.html
-```
+如需立即手動觸發，可到 GitHub → Actions → IndexNow Submit → Run workflow。
 
 ## 分析工具與搜尋引擎管理
 
@@ -661,6 +722,8 @@ sips --resampleWidth 800 images/my-photo.jpg
 | 操作 | 修改位置 |
 |------|---------|
 | 更新學術數據（論文數、引用數等） | `stats-data.js` → `statsZh[]` / `statsEn[]` |
+| 新增/修改著作列表 | `papers-data.js` → 編輯後執行 `python3 build-prerender.py` |
+| 新增/修改計畫列表 | `projects-data.js` → 編輯後執行 `python3 build-prerender.py` |
 | 新增榮譽獎項 | `shared.js` → `honorsZh[]` / `honorsEn[]` |
 | 修改導覽列連結 | `shared.js` → `navItemsZh[]` / `navItemsEn[]` |
 | 新增 Footer logo | `shared.js` → `footerLinks[]` |
@@ -670,7 +733,7 @@ sips --resampleWidth 800 images/my-photo.jpg
 | 更新 SEO 資訊 | `index.html` `<head>` 的 meta 標籤和 JSON-LD |
 | 更新 LLM 摘要 | `llms.txt` |
 | 更新網站地圖 | `sitemap.xml` |
-| 通知搜尋引擎內容更新 | `./indexnow-submit.sh`（推送後執行）或由 GitHub Actions 自動執行 |
+| 通知搜尋引擎內容更新 | push 後由 GitHub Actions 自動執行 |
 | 更換 Clarity 追蹤碼 | `shared.js` 底部 Clarity 初始化區塊 |
 
 ## 授權說明
@@ -796,12 +859,15 @@ git push origin master
   4. 嘗試 hard refresh 清除瀏覽器快取
 
 ### IndexNow 提交失敗
-- **現象**：`./indexnow-submit.sh` 回傳非 200/202 的 HTTP 狀態碼
-- **常見狀態碼**：
-  | HTTP 狀態碼 | 說明 | 解決方式 |
-  |------------|------|---------|
-  | 200 / 202 | 成功 | 無需處理 |
-  | 400 | 請求格式錯誤 | 檢查 JSON 格式 |
-  | 403 | key 驗證失敗 | 確認 `d22a81b3...52.txt` 已部署至網站根目錄 |
-  | 422 | URL 無效 | 確認提交的 URL 可正常存取 |
-  | 429 | 頻率限制 | 稍後再試，避免短時間內重複提交 |
+- **現象**：GitHub Actions workflow 執行失敗
+- **排查**：
+  1. 到 GitHub → Actions → IndexNow Submit 查看失敗的 run log
+  2. 確認 `d22a81b3...52.txt` 存在於網站根目錄
+  3. 常見 HTTP 狀態碼：200/202（成功）、403（key 驗證失敗）、429（頻率限制，稍後再試）
+
+### 論文/計畫預渲染失敗
+- **現象**：執行 `python3 build-prerender.py` 後解析到 0 筆資料
+- **排查**：
+  1. 確認 `papers-data.js` / `projects-data.js` 語法正確（引號、逗號、括號配對）
+  2. 確認 `index.html` 中有空的 `<div id="papers-container"></div>` 和 `<div id="projects-container"></div>`
+  3. 如容器已含預渲染內容，需先還原為空再執行
