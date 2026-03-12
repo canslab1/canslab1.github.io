@@ -22,7 +22,7 @@ const honorsEn = [
 
 const navItemsZh = [
     { label: '介紹', href: null, section: 'overview' },
-    { label: '實驗室', href: null, section: 'lab' },
+    { label: '學術', href: null, section: 'lab' },
     { label: '程式', href: null, section: 'software' },
     { label: '著作', href: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
     { label: '計畫', href: 'https://arspb.nstc.gov.tw/NSCWebFront/modules/talentSearch/talentSearch.do?action=initRsm17new&rsNo=2a2ef24adef742f58349c3c533bb7402&LANG=chi', embed: true },
@@ -37,7 +37,7 @@ const navItemsZh = [
 
 const navItemsEn = [
     { label: 'About', href: null, section: 'overview' },
-    { label: 'Lab', href: null, section: 'lab' },
+    { label: 'Academic', href: null, section: 'lab' },
     { label: 'Software', href: null, section: 'software' },
     { label: 'Papers', href: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
     { label: 'Projects', href: 'https://arspb.nstc.gov.tw/NSCWebFront/modules/talentSearch/talentSearch.do?action=initRsm17new&rsNo=2a2ef24adef742f58349c3c533bb7402&LANG=chi', embed: true },
