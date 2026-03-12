@@ -460,6 +460,65 @@ figure {
     color: #888;
 }
 
+/* ===== Projects Section ===== */
+.projects-role {
+    margin-bottom: 2rem;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+}
+
+.projects-role-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0 0 1rem 0;
+    padding-left: 1rem;
+    border-left: 4px solid #27ae60;
+}
+
+.projects-list {
+    padding-left: 2.5rem;
+    margin: 0.5rem 0 0 0;
+}
+
+.project-item {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 0.8rem;
+    padding-left: 0.4rem;
+}
+
+.project-item::marker {
+    color: #27ae60;
+    font-weight: 600;
+}
+
+.project-name {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.project-meta {
+    display: block;
+    font-size: 0.82rem;
+    color: #888;
+    line-height: 1.5;
+    margin-top: 0.15rem;
+}
+
+.project-meta .project-grant {
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    color: #999;
+}
+
+.project-amount {
+    color: #27ae60;
+    font-weight: 500;
+}
+
 /* ===== Embed Section ===== */
 #embed {
     padding: 0;
@@ -567,6 +626,10 @@ figure {
     .papers-category { padding: 1rem 1.2rem; }
     .papers-list { padding-left: 2rem; }
     .paper-item { font-size: 0.85rem; }
+
+    .projects-role { padding: 1rem 1.2rem; }
+    .projects-list { padding-left: 2rem; }
+    .project-item { font-size: 0.85rem; }
 
     .site-footer {
         position: static;

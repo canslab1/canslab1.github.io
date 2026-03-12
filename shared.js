@@ -25,7 +25,7 @@ const navItemsZh = [
     { label: '學術', href: null, section: 'lab' },
     { label: '程式', href: null, section: 'software' },
     { label: '著作', href: null, section: 'papers' },
-    { label: '計畫', href: 'https://arspb.nstc.gov.tw/NSCWebFront/modules/talentSearch/talentSearch.do?action=initRsm17new&rsNo=2a2ef24adef742f58349c3c533bb7402&LANG=chi', embed: true },
+    { label: '計畫', href: null, section: 'projects' },
     { label: '履歷', href: 'https://canslab1.github.io/CV.pdf', embed: true },
     { label: '維基', href: 'https://sites.google.com/view/gscott-huang' },
     { label: '臉書', href: 'https://www.facebook.com/gscott.huang/' },
@@ -40,7 +40,7 @@ const navItemsEn = [
     { label: 'Academic', href: null, section: 'lab' },
     { label: 'Software', href: null, section: 'software' },
     { label: 'Papers', href: null, section: 'papers' },
-    { label: 'Projects', href: 'https://arspb.nstc.gov.tw/NSCWebFront/modules/talentSearch/talentSearch.do?action=initRsm17new&rsNo=2a2ef24adef742f58349c3c533bb7402&LANG=chi', embed: true },
+    { label: 'Projects', href: null, section: 'projects' },
     { label: 'CV', href: 'https://canslab1.github.io/CV.pdf', embed: true },
     { label: 'Wiki', href: 'https://sites.google.com/view/gscott-huang' },
     { label: 'FB', href: 'https://www.facebook.com/gscott.huang/' },
@@ -75,6 +75,7 @@ function toggleLanguage() {
     renderHonors();
     renderHonorsArticle();
     renderPapers();
+    renderProjects();
     renderNav();
 }
 
@@ -411,6 +412,59 @@ function renderPapers() {
     });
 }
 
+/* ===== Projects Rendering ===== */
+
+function renderProjects() {
+    var container = document.getElementById('projects-container');
+    if (!container || typeof projectsData === 'undefined') return;
+
+    var isEn = document.documentElement.lang === 'en';
+    container.innerHTML = '';
+
+    projectsData.forEach(function(role) {
+        var roleDiv = document.createElement('div');
+        roleDiv.className = 'projects-role';
+
+        var roleTitle = document.createElement('h3');
+        roleTitle.className = 'projects-role-title';
+        roleTitle.textContent = isEn ? role.titleEn : role.titleZh;
+        roleDiv.appendChild(roleTitle);
+
+        var ol = document.createElement('ol');
+        ol.className = 'projects-list';
+
+        role.items.forEach(function(proj) {
+            var li = document.createElement('li');
+            li.className = 'project-item';
+
+            var nameSpan = document.createElement('span');
+            nameSpan.className = 'project-name';
+            nameSpan.textContent = proj.name;
+            li.appendChild(nameSpan);
+
+            var meta = document.createElement('span');
+            meta.className = 'project-meta';
+
+            var parts = [];
+            parts.push(proj.source);
+            parts.push(isEn ? 'Period: ' + proj.period : '期間：' + proj.period);
+            if (proj.amount) parts.push(proj.amount);
+
+            var grantStr = proj.grant;
+            if (proj.internal) grantStr += ' / ' + proj.internal;
+
+            meta.innerHTML = parts.join(' · ') +
+                '<br><span class="project-grant">' + grantStr + '</span>';
+
+            li.appendChild(meta);
+            ol.appendChild(li);
+        });
+
+        roleDiv.appendChild(ol);
+        container.appendChild(roleDiv);
+    });
+}
+
 /* ===== Initialization ===== */
 
 function initShared() {
@@ -421,6 +475,7 @@ function initShared() {
     renderHonors();
     renderHonorsArticle();
     renderPapers();
+    renderProjects();
     renderNav();
     renderFooter();
 }
