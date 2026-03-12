@@ -136,7 +136,9 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 - 副標：複雜適應性網絡與系統實驗室 主持人
 
 ### 導覽列
+
 中文：介紹 | 學術 | 程式 | 著作 | 計畫 | 履歷 | 維基 | 臉書 | 故事 | 相簿 | 評論 | 投書
+
 英文：About | Academic | Software | Papers | Projects | CV | Wiki | FB | Stories | Photos | Press | Op-Eds
 
 前三項（介紹 / 學術 / 程式）為頁面內區段切換，著作與計畫為頁面內滾動至對應區段，其餘為外部連結。
