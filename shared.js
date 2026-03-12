@@ -22,8 +22,8 @@ const honorsEn = [
 
 const navItemsZh = [
     { label: '介紹', href: null, section: 'overview' },
-    { label: '實驗室', href: 'https://canslab1.github.io/lab.html', page: 'lab' },
-    { label: '程式', href: 'https://canslab1.github.io/software.html', page: 'software' },
+    { label: '實驗室', href: null, section: 'lab' },
+    { label: '程式', href: null, section: 'software' },
     { label: '著作', href: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
     { label: '計畫', href: 'https://arspb.nstc.gov.tw/NSCWebFront/modules/talentSearch/talentSearch.do?action=initRsm17new&rsNo=2a2ef24adef742f58349c3c533bb7402&LANG=chi' },
     { label: '履歷', href: 'https://canslab1.github.io/CV.pdf' },
@@ -37,8 +37,8 @@ const navItemsZh = [
 
 const navItemsEn = [
     { label: 'About', href: null, section: 'overview' },
-    { label: 'Lab', href: 'https://canslab1.github.io/lab.html', page: 'lab' },
-    { label: 'Software', href: 'https://canslab1.github.io/software.html', page: 'software' },
+    { label: 'Lab', href: null, section: 'lab' },
+    { label: 'Software', href: null, section: 'software' },
     { label: 'Papers', href: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
     { label: 'Projects', href: 'https://arspb.nstc.gov.tw/NSCWebFront/modules/talentSearch/talentSearch.do?action=initRsm17new&rsNo=2a2ef24adef742f58349c3c533bb7402&LANG=chi' },
     { label: 'CV', href: 'https://canslab1.github.io/CV.pdf' },
@@ -80,12 +80,14 @@ function toggleLanguage() {
 /* ===== Section Toggle ===== */
 
 function showSection(sectionId, event) {
-    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active', 'fade-in'));
     document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
 
     const target = document.getElementById(sectionId);
     if (target) target.classList.add('active', 'fade-in');
     if (event && event.target) event.target.classList.add('active');
+
+    _activeSection = sectionId;
 
     const navContainer = document.querySelector('.nav-container');
     if (navContainer && navContainer.classList.contains('show')) {
@@ -133,8 +135,7 @@ function renderHonors() {
     });
 }
 
-/* currentPage: 'index' or 'lab' — scoped via closure in initShared */
-var _currentPage = 'index';
+var _activeSection = 'overview';
 
 function renderNav() {
     const nav = document.getElementById('main-nav');
@@ -159,37 +160,11 @@ function renderNav() {
 
     items.forEach(item => {
         if (item.section) {
-            // "介紹/Overview" button — links to index page section
-            if (_currentPage === 'index') {
-                const btn = document.createElement('button');
-                btn.className = 'nav-item active';
-                btn.textContent = item.label;
-                btn.addEventListener('click', (e) => showSection(item.section, e));
-                container.appendChild(btn);
-            } else {
-                const a = document.createElement('a');
-                a.className = 'nav-item';
-                a.href = 'https://canslab1.github.io/';
-                a.textContent = item.label;
-                container.appendChild(a);
-            }
-        } else if (item.page) {
-            if (_currentPage === item.page) {
-                const a = document.createElement('a');
-                a.className = 'nav-item active';
-                a.href = '#';
-                a.setAttribute('aria-current', 'page');
-                a.textContent = item.label;
-                container.appendChild(a);
-            } else {
-                const a = document.createElement('a');
-                a.className = 'nav-item';
-                a.href = item.href;
-                a.target = '_blank';
-                a.rel = 'noopener noreferrer';
-                a.textContent = item.label;
-                container.appendChild(a);
-            }
+            const btn = document.createElement('button');
+            btn.className = 'nav-item' + (item.section === _activeSection ? ' active' : '');
+            btn.textContent = item.label;
+            btn.addEventListener('click', (e) => showSection(item.section, e));
+            container.appendChild(btn);
         } else {
             const a = document.createElement('a');
             a.className = 'nav-item';
@@ -336,9 +311,7 @@ function renderHonorsArticle() {
 
 /* ===== Initialization ===== */
 
-function initShared(currentPage) {
-    _currentPage = currentPage || 'index';
-
+function initShared() {
     const langBtn = document.querySelector('.language-toggle');
     if (langBtn) langBtn.addEventListener('click', toggleLanguage);
 

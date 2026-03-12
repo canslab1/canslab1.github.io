@@ -304,10 +304,86 @@ figure {
     z-index: 10;
 }
 
-/* ===== Lab Page Header ===== */
-body.lab-page .header-text h1 {
-    font-size: 2rem;
-    letter-spacing: -0.02em;
+/* ===== Software Cards ===== */
+.software-list { list-style: none; padding: 0; margin: 2rem 0; }
+.software-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.software-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+.software-card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.4rem;
+}
+.software-card h3 a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+.software-card h3 a:hover { text-decoration: underline; }
+.software-desc { color: #444; line-height: 1.7; margin: 0.5rem 0; }
+.software-tags { margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.software-tag {
+    display: inline-block;
+    background: #e8f0fe;
+    color: #1a73e8;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+}
+.software-meta {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: #888;
+}
+.software-meta a { color: #1a73e8; text-decoration: none; }
+.software-meta a:hover { text-decoration: underline; }
+.software-gallery {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+}
+.software-gallery a {
+    flex: 1 1 0;
+    min-width: 0;
+}
+.software-gallery a.paper-thumb {
+    flex: 0 0 auto;
+    width: 20%;
+    min-width: 100px;
+    max-width: 160px;
+}
+.software-gallery a.paper-thumb img {
+    border: 2px solid #1a73e8;
+    box-shadow: 0 2px 8px rgba(26,115,232,0.2);
+}
+.software-ref {
+    margin-top: 0.5rem;
+    font-size: 0.82rem;
+    color: #555;
+    line-height: 1.5;
+}
+.software-ref a { color: #1a73e8; text-decoration: none; }
+.software-ref a:hover { text-decoration: underline; }
+.software-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+.software-gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 /* ===== Animation ===== */
@@ -397,6 +473,9 @@ body.lab-page .header-text h1 {
     .stats-grid {
         grid-template-columns: 1fr;
     }
+
+    .software-gallery { flex-direction: column; }
+    .software-gallery a { flex: none; }
 
     .site-footer {
         position: static;
