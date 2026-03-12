@@ -245,8 +245,8 @@ def format_paper_text(text):
     html = re.sub(r'Huang C\.Y\.(\*?)', r'<strong>Huang C.Y.\1</strong>', html)
     html = re.sub(r'黃崇源', '<strong>黃崇源</strong>', html)
 
-    html = re.sub(r'(https?://[^\s,)]+)', r'<a href="\1" target="_blank" rel="noopener noreferrer">\1</a>', html)
-    html = re.sub(r'doi:(10\.\d{4,}/[^\s,)]+)', r'<a href="https://doi.org/\1" target="_blank" rel="noopener noreferrer">doi:\1</a>', html)
+    html = re.sub(r'(https?://[^\s,)]+[^\s,).])', r'<a href="\1" target="_blank" rel="noopener noreferrer">\1</a>', html)
+    html = re.sub(r'doi:(10\.\d{4,}/[^\s,)]+[^\s,).])', r'<a href="https://doi.org/\1" target="_blank" rel="noopener noreferrer">doi:\1</a>', html)
 
     html = re.sub(r'\(([^()]*(?:SCI|SSCI|SCIE|EI)[^()]*)\)\s*\.?\s*$', r'<span class="paper-index">(\1)</span>', html)
 
@@ -333,10 +333,10 @@ def generate_jsonld(papers_data, projects_data):
                 )
                 title = title_match.group(1) if title_match else None
 
-                doi_match = re.search(r'doi:(10\.\d{4,}/[^\s,)]+)', text)
+                doi_match = re.search(r'doi:(10\.\d{4,}/[^\s,)]+[^\s,).])', text)
                 doi = doi_match.group(1) if doi_match else None
 
-                url_match = re.search(r'(https?://[^\s,)]+)', text)
+                url_match = re.search(r'(https?://[^\s,)]+[^\s,).])', text)
                 url = url_match.group(1) if url_match else (f'https://doi.org/{doi}' if doi else None)
 
                 if title and year:
