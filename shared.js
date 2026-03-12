@@ -24,7 +24,7 @@ const navItemsZh = [
     { label: '介紹', href: null, section: 'overview' },
     { label: '學術', href: null, section: 'lab' },
     { label: '程式', href: null, section: 'software' },
-    { label: '著作', href: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+    { label: '著作', href: null, section: 'papers' },
     { label: '計畫', href: 'https://arspb.nstc.gov.tw/NSCWebFront/modules/talentSearch/talentSearch.do?action=initRsm17new&rsNo=2a2ef24adef742f58349c3c533bb7402&LANG=chi', embed: true },
     { label: '履歷', href: 'https://canslab1.github.io/CV.pdf', embed: true },
     { label: '維基', href: 'https://sites.google.com/view/gscott-huang' },
@@ -39,7 +39,7 @@ const navItemsEn = [
     { label: 'About', href: null, section: 'overview' },
     { label: 'Academic', href: null, section: 'lab' },
     { label: 'Software', href: null, section: 'software' },
-    { label: 'Papers', href: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+    { label: 'Papers', href: null, section: 'papers' },
     { label: 'Projects', href: 'https://arspb.nstc.gov.tw/NSCWebFront/modules/talentSearch/talentSearch.do?action=initRsm17new&rsNo=2a2ef24adef742f58349c3c533bb7402&LANG=chi', embed: true },
     { label: 'CV', href: 'https://canslab1.github.io/CV.pdf', embed: true },
     { label: 'Wiki', href: 'https://sites.google.com/view/gscott-huang' },
@@ -74,6 +74,7 @@ function toggleLanguage() {
     renderStats();
     renderHonors();
     renderHonorsArticle();
+    renderPapers();
     renderNav();
 }
 
@@ -341,6 +342,75 @@ function renderHonorsArticle() {
     });
 }
 
+/* ===== Papers Rendering ===== */
+
+function formatPaperText(text) {
+    var html = text
+        .replace(/Huang C\.Y\.\*/g, '<strong>Huang C.Y.*</strong>')
+        .replace(/Huang C\.Y\.\b/g, '<strong>Huang C.Y.</strong>')
+        .replace(/Huang C\.Y\.,/g, '<strong>Huang C.Y.</strong>,')
+        .replace(/黃崇源/g, '<strong>黃崇源</strong>');
+
+    html = html.replace(/(https?:\/\/[^\s,)]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
+    html = html.replace(/doi:(10\.\d{4,}\/[^\s,)]+)/g, '<a href="https://doi.org/$1" target="_blank" rel="noopener noreferrer">doi:$1</a>');
+
+    html = html.replace(/\(([^()]*(?:SCI|SSCI|SCIE|EI)[^()]*)\)\s*\.?\s*$/, '<span class="paper-index">($1)</span>');
+
+    return html;
+}
+
+function renderPapers() {
+    var container = document.getElementById('papers-container');
+    if (!container || typeof papersData === 'undefined') return;
+
+    var isEn = document.documentElement.lang === 'en';
+    container.innerHTML = '';
+
+    papersData.forEach(function(category) {
+        var catDiv = document.createElement('div');
+        catDiv.className = 'papers-category';
+
+        var catTitle = document.createElement('h3');
+        catTitle.className = 'papers-category-title';
+        catTitle.textContent = isEn ? category.titleEn : category.titleZh;
+        catDiv.appendChild(catTitle);
+
+        if (category.noteZh || category.noteEn) {
+            var note = document.createElement('p');
+            note.className = 'papers-note';
+            note.textContent = isEn ? category.noteEn : category.noteZh;
+            catDiv.appendChild(note);
+        }
+
+        var globalIndex = 1;
+
+        category.periods.forEach(function(period) {
+            if (period.titleZh || period.titleEn) {
+                var periodTitle = document.createElement('h4');
+                periodTitle.className = 'papers-period-title';
+                periodTitle.textContent = isEn ? period.titleEn : period.titleZh;
+                catDiv.appendChild(periodTitle);
+            }
+
+            var ol = document.createElement('ol');
+            ol.className = 'papers-list';
+            ol.setAttribute('start', globalIndex);
+
+            period.items.forEach(function(text) {
+                var li = document.createElement('li');
+                li.className = 'paper-item';
+                li.innerHTML = formatPaperText(text);
+                ol.appendChild(li);
+                globalIndex++;
+            });
+
+            catDiv.appendChild(ol);
+        });
+
+        container.appendChild(catDiv);
+    });
+}
+
 /* ===== Initialization ===== */
 
 function initShared() {
@@ -350,6 +420,7 @@ function initShared() {
     renderStats();
     renderHonors();
     renderHonorsArticle();
+    renderPapers();
     renderNav();
     renderFooter();
 }
