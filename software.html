@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="黃崇源教授及 CANS 實驗室開發的開源研究軟體與工具：EpiRank 疫情風險分析、CASMIM SARS 疫情模擬、HETA/HATA 網絡邊分類、BCAT 意見動態模擬、SRAC-Agent 演化賽局模擬、AED2 最佳化 AED 配置。所有程式碼皆以 MIT 授權公開於 GitHub。">
-    <meta name="keywords" content="黃崇源, CANS Lab, 開源軟體, 研究工具, EpiRank, CASMIM, SARS, HETA, HATA, BCAT, SRAC-Agent, AED, complex networks, epidemic simulation, network analysis, agent-based model, evolutionary computation, open source, GitHub">
+    <meta name="description" content="黃崇源教授及 CANS 實驗室開發的開源研究軟體與工具：EpiRank 疫情風險分析、MV17 關鍵傳播者辨識、CASMIM SARS 疫情模擬、HETA/HATA 網絡邊分類、BCAT 意見動態模擬、SRAC-Agent 演化賽局模擬、AED2 最佳化 AED 配置。所有程式碼皆以 MIT 授權公開於 GitHub。">
+    <meta name="keywords" content="黃崇源, CANS Lab, 開源軟體, 研究工具, EpiRank, MV17, influential spreaders, CASMIM, SARS, HETA, HATA, BCAT, SRAC-Agent, AED, complex networks, epidemic simulation, network analysis, agent-based model, evolutionary computation, open source, GitHub">
 
     <meta name="author" content="Prof. Chung-Yuan Huang (黃崇源教授)">
     <meta name="ahrefs-site-verification" content="b1f1573b895ead5763166ba77346fa86ecb9449ac31144c6786475fa1c2e1e5f">
@@ -18,7 +18,7 @@
     <link rel="alternate" hreflang="x-default" href="https://canslab1.github.io/software.html">
 
     <meta property="og:title" content="研究軟體 Research Software | 黃崇源教授 CANS Lab">
-    <meta property="og:description" content="CANS 實驗室開發的開源研究軟體：EpiRank、CASMIM、HETA、HATA、BCAT、SRAC-Agent、AED2。MIT 授權，公開於 GitHub。">
+    <meta property="og:description" content="CANS 實驗室開發的開源研究軟體：EpiRank、MV17、CASMIM、HETA、HATA、BCAT、SRAC-Agent、AED2。MIT 授權，公開於 GitHub。">
     <meta property="og:image" content="https://canslab1.github.io/images/CANS.png">
     <meta property="og:url" content="https://canslab1.github.io/software.html">
     <meta property="og:type" content="website">
@@ -28,7 +28,7 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="研究軟體 Research Software | 黃崇源教授 CANS Lab">
-    <meta name="twitter:description" content="CANS 實驗室開發的開源研究軟體與工具（EpiRank、CASMIM、HETA、HATA、BCAT、SRAC-Agent、AED2），所有程式碼以 MIT 授權公開於 GitHub。">
+    <meta name="twitter:description" content="CANS 實驗室開發的開源研究軟體與工具（EpiRank、MV17、CASMIM、HETA、HATA、BCAT、SRAC-Agent、AED2），所有程式碼以 MIT 授權公開於 GitHub。">
     <meta name="twitter:image" content="https://canslab1.github.io/images/CANS.png">
 
     <title>研究軟體 Research Software | 黃崇源教授 CANS Lab · 長庚大學資工系</title>
@@ -183,6 +183,34 @@
                             <a href="https://doi.org/10.1038/s41598-019-41719-8" target="_blank" rel="noopener noreferrer">doi:10.1038/s41598-019-41719-8</a>
                         </div>
                         <div class="software-meta"><a href="https://github.com/canslab1/EpiRank" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License</div>
+                    </li>
+
+                    <li class="software-card">
+                        <h3><a href="https://github.com/canslab1/MV17" target="_blank" rel="noopener noreferrer">MV17 — Network Spreader Analysis Tool</a></h3>
+                        <p class="software-desc">
+                            <span class="zh">結合全域多樣性（k-shell 熵）與局部拓撲特徵的關鍵傳播者辨識工具。MV17 提出兩階段框架，先以 k-shell 分解定位節點的全域位置，再以鄰居核心值衡量局部連結品質，穩健地排序網絡中最具影響力的傳播節點。內建 11 種中心性指標比較、SIR 蒙地卡羅模擬驗證（5,000 輪）、散佈矩陣相關分析，以及 29 個經典與真實網絡資料集。</span>
+                            <span class="en">A GUI application for identifying influential spreaders in complex networks by combining global diversity (k-shell entropy) and local topology features. MV17 employs a two-step framework: first locating a node's global position via k-shell decomposition, then measuring local connection quality through neighbor coreness. Features 11 built-in centrality measures, SIR Monte Carlo validation (5,000 rounds), scatter matrix correlation analysis, and 29 classical and real-world network datasets.</span>
+                        </p>
+                        <div class="software-tags">
+                            <span class="software-tag">Network Analysis</span>
+                            <span class="software-tag">Influential Spreaders</span>
+                            <span class="software-tag">K-Shell Decomposition</span>
+                            <span class="software-tag">SIR Simulation</span>
+                            <span class="software-tag">Python</span>
+                            <span class="software-tag">GUI + CLI</span>
+                        </div>
+                        <div class="software-gallery">
+                            <a href="images/software/mv17-kcore.png" target="_blank"><img src="images/software/mv17-kcore.png" alt="MV17 K-Core Visualization of dolphins network with color-coded k-core numbers" loading="lazy"></a>
+                            <a href="images/software/mv17-attributes.png" target="_blank"><img src="images/software/mv17-attributes.png" alt="MV17 Node Attributes table showing 11 centrality measures and neighbor degree distribution" loading="lazy"></a>
+                            <a href="images/software/mv17-scatter.png" target="_blank"><img src="images/software/mv17-scatter.png" alt="MV17 scatter matrix showing pairwise correlations between centrality measures" loading="lazy"></a>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0378437115003404" target="_blank" rel="noopener noreferrer" class="paper-thumb" title="View published paper"><img src="images/software/mv17-paper.png" alt="MV17 paper first page — Physica A 2015" loading="lazy"></a>
+                        </div>
+                        <div class="software-ref">
+                            <span class="zh">論文：</span><span class="en">Paper: </span>
+                            Fu, Y.-H., Huang, C.-Y., &amp; Sun, C.-T. (2015). Using global diversity and local topology features to identify influential network spreaders. <em>Physica A: Statistical Mechanics and its Applications</em>, 433, 344–355.
+                            <a href="https://doi.org/10.1016/j.physa.2015.03.042" target="_blank" rel="noopener noreferrer">doi:10.1016/j.physa.2015.03.042</a>
+                        </div>
+                        <div class="software-meta"><a href="https://github.com/canslab1/MV17" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License</div>
                     </li>
 
                     <li class="software-card">
@@ -392,6 +420,17 @@
                 "license": "https://opensource.org/licenses/MIT",
                 "author": { "@type": "Person", "@id": "https://canslab1.github.io/#person" },
                 "keywords": ["epidemic simulation", "PageRank", "commuting network", "public health", "Taiwan"]
+            },
+            {
+                "@type": "SoftwareSourceCode",
+                "name": "MV17",
+                "alternateName": "Network Spreader Analysis Tool",
+                "description": "A GUI application for identifying influential spreaders in complex networks by combining global diversity (k-shell entropy) and local topology features into a robust two-step node ranking framework.",
+                "codeRepository": "https://github.com/canslab1/MV17",
+                "programmingLanguage": "Python",
+                "license": "https://opensource.org/licenses/MIT",
+                "author": { "@type": "Person", "@id": "https://canslab1.github.io/#person" },
+                "keywords": ["influential spreaders", "k-shell decomposition", "network analysis", "SIR simulation", "centrality measures", "complex networks"]
             },
             {
                 "@type": "SoftwareSourceCode",
