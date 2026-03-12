@@ -24,9 +24,9 @@ const navItemsZh = [
     { label: '介紹', href: null, section: 'overview' },
     { label: '實驗室', href: null, section: 'lab' },
     { label: '程式', href: null, section: 'software' },
-    { label: '著作', href: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { label: '計畫', href: 'https://arspb.nstc.gov.tw/NSCWebFront/modules/talentSearch/talentSearch.do?action=initRsm17new&rsNo=2a2ef24adef742f58349c3c533bb7402&LANG=chi' },
-    { label: '履歷', href: 'https://canslab1.github.io/CV.pdf' },
+    { label: '著作', href: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en', embed: true },
+    { label: '計畫', href: 'https://arspb.nstc.gov.tw/NSCWebFront/modules/talentSearch/talentSearch.do?action=initRsm17new&rsNo=2a2ef24adef742f58349c3c533bb7402&LANG=chi', embed: true },
+    { label: '履歷', href: 'https://canslab1.github.io/CV.pdf', embed: true },
     { label: '維基', href: 'https://sites.google.com/view/gscott-huang' },
     { label: '臉書', href: 'https://www.facebook.com/gscott.huang/' },
     { label: '故事', href: 'https://canslab1.github.io/stories.html' },
@@ -39,9 +39,9 @@ const navItemsEn = [
     { label: 'About', href: null, section: 'overview' },
     { label: 'Lab', href: null, section: 'lab' },
     { label: 'Software', href: null, section: 'software' },
-    { label: 'Papers', href: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { label: 'Projects', href: 'https://arspb.nstc.gov.tw/NSCWebFront/modules/talentSearch/talentSearch.do?action=initRsm17new&rsNo=2a2ef24adef742f58349c3c533bb7402&LANG=chi' },
-    { label: 'CV', href: 'https://canslab1.github.io/CV.pdf' },
+    { label: 'Papers', href: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en', embed: true },
+    { label: 'Projects', href: 'https://arspb.nstc.gov.tw/NSCWebFront/modules/talentSearch/talentSearch.do?action=initRsm17new&rsNo=2a2ef24adef742f58349c3c533bb7402&LANG=chi', embed: true },
+    { label: 'CV', href: 'https://canslab1.github.io/CV.pdf', embed: true },
     { label: 'Wiki', href: 'https://sites.google.com/view/gscott-huang' },
     { label: 'FB', href: 'https://www.facebook.com/gscott.huang/' },
     { label: 'Stories', href: 'https://canslab1.github.io/stories.html' },
@@ -88,6 +88,32 @@ function showSection(sectionId, event) {
     if (event && event.target) event.target.classList.add('active');
 
     _activeSection = sectionId;
+
+    /* 切回原有區段時清空 iframe 以釋放資源 */
+    const frame = document.getElementById('embed-frame');
+    if (frame) frame.src = 'about:blank';
+
+    const navContainer = document.querySelector('.nav-container');
+    if (navContainer && navContainer.classList.contains('show')) {
+        navContainer.classList.remove('show');
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showEmbed(url, event) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active', 'fade-in'));
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+
+    const embed = document.getElementById('embed');
+    if (embed) embed.classList.add('active', 'fade-in');
+
+    const frame = document.getElementById('embed-frame');
+    if (frame) frame.src = url;
+
+    if (event && event.target) event.target.classList.add('active');
+
+    _activeSection = 'embed';
 
     const navContainer = document.querySelector('.nav-container');
     if (navContainer && navContainer.classList.contains('show')) {
@@ -164,6 +190,12 @@ function renderNav() {
             btn.className = 'nav-item' + (item.section === _activeSection ? ' active' : '');
             btn.textContent = item.label;
             btn.addEventListener('click', (e) => showSection(item.section, e));
+            container.appendChild(btn);
+        } else if (item.embed) {
+            const btn = document.createElement('button');
+            btn.className = 'nav-item' + (_activeSection === 'embed' ? '' : '');
+            btn.textContent = item.label;
+            btn.addEventListener('click', (e) => showEmbed(item.href, e));
             container.appendChild(btn);
         } else {
             const a = document.createElement('a');

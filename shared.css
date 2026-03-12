@@ -386,6 +386,19 @@ figure {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+/* ===== Embed Section ===== */
+#embed {
+    padding: 0;
+    overflow: hidden;
+}
+
+#embed-frame {
+    width: 100%;
+    height: 80vh;
+    border: none;
+    display: block;
+}
+
 /* ===== Animation ===== */
 .fade-in {
     animation: fadeIn 0.5s ease-in;
