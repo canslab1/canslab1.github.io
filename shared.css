@@ -120,7 +120,7 @@ nav {
 .nav-item {
     background: none;
     border: none;
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem 0.7rem;
     font-size: 0.95rem;
     color: #2c3e50;
     cursor: pointer;
@@ -128,6 +128,10 @@ nav {
     font-weight: 500;
     white-space: nowrap;
     text-decoration: none;
+}
+
+html[lang="en"] .nav-item {
+    padding: 0.5rem 0.5rem;
 }
 
 .nav-item:hover, .nav-item.active {
@@ -658,6 +662,10 @@ figure {
 /* ===== Responsive: Tablet ===== */
 @media (max-width: 1024px) and (min-width: 769px) {
     .nav-item {
+        padding: 0.5rem 0.6rem;
+        font-size: 0.9rem;
+    }
+    html[lang="en"] .nav-item {
         padding: 0.5rem 0.4rem;
         font-size: 0.88rem;
     }
