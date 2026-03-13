@@ -30,7 +30,7 @@ const navItemsZh = [
     { label: '故事', href: 'https://canslab1.github.io/stories.html' },
     { label: '相簿', href: 'https://www.dropbox.com/scl/fo/ejwke56gkn1erv7meid4k/AHCPQXAw_RpiEn_PeiBfCuI?rlkey=b8k879fufdh98x2s3fzkatk5y&e=1&dl=0' },
     { label: '評論', href: 'https://www.google.com/search?q=%22Huang+Chung-yuan%22+%22Taipei+Times%22+%22Chang+Gung%22+site%3Awww.taipeitimes.com' },
-    { label: '投書', href: 'https://www.google.com/search?q=%22%E9%BB%83%E5%B4%87%E6%BA%90%22+%22%E8%87%AA%E7%94%B1%E6%99%82%E5%A0%B1%22+site%3Atalk.ltn.com.tw' }
+    { label: '投書', href: 'https://www.google.com/search?q=%22%E9%BB%83%E5%B4%87%E6%BA%90%22+%22%E8%87%AA%E7%94%B1%E8%A9%95%E8%AB%96%22+-%22%E5%96%84%E6%AC%BE%E6%83%A1%E7%94%A8%22&num=30&newwindow=1&sca_esv=e9a141ab1f6f5f12&biw=853&bih=783&sxsrf=ANbL-n6ztJCXh5XL37ih4MakvHtHBaO6gg%3A1773404877426&ei=zQK0aZzhGa-Qvr0PtJLKmQU&ved=0ahUKEwjc-4v-75yTAxUviK8BHTSJMlMQ4dUDCBE&uact=5&oq=%22%E9%BB%83%E5%B4%87%E6%BA%90%22+%22%E8%87%AA%E7%94%B1%E8%A9%95%E8%AB%96%22+-%22%E5%96%84%E6%AC%BE%E6%83%A1%E7%94%A8%22&gs_lp=Egxnd3Mtd2l6LXNlcnAiKiLpu4PltIfmupAiICLoh6rnlLHoqZXoq5YiIC0i5ZaE5qy-5oOh55SoIkioMVD1BVi1L3ACeACQAQCYAU-gAYgGqgECMTe4AQPIAQD4AQGYAgWgAs8BwgILEAAYgAQYsAMYogTCAggQABiwAxjvBcICBRAhGKABwgIIEAAYgAQYogTCAgUQABjvBZgDAIgGAZAGBJIHATWgB98OsgcBM7gHywHCBwMzLjLIBwWACAA&sclient=gws-wiz-serp' }
 ];
 
 const navItemsEn = [
@@ -45,7 +45,7 @@ const navItemsEn = [
     { label: 'Stories', href: 'https://canslab1.github.io/stories.html' },
     { label: 'Photos', href: 'https://www.dropbox.com/scl/fo/ejwke56gkn1erv7meid4k/AHCPQXAw_RpiEn_PeiBfCuI?rlkey=b8k879fufdh98x2s3fzkatk5y&e=1&dl=0' },
     { label: 'Press', href: 'https://www.google.com/search?q=%22Huang+Chung-yuan%22+%22Taipei+Times%22+%22Chang+Gung%22+site%3Awww.taipeitimes.com' },
-    { label: 'Op-Eds', href: 'https://www.google.com/search?q=%22%E9%BB%83%E5%B4%87%E6%BA%90%22+%22%E8%87%AA%E7%94%B1%E6%99%82%E5%A0%B1%22+site%3Atalk.ltn.com.tw' }
+    { label: 'Op-Eds', href: 'https://www.google.com/search?q=%22%E9%BB%83%E5%B4%87%E6%BA%90%22+%22%E8%87%AA%E7%94%B1%E8%A9%95%E8%AB%96%22+-%22%E5%96%84%E6%AC%BE%E6%83%A1%E7%94%A8%22&num=30&newwindow=1&sca_esv=e9a141ab1f6f5f12&biw=853&bih=783&sxsrf=ANbL-n6ztJCXh5XL37ih4MakvHtHBaO6gg%3A1773404877426&ei=zQK0aZzhGa-Qvr0PtJLKmQU&ved=0ahUKEwjc-4v-75yTAxUviK8BHTSJMlMQ4dUDCBE&uact=5&oq=%22%E9%BB%83%E5%B4%87%E6%BA%90%22+%22%E8%87%AA%E7%94%B1%E8%A9%95%E8%AB%96%22+-%22%E5%96%84%E6%AC%BE%E6%83%A1%E7%94%A8%22&gs_lp=Egxnd3Mtd2l6LXNlcnAiKiLpu4PltIfmupAiICLoh6rnlLHoqZXoq5YiIC0i5ZaE5qy-5oOh55SoIkioMVD1BVi1L3ACeACQAQCYAU-gAYgGqgECMTe4AQPIAQD4AQGYAgWgAs8BwgILEAAYgAQYsAMYogTCAggQABiwAxjvBcICBRAhGKABwgIIEAAYgAQYogTCAgUQABjvBZgDAIgGAZAGBJIHATWgB98OsgcBM7gHywHCBwMzLjLIBwWACAA&sclient=gws-wiz-serp' }
 ];
 
 /* ===== Footer Data ===== */
