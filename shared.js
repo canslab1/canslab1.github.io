@@ -21,13 +21,13 @@ const honorsEn = [
 /* ===== Navigation Data ===== */
 
 const navItemsZh = [
-    { label: '介紹', href: null, section: 'overview' },
+    { label: '榮譽', href: null, section: 'overview' },
     { label: '學術', href: null, section: 'lab' },
     { label: '程式', href: null, section: 'software' },
     { label: '著作', href: null, section: 'papers' },
     { label: '計畫', href: null, section: 'projects' },
     { label: '履歷', href: 'https://canslab1.github.io/CV.pdf', embed: true },
-    { label: '維基', href: null, section: 'bio' },
+    { label: '介紹', href: null, section: 'bio' },
     { label: '臉書', href: 'https://www.facebook.com/gscott.huang/' },
     { label: '故事', href: 'https://canslab1.github.io/stories.html' },
     { label: '相簿', href: 'https://www.dropbox.com/scl/fo/ejwke56gkn1erv7meid4k/AHCPQXAw_RpiEn_PeiBfCuI?rlkey=b8k879fufdh98x2s3fzkatk5y&e=1&dl=0' },
@@ -36,13 +36,13 @@ const navItemsZh = [
 ];
 
 const navItemsEn = [
-    { label: 'About', href: null, section: 'overview' },
+    { label: 'Honors', href: null, section: 'overview' },
     { label: 'Academic', href: null, section: 'lab' },
     { label: 'Software', href: null, section: 'software' },
     { label: 'Papers', href: null, section: 'papers' },
     { label: 'Projects', href: null, section: 'projects' },
     { label: 'CV', href: 'https://canslab1.github.io/CV.pdf', embed: true },
-    { label: 'Bio', href: null, section: 'bio' },
+    { label: 'About', href: null, section: 'bio' },
     { label: 'FB', href: 'https://www.facebook.com/gscott.huang/' },
     { label: 'Stories', href: 'https://canslab1.github.io/stories.html' },
     { label: 'Photos', href: 'https://www.dropbox.com/scl/fo/ejwke56gkn1erv7meid4k/AHCPQXAw_RpiEn_PeiBfCuI?rlkey=b8k879fufdh98x2s3fzkatk5y&e=1&dl=0' },
