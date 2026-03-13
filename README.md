@@ -110,13 +110,16 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 ## 頁面結構
 
-本網站採用**單頁式架構**（Single Page Application），`index.html` 包含五個內容區段（介紹 / 學術 / 程式 / 著作 / 計畫），前三項透過導覽列按鈕切換，著作與計畫透過滾動至對應區段，不重新載入頁面。
+本網站採用**單頁式架構**（Single Page Application），`index.html` 包含六個內容區段（介紹 / 學術 / 程式 / 著作 / 計畫 / 維基），透過導覽列按鈕切換，不重新載入頁面。
 
 | 檔案 | 頁面 | 說明 |
 |------|------|------|
-| `index.html` | 首頁（單頁式） | 包含三個區段：介紹（責任與肯定）、學術（表現與成就）、程式（開源程式） |
+| `index.html` | 首頁（單頁式） | 包含六個區段：介紹（責任與肯定）、學術（表現與成就）、程式（開源程式）、著作（著作目錄）、計畫（計畫列表）、維基（簡短自傳） |
 | `stories.html` | 家族故事 | 個人家族故事集 |
 | `404.html` | 錯誤頁 | 自訂 404 頁面 |
+| `CYHuang.html` | 重導向頁 | 已移至 `index.html#papers`（`noindex`、`meta refresh`、`canonical`） |
+| `software.html` | 重導向頁 | 已移至 `index.html#software`（`noindex`、`meta refresh`、`canonical`） |
+| `lab.html` | 重導向頁 | 已移至 `index.html#lab`（`noindex`、`meta refresh`、`canonical`） |
 | `CV.pdf` | 履歷 | 完整學術履歷（PDF） |
 | `shared.css` | 共用樣式 | 各頁面共用的 CSS 樣式表 |
 | `shared.js` | 共用腳本 | 渲染函式、語言切換、導覽列/Footer、區段切換 |
@@ -138,9 +141,9 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 中文：介紹 | 學術 | 程式 | 著作 | 計畫 | 履歷 | 維基 | 臉書 | 故事 | 相簿 | 評論 | 投書
 
-英文：About | Academic | Software | Papers | Projects | CV | Wiki | FB | Stories | Photos | Press | Op-Eds
+英文：About | Academic | Software | Papers | Projects | CV | Bio | FB | Stories | Photos | Press | Op-Eds
 
-前三項（介紹 / 學術 / 程式）為頁面內區段切換，著作與計畫為頁面內滾動至對應區段，其餘為外部連結。
+前六項（介紹 / 學術 / 程式 / 著作 / 計畫 / 維基）為頁面內區段切換，履歷為嵌入式 PDF 檢視，其餘為外部連結。
 
 ### 區段一：責任與肯定（介紹，預設顯示）
 - 2024 中國科技大學傑出校友（校史唯一先後獲頒傑出與優秀校友）
@@ -189,6 +192,12 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 | **AED2** | 使用基因演算法最佳化 AED 配置地點 | C++ / Python | [canslab1/AED2](https://github.com/canslab1/AED2) |
 
 > **維護提示**：軟體項目更新請直接修改 `index.html` 中「程式」區段（`<section id="software">`）的 `.software-card` 區塊。
+
+### 區段四：簡短自傳（維基）
+
+顯示黃崇源教授的中英文簡短自傳，內容涵蓋教育背景、教職經歷、研究興趣及學術成就。
+
+> **維護提示**：自傳內容更新請修改 `shared.js` 中的 `bioZh[]` 和 `bioEn[]` 陣列。
 
 ### Footer
 長庚大學、長庚資工系、老松國小、中國科技大學、杏壇芬芳錄、ORCiD 等 logo 連結。
@@ -278,6 +287,9 @@ canslab1.github.io/
 ├── projects-data.js     # 37 件研究計畫列表資料
 ├── build-prerender.py   # 預渲染建構工具（產生靜態 HTML 及 JSON-LD）
 ├── 404.html             # 自訂錯誤頁
+├── CYHuang.html         # 重導向頁（→ index.html#papers）
+├── software.html        # 重導向頁（→ index.html#software）
+├── lab.html             # 重導向頁（→ index.html#lab）
 ├── CV.pdf               # 學術履歷
 ├── d22a81b3...52.txt    # IndexNow API key 驗證檔
 ├── README.md            # 本文件
@@ -650,12 +662,15 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 
 ## 網站地圖（sitemap.xml）
 
-| 頁面 | 優先度 | 更新頻率 |
-|------|--------|----------|
-| `/` 和 `/index.html` | 1.0 | weekly |
-| `/stories.html` | 0.8 | monthly |
-| `/CV.pdf` | 0.7 | monthly |
-| `/llms.txt` | 0.6 | monthly |
+| 頁面 | 優先度 | 更新頻率 | 備註 |
+|------|--------|----------|------|
+| `/` 和 `/index.html` | 1.0 | weekly | |
+| `/stories.html` | 0.8 | monthly | |
+| `/CV.pdf` | 0.7 | monthly | |
+| `/llms.txt` | 0.6 | monthly | |
+| `/CYHuang.html` | 0.1 | never | 重導向至 `index.html#papers` |
+| `/software.html` | 0.1 | never | 重導向至 `index.html#software` |
+| `/lab.html` | 0.1 | never | 重導向至 `index.html#lab` |
 
 ## 外部連結
 
@@ -724,6 +739,7 @@ sips --resampleWidth 800 images/my-photo.jpg
 | 新增/修改著作列表 | `papers-data.js` → 編輯後執行 `python3 build-prerender.py` |
 | 新增/修改計畫列表 | `projects-data.js` → 編輯後執行 `python3 build-prerender.py` |
 | 新增榮譽獎項 | `shared.js` → `honorsZh[]` / `honorsEn[]` |
+| 更新簡短自傳 | `shared.js` → `bioZh[]` / `bioEn[]` |
 | 修改導覽列連結 | `shared.js` → `navItemsZh[]` / `navItemsEn[]` |
 | 新增 Footer logo | `shared.js` → `footerLinks[]` |
 | 新增/修改研究軟體 | `index.html`「程式」區段（`<section id="software">`）中的 `.software-card` 區塊 |

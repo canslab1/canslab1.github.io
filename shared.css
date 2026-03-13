@@ -261,6 +261,15 @@ main {
     color: #555;
 }
 
+/* Biography */
+.bio-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #555;
+    text-indent: 2em;
+}
+
 figure {
     margin: 2rem 0;
 }

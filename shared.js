@@ -27,7 +27,7 @@ const navItemsZh = [
     { label: '著作', href: null, section: 'papers' },
     { label: '計畫', href: null, section: 'projects' },
     { label: '履歷', href: 'https://canslab1.github.io/CV.pdf', embed: true },
-    { label: '維基', href: 'https://sites.google.com/view/gscott-huang' },
+    { label: '維基', href: null, section: 'bio' },
     { label: '臉書', href: 'https://www.facebook.com/gscott.huang/' },
     { label: '故事', href: 'https://canslab1.github.io/stories.html' },
     { label: '相簿', href: 'https://www.dropbox.com/scl/fo/ejwke56gkn1erv7meid4k/AHCPQXAw_RpiEn_PeiBfCuI?rlkey=b8k879fufdh98x2s3fzkatk5y&e=1&dl=0' },
@@ -42,7 +42,7 @@ const navItemsEn = [
     { label: 'Papers', href: null, section: 'papers' },
     { label: 'Projects', href: null, section: 'projects' },
     { label: 'CV', href: 'https://canslab1.github.io/CV.pdf', embed: true },
-    { label: 'Wiki', href: 'https://sites.google.com/view/gscott-huang' },
+    { label: 'Bio', href: null, section: 'bio' },
     { label: 'FB', href: 'https://www.facebook.com/gscott.huang/' },
     { label: 'Stories', href: 'https://canslab1.github.io/stories.html' },
     { label: 'Photos', href: 'https://www.dropbox.com/scl/fo/ejwke56gkn1erv7meid4k/AHCPQXAw_RpiEn_PeiBfCuI?rlkey=b8k879fufdh98x2s3fzkatk5y&e=1&dl=0' },
@@ -74,6 +74,7 @@ function toggleLanguage() {
     renderStats();
     renderHonors();
     renderHonorsArticle();
+    renderBio();
     renderPapers();
     renderProjects();
     renderNav();
@@ -297,6 +298,34 @@ const honorsFigures = [
     }
 ];
 
+/* ===== Biography Data ===== */
+
+const bioZh = [
+    '\u9ec3\u5d07\u6e90\u535a\u58eb\uff081970\u5e748\u670813\u65e5\u751f\uff09\u64d4\u4efb\u591a\u9805\u8077\u52d9\uff0c\u5305\u62ec\u5927\u5b78\u6559\u6388\u3001\u8cc7\u8a0a\u79d1\u5b78\u5bb6\u3001\u91ab\u7642\u4e2d\u5fc3\u7814\u7a76\u54e1\u53ca\u4e0a\u5e02\u516c\u53f8\u7368\u7acb\u8463\u4e8b\u3002\u9ec3\u535a\u58eb\u76ee\u524d\u5c45\u4f4f\u5728\u81fa\u5317\u5e02\u842c\u83ef\u5340\uff0c\u64d4\u4efb\u9577\u5e9a\u5927\u5b78\u8cc7\u8a0a\u5de5\u7a0b\u5b78\u7cfb\u6559\u6388\uff0c\u540c\u6642\u517c\u4efb\u4eba\u5de5\u667a\u6167\u5b78\u7a0b\u8207\u7814\u7a76\u6240\u3001\u4eba\u5de5\u667a\u6167\u7814\u7a76\u4e2d\u5fc3\u5408\u8058\u6559\u6388\u7b49\u8077\u52d9\u3002',
+    '1985\u5e74\uff0c\u4ed6\u8003\u5165\u4e2d\u570b\u5de5\u5546\u5c08\u6821\u96fb\u5b50\u8cc7\u6599\u8655\u7406\u79d1\uff0c\u5728\u5168\u8077\u5de5\u4f5c\u7684\u540c\u6642\uff0c\u6b77\u7d93\u4e03\u5e74\u534a\u5de5\u534a\u8b80\u5b8c\u6210\u5b78\u58eb\u5b78\u4f4d\u3002\u7562\u696d\u5f8c\uff0c\u4ed6\u5728\u6f8e\u6e56\u9632\u885b\u53f8\u4ee4\u90e8\u670d\u5169\u5e74\u7fa9\u52d9\u5175\u5f79\uff0c\u7136\u5f8c\u5728\u5b87\u535a\u96fb\u8166\uff08\u81fa\u7063\uff09\u6709\u9650\u516c\u53f8\u64d4\u4efb\u56db\u5e74\u7684\u8edf\u9ad4\u5de5\u7a0b\u5e2b\u30021998\u5e74\uff0c\u4ed6\u8003\u53d6\u65b0\u7af9\u570b\u7acb\u4ea4\u901a\u5927\u5b78\u8a08\u7b97\u6a5f\u8cc7\u8a0a\u79d1\u5b78\u6240\uff0c\u4e26\u65bc2000\u5e74\u82072005\u5e74\u5206\u5225\u7372\u5f97\u78a9\u58eb\u548c\u535a\u58eb\u5b78\u4f4d\u3002\u5728\u653b\u8b80\u535a\u58eb\u5b78\u4f4d\u671f\u9593\uff0c\u64d4\u4efb\u4e2d\u570b\u79d1\u6280\u5927\u5b78\u8cc7\u8a0a\u5de5\u7a0b\u5b78\u7cfb\u5c08\u4efb\u8b1b\u5e2b\u30022006\u5e74\uff0c\u4ed6\u88ab\u6388\u4e88\u4e2d\u83ef\u6c11\u570b\u659b\u9676\u659b\u5b78\u6703\u5b78\u8853\u69ae\u8b7d\u6703\u54e1\u8cc7\u683c\u3002\u7372\u5f97\u535a\u58eb\u5b78\u4f4d\u5f8c\uff0c\u9ec3\u5d07\u6e90\u5728\u5143\u57f9\u91ab\u79d1\u5927\u5b78\u8cc7\u8a0a\u5de5\u7a0b\u5b78\u7cfb\u64d4\u4efb\u4e00\u5e74\u7684\u5c08\u4efb\u52a9\u7406\u6559\u6388\uff0c\u4e26\u517c\u4efb\u7cfb\u4e3b\u4efb\u548c\u751f\u7269\u91ab\u5b78\u8cc7\u8a0a\u6280\u8853\u5b78\u7fa4\u7684\u526f\u57f7\u884c\u9577\u3002\u81ea2006\u5e74\u8d77\uff0c\u9ec3\u535a\u58eb\u64d4\u4efb\u9577\u5e9a\u5927\u5b78\u8cc7\u8a0a\u5de5\u7a0b\u5b78\u7cfb\u5c08\u4efb\u52a9\u7406\u6559\u6388\uff0c\u517c\u4efb\u8cc7\u8a0a\u4e2d\u5fc3\u6559\u5b78\u670d\u52d9\u7d44\u7d44\u9577\u30022010\u5e74\u664b\u965e\u526f\u6559\u6388\uff0c2015\u5e74\u664b\u965e\u6b63\u6559\u6388\u3002\u81ea2019\u5e748\u6708\u8d77\uff0c\u4ed6\u5728\u9577\u5e9a\u7d00\u5ff5\u91ab\u9662\u795e\u7d93\u5167\u79d1\u64d4\u4efb\u806f\u5408\u8058\u4efb\u7814\u7a76\u54e1\u3002',
+    '\u9ec3\u535a\u58eb\u76ee\u524d\u7684\u7814\u7a76\u8208\u8da3\u5305\u62ec\u8907\u96dc\u7cfb\u7d71\u8a08\u7b97\u5efa\u6a21\u8207\u6a21\u64ec\u3001\u793e\u6703\u5efa\u6a21\u8207\u6a21\u64ec\u53ca\u6d41\u884c\u75c5\u50b3\u64ad\u52d5\u529b\u5b78\u3002\u4ed6\u7684\u7814\u7a76\u7d50\u5408\u4e86\u907a\u50b3\u6f14\u7b97\u6cd5\u3001\u5b78\u7fd2\u5206\u985e\u7cfb\u7d71\u3001\u8907\u96dc\u7db2\u7d61\u5206\u6790\u7b49\u4eba\u5de5\u667a\u6167\u65b9\u9762\u7684\u6700\u65b0\u7814\u7a76\u6210\u679c\u3002\u4ed6\u7684\u7b2c\u4e00\u7bc7\u5b78\u8853\u8ad6\u6587\uff08\u95dc\u65bcSARS\u906e\u5236\u653f\u7b56\u7684\u6709\u6548\u6027\uff09\u767c\u8868\u57282004\u5e74\u7684\u5b78\u8853\u671f\u520aJASSS\u4e0a\u3002\u6b64\u5f8c\uff0c\u4ed6\u767c\u8868\u4e86172\u7bc7\u5b78\u8853\u8ad6\u6587\uff0c\u5176\u4e2d44\u7bc7\u88abSCI/SSCI\u6536\u9304\uff0c50\u7bc7\u767c\u8868\u5728\u570b\u969b\u6703\u8b70\u8ad6\u6587\u96c6\u4e0a\uff0c10\u7bc7\u767c\u8868\u5728\u66f8\u7c4d\u7ae0\u7bc0\u4e2d\uff0c68\u7bc7\u767c\u8868\u5728\u570b\u5167\u6703\u8b70\u8ad6\u6587\u548c\u5927\u773e\u5831\u7d19\u5c08\u6b04\u6587\u7ae0\u4e2d\u3002\u6839\u64daGoogle Scholar\u7684\u7d71\u8a08\uff0c\u622a\u81f32026\u5e742\u6708\uff0c\u4ed6\u767c\u8868\u7684\u8ad6\u6587\u88ab\u5f15\u7528994\u6b21\uff08\u5176\u4e2d30\u7bc7\u6bcf\u7bc7\u88ab\u5f15\u752810\u6b21\u4ee5\u4e0a\uff09\uff0ch-index\u706218\u3002'
+];
+
+const bioEn = [
+    'The many roles played by Chung-Yuan Huang, Ph.D. (b. August 13, 1970) include university professor, information scientist, medical center research fellow, and independent director of a publicly listed company. Currently residing in the Wanhua District of Taipei, Dr. Huang is a full professor in the Department of Computer Science and Information Engineering at Chang Gung University, concurrently holding a joint appointment as professor in the Artificial Intelligence undergraduate program and research institute, and the Artificial Intelligence Research Center.',
+    'In 1985 he was admitted to the Department of Electronic Data Processing at China Junior College of Technology and Commerce, completing his bachelor\u2019s degree over seven years of part-time study while working full-time. After graduating he completed two years of mandatory military service at the Penghu Defense Command Headquarters, and then worked for four years (1994-98) as a software engineer at IPACS Computer and Service (Taiwan) Ltd. In 1998 he was accepted into the Department of Computer Information Science of National Chiao Tung University in Hsinchu, where he earned his master\u2019s (2000) and doctoral degrees (2005). During his doctoral studies he served as a full-time lecturer in the Department of Computer Science and Information Engineering at China University of Technology. In 2006 he was awarded membership in the Republic of China Phi Tau Phi Scholastic Honor Society. After receiving his Ph.D., Chung-Yuan spent one year as a full-time assistant professor in the Department of Computer Science and Information Engineering at Yuanpei University of Medical Technology, also serving as department head and Deputy Chief Executive Officer of the school\u2019s Biomedical Information Technology Cluster. Since 2006, Dr. Huang has been a full-time assistant professor in the Department of Computer Science and Information Engineering at Chang Gung University, and head of the university\u2019s Computer Center Instructional Services Group. He was promoted to associate professor in 2010 and full professor in 2015. Since August 2019 he has fulfilled a joint appointment as a researcher in the Department of Neurology at Chang Gung Memorial Hospital.',
+    'Dr. Huang\u2019s current research interests include computational modeling and simulation of complex systems, social modeling and simulation, and epidemic transmission dynamics. His research increasingly incorporates the latest findings in genetic algorithms, learning classifier systems, complex network analysis, and other aspects of artificial intelligence. His first academic paper (on the effectiveness of SARS containment policies) appeared in a 2004 edition of the Journal of Artificial Societies and Social Simulation. Since then, he has published 172 research papers, including 44 indexed by SCI/SSCI, 50 in international conference proceedings, 10 book chapters, and 68 domestic conference papers and mass-circulation newspaper op-eds. According to Google Scholar, as of February 2026 his publications have been cited 994 times (30 of them more than ten times each), with an h-index of 18.'
+];
+
+function renderBio() {
+    const container = document.getElementById('bio-content');
+    if (!container) return;
+    const isEn = document.documentElement.lang === 'en';
+    const paragraphs = isEn ? bioEn : bioZh;
+    container.innerHTML = '';
+    paragraphs.forEach(text => {
+        const p = document.createElement('p');
+        p.className = 'bio-paragraph';
+        p.textContent = text;
+        container.appendChild(p);
+    });
+}
+
 function renderHonorsArticle() {
     const container = document.getElementById('honors-article');
     if (!container) return;
@@ -472,6 +501,7 @@ function initShared() {
     renderStats();
     renderHonors();
     renderHonorsArticle();
+    renderBio();
     renderPapers();
     renderProjects();
     renderNav();
