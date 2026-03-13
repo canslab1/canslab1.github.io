@@ -6,7 +6,6 @@ const honorsZh = [
     '<span class="honors-highlight">臺北市老松國民小學學生家長會</span><br>2024.10 榮膺第 34 屆榮譽會長<br>2023.10 擔任臺北市小聯會常務理事<br>2022.10 擔任第 32 和 33 屆會長<br>113 學年起提供畢業生榮譽會長獎，鼓勵多元學習表現優異學童',
     '<span class="honors-highlight">所羅門股份有限公司</span><br>2022.06 榮膺第十二屆董事會獨立董事<br>2022.06 擔任薪酬、審計、永續發展委員',
     '<span class="honors-highlight">中華民國斐陶斐榮譽學會獎</span><br>2006.06 榮獲國立交通大學公開頒發<br>表彰卓越學術成就與優異品德操守',
-    '<span class="honors-highlight">老松國小傑出校友貢獻獎推薦文</span><br>學求優，行求良，回饋母校添光彩',
     '<span class="honors-highlight">臺北市杏壇芬芳獎推薦文</span><br>源源不絕無私大愛，守護美好優質老松'
 ];
 
@@ -16,7 +15,6 @@ const honorsEn = [
     '<span class="honors-highlight">Laosong Elementary School, Taipei City</span><br>2024.10 Honorary President, 34th Parents&#39; Association<br>2022.10-2024.10 President of the 32nd and 33rd Parents&#39; Association<br>Starting from the 113th Academic Year, the Honorary PTA President\'s Award will be presented to graduating students',
     '<span class="honors-highlight">Solomon Technology Corporation</span><br>2022.06 Served as Independent Director on the 12th Board of Directors of Solomon Co., Ltd.<br>2022.06 Served on the Compensation, Audit, and Sustainability Committees of the 12th Board of Directors of Solomon Co., Ltd.',
     '<span class="honors-highlight">Phi Tau Phi Honor Award</span><br>2006.06 Awarded by National Chiao Tung University,<br>in recognition of academic excellence and exemplary character',
-    '<span class="honors-highlight">Recommendation for Lao-Song Elementary Distinguished Alumni Award</span><br>Excellence in learning, integrity in action, giving back to alma mater',
     '<span class="honors-highlight">Recommendation Article for the Taipei Honored contributors to education</span>'
 ];
 
