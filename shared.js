@@ -361,7 +361,7 @@ function renderAlumniArticle() {
     const p = document.createElement('p');
     p.className = 'honors-paragraph';
     paragraphs.forEach((text, i) => {
-        p.appendChild(document.createElement('br'));
+        if (i > 0) p.appendChild(document.createElement('br'));
         p.appendChild(document.createTextNode('\u2003\u2003' + text));
         if (i < paragraphs.length - 1) p.appendChild(document.createElement('br'));
     });
@@ -380,7 +380,7 @@ function renderHonorsArticle() {
     const p = document.createElement('p');
     p.className = 'honors-paragraph';
     paragraphs.forEach((text, i) => {
-        p.appendChild(document.createElement('br'));
+        if (i > 0) p.appendChild(document.createElement('br'));
         p.appendChild(document.createTextNode('\u2003\u2003' + text));
         if (i < paragraphs.length - 1) p.appendChild(document.createElement('br'));
     });
