@@ -11,7 +11,7 @@ const honorsZh = [
 const honorsEn = [
     '<span class="honors-highlight">China University of Technology</span><br>2024.11 Distinguished Alumni Award<br>2000.11 Outstanding Alumni Award<br>the only recipient in university history of both Distinguished and Outstanding Alumni honors.',
     '<span class="honors-highlight">2024.10 Taipei Honored Contributors to Education</span><br>Bottomless Devotion to Taipei Lao-Song Elementary School',
-    '<span class="honors-highlight">Laosong Elementary School, Taipei City</span><br>2024.10 Honorary President, 34th Parents&#39; Association<br>2022.10-2024.10 President of the 32nd and 33rd Parents&#39; Association<br>Starting from the 113th Academic Year, established the Honorary PTA President\'s Award, one recipient per class, recognizing graduating students with outstanding performance in diverse learning',
+    '<span class="honors-highlight">Laosong Elementary School, Taipei City</span><br>2024.10 Honorary President, 34th Parents&#39; Association<br>2022.10-2024.10 President of the 32nd and 33rd Parents&#39; Association<br>Starting from the 113th Academic Year, the Honorary PTA President\'s Award will be presented to graduating students',
     '<span class="honors-highlight">Solomon Technology Corporation</span><br>2022.06 Served as Independent Director on the 12th Board of Directors of Solomon Co., Ltd.<br>2022.06 Served on the Compensation, Audit, and Sustainability Committees of the 12th Board of Directors of Solomon Co., Ltd.',
     '<span class="honors-highlight">Phi Tau Phi Honor Award</span><br>2006.06 Awarded by National Chiao Tung University,<br>in recognition of academic excellence and exemplary character'
 ];
