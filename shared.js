@@ -6,6 +6,7 @@ const honorsZh = [
     '<span class="honors-highlight">臺北市老松國民小學學生家長會</span><br>2024.10 榮膺第 34 屆榮譽會長<br>2023.10 擔任臺北市小聯會常務理事<br>2022.10 擔任第 32 和 33 屆會長<br>113 學年起提供畢業生榮譽會長獎，鼓勵多元學習表現優異學童',
     '<span class="honors-highlight">所羅門股份有限公司</span><br>2022.06 榮膺第十二屆董事會獨立董事<br>2022.06 擔任薪酬、審計、永續發展委員',
     '<span class="honors-highlight">中華民國斐陶斐榮譽學會獎</span><br>2006.06 榮獲國立交通大學公開頒發<br>表彰卓越學術成就與優異品德操守',
+    '<span class="honors-highlight">老松國小傑出校友貢獻獎推薦文</span><br>學求優，行求良，回饋母校添光彩',
     '<span class="honors-highlight">臺北市杏壇芬芳獎推薦文</span><br>源源不絕無私大愛，守護美好優質老松'
 ];
 
@@ -15,6 +16,7 @@ const honorsEn = [
     '<span class="honors-highlight">Laosong Elementary School, Taipei City</span><br>2024.10 Honorary President, 34th Parents&#39; Association<br>2022.10-2024.10 President of the 32nd and 33rd Parents&#39; Association<br>Starting from the 113th Academic Year, the Honorary PTA President\'s Award will be presented to graduating students',
     '<span class="honors-highlight">Solomon Technology Corporation</span><br>2022.06 Served as Independent Director on the 12th Board of Directors of Solomon Co., Ltd.<br>2022.06 Served on the Compensation, Audit, and Sustainability Committees of the 12th Board of Directors of Solomon Co., Ltd.',
     '<span class="honors-highlight">Phi Tau Phi Honor Award</span><br>2006.06 Awarded by National Chiao Tung University,<br>in recognition of academic excellence and exemplary character',
+    '<span class="honors-highlight">Recommendation for Lao-Song Elementary Distinguished Alumni Award</span><br>Excellence in learning, integrity in action, giving back to alma mater',
     '<span class="honors-highlight">Recommendation Article for the Taipei Honored contributors to education</span>'
 ];
 
@@ -73,6 +75,7 @@ function toggleLanguage() {
 
     renderStats();
     renderHonors();
+    renderAlumniArticle();
     renderHonorsArticle();
     renderBio();
     renderPapers();
@@ -271,6 +274,26 @@ const honorsArticleEn = [
     'Creating positive educational environments requires cooperation among all concerned partners, as well as the presence of role models to guide forward progress. Outside of teachers and staff, President Chung-Yuan has been the most active and contributing agent to the positive development of Lao-Song Elementary. Therefore we, the teachers and students of Lao-Song, enthusiastically endorse his participation in this year\u2019s Taipei Honored Contributors to Education Selection. Both the education sector and Lao-Song Elementary will benefit from his involvement.'
 ];
 
+/* ===== Alumni Article Data ===== */
+
+const alumniArticleZh = [
+    '余等謹此誠摯推薦民國71年第37屆畢業生黃崇源教授作為臺北市老松國小創校130週年校慶傑出校友貢獻獎之表揚人選。黃教授現任長庚大學資訊工程學系教授、所羅門股份有限公司獨立董事，長期致力於人工智慧領域之學術研究和人才培育，曾於2024年同時榮獲中國科技大學傑出校友及臺北市杏壇芬芳錄兩項肯定並公開表揚，近年返回母校擔任學生家長會會長、榮譽會長。時至今日，始終秉持食果子拜樹頭、食米飯拜田頭的初衷，感謝母校恩師的極力栽培和持續鼓勵，並竭力協助可愛的學弟妹及尊敬的師長，其事蹟可謂楷模，誠為本獎最具代表性的候選人。',
+    '黃教授學術成就卓越，著作等身，歷年主持國科會與疾管署專題研究計畫逾三十件，主題涵蓋新興流行性感染症傳播動態建模、公共衛生政策評估與人工智慧前沿演算法，歷年成果廣受肯定，均發表於國際頂尖學術期刊，總引用次數破千。其研究亦曾榮獲模擬學會高被引論文獎及多項國際研討會最佳論文獎。尤其難能可貴的是，黃教授將先進電腦模擬路數應用於公衛議題，對台灣防疫政策與自動體外除顫器設置提供具體貢獻，彰顯其專業不限於學術象牙塔，更深植於社會實踐中。',
+    '促使黃教授走上學術研究卓越生涯之啟蒙點，正是老松國小。在其發表於《老松兒童》的兩篇文章中，余等得知小學三年級導師蔡幸美老師不僅每日親授課後指導，更鼓勵他閱讀大量課外讀物，種下了快速閱讀與知識探索的種子；四年級的姚嘉奉老師鼓勵其創作現代詩，五、六年級的陳艦東與呂御榮老師則以生動活潑的教學法激發其對語文的熱情與無窮想像。這些經驗奠定其邏輯思維與語文運用能力，也讓他深刻感受到教育之力量，並堅信有為者亦若是。其今日於大學場域大放異彩的邏輯思辨、研究創造與跨域敘事等能力，無一不可追溯至老松校園裡那段恩師接力栽培的童年歲月。',
+    '近年，黃教授除了持續在人工智慧領域深耕與貢獻，更全心全力投入老松國小學生家長會，歷任活動組長、志工總幹事、常務委員、副會長，乃至會長與榮譽會長，與數十位跨年級、跨組別的家長志工協同服務親師生，協助推動雙語教學、校園安全、親職講座與親子成長活動。他每日駐守會辦，親迎學生上下學、傾聽家長意見、協助教師推動校務發展，並於疫後積極復辦愛心志工旅遊、感恩餐會及敬師活動，充分展現高度參與及責任感。誠如臺北市杏壇芬芳錄推薦文所述，其將心比心、身先士卒精神屢獲校內外讚譽，家長與師長咸稱黃會長是老松國小最可靠的教育夥伴。',
+    '努力兮！努力兮！學求優，行求良\u2014這段取自老松國小校歌的優美詞句，正是黃教授長年實踐的座右銘。他不僅在學術上追求卓越優秀，也在人才培育與社會服務中實踐「行求良」之崇高理想。黃教授始終認為，自己的每一分成就與社會肯定，都是小學時期恩師的啟發與鼓舞所致。如今，他用自己的力量一點一滴回饋母校，守護母校，也用具體的行動成為眾多老松學童日後仰望的典範。',
+    '綜上所述，黃教授的學術貢獻、社會服務與母校情誼三者交織成一幅老松國小130週年校慶傑出校友貢獻獎的最佳圖像。誠盼委員明鑑，惠予肯定，使其精神風範得以為後學仿效，並為我老松130週年校慶添光增彩！'
+];
+
+const alumniArticleEn = [
+    'We enthusiastically endorse Professor Chung-Yuan Huang (\u9ec3\u5d07\u6e90\u6559\u6388) as a candidate for a Distinguished Alumni Contribution Award on the occasion of Lao-Song\u2019s 130th anniversary.',
+    'A graduate of our school\u2019s 37th cohort (1982), Professor Huang has received two similar awards. In 2024 he was honored as both Distinguished Alumnus (\u5091\u51fa\u6821\u53cb) of China University of Technology (\u4e2d\u570b\u79d1\u6280\u5927\u5b78), and a recipient of Taipei Honored Contributors to Education (\u674f\u58c7\u82ac\u82b3\u9304). He is currently a Professor in the Department of Computer Science and Information Engineering at Chang Gung University, and an Independent Director of the Solomon Technology Corporation. He has a long history of academic research, education, and social engagement in the field of artificial intelligence. Yet despite all of his responsibilities, he made time to serve as a president and honorary president of the Lao-Song Parent\u2019s Association. In that manner he continues to express his gratitude to the nurturing teachers and mentors who supported him, abiding by the principle, \u201cWhen eating fruit, thank the tree; when eating rice, thank the field.\u201d',
+    'Professor Huang has served as principal investigator for more than thirty research projects funded by Taiwan\u2019s National Science and Technology Council and Centers for Disease Control. His studies address topics such as the transmission dynamics of emerging infectious diseases, public health policy evaluation, and frontier artificial intelligence algorithms. His results have consistently been published in top-tier academic journals, with more than 1,000 citations. He received a High Impact Paper Award from the Society for Modeling and Simulation, and multiple Best Paper Awards from international conferences. Of particular note is his application of advanced computational simulation methods to public health topics, thus contributing to government policies for epidemic prevention and automated external defibrillator deployment. These accomplishments reflect his motivation for social engagement in his scholarly work.',
+    'The origins of his academic career took place at Lao-Song Elementary. In an article he wrote for Lao-Song Children, he describes the encouragement he received from his third grade teacher, Ms. Sing-Mei Tsai (\u8521\u5e78\u7f8e\u8001\u5e2b), who not only provided him with daily tutoring, but also encouraged him to read widely beyond the classroom, sowing the seeds of his curiosity and his ability to quickly absorb large amounts of written information. His fourth grade teacher, Mr. Jiia-Fong Yao (\u59da\u5609\u5949\u8001\u5e2b), encouraged him to write poetry, and the vivid and lively teaching methods of his fifth and sixth grade teachers, Mr. Jian-Dong Chen (\u9673\u8266\u6771\u8001\u5e2b) and Mr. Yuh-Rong Lyu (\u5442\u5fa1\u69ae\u8001\u5e2b), sparked his love for language. In short, the logical rigor, research creativity, and interdisciplinary fluency that define his scholarship can be traced to his dedicated teachers during his years as a Lao-Song student.',
+    'During the past seven years Professor Huang far exceeded his usual volunteer time in various Lao-Song Parent Association positions. He successively took on duties as activity director, chief volunteer coordinator, executive committee member, vice president, president, and honorary president. He collaborated with dozens of parents to promote bilingual education, campus safety campaigns, parenting seminars, and family development programs. He personally greeted students at arrival, and said goodbye at dismissal. He became a daily fixture in the school office, listening to the concerns of parents, assisting teachers with administrative tasks, and renewing volunteer appreciation banquets and teacher recognition events after the pandemic. His Taipei Honored Contributors to Education commendation cited his empathy and willingness to lead by example.',
+    'Professor Huang\u2019s support embodies the ideal of moral integrity through educational practice and civic engagement. He continues to give back to his alma mater through tangible actions that offer a strong and positive role model for Lao-Song students. As we observe the 130th anniversary of the school\u2019s distinctive educational work, we encourage the committee to recognize his contributions so that his example can continue to serve as an inspiration.'
+];
+
 const honorsFigures = [
     {
         src: 'https://canslab1.github.io/images/honors1.png',
@@ -324,6 +347,25 @@ function renderBio() {
         p.textContent = text;
         container.appendChild(p);
     });
+}
+
+function renderAlumniArticle() {
+    const container = document.getElementById('alumni-article');
+    if (!container) return;
+
+    const isEn = document.documentElement.lang === 'en';
+    const paragraphs = isEn ? alumniArticleEn : alumniArticleZh;
+
+    container.innerHTML = '';
+
+    const p = document.createElement('p');
+    p.className = 'honors-paragraph';
+    paragraphs.forEach((text, i) => {
+        p.appendChild(document.createElement('br'));
+        p.appendChild(document.createTextNode('\u2003\u2003' + text));
+        if (i < paragraphs.length - 1) p.appendChild(document.createElement('br'));
+    });
+    container.appendChild(p);
 }
 
 function renderHonorsArticle() {
@@ -500,6 +542,7 @@ function initShared() {
 
     renderStats();
     renderHonors();
+    renderAlumniArticle();
     renderHonorsArticle();
     renderBio();
     renderPapers();
