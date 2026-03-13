@@ -2,7 +2,7 @@
 
 黃崇源教授（Prof. Chung-Yuan Huang, Ph.D.）個人學術網站，託管於 GitHub Pages。
 
-> **最後更新**：2026-03-12 ｜ **更新歷史**：[Commit Log](https://github.com/canslab1/canslab1.github.io/commits/master)
+> **最後更新**：2026-03-13 ｜ **更新歷史**：[Commit Log](https://github.com/canslab1/canslab1.github.io/commits/master)
 
 ## 目錄
 
@@ -110,13 +110,12 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 ## 頁面結構
 
-本網站採用**單頁式架構**（Single Page Application），`index.html` 包含三個可切換的內容區段（介紹 / 實驗室 / 程式），透過導覽列按鈕切換，不重新載入頁面。
+本網站採用**單頁式架構**（Single Page Application），`index.html` 包含五個內容區段（介紹 / 學術 / 程式 / 著作 / 計畫），前三項透過導覽列按鈕切換，著作與計畫透過滾動至對應區段，不重新載入頁面。
 
 | 檔案 | 頁面 | 說明 |
 |------|------|------|
 | `index.html` | 首頁（單頁式） | 包含三個區段：介紹（責任與肯定）、學術（表現與成就）、程式（開源程式） |
 | `stories.html` | 家族故事 | 個人家族故事集 |
-| `CYHuang.html` | 重導向 | 自動導向 `index.html` |
 | `404.html` | 錯誤頁 | 自訂 404 頁面 |
 | `CV.pdf` | 履歷 | 完整學術履歷（PDF） |
 | `shared.css` | 共用樣式 | 各頁面共用的 CSS 樣式表 |
@@ -279,7 +278,6 @@ canslab1.github.io/
 ├── projects-data.js     # 37 件研究計畫列表資料
 ├── build-prerender.py   # 預渲染建構工具（產生靜態 HTML 及 JSON-LD）
 ├── 404.html             # 自訂錯誤頁
-├── CYHuang.html         # 重導向頁
 ├── CV.pdf               # 學術履歷
 ├── d22a81b3...52.txt    # IndexNow API key 驗證檔
 ├── README.md            # 本文件
@@ -658,7 +656,6 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 | `/stories.html` | 0.8 | monthly |
 | `/CV.pdf` | 0.7 | monthly |
 | `/llms.txt` | 0.6 | monthly |
-| `/CYHuang.html` | 0.5 | monthly |
 
 ## 外部連結
 
