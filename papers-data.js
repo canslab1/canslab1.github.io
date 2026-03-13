@@ -62,7 +62,7 @@ const papersData = [
             'Huang C.Y., Cheng C.Y., and Sun C.T. (2007) Bridge and Brick Network Motifs: Identifying Significant Building Blocks from Complex Biological Systems. Artificial Intelligence in Medicine, 41(2), 117-127. https://doi.org/10.1016/j.artmed.2007.07.006. (SCI, IF: 1.960, Rank: 28/94 [30%] in Computer Science, Artificial Intelligence, EI)',
             'Huang C.Y., Sun C.T., Cheng C.Y., and Hsieh J.L. (2007) Bridge and Brick Motifs in Complex Networks. Physica A: Statistical Mechanics and Its Applications, 377(1), 340-350. https://doi.org/10.1016/j.physa.2006.11.014. (SCI, IF: 1.772, Rank: 23/79 [30%] in Physics, Multidisciplinary, EI)',
             'Hsieh J.L., Sun C.T., Kao Y.M.G., and Huang C.Y.* (2006) Teaching through Simulation: Epidemic Dynamics and Public Health Policies. Simulation: Transactions of the Society for Modeling and Simulation International, 82(11), 731-759. https://doi.org/10.1177/0037549706074487. (SCI, IF: 0.640, Rank: 77/106 [73%] in Computer Science, Software Engineering, EI)',
-            'Chen D.J., Tsai M.J., and Huang C.Y.* (2006) UI Design Patterns Generator for Pervasive Device. WSEAS Transactions on Computers, 5(9), 2114-2121. https://www.researchgate.net/publication/221391262. (EI)',
+            'Chen D.J., Tsai M.J., and Huang C.Y.* (2006) UI Design Patterns Generator for Pervasive Device. WSEAS Transactions on Computers, 5(9), 2114-2121. (EI)',
             'Chen D.J., Tsai M.J., and Huang C.Y.* (2006) Visual Based Software Construction: Visual Requirement Authoring Tool and Visual Program Generator. WSEAS Transactions on Systems, 5(8), 1881-1888. (EI)',
                 ]
             },
@@ -78,7 +78,7 @@ const papersData = [
                 titleZh: '交通大學資訊工程學系博士生暨中國科技大學資訊工程學系講師時期',
                 titleEn: 'PhD Student, NCTU & Lecturer, China University of Technology',
                 items: [
-            'Huang C.Y., Hsieh J.L., Sun C.T., and Cheng C.Y. (2006) Teaching Epidemic and Public Health Policies through Simulation. WSEAS Transactions on Information Science and Applications, 3(5), 899-904. https://www.researchgate.net/publication/289293643. (EI)',
+            'Huang C.Y., Hsieh J.L., Sun C.T., and Cheng C.Y. (2006) Teaching Epidemic and Public Health Policies through Simulation. WSEAS Transactions on Information Science and Applications, 3(5), 899-904. (EI)',
             'Huang C.Y., Sun C.T., Hsieh J.L., Chen Y.M.A., and Lin H. (2005) A Novel Small-World Model: Using Social Mirror Identities for Epidemic Simulations. Simulation: Transactions of The Society for Modeling and Simulation International, 81(10), 671-699. https://doi.org/10.1177/0037549705061519. (SCI, IF: 0.640, Rank: 77/106 [73%] in Computer Science, Software Engineering, EI)',
             'Huang C.Y., Sun C.T., and Lin H.C. (2005) Influence of Local Information on Social Simulation in Small-World Network Models. Journal of Artificial Societies and Social Simulation, 8(4). https://www.jasss.org/8/4/8.html. (SSCI, IF: 1.101, Rank: 28/93 [31%] in Social Sciences, Interdisciplinary)',
             'Huang C.Y., Sun C.T., Hsieh J.L., and Lin H. (2004) Simulating SARS: Small-World Epidemiological Modeling and Public Health Policy Assessments. Journal of Artificial Societies and Social Simulation, 7(4). https://jasss.soc.surrey.ac.uk/7/4/2.html. (SSCI, IF: 1.101, Rank: 28/93 [31%] in Social Sciences, Interdisciplinary)',
