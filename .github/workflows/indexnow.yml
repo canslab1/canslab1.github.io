@@ -37,6 +37,9 @@ jobs:
             "https://${HOST}/index.html"
             "https://${HOST}/stories.html"
             "https://${HOST}/llms.txt"
+            "https://${HOST}/CYHuang.html"
+            "https://${HOST}/software.html"
+            "https://${HOST}/lab.html"
           )
 
           # 組合 JSON 陣列
