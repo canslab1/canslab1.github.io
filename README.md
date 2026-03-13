@@ -110,11 +110,11 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 ## 頁面結構
 
-本網站採用**單頁式架構**（Single Page Application），`index.html` 包含六個內容區段（介紹 / 學術 / 程式 / 著作 / 計畫 / 維基），透過導覽列按鈕切換，不重新載入頁面。
+本網站採用**單頁式架構**（Single Page Application），`index.html` 包含七個內容區段（介紹 / 榮譽 / 綜覽 / 著作 / 計畫 / 程式）以及內嵌 PDF 檢視（履歷），透過導覽列按鈕切換，不重新載入頁面。
 
 | 檔案 | 頁面 | 說明 |
 |------|------|------|
-| `index.html` | 首頁（單頁式） | 包含六個區段：介紹（責任與肯定）、學術（表現與成就）、程式（開源程式）、著作（著作目錄）、計畫（計畫列表）、維基（簡短自傳） |
+| `index.html` | 首頁（單頁式） | 包含七個區段：介紹（簡短自傳）、榮譽（責任與肯定 + 傑出校友推薦文 + 杏壇芬芳錄推薦文）、綜覽（28 張學術數據卡片）、著作（著作目錄）、計畫（計畫列表）、程式（開源程式），以及內嵌 PDF 檢視（履歷） |
 | `stories.html` | 家族故事 | 個人家族故事集 |
 | `404.html` | 錯誤頁 | 自訂 404 頁面 |
 | `CYHuang.html` | 重導向頁 | 已移至 `index.html#papers`（`noindex`、`meta refresh`、`canonical`） |
@@ -139,28 +139,40 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 ### 導覽列
 
-中文：介紹 | 學術 | 程式 | 著作 | 計畫 | 履歷 | 維基 | 臉書 | 故事 | 相簿 | 評論 | 投書
+中文：介紹 | 榮譽 | 綜覽 | 著作 | 計畫 | 程式 | 履歷 | 臉書 | 故事 | 相簿 | 評論 | 投書
 
-英文：About | Academic | Software | Papers | Projects | CV | Bio | FB | Stories | Photos | Press | Op-Eds
+英文：About | Honors | Overview | Papers | Projects | Software | CV | FB | Stories | Photos | Press | Op-Eds
 
-前六項（介紹 / 學術 / 程式 / 著作 / 計畫 / 維基）為頁面內區段切換，履歷為嵌入式 PDF 檢視，其餘為外部連結。
+前六項（介紹 / 榮譽 / 綜覽 / 著作 / 計畫 / 程式）為頁面內區段切換，履歷為嵌入式 PDF 檢視，其餘為外部連結。
 
-### 區段一：責任與肯定（介紹，預設顯示）
+### 區段一：簡短自傳（介紹，預設顯示）
+
+顯示黃崇源教授的中英文簡短自傳，內容涵蓋教育背景、教職經歷、研究興趣及學術成就。
+
+> **維護提示**：自傳內容更新請修改 `shared.js` 中的 `bioZh[]` 和 `bioEn[]` 陣列。
+
+### 區段二：責任與肯定（榮譽）
+
+包含三個部分：
+
+**一、責任與肯定（榮譽列表）**
 - 2024 中國科技大學傑出校友（校史唯一先後獲頒傑出與優秀校友）
 - 2024 臺北市杏壇芬芳獎
-- 2022–2024 老松國小學生家長會第 32、33 屆會長，第 34 屆榮譽會長
+- 2022–2024 老松國小學生家長會第 32、33 屆會長，第 34 屆榮譽會長（113 學年起設立畢業生榮譽會長獎，每班壹名）
 - 2022 所羅門股份有限公司獨立董事（薪酬、審計、永續發展委員）
 - 2006 中華民國斐陶斐榮譽學會獎（國立交通大學）
-- 2000 中國科技大學優秀校友
 
-> **維護提示**：榮譽更新請修改 `shared.js` 中的 `honorsZh[]` 和 `honorsEn[]` 陣列。
+**二、老松國小傑出校友推薦文**
+收錄完整的臺北市老松國小 130 週年校慶傑出校友貢獻獎推薦文（中英文）。
 
-### 杏壇芬芳獎推薦文
-「介紹」區段下方收錄完整的臺北市杏壇芬芳獎推薦文（中英文），記述崇源會長於老松國小學生家長會的奉獻，以及四張活動照片（`honors1–4.png`）。
+**三、杏壇芬芳錄推薦文**
+收錄完整的臺北市杏壇芬芳獎推薦文（中英文），記述崇源會長於老松國小學生家長會的奉獻，以及四張活動照片（`honors1–4.png`）。
 
-### 區段二：表現與成就（學術）
+> **維護提示**：榮譽列表更新請修改 `shared.js` 中的 `honorsZh[]` 和 `honorsEn[]` 陣列；傑出校友推薦文更新請修改 `alumniArticleZh[]` 和 `alumniArticleEn[]` 陣列；杏壇芬芳錄推薦文更新請修改 `honorsArticleZh[]` 和 `honorsArticleEn[]` 陣列。
 
-28 張數據卡片，涵蓋：
+### 區段三：學術數據卡片（綜覽）
+
+直接顯示 28 張數據卡片（無標題），涵蓋：
 - 期刊論文：44 篇
 - 國際研討會：50 篇
 - 專書專章：10 篇
@@ -176,7 +188,7 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 > **維護提示**：數據更新請修改 `stats-data.js` 中的 `statsZh[]` 和 `statsEn[]` 陣列，不需異動 `index.html` 或 `shared.js`。
 
-### 區段三：開源程式（程式）
+### 區段四：開源程式（程式）
 
 展示 CANS 實驗室開發的 8 套開源研究軟體，每套皆附論文縮圖、應用截圖與 GitHub 連結。所有程式碼以 MIT 授權公開。
 
@@ -192,12 +204,6 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 | **AED2** | 使用基因演算法最佳化 AED 配置地點 | C++ / Python | [canslab1/AED2](https://github.com/canslab1/AED2) |
 
 > **維護提示**：軟體項目更新請直接修改 `index.html` 中「程式」區段（`<section id="software">`）的 `.software-card` 區塊。
-
-### 區段四：簡短自傳（維基）
-
-顯示黃崇源教授的中英文簡短自傳，內容涵蓋教育背景、教職經歷、研究興趣及學術成就。
-
-> **維護提示**：自傳內容更新請修改 `shared.js` 中的 `bioZh[]` 和 `bioEn[]` 陣列。
 
 ### Footer
 長庚大學、長庚資工系、老松國小、中國科技大學、杏壇芬芳錄、ORCiD 等 logo 連結。
@@ -276,7 +282,7 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 ### 檔案結構
 ```
 canslab1.github.io/
-├── index.html           # 首頁（單頁式，含介紹/學術/程式/著作/計畫五個區段）
+├── index.html           # 首頁（單頁式，含介紹/榮譽/綜覽/著作/計畫/程式七個區段 + 內嵌 PDF）
 ├── stories.html         # 家族故事
 ├── stories.css          # 故事頁面專屬 CSS
 ├── stories.js           # 故事頁面專屬 JS
@@ -382,6 +388,9 @@ python3 build-prerender.py
 | 陣列 | 用途 | 更新時機 |
 |------|------|---------|
 | `honorsZh[]` / `honorsEn[]` | 榮譽列表 | 獲得新獎項時 |
+| `alumniArticleZh[]` / `alumniArticleEn[]` | 老松國小傑出校友推薦文 | 推薦文內容變更時 |
+| `honorsArticleZh[]` / `honorsArticleEn[]` | 杏壇芬芳錄推薦文 | 推薦文內容變更時 |
+| `bioZh[]` / `bioEn[]` | 簡短自傳 | 自傳內容更新時 |
 | `navItemsZh[]` / `navItemsEn[]` | 導覽列項目 | 新增/修改頁面連結時 |
 | `footerLinks[]` | Footer logo 連結 | 新增合作單位時 |
 
@@ -389,9 +398,13 @@ python3 build-prerender.py
 | 函式 | 用途 |
 |------|------|
 | `toggleLanguage()` | 中英文即時切換 |
-| `showSection(id, event)` | 切換介紹 / 學術 / 程式區段 |
+| `showSection(id, event)` | 切換頁面內區段（介紹 / 榮譽 / 綜覽 / 著作 / 計畫 / 程式） |
+| `showEmbed(url, event)` | 以 iframe 嵌入顯示外部頁面（履歷 PDF） |
 | `renderStats()` | 渲染學術數據卡片 |
 | `renderHonors()` | 渲染榮譽列表 |
+| `renderAlumniArticle()` | 渲染老松國小傑出校友推薦文 |
+| `renderHonorsArticle()` | 渲染杏壇芬芳錄推薦文（含 4 張照片） |
+| `renderBio()` | 渲染簡短自傳 |
 | `renderPapers()` | 渲染著作列表（讀取 `papers-data.js`） |
 | `renderProjects()` | 渲染計畫列表（讀取 `projects-data.js`） |
 | `renderNav()` | 渲染導覽列（高亮當前區段） |
@@ -401,7 +414,7 @@ python3 build-prerender.py
 ### 語言切換機制
 - 使用 `.zh` / `.en` CSS class 控制元素顯示隱藏
 - `html[lang="en"]` 時 `.en` 顯示、`.zh` 隱藏；預設中文時相反
-- 切換時同步重新渲染 stats、honors、nav（因資料陣列有中英文版本）
+- 切換時同步重新渲染 stats、honors、alumniArticle、honorsArticle、bio、papers、projects、nav（因資料陣列有中英文版本）
 
 ### 新增內容區段步驟
 1. 在 `index.html` 的 `<main>` 中新增 `<section id="新區段" class="section">`
@@ -529,7 +542,7 @@ python3 build-prerender.py
 
 ### 結構化資料（JSON-LD）詳細
 
-**index.html**（整合五區段）：
+**index.html**（整合七區段 + 內嵌 PDF）：
 - `WebSite`：網站名稱、語言、描述
 - `ProfilePage` → `Person`：姓名、別名（黃崇源、CY Huang、GSCOTT）、職稱、服務機構、學歷、研究領域、Google Scholar、ORCID
 - `ResearchOrganization`：CANS Lab 組織資訊，隸屬長庚大學
@@ -739,6 +752,8 @@ sips --resampleWidth 800 images/my-photo.jpg
 | 新增/修改著作列表 | `papers-data.js` → 編輯後執行 `python3 build-prerender.py` |
 | 新增/修改計畫列表 | `projects-data.js` → 編輯後執行 `python3 build-prerender.py` |
 | 新增榮譽獎項 | `shared.js` → `honorsZh[]` / `honorsEn[]` |
+| 更新傑出校友推薦文 | `shared.js` → `alumniArticleZh[]` / `alumniArticleEn[]` |
+| 更新杏壇芬芳錄推薦文 | `shared.js` → `honorsArticleZh[]` / `honorsArticleEn[]` |
 | 更新簡短自傳 | `shared.js` → `bioZh[]` / `bioEn[]` |
 | 修改導覽列連結 | `shared.js` → `navItemsZh[]` / `navItemsEn[]` |
 | 新增 Footer logo | `shared.js` → `footerLinks[]` |
@@ -852,7 +867,7 @@ git push origin master
   3. 確認 HTML 中 `.zh` / `.en` class 正確套用
 
 ### 學術數據卡片未顯示
-- **現象**：點選「實驗室」區段後只有標題，沒有 28 張卡片
+- **現象**：點選「綜覽」區段後沒有顯示 28 張卡片
 - **排查**：
   1. 確認 `stats-data.js` 在 `shared.js` 之前載入
   2. 確認 `stats-data.js` 語法正確（無多餘逗號或缺少引號）

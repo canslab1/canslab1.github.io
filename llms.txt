@@ -91,13 +91,14 @@ Prof. Chung-Yuan Huang (黃崇源) is a full professor in the Department of Comp
 
 ## Site Structure
 
-- / (index.html): Single-page application with six content sections:
-  - "介紹" (About): 責任與肯定 (Commitment and Recognition) — honors, awards, and the Taipei Honored Contributors to Education recommendation article (default tab)
-  - "學術" (Academic): 表現與成就 (Performance and Achievements) — 28 academic performance stat cards (publications, citations, h-index, projects, students, service, career)
-  - "程式" (Software): 開源程式 (Open-Source Software) — 8 open-source tools (EpiRank, MV17, CASMIM, HETA, HATA, BCAT, SRAC-Agent, AED2) with paper references and GitHub links
+- / (index.html): Single-page application with seven content sections plus embedded PDF viewer:
+  - "介紹" (About): 簡短自傳 (Brief Biography) — education, career, research interests, and academic achievements (default tab)
+  - "榮譽" (Honors): 責任與肯定 (Commitment and Recognition) — honors list, Lao-Song Elementary Distinguished Alumni recommendation article, and Taipei Honored Contributors to Education recommendation article with 4 photos
+  - "綜覽" (Overview): 28 academic performance stat cards (publications, citations, h-index, projects, students, service, career)
   - "著作" (Papers): 171 publications in 5 categories (44 SCI/SSCI/EI journal papers, 49 international conference papers, 10 book chapters, 49 media commentaries, 19 domestic conference papers)
   - "計畫" (Projects): 37 research projects (22 as PI, 14 as Co-PI, 1 as research member)
-  - "維基" (Bio): Brief biography — education, career, research interests, and academic achievements
+  - "程式" (Software): 開源程式 (Open-Source Software) — 8 open-source tools (EpiRank, MV17, CASMIM, HETA, HATA, BCAT, SRAC-Agent, AED2) with paper references and GitHub links
+  - "履歷" (CV): Embedded PDF viewer displaying the full academic curriculum vitae
 - /stories.html: Family Stories — 60 personal family stories spanning three generations in Taipei Wanhua
 - /CV.pdf: Full academic curriculum vitae (PDF)
 - /CYHuang.html: Redirect → index.html#papers (old publications page, now integrated)
