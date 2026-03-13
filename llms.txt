@@ -99,6 +99,3 @@ Prof. Chung-Yuan Huang (黃崇源) is a full professor in the Department of Comp
   - "計畫" (Projects): 37 research projects (22 as PI, 14 as Co-PI, 1 as research member)
 - /stories.html: Family Stories — 60 personal family stories spanning three generations in Taipei Wanhua
 - /CV.pdf: Full academic curriculum vitae (PDF)
-- /CYHuang.html: Redirect → index.html#papers (old publications page, now integrated)
-- /software.html: Redirect → index.html#software (old software page, now integrated)
-- /lab.html: Redirect → index.html#lab (old lab page, now integrated)

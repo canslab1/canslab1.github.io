@@ -117,9 +117,6 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 | `index.html` | 首頁（單頁式） | 包含三個區段：介紹（責任與肯定）、學術（表現與成就）、程式（開源程式） |
 | `stories.html` | 家族故事 | 個人家族故事集 |
 | `404.html` | 錯誤頁 | 自訂 404 頁面 |
-| `CYHuang.html` | 重導向頁 | 已移至 `index.html#papers`（`noindex`、`meta refresh`、`canonical`） |
-| `software.html` | 重導向頁 | 已移至 `index.html#software`（`noindex`、`meta refresh`、`canonical`） |
-| `lab.html` | 重導向頁 | 已移至 `index.html#lab`（`noindex`、`meta refresh`、`canonical`） |
 | `CV.pdf` | 履歷 | 完整學術履歷（PDF） |
 | `shared.css` | 共用樣式 | 各頁面共用的 CSS 樣式表 |
 | `shared.js` | 共用腳本 | 渲染函式、語言切換、導覽列/Footer、區段切換 |
@@ -281,9 +278,6 @@ canslab1.github.io/
 ├── projects-data.js     # 37 件研究計畫列表資料
 ├── build-prerender.py   # 預渲染建構工具（產生靜態 HTML 及 JSON-LD）
 ├── 404.html             # 自訂錯誤頁
-├── CYHuang.html         # 重導向頁（→ index.html#papers）
-├── software.html        # 重導向頁（→ index.html#software）
-├── lab.html             # 重導向頁（→ index.html#lab）
 ├── CV.pdf               # 學術履歷
 ├── d22a81b3...52.txt    # IndexNow API key 驗證檔
 ├── README.md            # 本文件
@@ -656,15 +650,12 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 
 ## 網站地圖（sitemap.xml）
 
-| 頁面 | 優先度 | 更新頻率 | 備註 |
-|------|--------|----------|------|
-| `/` 和 `/index.html` | 1.0 | weekly | |
-| `/stories.html` | 0.8 | monthly | |
-| `/CV.pdf` | 0.7 | monthly | |
-| `/llms.txt` | 0.6 | monthly | |
-| `/CYHuang.html` | 0.1 | never | 重導向至 `index.html#papers` |
-| `/software.html` | 0.1 | never | 重導向至 `index.html#software` |
-| `/lab.html` | 0.1 | never | 重導向至 `index.html#lab` |
+| 頁面 | 優先度 | 更新頻率 |
+|------|--------|----------|
+| `/` 和 `/index.html` | 1.0 | weekly |
+| `/stories.html` | 0.8 | monthly |
+| `/CV.pdf` | 0.7 | monthly |
+| `/llms.txt` | 0.6 | monthly |
 
 ## 外部連結
 
