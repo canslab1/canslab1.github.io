@@ -21,7 +21,7 @@ const honorsEn = [
 const navItemsZh = [
     { label: '介紹', href: null, section: 'bio' },
     { label: '榮譽', href: null, section: 'overview' },
-    { label: '學術', href: null, section: 'lab' },
+    { label: '綜覽', href: null, section: 'lab' },
     { label: '著作', href: null, section: 'papers' },
     { label: '計畫', href: null, section: 'projects' },
     { label: '程式', href: null, section: 'software' },
@@ -36,7 +36,7 @@ const navItemsZh = [
 const navItemsEn = [
     { label: 'About', href: null, section: 'bio' },
     { label: 'Honors', href: null, section: 'overview' },
-    { label: 'Academic', href: null, section: 'lab' },
+    { label: 'Overview', href: null, section: 'lab' },
     { label: 'Papers', href: null, section: 'papers' },
     { label: 'Projects', href: null, section: 'projects' },
     { label: 'Software', href: null, section: 'software' },
