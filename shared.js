@@ -164,8 +164,6 @@ function renderHonors() {
 }
 
 var _activeSection = 'bio';
-var _externalWins = {};
-
 function renderNav() {
     const nav = document.getElementById('main-nav');
     if (!nav) return;
@@ -201,18 +199,12 @@ function renderNav() {
             btn.addEventListener('click', (e) => showEmbed(item.href, e));
             container.appendChild(btn);
         } else {
-            const btn = document.createElement('button');
-            btn.className = 'nav-item';
-            btn.textContent = item.label;
-            const winName = 'canslab-' + item.label;
-            btn.addEventListener('click', () => {
-                if (!_externalWins[winName] || _externalWins[winName].closed) {
-                    _externalWins[winName] = window.open(item.href, winName);
-                } else {
-                    _externalWins[winName].focus();
-                }
-            });
-            container.appendChild(btn);
+            const a = document.createElement('a');
+            a.className = 'nav-item';
+            a.href = item.href;
+            a.target = 'canslab-' + item.label;
+            a.textContent = item.label;
+            container.appendChild(a);
         }
     });
 }
