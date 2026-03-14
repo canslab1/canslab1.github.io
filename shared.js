@@ -27,7 +27,6 @@ const navItemsZh = [
     { label: '程式', href: null, section: 'software' },
     { label: '評論', href: null, section: 'press' },
     { label: '履歷', href: 'https://canslab1.github.io/CV.pdf', embed: true },
-    { label: '臉書', href: 'https://www.facebook.com/gscott.huang/' },
     { label: '故事', href: 'https://canslab1.github.io/stories.html' },
     { label: '相簿', href: 'https://www.dropbox.com/scl/fo/ejwke56gkn1erv7meid4k/AHCPQXAw_RpiEn_PeiBfCuI?rlkey=b8k879fufdh98x2s3fzkatk5y&e=1&dl=0' }
 ];
@@ -41,7 +40,6 @@ const navItemsEn = [
     { label: 'Softwares', href: null, section: 'software' },
     { label: 'Op-Eds', href: null, section: 'press' },
     { label: 'CV', href: 'https://canslab1.github.io/CV.pdf', embed: true },
-    { label: 'FB', href: 'https://www.facebook.com/gscott.huang/' },
     { label: 'Stories', href: 'https://canslab1.github.io/stories.html' },
     { label: 'Photos', href: 'https://www.dropbox.com/scl/fo/ejwke56gkn1erv7meid4k/AHCPQXAw_RpiEn_PeiBfCuI?rlkey=b8k879fufdh98x2s3fzkatk5y&e=1&dl=0' }
 ];
@@ -54,7 +52,8 @@ const footerLinks = [
     { href: 'https://web.tlsps.tp.edu.tw/nss/p/index', label: '前往老松國小', src: 'https://canslab1.github.io/images/laosong-thumb.png', alt: '老松國小 logo' },
     { href: 'https://www.cute.edu.tw/', label: '前往中國科技大學', src: 'https://canslab1.github.io/images/cute-thumb.jpg', alt: '中國科技大學 logo' },
     { href: 'https://xingtan.tiec.tp.edu.tw/Register/Profile/20240715152009039506', label: '前往臺北市杏壇芬芳錄', src: 'https://canslab1.github.io/images/favicon-thumb.ico', alt: '臺北市杏壇芬芳錄 logo' },
-    { href: 'https://orcid.org/0000-0002-8680-6755', label: '前往ORCiD', src: 'https://orcid.org/assets/vectors/orcid.logo.icon.svg', alt: 'ORCiD logo' }
+    { href: 'https://orcid.org/0000-0002-8680-6755', label: '前往ORCiD', src: 'https://orcid.org/assets/vectors/orcid.logo.icon.svg', alt: 'ORCiD logo' },
+    { href: 'https://www.facebook.com/gscott.huang/', label: '前往 Facebook', src: 'https://canslab1.github.io/images/facebook-thumb.png', alt: 'Facebook logo' }
 ];
 
 /* ===== Language Toggle ===== */
