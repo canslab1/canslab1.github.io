@@ -39,7 +39,7 @@ const navItemsEn = [
     { label: 'Papers', href: null, section: 'papers' },
     { label: 'Projects', href: null, section: 'projects' },
     { label: 'Softwares', href: null, section: 'software' },
-    { label: 'Op-Ed', href: null, section: 'press' },
+    { label: 'Op-Eds', href: null, section: 'press' },
     { label: 'CV', href: 'https://canslab1.github.io/CV.pdf', embed: true },
     { label: 'FB', href: 'https://www.facebook.com/gscott.huang/' },
     { label: 'Stories', href: 'https://canslab1.github.io/stories.html' },
