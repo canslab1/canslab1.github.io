@@ -2,7 +2,7 @@
 
 黃崇源教授（Prof. Chung-Yuan Huang, Ph.D.）個人學術網站，託管於 GitHub Pages。
 
-> **最後更新**：2026-03-13 ｜ **更新歷史**：[Commit Log](https://github.com/canslab1/canslab1.github.io/commits/master)
+> **最後更新**：2026-03-14 ｜ **更新歷史**：[Commit Log](https://github.com/canslab1/canslab1.github.io/commits/master)
 
 ## 目錄
 
@@ -143,7 +143,7 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 英文：About | Honors | Overview | Papers | Projects | Software | CV | FB | Stories | Photos | Press | Op-Eds
 
-前六項（介紹 / 榮譽 / 綜覽 / 著作 / 計畫 / 程式）為頁面內區段切換，履歷為嵌入式 PDF 檢視，其餘為外部連結。
+前六項（介紹 / 榮譽 / 綜覽 / 著作 / 計畫 / 程式）為頁面內區段切換，履歷為嵌入式 PDF 檢視，其餘五項（臉書 / 故事 / 相簿 / 評論 / 投書）為外部連結。外部連結使用具名 `target`（如 `canslab-故事`），重複點擊同一連結時瀏覽器會跳到已開啟的視窗而非再開新分頁（受限於 Facebook、Google 等網站的 Cross-Origin-Opener-Policy 安全策略，部分外部網站可能仍會開新視窗）。
 
 ### 區段一：簡短自傳（介紹，預設顯示）
 
@@ -172,7 +172,7 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 ### 區段三：學術數據卡片（綜覽）
 
-直接顯示 28 張數據卡片（無標題），涵蓋：
+直接顯示 28 張數據卡片（無標題、無綠線分隔），涵蓋：
 - 期刊論文：44 篇
 - 國際研討會：50 篇
 - 專書專章：10 篇
@@ -188,27 +188,45 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 > **維護提示**：數據更新請修改 `stats-data.js` 中的 `statsZh[]` 和 `statsEn[]` 陣列，不需異動 `index.html` 或 `shared.js`。
 
-### 區段四：開源程式（程式）
+### 區段四：著作目錄（著作）
+
+顯示黃崇源教授 171 篇著作，分為 5 大類別，詳見下方「著作列表」章節。
+
+> **維護提示**：新增或修改論文只需編輯 `papers-data.js`，然後執行 `python3 build-prerender.py` 重新產生預渲染 HTML。
+
+### 區段五：計畫列表（計畫）
+
+顯示黃崇源教授 37 件研究計畫，分為 3 種角色，詳見下方「計畫列表」章節。
+
+> **維護提示**：新增或修改計畫只需編輯 `projects-data.js`，然後執行 `python3 build-prerender.py` 重新產生預渲染 HTML。
+
+### 區段六：開源程式（程式）
 
 展示 CANS 實驗室開發的 8 套開源研究軟體，每套皆附論文縮圖、應用截圖與 GitHub 連結。所有程式碼以 MIT 授權公開。
 
-| 軟體 | 說明 | 語言 | GitHub |
-|------|------|------|--------|
-| **EpiRank** | 基於非對稱通勤網絡的疫情風險分析 | Python | [canslab1/EpiRank](https://github.com/canslab1/EpiRank) |
-| **MV17** | 以 K-core 為基礎的多屬性節點重要性排序 | Python | [canslab1/MV17](https://github.com/canslab1/MV17) |
-| **CASMIM** | 結合細胞自動機與社會鏡像身份的 SARS 疫情模擬 | Python | [canslab1/CASMIM](https://github.com/canslab1/CASMIM) |
-| **HETA** | 無參數複雜網絡邊分類 | Python | [canslab1/HETA](https://github.com/canslab1/HETA) |
-| **HATA** | 有向網絡弧分類工具 | Python | [canslab1/HATA](https://github.com/canslab1/HATA) |
-| **BCAT** | 有界信心意見動態與採用門檻創新擴散混合模擬模型 | Python / NetLogo | [canslab1/BCAT](https://github.com/canslab1/BCAT) |
-| **SRAC-Agent** | 演化空間囚徒困境賽局中自我聲譽感知機制模擬器 | Python | [canslab1/SRAC-Agent](https://github.com/canslab1/SRAC-Agent) |
-| **AED2** | 使用基因演算法最佳化 AED 配置地點 | C++ / Python | [canslab1/AED2](https://github.com/canslab1/AED2) |
+| 軟體 | 說明 | 語言 | GitHub | README |
+|------|------|------|--------|--------|
+| **EpiRank** | 基於非對稱通勤網絡的疫情風險分析 | Python | [canslab1/EpiRank](https://github.com/canslab1/EpiRank) | [README](https://canslab1.github.io/EpiRank/) |
+| **MV17** | 以 K-core 為基礎的多屬性節點重要性排序 | Python | [canslab1/MV17](https://github.com/canslab1/MV17) | [README](https://canslab1.github.io/MV17/) |
+| **CASMIM** | 結合細胞自動機與社會鏡像身份的 SARS 疫情模擬 | Python | [canslab1/CASMIM](https://github.com/canslab1/CASMIM) | [README](https://canslab1.github.io/CASMIM/) |
+| **HETA** | 無參數複雜網絡邊分類 | Python | [canslab1/HETA](https://github.com/canslab1/HETA) | [README](https://canslab1.github.io/HETA/) |
+| **HATA** | 有向網絡弧分類工具 | Python | [canslab1/HATA](https://github.com/canslab1/HATA) | [README](https://canslab1.github.io/HATA/) |
+| **BCAT** | 有界信心意見動態與採用門檻創新擴散混合模擬模型 | Python / NetLogo | [canslab1/BCAT](https://github.com/canslab1/BCAT) | [README](https://canslab1.github.io/BCAT/) |
+| **SRAC-Agent** | 演化空間囚徒困境賽局中自我聲譽感知機制模擬器 | Python | [canslab1/SRAC-Agent](https://github.com/canslab1/SRAC-Agent) | [README](https://canslab1.github.io/SRAC-Agent/) |
+| **AED2** | 使用基因演算法最佳化 AED 配置地點 | C++ / Python | [canslab1/AED2](https://github.com/canslab1/AED2) | [README](https://canslab1.github.io/AED2/) |
 
 > **維護提示**：軟體項目更新請直接修改 `index.html` 中「程式」區段（`<section id="software">`）的 `.software-card` 區塊。
 
-### Footer
-長庚大學、長庚資工系、老松國小、中國科技大學、杏壇芬芳錄、ORCiD 等 logo 連結。
+### 回到頂部按鈕
 
-> **維護提示**：Footer 連結更新請修改 `shared.js` 中的 `footerLinks[]` 陣列。
+當使用者向下捲動超過 200px 時，頁面右下角會出現一個綠底白色向上箭頭的圓形按鈕（75px），點擊後平滑捲動回頁面頂部。此按鈕定位在距離底部 75px 處，避免被 Footer 遮擋。
+
+> **維護提示**：按鈕樣式在 `shared.css` 的 `.scroll-top-btn`，邏輯在 `shared.js` 的 `initScrollTopBtn()` 函式中。`stories.html` 另有獨立實作（紫底按鈕）。
+
+### Footer
+長庚大學、長庚資工系、老松國小、中國科技大學、杏壇芬芳錄、ORCiD 等 logo 連結。Footer 使用縮圖（`*-thumb.*`）以減少頁面載入大小。
+
+> **維護提示**：Footer 連結更新請修改 `shared.js` 中的 `footerLinks[]` 陣列。如新增 logo 請同時製作縮圖版本（建議寬度 64px）。
 
 ## 著作列表（papers-data.js）
 
@@ -282,12 +300,12 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 ### 檔案結構
 ```
 canslab1.github.io/
-├── index.html           # 首頁（單頁式，含介紹/榮譽/綜覽/著作/計畫/程式七個區段 + 內嵌 PDF）
+├── index.html           # 首頁（單頁式，含介紹/榮譽/綜覽/著作/計畫/程式六個區段 + 內嵌 PDF）
 ├── stories.html         # 家族故事
 ├── stories.css          # 故事頁面專屬 CSS
 ├── stories.js           # 故事頁面專屬 JS
-├── shared.css           # 共用 CSS 樣式
-├── shared.js            # 共用 JS 渲染函式與區段切換
+├── shared.css           # 共用 CSS 樣式（含回到頂部按鈕）
+├── shared.js            # 共用 JS 渲染函式與區段切換（含回到頂部按鈕邏輯）
 ├── stats-data.js        # 28 張學術數據卡片資料
 ├── papers-data.js       # 171 篇著作列表資料
 ├── projects-data.js     # 37 件研究計畫列表資料
@@ -302,7 +320,7 @@ canslab1.github.io/
 ├── LICENSE              # MIT 授權條款
 ├── .github/workflows/
 │   └── indexnow.yml    # IndexNow 自動提交 workflow
-├── .gitignore          # Git 忽略規則
+├── .gitignore          # Git 忽略規則（.DS_Store、.claude/）
 ├── robots.txt          # 爬蟲規則
 ├── sitemap.xml         # 網站地圖
 ├── llms.txt            # LLM 搜尋摘要
@@ -313,15 +331,18 @@ canslab1.github.io/
 └── images/
     ├── IMG-2.jpg       # 教授大頭照
     ├── CANS.png        # CANS Lab logo
-    ├── cgu.png         # 長庚大學 logo
-    ├── csie.png        # 長庚資工系 logo / favicon
-    ├── cute.jpg        # 中國科技大學 logo
-    ├── laosong.png     # 老松國小 logo
-    ├── favicon.ico     # 杏壇芬芳錄 logo
+    ├── Photos1-1.jpeg  # 故事頁面用照片
+    ├── Photos1-2.jpg   # 故事頁面用照片
+    ├── cgu.png / cgu-thumb.png         # 長庚大學 logo（原圖 / 縮圖）
+    ├── csie.png / csie-thumb.png       # 長庚資工系 logo / favicon（原圖 / 縮圖）
+    ├── cute.jpg / cute-thumb.jpg       # 中國科技大學 logo（原圖 / 縮圖）
+    ├── laosong.png / laosong-thumb.png # 老松國小 logo（原圖 / 縮圖）
+    ├── favicon.ico / favicon-thumb.ico # 杏壇芬芳錄 logo（原圖 / 縮圖）
     ├── honors1–4.png   # 杏壇芬芳獎照片
     └── software/       # 研究軟體截圖與論文縮圖
         ├── epirank-*.png   # EpiRank 相關圖片
         ├── mv17-*.png      # MV17 相關圖片
+        ├── casmim-*.png    # CASMIM 相關圖片
         ├── heta-*.png      # HETA 相關圖片
         ├── hata-*.png      # HATA 相關圖片
         ├── bcat-*.png      # BCAT 相關圖片
@@ -338,6 +359,7 @@ canslab1.github.io/
 - 學術數據卡片（`.stat-card`）、榮譽列表（`.honors-list`）
 - 軟體卡片（`.software-card`、`.software-gallery`、`.software-tag` 等）
 - 語言切換規則（`.zh` / `.en` class）
+- 回到頂部按鈕（`.scroll-top-btn`）
 - 響應式斷點：手機 ≤768px、平板 769–1024px
 
 #### `stats-data.js`
@@ -408,7 +430,8 @@ python3 build-prerender.py
 | `renderPapers()` | 渲染著作列表（讀取 `papers-data.js`） |
 | `renderProjects()` | 渲染計畫列表（讀取 `projects-data.js`） |
 | `renderNav()` | 渲染導覽列（高亮當前區段） |
-| `renderFooter()` | 渲染 Footer logo |
+| `renderFooter()` | 渲染 Footer logo（使用縮圖） |
+| `initScrollTopBtn()` | 初始化回到頂部按鈕（捲動超過 200px 時顯示） |
 | `initShared()` | 初始化入口（無參數，自動偵測頁面） |
 
 ### 語言切換機制
@@ -416,8 +439,22 @@ python3 build-prerender.py
 - `html[lang="en"]` 時 `.en` 顯示、`.zh` 隱藏；預設中文時相反
 - 切換時同步重新渲染 stats、honors、alumniArticle、honorsArticle、bio、papers、projects、nav（因資料陣列有中英文版本）
 
+### HTML 區段順序
+
+`index.html` 中 `<section>` 的排列順序與導覽列順序一致：
+
+| 順序 | 區段 ID | 導覽列標籤 | 說明 |
+|------|---------|-----------|------|
+| 1 | `bio` | 介紹 | 簡短自傳（預設顯示） |
+| 2 | `overview` | 榮譽 | 責任與肯定 + 推薦文 |
+| 3 | `lab` | 綜覽 | 28 張學術數據卡片 |
+| 4 | `papers` | 著作 | 著作目錄 |
+| 5 | `projects` | 計畫 | 計畫列表 |
+| 6 | `software` | 程式 | 開源程式 |
+| 7 | `embed` | 履歷 | 內嵌 PDF 檢視 |
+
 ### 新增內容區段步驟
-1. 在 `index.html` 的 `<main>` 中新增 `<section id="新區段" class="section">`
+1. 在 `index.html` 的 `<main>` 中新增 `<section id="新區段" class="section">`（注意：須按導覽列順序插入正確位置）
 2. 在 `shared.js` 的 `navItemsZh[]` 和 `navItemsEn[]` 加入新項目（設定 `section: '新區段'`）
 3. 如需額外樣式，在 `shared.css` 中新增
 4. 如有資料需預渲染，更新 `build-prerender.py` 並執行
@@ -467,25 +504,9 @@ python3 build-prerender.py
 
 ### 效能考量
 - 無框架依賴，純 HTML/CSS/JS，首次載入快速
+- Footer logo 使用縮圖（`*-thumb.*`），減少約 1.1MB 頁面載入大小
 - 圖片建議壓縮至 200KB 以下（詳見「圖片管理」章節）
 - 外部資源：Ahrefs Analytics、Microsoft Clarity（非同步載入，不阻塞渲染）
-
-## 開源程式
-
-展示 CANS 實驗室開發的 8 套開源研究軟體（位於 `index.html`「程式」區段），每套皆附論文縮圖、應用截圖與 GitHub 連結。所有程式碼以 MIT 授權公開。
-
-| 軟體 | 說明 | 語言 | GitHub |
-|------|------|------|--------|
-| **EpiRank** | 基於非對稱通勤網絡的疫情風險分析 | Python | [canslab1/EpiRank](https://github.com/canslab1/EpiRank) |
-| **MV17** | 以 K-core 為基礎的多屬性節點重要性排序 | Python | [canslab1/MV17](https://github.com/canslab1/MV17) |
-| **CASMIM** | 結合細胞自動機與社會鏡像身份的 SARS 疫情模擬 | Python | [canslab1/CASMIM](https://github.com/canslab1/CASMIM) |
-| **HETA** | 無參數複雜網絡邊分類（BOND / SINK / LOCAL BRIDGE / GLOBAL BRIDGE） | Python | [canslab1/HETA](https://github.com/canslab1/HETA) |
-| **HATA** | 有向網絡弧分類工具，將 HETA 擴展至有向圖 | Python | [canslab1/HATA](https://github.com/canslab1/HATA) |
-| **BCAT** | 有界信心意見動態與採用門檻創新擴散混合模擬模型 | Python / NetLogo | [canslab1/BCAT](https://github.com/canslab1/BCAT) |
-| **SRAC-Agent** | 演化空間囚徒困境賽局中自我聲譽感知機制模擬器 | Python | [canslab1/SRAC-Agent](https://github.com/canslab1/SRAC-Agent) |
-| **AED2** | 使用基因演算法最佳化 AED 配置地點 | C++ / Python | [canslab1/AED2](https://github.com/canslab1/AED2) |
-
-> **維護提示**：軟體項目更新請直接修改 `index.html` 中「程式」區段（`<section id="software">`）的 `.software-card` 區塊，每張卡片包含中英文描述、標籤、截圖畫廊、論文引用及 GitHub 連結。
 
 ## 家族故事頁面（stories.html）
 
@@ -501,6 +522,7 @@ python3 build-prerender.py
 | og:type | `website` |
 | og:image | `images/IMG-2.jpg`（教授大頭照） |
 | 目錄功能 | 可收合的故事目錄（TOC），使用 `aria-expanded` / `aria-controls` 控制展開與收合 |
+| 回到頂部 | 紫底白色向上箭頭圓形按鈕（與 index.html 的綠底按鈕風格區別） |
 
 > **注意**：此頁面為完全獨立頁面，故事內容直接寫在 HTML 中（非透過 JS 陣列渲染），不依賴 `shared.css` / `shared.js`。
 
@@ -520,6 +542,10 @@ python3 build-prerender.py
 | 響應式 | ≤768px 自動調整標題與錯誤碼字級 |
 
 > **注意**：404.html 不引用 `shared.css` / `shared.js`，修改共用樣式不會影響此頁面。
+
+### 子 repo 404 頁面
+
+8 個研究軟體 repo 各自擁有獨立的 `404.html`，風格與主站一致（綠色漸層），提供三個導覽按鈕（README / GitHub Repo / Lab Home）。
 
 ## SEO 設定
 
@@ -542,7 +568,7 @@ python3 build-prerender.py
 
 ### 結構化資料（JSON-LD）詳細
 
-**index.html**（整合七區段 + 內嵌 PDF）：
+**index.html**（整合六區段 + 內嵌 PDF）：
 - `WebSite`：網站名稱、語言、描述
 - `ProfilePage` → `Person`：姓名、別名（黃崇源、CY Huang、GSCOTT）、職稱、服務機構、學歷、研究領域、Google Scholar、ORCID
 - `ResearchOrganization`：CANS Lab 組織資訊，隸屬長庚大學
@@ -605,6 +631,10 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 
 > **注意**：push 時只有內容檔案（html/css/js/pdf/images）變更才會觸發，修改 README.md 等非內容檔案不會觸發。
 
+### 子 repo 的 IndexNow
+
+8 個研究軟體 repo（EpiRank、MV17、CASMIM、HETA、HATA、BCAT、SRAC-Agent、AED2）也各自設定了 IndexNow workflow，共用相同的 API key。觸發條件：push 到 main 分支修改 `.html`、`.css`、`.js`、`.md`、`images/` 時，或每週一 09:00 定期提交。
+
 ### 手動提交
 
 如需立即手動觸發，可到 GitHub → Actions → IndexNow Submit → Run workflow。
@@ -640,6 +670,7 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 | **Ahrefs Analytics** | 流量分析 | 各頁面 `<head>`（`analytics.ahrefs.com/analytics.js`） | SEO 排名追蹤與流量分析 |
 | **Microsoft Clarity** | 行為分析 | `shared.js` 底部 / `404.html` 行內腳本（`clarity.ms`，ID: `rzlnthqbys`） | 熱力圖、點擊分析、錄影回放 |
 | **Unsplash 圖片** | 背景圖片 | `404.html` header（`images.unsplash.com`） | 數位科技主題背景圖（僅 404 頁面使用） |
+| **ORCiD logo** | 外部圖片 | Footer（`orcid.org/assets/vectors/orcid.logo.icon.svg`） | ORCiD 官方 SVG logo |
 
 ### 字型策略
 - 全站使用 `system-ui` 系統字型堆疊，**不依賴外部字型 CDN**（如 Google Fonts）
@@ -659,6 +690,7 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 |------|---------|------|
 | `role="region"` | index / stories | 主要內容區段標記為語意區域 |
 | `aria-labelledby` | index / stories | 區段以標題 ID 作為可存取名稱 |
+| `aria-label` | index | 綜覽區段（無標題）使用 `aria-label="綜覽"` |
 | `aria-expanded` | stories | 故事目錄展開/收合狀態通知螢幕閱讀器 |
 | `aria-controls` | stories | 目錄按鈕與目錄內容區域的關聯 |
 | `lang="zh-TW"` | 所有頁面 | 宣告頁面主語言，輔助螢幕閱讀器發音 |
@@ -671,7 +703,6 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 - 加入 skip navigation 連結（跳過導覽列直達主要內容）
 - 為語言切換按鈕加入 `aria-label`（例如 `aria-label="切換至英文"`）
 - 確保色彩對比度符合 WCAG 2.1 AA 標準（對比度 ≥4.5:1）
-- 增加 `<main>` landmark 在所有頁面（目前 `404.html` 已使用，其他頁面可跟進）
 
 ## 網站地圖（sitemap.xml）
 
@@ -696,13 +727,21 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 | Wiki | https://sites.google.com/view/gscott-huang |
 | NSTC 學術研究 | https://arspb.nstc.gov.tw/（查詢黃崇源） |
 | EpiRank（GitHub） | https://github.com/canslab1/EpiRank |
+| EpiRank（README） | https://canslab1.github.io/EpiRank/ |
 | MV17（GitHub） | https://github.com/canslab1/MV17 |
+| MV17（README） | https://canslab1.github.io/MV17/ |
 | CASMIM（GitHub） | https://github.com/canslab1/CASMIM |
+| CASMIM（README） | https://canslab1.github.io/CASMIM/ |
 | HETA（GitHub） | https://github.com/canslab1/HETA |
+| HETA（README） | https://canslab1.github.io/HETA/ |
 | HATA（GitHub） | https://github.com/canslab1/HATA |
+| HATA（README） | https://canslab1.github.io/HATA/ |
 | BCAT（GitHub） | https://github.com/canslab1/BCAT |
+| BCAT（README） | https://canslab1.github.io/BCAT/ |
 | SRAC-Agent（GitHub） | https://github.com/canslab1/SRAC-Agent |
+| SRAC-Agent（README） | https://canslab1.github.io/SRAC-Agent/ |
 | AED2（GitHub） | https://github.com/canslab1/AED2 |
+| AED2（README） | https://canslab1.github.io/AED2/ |
 
 ## 內容管理指南
 
@@ -722,9 +761,9 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 | 項目 | 建議 |
 |------|------|
 | 格式 | 照片使用 `.jpg`（壓縮率高）；logo / 圖示使用 `.png`（支援透明） |
-| 尺寸 | 大頭照 / 活動照：最大寬度 800px；logo：最大寬度 200px |
+| 尺寸 | 大頭照 / 活動照：最大寬度 800px；logo：最大寬度 200px；Footer 縮圖：寬度 64px |
 | 檔案大小 | 單張建議 ≤200KB，大圖 ≤500KB |
-| 命名規則 | 全小寫、用連字號分隔，例如 `honors1.png`、`epirank-screenshot.png` |
+| 命名規則 | 全小寫、用連字號分隔，例如 `honors1.png`、`epirank-screenshot.png`；縮圖加 `-thumb` 後綴 |
 | 存放位置 | 一般圖片放 `images/`；軟體相關圖片放 `images/software/` |
 | 壓縮工具 | 推薦 [TinyPNG](https://tinypng.com/)（線上）或 `sips`（macOS 內建） |
 
@@ -732,6 +771,9 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 ```bash
 # 將圖片寬度縮至 800px（等比縮放）
 sips --resampleWidth 800 images/my-photo.jpg
+
+# 製作 Footer 縮圖（寬度 64px）
+sips --resampleWidth 64 images/logo.png --out images/logo-thumb.png
 ```
 
 ### 更新學術數據卡片
@@ -756,7 +798,7 @@ sips --resampleWidth 800 images/my-photo.jpg
 | 更新杏壇芬芳錄推薦文 | `shared.js` → `honorsArticleZh[]` / `honorsArticleEn[]` |
 | 更新簡短自傳 | `shared.js` → `bioZh[]` / `bioEn[]` |
 | 修改導覽列連結 | `shared.js` → `navItemsZh[]` / `navItemsEn[]` |
-| 新增 Footer logo | `shared.js` → `footerLinks[]` |
+| 新增 Footer logo | `shared.js` → `footerLinks[]`（須同時製作縮圖） |
 | 新增/修改研究軟體 | `index.html`「程式」區段（`<section id="software">`）中的 `.software-card` 區塊 |
 | 更新履歷 | 替換 `CV.pdf` 檔案 |
 | 修改頁面樣式 | `shared.css`（共用）或頁面內 `<style>`（專屬） |
@@ -901,3 +943,7 @@ git push origin master
   1. 確認 `papers-data.js` / `projects-data.js` 語法正確（引號、逗號、括號配對）
   2. 確認 `index.html` 中有空的 `<div id="papers-container"></div>` 和 `<div id="projects-container"></div>`
   3. 如容器已含預渲染內容，需先還原為空再執行
+
+### 外部連結重複開啟視窗
+- **現象**：點擊「臉書」「評論」「投書」等導覽列連結時，每次都開新視窗
+- **說明**：這是 Facebook 和 Google 設定了 `Cross-Origin-Opener-Policy: same-origin` 安全標頭所致，瀏覽器會清除具名視窗的關聯。此為瀏覽器層級限制，無法透過 JavaScript 繞過。「故事」和「相簿」不受此影響，可正常重複使用同一視窗。
