@@ -674,7 +674,7 @@ figure {
 /* ===== Back to Top ===== */
 .back-to-top-shared {
     position: fixed;
-    bottom: 70px;
+    bottom: 75px;
     right: 30px;
     background: #27ae60;
     color: white;
