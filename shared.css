@@ -670,3 +670,37 @@ figure {
         font-size: 0.88rem;
     }
 }
+
+/* ===== Back to Top ===== */
+.back-to-top-shared {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.4);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+}
+
+.back-to-top-shared.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top-shared:hover {
+    background: #219150;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(39, 174, 96, 0.6);
+}

@@ -545,6 +545,29 @@ function initShared() {
     renderProjects();
     renderNav();
     renderFooter();
+    renderBackToTop();
+}
+
+function renderBackToTop() {
+    if (document.querySelector('.back-to-top')) return;
+
+    const btn = document.createElement('button');
+    btn.className = 'back-to-top-shared';
+    btn.setAttribute('aria-label', 'Back to top');
+    btn.textContent = '↑';
+    document.body.appendChild(btn);
+
+    window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 300) {
+            btn.classList.add('visible');
+        } else {
+            btn.classList.remove('visible');
+        }
+    }, { passive: true });
+
+    btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 }
 
 /* ===== Microsoft Clarity ===== */
