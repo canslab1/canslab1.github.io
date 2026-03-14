@@ -254,8 +254,13 @@ function renderFooter() {
         a.href = link.href;
         a.target = '_blank';
         a.rel = 'noopener noreferrer';
+        a.className = 'footer-link';
         a.setAttribute('aria-label', link.label);
-        a.title = link.label;
+
+        const tooltip = document.createElement('span');
+        tooltip.className = 'footer-tooltip';
+        tooltip.textContent = link.label.replace(/^前往\s?/, '');
+        a.appendChild(tooltip);
 
         const img = document.createElement('img');
         img.src = link.src;

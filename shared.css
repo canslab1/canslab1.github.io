@@ -319,6 +319,12 @@ figure {
     position: relative;
 }
 
+.footer-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
 .footer-logo {
     height: 32px;
     max-width: 128px;
@@ -327,12 +333,47 @@ figure {
     filter: brightness(1.1);
 }
 
-.footer-logo:hover {
+.footer-link:hover .footer-logo {
     transform: scale(2);
     filter: brightness(1.2);
     opacity: 0.85;
-    position: relative;
     z-index: 10;
+}
+
+.footer-tooltip {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(6px);
+    background: linear-gradient(135deg, #14532d, #1a7745);
+    color: white;
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 0.35rem 0.7rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    box-shadow: 0 3px 10px rgba(20, 83, 45, 0.35);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+    pointer-events: none;
+    z-index: 1001;
+}
+
+.footer-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #1a7745;
+}
+
+.footer-link:hover .footer-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
 }
 
 /* ===== Software Cards ===== */
