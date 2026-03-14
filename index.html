@@ -65,259 +65,6 @@
     <main>
         <div class="container">
 
-            <!-- ===== 榮譽 ===== -->
-            <section id="overview" class="section" role="region" aria-labelledby="section-overview-title">
-                <h2 id="section-overview-title"><span class="zh">責任與肯定</span><span class="en">Commitment and Recognition</span></h2>
-                <ul id="honors-list" class="honors-list"></ul>
-                <h2 class="section-sub-title"><span class="zh">老松國小傑出校友推薦文</span><span class="en">Recommendation for Lao-Song Elementary Distinguished Alumni Award</span></h2>
-                <div id="alumni-article"></div>
-                <h2 class="section-sub-title"><span class="zh">杏壇芬芳錄推薦文</span><span class="en">Recommendation for Taipei Honored Contributors to Education</span></h2>
-                <div id="honors-article"></div>
-            </section>
-
-            <!-- ===== 綜覽 ===== -->
-            <section id="lab" class="section" role="region" aria-labelledby="lab-title">
-                <div class="stats-grid" id="stats-container"></div>
-            </section>
-
-            <!-- ===== 程式 ===== -->
-            <section id="software" class="section" role="region" aria-labelledby="section-software-title">
-                <h2 id="section-software-title">
-                    <span class="zh">開源程式</span>
-                    <span class="en">Open-Source Software</span>
-                </h2>
-                <p class="software-desc">
-                    <span class="zh">以下為黃崇源教授及 CANS 實驗室團隊所開發的研究軟體與工具，所有程式碼皆以 MIT 授權公開於 GitHub，歡迎學術研究與教學使用。</span>
-                    <span class="en">The following research software and tools were developed by Prof. Chung-Yuan Huang and the CANS Lab team. All source code is released under the MIT License on GitHub for academic research and educational use.</span>
-                </p>
-
-                <ul class="software-list">
-
-                    <li class="software-card">
-                        <h3><a href="https://github.com/canslab1/EpiRank" target="_blank" rel="noopener noreferrer">EpiRank</a></h3>
-                        <p class="software-desc">
-                            <span class="zh">基於非對稱通勤網絡的疫情風險分析桌面應用程式。借鏡 Google PageRank 的哲學，EpiRank 同時模擬通勤的去程與回程方向，僅需單一通勤 OD 矩陣即可預測流感、腸病毒、SARS 三種疾病在臺灣 353 個鄉鎮的空間風險分布。</span>
-                            <span class="en">A desktop application for epidemic risk analysis across Taiwan's 353 townships based on asymmetric commuting networks. Inspired by Google's PageRank, EpiRank simultaneously models forward and return commuting trips to predict the spatial risk distribution of Influenza, Enterovirus, and SARS using a single commuting OD matrix.</span>
-                        </p>
-                        <div class="software-tags">
-                            <span class="software-tag">Epidemic Simulation</span>
-                            <span class="software-tag">PageRank</span>
-                            <span class="software-tag">Commuting Network</span>
-                            <span class="software-tag">Python</span>
-                            <span class="software-tag">GUI</span>
-                        </div>
-                        <div class="software-gallery">
-                            <a href="images/software/epirank-sensitivity.png" target="_blank" rel="noopener noreferrer"><img src="images/software/epirank-sensitivity.png" alt="EpiRank sensitivity analysis heatmaps for damping factor and daytime parameter" loading="lazy"></a>
-                            <a href="images/software/epirank-vs-disease.png" target="_blank" rel="noopener noreferrer"><img src="images/software/epirank-vs-disease.png" alt="EpiRank vs actual disease core classification stacked bar charts" loading="lazy"></a>
-                            <a href="images/software/epirank-commuter.png" target="_blank" rel="noopener noreferrer"><img src="images/software/epirank-commuter.png" alt="Taiwan commuter flow network visualization and statistics" loading="lazy"></a>
-                            <a href="https://www.nature.com/articles/s41598-019-41719-8" target="_blank" rel="noopener noreferrer" class="paper-thumb" title="View published paper"><img src="images/software/epirank-paper.png" alt="EpiRank paper first page — Scientific Reports 2019" loading="lazy"></a>
-                        </div>
-                        <div class="software-ref">
-                            <span class="zh">論文：</span><span class="en">Paper: </span>
-                            Huang, C.-Y., Chin, W. C. B., Wen, T.-H., Fu, Y.-H., &amp; Tsai, Y.-S. (2019). EpiRank: Modeling Bidirectional Disease Spread in Asymmetric Commuting Networks. <em>Scientific Reports</em>, 9, 5415.
-                            <a href="https://doi.org/10.1038/s41598-019-41719-8" target="_blank" rel="noopener noreferrer">doi:10.1038/s41598-019-41719-8</a>
-                        </div>
-                        <div class="software-meta"><a href="https://github.com/canslab1/EpiRank" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License · <a href="https://canslab1.github.io/EpiRank/" target="_blank" rel="noopener noreferrer">README</a></div>
-                    </li>
-
-                    <li class="software-card">
-                        <h3><a href="https://github.com/canslab1/MV17" target="_blank" rel="noopener noreferrer">MV17 — Network Spreader Analysis Tool</a></h3>
-                        <p class="software-desc">
-                            <span class="zh">結合全域多樣性（k-shell 熵）與局部拓撲特徵的關鍵傳播者辨識工具。MV17 提出兩階段框架，先以 k-shell 分解定位節點的全域位置，再以鄰居核心值衡量局部連結品質，穩健地排序網絡中最具影響力的傳播節點。內建 11 種中心性指標比較、SIR 蒙地卡羅模擬驗證（5,000 輪）、散佈矩陣相關分析，以及 29 個經典與真實網絡資料集。</span>
-                            <span class="en">A GUI application for identifying influential spreaders in complex networks by combining global diversity (k-shell entropy) and local topology features. MV17 employs a two-step framework: first locating a node's global position via k-shell decomposition, then measuring local connection quality through neighbor coreness. Features 11 built-in centrality measures, SIR Monte Carlo validation (5,000 rounds), scatter matrix correlation analysis, and 29 classical and real-world network datasets.</span>
-                        </p>
-                        <div class="software-tags">
-                            <span class="software-tag">Network Analysis</span>
-                            <span class="software-tag">Influential Spreaders</span>
-                            <span class="software-tag">K-Shell Decomposition</span>
-                            <span class="software-tag">SIR Simulation</span>
-                            <span class="software-tag">Python</span>
-                            <span class="software-tag">GUI + CLI</span>
-                        </div>
-                        <div class="software-gallery">
-                            <a href="images/software/mv17-kcore.png" target="_blank" rel="noopener noreferrer"><img src="images/software/mv17-kcore.png" alt="MV17 K-Core Visualization of dolphins network with color-coded k-core numbers" loading="lazy"></a>
-                            <a href="images/software/mv17-attributes.png" target="_blank" rel="noopener noreferrer"><img src="images/software/mv17-attributes.png" alt="MV17 Node Attributes table showing 11 centrality measures and neighbor degree distribution" loading="lazy"></a>
-                            <a href="images/software/mv17-scatter.png" target="_blank" rel="noopener noreferrer"><img src="images/software/mv17-scatter.png" alt="MV17 scatter matrix showing pairwise correlations between centrality measures" loading="lazy"></a>
-                            <a href="https://www.sciencedirect.com/science/article/pii/S0378437115003040?via%3Dihub" target="_blank" rel="noopener noreferrer" class="paper-thumb" title="View published paper"><img src="images/software/mv17-paper.png" alt="MV17 paper first page — Physica A 2015" loading="lazy"></a>
-                        </div>
-                        <div class="software-ref">
-                            <span class="zh">論文：</span><span class="en">Paper: </span>
-                            Fu, Y.-H., Huang, C.-Y., &amp; Sun, C.-T. (2015). Using global diversity and local topology features to identify influential network spreaders. <em>Physica A: Statistical Mechanics and its Applications</em>, 433, 344–355.
-                            <a href="https://doi.org/10.1016/j.physa.2015.03.042" target="_blank" rel="noopener noreferrer">doi:10.1016/j.physa.2015.03.042</a>
-                        </div>
-                        <div class="software-meta"><a href="https://github.com/canslab1/MV17" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License · <a href="https://canslab1.github.io/MV17/" target="_blank" rel="noopener noreferrer">README</a></div>
-                    </li>
-
-                    <li class="software-card">
-                        <h3><a href="https://github.com/canslab1/CASMIM" target="_blank" rel="noopener noreferrer">CASMIM — SARS Epidemic Simulation</a></h3>
-                        <p class="software-desc">
-                            <span class="zh">結合細胞自動機與社會鏡像身份機制的 SARS 疫情模擬模型。每個人在 500×500 環面格網上擁有多個「社會分身」，代表其在不同社交場域（家庭、工作場所、醫院等）的存在。模型使用 SEIR+D 分室架構，搭配 8 項可動態啟停的公共衛生政策、BFS 接觸者追蹤、超級傳播者建模及年齡分層死亡率，可模擬新加坡、臺北和多倫多的 SARS 疫情情境。</span>
-                            <span class="en">A small-world epidemiological simulation model combining cellular automata with a "social mirror identity" mechanism for SARS transmission dynamics. Each person owns multiple agents scattered across a 500×500 torus lattice, representing their presence in different social spheres. Uses an SEIR+D compartmental framework with 8 dynamically toggleable public health policies, BFS-based contact tracing, super-spreader modeling, and age-stratified mortality.</span>
-                        </p>
-                        <div class="software-tags">
-                            <span class="software-tag">Epidemic Simulation</span>
-                            <span class="software-tag">SARS</span>
-                            <span class="software-tag">Cellular Automata</span>
-                            <span class="software-tag">SEIR Model</span>
-                            <span class="software-tag">Agent-Based Model</span>
-                            <span class="software-tag">Python</span>
-                            <span class="software-tag">GUI</span>
-                        </div>
-                        <div class="software-gallery">
-                            <a href="images/software/casmim-lattice.png" target="_blank" rel="noopener noreferrer"><img src="images/software/casmim-lattice.png" alt="CASMIM lattice model with color-coded susceptible, incubation, and infected agent states" loading="lazy"></a>
-                            <a href="images/software/casmim-mirror-identity.png" target="_blank" rel="noopener noreferrer"><img src="images/software/casmim-mirror-identity.png" alt="Social mirror identity concept — individuals distributed across home, office, school bus, and other social spheres" loading="lazy"></a>
-                            <a href="images/software/casmim-gui.png" target="_blank" rel="noopener noreferrer"><img src="images/software/casmim-gui.png" alt="CASMIM GUI screenshot with 500×500 macro lattice view and policy controls" loading="lazy"></a>
-                            <a href="https://doi.org/10.1177/0037549705061519" target="_blank" rel="noopener noreferrer" class="paper-thumb" title="View published paper"><img src="images/software/casmim-paper.png" alt="CASMIM paper first page — SIMULATION 2005" loading="lazy"></a>
-                        </div>
-                        <div class="software-ref">
-                            <span class="zh">論文：</span><span class="en">Paper: </span>
-                            Huang, C.-Y., Sun, C.-T., Hsieh, J.-L., Chen, Y.-M. A., &amp; Lin, H. (2005). A Novel Small-World Model: Using Social Mirror Identities for Epidemic Simulations. <em>SIMULATION</em>, 81(10), 671–699.
-                            <a href="https://doi.org/10.1177/0037549705061519" target="_blank" rel="noopener noreferrer">doi:10.1177/0037549705061519</a>
-                        </div>
-                        <div class="software-ref">
-                            <span class="zh">論文：</span><span class="en">Paper: </span>
-                            Huang, C.-Y., Sun, C.-T., Hsieh, J.-L., &amp; Lin, H. (2004). Simulating SARS: Small-World Epidemiological Modeling and Public Health Policy Assessments. <em>Journal of Artificial Societies and Social Simulation</em>, 7(4), 2.
-                            <a href="http://jasss.soc.surrey.ac.uk/7/4/2.html" target="_blank" rel="noopener noreferrer">JASSS 7(4)</a>
-                        </div>
-                        <div class="software-meta"><a href="https://github.com/canslab1/CASMIM" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License · <a href="https://canslab1.github.io/CASMIM/" target="_blank" rel="noopener noreferrer">README</a></div>
-                    </li>
-
-                    <li class="software-card">
-                        <h3><a href="https://github.com/canslab1/HETA" target="_blank" rel="noopener noreferrer">HETA — Hierarchical Edge Type Analysis</a></h3>
-                        <p class="software-desc">
-                            <span class="zh">無參數的複雜網絡邊分類工具。HETA 純粹依據網絡拓撲結構，將每條邊分類為 BOND、SINK、LOCAL BRIDGE 或 GLOBAL BRIDGE 四種類型，無需預先定義社群標籤或邊權重。支援 PySide6 圖形介面與命令列雙模式。</span>
-                            <span class="en">A parameter-free tool for classifying every edge in a complex network into one of four structural types (BOND, SINK, LOCAL BRIDGE, GLOBAL BRIDGE) driven entirely by network topology, without requiring pre-defined community labels or edge weights. Offers both a PySide6 GUI and a full-featured CLI.</span>
-                        </p>
-                        <div class="software-tags">
-                            <span class="software-tag">Network Analysis</span>
-                            <span class="software-tag">Edge Classification</span>
-                            <span class="software-tag">Complex Networks</span>
-                            <span class="software-tag">Python</span>
-                            <span class="software-tag">GUI + CLI</span>
-                        </div>
-                        <div class="software-gallery">
-                            <a href="images/software/heta-link-types.png" target="_blank" rel="noopener noreferrer"><img src="images/software/heta-link-types.png" alt="HETA edge type classification: Silk, Bond, Local Bridge, Global Bridge on example network" loading="lazy"></a>
-                            <a href="images/software/heta-community.png" target="_blank" rel="noopener noreferrer"><img src="images/software/heta-community.png" alt="HETA community detection on 4 real-world networks: rdgam, women, camp92, karate" loading="lazy"></a>
-                            <a href="images/software/heta-16networks.png" target="_blank" rel="noopener noreferrer"><img src="images/software/heta-16networks.png" alt="HETA link type analysis applied to 16 benchmark networks" loading="lazy"></a>
-                            <a href="https://www.sciencedirect.com/science/article/pii/S0378437119306375" target="_blank" rel="noopener noreferrer" class="paper-thumb" title="View published paper"><img src="images/software/heta-paper.png" alt="HETA paper first page — Physica A 2019" loading="lazy"></a>
-                        </div>
-                        <div class="software-ref">
-                            <span class="zh">論文：</span><span class="en">Paper: </span>
-                            Huang, C.-Y., Chin, W. C. B., Fu, Y.-H., &amp; Tsai, Y.-S. (2019). Beyond bond links in complex networks: Local bridges, global bridges and silk links. <em>Physica A: Statistical Mechanics and its Applications</em>, 536, 121027.
-                            <a href="https://doi.org/10.1016/j.physa.2019.04.263" target="_blank" rel="noopener noreferrer">doi:10.1016/j.physa.2019.04.263</a>
-                        </div>
-                        <div class="software-meta"><a href="https://github.com/canslab1/HETA" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License · <a href="https://canslab1.github.io/HETA/" target="_blank" rel="noopener noreferrer">README</a></div>
-                    </li>
-
-                    <li class="software-card">
-                        <h3><a href="https://github.com/canslab1/HATA" target="_blank" rel="noopener noreferrer">HATA — Hierarchical Arc Type Analysis</a></h3>
-                        <p class="software-desc">
-                            <span class="zh">有向網絡弧分類工具。HATA 將 HETA 框架擴展至有向圖，以方向性自我網絡取代「共同朋友」概念，將每條有向弧分類為 BOND、Silk、Local Bridge 或 Global Bridge。</span>
-                            <span class="en">A tool for classifying directed arcs in complex networks into four hierarchical types (BOND, Silk, Local Bridge, Global Bridge). HATA extends the HETA framework to directed networks by replacing the "common friends" concept with directional ego networks.</span>
-                        </p>
-                        <div class="software-tags">
-                            <span class="software-tag">Directed Networks</span>
-                            <span class="software-tag">Arc Classification</span>
-                            <span class="software-tag">Complex Networks</span>
-                            <span class="software-tag">Python</span>
-                        </div>
-                        <div class="software-gallery">
-                            <a href="images/software/hata-arc-types.png" target="_blank" rel="noopener noreferrer"><img src="images/software/hata-arc-types.png" alt="HATA arc type classification: Silk, Bond, Local Bridge, Global Bridge on directed example network" loading="lazy"></a>
-                            <a href="images/software/hata-4networks.png" target="_blank" rel="noopener noreferrer"><img src="images/software/hata-4networks.png" alt="HATA arc classification on 4 directed networks: foodweb, citation, blogs, highschool" loading="lazy"></a>
-                            <a href="images/software/hata-travian.png" target="_blank" rel="noopener noreferrer"><img src="images/software/hata-travian.png" alt="HATA arc type proportions over time in Travian game networks" loading="lazy"></a>
-                            <a href="https://ieeexplore.ieee.org/document/9057711/" target="_blank" rel="noopener noreferrer" class="paper-thumb" title="View published paper"><img src="images/software/hata-paper.png" alt="HATA paper first page — IEEE Access 2020" loading="lazy"></a>
-                        </div>
-                        <div class="software-ref">
-                            <span class="zh">論文：</span><span class="en">Paper: </span>
-                            Huang, C.-Y. &amp; Chin, W. C. B. (2020). Distinguishing Arc Types to Understand Complex Network Strength Structures and Hierarchical Connectivity Patterns. <em>IEEE Access</em>, 8, 71021–71040.
-                            <a href="https://doi.org/10.1109/ACCESS.2020.2986017" target="_blank" rel="noopener noreferrer">doi:10.1109/ACCESS.2020.2986017</a>
-                        </div>
-                        <div class="software-meta"><a href="https://github.com/canslab1/HATA" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License · <a href="https://canslab1.github.io/HATA/" target="_blank" rel="noopener noreferrer">README</a></div>
-                    </li>
-
-                    <li class="software-card">
-                        <h3><a href="https://github.com/canslab1/BCAT" target="_blank" rel="noopener noreferrer">BCAT — Bounded Confidence and Adoption Threshold Model</a></h3>
-                        <p class="software-desc">
-                            <span class="zh">結合有界信心意見動態與採用門檻創新擴散的混合模擬模型，用於探索「最佳遊戲卻無人問津」現象。支援正規格子、小世界網絡、隨機網絡及無標度網絡四種拓撲。提供 Python 3 與 NetLogo 4.0.5 兩種實作。</span>
-                            <span class="en">A mixed opinion dynamics and innovation diffusion simulation model for exploring the "best game no one played" phenomenon. Supports Regular Lattice, Small-World, Random, and Scale-Free network topologies. Implementations available in Python 3 (with Tkinter GUI) and NetLogo 4.0.5.</span>
-                        </p>
-                        <div class="software-tags">
-                            <span class="software-tag">Opinion Dynamics</span>
-                            <span class="software-tag">Innovation Diffusion</span>
-                            <span class="software-tag">Agent-Based Model</span>
-                            <span class="software-tag">Python</span>
-                            <span class="software-tag">NetLogo</span>
-                        </div>
-                        <div class="software-gallery">
-                            <a href="images/software/bcat-correlation.png" target="_blank" rel="noopener noreferrer"><img src="images/software/bcat-correlation.png" alt="BCAT correlation matrices across Regular Lattice, Small-World, Random, and Scale-Free networks" loading="lazy"></a>
-                            <a href="images/software/bcat-flowchart.png" target="_blank" rel="noopener noreferrer"><img src="images/software/bcat-flowchart.png" alt="BCAT simulation algorithm flowchart with opinion exchange and adoption decision phases" loading="lazy"></a>
-                            <a href="images/software/bcat-gui-overview.png" target="_blank" rel="noopener noreferrer"><img src="images/software/bcat-gui-overview.png" alt="BCAT GUI — opinion dynamics and adoption simulation with multiple charts" loading="lazy"></a>
-                            <a href="https://ieeexplore.ieee.org/document/9933777" target="_blank" rel="noopener noreferrer" class="paper-thumb" title="View published paper"><img src="images/software/bcat-paper.png" alt="BCAT paper first page — IEEE Access 2022" loading="lazy"></a>
-                        </div>
-                        <div class="software-ref">
-                            <span class="zh">論文：</span><span class="en">Paper: </span>
-                            Wang, S.-W., Huang, C.-Y., &amp; Sun, C.-T. (2022). Multiagent Diffusion and Opinion Dynamics Model Interaction Effects on Controversial Products. <em>IEEE Access</em>, 10, 115252–115270.
-                            <a href="https://doi.org/10.1109/ACCESS.2022.3218719" target="_blank" rel="noopener noreferrer">doi:10.1109/ACCESS.2022.3218719</a>
-                        </div>
-                        <div class="software-meta"><a href="https://github.com/canslab1/BCAT" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License · <a href="https://canslab1.github.io/BCAT/" target="_blank" rel="noopener noreferrer">README</a></div>
-                    </li>
-
-                    <li class="software-card">
-                        <h3><a href="https://github.com/canslab1/SRAC-Agent" target="_blank" rel="noopener noreferrer">SRAC-Agent</a></h3>
-                        <p class="software-desc">
-                            <span class="zh">演化空間囚徒困境賽局中自我聲譽感知機制的模擬器。研究代理人如何評估自身適應度與聲譽並據此調整策略。支援 50×50 格網上 2,500 個代理人的即時視覺化模擬，提供 GUI 與 CLI 雙模式及批次實驗功能。</span>
-                            <span class="en">A Python 3 simulator for studying the influence of self-reputation awareness on agent behavior in evolutionary spatial Iterated Prisoner's Dilemma (IPD) games. Simulates 2,500 agents on a 50×50 grid with real-time visualization, supporting both GUI and CLI modes with batch experiment capabilities.</span>
-                        </p>
-                        <div class="software-tags">
-                            <span class="software-tag">Game Theory</span>
-                            <span class="software-tag">Prisoner's Dilemma</span>
-                            <span class="software-tag">Evolutionary Computation</span>
-                            <span class="software-tag">Agent-Based Model</span>
-                            <span class="software-tag">Python</span>
-                        </div>
-                        <div class="software-gallery">
-                            <a href="images/software/srac-initial.png" target="_blank" rel="noopener noreferrer"><img src="images/software/srac-initial.png" alt="SRAC-IPD initial random strategies on 50×50 cellular automata grid" loading="lazy"></a>
-                            <a href="images/software/srac-evolved.png" target="_blank" rel="noopener noreferrer"><img src="images/software/srac-evolved.png" alt="SRAC-IPD evolved strategies at generation 99 with SRAC agents enabled" loading="lazy"></a>
-                            <a href="images/software/srac-strategies.png" target="_blank" rel="noopener noreferrer"><img src="images/software/srac-strategies.png" alt="SRAC-Agent four key strategies dynamics — ALL-C, TFT, PAVLOV, ALL-D" loading="lazy"></a>
-                            <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0099841" target="_blank" rel="noopener noreferrer" class="paper-thumb" title="View published paper"><img src="images/software/srac-paper.png" alt="SRAC-Agent paper first page — PLOS ONE 2014" loading="lazy"></a>
-                        </div>
-                        <div class="software-ref">
-                            <span class="zh">論文：</span><span class="en">Paper: </span>
-                            Huang, C.-Y. &amp; Lee, C.-L. (2014). Influences of Agents with a Self-Reputation Awareness Component in an Evolutionary Spatial IPD Game. <em>PLOS ONE</em>, 9(6), e99841.
-                            <a href="https://doi.org/10.1371/journal.pone.0099841" target="_blank" rel="noopener noreferrer">doi:10.1371/journal.pone.0099841</a>
-                        </div>
-                        <div class="software-meta"><a href="https://github.com/canslab1/SRAC-Agent" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License · <a href="https://canslab1.github.io/SRAC-Agent/" target="_blank" rel="noopener noreferrer">README</a></div>
-                    </li>
-
-                    <li class="software-card">
-                        <h3><a href="https://github.com/canslab1/AED2" target="_blank" rel="noopener noreferrer">AED2 — AED Placement Optimization</a></h3>
-                        <p class="software-desc">
-                            <span class="zh">使用基因演算法最佳化自動體外心臟電擊去顫器（AED）的配置地點。基於臺北市 2010 年院外心跳停止（OHCA）案例資料，在超商網絡中找出最佳 AED 部署位置，以最大化 OHCA 存活率並提升成本效益。</span>
-                            <span class="en">A genetic algorithm for optimizing Automated External Defibrillator (AED) placement at convenience stores to maximize Out-of-Hospital Cardiac Arrest (OHCA) survival rates. Uses Taipei 2010 OHCA case data to identify optimal deployment locations with improved cost-effectiveness.</span>
-                        </p>
-                        <div class="software-tags">
-                            <span class="software-tag">Genetic Algorithm</span>
-                            <span class="software-tag">AED Placement</span>
-                            <span class="software-tag">Public Health</span>
-                            <span class="software-tag">Optimization</span>
-                        </div>
-                        <div class="software-gallery">
-                            <a href="images/software/aed2-map.png" target="_blank" rel="noopener noreferrer"><img src="images/software/aed2-map.png" alt="Taipei City maps: (a) fire stations and OHCA cases, (b) current AED and 7-11 locations" loading="lazy"></a>
-                            <a href="images/software/aed2-density.png" target="_blank" rel="noopener noreferrer"><img src="images/software/aed2-density.png" alt="Density distribution comparison: (a) OHCA cases, (b) suggested AED placement locations" loading="lazy"></a>
-                            <a href="images/software/aed2-distribution.png" target="_blank" rel="noopener noreferrer"><img src="images/software/aed2-distribution.png" alt="AED2 optimization results: 49 stores in top 50 and 74 stores in top 10 across runs" loading="lazy"></a>
-                            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0143622812000938" target="_blank" rel="noopener noreferrer" class="paper-thumb" title="View published paper"><img src="images/software/aed2-paper.png" alt="AED2 paper first page — Applied Geography 2012" loading="lazy"></a>
-                        </div>
-                        <div class="software-ref">
-                            <span class="zh">論文：</span><span class="en">Paper: </span>
-                            Tsai, Y.-S., Ko, P. C.-I., Huang, C.-Y., &amp; Wen, T.-H. (2012). Optimizing locations for the installation of automated external defibrillators (AEDs) in urban public streets through the use of spatial and temporal weighting schemes. <em>Applied Geography</em>, 35(1–2), 394–404.
-                            <a href="https://doi.org/10.1016/j.apgeog.2012.09.002" target="_blank" rel="noopener noreferrer">doi:10.1016/j.apgeog.2012.09.002</a>
-                        </div>
-                        <div class="software-meta"><a href="https://github.com/canslab1/AED2" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License · <a href="https://canslab1.github.io/AED2/" target="_blank" rel="noopener noreferrer">README</a></div>
-                    </li>
-
-                </ul>
-            </section>
-
             <!-- ===== 介紹 ===== -->
             <section id="bio" class="section active" role="region" aria-labelledby="section-bio-title">
                 <h2 id="section-bio-title">
@@ -329,6 +76,22 @@
                     <span class="en">Brief Biography</span>
                 </h3>
                 <div id="bio-content"></div>
+            </section>
+
+            <!-- ===== 榮譽 ===== -->
+            <section id="overview" class="section" role="region" aria-labelledby="section-overview-title">
+                <h2 id="section-overview-title"><span class="zh">責任與肯定</span><span class="en">Commitment and Recognition</span></h2>
+                <ul id="honors-list" class="honors-list"></ul>
+                <h3 class="section-sub-title"><span class="zh">老松國小傑出校友推薦文</span><span class="en">Recommendation for Lao-Song Elementary Distinguished Alumni Award</span></h3>
+                <div id="alumni-article"></div>
+                <h3 class="section-sub-title"><span class="zh">杏壇芬芳錄推薦文</span><span class="en">Recommendation for Taipei Honored Contributors to Education</span></h3>
+                <div id="honors-article"></div>
+            </section>
+
+            <!-- ===== 綜覽 ===== -->
+            <section id="lab" class="section" role="region" aria-labelledby="lab-title">
+                <h2 id="lab-title"><span class="zh">學術綜覽</span><span class="en">Academic Overview</span></h2>
+                <div class="stats-grid" id="stats-container"></div>
             </section>
 
             <!-- ===== 著作 ===== -->
@@ -722,6 +485,244 @@
   </ol>
 </div>
             </div>
+            </section>
+
+            <!-- ===== 程式 ===== -->
+            <section id="software" class="section" role="region" aria-labelledby="section-software-title">
+                <h2 id="section-software-title">
+                    <span class="zh">開源程式</span>
+                    <span class="en">Open-Source Software</span>
+                </h2>
+                <p class="software-desc">
+                    <span class="zh">以下為黃崇源教授及 CANS 實驗室團隊所開發的研究軟體與工具，所有程式碼皆以 MIT 授權公開於 GitHub，歡迎學術研究與教學使用。</span>
+                    <span class="en">The following research software and tools were developed by Prof. Chung-Yuan Huang and the CANS Lab team. All source code is released under the MIT License on GitHub for academic research and educational use.</span>
+                </p>
+
+                <ul class="software-list">
+
+                    <li class="software-card">
+                        <h3><a href="https://github.com/canslab1/EpiRank" target="_blank" rel="noopener noreferrer">EpiRank</a></h3>
+                        <p class="software-desc">
+                            <span class="zh">基於非對稱通勤網絡的疫情風險分析桌面應用程式。借鏡 Google PageRank 的哲學，EpiRank 同時模擬通勤的去程與回程方向，僅需單一通勤 OD 矩陣即可預測流感、腸病毒、SARS 三種疾病在臺灣 353 個鄉鎮的空間風險分布。</span>
+                            <span class="en">A desktop application for epidemic risk analysis across Taiwan's 353 townships based on asymmetric commuting networks. Inspired by Google's PageRank, EpiRank simultaneously models forward and return commuting trips to predict the spatial risk distribution of Influenza, Enterovirus, and SARS using a single commuting OD matrix.</span>
+                        </p>
+                        <div class="software-tags">
+                            <span class="software-tag">Epidemic Simulation</span>
+                            <span class="software-tag">PageRank</span>
+                            <span class="software-tag">Commuting Network</span>
+                            <span class="software-tag">Python</span>
+                            <span class="software-tag">GUI</span>
+                        </div>
+                        <div class="software-gallery">
+                            <a href="images/software/epirank-sensitivity.png" target="_blank" rel="noopener noreferrer"><img src="images/software/epirank-sensitivity.png" alt="EpiRank sensitivity analysis heatmaps for damping factor and daytime parameter" loading="lazy"></a>
+                            <a href="images/software/epirank-vs-disease.png" target="_blank" rel="noopener noreferrer"><img src="images/software/epirank-vs-disease.png" alt="EpiRank vs actual disease core classification stacked bar charts" loading="lazy"></a>
+                            <a href="images/software/epirank-commuter.png" target="_blank" rel="noopener noreferrer"><img src="images/software/epirank-commuter.png" alt="Taiwan commuter flow network visualization and statistics" loading="lazy"></a>
+                            <a href="https://www.nature.com/articles/s41598-019-41719-8" target="_blank" rel="noopener noreferrer" class="paper-thumb" title="View published paper"><img src="images/software/epirank-paper.png" alt="EpiRank paper first page — Scientific Reports 2019" loading="lazy"></a>
+                        </div>
+                        <div class="software-ref">
+                            <span class="zh">論文：</span><span class="en">Paper: </span>
+                            Huang, C.-Y., Chin, W. C. B., Wen, T.-H., Fu, Y.-H., &amp; Tsai, Y.-S. (2019). EpiRank: Modeling Bidirectional Disease Spread in Asymmetric Commuting Networks. <em>Scientific Reports</em>, 9, 5415.
+                            <a href="https://doi.org/10.1038/s41598-019-41719-8" target="_blank" rel="noopener noreferrer">doi:10.1038/s41598-019-41719-8</a>
+                        </div>
+                        <div class="software-meta"><a href="https://github.com/canslab1/EpiRank" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License · <a href="https://canslab1.github.io/EpiRank/" target="_blank" rel="noopener noreferrer">README</a></div>
+                    </li>
+
+                    <li class="software-card">
+                        <h3><a href="https://github.com/canslab1/MV17" target="_blank" rel="noopener noreferrer">MV17 — Network Spreader Analysis Tool</a></h3>
+                        <p class="software-desc">
+                            <span class="zh">結合全域多樣性（k-shell 熵）與局部拓撲特徵的關鍵傳播者辨識工具。MV17 提出兩階段框架，先以 k-shell 分解定位節點的全域位置，再以鄰居核心值衡量局部連結品質，穩健地排序網絡中最具影響力的傳播節點。內建 11 種中心性指標比較、SIR 蒙地卡羅模擬驗證（5,000 輪）、散佈矩陣相關分析，以及 29 個經典與真實網絡資料集。</span>
+                            <span class="en">A GUI application for identifying influential spreaders in complex networks by combining global diversity (k-shell entropy) and local topology features. MV17 employs a two-step framework: first locating a node's global position via k-shell decomposition, then measuring local connection quality through neighbor coreness. Features 11 built-in centrality measures, SIR Monte Carlo validation (5,000 rounds), scatter matrix correlation analysis, and 29 classical and real-world network datasets.</span>
+                        </p>
+                        <div class="software-tags">
+                            <span class="software-tag">Network Analysis</span>
+                            <span class="software-tag">Influential Spreaders</span>
+                            <span class="software-tag">K-Shell Decomposition</span>
+                            <span class="software-tag">SIR Simulation</span>
+                            <span class="software-tag">Python</span>
+                            <span class="software-tag">GUI + CLI</span>
+                        </div>
+                        <div class="software-gallery">
+                            <a href="images/software/mv17-kcore.png" target="_blank" rel="noopener noreferrer"><img src="images/software/mv17-kcore.png" alt="MV17 K-Core Visualization of dolphins network with color-coded k-core numbers" loading="lazy"></a>
+                            <a href="images/software/mv17-attributes.png" target="_blank" rel="noopener noreferrer"><img src="images/software/mv17-attributes.png" alt="MV17 Node Attributes table showing 11 centrality measures and neighbor degree distribution" loading="lazy"></a>
+                            <a href="images/software/mv17-scatter.png" target="_blank" rel="noopener noreferrer"><img src="images/software/mv17-scatter.png" alt="MV17 scatter matrix showing pairwise correlations between centrality measures" loading="lazy"></a>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0378437115003040?via%3Dihub" target="_blank" rel="noopener noreferrer" class="paper-thumb" title="View published paper"><img src="images/software/mv17-paper.png" alt="MV17 paper first page — Physica A 2015" loading="lazy"></a>
+                        </div>
+                        <div class="software-ref">
+                            <span class="zh">論文：</span><span class="en">Paper: </span>
+                            Fu, Y.-H., Huang, C.-Y., &amp; Sun, C.-T. (2015). Using global diversity and local topology features to identify influential network spreaders. <em>Physica A: Statistical Mechanics and its Applications</em>, 433, 344–355.
+                            <a href="https://doi.org/10.1016/j.physa.2015.03.042" target="_blank" rel="noopener noreferrer">doi:10.1016/j.physa.2015.03.042</a>
+                        </div>
+                        <div class="software-meta"><a href="https://github.com/canslab1/MV17" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License · <a href="https://canslab1.github.io/MV17/" target="_blank" rel="noopener noreferrer">README</a></div>
+                    </li>
+
+                    <li class="software-card">
+                        <h3><a href="https://github.com/canslab1/CASMIM" target="_blank" rel="noopener noreferrer">CASMIM — SARS Epidemic Simulation</a></h3>
+                        <p class="software-desc">
+                            <span class="zh">結合細胞自動機與社會鏡像身份機制的 SARS 疫情模擬模型。每個人在 500×500 環面格網上擁有多個「社會分身」，代表其在不同社交場域（家庭、工作場所、醫院等）的存在。模型使用 SEIR+D 分室架構，搭配 8 項可動態啟停的公共衛生政策、BFS 接觸者追蹤、超級傳播者建模及年齡分層死亡率，可模擬新加坡、臺北和多倫多的 SARS 疫情情境。</span>
+                            <span class="en">A small-world epidemiological simulation model combining cellular automata with a "social mirror identity" mechanism for SARS transmission dynamics. Each person owns multiple agents scattered across a 500×500 torus lattice, representing their presence in different social spheres. Uses an SEIR+D compartmental framework with 8 dynamically toggleable public health policies, BFS-based contact tracing, super-spreader modeling, and age-stratified mortality.</span>
+                        </p>
+                        <div class="software-tags">
+                            <span class="software-tag">Epidemic Simulation</span>
+                            <span class="software-tag">SARS</span>
+                            <span class="software-tag">Cellular Automata</span>
+                            <span class="software-tag">SEIR Model</span>
+                            <span class="software-tag">Agent-Based Model</span>
+                            <span class="software-tag">Python</span>
+                            <span class="software-tag">GUI</span>
+                        </div>
+                        <div class="software-gallery">
+                            <a href="images/software/casmim-lattice.png" target="_blank" rel="noopener noreferrer"><img src="images/software/casmim-lattice.png" alt="CASMIM lattice model with color-coded susceptible, incubation, and infected agent states" loading="lazy"></a>
+                            <a href="images/software/casmim-mirror-identity.png" target="_blank" rel="noopener noreferrer"><img src="images/software/casmim-mirror-identity.png" alt="Social mirror identity concept — individuals distributed across home, office, school bus, and other social spheres" loading="lazy"></a>
+                            <a href="images/software/casmim-gui.png" target="_blank" rel="noopener noreferrer"><img src="images/software/casmim-gui.png" alt="CASMIM GUI screenshot with 500×500 macro lattice view and policy controls" loading="lazy"></a>
+                            <a href="https://doi.org/10.1177/0037549705061519" target="_blank" rel="noopener noreferrer" class="paper-thumb" title="View published paper"><img src="images/software/casmim-paper.png" alt="CASMIM paper first page — SIMULATION 2005" loading="lazy"></a>
+                        </div>
+                        <div class="software-ref">
+                            <span class="zh">論文：</span><span class="en">Paper: </span>
+                            Huang, C.-Y., Sun, C.-T., Hsieh, J.-L., Chen, Y.-M. A., &amp; Lin, H. (2005). A Novel Small-World Model: Using Social Mirror Identities for Epidemic Simulations. <em>SIMULATION</em>, 81(10), 671–699.
+                            <a href="https://doi.org/10.1177/0037549705061519" target="_blank" rel="noopener noreferrer">doi:10.1177/0037549705061519</a>
+                        </div>
+                        <div class="software-ref">
+                            <span class="zh">論文：</span><span class="en">Paper: </span>
+                            Huang, C.-Y., Sun, C.-T., Hsieh, J.-L., &amp; Lin, H. (2004). Simulating SARS: Small-World Epidemiological Modeling and Public Health Policy Assessments. <em>Journal of Artificial Societies and Social Simulation</em>, 7(4), 2.
+                            <a href="http://jasss.soc.surrey.ac.uk/7/4/2.html" target="_blank" rel="noopener noreferrer">JASSS 7(4)</a>
+                        </div>
+                        <div class="software-meta"><a href="https://github.com/canslab1/CASMIM" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License · <a href="https://canslab1.github.io/CASMIM/" target="_blank" rel="noopener noreferrer">README</a></div>
+                    </li>
+
+                    <li class="software-card">
+                        <h3><a href="https://github.com/canslab1/HETA" target="_blank" rel="noopener noreferrer">HETA — Hierarchical Edge Type Analysis</a></h3>
+                        <p class="software-desc">
+                            <span class="zh">無參數的複雜網絡邊分類工具。HETA 純粹依據網絡拓撲結構，將每條邊分類為 BOND、SINK、LOCAL BRIDGE 或 GLOBAL BRIDGE 四種類型，無需預先定義社群標籤或邊權重。支援 PySide6 圖形介面與命令列雙模式。</span>
+                            <span class="en">A parameter-free tool for classifying every edge in a complex network into one of four structural types (BOND, SINK, LOCAL BRIDGE, GLOBAL BRIDGE) driven entirely by network topology, without requiring pre-defined community labels or edge weights. Offers both a PySide6 GUI and a full-featured CLI.</span>
+                        </p>
+                        <div class="software-tags">
+                            <span class="software-tag">Network Analysis</span>
+                            <span class="software-tag">Edge Classification</span>
+                            <span class="software-tag">Complex Networks</span>
+                            <span class="software-tag">Python</span>
+                            <span class="software-tag">GUI + CLI</span>
+                        </div>
+                        <div class="software-gallery">
+                            <a href="images/software/heta-link-types.png" target="_blank" rel="noopener noreferrer"><img src="images/software/heta-link-types.png" alt="HETA edge type classification: Silk, Bond, Local Bridge, Global Bridge on example network" loading="lazy"></a>
+                            <a href="images/software/heta-community.png" target="_blank" rel="noopener noreferrer"><img src="images/software/heta-community.png" alt="HETA community detection on 4 real-world networks: rdgam, women, camp92, karate" loading="lazy"></a>
+                            <a href="images/software/heta-16networks.png" target="_blank" rel="noopener noreferrer"><img src="images/software/heta-16networks.png" alt="HETA link type analysis applied to 16 benchmark networks" loading="lazy"></a>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0378437119306375" target="_blank" rel="noopener noreferrer" class="paper-thumb" title="View published paper"><img src="images/software/heta-paper.png" alt="HETA paper first page — Physica A 2019" loading="lazy"></a>
+                        </div>
+                        <div class="software-ref">
+                            <span class="zh">論文：</span><span class="en">Paper: </span>
+                            Huang, C.-Y., Chin, W. C. B., Fu, Y.-H., &amp; Tsai, Y.-S. (2019). Beyond bond links in complex networks: Local bridges, global bridges and silk links. <em>Physica A: Statistical Mechanics and its Applications</em>, 536, 121027.
+                            <a href="https://doi.org/10.1016/j.physa.2019.04.263" target="_blank" rel="noopener noreferrer">doi:10.1016/j.physa.2019.04.263</a>
+                        </div>
+                        <div class="software-meta"><a href="https://github.com/canslab1/HETA" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License · <a href="https://canslab1.github.io/HETA/" target="_blank" rel="noopener noreferrer">README</a></div>
+                    </li>
+
+                    <li class="software-card">
+                        <h3><a href="https://github.com/canslab1/HATA" target="_blank" rel="noopener noreferrer">HATA — Hierarchical Arc Type Analysis</a></h3>
+                        <p class="software-desc">
+                            <span class="zh">有向網絡弧分類工具。HATA 將 HETA 框架擴展至有向圖，以方向性自我網絡取代「共同朋友」概念，將每條有向弧分類為 BOND、Silk、Local Bridge 或 Global Bridge。</span>
+                            <span class="en">A tool for classifying directed arcs in complex networks into four hierarchical types (BOND, Silk, Local Bridge, Global Bridge). HATA extends the HETA framework to directed networks by replacing the "common friends" concept with directional ego networks.</span>
+                        </p>
+                        <div class="software-tags">
+                            <span class="software-tag">Directed Networks</span>
+                            <span class="software-tag">Arc Classification</span>
+                            <span class="software-tag">Complex Networks</span>
+                            <span class="software-tag">Python</span>
+                        </div>
+                        <div class="software-gallery">
+                            <a href="images/software/hata-arc-types.png" target="_blank" rel="noopener noreferrer"><img src="images/software/hata-arc-types.png" alt="HATA arc type classification: Silk, Bond, Local Bridge, Global Bridge on directed example network" loading="lazy"></a>
+                            <a href="images/software/hata-4networks.png" target="_blank" rel="noopener noreferrer"><img src="images/software/hata-4networks.png" alt="HATA arc classification on 4 directed networks: foodweb, citation, blogs, highschool" loading="lazy"></a>
+                            <a href="images/software/hata-travian.png" target="_blank" rel="noopener noreferrer"><img src="images/software/hata-travian.png" alt="HATA arc type proportions over time in Travian game networks" loading="lazy"></a>
+                            <a href="https://ieeexplore.ieee.org/document/9057711/" target="_blank" rel="noopener noreferrer" class="paper-thumb" title="View published paper"><img src="images/software/hata-paper.png" alt="HATA paper first page — IEEE Access 2020" loading="lazy"></a>
+                        </div>
+                        <div class="software-ref">
+                            <span class="zh">論文：</span><span class="en">Paper: </span>
+                            Huang, C.-Y. &amp; Chin, W. C. B. (2020). Distinguishing Arc Types to Understand Complex Network Strength Structures and Hierarchical Connectivity Patterns. <em>IEEE Access</em>, 8, 71021–71040.
+                            <a href="https://doi.org/10.1109/ACCESS.2020.2986017" target="_blank" rel="noopener noreferrer">doi:10.1109/ACCESS.2020.2986017</a>
+                        </div>
+                        <div class="software-meta"><a href="https://github.com/canslab1/HATA" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License · <a href="https://canslab1.github.io/HATA/" target="_blank" rel="noopener noreferrer">README</a></div>
+                    </li>
+
+                    <li class="software-card">
+                        <h3><a href="https://github.com/canslab1/BCAT" target="_blank" rel="noopener noreferrer">BCAT — Bounded Confidence and Adoption Threshold Model</a></h3>
+                        <p class="software-desc">
+                            <span class="zh">結合有界信心意見動態與採用門檻創新擴散的混合模擬模型，用於探索「最佳遊戲卻無人問津」現象。支援正規格子、小世界網絡、隨機網絡及無標度網絡四種拓撲。提供 Python 3 與 NetLogo 4.0.5 兩種實作。</span>
+                            <span class="en">A mixed opinion dynamics and innovation diffusion simulation model for exploring the "best game no one played" phenomenon. Supports Regular Lattice, Small-World, Random, and Scale-Free network topologies. Implementations available in Python 3 (with Tkinter GUI) and NetLogo 4.0.5.</span>
+                        </p>
+                        <div class="software-tags">
+                            <span class="software-tag">Opinion Dynamics</span>
+                            <span class="software-tag">Innovation Diffusion</span>
+                            <span class="software-tag">Agent-Based Model</span>
+                            <span class="software-tag">Python</span>
+                            <span class="software-tag">NetLogo</span>
+                        </div>
+                        <div class="software-gallery">
+                            <a href="images/software/bcat-correlation.png" target="_blank" rel="noopener noreferrer"><img src="images/software/bcat-correlation.png" alt="BCAT correlation matrices across Regular Lattice, Small-World, Random, and Scale-Free networks" loading="lazy"></a>
+                            <a href="images/software/bcat-flowchart.png" target="_blank" rel="noopener noreferrer"><img src="images/software/bcat-flowchart.png" alt="BCAT simulation algorithm flowchart with opinion exchange and adoption decision phases" loading="lazy"></a>
+                            <a href="images/software/bcat-gui-overview.png" target="_blank" rel="noopener noreferrer"><img src="images/software/bcat-gui-overview.png" alt="BCAT GUI — opinion dynamics and adoption simulation with multiple charts" loading="lazy"></a>
+                            <a href="https://ieeexplore.ieee.org/document/9933777" target="_blank" rel="noopener noreferrer" class="paper-thumb" title="View published paper"><img src="images/software/bcat-paper.png" alt="BCAT paper first page — IEEE Access 2022" loading="lazy"></a>
+                        </div>
+                        <div class="software-ref">
+                            <span class="zh">論文：</span><span class="en">Paper: </span>
+                            Wang, S.-W., Huang, C.-Y., &amp; Sun, C.-T. (2022). Multiagent Diffusion and Opinion Dynamics Model Interaction Effects on Controversial Products. <em>IEEE Access</em>, 10, 115252–115270.
+                            <a href="https://doi.org/10.1109/ACCESS.2022.3218719" target="_blank" rel="noopener noreferrer">doi:10.1109/ACCESS.2022.3218719</a>
+                        </div>
+                        <div class="software-meta"><a href="https://github.com/canslab1/BCAT" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License · <a href="https://canslab1.github.io/BCAT/" target="_blank" rel="noopener noreferrer">README</a></div>
+                    </li>
+
+                    <li class="software-card">
+                        <h3><a href="https://github.com/canslab1/SRAC-Agent" target="_blank" rel="noopener noreferrer">SRAC-Agent</a></h3>
+                        <p class="software-desc">
+                            <span class="zh">演化空間囚徒困境賽局中自我聲譽感知機制的模擬器。研究代理人如何評估自身適應度與聲譽並據此調整策略。支援 50×50 格網上 2,500 個代理人的即時視覺化模擬，提供 GUI 與 CLI 雙模式及批次實驗功能。</span>
+                            <span class="en">A Python 3 simulator for studying the influence of self-reputation awareness on agent behavior in evolutionary spatial Iterated Prisoner's Dilemma (IPD) games. Simulates 2,500 agents on a 50×50 grid with real-time visualization, supporting both GUI and CLI modes with batch experiment capabilities.</span>
+                        </p>
+                        <div class="software-tags">
+                            <span class="software-tag">Game Theory</span>
+                            <span class="software-tag">Prisoner's Dilemma</span>
+                            <span class="software-tag">Evolutionary Computation</span>
+                            <span class="software-tag">Agent-Based Model</span>
+                            <span class="software-tag">Python</span>
+                        </div>
+                        <div class="software-gallery">
+                            <a href="images/software/srac-initial.png" target="_blank" rel="noopener noreferrer"><img src="images/software/srac-initial.png" alt="SRAC-IPD initial random strategies on 50×50 cellular automata grid" loading="lazy"></a>
+                            <a href="images/software/srac-evolved.png" target="_blank" rel="noopener noreferrer"><img src="images/software/srac-evolved.png" alt="SRAC-IPD evolved strategies at generation 99 with SRAC agents enabled" loading="lazy"></a>
+                            <a href="images/software/srac-strategies.png" target="_blank" rel="noopener noreferrer"><img src="images/software/srac-strategies.png" alt="SRAC-Agent four key strategies dynamics — ALL-C, TFT, PAVLOV, ALL-D" loading="lazy"></a>
+                            <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0099841" target="_blank" rel="noopener noreferrer" class="paper-thumb" title="View published paper"><img src="images/software/srac-paper.png" alt="SRAC-Agent paper first page — PLOS ONE 2014" loading="lazy"></a>
+                        </div>
+                        <div class="software-ref">
+                            <span class="zh">論文：</span><span class="en">Paper: </span>
+                            Huang, C.-Y. &amp; Lee, C.-L. (2014). Influences of Agents with a Self-Reputation Awareness Component in an Evolutionary Spatial IPD Game. <em>PLOS ONE</em>, 9(6), e99841.
+                            <a href="https://doi.org/10.1371/journal.pone.0099841" target="_blank" rel="noopener noreferrer">doi:10.1371/journal.pone.0099841</a>
+                        </div>
+                        <div class="software-meta"><a href="https://github.com/canslab1/SRAC-Agent" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License · <a href="https://canslab1.github.io/SRAC-Agent/" target="_blank" rel="noopener noreferrer">README</a></div>
+                    </li>
+
+                    <li class="software-card">
+                        <h3><a href="https://github.com/canslab1/AED2" target="_blank" rel="noopener noreferrer">AED2 — AED Placement Optimization</a></h3>
+                        <p class="software-desc">
+                            <span class="zh">使用基因演算法最佳化自動體外心臟電擊去顫器（AED）的配置地點。基於臺北市 2010 年院外心跳停止（OHCA）案例資料，在超商網絡中找出最佳 AED 部署位置，以最大化 OHCA 存活率並提升成本效益。</span>
+                            <span class="en">A genetic algorithm for optimizing Automated External Defibrillator (AED) placement at convenience stores to maximize Out-of-Hospital Cardiac Arrest (OHCA) survival rates. Uses Taipei 2010 OHCA case data to identify optimal deployment locations with improved cost-effectiveness.</span>
+                        </p>
+                        <div class="software-tags">
+                            <span class="software-tag">Genetic Algorithm</span>
+                            <span class="software-tag">AED Placement</span>
+                            <span class="software-tag">Public Health</span>
+                            <span class="software-tag">Optimization</span>
+                        </div>
+                        <div class="software-gallery">
+                            <a href="images/software/aed2-map.png" target="_blank" rel="noopener noreferrer"><img src="images/software/aed2-map.png" alt="Taipei City maps: (a) fire stations and OHCA cases, (b) current AED and 7-11 locations" loading="lazy"></a>
+                            <a href="images/software/aed2-density.png" target="_blank" rel="noopener noreferrer"><img src="images/software/aed2-density.png" alt="Density distribution comparison: (a) OHCA cases, (b) suggested AED placement locations" loading="lazy"></a>
+                            <a href="images/software/aed2-distribution.png" target="_blank" rel="noopener noreferrer"><img src="images/software/aed2-distribution.png" alt="AED2 optimization results: 49 stores in top 50 and 74 stores in top 10 across runs" loading="lazy"></a>
+                            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0143622812000938" target="_blank" rel="noopener noreferrer" class="paper-thumb" title="View published paper"><img src="images/software/aed2-paper.png" alt="AED2 paper first page — Applied Geography 2012" loading="lazy"></a>
+                        </div>
+                        <div class="software-ref">
+                            <span class="zh">論文：</span><span class="en">Paper: </span>
+                            Tsai, Y.-S., Ko, P. C.-I., Huang, C.-Y., &amp; Wen, T.-H. (2012). Optimizing locations for the installation of automated external defibrillators (AEDs) in urban public streets through the use of spatial and temporal weighting schemes. <em>Applied Geography</em>, 35(1–2), 394–404.
+                            <a href="https://doi.org/10.1016/j.apgeog.2012.09.002" target="_blank" rel="noopener noreferrer">doi:10.1016/j.apgeog.2012.09.002</a>
+                        </div>
+                        <div class="software-meta"><a href="https://github.com/canslab1/AED2" target="_blank" rel="noopener noreferrer">GitHub Repository →</a> · MIT License · <a href="https://canslab1.github.io/AED2/" target="_blank" rel="noopener noreferrer">README</a></div>
+                    </li>
+
+                </ul>
             </section>
 
             <!-- ===== 內嵌頁面 ===== -->
