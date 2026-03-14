@@ -77,6 +77,7 @@ function toggleLanguage() {
     renderPapers();
     renderProjects();
     renderNav();
+    updateAriaLabels();
 }
 
 /* ===== Section Toggle ===== */
@@ -130,6 +131,18 @@ function toggleNav() {
     if (navContainer) navContainer.classList.toggle('show');
 }
 
+/* ===== ARIA Labels ===== */
+
+function updateAriaLabels() {
+    const isEn = document.documentElement.lang === 'en';
+
+    const lab = document.getElementById('lab');
+    if (lab) lab.setAttribute('aria-label', isEn ? 'Overview' : '綜覽');
+
+    const embed = document.getElementById('embed');
+    if (embed) embed.setAttribute('aria-label', isEn ? 'Embedded content' : '嵌入內容');
+}
+
 /* ===== Render Functions ===== */
 
 function renderStats() {
@@ -140,11 +153,13 @@ function renderStats() {
     container.innerHTML = '';
 
     stats.forEach(item => {
-        const card = document.createElement('button');
+        const card = document.createElement('a');
         card.className = 'stat-card';
+        card.href = item.url || '#';
+        card.target = '_blank';
+        card.rel = 'noopener noreferrer';
         card.setAttribute('aria-label', isEn ? `View ${item.label}` : `點選查看 ${item.label}`);
         card.innerHTML = `<span class="stat-number">${item.number}</span><div class="stat-label">${item.label}</div>`;
-        card.addEventListener('click', () => window.open(item.url, '_blank'));
         container.appendChild(card);
     });
 }
@@ -185,33 +200,52 @@ function renderNav() {
 
     const container = nav.querySelector('.nav-container');
 
+    const ul = document.createElement('ul');
+    ul.className = 'nav-list';
+    ul.setAttribute('role', 'menubar');
+
     items.forEach(item => {
+        const li = document.createElement('li');
+        li.setAttribute('role', 'none');
+
         if (item.section) {
             const btn = document.createElement('button');
             btn.className = 'nav-item' + (item.section === _activeSection ? ' active' : '');
+            btn.setAttribute('role', 'menuitem');
             btn.textContent = item.label;
             btn.addEventListener('click', (e) => showSection(item.section, e));
-            container.appendChild(btn);
+            li.appendChild(btn);
         } else if (item.embed) {
             const btn = document.createElement('button');
             btn.className = 'nav-item' + (_activeSection === 'embed' ? '' : '');
+            btn.setAttribute('role', 'menuitem');
             btn.textContent = item.label;
             btn.addEventListener('click', (e) => showEmbed(item.href, e));
-            container.appendChild(btn);
+            li.appendChild(btn);
         } else {
             const a = document.createElement('a');
             a.className = 'nav-item';
+            a.setAttribute('role', 'menuitem');
             a.href = item.href;
             a.target = 'canslab-' + item.label;
             a.textContent = item.label;
-            container.appendChild(a);
+            li.appendChild(a);
         }
+
+        ul.appendChild(li);
     });
+
+    container.appendChild(ul);
 }
 
 function renderFooter() {
     const footer = document.getElementById('main-footer');
     if (!footer) return;
+
+    const isEn = document.documentElement.lang === 'en';
+
+    const nav = document.createElement('nav');
+    nav.setAttribute('aria-label', isEn ? 'Partner links' : '合作單位連結');
 
     const div = document.createElement('div');
     div.className = 'container footer-content';
@@ -222,6 +256,7 @@ function renderFooter() {
         a.target = '_blank';
         a.rel = 'noopener noreferrer';
         a.setAttribute('aria-label', link.label);
+        a.title = link.label;
 
         const img = document.createElement('img');
         img.src = link.src;
@@ -232,7 +267,8 @@ function renderFooter() {
         div.appendChild(a);
     });
 
-    footer.appendChild(div);
+    nav.appendChild(div);
+    footer.appendChild(nav);
 }
 
 /* ===== Honors Article Data ===== */
@@ -352,14 +388,12 @@ function renderAlumniArticle() {
 
     container.innerHTML = '';
 
-    const p = document.createElement('p');
-    p.className = 'honors-paragraph';
-    paragraphs.forEach((text, i) => {
-        if (i > 0) p.appendChild(document.createElement('br'));
-        p.appendChild(document.createTextNode('\u2003\u2003' + text));
-        if (i < paragraphs.length - 1) p.appendChild(document.createElement('br'));
+    paragraphs.forEach(text => {
+        const p = document.createElement('p');
+        p.className = 'honors-paragraph';
+        p.textContent = '\u2003\u2003' + text;
+        container.appendChild(p);
     });
-    container.appendChild(p);
 }
 
 function renderHonorsArticle() {
@@ -371,14 +405,12 @@ function renderHonorsArticle() {
 
     container.innerHTML = '';
 
-    const p = document.createElement('p');
-    p.className = 'honors-paragraph';
-    paragraphs.forEach((text, i) => {
-        if (i > 0) p.appendChild(document.createElement('br'));
-        p.appendChild(document.createTextNode('\u2003\u2003' + text));
-        if (i < paragraphs.length - 1) p.appendChild(document.createElement('br'));
+    paragraphs.forEach(text => {
+        const p = document.createElement('p');
+        p.className = 'honors-paragraph';
+        p.textContent = '\u2003\u2003' + text;
+        container.appendChild(p);
     });
-    container.appendChild(p);
 
     honorsFigures.forEach(fig => {
         const figure = document.createElement('figure');
@@ -544,16 +576,20 @@ function initShared() {
     renderNav();
     renderFooter();
     renderBackToTop();
+    updateAriaLabels();
 }
 
 function renderBackToTop() {
-    if (document.querySelector('.back-to-top')) return;
+    if (document.querySelector('.back-to-top-shared')) return;
 
+    const isEn = document.documentElement.lang === 'en';
     const btn = document.createElement('button');
     btn.className = 'back-to-top-shared';
-    btn.setAttribute('aria-label', 'Back to top');
+    btn.setAttribute('aria-label', isEn ? 'Back to top' : '回到頂部');
     btn.textContent = '↑';
-    document.body.appendChild(btn);
+
+    const main = document.querySelector('main') || document.body;
+    main.appendChild(btn);
 
     window.addEventListener('scroll', function () {
         if (window.pageYOffset > 300) {

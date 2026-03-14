@@ -117,6 +117,18 @@ nav {
     overflow-x: auto;
 }
 
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap;
+}
+
+.nav-list li {
+    display: flex;
+}
+
 .nav-item {
     background: none;
     border: none;
@@ -194,11 +206,13 @@ main {
 }
 
 .stat-card {
+    display: block;
     background: linear-gradient(135deg, #27ae60 0%, #219150 100%);
     color: white;
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
+    text-decoration: none;
     border: none;
     box-shadow: 0 4px 8px rgba(39,174,96,0.3);
     outline: none;
@@ -621,6 +635,15 @@ figure {
 
     .nav-container.show {
         display: flex;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-list li {
+        width: 100%;
     }
 
     .nav-item {

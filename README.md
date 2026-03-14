@@ -221,7 +221,7 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 當使用者向下捲動超過 200px 時，頁面右下角會出現一個綠底白色向上箭頭的圓形按鈕（75px），點擊後平滑捲動回頁面頂部。此按鈕定位在距離底部 75px 處，避免被 Footer 遮擋。
 
-> **維護提示**：按鈕樣式在 `shared.css` 的 `.scroll-top-btn`，邏輯在 `shared.js` 的 `initScrollTopBtn()` 函式中。`stories.html` 另有獨立實作（紫底按鈕）。
+> **維護提示**：按鈕樣式在 `shared.css` 的 `.back-to-top-shared`，邏輯在 `shared.js` 的 `renderBackToTop()` 函式中。`stories.html` 另有獨立實作（紫底按鈕）。
 
 ### Footer
 長庚大學、長庚資工系、老松國小、中國科技大學、杏壇芬芳錄、ORCiD 等 logo 連結。Footer 使用縮圖（`*-thumb.*`）以減少頁面載入大小。
@@ -359,7 +359,7 @@ canslab1.github.io/
 - 學術數據卡片（`.stat-card`）、榮譽列表（`.honors-list`）
 - 軟體卡片（`.software-card`、`.software-gallery`、`.software-tag` 等）
 - 語言切換規則（`.zh` / `.en` class）
-- 回到頂部按鈕（`.scroll-top-btn`）
+- 回到頂部按鈕（`.back-to-top-shared`）
 - 響應式斷點：手機 ≤768px、平板 769–1024px
 
 #### `stats-data.js`
@@ -432,6 +432,7 @@ python3 build-prerender.py
 | `renderNav()` | 渲染導覽列（高亮當前區段） |
 | `renderFooter()` | 渲染 Footer logo（使用縮圖） |
 | `initScrollTopBtn()` | 初始化回到頂部按鈕（捲動超過 200px 時顯示） |
+| `updateAriaLabels()` | 更新動態 aria-label（語言切換時同步更新） |
 | `initShared()` | 初始化入口（無參數，自動偵測頁面） |
 
 ### 語言切換機制
