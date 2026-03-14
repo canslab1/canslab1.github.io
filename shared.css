@@ -417,6 +417,42 @@ figure {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+/* ===== Press Section ===== */
+.press-source-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #14532d;
+    margin: 2rem 0 0.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #27ae60;
+}
+.press-heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0 0 0.5rem;
+}
+.press-heading a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+.press-heading a:hover {
+    text-decoration: underline;
+}
+.press-date {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: normal;
+    color: #888;
+    margin-right: 0.3rem;
+}
+.press-author {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 0 0.6rem;
+    font-style: italic;
+}
+
 /* ===== Papers Section ===== */
 .papers-category {
     margin-bottom: 2rem;
