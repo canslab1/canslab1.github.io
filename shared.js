@@ -54,7 +54,10 @@ const footerLinks = [
     { href: 'https://xingtan.tiec.tp.edu.tw/Register/Profile/20240715152009039506', label: '前往臺北市杏壇芬芳錄', src: 'https://canslab1.github.io/images/favicon-thumb.ico', alt: '臺北市杏壇芬芳錄 logo' },
     { href: 'https://orcid.org/0000-0002-8680-6755', label: '前往ORCiD', src: 'https://orcid.org/assets/vectors/orcid.logo.icon.svg', alt: 'ORCiD logo' },
     { href: 'https://www.facebook.com/gscott.huang/', label: '前往 Facebook', src: 'https://canslab1.github.io/images/facebook-thumb.png', alt: 'Facebook logo' },
-    { href: 'https://sites.google.com/view/gscott-huang', label: '前往 Google Sites', src: 'https://canslab1.github.io/images/google-thumb.png', alt: 'Google logo' }
+    { href: 'https://sites.google.com/view/gscott-huang', label: '前往 Google Sites', src: 'https://canslab1.github.io/images/google-thumb.png', alt: 'Google logo' },
+    { href: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en', label: '前往 Google Scholar', src: 'https://canslab1.github.io/images/google-scholar-thumb.png', alt: 'Google Scholar logo' },
+    { href: 'https://github.com/canslab1', label: '前往 GitHub', src: 'https://canslab1.github.io/images/github-thumb.png', alt: 'GitHub logo' },
+    { href: 'https://pure.lib.cgu.edu.tw/zh/persons/chung-yuan-huang-2', label: '前往長庚大學 Pure 學術檔案', src: 'https://canslab1.github.io/images/cgu-thumb.png', alt: '長庚大學 Pure logo' }
 ];
 
 /* ===== Language Toggle ===== */
