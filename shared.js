@@ -203,7 +203,7 @@ function renderNav() {
             const a = document.createElement('a');
             a.className = 'nav-item';
             a.href = item.href;
-            a.target = '_blank';
+            a.target = 'canslab-stories';
             a.rel = 'noopener noreferrer';
             a.textContent = item.label;
             container.appendChild(a);
