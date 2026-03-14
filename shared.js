@@ -164,6 +164,7 @@ function renderHonors() {
 }
 
 var _activeSection = 'bio';
+var _externalWin = null;
 
 function renderNav() {
     const nav = document.getElementById('main-nav');
@@ -200,13 +201,17 @@ function renderNav() {
             btn.addEventListener('click', (e) => showEmbed(item.href, e));
             container.appendChild(btn);
         } else {
-            const a = document.createElement('a');
-            a.className = 'nav-item';
-            a.href = item.href;
-            a.target = 'canslab-stories';
-            a.rel = 'noopener noreferrer';
-            a.textContent = item.label;
-            container.appendChild(a);
+            const btn = document.createElement('button');
+            btn.className = 'nav-item';
+            btn.textContent = item.label;
+            btn.addEventListener('click', () => {
+                if (!_externalWin || _externalWin.closed) {
+                    _externalWin = window.open(item.href, 'canslab-stories');
+                } else {
+                    _externalWin.focus();
+                }
+            });
+            container.appendChild(btn);
         }
     });
 }
