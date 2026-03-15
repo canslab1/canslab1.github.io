@@ -70,6 +70,7 @@ Prof. Chung-Yuan Huang (黃崇源) is a full professor in the Department of Comp
 - Facebook: https://www.facebook.com/gscott.huang/
 - Wiki: https://sites.google.com/view/gscott-huang
 - Chang Gung University PURE: https://pure.lib.cgu.edu.tw/zh/persons/chung-yuan-huang-2
+- GitHub: https://github.com/canslab1
 - Family Stories (家族故事): https://canslab1.github.io/stories.html
 - EpiRank on GitHub: https://github.com/canslab1/EpiRank
 - MV17 on GitHub: https://github.com/canslab1/MV17
@@ -91,13 +92,14 @@ Prof. Chung-Yuan Huang (黃崇源) is a full professor in the Department of Comp
 
 ## Site Structure
 
-- / (index.html): Single-page application with seven content sections plus embedded PDF viewer:
+- / (index.html): Single-page application with eight content sections plus embedded PDF viewer:
   - "介紹" (About): 簡短自傳 (Brief Biography) — education, career, research interests, and academic achievements (default tab)
   - "榮譽" (Honors): 責任與肯定 (Commitment and Recognition) — honors list, Lao-Song Elementary Distinguished Alumni recommendation article, and Taipei Honored Contributors to Education recommendation article with 4 photos
   - "綜覽" (Overview): 28 academic performance stat cards (publications, citations, h-index, projects, students, service, career)
   - "著作" (Papers): 171 publications in 5 categories (44 SCI/SSCI/EI journal papers, 49 international conference papers, 10 book chapters, 49 media commentaries, 19 domestic conference papers)
   - "計畫" (Projects): 37 research projects (22 as PI, 14 as Co-PI, 1 as research member)
-  - "程式" (Software): 開源程式 (Open-Source Software) — 8 open-source tools (EpiRank, MV17, CASMIM, HETA, HATA, BCAT, SRAC-Agent, AED2) with paper references and GitHub links
+  - "程式" (Softwares): 開源程式 (Open-Source Software) — 8 open-source tools (EpiRank, MV17, CASMIM, HETA, HATA, BCAT, SRAC-Agent, AED2) with paper references and GitHub links
+  - "評論" (Op-Eds): 媒體投書 — 13 op-ed articles published in Taipei Times (5), 自由時報 (5), and 風傳媒 (3), grouped by newspaper and sorted newest first
   - "履歷" (CV): Embedded PDF viewer displaying the full academic curriculum vitae
 - /stories.html: Family Stories — 60 personal family stories spanning three generations in Taipei Wanhua
 - /CV.pdf: Full academic curriculum vitae (PDF)

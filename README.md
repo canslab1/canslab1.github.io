@@ -2,7 +2,7 @@
 
 黃崇源教授（Prof. Chung-Yuan Huang, Ph.D.）個人學術網站，託管於 GitHub Pages。
 
-> **最後更新**：2026-03-14 ｜ **更新歷史**：[Commit Log](https://github.com/canslab1/canslab1.github.io/commits/master)
+> **最後更新**：2026-03-15 ｜ **更新歷史**：[Commit Log](https://github.com/canslab1/canslab1.github.io/commits/master)
 
 ## 目錄
 
@@ -110,11 +110,11 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 ## 頁面結構
 
-本網站採用**單頁式架構**（Single Page Application），`index.html` 包含七個內容區段（介紹 / 榮譽 / 綜覽 / 著作 / 計畫 / 程式）以及內嵌 PDF 檢視（履歷），透過導覽列按鈕切換，不重新載入頁面。
+本網站採用**單頁式架構**（Single Page Application），`index.html` 包含八個內容區段（介紹 / 榮譽 / 綜覽 / 著作 / 計畫 / 程式 / 評論）以及內嵌 PDF 檢視（履歷），透過導覽列按鈕切換，不重新載入頁面。
 
 | 檔案 | 頁面 | 說明 |
 |------|------|------|
-| `index.html` | 首頁（單頁式） | 包含七個區段：介紹（簡短自傳）、榮譽（責任與肯定 + 傑出校友推薦文 + 杏壇芬芳錄推薦文）、綜覽（28 張學術數據卡片）、著作（著作目錄）、計畫（計畫列表）、程式（開源程式），以及內嵌 PDF 檢視（履歷） |
+| `index.html` | 首頁（單頁式） | 包含八個區段：介紹（簡短自傳）、榮譽（責任與肯定 + 傑出校友推薦文 + 杏壇芬芳錄推薦文）、綜覽（28 張學術數據卡片）、著作（著作目錄）、計畫（計畫列表）、程式（開源程式）、評論（媒體投書），以及內嵌 PDF 檢視（履歷） |
 | `stories.html` | 家族故事 | 個人家族故事集 |
 | `404.html` | 錯誤頁 | 自訂 404 頁面 |
 | `CYHuang.html` | 重導向頁 | 已移至 `index.html#papers`（`noindex`、`meta refresh`、`canonical`） |
@@ -139,11 +139,11 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 ### 導覽列
 
-中文：介紹 | 榮譽 | 綜覽 | 著作 | 計畫 | 程式 | 履歷 | 臉書 | 故事 | 相簿 | 評論 | 投書
+中文：介紹 | 榮譽 | 綜覽 | 著作 | 計畫 | 程式 | 評論 | 履歷 | 故事 | 相簿
 
-英文：About | Honors | Overview | Papers | Projects | Software | CV | FB | Stories | Photos | Press | Op-Eds
+英文：About | Honors | Overview | Papers | Projects | Softwares | Op-Eds | CV | Stories | Photos
 
-前六項（介紹 / 榮譽 / 綜覽 / 著作 / 計畫 / 程式）為頁面內區段切換，履歷為嵌入式 PDF 檢視，其餘五項（臉書 / 故事 / 相簿 / 評論 / 投書）為外部連結。外部連結使用具名 `target`（如 `canslab-故事`），重複點擊同一連結時瀏覽器會跳到已開啟的視窗而非再開新分頁（受限於 Facebook、Google 等網站的 Cross-Origin-Opener-Policy 安全策略，部分外部網站可能仍會開新視窗）。
+前七項（介紹 / 榮譽 / 綜覽 / 著作 / 計畫 / 程式 / 評論）為頁面內區段切換，履歷為嵌入式 PDF 檢視，其餘兩項（故事 / 相簿）為外部連結。外部連結使用具名 `target`（如 `canslab-故事`），重複點擊同一連結時瀏覽器會跳到已開啟的視窗而非再開新分頁。
 
 ### 區段一：簡短自傳（介紹，預設顯示）
 
@@ -217,16 +217,37 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 > **維護提示**：軟體項目更新請直接修改 `index.html` 中「程式」區段（`<section id="software">`）的 `.software-card` 區塊。
 
+### 區段七：媒體投書（評論）
+
+收錄黃崇源教授發表於國內外報紙的投書文章共 13 篇，按報社分組（Taipei Times 5 篇、自由時報 5 篇、風傳媒 3 篇），同一報社內按日期由新到舊排列。每篇文章顯示標題（含外部連結）、發表日期與作者。
+
+> **維護提示**：新增投書請直接修改 `index.html` 中「評論」區段（`<section id="press">`）的 `.software-card` 區塊，按報社分組並維持日期由新到舊排序。
+
 ### 回到頂部按鈕
 
-當使用者向下捲動超過 200px 時，頁面右下角會出現一個綠底白色向上箭頭的圓形按鈕（75px），點擊後平滑捲動回頁面頂部。此按鈕定位在距離底部 75px 處，避免被 Footer 遮擋。
+當使用者向下捲動超過 300px 時，頁面右下角會出現一個綠底白色向上箭頭的圓形按鈕（48px），點擊後平滑捲動回頁面頂部。此按鈕定位在距離底部 75px 處，避免被 Footer 遮擋。
 
 > **維護提示**：按鈕樣式在 `shared.css` 的 `.back-to-top-shared`，邏輯在 `shared.js` 的 `renderBackToTop()` 函式中。`stories.html` 另有獨立實作（紫底按鈕）。
 
 ### Footer
-長庚大學、長庚資工系、老松國小、中國科技大學、杏壇芬芳錄、ORCiD 等 logo 連結。Footer 使用縮圖（`*-thumb.*`）以減少頁面載入大小。
 
-> **維護提示**：Footer 連結更新請修改 `shared.js` 中的 `footerLinks[]` 陣列。如新增 logo 請同時製作縮圖版本（建議寬度 64px）。
+頁面底部固定列，顯示 9 個 logo 圖示連結。滑鼠移到任一 logo 上時，logo 會放大並顯示綠色提示框，標示即將連結到的網站名稱。
+
+| # | Logo | 連結目標 |
+|---|------|---------|
+| 1 | 長庚資工系 | cgu.edu.tw/csie |
+| 2 | 老松國小 | tlsps.tp.edu.tw |
+| 3 | 杏壇芬芳錄 | xingtan.tiec.tp.edu.tw |
+| 4 | ORCiD | orcid.org |
+| 5 | Facebook | facebook.com/gscott.huang |
+| 6 | Google Sites | sites.google.com/view/gscott-huang |
+| 7 | Google Scholar | scholar.google.com |
+| 8 | GitHub | github.com/canslab1 |
+| 9 | 長庚 Pure | pure.lib.cgu.edu.tw |
+
+Footer 使用縮圖（`*-thumb.*`）以減少頁面載入大小。Hover 時顯示自訂綠色漸層提示框（`.footer-tooltip`），帶向下箭頭指向 logo。
+
+> **維護提示**：Footer 連結更新請修改 `shared.js` 中的 `footerLinks[]` 陣列。如新增 logo 請同時製作縮圖版本（建議寬度 128px 以內）。提示框文字自動取自 `label` 欄位並去除「前往」前綴。
 
 ## 著作列表（papers-data.js）
 
@@ -300,11 +321,11 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 ### 檔案結構
 ```
 canslab1.github.io/
-├── index.html           # 首頁（單頁式，含介紹/榮譽/綜覽/著作/計畫/程式六個區段 + 內嵌 PDF）
+├── index.html           # 首頁（單頁式，含介紹/榮譽/綜覽/著作/計畫/程式/評論七個區段 + 內嵌 PDF）
 ├── stories.html         # 家族故事
 ├── stories.css          # 故事頁面專屬 CSS
 ├── stories.js           # 故事頁面專屬 JS
-├── shared.css           # 共用 CSS 樣式（含回到頂部按鈕）
+├── shared.css           # 共用 CSS 樣式（含回到頂部按鈕、Footer 提示框）
 ├── shared.js            # 共用 JS 渲染函式與區段切換（含回到頂部按鈕邏輯）
 ├── stats-data.js        # 28 張學術數據卡片資料
 ├── papers-data.js       # 171 篇著作列表資料
@@ -333,11 +354,15 @@ canslab1.github.io/
     ├── CANS.png        # CANS Lab logo
     ├── Photos1-1.jpeg  # 故事頁面用照片
     ├── Photos1-2.jpg   # 故事頁面用照片
-    ├── cgu.png / cgu-thumb.png         # 長庚大學 logo（原圖 / 縮圖）
-    ├── csie.png / csie-thumb.png       # 長庚資工系 logo / favicon（原圖 / 縮圖）
-    ├── cute.jpg / cute-thumb.jpg       # 中國科技大學 logo（原圖 / 縮圖）
-    ├── laosong.png / laosong-thumb.png # 老松國小 logo（原圖 / 縮圖）
-    ├── favicon.ico / favicon-thumb.ico # 杏壇芬芳錄 logo（原圖 / 縮圖）
+    ├── csie.png        # 長庚資工系 logo（原圖，用作 favicon）
+    ├── csie-thumb.png  # 長庚資工系 logo（Footer 縮圖）
+    ├── cgu-thumb.png   # 長庚大學 logo（Footer 縮圖，用於 Pure 連結）
+    ├── laosong-thumb.png  # 老松國小 logo（Footer 縮圖）
+    ├── favicon-thumb.ico  # 杏壇芬芳錄 logo（Footer 縮圖）
+    ├── facebook-thumb.png # Facebook logo（Footer 縮圖）
+    ├── google-thumb.png   # Google logo（Footer 縮圖）
+    ├── google-scholar-thumb.png # Google Scholar logo（Footer 縮圖）
+    ├── github-thumb.png   # GitHub logo（Footer 縮圖）
     ├── honors1–4.png   # 杏壇芬芳獎照片
     └── software/       # 研究軟體截圖與論文縮圖
         ├── epirank-*.png   # EpiRank 相關圖片
@@ -356,8 +381,10 @@ canslab1.github.io/
 全站共用 CSS，包含：
 - Reset 樣式、Layout 容器
 - Header、導覽列、Footer 樣式
+- Footer 提示框（`.footer-tooltip`）— 綠色漸層背景，hover 時淡入顯示
 - 學術數據卡片（`.stat-card`）、榮譽列表（`.honors-list`）
 - 軟體卡片（`.software-card`、`.software-gallery`、`.software-tag` 等）
+- 評論區段（`.press-source-title`、`.press-heading`、`.press-date`、`.press-author`）
 - 語言切換規則（`.zh` / `.en` class）
 - 回到頂部按鈕（`.back-to-top-shared`）
 - 響應式斷點：手機 ≤768px、平板 769–1024px
@@ -414,13 +441,13 @@ python3 build-prerender.py
 | `honorsArticleZh[]` / `honorsArticleEn[]` | 杏壇芬芳錄推薦文 | 推薦文內容變更時 |
 | `bioZh[]` / `bioEn[]` | 簡短自傳 | 自傳內容更新時 |
 | `navItemsZh[]` / `navItemsEn[]` | 導覽列項目 | 新增/修改頁面連結時 |
-| `footerLinks[]` | Footer logo 連結 | 新增合作單位時 |
+| `footerLinks[]` | Footer logo 連結 | 新增/修改連結時 |
 
 **核心函式：**
 | 函式 | 用途 |
 |------|------|
 | `toggleLanguage()` | 中英文即時切換 |
-| `showSection(id, event)` | 切換頁面內區段（介紹 / 榮譽 / 綜覽 / 著作 / 計畫 / 程式） |
+| `showSection(id, event)` | 切換頁面內區段（介紹 / 榮譽 / 綜覽 / 著作 / 計畫 / 程式 / 評論） |
 | `showEmbed(url, event)` | 以 iframe 嵌入顯示外部頁面（履歷 PDF） |
 | `renderStats()` | 渲染學術數據卡片 |
 | `renderHonors()` | 渲染榮譽列表 |
@@ -430,8 +457,8 @@ python3 build-prerender.py
 | `renderPapers()` | 渲染著作列表（讀取 `papers-data.js`） |
 | `renderProjects()` | 渲染計畫列表（讀取 `projects-data.js`） |
 | `renderNav()` | 渲染導覽列（高亮當前區段） |
-| `renderFooter()` | 渲染 Footer logo（使用縮圖） |
-| `initScrollTopBtn()` | 初始化回到頂部按鈕（捲動超過 200px 時顯示） |
+| `renderFooter()` | 渲染 Footer logo 及提示框（使用縮圖） |
+| `renderBackToTop()` | 初始化回到頂部按鈕（捲動超過 300px 時顯示） |
 | `updateAriaLabels()` | 更新動態 aria-label（語言切換時同步更新） |
 | `initShared()` | 初始化入口（無參數，自動偵測頁面） |
 
@@ -444,15 +471,16 @@ python3 build-prerender.py
 
 `index.html` 中 `<section>` 的排列順序與導覽列順序一致：
 
-| 順序 | 區段 ID | 導覽列標籤 | 說明 |
-|------|---------|-----------|------|
-| 1 | `bio` | 介紹 | 簡短自傳（預設顯示） |
-| 2 | `overview` | 榮譽 | 責任與肯定 + 推薦文 |
-| 3 | `lab` | 綜覽 | 28 張學術數據卡片 |
-| 4 | `papers` | 著作 | 著作目錄 |
-| 5 | `projects` | 計畫 | 計畫列表 |
-| 6 | `software` | 程式 | 開源程式 |
-| 7 | `embed` | 履歷 | 內嵌 PDF 檢視 |
+| 順序 | 區段 ID | 導覽列標籤（中/英） | 說明 |
+|------|---------|-------------------|------|
+| 1 | `bio` | 介紹 / About | 簡短自傳（預設顯示） |
+| 2 | `overview` | 榮譽 / Honors | 責任與肯定 + 推薦文 |
+| 3 | `lab` | 綜覽 / Overview | 28 張學術數據卡片 |
+| 4 | `papers` | 著作 / Papers | 著作目錄 |
+| 5 | `projects` | 計畫 / Projects | 計畫列表 |
+| 6 | `software` | 程式 / Softwares | 開源程式 |
+| 7 | `press` | 評論 / Op-Eds | 媒體投書（13 篇） |
+| 8 | `embed` | 履歷 / CV | 內嵌 PDF 檢視 |
 
 ### 新增內容區段步驟
 1. 在 `index.html` 的 `<main>` 中新增 `<section id="新區段" class="section">`（注意：須按導覽列順序插入正確位置）
@@ -569,7 +597,7 @@ python3 build-prerender.py
 
 ### 結構化資料（JSON-LD）詳細
 
-**index.html**（整合六區段 + 內嵌 PDF）：
+**index.html**（整合八區段 + 內嵌 PDF）：
 - `WebSite`：網站名稱、語言、描述
 - `ProfilePage` → `Person`：姓名、別名（黃崇源、CY Huang、GSCOTT）、職稱、服務機構、學歷、研究領域、Google Scholar、ORCID
 - `ResearchOrganization`：CANS Lab 組織資訊，隸屬長庚大學
@@ -690,8 +718,9 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 | 特性 | 使用頁面 | 說明 |
 |------|---------|------|
 | `role="region"` | index / stories | 主要內容區段標記為語意區域 |
+| `role="menubar"` / `role="menuitem"` | index | 導覽列使用 `<ul>` + `<li>` 結構，配合 ARIA 角色 |
 | `aria-labelledby` | index / stories | 區段以標題 ID 作為可存取名稱 |
-| `aria-label` | index | 綜覽區段（無標題）使用 `aria-label="綜覽"` |
+| `aria-label` | index | 綜覽區段（無標題）使用 `aria-label="綜覽"`；Footer 導覽使用 `aria-label="合作單位連結"` |
 | `aria-expanded` | stories | 故事目錄展開/收合狀態通知螢幕閱讀器 |
 | `aria-controls` | stories | 目錄按鈕與目錄內容區域的關聯 |
 | `lang="zh-TW"` | 所有頁面 | 宣告頁面主語言，輔助螢幕閱讀器發音 |
@@ -725,7 +754,8 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 | ORCID | https://orcid.org/0000-0002-8680-6755 |
 | Chang Gung PURE | https://pure.lib.cgu.edu.tw/zh/persons/chung-yuan-huang-2 |
 | Facebook | https://www.facebook.com/gscott.huang/ |
-| Wiki | https://sites.google.com/view/gscott-huang |
+| Google Sites | https://sites.google.com/view/gscott-huang |
+| GitHub | https://github.com/canslab1 |
 | NSTC 學術研究 | https://arspb.nstc.gov.tw/（查詢黃崇源） |
 | EpiRank（GitHub） | https://github.com/canslab1/EpiRank |
 | EpiRank（README） | https://canslab1.github.io/EpiRank/ |
@@ -762,7 +792,7 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 | 項目 | 建議 |
 |------|------|
 | 格式 | 照片使用 `.jpg`（壓縮率高）；logo / 圖示使用 `.png`（支援透明） |
-| 尺寸 | 大頭照 / 活動照：最大寬度 800px；logo：最大寬度 200px；Footer 縮圖：寬度 64px |
+| 尺寸 | 大頭照 / 活動照：最大寬度 800px；logo：最大寬度 200px；Footer 縮圖：寬度 128px 以內 |
 | 檔案大小 | 單張建議 ≤200KB，大圖 ≤500KB |
 | 命名規則 | 全小寫、用連字號分隔，例如 `honors1.png`、`epirank-screenshot.png`；縮圖加 `-thumb` 後綴 |
 | 存放位置 | 一般圖片放 `images/`；軟體相關圖片放 `images/software/` |
@@ -773,8 +803,8 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 # 將圖片寬度縮至 800px（等比縮放）
 sips --resampleWidth 800 images/my-photo.jpg
 
-# 製作 Footer 縮圖（寬度 64px）
-sips --resampleWidth 64 images/logo.png --out images/logo-thumb.png
+# 製作 Footer 縮圖（寬度 128px）
+sips -Z 128 images/logo.png --out images/logo-thumb.png
 ```
 
 ### 更新學術數據卡片
@@ -786,6 +816,20 @@ sips --resampleWidth 64 images/logo.png --out images/logo-thumb.png
 - `number`：顯示的數字
 - `label`：卡片標題
 - `url`：點擊後前往的連結（可為空字串 `''`）
+
+### 新增媒體投書（評論區段）
+
+直接在 `index.html` 的 `<section id="press">` 中新增 `<li class="software-card">`，格式如下：
+```html
+<li class="software-card">
+    <h4 class="press-heading">
+        <span class="press-date">YYYY.MM.DD</span>
+        <a href="文章網址" target="_blank" rel="noopener noreferrer">文章標題</a>
+    </h4>
+    <p class="press-author">作者名</p>
+</li>
+```
+注意：同一報社內按日期由新到舊排列。
 
 ## 常見維護操作
 
@@ -800,6 +844,7 @@ sips --resampleWidth 64 images/logo.png --out images/logo-thumb.png
 | 更新簡短自傳 | `shared.js` → `bioZh[]` / `bioEn[]` |
 | 修改導覽列連結 | `shared.js` → `navItemsZh[]` / `navItemsEn[]` |
 | 新增 Footer logo | `shared.js` → `footerLinks[]`（須同時製作縮圖） |
+| 新增/修改媒體投書 | `index.html`「評論」區段（`<section id="press">`）的 `.software-card` 區塊 |
 | 新增/修改研究軟體 | `index.html`「程式」區段（`<section id="software">`）中的 `.software-card` 區塊 |
 | 更新履歷 | 替換 `CV.pdf` 檔案 |
 | 修改頁面樣式 | `shared.css`（共用）或頁面內 `<style>`（專屬） |
@@ -819,7 +864,7 @@ sips --resampleWidth 64 images/logo.png --out images/logo-thumb.png
 | 研究軟體（EpiRank、HETA 等） | ✅ 各自 GitHub repo 採 MIT 授權 |
 | 教授個人照片（`images/IMG-2.jpg`、`honors1–4.png`） | ❌ 個人肖像權，未經授權不得使用 |
 | `CV.pdf` 學術履歷 | ❌ 個人文件，僅供閱覽 |
-| 各機構 logo（`cgu.png`、`csie.png`、`laosong.png` 等） | ❌ 各機構商標，僅限本網站使用 |
+| 各機構 logo（`csie.png`、`laosong-thumb.png` 等） | ❌ 各機構商標，僅限本網站使用 |
 | 家族故事內容（`stories.html`） | ❌ 個人著作，版權所有 |
 
 ## 貢獻指南
@@ -946,5 +991,5 @@ git push origin master
   3. 如容器已含預渲染內容，需先還原為空再執行
 
 ### 外部連結重複開啟視窗
-- **現象**：點擊「臉書」「評論」「投書」等導覽列連結時，每次都開新視窗
-- **說明**：這是 Facebook 和 Google 設定了 `Cross-Origin-Opener-Policy: same-origin` 安全標頭所致，瀏覽器會清除具名視窗的關聯。此為瀏覽器層級限制，無法透過 JavaScript 繞過。「故事」和「相簿」不受此影響，可正常重複使用同一視窗。
+- **現象**：點擊「故事」「相簿」等導覽列外部連結時，每次都開新視窗
+- **說明**：導覽列外部連結使用具名 `target`（如 `canslab-故事`），正常情況下重複點擊會跳到已開啟的視窗。但部分網站（如 Facebook、Google）設定了 `Cross-Origin-Opener-Policy: same-origin` 安全標頭，瀏覽器會清除具名視窗的關聯，導致每次都開新視窗。此為瀏覽器層級限制，無法透過 JavaScript 繞過。
