@@ -1,0 +1,21 @@
+/* TEAM */
+Professor: Chung-Yuan Huang (黃崇源)
+Title: Full Professor
+Department: Computer Science and Information Engineering
+University: Chang Gung University (長庚大學)
+Location: Taoyuan, Taiwan
+Email: gscott@mail.cgu.edu.tw
+ORCID: 0000-0002-8680-6755
+Google Scholar: 0klfzfAAAAAJ
+
+/* LAB */
+Name: CANS Lab (Complex Adaptive Networks and Systems Laboratory)
+Research: Complex Networks, Epidemic Simulation, Computational Social Science, Agent-Based Modeling, Evolutionary Computation
+Software: EpiRank, MV17, CASMIM, HETA, HATA, BCAT, SRAC-Agent, AED2
+
+/* SITE */
+Last update: 2026-03-16
+Language: Chinese (zh-TW) / English
+Standards: HTML5, CSS3, ES6
+Technology: GitHub Pages, IndexNow, Schema.org JSON-LD, Dublin Core, Atom Feed
+Analytics: Ahrefs Analytics, Microsoft Clarity

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Prof. Chung-Yuan Huang — Updates</title>
+  <subtitle>黃崇源教授個人學術網站最新動態</subtitle>
+  <link href="https://canslab1.github.io/" rel="alternate" type="text/html"/>
+  <link href="https://canslab1.github.io/feed.xml" rel="self" type="application/atom+xml"/>
+  <id>https://canslab1.github.io/</id>
+  <updated>2026-03-16T00:00:00+08:00</updated>
+  <author>
+    <name>Chung-Yuan Huang (黃崇源)</name>
+    <email>gscott@mail.cgu.edu.tw</email>
+    <uri>https://canslab1.github.io/</uri>
+  </author>
+  <rights>MIT License (code); All rights reserved (content)</rights>
+  <icon>https://canslab1.github.io/images/csie.png</icon>
+  <logo>https://canslab1.github.io/images/IMG-2.jpg</logo>
+
+  <!-- Op-Eds / 媒體投書 -->
+
+  <entry>
+    <title>Digging for gold or selling shovels? (Taipei Times)</title>
+    <link href="https://www.taipeitimes.com/News/editorials/archives/2025/05/18/2003837064" rel="alternate"/>
+    <id>tag:canslab1.github.io,2025-05-18:taipeitimes-2025-05-18</id>
+    <updated>2025-05-18T00:00:00+08:00</updated>
+    <summary>Taiwan should not confuse those who provide tools with those who know where the treasure lies. Nvidia is not the one defining the future of AI.</summary>
+    <category term="Op-Ed"/>
+    <category term="Taipei Times"/>
+  </entry>
+
+  <entry>
+    <title>政府應正視病毒模擬研究 (自由時報)</title>
+    <link href="https://talk.ltn.com.tw/article/paper/1701818" rel="alternate"/>
+    <id>tag:canslab1.github.io,2025-05-14:ltn-2025-05-14</id>
+    <updated>2025-05-14T00:00:00+08:00</updated>
+    <summary>新冠肺炎疫情期間，台灣防疫成果舉世矚目，但疫情過後，政府對病毒模擬研究的重視程度明顯下降。</summary>
+    <category term="Op-Ed"/>
+    <category term="自由時報"/>
+  </entry>
+
+  <entry>
+    <title>台灣 AI 產業的反思 (風傳媒)</title>
+    <link href="https://www.storm.mg/article/5348610" rel="alternate"/>
+    <id>tag:canslab1.github.io,2025-07-05:storm-2025-07-05</id>
+    <updated>2025-07-05T00:00:00+08:00</updated>
+    <summary>台灣在全球 AI 供應鏈中扮演關鍵角色，但不應自滿於硬體代工。</summary>
+    <category term="Op-Ed"/>
+    <category term="風傳媒"/>
+  </entry>
+
+  <entry>
+    <title>Virus simulation research must be a priority (Taipei Times)</title>
+    <link href="https://www.taipeitimes.com/News/editorials/archives/2023/04/01/2003796810" rel="alternate"/>
+    <id>tag:canslab1.github.io,2023-04-01:taipeitimes-2023-04-01</id>
+    <updated>2023-04-01T00:00:00+08:00</updated>
+    <summary>Global health institutions have learned from the COVID-19 pandemic that virus simulation research is critical for future preparedness.</summary>
+    <category term="Op-Ed"/>
+    <category term="Taipei Times"/>
+  </entry>
+
+  <entry>
+    <title>A message to students (Taipei Times)</title>
+    <link href="https://www.taipeitimes.com/News/editorials/archives/2021/05/21/2003757773" rel="alternate"/>
+    <id>tag:canslab1.github.io,2021-05-21:taipeitimes-2021-05-21</id>
+    <updated>2021-05-21T00:00:00+08:00</updated>
+    <summary>We are at a crossroads in the COVID-19 pandemic, and I would like to recruit all university students to help make sure we move in the right direction.</summary>
+    <category term="Op-Ed"/>
+    <category term="Taipei Times"/>
+  </entry>
+
+  <entry>
+    <title>別再揮霍了 讓疫苗發揮最大效力 (自由時報)</title>
+    <link href="https://talk.ltn.com.tw/article/paper/1449485" rel="alternate"/>
+    <id>tag:canslab1.github.io,2021-05-14:ltn-2021-05-14</id>
+    <updated>2021-05-14T00:00:00+08:00</updated>
+    <summary>台灣即將開始大規模施打新冠疫苗，醫療人員、政府官員與民眾都應審慎評估疫苗資訊。</summary>
+    <category term="Op-Ed"/>
+    <category term="自由時報"/>
+  </entry>
+
+  <entry>
+    <title>Taiwan's pandemic history (Taipei Times)</title>
+    <link href="https://www.taipeitimes.com/News/editorials/archives/2021/05/16/2003757472" rel="alternate"/>
+    <id>tag:canslab1.github.io,2021-05-16:taipeitimes-2021-05-16</id>
+    <updated>2021-05-16T00:00:00+08:00</updated>
+    <summary>Historians will consider May 11, 2021, as the day Taiwan was invaded by a wave of new COVID-19 cases.</summary>
+    <category term="Op-Ed"/>
+    <category term="Taipei Times"/>
+  </entry>
+
+  <entry>
+    <title>Getting the truth about virus shots (Taipei Times)</title>
+    <link href="https://www.taipeitimes.com/News/editorials/archives/2021/02/27/2003752906" rel="alternate"/>
+    <id>tag:canslab1.github.io,2021-02-27:taipeitimes-2021-02-27</id>
+    <updated>2021-02-27T00:00:00+08:00</updated>
+    <summary>Taiwanese are soon to get COVID-19 shots, so medical personnel, government officials and the public should consider the finer points of vaccination information and scheduling.</summary>
+    <category term="Op-Ed"/>
+    <category term="Taipei Times"/>
+  </entry>
+
+  <entry>
+    <title>疫情時代 為何大學仍然重要 (風傳媒)</title>
+    <link href="https://www.storm.mg/article/3704831" rel="alternate"/>
+    <id>tag:canslab1.github.io,2021-05-20:storm-2021-05-20</id>
+    <updated>2021-05-20T00:00:00+08:00</updated>
+    <summary>疫情衝擊下，大學存在的價值受到質疑，但高等教育的核心價值不應被忽視。</summary>
+    <category term="Op-Ed"/>
+    <category term="風傳媒"/>
+  </entry>
+
+  <entry>
+    <title>一場瘟疫 一面照妖鏡 (自由時報)</title>
+    <link href="https://talk.ltn.com.tw/article/paper/1355762" rel="alternate"/>
+    <id>tag:canslab1.github.io,2021-02-26:ltn-2021-02-26</id>
+    <updated>2021-02-26T00:00:00+08:00</updated>
+    <summary>新冠肺炎疫情如同照妖鏡，照出各國政府的治理能力與社會的真實面貌。</summary>
+    <category term="Op-Ed"/>
+    <category term="自由時報"/>
+  </entry>
+
+  <entry>
+    <title>Air travel significant to spread of COVID-19 (Taipei Times)</title>
+    <link href="https://www.taipeitimes.com/News/editorials/archives/2020/04/20/2003734927" rel="alternate"/>
+    <id>tag:canslab1.github.io,2020-04-20:taipeitimes-2020-04-20</id>
+    <updated>2020-04-20T00:00:00+08:00</updated>
+    <summary>The second wave of COVID-19 in Taiwan is cause for increasing concern.</summary>
+    <category term="Op-Ed"/>
+    <category term="Taipei Times"/>
+  </entry>
+
+  <entry>
+    <title>防疫的國際觀 (風傳媒)</title>
+    <link href="https://www.storm.mg/article/2528184" rel="alternate"/>
+    <id>tag:canslab1.github.io,2020-04-14:storm-2020-04-14</id>
+    <updated>2020-04-14T00:00:00+08:00</updated>
+    <summary>面對全球疫情，台灣應以更宏觀的國際視野來思考防疫策略。</summary>
+    <category term="Op-Ed"/>
+    <category term="風傳媒"/>
+  </entry>
+
+  <entry>
+    <title>Air travel significant to spread of COVID-19 (Taipei Times)</title>
+    <link href="https://www.taipeitimes.com/News/editorials/archives/2020/03/22/2003733144" rel="alternate"/>
+    <id>tag:canslab1.github.io,2020-03-22:taipeitimes-2020-03-22</id>
+    <updated>2020-03-22T00:00:00+08:00</updated>
+    <summary>The second wave of COVID-19 in Taiwan is cause for increasing concern, with multiple confirmed cases from a Turkey tour group.</summary>
+    <category term="Op-Ed"/>
+    <category term="Taipei Times"/>
+  </entry>
+
+  <entry>
+    <title>陳部長沒說的另一半答案 (聯合報)</title>
+    <link href="https://canslab1.github.io/press/udn-2020-03-21.png" rel="alternate"/>
+    <id>tag:canslab1.github.io,2020-03-21:udn-2020-03-21</id>
+    <updated>2020-03-21T00:00:00+08:00</updated>
+    <summary>新冠肺炎第二波疫情日益嚴重，疫情指揮中心指揮官陳時中對土耳其旅行團這起群聚感染憂心。</summary>
+    <category term="Op-Ed"/>
+    <category term="聯合報"/>
+  </entry>
+
+  <entry>
+    <title>台灣防疫這面照妖鏡 (自由時報)</title>
+    <link href="https://talk.ltn.com.tw/article/paper/1354394" rel="alternate"/>
+    <id>tag:canslab1.github.io,2020-02-24:ltn-2020-02-24</id>
+    <updated>2020-02-24T00:00:00+08:00</updated>
+    <summary>台灣的防疫措施在國際間備受肯定，但也反映出社會中的種種問題。</summary>
+    <category term="Op-Ed"/>
+    <category term="自由時報"/>
+  </entry>
+
+  <entry>
+    <title>How to keep infection clusters from happening (Taipei Times)</title>
+    <link href="https://www.taipeitimes.com/News/editorials/archives/2020/02/19/2003731229" rel="alternate"/>
+    <id>tag:canslab1.github.io,2020-02-19:taipeitimes-2020-02-19</id>
+    <updated>2020-02-19T00:00:00+08:00</updated>
+    <summary>The business trip of a Briton, who contracted COVID-19 at an international conference in Singapore, turned him into a super-spreader.</summary>
+    <category term="Op-Ed"/>
+    <category term="Taipei Times"/>
+  </entry>
+
+  <entry>
+    <title>佛系防疫vs.嚴謹防疫 (聯合報)</title>
+    <link href="https://canslab1.github.io/press/udn-2020-02-19.jpg" rel="alternate"/>
+    <id>tag:canslab1.github.io,2020-02-19:udn-2020-02-19</id>
+    <updated>2020-02-19T00:00:00+08:00</updated>
+    <summary>新冠肺炎肆虐之際，各國防禦措施大致可分二類：防禦嚴謹的台灣，與「佛系防疫」的日本。</summary>
+    <category term="Op-Ed"/>
+    <category term="聯合報"/>
+  </entry>
+
+  <entry>
+    <title>台灣防疫 莫忘疫情背後的科學 (自由時報)</title>
+    <link href="https://talk.ltn.com.tw/article/paper/1351521" rel="alternate"/>
+    <id>tag:canslab1.github.io,2020-02-12:ltn-2020-02-12</id>
+    <updated>2020-02-12T00:00:00+08:00</updated>
+    <summary>面對新冠肺炎疫情，台灣的防疫措施不應忽視背後的科學研究基礎。</summary>
+    <category term="Op-Ed"/>
+    <category term="自由時報"/>
+  </entry>
+
+  <entry>
+    <title>李登輝只能代表自己 (中國時報)</title>
+    <link href="https://canslab1.github.io/press/chinatimes-2015-08-25.jpg" rel="alternate"/>
+    <id>tag:canslab1.github.io,2015-08-25:chinatimes-2015-08-25</id>
+    <updated>2015-08-25T00:00:00+08:00</updated>
+    <summary>李前總統有自己的史觀沒錯，錯的是他企圖左右大眾，誤以為他的史觀代表日本統治下所有台灣人的史觀。</summary>
+    <category term="Op-Ed"/>
+    <category term="中國時報"/>
+  </entry>
+
+</feed>
