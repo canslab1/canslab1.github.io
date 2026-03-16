@@ -453,6 +453,7 @@ function formatPaperText(text) {
 
     html = html.replace(/(https?:\/\/[^\s,)]+[^\s,).])/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
     html = html.replace(/doi:(10\.\d{4,}\/[^\s,)]+[^\s,).])/g, '<a href="https://doi.org/$1" target="_blank" rel="noopener noreferrer">doi:$1</a>');
+    html = html.replace(/\[PDF:([^\]]+)\]/g, '<a href="$1" target="_blank" rel="noopener noreferrer">[PDF]</a>');
 
     html = html.replace(/\(([^()]*(?:SCI|SSCI|SCIE|EI)[^()]*)\)\s*\.?\s*$/, '<span class="paper-index">($1)</span>');
 

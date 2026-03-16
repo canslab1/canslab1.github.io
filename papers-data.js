@@ -36,7 +36,7 @@ const papersData = [
             'Huang C.Y. and Lee C.L. (2014) Influences of Agents with a Self-Reputation Awareness Component in an Evolutionary Spatial IPD Game. PLoS One, 9(6), e99841. https://doi.org/10.1371/journal.pone.0099841. (SCI, IF: 3.057, Rank: 11/62 [18%] in Multidisciplinary Sciences)',
             'Huang C.Y. and Wen T.H. (2014) A Novel Private Attitude and Public Opinion Dynamics Model for Simulating Pluralistic Ignorance and Minority Influence. Journal of Artificial Societies and Social Simulation, 17(3), 8. https://doi.org/10.18564/jasss.2517. (SSCI, IF: 1.101, Rank: 28/93 [31%] in Social Sciences, Interdisciplinary)',
             'Wang S.W., Huang C.Y.*, and Sun C.T. (2014) Modeling Self-perception Agents in an Opinion Dynamics Propagation Society. Simulation: Transactions of the Society for Modeling and Simulation International, 90(3), 238-248. https://doi.org/10.1177/0037549713515029. (SCI, IF: 0.640, Rank: 77/106 [73%] in Computer Science, Software Engineering, EI)',
-            'Wang S.W., Huang C.Y.*, and Sun C.T. (2014) A Proposal for Smart Agents with Adjusting Self-Reputation Capability for Preventing Fraud in Multi-Agent Societies. Journal of Information Science and Engineering, 30(2), 313-332. (SCI, IF: 0.392, Rank: 133/143 [93%] in Computer Science, Information Systems)',
+            'Wang S.W., Huang C.Y.*, and Sun C.T. (2014) A Proposal for Smart Agents with Adjusting Self-Reputation Capability for Preventing Fraud in Multi-Agent Societies. Journal of Information Science and Engineering, 30(2), 313-332. [PDF:papers/Journal%20Paper-17.pdf] (SCI, IF: 0.392, Rank: 133/143 [93%] in Computer Science, Information Systems)',
             'Huang C.Y.*, Wen T.H., and Tsai Y.S. (2013) FLUed: A Novel Four-Layer Model for Simulating Epidemic Dynamics and Assessing Intervention Policies. Journal of Applied Mathematics, vol. 2013, Article ID 325816, 20 pages. https://doi.org/10.1155/2013/325816. (SCI, IF: 0.834, Rank: 104/247 [43%] in Mathematics, Applied)',
             'Huang C.Y.*, Lee C.L., Wen T.H., and Sun C.T. (2013) A Computer Virus Spreading Model Based on Resource Limitations and Interaction Costs. The Journal of Systems and Software, 86(3), 801-808. https://doi.org/10.1016/j.jss.2012.11.027. (SCI, IF: 1.424, Rank: 31/105 [30%] in Computer Science, Theory and Methods)',
             'Huang C.Y.* and Sun C.T. (2012) Effects of Resource Limitations and Cost Influences on Computer Virus Epidemic Dynamics and Tipping Points. Discrete Dynamics in Nature and Society, vol. 2012, Article ID 473136, 15 pages. https://doi.org/10.1155/2012/473136. (SCI, IF: 0.646, Rank: 35/62 [57%] in Multidisciplinary Sciences)',
@@ -62,23 +62,23 @@ const papersData = [
             'Huang C.Y., Cheng C.Y., and Sun C.T. (2007) Bridge and Brick Network Motifs: Identifying Significant Building Blocks from Complex Biological Systems. Artificial Intelligence in Medicine, 41(2), 117-127. https://doi.org/10.1016/j.artmed.2007.07.006. (SCI, IF: 1.960, Rank: 28/94 [30%] in Computer Science, Artificial Intelligence, EI)',
             'Huang C.Y., Sun C.T., Cheng C.Y., and Hsieh J.L. (2007) Bridge and Brick Motifs in Complex Networks. Physica A: Statistical Mechanics and Its Applications, 377(1), 340-350. https://doi.org/10.1016/j.physa.2006.11.014. (SCI, IF: 1.772, Rank: 23/79 [30%] in Physics, Multidisciplinary, EI)',
             'Hsieh J.L., Sun C.T., Kao Y.M.G., and Huang C.Y.* (2006) Teaching through Simulation: Epidemic Dynamics and Public Health Policies. Simulation: Transactions of the Society for Modeling and Simulation International, 82(11), 731-759. https://doi.org/10.1177/0037549706074487. (SCI, IF: 0.640, Rank: 77/106 [73%] in Computer Science, Software Engineering, EI)',
-            'Chen D.J., Tsai M.J., and Huang C.Y.* (2006) UI Design Patterns Generator for Pervasive Device. WSEAS Transactions on Computers, 5(9), 2114-2121. (EI)',
-            'Chen D.J., Tsai M.J., and Huang C.Y.* (2006) Visual Based Software Construction: Visual Requirement Authoring Tool and Visual Program Generator. WSEAS Transactions on Systems, 5(8), 1881-1888. (EI)',
+            'Chen D.J., Tsai M.J., and Huang C.Y.* (2006) UI Design Patterns Generator for Pervasive Device. WSEAS Transactions on Computers, 5(9), 2114-2121. [PDF:papers/Journal%20Paper-37.pdf] (EI)',
+            'Chen D.J., Tsai M.J., and Huang C.Y.* (2006) Visual Based Software Construction: Visual Requirement Authoring Tool and Visual Program Generator. WSEAS Transactions on Systems, 5(8), 1881-1888. [PDF:papers/Journal%20Paper-38.pdf] (EI)',
                 ]
             },
             {
                 titleZh: '元培科技大學資訊工程學系講師及助理教授兼系主任時期',
                 titleEn: 'Lecturer & Assistant Professor / Dept. Chair, Dept. of CSIE, Yuanpei University of Medical Technology',
                 items: [
-            'Huang C.Y., Sun C.T., and Chu Y.W. (2006) A Co-adaptive Approach to XCS Classifier Systems. WSEAS Transactions on Systems, 5(2), 388-394. (EI).',
-            'Chu Y.W., Sun C.T., and Huang C.Y.* (2006) Regularity of Protein Secondary Structures and Its Prediction. WSEAS Transactions on Systems, 5(2), 380-385. (EI).',
+            'Huang C.Y., Sun C.T., and Chu Y.W. (2006) A Co-adaptive Approach to XCS Classifier Systems. WSEAS Transactions on Systems, 5(2), 388-394. [PDF:papers/Journal%20Paper-39.pdf] (EI).',
+            'Chu Y.W., Sun C.T., and Huang C.Y.* (2006) Regularity of Protein Secondary Structures and Its Prediction. WSEAS Transactions on Systems, 5(2), 380-385. [PDF:papers/Journal%20Paper-40.pdf] (EI).',
                 ]
             },
             {
                 titleZh: '交通大學資訊工程學系博士生暨中國科技大學資訊工程學系講師時期',
                 titleEn: 'PhD Student, NCTU & Lecturer, China University of Technology',
                 items: [
-            'Huang C.Y., Hsieh J.L., Sun C.T., and Cheng C.Y. (2006) Teaching Epidemic and Public Health Policies through Simulation. WSEAS Transactions on Information Science and Applications, 3(5), 899-904. (EI)',
+            'Huang C.Y., Hsieh J.L., Sun C.T., and Cheng C.Y. (2006) Teaching Epidemic and Public Health Policies through Simulation. WSEAS Transactions on Information Science and Applications, 3(5), 899-904. [PDF:papers/Journal%20Paper-41.pdf] (EI)',
             'Huang C.Y., Sun C.T., Hsieh J.L., Chen Y.M.A., and Lin H. (2005) A Novel Small-World Model: Using Social Mirror Identities for Epidemic Simulations. Simulation: Transactions of The Society for Modeling and Simulation International, 81(10), 671-699. https://doi.org/10.1177/0037549705061519. (SCI, IF: 0.640, Rank: 77/106 [73%] in Computer Science, Software Engineering, EI)',
             'Huang C.Y., Sun C.T., and Lin H.C. (2005) Influence of Local Information on Social Simulation in Small-World Network Models. Journal of Artificial Societies and Social Simulation, 8(4). https://www.jasss.org/8/4/8.html. (SSCI, IF: 1.101, Rank: 28/93 [31%] in Social Sciences, Interdisciplinary)',
             'Huang C.Y., Sun C.T., Hsieh J.L., and Lin H. (2004) Simulating SARS: Small-World Epidemiological Modeling and Public Health Policy Assessments. Journal of Artificial Societies and Social Simulation, 7(4). https://jasss.soc.surrey.ac.uk/7/4/2.html. (SSCI, IF: 1.101, Rank: 28/93 [31%] in Social Sciences, Interdisciplinary)',
