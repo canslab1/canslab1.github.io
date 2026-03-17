@@ -625,6 +625,33 @@ figure {
     font-weight: 500;
 }
 
+/* ===== Articles PDF Viewer ===== */
+.articles-back-btn {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1.2rem;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.articles-back-btn:hover {
+    background: #219150;
+}
+
+#articles-pdf-frame {
+    width: 100%;
+    height: 80vh;
+    border: none;
+    border-radius: 8px;
+    display: block;
+}
+
 /* ===== Embed Section ===== */
 #embed {
     padding: 0;

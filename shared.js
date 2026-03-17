@@ -25,6 +25,7 @@ const navItemsZh = [
     { label: '著作', href: null, section: 'papers' },
     { label: '計畫', href: null, section: 'projects' },
     { label: '程式', href: null, section: 'software' },
+    { label: '文章', href: null, section: 'articles' },
     { label: '評論', href: null, section: 'press' },
     { label: '履歷', href: 'https://canslab1.github.io/CV.pdf', embed: true },
     { label: '故事', href: 'https://canslab1.github.io/stories.html' },
@@ -38,6 +39,7 @@ const navItemsEn = [
     { label: 'Papers', href: null, section: 'papers' },
     { label: 'Projects', href: null, section: 'projects' },
     { label: 'Softwares', href: null, section: 'software' },
+    { label: 'Articles', href: null, section: 'articles' },
     { label: 'Op-Eds', href: null, section: 'press' },
     { label: 'CV', href: 'https://canslab1.github.io/CV.pdf', embed: true },
     { label: 'Stories', href: 'https://canslab1.github.io/stories.html' },
@@ -94,6 +96,9 @@ function showSection(sectionId, event) {
     /* 切回原有區段時清空 iframe 以釋放資源 */
     const frame = document.getElementById('embed-frame');
     if (frame) frame.src = 'about:blank';
+
+    /* 重設文章 PDF 檢視器 */
+    hideArticlePdf();
 
     const navContainer = document.querySelector('.nav-container');
     if (navContainer && navContainer.classList.contains('show')) {
@@ -563,6 +568,29 @@ function renderProjects() {
         roleDiv.appendChild(ol);
         container.appendChild(roleDiv);
     });
+}
+
+/* ===== Article PDF Viewer ===== */
+
+function showArticlePdf(filename) {
+    var list = document.getElementById('articles-list');
+    var viewer = document.getElementById('articles-pdf-viewer');
+    if (!list || !viewer) return;
+    list.style.display = 'none';
+    viewer.style.display = 'block';
+    document.getElementById('articles-pdf-frame').src = filename;
+    var section = document.getElementById('articles');
+    if (section) window.scrollTo({ top: section.offsetTop - 60, behavior: 'smooth' });
+}
+
+function hideArticlePdf() {
+    var list = document.getElementById('articles-list');
+    var viewer = document.getElementById('articles-pdf-viewer');
+    if (!list || !viewer) return;
+    viewer.style.display = 'none';
+    list.style.display = 'block';
+    var frame = document.getElementById('articles-pdf-frame');
+    if (frame) frame.src = 'about:blank';
 }
 
 /* ===== Initialization ===== */
