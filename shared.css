@@ -625,6 +625,27 @@ figure {
     font-weight: 500;
 }
 
+/* ===== Article Thumbnails ===== */
+.article-thumb {
+    display: inline-block;
+    max-width: 280px;
+    cursor: pointer;
+}
+
+.article-thumb img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #27ae60;
+    box-shadow: 0 2px 8px rgba(39,174,96,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.article-thumb img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
 /* ===== Articles PDF Viewer ===== */
 .articles-back-btn {
     display: inline-block;
