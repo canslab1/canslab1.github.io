@@ -570,6 +570,18 @@ function renderProjects() {
     });
 }
 
+/* ===== Article Text Expand/Collapse ===== */
+
+function toggleArticleText(el) {
+    if (el.classList.contains('collapsed')) {
+        el.classList.remove('collapsed');
+        el.classList.add('expanded');
+    } else {
+        el.classList.remove('expanded');
+        el.classList.add('collapsed');
+    }
+}
+
 /* ===== Article PDF Viewer ===== */
 
 function showArticlePdf(filename) {

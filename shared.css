@@ -639,6 +639,45 @@ figure {
     letter-spacing: 0.02em;
 }
 
+/* ===== Article Expandable Text ===== */
+.article-text {
+    cursor: pointer;
+    position: relative;
+    color: #444;
+    font-size: 0.97rem;
+    line-height: 1.7;
+    transition: max-height 0.4s ease;
+    overflow: hidden;
+}
+
+.article-text.collapsed {
+    max-height: 8.5em;
+}
+
+.article-text.collapsed::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2.5em;
+    background: linear-gradient(transparent, #f8f9fa);
+    pointer-events: none;
+}
+
+.article-text.expanded {
+    max-height: 300em;
+}
+
+.article-text p {
+    margin: 0 0 0.8em 0;
+    text-indent: 2em;
+}
+
+.article-text p:last-child {
+    margin-bottom: 0;
+}
+
 /* ===== Article Thumbnails ===== */
 .article-thumb {
     display: inline-block;
