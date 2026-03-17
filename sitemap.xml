@@ -86,9 +86,21 @@
   </url>
   <url>
     <loc>https://canslab1.github.io/stories.html</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/Photos1-1.jpeg</image:loc>
+      <image:title>黃依六少年時期在台北西門町工作的皮鞋店前和友人合影 — 黃崇源教授家族故事集</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/Photos1-2.jpg</image:loc>
+      <image:title>郭雪雲在中華路自家皮鞋修理攤前和父親、兄長及友人合影 — 黃崇源教授家族故事集</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/IMG-2.jpg</image:loc>
+      <image:title>Prof. Chung-Yuan Huang (黃崇源教授) — 大頭仔的60道手工伍仁餡作者</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://canslab1.github.io/CV.pdf</loc>
