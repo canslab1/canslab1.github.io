@@ -2,7 +2,7 @@
 
 黃崇源教授（Prof. Chung-Yuan Huang, Ph.D.）個人學術網站，託管於 GitHub Pages。
 
-> **最後更新**：2026-03-15 ｜ **更新歷史**：[Commit Log](https://github.com/canslab1/canslab1.github.io/commits/master)
+> **最後更新**：2026-03-16 ｜ **更新歷史**：[Commit Log](https://github.com/canslab1/canslab1.github.io/commits/master)
 
 ## 目錄
 
@@ -23,6 +23,7 @@
 - [SEO 設定](#seo-設定)
 - [LLM 搜尋設定](#llm-搜尋設定)
 - [IndexNow 即時索引](#indexnow-即時索引)
+- [子 Repo 架構與連結關係](#子-repo-架構與連結關係)
 - [分析工具與搜尋引擎管理](#分析工具與搜尋引擎管理)
 - [第三方外部資源](#第三方外部資源)
 - [無障礙設計（Accessibility）](#無障礙設計accessibility)
@@ -127,6 +128,8 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 | `papers-data.js` | 論文資料 | 171 篇著作列表（5 大類，中英文） |
 | `projects-data.js` | 計畫資料 | 37 件研究計畫列表（3 種角色，中英文） |
 | `build-prerender.py` | 建構工具 | 解析 JS 資料檔，產生預渲染 HTML 及 JSON-LD 結構化資料 |
+| `css/project-page.css` | 子 repo 共用樣式 | 8 個子 repo 專案頁面共用 CSS（header、markdown-body、footer、響應式） |
+| `js/readme-loader.js` | 子 repo 共用腳本 | 自動偵測 repo 名稱、fetch README.md、渲染 Markdown 與語法高亮 |
 | `stories.css` | 故事樣式 | 家族故事頁面專屬 CSS |
 | `stories.js` | 故事腳本 | 家族故事頁面專屬 JS |
 
@@ -339,6 +342,10 @@ canslab1.github.io/
 ├── d22a81b3...52.txt    # IndexNow API key 驗證檔
 ├── README.md            # 本文件
 ├── LICENSE              # MIT 授權條款
+├── css/
+│   └── project-page.css # 8 個子 repo 專案頁面共用 CSS
+├── js/
+│   └── readme-loader.js # 8 個子 repo README 渲染共用 JS
 ├── .github/workflows/
 │   └── indexnow.yml    # IndexNow 自動提交 workflow
 ├── .gitignore          # Git 忽略規則（.DS_Store、.claude/）
@@ -376,6 +383,12 @@ canslab1.github.io/
 ```
 
 ### 共用檔案說明
+
+#### `css/project-page.css`
+8 個子 repo 專案頁面共用 CSS，詳見「[子 Repo 架構與連結關係](#子-repo-架構與連結關係)」章節。
+
+#### `js/readme-loader.js`
+8 個子 repo README 渲染共用 JS，詳見「[子 Repo 架構與連結關係](#子-repo-架構與連結關係)」章節。
 
 #### `shared.css`
 全站共用 CSS，包含：
@@ -667,6 +680,128 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 ### 手動提交
 
 如需立即手動觸發，可到 GitHub → Actions → IndexNow Submit → Run workflow。
+
+## 子 Repo 架構與連結關係
+
+### 概覽
+
+本網站（`canslab1.github.io`）與 8 個研究軟體子 repo 形成一套統一的 GitHub Pages 站群架構。子 repo 利用 GitHub Pages 的多 repo 部署機制，自動掛載在主網域的子路徑下：
+
+| 子 Repo | GitHub Pages URL | GitHub Repo |
+|---------|-----------------|-------------|
+| AED2 | https://canslab1.github.io/AED2/ | [canslab1/AED2](https://github.com/canslab1/AED2) |
+| BCAT | https://canslab1.github.io/BCAT/ | [canslab1/BCAT](https://github.com/canslab1/BCAT) |
+| CASMIM | https://canslab1.github.io/CASMIM/ | [canslab1/CASMIM](https://github.com/canslab1/CASMIM) |
+| EpiRank | https://canslab1.github.io/EpiRank/ | [canslab1/EpiRank](https://github.com/canslab1/EpiRank) |
+| HATA | https://canslab1.github.io/HATA/ | [canslab1/HATA](https://github.com/canslab1/HATA) |
+| HETA | https://canslab1.github.io/HETA/ | [canslab1/HETA](https://github.com/canslab1/HETA) |
+| MV17 | https://canslab1.github.io/MV17/ | [canslab1/MV17](https://github.com/canslab1/MV17) |
+| SRAC-Agent | https://canslab1.github.io/SRAC-Agent/ | [canslab1/SRAC-Agent](https://github.com/canslab1/SRAC-Agent) |
+
+### 雙向連結架構
+
+主站與子 repo 之間存在雙向連結關係：
+
+```
+┌──────────────────────────────────────────────────────────┐
+│  canslab1.github.io（主站 index.html）                    │
+│  ├─ 「程式」區段 → 8 個軟體卡片                              │
+│  │   每張卡片包含：                                         │
+│  │   ├─ GitHub Repo 連結 → github.com/canslab1/{REPO}     │
+│  │   └─ README 連結 → canslab1.github.io/{REPO}/          │
+│  └─ Footer → github.com/canslab1                          │
+└──────────────┬───────────────────────────────────────────┘
+               │ 連結至子 repo 頁面
+               ▼
+┌──────────────────────────────────────────────────────────┐
+│  canslab1.github.io/{REPO}/（子 repo index.html）         │
+│  ├─ Header「CANS Lab」logo → canslab1.github.io/（主站）  │
+│  ├─ Header「Lab Home」連結 → canslab1.github.io/（主站）   │
+│  ├─ Header「GitHub Repo」→ github.com/canslab1/{REPO}     │
+│  └─ Footer → canslab1.github.io/（主站）                   │
+└──────────────────────────────────────────────────────────┘
+```
+
+- **主站 → 子 repo**：首頁「程式」區段（`<section id="software">`）的 8 張軟體卡片，每張包含 README 頁面連結（`https://canslab1.github.io/{REPO}/`）及 GitHub repo 連結。
+- **子 repo → 主站**：每個子 repo 的 `index.html` header 包含「CANS Lab」logo 和「Lab Home」導覽連結，均指回 `https://canslab1.github.io/`；footer 也連回主站。
+
+### 共用基礎設施
+
+為了避免 8 個子 repo 各自維護相同的 CSS 與 JS，共用檔案統一託管在主站 repo（`canslab1.github.io`）中，由子 repo 透過絕對 URL 引用：
+
+| 共用檔案 | 託管位置 | 用途 |
+|---------|---------|------|
+| `css/project-page.css` | 主站 repo | 子 repo 專案頁面的完整樣式（header、markdown-body、footer、loading spinner、響應式斷點） |
+| `js/readme-loader.js` | 主站 repo | 自動偵測 repo 名稱、fetch README.md、以 marked.js 渲染 Markdown、以 highlight.js 語法高亮 |
+
+子 repo 的 `index.html` 引用方式：
+```html
+<!-- CSS：替代原本 49 行的內嵌 <style> -->
+<link rel="stylesheet" href="https://canslab1.github.io/css/project-page.css">
+
+<!-- JS：替代原本 24 行的內嵌 <script> -->
+<script src="https://canslab1.github.io/js/readme-loader.js"></script>
+```
+
+#### `css/project-page.css`
+子 repo 專案頁面共用 CSS，包含：
+- Reset 樣式與 body 排版（flex column、min-height 100vh）
+- Header：綠色漸層背景（`#14532d` → `#1a7745`）、sticky 定位、品牌 logo 與導覽列
+- Markdown body：白底圓角卡片、標題樣式（h1–h6 綠色邊框）、表格、程式碼區塊、引用
+- Footer：白底分隔線、綠色連結
+- Loading spinner：旋轉動畫、置中提示文字
+- 響應式斷點：≤768px 自動調整 padding 與字級
+
+#### `js/readme-loader.js`
+README 渲染腳本，功能：
+1. 從 URL 路徑自動偵測 repo 名稱（`/RepoName/` → `RepoName`）
+2. Fetch 同目錄下的 `./README.md`
+3. 使用 marked.js（GFM 模式）渲染為 HTML
+4. 使用 highlight.js 進行程式碼區塊語法高亮
+5. 錯誤處理：顯示錯誤訊息並附上 GitHub repo 連結
+
+> **維護提示**：修改 `css/project-page.css` 或 `js/readme-loader.js` 會同時影響所有 8 個子 repo 的專案頁面，請謹慎更新。修改後需 push 主站 repo 並等待 GitHub Pages 部署（約 30–60 秒），子 repo 頁面即可載入更新後的檔案。
+
+### 子 repo 模板結構
+
+每個子 repo 的 `index.html` 遵循統一的模板結構（約 122 行），僅 repo 特定的 metadata 不同：
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 1. Google Analytics（G-MXPNPC63XE，所有頁面共用） -->
+    <!-- 2. Meta 標籤：title、description、og、twitter、keywords、robots -->
+    <!-- 3. JSON-LD 結構化資料：SoftwareSourceCode + WebPage -->
+    <!-- 4. Dublin Core metadata -->
+    <!-- 5. Highwire Press（Google Scholar）metadata -->
+    <!-- 6. 共用 CSS：project-page.css -->
+    <!-- 7. highlight.js 主題 CSS -->
+</head>
+<body>
+    <header>     <!-- CANS Lab logo + Lab Home / GitHub Repo 導覽 -->
+    <main>       <!-- markdown-body 容器，載入 README.md -->
+    <footer>     <!-- CANS Lab 版權聲明 + 主站連結 -->
+    <!-- marked.js + highlight.js CDN -->
+    <!-- 共用 JS：readme-loader.js -->
+</body>
+</html>
+```
+
+各子 repo 的差異僅在：
+- `<title>` 和各 meta 標籤中的軟體名稱與描述
+- JSON-LD 中的 `SoftwareSourceCode` 資訊（名稱、描述、程式語言、GitHub URL）
+- Dublin Core 的 `DC.title`、`DC.subject`、`DC.description`
+- Header 中的 GitHub Repo 連結指向各自的 repo
+
+### 分支慣例
+
+| Repo | 預設分支 | 部署分支 |
+|------|---------|---------|
+| canslab1.github.io（主站） | `master` | `master` |
+| AED2、BCAT、CASMIM、EpiRank、HATA、HETA、MV17、SRAC-Agent | `main` | `main` |
+
+> **注意**：主站使用 `master` 分支，8 個子 repo 使用 `main` 分支。Git 操作時請留意分支名稱。
 
 ## 分析工具與搜尋引擎管理
 
