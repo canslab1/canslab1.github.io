@@ -625,6 +625,20 @@ figure {
     font-weight: 500;
 }
 
+/* ===== Article Language Badge ===== */
+.article-lang-badge {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    background: #e8f0fe;
+    color: #1a73e8;
+    vertical-align: middle;
+    margin-left: 0.4rem;
+    letter-spacing: 0.02em;
+}
+
 /* ===== Article Thumbnails ===== */
 .article-thumb {
     display: inline-block;
