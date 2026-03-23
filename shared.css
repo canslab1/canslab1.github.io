@@ -307,6 +307,25 @@ main {
     text-indent: 2em;
 }
 
+/* Contact Info */
+.contact-info {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #555;
+    padding-left: 0.5em;
+    border-left: 3px solid #2e7d32;
+}
+.contact-info p {
+    margin-bottom: 0.3rem;
+}
+.contact-info a {
+    color: #2e7d32;
+    text-decoration: none;
+}
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
 figure {
     margin: 2rem 0;
 }
