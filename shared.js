@@ -1,7 +1,7 @@
 /* ===== Honors Data ===== */
 
 const honorsZh = [
-    '<span class="honors-highlight">中國科技大學</span><br>2024.11 榮獲傑出校友<br>2000.11 榮獲優秀校友<br>校史唯一先後獲頒傑出與優秀校友',
+    '<span class="honors-highlight">中國科技大學</span><br>2024.11 榮獲傑出校友 <button class="interview-btn" onclick="showVideoModal(\'028zexOcXZo\')">專訪</button><br>2000.11 榮獲優秀校友<br>校史唯一先後獲頒傑出與優秀校友',
     '<span class="honors-highlight">臺北市杏壇芬芳獎</span><br>2024.11 榮獲臺北市教育局公開表揚',
     '<span class="honors-highlight">臺北市老松國民小學學生家長會</span><br>2024.10 榮膺第 34 屆榮譽會長<br>2023.10 擔任臺北市小聯會常務理事<br>2022.10 擔任第 32 和 33 屆會長<br>113 學年起設立畢業生榮譽會長獎，每班壹名，鼓勵多元學習表現優異學童',
     '<span class="honors-highlight">所羅門股份有限公司</span><br>2022.06 榮膺第十二屆董事會獨立董事<br>2022.06 擔任薪酬、審計、永續發展委員',
@@ -9,7 +9,7 @@ const honorsZh = [
 ];
 
 const honorsEn = [
-    '<span class="honors-highlight">China University of Technology</span><br>2024.11 Distinguished Alumni Award<br>2000.11 Outstanding Alumni Award<br>the only recipient in university history of both Distinguished and Outstanding Alumni honors.',
+    '<span class="honors-highlight">China University of Technology</span><br>2024.11 Distinguished Alumni Award <button class="interview-btn" onclick="showVideoModal(\'028zexOcXZo\')">Interview</button><br>2000.11 Outstanding Alumni Award<br>the only recipient in university history of both Distinguished and Outstanding Alumni honors.',
     '<span class="honors-highlight">2024.10 Taipei Honored Contributors to Education</span><br>Bottomless Devotion to Taipei Lao-Song Elementary School',
     '<span class="honors-highlight">Laosong Elementary School, Taipei City</span><br>2024.10 Honorary President, 34th Parents&#39; Association<br>2022.10-2024.10 President of the 32nd and 33rd Parents&#39; Association<br>Starting from the 113th Academic Year, the Honorary PTA President\'s Award will be presented to graduating students',
     '<span class="honors-highlight">Solomon Technology Corporation</span><br>2022.06 Served as Independent Director on the 12th Board of Directors of Solomon Co., Ltd.<br>2022.06 Served on the Compensation, Audit, and Sustainability Committees of the 12th Board of Directors of Solomon Co., Ltd.',
@@ -603,6 +603,24 @@ function hideArticlePdf() {
     list.style.display = 'block';
     var frame = document.getElementById('articles-pdf-frame');
     if (frame) frame.src = 'about:blank';
+}
+
+/* ===== Video Modal ===== */
+
+function showVideoModal(youtubeId) {
+    var overlay = document.getElementById('video-modal-overlay');
+    var frame = document.getElementById('video-modal-frame');
+    if (!overlay || !frame) return;
+    frame.src = 'https://www.youtube.com/embed/' + youtubeId + '?autoplay=1';
+    overlay.style.display = 'flex';
+}
+
+function hideVideoModal() {
+    var overlay = document.getElementById('video-modal-overlay');
+    var frame = document.getElementById('video-modal-frame');
+    if (!overlay || !frame) return;
+    frame.src = 'about:blank';
+    overlay.style.display = 'none';
 }
 
 /* ===== Initialization ===== */

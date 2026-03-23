@@ -255,6 +255,25 @@ main {
     border-left: 4px solid #27ae60;
 }
 
+.interview-btn {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    background: #e8f0fe;
+    color: #2980b9;
+    border: 1px solid #b6d4fe;
+    cursor: pointer;
+    vertical-align: middle;
+    transition: background 0.2s, color 0.2s;
+}
+
+.interview-btn:hover {
+    background: #2980b9;
+    color: #fff;
+}
+
 .honors-image {
     display: block;
     margin: 0 auto;

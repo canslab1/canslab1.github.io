@@ -2687,5 +2687,9 @@
     ]
 }
     </script>
+    <div id="video-modal-overlay" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:9999;align-items:center;justify-content:center;" onclick="hideVideoModal()">
+        <button onclick="hideVideoModal()" style="position:absolute;top:18px;right:28px;background:none;border:none;color:#fff;font-size:2.2rem;cursor:pointer;z-index:10000;">&times;</button>
+        <iframe id="video-modal-frame" src="about:blank" style="width:90%;max-width:960px;aspect-ratio:16/9;border:none;border-radius:8px;" allow="autoplay;encrypted-media" allowfullscreen onclick="event.stopPropagation()"></iframe>
+    </div>
 </body>
 </html>
