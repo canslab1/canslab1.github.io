@@ -45,4 +45,3 @@ User-agent: Baiduspider
 Allow: /
 
 Sitemap: https://canslab1.github.io/sitemap.xml
-Feed: https://canslab1.github.io/feed.xml
