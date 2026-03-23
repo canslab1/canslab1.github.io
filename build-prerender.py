@@ -1,9 +1,17 @@
 #!/usr/bin/env python3
 """
 build-prerender.py
-讀取 papers-data.js 和 projects-data.js，產生預渲染 HTML，
+讀取 papers-data.js、projects-data.js 和 shared.js，產生預渲染 HTML，
 並自動嵌入 index.html 的對應容器中。
 同時產生 JSON-LD 結構化資料供搜尋引擎使用。
+
+預渲染範圍：
+  - 著作（papers-data.js → #papers-container）
+  - 計畫（projects-data.js → #projects-container）
+  - 自傳（shared.js bioZh/bioEn → #bio-content）
+  - 榮譽（shared.js honorsZh/honorsEn → #honors-list）
+  - 傑出校友推薦文（shared.js alumniArticleZh/alumniArticleEn → #alumni-article）
+  - 杏壇芬芳推薦文（shared.js honorsArticleZh/honorsArticleEn → #honors-article）
 
 用法：python3 build-prerender.py
 """
@@ -388,6 +396,70 @@ def generate_jsonld(papers_data, projects_data):
     return ld
 
 
+# ─── Parse simple string arrays from shared.js ───
+
+def parse_string_array(js_text, var_name):
+    """Parse a const array of strings from shared.js, e.g. const bioZh = ['...', '...']
+    Returns a list of strings."""
+    m = re.search(rf'const\s+{var_name}\s*=\s*\[', js_text)
+    if not m:
+        print(f"  WARNING: Could not find {var_name}")
+        return []
+
+    arr_start = m.end() - 1  # position of '['
+    arr_end = find_bracket_end(js_text, arr_start)
+    arr_content = js_text[arr_start + 1:arr_end - 1]
+
+    items = []
+    i = 0
+    while i < len(arr_content):
+        qidx = arr_content.find("'", i)
+        if qidx == -1:
+            break
+        item_str, i = extract_js_string(arr_content, qidx)
+        items.append(item_str)
+
+    return items
+
+
+# ─── Generate Bio HTML ───
+
+def generate_bio_html(bio_zh, bio_en):
+    """Generate prerendered HTML for the bio section with both languages."""
+    lines = []
+    for text in bio_zh:
+        lines.append(f'<p class="bio-paragraph zh">{esc(text)}</p>')
+    for text in bio_en:
+        lines.append(f'<p class="bio-paragraph en">{esc(text)}</p>')
+    return '\n'.join(lines)
+
+
+# ─── Generate Honors HTML ───
+
+def generate_honors_html(honors_zh, honors_en):
+    """Generate prerendered HTML for the honors list with both languages.
+    Honors items contain raw HTML (buttons, spans) so we preserve them as-is."""
+    lines = []
+    for html in honors_zh:
+        lines.append(f'<li class="honors-item zh">{html}</li>')
+    for html in honors_en:
+        lines.append(f'<li class="honors-item en">{html}</li>')
+    return '\n'.join(lines)
+
+
+# ─── Generate Article HTML (Alumni / Honors recommendations) ───
+
+def generate_article_html(paragraphs_zh, paragraphs_en):
+    """Generate prerendered HTML for recommendation articles with both languages.
+    Uses em-space indent (U+2003) matching the JS renderAlumniArticle/renderHonorsArticle."""
+    lines = []
+    for text in paragraphs_zh:
+        lines.append(f'<p class="honors-paragraph zh">\u2003\u2003{esc(text)}</p>')
+    for text in paragraphs_en:
+        lines.append(f'<p class="honors-paragraph en">\u2003\u2003{esc(text)}</p>')
+    return '\n'.join(lines)
+
+
 # ─── Main ───
 
 def main():
@@ -395,7 +467,10 @@ def main():
         papers_js = f.read()
     with open(os.path.join(BASE, 'projects-data.js'), 'r', encoding='utf-8') as f:
         projects_js = f.read()
+    with open(os.path.join(BASE, 'shared.js'), 'r', encoding='utf-8') as f:
+        shared_js = f.read()
 
+    # Parse papers and projects
     papers_data = parse_papers_data(papers_js)
     projects_data = parse_projects_data(projects_js)
 
@@ -407,8 +482,28 @@ def main():
         n = sum(len(p['items']) for p in cat['periods'])
         print(f"  Category {i+1}: {cat['titleZh']} — {n} papers, {len(cat['periods'])} periods")
 
+    # Parse shared.js arrays
+    print("\nParsing shared.js arrays...")
+    bio_zh = parse_string_array(shared_js, 'bioZh')
+    bio_en = parse_string_array(shared_js, 'bioEn')
+    honors_zh = parse_string_array(shared_js, 'honorsZh')
+    honors_en = parse_string_array(shared_js, 'honorsEn')
+    alumni_zh = parse_string_array(shared_js, 'alumniArticleZh')
+    alumni_en = parse_string_array(shared_js, 'alumniArticleEn')
+    honors_article_zh = parse_string_array(shared_js, 'honorsArticleZh')
+    honors_article_en = parse_string_array(shared_js, 'honorsArticleEn')
+    print(f"  bioZh: {len(bio_zh)} paragraphs, bioEn: {len(bio_en)} paragraphs")
+    print(f"  honorsZh: {len(honors_zh)} items, honorsEn: {len(honors_en)} items")
+    print(f"  alumniArticleZh: {len(alumni_zh)} paragraphs, alumniArticleEn: {len(alumni_en)} paragraphs")
+    print(f"  honorsArticleZh: {len(honors_article_zh)} paragraphs, honorsArticleEn: {len(honors_article_en)} paragraphs")
+
+    # Generate HTML
     papers_html = generate_papers_html(papers_data)
     projects_html = generate_projects_html(projects_data)
+    bio_html = generate_bio_html(bio_zh, bio_en)
+    honors_html = generate_honors_html(honors_zh, honors_en)
+    alumni_html = generate_article_html(alumni_zh, alumni_en)
+    honors_article_html = generate_article_html(honors_article_zh, honors_article_en)
 
     jsonld = generate_jsonld(papers_data, projects_data)
     jsonld_str = json.dumps(jsonld, ensure_ascii=False, indent=4)
@@ -422,9 +517,9 @@ def main():
     new_papers = '<div id="papers-container">\n' + papers_html + '\n            </div>'
     if old_papers in index_html:
         index_html = index_html.replace(old_papers, new_papers)
-        print("✅ Papers container replaced")
+        print("\n✅ Papers container replaced")
     else:
-        print("⚠️  Papers container not found (already replaced?)")
+        print("\n⚠️  Papers container not found (already replaced?)")
 
     # Replace projects container
     old_projects = '<div id="projects-container"></div>'
@@ -434,6 +529,42 @@ def main():
         print("✅ Projects container replaced")
     else:
         print("⚠️  Projects container not found (already replaced?)")
+
+    # Replace bio container
+    old_bio = '<div id="bio-content"></div>'
+    new_bio = '<div id="bio-content">\n' + bio_html + '\n            </div>'
+    if old_bio in index_html:
+        index_html = index_html.replace(old_bio, new_bio)
+        print("✅ Bio container replaced")
+    else:
+        print("⚠️  Bio container not found (already replaced?)")
+
+    # Replace honors list container
+    old_honors = '<ul id="honors-list" class="honors-list"></ul>'
+    new_honors = '<ul id="honors-list" class="honors-list">\n' + honors_html + '\n            </ul>'
+    if old_honors in index_html:
+        index_html = index_html.replace(old_honors, new_honors)
+        print("✅ Honors list container replaced")
+    else:
+        print("⚠️  Honors list container not found (already replaced?)")
+
+    # Replace alumni article container
+    old_alumni = '<div id="alumni-article"></div>'
+    new_alumni = '<div id="alumni-article">\n' + alumni_html + '\n            </div>'
+    if old_alumni in index_html:
+        index_html = index_html.replace(old_alumni, new_alumni)
+        print("✅ Alumni article container replaced")
+    else:
+        print("⚠️  Alumni article container not found (already replaced?)")
+
+    # Replace honors article container
+    old_honors_art = '<div id="honors-article"></div>'
+    new_honors_art = '<div id="honors-article">\n' + honors_article_html + '\n            </div>'
+    if old_honors_art in index_html:
+        index_html = index_html.replace(old_honors_art, new_honors_art)
+        print("✅ Honors article container replaced")
+    else:
+        print("⚠️  Honors article container not found (already replaced?)")
 
     # Add JSON-LD before </body>
     ld_script = f'\n    <script type="application/ld+json">\n    {jsonld_str}\n    </script>'
@@ -448,6 +579,10 @@ def main():
     print(f"\n=== Summary ===")
     print(f"Pre-rendered papers: {total_papers}")
     print(f"Pre-rendered projects: {total_projects}")
+    print(f"Pre-rendered bio: {len(bio_zh)}+{len(bio_en)} paragraphs")
+    print(f"Pre-rendered honors: {len(honors_zh)}+{len(honors_en)} items")
+    print(f"Pre-rendered alumni article: {len(alumni_zh)}+{len(alumni_en)} paragraphs")
+    print(f"Pre-rendered honors article: {len(honors_article_zh)}+{len(honors_article_en)} paragraphs")
     print(f"JSON-LD: {n_articles} scholarly articles + {n_rp} research projects")
     print(f"index.html updated successfully!")
 
