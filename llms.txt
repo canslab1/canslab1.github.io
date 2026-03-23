@@ -50,9 +50,14 @@ Prof. Chung-Yuan Huang (黃崇源) is a full professor in the Department of Comp
 
 ## Awards and Honors
 
-- 2024: China University of Technology Distinguished Alumni Award (中國科技大學傑出校友)
+- 2025: Donated NT$500,000 on Teachers' Day to Taipei Laosong Elementary School (教師節捐款新台幣伍拾萬元整)
+- 2025: Since the 111th Academic Year, cumulative donations over four consecutive years exceeded NT$1,000,000 (111 學年起，連續四學年捐款總額超過新臺幣壹佰萬元整)
+- 2024: China University of Technology Distinguished Alumni Award (中國科技大學傑出校友) — the only recipient in university history of both Distinguished and Outstanding Alumni honors
 - 2024: Taipei Honored Contributors to Education Award (臺北市杏壇芬芳獎)
 - 2024: Honorary President, 34th Laosong Elementary School Parents' Association
+- 2023: Standing Director of Taipei Elementary School PTA Federation (臺北市小聯會常務理事)
+- 2022: Independent Director, Solomon Technology Corporation (所羅門股份有限公司獨立董事)
+- 2022: President of the 32nd and 33rd Laosong Elementary School Parents' Association
 - 2006: Phi Tau Phi Honor Award, National Chiao Tung University (斐陶斐榮譽學會獎)
 - 2000: China University of Technology Outstanding Alumni Award (中國科技大學優秀校友)
 
@@ -94,7 +99,8 @@ Prof. Chung-Yuan Huang (黃崇源) is a full professor in the Department of Comp
 
 - / (index.html): Single-page application with eight content sections plus embedded PDF viewer:
   - "介紹" (About): 簡短自傳 (Brief Biography) — education, career, research interests, and academic achievements (default tab)
-  - "榮譽" (Honors): 責任與肯定 (Commitment and Recognition) — honors list, Lao-Song Elementary Distinguished Alumni recommendation article, and Taipei Honored Contributors to Education recommendation article with 4 photos
+  - "榮譽" (Honors): 責任與肯定 (Commitment and Recognition) — honors list with interactive photo/video buttons (19 activity photos, 1 interview video), Lao-Song Elementary Distinguished Alumni recommendation article, and Taipei Honored Contributors to Education recommendation article with 4 photos
+  - "文章" (Articles): Published articles including 蓮花池畔的清清之遠香 (Lotus Fragrance by the Pond, Chinese/English), 遺忘的記憶郵筒——序章 (fantasy novel prologue), and 3 Lao-Song Children magazine articles — all with collapsible full-text view and PDF links
   - "綜覽" (Overview): 28 academic performance stat cards (publications, citations, h-index, projects, students, service, career)
   - "著作" (Papers): 171 publications in 5 categories (44 SCI/SSCI/EI journal papers, 49 international conference papers, 10 book chapters, 49 media commentaries, 19 domestic conference papers)
   - "計畫" (Projects): 37 research projects (22 as PI, 14 as Co-PI, 1 as research member)
