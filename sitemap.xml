@@ -23,6 +23,140 @@
       <image:loc>https://canslab1.github.io/images/articles/thumb-42.jpg</image:loc>
       <image:title>老松兒童 第 42 期 — 願景相承、生生不息</image:title>
     </image:image>
+    <!-- Article thumbnail: mailbox -->
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/articles/thumb-mailbox.jpg</image:loc>
+      <image:title>遺忘的記憶郵筒——序章（黃崇源）</image:title>
+    </image:image>
+    <!-- Software research images -->
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/epirank-sensitivity.png</image:loc>
+      <image:title>EpiRank sensitivity analysis heatmaps for damping factor and daytime parameter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/epirank-vs-disease.png</image:loc>
+      <image:title>EpiRank vs actual disease core classification stacked bar charts</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/epirank-commuter.png</image:loc>
+      <image:title>Taiwan commuter flow network visualization and statistics</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/epirank-paper.png</image:loc>
+      <image:title>EpiRank paper first page — Scientific Reports 2019</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/mv17-kcore.png</image:loc>
+      <image:title>MV17 K-Core Visualization of dolphins network with color-coded k-core numbers</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/mv17-attributes.png</image:loc>
+      <image:title>MV17 Node Attributes table showing 11 centrality measures and neighbor degree distribution</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/mv17-scatter.png</image:loc>
+      <image:title>MV17 scatter matrix showing pairwise correlations between centrality measures</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/mv17-paper.png</image:loc>
+      <image:title>MV17 paper first page — Physica A 2015</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/casmim-lattice.png</image:loc>
+      <image:title>CASMIM lattice model with color-coded susceptible, incubation, and infected agent states</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/casmim-mirror-identity.png</image:loc>
+      <image:title>Social mirror identity concept — individuals distributed across home, office, school bus, and other social spheres</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/casmim-gui.png</image:loc>
+      <image:title>CASMIM GUI screenshot with 500×500 macro lattice view and policy controls</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/casmim-paper.png</image:loc>
+      <image:title>CASMIM paper first page — SIMULATION 2005</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/heta-link-types.png</image:loc>
+      <image:title>HETA edge type classification: Silk, Bond, Local Bridge, Global Bridge on example network</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/heta-community.png</image:loc>
+      <image:title>HETA community detection on 4 real-world networks</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/heta-16networks.png</image:loc>
+      <image:title>HETA link type analysis applied to 16 benchmark networks</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/heta-paper.png</image:loc>
+      <image:title>HETA paper first page — Physica A 2019</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/hata-arc-types.png</image:loc>
+      <image:title>HATA arc type classification on directed example network</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/hata-4networks.png</image:loc>
+      <image:title>HATA arc classification on 4 directed networks</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/hata-travian.png</image:loc>
+      <image:title>HATA arc type proportions over time in Travian game networks</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/hata-paper.png</image:loc>
+      <image:title>HATA paper first page — IEEE Access 2020</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/bcat-correlation.png</image:loc>
+      <image:title>BCAT correlation matrices across Regular Lattice, Small-World, Random, and Scale-Free networks</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/bcat-flowchart.png</image:loc>
+      <image:title>BCAT simulation algorithm flowchart with opinion exchange and adoption decision phases</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/bcat-gui-overview.png</image:loc>
+      <image:title>BCAT GUI — opinion dynamics and adoption simulation with multiple charts</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/bcat-paper.png</image:loc>
+      <image:title>BCAT paper first page — IEEE Access 2022</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/srac-initial.png</image:loc>
+      <image:title>SRAC-IPD initial random strategies on 50×50 cellular automata grid</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/srac-evolved.png</image:loc>
+      <image:title>SRAC-IPD evolved strategies at generation 99 with SRAC agents enabled</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/srac-strategies.png</image:loc>
+      <image:title>SRAC-Agent four key strategies dynamics — ALL-C, TFT, PAVLOV, ALL-D</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/srac-paper.png</image:loc>
+      <image:title>SRAC-Agent paper first page — PLOS ONE 2014</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/aed2-map.png</image:loc>
+      <image:title>Taipei City maps: fire stations, OHCA cases, current AED and 7-11 locations</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/aed2-density.png</image:loc>
+      <image:title>Density distribution comparison: OHCA cases vs suggested AED placement locations</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/aed2-distribution.png</image:loc>
+      <image:title>AED2 optimization results: 49 stores in top 50 and 74 stores in top 10 across runs</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/software/aed2-paper.png</image:loc>
+      <image:title>AED2 paper first page — Applied Geography 2012</image:title>
+    </image:image>
     <!-- Press images -->
     <image:image>
       <image:loc>https://canslab1.github.io/press/udn-2020-03-21.png</image:loc>

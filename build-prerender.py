@@ -434,16 +434,60 @@ def generate_bio_html(bio_zh, bio_en):
     return '\n'.join(lines)
 
 
+# ─── Image alt-text mapping for SEO ───
+
+IMAGE_ALT_TEXT = {
+    'images/honors/cute-alumni-group.jpg': '2024 中國科技大學 59 週年校慶校友大會團體合照 — 黃崇源教授榮獲傑出校友',
+    'images/honors/cute-distinguished-alumni.jpg': '2024 中國科技大學傑出校友 — 黃崇源教授與校方師長合影',
+    'images/honors/xtff-award.jpg': '2024 臺北市杏壇芬芳獎頒獎典禮 — 黃崇源榮譽會長受獎',
+    'images/honors/xtff-group.jpg': '2024 臺北市杏壇芬芳獎頒獎典禮 — 黃崇源榮譽會長與家人師長合影',
+    'images/honors/laosong-honorary-president.jpg': '2024 老松國小第 34 屆榮譽會長黃崇源教授參加校慶運動會',
+    'images/honors/laosong-xlh-delegates.jpg': '2023 臺北市國小學生家長會聯合會第 22 屆第一次代表大會合照',
+    'images/honors/laosong-xlh-board.jpg': '2023 臺北市國小學生家長會聯合會第一次理監事會議',
+    'images/honors/laosong-xlh-election.jpg': '2023 臺北市國小學生家長會聯合會第二十二屆常務理事選舉結果',
+    'images/honors/laosong-xlh-west-district.jpg': '2023 臺北市國小學生家長會聯合會第 22 屆西區理事選舉結果',
+    'images/honors/laosong-president-award.jpg': '2025 老松國小第 80 屆畢業典禮 — 黃崇源榮譽會長頒發榮譽會長獎',
+    'images/honors/laosong-donation-1.jpg': '2025 教師節 — 黃崇源榮譽會長捐贈新台幣伍拾萬元整予老松國小',
+    'images/honors/laosong-donation-2.jpg': '2025 教師節 — 老松國小校長頒發感謝狀予黃崇源榮譽會長',
+    'images/honors/laosong-donation-3.jpg': '2025 老松國小 114 學年度教師節慶祝活動海報',
+    'images/honors/laosong-donation-4.jpg': '2025 老松國小 114 年 9 月份捐款收支明細表',
+    'images/honors/laosong-donation-5.jpg': '2025 黃崇源榮譽會長捐贈老松國小新台幣伍拾萬元整支票',
+    'images/honors/solomon-newyear.jpg': '2023 所羅門集團新年晚會 — 黃崇源教授擔任獨立董事',
+    'images/honors/solomon-shareholders.jpg': '2023 所羅門股份有限公司 112 年股東常會 — 黃崇源教授擔任獨立董事',
+    'images/honors/ptphs-family.jpg': '2006 中華民國斐陶斐榮譽學會獎 — 黃崇源教授與家人合影於國立交通大學頒獎典禮',
+    'images/honors/ptphs-ceremony.jpg': '2006 中華民國斐陶斐榮譽學會 95 年度榮譽會員授證典禮 — 黃崇源教授',
+}
+
+
+def extract_image_urls(html_str):
+    """Extract all image URLs from showImageModal('...') calls in HTML."""
+    return re.findall(r"showImageModal\('([^']+)'\)", html_str)
+
+
 # ─── Generate Honors HTML ───
 
 def generate_honors_html(honors_zh, honors_en):
     """Generate prerendered HTML for the honors list with both languages.
-    Honors items contain raw HTML (buttons, spans) so we preserve them as-is."""
+    Honors items contain raw HTML (buttons, spans) so we preserve them as-is.
+    Also adds hidden <img> tags for each photo so search engines can index them."""
     lines = []
+    seen_images = set()
+
     for html in honors_zh:
-        lines.append(f'<li class="honors-item zh">{html}</li>')
+        img_urls = extract_image_urls(html)
+        img_tags = ''
+        for url in img_urls:
+            if url not in seen_images:
+                alt = esc(IMAGE_ALT_TEXT.get(url, url))
+                img_tags += (f'<img src="{esc(url)}" alt="{alt}" '
+                             f'width="1" height="1" loading="lazy" decoding="async" '
+                             f'style="position:absolute;left:-9999px;opacity:0">')
+                seen_images.add(url)
+        lines.append(f'<li class="honors-item zh">{html}{img_tags}</li>')
+
     for html in honors_en:
         lines.append(f'<li class="honors-item en">{html}</li>')
+
     return '\n'.join(lines)
 
 
