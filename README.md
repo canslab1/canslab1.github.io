@@ -2,7 +2,7 @@
 
 黃崇源教授（Prof. Chung-Yuan Huang, Ph.D.）個人學術網站，託管於 GitHub Pages。
 
-> **最後更新**：2026-03-16 ｜ **更新歷史**：[Commit Log](https://github.com/canslab1/canslab1.github.io/commits/master)
+> **最後更新**：2026-03-23 ｜ **更新歷史**：[Commit Log](https://github.com/canslab1/canslab1.github.io/commits/master)
 
 ## 目錄
 
@@ -159,9 +159,12 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 包含三個部分：
 
 **一、責任與肯定（榮譽列表）**
-- 2024 中國科技大學傑出校友（校史唯一先後獲頒傑出與優秀校友）
-- 2024 臺北市杏壇芬芳獎
-- 2022–2024 老松國小學生家長會第 32、33 屆會長，第 34 屆榮譽會長（113 學年起設立畢業生榮譽會長獎，每班壹名）
+- 2024 中國科技大學傑出校友（校史唯一先後獲頒傑出與優秀校友）— 附「專訪」影片按鈕（YouTube 彈窗）、「照片一」「照片二」按鈕（圖片彈窗）
+- 2024 臺北市杏壇芬芳獎 — 附「照片一」「照片二」按鈕
+- 2025 連續四學年捐款總額超過新臺幣壹佰萬元整（老松國小）
+- 2025 教師節捐款新台幣伍拾萬元整（老松國小）— 附「照片一」至「照片五」按鈕
+- 2022–2024 老松國小學生家長會第 32、33 屆會長，第 34 屆榮譽會長 — 附「照片」按鈕
+- 113 學年起設立畢業生榮譽會長獎，每班壹名 — 附「照片」按鈕
 - 2022 所羅門股份有限公司獨立董事（薪酬、審計、永續發展委員）
 - 2006 中華民國斐陶斐榮譽學會獎（國立交通大學）
 
@@ -306,8 +309,10 @@ Footer 使用縮圖（`*-thumb.*`）以減少頁面載入大小。Hover 時顯�
 
 ## 獎項與榮譽完整列表
 
-- **2024** 臺北市杏壇芬芳獎（老松國小推薦）
-- **2024** 中國科技大學 59 週年校慶傑出校友
+- **2025** 連續四學年捐款總額超過新臺幣壹佰萬元整（老松國小）
+- **2025** 教師節捐款新台幣伍拾萬元整予老松國小
+- **2024** 臺北市杏壇芬芳獎（老松國小推薦，含頒獎照片）
+- **2024** 中國科技大學 59 週年校慶傑出校友（含專訪影片、活動照片）
 - **2019** 第 17 屆台塑企業應用技術研討會研發論文暨海報競賽學校組優勝第一名
 - **2016** ICIAE 2016 Best Student Paper Award（指導學生傅昱翔）
 - **2015** 長庚大學工學院校外實習課程成果競賽佳作
@@ -371,6 +376,18 @@ canslab1.github.io/
     ├── google-scholar-thumb.png # Google Scholar logo（Footer 縮圖）
     ├── github-thumb.png   # GitHub logo（Footer 縮圖）
     ├── honors1–4.png   # 杏壇芬芳獎照片
+    ├── honors/         # 榮譽活動照片（彈窗顯示）
+    │   ├── cute-alumni-group.jpg        # 中國科大傑出校友大會團體照
+    │   ├── cute-distinguished-alumni.jpg # 中國科大傑出校友合影
+    │   ├── xtff-award.jpg               # 杏壇芬芳獎頒獎照
+    │   ├── xtff-group.jpg               # 杏壇芬芳獎團體合影
+    │   ├── laosong-honorary-president.jpg # 老松國小榮譽會長運動會照
+    │   ├── laosong-president-award.jpg   # 老松國小榮譽會長獎頒獎照
+    │   ├── laosong-donation-1.jpg       # 教師節捐款照片一
+    │   ├── laosong-donation-2.jpg       # 教師節捐款照片二
+    │   ├── laosong-donation-3.jpg       # 教師節慶祝活動海報
+    │   ├── laosong-donation-4.jpg       # 捐款收支明細表
+    │   └── laosong-donation-5.jpg       # 捐款支票照片
     └── software/       # 研究軟體截圖與論文縮圖
         ├── epirank-*.png   # EpiRank 相關圖片
         ├── mv17-*.png      # MV17 相關圖片
@@ -463,7 +480,9 @@ python3 build-prerender.py
 | `showSection(id, event)` | 切換頁面內區段（介紹 / 榮譽 / 綜覽 / 著作 / 計畫 / 程式 / 評論） |
 | `showEmbed(url, event)` | 以 iframe 嵌入顯示外部頁面（履歷 PDF） |
 | `renderStats()` | 渲染學術數據卡片 |
-| `renderHonors()` | 渲染榮譽列表 |
+| `renderHonors()` | 渲染榮譽列表（含照片/影片彈窗按鈕） |
+| `showImageModal(src)` | 以彈窗顯示榮譽活動照片（`images/honors/` 目錄） |
+| `showVideoModal(youtubeId)` | 以彈窗播放 YouTube 影片（如傑出校友專訪） |
 | `renderAlumniArticle()` | 渲染老松國小傑出校友推薦文 |
 | `renderHonorsArticle()` | 渲染杏壇芬芳錄推薦文（含 4 張照片） |
 | `renderBio()` | 渲染簡短自傳 |
@@ -667,11 +686,11 @@ workflow 會在以下時機自動執行，**不需要手動操作**：
 
 | 觸發條件 | 說明 |
 |----------|------|
-| `push` 到 master | 當 `.html`、`.css`、`.js`、`.pdf`、`llms.txt`、`sitemap.xml`、`images/` 有變更時自動提交 |
+| `push` 到 master | 當 `.html`、`.css`、`.js`、`.pdf`、`llms.txt`、`sitemap.xml`、`images/`、`articles/` 有變更時自動提交 |
 | 每週一 09:00（台灣時間） | 定期排程，確保搜尋引擎持續收錄最新內容 |
 | 手動觸發 | 在 GitHub → Actions → IndexNow Submit → Run workflow |
 
-> **注意**：push 時只有內容檔案（html/css/js/pdf/images）變更才會觸發，修改 README.md 等非內容檔案不會觸發。
+> **注意**：push 時只有內容檔案（html/css/js/pdf/images/articles）變更才會觸發，修改 README.md 等非內容檔案不會觸發。
 
 ### 子 repo 的 IndexNow
 
@@ -873,7 +892,7 @@ README 渲染腳本，功能：
 
 | 頁面 | 優先度 | 更新頻率 | 備註 |
 |------|--------|----------|------|
-| `/` 和 `/index.html` | 1.0 | weekly | |
+| `/` 和 `/index.html` | 1.0 | weekly | 含 11 張 `images/honors/` 活動照片 |
 | `/stories.html` | 0.8 | monthly | |
 | `/CV.pdf` | 0.7 | monthly | |
 | `/llms.txt` | 0.6 | monthly | |
@@ -930,7 +949,7 @@ README 渲染腳本，功能：
 | 尺寸 | 大頭照 / 活動照：最大寬度 800px；logo：最大寬度 200px；Footer 縮圖：寬度 128px 以內 |
 | 檔案大小 | 單張建議 ≤200KB，大圖 ≤500KB |
 | 命名規則 | 全小寫、用連字號分隔，例如 `honors1.png`、`epirank-screenshot.png`；縮圖加 `-thumb` 後綴 |
-| 存放位置 | 一般圖片放 `images/`；軟體相關圖片放 `images/software/` |
+| 存放位置 | 一般圖片放 `images/`；榮譽活動照片放 `images/honors/`；軟體相關圖片放 `images/software/` |
 | 壓縮工具 | 推薦 [TinyPNG](https://tinypng.com/)（線上）或 `sips`（macOS 內建） |
 
 **macOS 快速壓縮指令：**
@@ -973,7 +992,7 @@ sips -Z 128 images/logo.png --out images/logo-thumb.png
 | 更新學術數據（論文數、引用數等） | `stats-data.js` → `statsZh[]` / `statsEn[]` |
 | 新增/修改著作列表 | `papers-data.js` → 編輯後執行 `python3 build-prerender.py` |
 | 新增/修改計畫列表 | `projects-data.js` → 編輯後執行 `python3 build-prerender.py` |
-| 新增榮譽獎項 | `shared.js` → `honorsZh[]` / `honorsEn[]` |
+| 新增榮譽獎項 | `shared.js` → `honorsZh[]` / `honorsEn[]`（照片放 `images/honors/`，用 `showImageModal()` 按鈕；影片用 `showVideoModal()` 按鈕） |
 | 更新傑出校友推薦文 | `shared.js` → `alumniArticleZh[]` / `alumniArticleEn[]` |
 | 更新杏壇芬芳錄推薦文 | `shared.js` → `honorsArticleZh[]` / `honorsArticleEn[]` |
 | 更新簡短自傳 | `shared.js` → `bioZh[]` / `bioEn[]` |
@@ -997,7 +1016,7 @@ sips -Z 128 images/logo.png --out images/logo-thumb.png
 |----------|---------|
 | HTML / CSS / JavaScript 程式碼 | ✅ MIT 授權，可自由使用 |
 | 研究軟體（EpiRank、HETA 等） | ✅ 各自 GitHub repo 採 MIT 授權 |
-| 教授個人照片（`images/IMG-2.jpg`、`honors1–4.png`） | ❌ 個人肖像權，未經授權不得使用 |
+| 教授個人照片（`images/IMG-2.jpg`、`honors1–4.png`、`images/honors/*`） | ❌ 個人肖像權，未經授權不得使用 |
 | `CV.pdf` 學術履歷 | ❌ 個人文件，僅供閱覽 |
 | 各機構 logo（`csie.png`、`laosong-thumb.png` 等） | ❌ 各機構商標，僅限本網站使用 |
 | 家族故事內容（`stories.html`） | ❌ 個人著作，版權所有 |

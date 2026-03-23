@@ -21,6 +21,7 @@ on:
       - 'images/**'
       - 'press/**'
       - 'papers/**'
+      - 'articles/**'
   schedule:
     # 每週一 01:00 UTC = 台灣時間 09:00
     - cron: '0 1 * * 1'
