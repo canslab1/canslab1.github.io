@@ -693,6 +693,10 @@ figure {
     text-indent: 2em;
 }
 
+.article-text.no-indent p {
+    text-indent: 0;
+}
+
 .article-text p:last-child {
     margin-bottom: 0;
 }
