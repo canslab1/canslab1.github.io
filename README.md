@@ -165,7 +165,7 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 - 2025 教師節捐款新台幣伍拾萬元整（老松國小）— 附「照片一」至「照片五」按鈕
 - 2022–2024 老松國小學生家長會第 32、33 屆會長，第 34 屆榮譽會長 — 附「照片」按鈕
 - 113 學年起設立畢業生榮譽會長獎，每班壹名 — 附「照片」按鈕
-- 2022 所羅門股份有限公司獨立董事（薪酬、審計、永續發展委員）
+- 2022 所羅門股份有限公司獨立董事（薪酬、審計、永續發展委員）— 附「照片一」「照片二」按鈕
 - 2006 中華民國斐陶斐榮譽學會獎（國立交通大學）
 
 **二、老松國小傑出校友推薦文**
@@ -387,7 +387,9 @@ canslab1.github.io/
     │   ├── laosong-donation-2.jpg       # 教師節捐款照片二
     │   ├── laosong-donation-3.jpg       # 教師節慶祝活動海報
     │   ├── laosong-donation-4.jpg       # 捐款收支明細表
-    │   └── laosong-donation-5.jpg       # 捐款支票照片
+    │   ├── laosong-donation-5.jpg       # 捐款支票照片
+    │   ├── solomon-newyear.jpg          # 所羅門集團新年晚會
+    │   └── solomon-shareholders.jpg     # 所羅門股東常會
     └── software/       # 研究軟體截圖與論文縮圖
         ├── epirank-*.png   # EpiRank 相關圖片
         ├── mv17-*.png      # MV17 相關圖片
@@ -892,7 +894,7 @@ README 渲染腳本，功能：
 
 | 頁面 | 優先度 | 更新頻率 | 備註 |
 |------|--------|----------|------|
-| `/` 和 `/index.html` | 1.0 | weekly | 含 11 張 `images/honors/` 活動照片 |
+| `/` 和 `/index.html` | 1.0 | weekly | 含 13 張 `images/honors/` 活動照片 |
 | `/stories.html` | 0.8 | monthly | |
 | `/CV.pdf` | 0.7 | monthly | |
 | `/llms.txt` | 0.6 | monthly | |
