@@ -328,6 +328,20 @@ main {
 .contact-info a:hover {
     text-decoration: underline;
 }
+table.personal-info-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+table.personal-info-table td {
+    padding: 0.15rem 0;
+    vertical-align: top;
+}
+table.personal-info-table .pi-label {
+    white-space: nowrap;
+    padding-right: 1em;
+    font-weight: 500;
+    color: #444;
+}
 
 figure {
     margin: 2rem 0;
