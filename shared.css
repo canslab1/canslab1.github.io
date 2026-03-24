@@ -329,7 +329,8 @@ main {
     text-decoration: underline;
 }
 table.personal-info-table {
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     width: 100%;
 }
 table.personal-info-table td {
