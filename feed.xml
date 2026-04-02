@@ -18,6 +18,16 @@
   <!-- Op-Eds / 媒體投書 -->
 
   <entry>
+    <title>台灣 AI 產業的反思 (風傳媒)</title>
+    <link href="https://www.storm.mg/article/5348610" rel="alternate"/>
+    <id>tag:canslab1.github.io,2025-07-05:storm-2025-07-05</id>
+    <updated>2025-07-05T00:00:00+08:00</updated>
+    <summary>台灣在全球 AI 供應鏈中扮演關鍵角色，但不應自滿於硬體代工。</summary>
+    <category term="Op-Ed"/>
+    <category term="風傳媒"/>
+  </entry>
+
+  <entry>
     <title>Digging for gold or selling shovels? (Taipei Times)</title>
     <link href="https://www.taipeitimes.com/News/editorials/archives/2025/05/18/2003837064" rel="alternate"/>
     <id>tag:canslab1.github.io,2025-05-18:taipeitimes-2025-05-18</id>
@@ -35,16 +45,6 @@
     <summary>新冠肺炎疫情期間，台灣防疫成果舉世矚目，但疫情過後，政府對病毒模擬研究的重視程度明顯下降。</summary>
     <category term="Op-Ed"/>
     <category term="自由時報"/>
-  </entry>
-
-  <entry>
-    <title>台灣 AI 產業的反思 (風傳媒)</title>
-    <link href="https://www.storm.mg/article/5348610" rel="alternate"/>
-    <id>tag:canslab1.github.io,2025-07-05:storm-2025-07-05</id>
-    <updated>2025-07-05T00:00:00+08:00</updated>
-    <summary>台灣在全球 AI 供應鏈中扮演關鍵角色，但不應自滿於硬體代工。</summary>
-    <category term="Op-Ed"/>
-    <category term="風傳媒"/>
   </entry>
 
   <entry>
@@ -148,7 +148,7 @@
   </entry>
 
   <entry>
-    <title>Air travel significant to spread of COVID-19 (Taipei Times)</title>
+    <title>Air travel significant to spread of COVID-19 — Part 2 (Taipei Times)</title>
     <link href="https://www.taipeitimes.com/News/editorials/archives/2020/04/20/2003734927" rel="alternate"/>
     <id>tag:canslab1.github.io,2020-04-20:taipeitimes-2020-04-20</id>
     <updated>2020-04-20T00:00:00+08:00</updated>

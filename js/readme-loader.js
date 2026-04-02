@@ -18,7 +18,8 @@
     var originalHtml = renderer.html;
     renderer.html = function (html) {
         var stripped = (typeof html === 'object' ? html.text || html.raw || '' : html)
-            .replace(/<\s*\/?\s*(script|iframe|object|embed|form|link|meta|base)[^>]*>/gi, '');
+            .replace(/<\s*\/?\s*(script|iframe|object|embed|form|link|meta|base|style)[^>]*>/gi, '')
+            .replace(/\s+on\w+\s*=\s*("[^"]*"|'[^']*'|[^\s>]*)/gi, '');
         return stripped;
     };
     marked.use({ gfm: true, breaks: false, renderer: renderer });
