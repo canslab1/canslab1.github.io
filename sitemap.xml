@@ -8,32 +8,32 @@
     <priority>1.0</priority>
     <!-- Article thumbnails -->
     <image:image>
-      <image:loc>https://canslab1.github.io/images/articles/thumb-45-zh.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/articles/thumb-45-zh.webp</image:loc>
       <image:title>老松兒童 第 45 期 — 結交智能小幫手，結伴勇闖新世界（中文版）</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/articles/thumb-45-en.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/articles/thumb-45-en.webp</image:loc>
       <image:title>Lao-Song Children Issue 45 — The Beginning of Your Adventure with an AGI Thinking Machine! (English)</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/articles/thumb-43.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/articles/thumb-43.webp</image:loc>
       <image:title>老松兒童 第 43 期 — 從「老松國小校歌」談起</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/articles/thumb-42.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/articles/thumb-42.webp</image:loc>
       <image:title>老松兒童 第 42 期 — 願景相承、生生不息</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/articles/thumb-130-zh.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/articles/thumb-130-zh.webp</image:loc>
       <image:title>老松國小創校 130 週年校慶專刊 — 蓮花池畔的清清之遠香（中文版）</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/articles/thumb-130-en.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/articles/thumb-130-en.webp</image:loc>
       <image:title>Lao-Song 130th Anniversary — Lotus Fragrance by the Pond (English)</image:title>
     </image:image>
     <!-- Article thumbnail: mailbox -->
     <image:image>
-      <image:loc>https://canslab1.github.io/images/articles/thumb-mailbox.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/articles/thumb-mailbox.webp</image:loc>
       <image:title>遺忘的記憶郵筒——序章（黃崇源）</image:title>
     </image:image>
     <!-- Software research images -->
@@ -341,7 +341,7 @@
   </url>
   <url>
     <loc>https://canslab1.github.io/CV.pdf</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-04-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
@@ -372,19 +372,19 @@
   <!-- Redirect pages: content moved to index.html -->
   <url>
     <loc>https://canslab1.github.io/CYHuang.html</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-04-02</lastmod>
     <changefreq>never</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://canslab1.github.io/software.html</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-04-02</lastmod>
     <changefreq>never</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://canslab1.github.io/lab.html</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-04-02</lastmod>
     <changefreq>never</changefreq>
     <priority>0.1</priority>
   </url>

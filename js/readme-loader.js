@@ -13,7 +13,15 @@
     var pathParts = window.location.pathname.replace(/\/+$/, '').split('/');
     var repoName = pathParts[pathParts.length - 1] || 'unknown';
 
-    marked.use({ gfm: true, breaks: false });
+    // Sanitize renderer: strip dangerous tags (script, iframe, object, embed, form)
+    var renderer = new marked.Renderer();
+    var originalHtml = renderer.html;
+    renderer.html = function (html) {
+        var stripped = (typeof html === 'object' ? html.text || html.raw || '' : html)
+            .replace(/<\s*\/?\s*(script|iframe|object|embed|form|link|meta|base)[^>]*>/gi, '');
+        return stripped;
+    };
+    marked.use({ gfm: true, breaks: false, renderer: renderer });
 
     var container = document.getElementById('content');
 

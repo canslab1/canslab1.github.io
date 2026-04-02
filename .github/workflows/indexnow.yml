@@ -18,6 +18,10 @@ on:
       - 'llms.txt'
       - 'sitemap.xml'
       - 'feed.xml'
+      - 'robots.txt'
+      - 'security.txt'
+      - 'manifest.json'
+      - 'humans.txt'
       - 'images/**'
       - 'press/**'
       - 'papers/**'
@@ -47,6 +51,10 @@ jobs:
             "https://${HOST}/CYHuang.html"
             "https://${HOST}/software.html"
             "https://${HOST}/lab.html"
+            "https://${HOST}/sitemap.xml"
+            "https://${HOST}/robots.txt"
+            "https://${HOST}/security.txt"
+            "https://${HOST}/manifest.json"
           )
 
           # 組合 JSON 陣列

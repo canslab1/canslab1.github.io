@@ -19,15 +19,16 @@ function toggleTOC() {
     if (!tocContent || !arrow || !hint) return;
 
     const tocBtn = document.querySelector('.toc-title');
+    const isEn = document.documentElement.lang === 'en';
     if (tocContent.classList.contains('expanded')) {
         tocContent.classList.remove('expanded');
         arrow.classList.remove('expanded');
-        hint.textContent = '點擊展開';
+        hint.textContent = isEn ? 'Tap to expand' : '點擊展開';
         if (tocBtn) tocBtn.setAttribute('aria-expanded', 'false');
     } else {
         tocContent.classList.add('expanded');
         arrow.classList.add('expanded');
-        hint.textContent = '點擊收起';
+        hint.textContent = isEn ? 'Tap to collapse' : '點擊收起';
         if (tocBtn) tocBtn.setAttribute('aria-expanded', 'true');
     }
 }
