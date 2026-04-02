@@ -2,7 +2,7 @@
 
 黃崇源教授（Prof. Chung-Yuan Huang, Ph.D.）個人學術網站，託管於 GitHub Pages。
 
-> **最後更新**：2026-03-23 ｜ **更新歷史**：[Commit Log](https://github.com/canslab1/canslab1.github.io/commits/master)
+> **最後更新**：2026-04-02 ｜ **更新歷史**：[Commit Log](https://github.com/canslab1/canslab1.github.io/commits/master)
 
 ## 目錄
 
@@ -71,6 +71,7 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 ### 現任職務
 - **長庚大學** 工學院 資訊工程學系 教授（教字第 141150 號，104.08 起）
 - **長庚大學** 智慧運算學院 / 人工智慧學系 合聘教授（109.10 起）
+- **老松國小** 115 年校務顧問（115.03 起）
 - **老松國小** 學生家長會 榮譽會長（113.10 起）
 
 ### 研究領域
@@ -158,17 +159,13 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 包含三個部分：
 
-**一、責任與肯定（榮譽列表）**
-- 2024 中國科技大學傑出校友（校史唯一先後獲頒傑出與優秀校友）— 附「專訪」影片按鈕（YouTube 彈窗）、「照片一」「照片二」按鈕（圖片彈窗）
-- 2024 臺北市杏壇芬芳獎 — 附「照片一」「照片二」按鈕
-- 2025 教師節捐款新台幣伍拾萬元整（老松國小）— 附「照片一」至「照片五」按鈕
-- 2024 老松國小學生家長會第 34 屆榮譽會長 — 附「照片」按鈕
-- 2023 臺北市小聯會常務理事 — 附「照片一」至「照片四」按鈕
-- 2022 老松國小學生家長會第 32、33 屆會長
-- 113 學年起設立畢業生榮譽會長獎，每班壹名 — 附「照片」按鈕
-- 111 學年起，連續四學年捐款總額超過新臺幣壹佰萬元整
-- 2022 所羅門股份有限公司獨立董事（薪酬、審計、永續發展委員）— 附「照片一」「照片二」按鈕
-- 2006 中華民國斐陶斐榮譽學會獎（國立交通大學）— 附「照片一」「照片二」按鈕
+**一、責任與肯定（榮譽列表，共 6 大項）**
+- **中國科技大學** — 2024 傑出校友（校史唯一先後獲頒傑出與優秀校友）— 附「專訪」影片按鈕（YouTube 彈窗）、「照片一」「照片二」按鈕
+- **臺北市杏壇芬芳獎** — 2024 榮獲臺北市教育局公開表揚 — 附「照片一」「照片二」按鈕 — 源源不絕無私大愛，守護美好優質老松
+- **臺北市老松國民小學** — 2026 榮膺 115 年校務顧問（附照片）、2025 教師節捐款伍拾萬元整（附照片一至五）、111 學年起連續四學年捐款總額超過壹佰萬元整
+- **臺北市老松國民小學學生家長會** — 2024 第 34 屆榮譽會長（附照片）、2023 臺北市小聯會常務理事（附照片一至四）、2022 第 32 和 33 屆會長、113 學年起設立畢業生榮譽會長獎（附照片）
+- **所羅門股份有限公司** — 2022 獨立董事（薪酬、審計、永續發展委員）— 附「照片一」「照片二」按鈕
+- **中華民國斐陶斐榮譽學會獎** — 2006（國立交通大學）— 附「照片一」「照片二」按鈕
 
 **二、老松國小傑出校友推薦文**
 收錄完整的臺北市老松國小 130 週年校慶傑出校友貢獻獎推薦文（中英文）。
@@ -311,9 +308,10 @@ Footer 使用縮圖（`*-thumb.*`）以減少頁面載入大小。Hover 時顯�
 
 ## 獎項與榮譽完整列表
 
+- **2026** 臺北市老松國民小學 115 年校務顧問
 - **2025** 111 學年起，連續四學年捐款總額超過新臺幣壹佰萬元整（老松國小）
 - **2025** 教師節捐款新台幣伍拾萬元整予老松國小
-- **2024** 臺北市杏壇芬芳獎（老松國小推薦，含頒獎照片）
+- **2024** 臺北市杏壇芬芳獎（老松國小推薦，含頒獎照片）— 源源不絕無私大愛，守護美好優質老松
 - **2024** 中國科技大學 59 週年校慶傑出校友（含專訪影片、活動照片）
 - **2019** 第 17 屆台塑企業應用技術研討會研發論文暨海報競賽學校組優勝第一名
 - **2016** ICIAE 2016 Best Student Paper Award（指導學生傅昱翔）
@@ -347,6 +345,10 @@ canslab1.github.io/
 ├── lab.html             # 重導向頁（→ index.html#lab）
 ├── CV.pdf               # 學術履歷
 ├── d22a81b3...52.txt    # IndexNow API key 驗證檔
+├── security.txt         # RFC 9116 安全聯絡資訊
+├── manifest.json        # PWA Web App Manifest（雙語描述）
+├── feed.xml             # Atom feed（媒體投書 / 文章動態）
+├── humans.txt           # 網站製作者資訊
 ├── README.md            # 本文件
 ├── LICENSE              # MIT 授權條款
 ├── css/
@@ -366,8 +368,8 @@ canslab1.github.io/
 └── images/
     ├── IMG-2.jpg       # 教授大頭照
     ├── CANS.png        # CANS Lab logo
-    ├── Photos1-1.jpeg  # 故事頁面用照片
-    ├── Photos1-2.jpg   # 故事頁面用照片
+    ├── Photos1-1.webp  # 故事頁面用照片（已轉換為 WebP）
+    ├── Photos1-2.webp  # 故事頁面用照片（已轉換為 WebP）
     ├── csie.png        # 長庚資工系 logo（原圖，用作 favicon）
     ├── csie-thumb.png  # 長庚資工系 logo（Footer 縮圖）
     ├── cgu-thumb.png   # 長庚大學 logo（Footer 縮圖，用於 Pure 連結）
@@ -377,27 +379,28 @@ canslab1.github.io/
     ├── google-thumb.png   # Google logo（Footer 縮圖）
     ├── google-scholar-thumb.png # Google Scholar logo（Footer 縮圖）
     ├── github-thumb.png   # GitHub logo（Footer 縮圖）
-    ├── honors1–4.png   # 杏壇芬芳獎照片
-    ├── honors/         # 榮譽活動照片（彈窗顯示）
-    │   ├── cute-alumni-group.jpg        # 中國科大傑出校友大會團體照
-    │   ├── cute-distinguished-alumni.jpg # 中國科大傑出校友合影
-    │   ├── xtff-award.jpg               # 杏壇芬芳獎頒獎照
-    │   ├── xtff-group.jpg               # 杏壇芬芳獎團體合影
-    │   ├── laosong-honorary-president.jpg # 老松國小榮譽會長運動會照
-    │   ├── laosong-president-award.jpg   # 老松國小榮譽會長獎頒獎照
-    │   ├── laosong-donation-1.jpg       # 教師節捐款照片一
-    │   ├── laosong-donation-2.jpg       # 教師節捐款照片二
-    │   ├── laosong-donation-3.jpg       # 教師節慶祝活動海報
-    │   ├── laosong-donation-4.jpg       # 捐款收支明細表
-    │   ├── laosong-donation-5.jpg       # 捐款支票照片
-    │   ├── laosong-xlh-delegates.jpg    # 小聯會代表大會合照
-    │   ├── laosong-xlh-board.jpg        # 小聯會理監事會議
-    │   ├── laosong-xlh-election.jpg     # 小聯會常務理事選舉結果
-    │   ├── laosong-xlh-west-district.jpg # 小聯會西區理事選舉結果
-    │   ├── solomon-newyear.jpg          # 所羅門集團新年晚會
-    │   ├── solomon-shareholders.jpg     # 所羅門股東常會
-    │   ├── ptphs-family.jpg             # 斐陶斐頒獎與家人合影
-    │   └── ptphs-ceremony.jpg           # 斐陶斐授證典禮
+    ├── honors1–4.webp  # 杏壇芬芳獎照片（已轉換為 WebP）
+    ├── honors/         # 榮譽活動照片（彈窗顯示，全部 WebP 格式）
+    │   ├── laosong-advisor.webp         # 老松國小 115 年校務顧問聘書
+    │   ├── cute-alumni-group.webp       # 中國科大傑出校友大會團體照
+    │   ├── cute-distinguished-alumni.webp # 中國科大傑出校友合影
+    │   ├── xtff-award.webp              # 杏壇芬芳獎頒獎照
+    │   ├── xtff-group.webp              # 杏壇芬芳獎團體合影
+    │   ├── laosong-honorary-president.webp # 老松國小榮譽會長運動會照
+    │   ├── laosong-president-award.webp # 老松國小榮譽會長獎頒獎照
+    │   ├── laosong-donation-1.webp      # 教師節捐款照片一
+    │   ├── laosong-donation-2.webp      # 教師節捐款照片二
+    │   ├── laosong-donation-3.webp      # 教師節慶祝活動海報
+    │   ├── laosong-donation-4.webp      # 捐款收支明細表
+    │   ├── laosong-donation-5.webp      # 捐款支票照片
+    │   ├── laosong-xlh-delegates.webp   # 小聯會代表大會合照
+    │   ├── laosong-xlh-board.webp       # 小聯會理監事會議
+    │   ├── laosong-xlh-election.webp    # 小聯會常務理事選舉結果
+    │   ├── laosong-xlh-west-district.webp # 小聯會西區理事選舉結果
+    │   ├── solomon-newyear.webp         # 所羅門集團新年晚會
+    │   ├── solomon-shareholders.webp    # 所羅門股東常會
+    │   ├── ptphs-family.webp            # 斐陶斐頒獎與家人合影
+    │   └── ptphs-ceremony.webp          # 斐陶斐授證典禮
     └── software/       # 研究軟體截圖與論文縮圖
         ├── epirank-*.png   # EpiRank 相關圖片
         ├── mv17-*.png      # MV17 相關圖片
@@ -632,10 +635,16 @@ python3 build-prerender.py
 - `og:locale`：`zh_TW`（主語言）
 - `og:locale:alternate`：`en_US`（替代語言）
 - `og:site_name`：`黃崇源教授個人網站`
+- `og:video`：YouTube 傑出校友專訪嵌入（`index.html`）
 - `twitter:card`：`summary_large_image`
 - `hreflang`：`zh-TW`、`en`、`x-default` 三組互指
 - `canonical`：各頁面指向自身完整 URL
 - Schema.org：`<html>` 標籤加上 `itemscope itemtype="https://schema.org/WebPage"`
+- `theme-color`：`#27ae60`（綠色主題色）
+- `manifest.json`：PWA Web App Manifest（雙語描述）
+- `apple-touch-icon`：iOS 桌面圖示（`images/icon-192.png`）
+- `security.txt`：RFC 9116 安全聯絡資訊（根目錄）
+- `feed.xml`：Atom feed（22 篇媒體投書 / 文章動態）
 
 ### 結構化資料（JSON-LD）詳細
 
@@ -902,10 +911,14 @@ README 渲染腳本，功能：
 
 | 頁面 | 優先度 | 更新頻率 | 備註 |
 |------|--------|----------|------|
-| `/` 和 `/index.html` | 1.0 | weekly | 含 19 張 `images/honors/` 活動照片 |
-| `/stories.html` | 0.8 | monthly | |
-| `/CV.pdf` | 0.7 | monthly | |
-| `/llms.txt` | 0.6 | monthly | |
+| `/` 和 `/index.html` | 1.0 | daily | 含 20 張 `images/honors/` 活動照片 |
+| `/stories.html` | 0.8 | daily | |
+| `/CV.pdf` | 0.7 | daily | |
+| `/llms.txt` | 0.6 | daily | |
+| `/feed.xml` | 0.5 | daily | Atom feed |
+| `/security.txt` | 0.3 | yearly | RFC 9116 安全聯絡資訊 |
+| `/manifest.json` | 0.3 | yearly | PWA Web App Manifest |
+| `/humans.txt` | 0.3 | yearly | 網站製作者資訊 |
 | `/CYHuang.html` | 0.1 | never | 重導向至 `index.html#papers` |
 | `/software.html` | 0.1 | never | 重導向至 `index.html#software` |
 | `/lab.html` | 0.1 | never | 重導向至 `index.html#lab` |
@@ -955,12 +968,12 @@ README 渲染腳本，功能：
 
 | 項目 | 建議 |
 |------|------|
-| 格式 | 照片使用 `.jpg`（壓縮率高）；logo / 圖示使用 `.png`（支援透明） |
+| 格式 | 照片優先使用 `.webp`（體積更小、品質佳）；logo / 圖示使用 `.png`（支援透明）；社群分享用 `og:image` 保留 `.jpg` 以確保平台相容性 |
 | 尺寸 | 大頭照 / 活動照：最大寬度 800px；logo：最大寬度 200px；Footer 縮圖：寬度 128px 以內 |
 | 檔案大小 | 單張建議 ≤200KB，大圖 ≤500KB |
 | 命名規則 | 全小寫、用連字號分隔，例如 `honors1.png`、`epirank-screenshot.png`；縮圖加 `-thumb` 後綴 |
 | 存放位置 | 一般圖片放 `images/`；榮譽活動照片放 `images/honors/`；軟體相關圖片放 `images/software/` |
-| 壓縮工具 | 推薦 [TinyPNG](https://tinypng.com/)（線上）或 `sips`（macOS 內建） |
+| 壓縮工具 | 推薦 Python Pillow（`pip3 install Pillow`）轉 WebP；或 [TinyPNG](https://tinypng.com/)（線上）；macOS `sips` 不支援 WebP 寫入 |
 
 **macOS 快速壓縮指令：**
 ```bash
