@@ -18,5 +18,5 @@ Last update: 2026-04-02
 Language: Chinese (zh-TW) / English
 Standards: HTML5, CSS3, ES6
 Technology: GitHub Pages, IndexNow, Schema.org JSON-LD, Dublin Core, Atom Feed, Web App Manifest
-Analytics: Google Analytics (GA4), Ahrefs Analytics, Microsoft Clarity
+Analytics: Ahrefs Analytics, Microsoft Clarity
 Security: https://canslab1.github.io/security.txt
