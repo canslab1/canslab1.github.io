@@ -628,6 +628,7 @@ function hideImageModal() {
 /* ===== Video Modal ===== */
 
 function showVideoModal(youtubeId) {
+    if (!/^[a-zA-Z0-9_-]{11}$/.test(youtubeId)) return;
     var overlay = document.getElementById('video-modal-overlay');
     var frame = document.getElementById('video-modal-frame');
     if (!overlay || !frame) return;

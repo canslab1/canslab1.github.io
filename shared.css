@@ -1,3 +1,13 @@
+/* ===== Design Tokens ===== */
+:root {
+    --color-primary: #27ae60;       /* 主題綠 */
+    --color-primary-dark: #219150;  /* 漸層綠（深） */
+    --color-dark-green: #14532d;    /* Footer 深綠 */
+    --color-mid-green: #1a7745;     /* Footer 中綠 */
+    --color-text: #2c3e50;          /* 深灰文字 */
+    --color-bg: #f8f9fa;            /* 淺灰背景 */
+}
+
 /* ===== Reset ===== */
 * {
     margin: 0;
@@ -15,7 +25,7 @@ body {
     font-family: system-ui, -apple-system, 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f8f9fa;
+    background-color: var(--color-bg);
 }
 
 /* ===== Language Toggle ===== */
@@ -28,7 +38,7 @@ html[lang="en"] .zh { display: none; }
     top: 20px;
     right: 20px;
     z-index: 1001;
-    background: #27ae60;
+    background: var(--color-primary);
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -41,7 +51,7 @@ html[lang="en"] .zh { display: none; }
 }
 
 .language-toggle:hover {
-    background: #219150;
+    background: var(--color-primary-dark);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(39,174,96,0.4);
 }
@@ -134,7 +144,7 @@ nav {
     border: none;
     padding: 0.5rem 1.1rem;
     font-size: 0.95rem;
-    color: #2c3e50;
+    color: var(--color-text);
     cursor: pointer;
     transition: all 0.3s ease;
     font-weight: 500;
@@ -147,7 +157,7 @@ html[lang="en"] .nav-item {
 }
 
 .nav-item:hover, .nav-item.active {
-    background: #27ae60;
+    background: var(--color-primary);
     color: white;
 }
 
@@ -175,11 +185,11 @@ main {
 }
 
 .section h2 {
-    color: #2c3e50;
+    color: var(--color-text);
     font-size: 1.75rem;
     font-weight: 500;
     margin-bottom: 1.5rem;
-    border-bottom: 3px solid #27ae60;
+    border-bottom: 3px solid var(--color-primary);
     padding-bottom: 0.5rem;
 }
 
@@ -188,11 +198,11 @@ main {
 }
 
 .section h3 {
-    color: #2c3e50;
+    color: var(--color-text);
     font-size: 1.25rem;
     font-weight: 500;
     margin: 1.5rem 0 1rem 0;
-    border-left: 4px solid #27ae60;
+    border-left: 4px solid var(--color-primary);
     padding-left: 1rem;
 }
 
@@ -207,7 +217,7 @@ main {
 
 .stat-card {
     display: block;
-    background: linear-gradient(135deg, #27ae60 0%, #219150 100%);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
     color: white;
     padding: 2rem;
     border-radius: 10px;
@@ -220,7 +230,7 @@ main {
 }
 
 .stat-card:focus {
-    box-shadow: 0 0 0 3px #27ae60;
+    box-shadow: 0 0 0 3px var(--color-primary);
 }
 
 .stat-card:hover {
@@ -252,7 +262,7 @@ main {
 .honors-list li {
     margin-bottom: 1rem;
     padding-left: 1rem;
-    border-left: 4px solid #27ae60;
+    border-left: 4px solid var(--color-primary);
 }
 
 .interview-btn {
@@ -401,7 +411,7 @@ figure {
     bottom: calc(100% + 10px);
     left: 50%;
     transform: translateX(-50%) translateY(6px);
-    background: linear-gradient(135deg, #14532d, #1a7745);
+    background: linear-gradient(135deg, var(--color-dark-green), var(--color-mid-green));
     color: white;
     font-size: 0.78rem;
     font-weight: 500;
@@ -423,7 +433,7 @@ figure {
     left: 50%;
     transform: translateX(-50%);
     border: 5px solid transparent;
-    border-top-color: #1a7745;
+    border-top-color: var(--color-mid-green);
 }
 
 .footer-link:hover .footer-tooltip {
@@ -518,7 +528,7 @@ figure {
 .press-source-title {
     font-size: 1.3rem;
     font-weight: 600;
-    color: #14532d;
+    color: var(--color-dark-green);
     margin: 2rem 0 0.8rem;
 }
 .press-heading {
@@ -560,10 +570,10 @@ figure {
 .papers-category-title {
     font-size: 1.3rem;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--color-text);
     margin: 0 0 0.5rem 0;
     padding-left: 1rem;
-    border-left: 4px solid #27ae60;
+    border-left: 4px solid var(--color-primary);
 }
 
 .papers-note {
@@ -576,7 +586,7 @@ figure {
 .papers-period-title {
     font-size: 1rem;
     font-weight: 600;
-    color: #27ae60;
+    color: var(--color-primary);
     margin: 1.5rem 0 0.5rem 0;
     padding: 0.4rem 0.8rem;
     background: #f0faf4;
@@ -598,7 +608,7 @@ figure {
 }
 
 .paper-item::marker {
-    color: #27ae60;
+    color: var(--color-primary);
     font-weight: 600;
 }
 
@@ -634,10 +644,10 @@ figure {
 .projects-role-title {
     font-size: 1.3rem;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--color-text);
     margin: 0 0 1rem 0;
     padding-left: 1rem;
-    border-left: 4px solid #27ae60;
+    border-left: 4px solid var(--color-primary);
 }
 
 .projects-list {
@@ -654,13 +664,13 @@ figure {
 }
 
 .project-item::marker {
-    color: #27ae60;
+    color: var(--color-primary);
     font-weight: 600;
 }
 
 .project-name {
     font-weight: 500;
-    color: #2c3e50;
+    color: var(--color-text);
 }
 
 .project-meta {
@@ -677,7 +687,7 @@ figure {
 }
 
 .project-amount {
-    color: #27ae60;
+    color: var(--color-primary);
     font-weight: 500;
 }
 
@@ -717,7 +727,7 @@ figure {
     left: 0;
     right: 0;
     height: 2.5em;
-    background: linear-gradient(transparent, #f8f9fa);
+    background: linear-gradient(transparent, var(--color-bg));
     pointer-events: none;
 }
 
@@ -749,7 +759,7 @@ figure {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    border: 2px solid #27ae60;
+    border: 2px solid var(--color-primary);
     box-shadow: 0 2px 8px rgba(39,174,96,0.2);
     transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -764,7 +774,7 @@ figure {
     display: inline-block;
     margin-bottom: 1rem;
     padding: 0.5rem 1.2rem;
-    background: #27ae60;
+    background: var(--color-primary);
     color: white;
     border: none;
     border-radius: 6px;
@@ -775,7 +785,7 @@ figure {
 }
 
 .articles-back-btn:hover {
-    background: #219150;
+    background: var(--color-primary-dark);
 }
 
 #articles-pdf-frame {
@@ -858,7 +868,7 @@ figure {
         font-size: 1.5rem;
         background: none;
         border: none;
-        color: #2c3e50;
+        color: var(--color-text);
         cursor: pointer;
     }
 
@@ -935,7 +945,7 @@ figure {
     position: fixed;
     bottom: 75px;
     right: 30px;
-    background: #27ae60;
+    background: var(--color-primary);
     color: white;
     border: none;
     border-radius: 50%;
@@ -959,7 +969,7 @@ figure {
 }
 
 .back-to-top-shared:hover {
-    background: #219150;
+    background: var(--color-primary-dark);
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(39, 174, 96, 0.6);
 }
