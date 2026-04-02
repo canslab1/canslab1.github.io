@@ -224,7 +224,7 @@ function renderNav() {
             li.appendChild(btn);
         } else if (item.embed) {
             const btn = document.createElement('button');
-            btn.className = 'nav-item' + (_activeSection === 'embed' ? '' : '');
+            btn.className = 'nav-item' + (_activeSection === 'embed' ? ' active' : '');
             btn.setAttribute('role', 'menuitem');
             btn.textContent = item.label;
             btn.addEventListener('click', (e) => showEmbed(item.href, e));

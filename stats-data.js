@@ -5,7 +5,7 @@
 
 const statsZh = [
     { number: '44篇',   label: '期刊論文', url: 'https://pure.lib.cgu.edu.tw/zh/persons/chung-yuan-huang-2/publications/?type=%2Fdk%2Fatira%2Fpure%2Fresearchoutput%2Fresearchoutputtypes%2Fcontributiontojournal%2Farticle' },
-    { number: '50篇',   label: '國際研討會', url: 'https://pure.lib.cgu.edu.tw/zh/persons/chung-yuan-huang-2/publications/?type=%2Fdk%2Fatira%2Fpure%2Fresearchoutput%2Fresearchoutputtypes%2Fcontributiontoconference%2Finternational_conference_report' },
+    { number: '49篇',   label: '國際研討會', url: 'https://pure.lib.cgu.edu.tw/zh/persons/chung-yuan-huang-2/publications/?type=%2Fdk%2Fatira%2Fpure%2Fresearchoutput%2Fresearchoutputtypes%2Fcontributiontoconference%2Finternational_conference_report' },
     { number: '10篇',   label: '專書專章', url: 'https://canslab1.github.io/CV.pdf' },
     { number: '18篇',   label: '國內研討會', url: 'https://canslab1.github.io/CV.pdf' },
     { number: '49次',   label: '文章及採訪', url: 'https://canslab1.github.io/CV.pdf' },
@@ -13,8 +13,8 @@ const statsZh = [
     { number: '1408萬', label: '國科會預算', url: 'https://arspb.nstc.gov.tw/NSCWebFront/modules/talentSearch/talentSearch.do?action=initRsm17new&rsNo=2a2ef24adef742f58349c3c533bb7402&LANG=chi' },
     { number: '14次',   label: '共同主持人', url: 'https://canslab1.github.io/CV.pdf' },
     { number: '994次',  label: 'Citations', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '18篇',   label: 'h-index', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
-    { number: '30篇',   label: 'i10-index', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+    { number: '18',     label: 'h-index', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
+    { number: '30',     label: 'i10-index', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
     { number: '51人',   label: '指導專題生', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
     { number: '25人',   label: '指導碩士', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
     { number: '2人',    label: '指導博士', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
@@ -36,7 +36,7 @@ const statsZh = [
 
 const statsEn = [
     { number: '44',   label: 'Journal Papers', url: 'https://canslab1.github.io/CV.pdf#page=21' },
-    { number: '50',   label: "Int'l Conferences", url: 'https://canslab1.github.io/CV.pdf#page=24' },
+    { number: '49',   label: "Int'l Conferences", url: 'https://canslab1.github.io/CV.pdf#page=24' },
     { number: '10',   label: 'Book Chapters', url: 'https://canslab1.github.io/CV.pdf#page=27' },
     { number: '18',   label: 'Dom. Conferences', url: 'https://canslab1.github.io/CV.pdf#page=29' },
     { number: '49',   label: 'Commentaries & Op-Eds', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },

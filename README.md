@@ -126,7 +126,7 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 | `shared.css` | 共用樣式 | 各頁面共用的 CSS 樣式表 |
 | `shared.js` | 共用腳本 | 渲染函式、語言切換、導覽列/Footer、區段切換 |
 | `stats-data.js` | 卡片資料 | 28 張學術數據卡片的中英文資料 |
-| `papers-data.js` | 論文資料 | 171 篇著作列表（5 大類，中英文） |
+| `papers-data.js` | 論文資料 | 170 篇著作列表（5 大類，中英文） |
 | `projects-data.js` | 計畫資料 | 37 件研究計畫列表（3 種角色，中英文） |
 | `build-prerender.py` | 建構工具 | 解析 JS 資料檔，產生預渲染 HTML 及 JSON-LD 結構化資料 |
 | `css/project-page.css` | 子 repo 共用樣式 | 8 個子 repo 專案頁面共用 CSS（header、markdown-body、footer、響應式） |
@@ -195,7 +195,7 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 ### 區段四：著作目錄（著作）
 
-顯示黃崇源教授 171 篇著作，分為 5 大類別，詳見下方「著作列表」章節。
+顯示黃崇源教授 170 篇著作，分為 5 大類別，詳見下方「著作列表」章節。
 
 > **維護提示**：新增或修改論文只需編輯 `papers-data.js`，然後執行 `python3 build-prerender.py` 重新產生預渲染 HTML。
 
@@ -256,7 +256,7 @@ Footer 使用縮圖（`*-thumb.*`）以減少頁面載入大小。Hover 時顯�
 
 ## 著作列表（papers-data.js）
 
-首頁「著作」區段顯示黃崇源教授 171 篇著作，資料儲存於 `papers-data.js`，分為 5 大類別：
+首頁「著作」區段顯示黃崇源教授 170 篇著作，資料儲存於 `papers-data.js`，分為 5 大類別：
 
 | # | 類別 | 篇數 | 期別分組 |
 |---|------|------|---------|
@@ -336,7 +336,7 @@ canslab1.github.io/
 ├── shared.css           # 共用 CSS 樣式（含回到頂部按鈕、Footer 提示框）
 ├── shared.js            # 共用 JS 渲染函式與區段切換（含回到頂部按鈕邏輯）
 ├── stats-data.js        # 28 張學術數據卡片資料
-├── papers-data.js       # 171 篇著作列表資料
+├── papers-data.js       # 170 篇著作列表資料
 ├── projects-data.js     # 37 件研究計畫列表資料
 ├── build-prerender.py   # 預渲染建構工具（產生靜態 HTML 及 JSON-LD）
 ├── 404.html             # 自訂錯誤頁
@@ -442,7 +442,7 @@ canslab1.github.io/
 > **維護提示**：日後更新卡片數據只需修改此檔，不需異動 `index.html` 或 `shared.js`。
 
 #### `papers-data.js`
-171 篇著作列表（5 大類別，含期別分組），中英文標題：
+170 篇著作列表（5 大類別，含期別分組），中英文標題：
 
 | 類別 | 篇數 |
 |------|------|

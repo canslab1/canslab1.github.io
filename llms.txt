@@ -12,7 +12,7 @@ Prof. Chung-Yuan Huang (黃崇源) is a full professor in the Department of Comp
 - h-index: 18
 - i10-index: 30
 - Journal Papers: 44
-- International Conference Papers: 50
+- International Conference Papers: 49
 - Book Chapters: 10
 - Domestic Conference Papers: 18
 - PI Research Projects: 22
