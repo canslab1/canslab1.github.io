@@ -26,7 +26,6 @@
     <category term="Op-Ed"/>
     <category term="風傳媒"/>
   </entry>
-
   <entry>
     <title>Digging for gold or selling shovels? (Taipei Times)</title>
     <link href="https://www.taipeitimes.com/News/editorials/archives/2025/05/18/2003837064" rel="alternate"/>
@@ -36,7 +35,6 @@
     <category term="Op-Ed"/>
     <category term="Taipei Times"/>
   </entry>
-
   <entry>
     <title>誰說賣鏟子的人知道金礦在那裡？ (自由時報)</title>
     <link href="https://talk.ltn.com.tw/article/paper/1706625" rel="alternate"/>
@@ -46,7 +44,6 @@
     <category term="Op-Ed"/>
     <category term="自由時報"/>
   </entry>
-
   <entry>
     <title>從「老松國小校歌」談起 (老松兒童 第 43 期)</title>
     <link href="https://canslab1.github.io/index.html#articles" rel="alternate"/>
@@ -56,17 +53,6 @@
     <category term="Article"/>
     <category term="老松兒童"/>
   </entry>
-
-  <entry>
-    <title>Is ChatGPT actually intelligent? (Taipei Times)</title>
-    <link href="https://www.taipeitimes.com/News/editorials/archives/2023/04/01/2003797104" rel="alternate"/>
-    <id>tag:canslab1.github.io,2023-04-01:taipeitimes-chatgpt-2023-04-01</id>
-    <updated>2023-04-01T00:00:00+08:00</updated>
-    <summary>People are fascinated when they observe Web site-based conversational artificial intelligence (AI) systems answer questions in ways that resemble human writing or speech.</summary>
-    <category term="Op-Ed"/>
-    <category term="Taipei Times"/>
-  </entry>
-
   <entry>
     <title>願景相承、生生不息 (老松兒童 第 42 期)</title>
     <link href="https://canslab1.github.io/index.html#articles" rel="alternate"/>
@@ -76,7 +62,15 @@
     <category term="Article"/>
     <category term="老松兒童"/>
   </entry>
-
+  <entry>
+    <title>Is ChatGPT actually intelligent? (Taipei Times)</title>
+    <link href="https://www.taipeitimes.com/News/editorials/archives/2023/04/01/2003797104" rel="alternate"/>
+    <id>tag:canslab1.github.io,2023-04-01:taipeitimes-chatgpt-2023-04-01</id>
+    <updated>2023-04-01T00:00:00+08:00</updated>
+    <summary>People are fascinated when they observe Web site-based conversational artificial intelligence (AI) systems answer questions in ways that resemble human writing or speech.</summary>
+    <category term="Op-Ed"/>
+    <category term="Taipei Times"/>
+  </entry>
   <entry>
     <title>A message to students (Taipei Times)</title>
     <link href="https://www.taipeitimes.com/News/editorials/archives/2021/05/21/2003757773" rel="alternate"/>
@@ -86,37 +80,6 @@
     <category term="Op-Ed"/>
     <category term="Taipei Times"/>
   </entry>
-
-  <entry>
-    <title>一起來寫抗疫光榮史 (自由時報)</title>
-    <link href="https://talk.ltn.com.tw/article/paper/1448637" rel="alternate"/>
-    <id>tag:canslab1.github.io,2021-05-14:ltn-2021-05-14</id>
-    <updated>2021-05-14T00:00:00+08:00</updated>
-    <summary>一起來寫抗疫光榮史。</summary>
-    <category term="Op-Ed"/>
-    <category term="自由時報"/>
-  </entry>
-
-  <entry>
-    <title>Taiwan's pandemic history (Taipei Times)</title>
-    <link href="https://www.taipeitimes.com/News/editorials/archives/2021/05/16/2003757472" rel="alternate"/>
-    <id>tag:canslab1.github.io,2021-05-16:taipeitimes-2021-05-16</id>
-    <updated>2021-05-16T00:00:00+08:00</updated>
-    <summary>Historians will consider May 11, 2021, as the day Taiwan was invaded by a wave of new COVID-19 cases.</summary>
-    <category term="Op-Ed"/>
-    <category term="Taipei Times"/>
-  </entry>
-
-  <entry>
-    <title>Getting the truth about virus shots (Taipei Times)</title>
-    <link href="https://www.taipeitimes.com/News/editorials/archives/2021/02/27/2003752906" rel="alternate"/>
-    <id>tag:canslab1.github.io,2021-02-27:taipeitimes-2021-02-27</id>
-    <updated>2021-02-27T00:00:00+08:00</updated>
-    <summary>Taiwanese are soon to get COVID-19 shots, so medical personnel, government officials and the public should consider the finer points of vaccination information and scheduling.</summary>
-    <category term="Op-Ed"/>
-    <category term="Taipei Times"/>
-  </entry>
-
   <entry>
     <title>流行病動態學教授給所有大學生的一封信 (風傳媒)</title>
     <link href="https://www.storm.mg/article/3689310" rel="alternate"/>
@@ -126,7 +89,33 @@
     <category term="Op-Ed"/>
     <category term="風傳媒"/>
   </entry>
-
+  <entry>
+    <title>Taiwan's pandemic history (Taipei Times)</title>
+    <link href="https://www.taipeitimes.com/News/editorials/archives/2021/05/16/2003757472" rel="alternate"/>
+    <id>tag:canslab1.github.io,2021-05-16:taipeitimes-2021-05-16</id>
+    <updated>2021-05-16T00:00:00+08:00</updated>
+    <summary>Historians will consider May 11, 2021, as the day Taiwan was invaded by a wave of new COVID-19 cases.</summary>
+    <category term="Op-Ed"/>
+    <category term="Taipei Times"/>
+  </entry>
+  <entry>
+    <title>一起來寫抗疫光榮史 (自由時報)</title>
+    <link href="https://talk.ltn.com.tw/article/paper/1448637" rel="alternate"/>
+    <id>tag:canslab1.github.io,2021-05-14:ltn-2021-05-14</id>
+    <updated>2021-05-14T00:00:00+08:00</updated>
+    <summary>一起來寫抗疫光榮史。</summary>
+    <category term="Op-Ed"/>
+    <category term="自由時報"/>
+  </entry>
+  <entry>
+    <title>Getting the truth about virus shots (Taipei Times)</title>
+    <link href="https://www.taipeitimes.com/News/editorials/archives/2021/02/27/2003752906" rel="alternate"/>
+    <id>tag:canslab1.github.io,2021-02-27:taipeitimes-2021-02-27</id>
+    <updated>2021-02-27T00:00:00+08:00</updated>
+    <summary>Taiwanese are soon to get COVID-19 shots, so medical personnel, government officials and the public should consider the finer points of vaccination information and scheduling.</summary>
+    <category term="Op-Ed"/>
+    <category term="Taipei Times"/>
+  </entry>
   <entry>
     <title>AZ疫苗蒙冤：撥開副作用濃霧 正確看待接種計畫 (自由時報)</title>
     <link href="https://talk.ltn.com.tw/article/paper/1433521" rel="alternate"/>
@@ -136,7 +125,6 @@
     <category term="Op-Ed"/>
     <category term="自由時報"/>
   </entry>
-
   <entry>
     <title>Academics should help people, not sow fear (Taipei Times)</title>
     <link href="https://www.taipeitimes.com/News/editorials/archives/2020/04/20/2003734932" rel="alternate"/>
@@ -146,7 +134,6 @@
     <category term="Op-Ed"/>
     <category term="Taipei Times"/>
   </entry>
-
   <entry>
     <title>防疫，知識份子應有的責任絕非獵巫！ (風傳媒)</title>
     <link href="https://www.storm.mg/article/2514790" rel="alternate"/>
@@ -156,7 +143,6 @@
     <category term="Op-Ed"/>
     <category term="風傳媒"/>
   </entry>
-
   <entry>
     <title>Air travel significant to spread of COVID-19 (Taipei Times)</title>
     <link href="https://www.taipeitimes.com/News/editorials/archives/2020/03/22/2003733144" rel="alternate"/>
@@ -166,7 +152,6 @@
     <category term="Op-Ed"/>
     <category term="Taipei Times"/>
   </entry>
-
   <entry>
     <title>陳部長沒說的另一半答案 (聯合報)</title>
     <link href="https://canslab1.github.io/press/udn-2020-03-21.png" rel="alternate"/>
@@ -176,7 +161,6 @@
     <category term="Op-Ed"/>
     <category term="聯合報"/>
   </entry>
-
   <entry>
     <title>塞翁失馬，焉知非福？台灣防疫做得最好！ (自由時報)</title>
     <link href="https://talk.ltn.com.tw/article/paper/1354128" rel="alternate"/>
@@ -186,7 +170,6 @@
     <category term="Op-Ed"/>
     <category term="自由時報"/>
   </entry>
-
   <entry>
     <title>How to keep infection clusters from happening (Taipei Times)</title>
     <link href="https://www.taipeitimes.com/News/editorials/archives/2020/02/19/2003731229" rel="alternate"/>
@@ -196,7 +179,6 @@
     <category term="Op-Ed"/>
     <category term="Taipei Times"/>
   </entry>
-
   <entry>
     <title>佛系防疫vs.嚴謹防疫 (聯合報)</title>
     <link href="https://canslab1.github.io/press/udn-2020-02-19.jpg" rel="alternate"/>
@@ -206,7 +188,6 @@
     <category term="Op-Ed"/>
     <category term="聯合報"/>
   </entry>
-
   <entry>
     <title>武漢肺炎進展到群聚、社區感染前，台灣可以怎麼做？ (自由時報)</title>
     <link href="https://talk.ltn.com.tw/article/paper/1351389" rel="alternate"/>
@@ -216,7 +197,6 @@
     <category term="Op-Ed"/>
     <category term="自由時報"/>
   </entry>
-
   <entry>
     <title>李登輝只能代表自己 (中國時報)</title>
     <link href="https://canslab1.github.io/press/chinatimes-2015-08-25.jpg" rel="alternate"/>
