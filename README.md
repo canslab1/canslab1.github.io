@@ -145,7 +145,7 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 中文：介紹 | 榮譽 | 綜覽 | 著作 | 計畫 | 程式 | 評論 | 履歷 | 故事 | 相簿
 
-英文：About | Honors | Overview | Papers | Projects | Softwares | Op-Eds | CV | Stories | Photos
+英文：About | Honors | Overview | Papers | Projects | Software | Op-Eds | CV | Stories | Photos
 
 前七項（介紹 / 榮譽 / 綜覽 / 著作 / 計畫 / 程式 / 評論）為頁面內區段切換，履歷為嵌入式 PDF 檢視，其餘兩項（故事 / 相簿）為外部連結。外部連結使用具名 `target`（如 `canslab-故事`），重複點擊同一連結時瀏覽器會跳到已開啟的視窗而非再開新分頁。
 
@@ -179,9 +179,9 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 直接顯示 28 張數據卡片（無標題、無綠線分隔），涵蓋：
 - 期刊論文：44 篇
-- 國際研討會：50 篇
+- 國際研討會：49 篇
 - 專書專章：10 篇
-- 國內研討會：19 篇
+- 國內研討會：18 篇
 - 文章及採訪：49 次
 - 計畫主持人：22 次（國科會預算 1,408 萬）
 - 共同主持人：14 次
@@ -224,7 +224,7 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 ### 區段七：媒體投書（評論）
 
-收錄黃崇源教授發表於國內外報紙的投書文章共 13 篇，按報社分組（Taipei Times 5 篇、自由時報 5 篇、風傳媒 3 篇），同一報社內按日期由新到舊排列。每篇文章顯示標題（含外部連結）、發表日期與作者。
+收錄黃崇源教授發表於國內外報紙的投書文章共 19 篇，按報社分組（Taipei Times 8 篇、自由時報 5 篇、風傳媒 3 篇、聯合報 2 篇、中國時報 1 篇），同一報社內按日期由新到舊排列。每篇文章顯示標題（含外部連結）、發表日期與作者。
 
 > **維護提示**：新增投書請直接修改 `index.html` 中「評論」區段（`<section id="press">`）的 `.software-card` 區塊，按報社分組並維持日期由新到舊排序。
 
@@ -523,8 +523,8 @@ python3 build-prerender.py
 | 3 | `lab` | 綜覽 / Overview | 28 張學術數據卡片 |
 | 4 | `papers` | 著作 / Papers | 著作目錄 |
 | 5 | `projects` | 計畫 / Projects | 計畫列表 |
-| 6 | `software` | 程式 / Softwares | 開源程式 |
-| 7 | `press` | 評論 / Op-Eds | 媒體投書（13 篇） |
+| 6 | `software` | 程式 / Software | 開源程式 |
+| 7 | `press` | 評論 / Op-Eds | 媒體投書（19 篇） |
 | 8 | `embed` | 履歷 / CV | 內嵌 PDF 檢視 |
 
 ### 新增內容區段步驟
