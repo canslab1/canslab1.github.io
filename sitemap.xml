@@ -363,6 +363,12 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://canslab1.github.io/security.txt</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
   <!-- Redirect pages: content moved to index.html -->
   <url>
     <loc>https://canslab1.github.io/CYHuang.html</loc>

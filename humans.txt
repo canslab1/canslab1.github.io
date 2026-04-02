@@ -14,8 +14,9 @@ Research: Complex Networks, Epidemic Simulation, Computational Social Science, A
 Software: EpiRank, MV17, CASMIM, HETA, HATA, BCAT, SRAC-Agent, AED2
 
 /* SITE */
-Last update: 2026-03-24
+Last update: 2026-04-02
 Language: Chinese (zh-TW) / English
 Standards: HTML5, CSS3, ES6
-Technology: GitHub Pages, IndexNow, Schema.org JSON-LD, Dublin Core, Atom Feed
+Technology: GitHub Pages, IndexNow, Schema.org JSON-LD, Dublin Core, Atom Feed, Web App Manifest
 Analytics: Ahrefs Analytics, Microsoft Clarity
+Security: https://canslab1.github.io/security.txt

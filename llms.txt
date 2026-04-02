@@ -112,3 +112,5 @@ Prof. Chung-Yuan Huang (黃崇源) is a full professor in the Department of Comp
 - /CYHuang.html: Redirect → index.html#papers (old publications page, now integrated)
 - /software.html: Redirect → index.html#software (old software page, now integrated)
 - /lab.html: Redirect → index.html#lab (old lab page, now integrated)
+- /security.txt: Security contact information (RFC 9116)
+- /manifest.json: Web App Manifest (PWA metadata, icons, theme color)
