@@ -112,11 +112,11 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 ## 頁面結構
 
-本網站採用**單頁式架構**（Single Page Application），`index.html` 包含八個內容區段（介紹 / 榮譽 / 綜覽 / 著作 / 計畫 / 程式 / 評論）以及內嵌 PDF 檢視（履歷），透過導覽列按鈕切換，不重新載入頁面。
+本網站採用**單頁式架構**（Single Page Application），`index.html` 包含八個內容區段（介紹 / 榮譽 / 文章 / 綜覽 / 著作 / 計畫 / 程式 / 評論）以及內嵌 PDF 檢視（履歷），透過導覽列按鈕切換，不重新載入頁面。
 
 | 檔案 | 頁面 | 說明 |
 |------|------|------|
-| `index.html` | 首頁（單頁式） | 包含八個區段：介紹（簡短自傳）、榮譽（責任與肯定 + 傑出校友推薦文 + 杏壇芬芳錄推薦文）、綜覽（28 張學術數據卡片）、著作（著作目錄）、計畫（計畫列表）、程式（開源程式）、評論（媒體投書），以及內嵌 PDF 檢視（履歷） |
+| `index.html` | 首頁（單頁式） | 包含八個區段：介紹（簡短自傳）、榮譽（責任與肯定 + 傑出校友推薦文 + 杏壇芬芳錄推薦文）、綜覽（28 張學術數據卡片）、著作（著作目錄）、計畫（計畫列表）、程式（開源程式）、文章（專欄文章）、評論（媒體投書），以及內嵌 PDF 檢視（履歷） |
 | `stories.html` | 家族故事 | 個人家族故事集 |
 | `404.html` | 錯誤頁 | 自訂 404 頁面 |
 | `CYHuang.html` | 重導向頁 | 已移至 `index.html#papers`（`noindex`、`meta refresh`、`canonical`） |
@@ -143,11 +143,11 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 ### 導覽列
 
-中文：介紹 | 榮譽 | 綜覽 | 著作 | 計畫 | 程式 | 評論 | 履歷 | 故事 | 相簿
+中文：介紹 | 榮譽 | 綜覽 | 著作 | 計畫 | 程式 | 文章 | 評論 | 履歷 | 故事 | 相簿
 
-英文：About | Honors | Overview | Papers | Projects | Software | Op-Eds | CV | Stories | Photos
+英文：About | Honors | Overview | Papers | Projects | Software | Articles | Op-Eds | CV | Stories | Photos
 
-前七項（介紹 / 榮譽 / 綜覽 / 著作 / 計畫 / 程式 / 評論）為頁面內區段切換，履歷為嵌入式 PDF 檢視，其餘兩項（故事 / 相簿）為外部連結。外部連結使用具名 `target`（如 `canslab-故事`），重複點擊同一連結時瀏覽器會跳到已開啟的視窗而非再開新分頁。
+前八項（介紹 / 榮譽 / 綜覽 / 著作 / 計畫 / 程式 / 文章 / 評論）為頁面內區段切換，履歷為嵌入式 PDF 檢視，其餘兩項（故事 / 相簿）為外部連結。外部連結使用具名 `target`（如 `canslab-故事`），重複點擊同一連結時瀏覽器會跳到已開啟的視窗而非再開新分頁。
 
 ### 區段一：簡短自傳（介紹，預設顯示）
 
@@ -264,7 +264,7 @@ Footer 使用縮圖（`*-thumb.*`）以減少頁面載入大小。Hover 時顯�
 | 2 | 國際會議論文 | 49 | 單一列表 |
 | 3 | 專章、學位及其它論文 | 10 | 單一列表 |
 | 4 | 國內外媒體投書及採訪 | 49 | 單一列表 |
-| 5 | 國內研討會論文 | 19 | 單一列表 |
+| 5 | 國內研討會論文 | 18 | 單一列表 |
 
 - 論文內容會由 `build-prerender.py` 預渲染為靜態 HTML，嵌入 `index.html` 的 `<div id="papers-container">`
 - 瀏覽器載入後 `shared.js` 的 `renderPapers()` 會重新渲染（支援語言切換）
@@ -329,7 +329,7 @@ Footer 使用縮圖（`*-thumb.*`）以減少頁面載入大小。Hover 時顯�
 ### 檔案結構
 ```
 canslab1.github.io/
-├── index.html           # 首頁（單頁式，含介紹/榮譽/綜覽/著作/計畫/程式/評論七個區段 + 內嵌 PDF）
+├── index.html           # 首頁（單頁式，含介紹/榮譽/綜覽/著作/計畫/程式/文章/評論八個區段 + 內嵌 PDF）
 ├── stories.html         # 家族故事
 ├── stories.css          # 故事頁面專屬 CSS
 ├── stories.js           # 故事頁面專屬 JS
@@ -450,7 +450,7 @@ canslab1.github.io/
 | 國際會議論文 | 49 |
 | 專章、學位及其它論文 | 10 |
 | 國內外媒體投書及採訪 | 49 |
-| 國內研討會論文 | 19 |
+| 國內研討會論文 | 18 |
 
 > **維護提示**：新增或修改論文只需編輯此檔，然後執行 `python3 build-prerender.py` 重新產生預渲染 HTML。
 
@@ -490,7 +490,7 @@ python3 build-prerender.py
 | 函式 | 用途 |
 |------|------|
 | `toggleLanguage()` | 中英文即時切換 |
-| `showSection(id, event)` | 切換頁面內區段（介紹 / 榮譽 / 綜覽 / 著作 / 計畫 / 程式 / 評論） |
+| `showSection(id, event)` | 切換頁面內區段（介紹 / 榮譽 / 綜覽 / 著作 / 計畫 / 程式 / 文章 / 評論） |
 | `showEmbed(url, event)` | 以 iframe 嵌入顯示外部頁面（履歷 PDF） |
 | `renderStats()` | 渲染學術數據卡片 |
 | `renderHonors()` | 渲染榮譽列表（含照片/影片彈窗按鈕） |
@@ -524,8 +524,9 @@ python3 build-prerender.py
 | 4 | `papers` | 著作 / Papers | 著作目錄 |
 | 5 | `projects` | 計畫 / Projects | 計畫列表 |
 | 6 | `software` | 程式 / Software | 開源程式 |
-| 7 | `press` | 評論 / Op-Eds | 媒體投書（19 篇） |
-| 8 | `embed` | 履歷 / CV | 內嵌 PDF 檢視 |
+| 7 | `articles` | 文章 / Articles | 專欄文章 |
+| 8 | `press` | 評論 / Op-Eds | 媒體投書（19 篇） |
+| 9 | `embed` | 履歷 / CV | 內嵌 PDF 檢視 |
 
 ### 新增內容區段步驟
 1. 在 `index.html` 的 `<main>` 中新增 `<section id="新區段" class="section">`（注意：須按導覽列順序插入正確位置）
@@ -644,7 +645,7 @@ python3 build-prerender.py
 - `manifest.json`：PWA Web App Manifest（雙語描述）
 - `apple-touch-icon`：iOS 桌面圖示（`images/icon-192.png`）
 - `security.txt`：RFC 9116 安全聯絡資訊（根目錄）
-- `feed.xml`：Atom feed（22 篇媒體投書 / 文章動態）
+- `feed.xml`：Atom feed（21 篇媒體投書 / 文章動態）
 
 ### 結構化資料（JSON-LD）詳細
 
