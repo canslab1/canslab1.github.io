@@ -14,7 +14,7 @@ Prof. Chung-Yuan Huang (黃崇源) is a full professor in the Department of Comp
 - Journal Papers: 44
 - International Conference Papers: 50
 - Book Chapters: 10
-- Domestic Conference Papers: 19
+- Domestic Conference Papers: 18
 - PI Research Projects: 22
 - Co-PI Research Projects: 14
 - NSTC Research Budget: NT$14.08 million
@@ -103,7 +103,7 @@ Prof. Chung-Yuan Huang (黃崇源) is a full professor in the Department of Comp
   - "榮譽" (Honors): 責任與肯定 (Commitment and Recognition) — honors list with interactive photo/video buttons (19 activity photos, 1 interview video), Lao-Song Elementary Distinguished Alumni recommendation article, and Taipei Honored Contributors to Education recommendation article with 4 photos
   - "文章" (Articles): Published articles including 蓮花池畔的清清之遠香 (Lotus Fragrance by the Pond, Chinese/English), 遺忘的記憶郵筒——序章 (fantasy novel prologue), and 3 Lao-Song Children magazine articles — all with collapsible full-text view and PDF links
   - "綜覽" (Overview): 28 academic performance stat cards (publications, citations, h-index, projects, students, service, career)
-  - "著作" (Papers): 171 publications in 5 categories (44 SCI/SSCI/EI journal papers, 49 international conference papers, 10 book chapters, 49 media commentaries, 19 domestic conference papers)
+  - "著作" (Papers): 170 publications in 5 categories (44 SCI/SSCI/EI journal papers, 49 international conference papers, 10 book chapters, 49 media commentaries, 18 domestic conference papers)
   - "計畫" (Projects): 37 research projects (22 as PI, 14 as Co-PI, 1 as research member)
   - "程式" (Software): 開源程式 (Open-Source Software) — 8 open-source tools (EpiRank, MV17, CASMIM, HETA, HATA, BCAT, SRAC-Agent, AED2) with paper references and GitHub links
   - "評論" (Op-Eds): 媒體投書 — 19 op-ed articles published in Taipei Times (8), 自由時報 (5), 風傳媒 (3), 聯合報 (2), and 中國時報 (1), grouped by newspaper and sorted newest first

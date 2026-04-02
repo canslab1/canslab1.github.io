@@ -235,6 +235,7 @@ function renderNav() {
             a.setAttribute('role', 'menuitem');
             a.href = item.href;
             a.target = 'canslab-' + item.label;
+            a.rel = 'noopener noreferrer';
             a.textContent = item.label;
             li.appendChild(a);
         }

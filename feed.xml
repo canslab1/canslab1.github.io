@@ -18,11 +18,11 @@
   <!-- Op-Eds / 媒體投書 -->
 
   <entry>
-    <title>台灣 AI 產業的反思 (風傳媒)</title>
-    <link href="https://www.storm.mg/article/5348610" rel="alternate"/>
+    <title>少子化危機下，國小班級人數制度性下調刻不容緩 (風傳媒)</title>
+    <link href="https://www.storm.mg/article/11049600" rel="alternate"/>
     <id>tag:canslab1.github.io,2025-07-05:storm-2025-07-05</id>
     <updated>2025-07-05T00:00:00+08:00</updated>
-    <summary>台灣在全球 AI 供應鏈中扮演關鍵角色，但不應自滿於硬體代工。</summary>
+    <summary>少子化危機下，國小班級人數制度性下調刻不容緩。</summary>
     <category term="Op-Ed"/>
     <category term="風傳媒"/>
   </entry>
@@ -38,11 +38,11 @@
   </entry>
 
   <entry>
-    <title>政府應正視病毒模擬研究 (自由時報)</title>
-    <link href="https://talk.ltn.com.tw/article/paper/1701818" rel="alternate"/>
+    <title>誰說賣鏟子的人知道金礦在那裡？ (自由時報)</title>
+    <link href="https://talk.ltn.com.tw/article/paper/1706625" rel="alternate"/>
     <id>tag:canslab1.github.io,2025-05-14:ltn-2025-05-14</id>
     <updated>2025-05-14T00:00:00+08:00</updated>
-    <summary>新冠肺炎疫情期間，台灣防疫成果舉世矚目，但疫情過後，政府對病毒模擬研究的重視程度明顯下降。</summary>
+    <summary>誰說賣鏟子的人知道金礦在那裡？</summary>
     <category term="Op-Ed"/>
     <category term="自由時報"/>
   </entry>
@@ -78,16 +78,6 @@
   </entry>
 
   <entry>
-    <title>Virus simulation research must be a priority (Taipei Times)</title>
-    <link href="https://www.taipeitimes.com/News/editorials/archives/2023/04/01/2003796810" rel="alternate"/>
-    <id>tag:canslab1.github.io,2023-04-01:taipeitimes-2023-04-01</id>
-    <updated>2023-04-01T00:00:00+08:00</updated>
-    <summary>Global health institutions have learned from the COVID-19 pandemic that virus simulation research is critical for future preparedness.</summary>
-    <category term="Op-Ed"/>
-    <category term="Taipei Times"/>
-  </entry>
-
-  <entry>
     <title>A message to students (Taipei Times)</title>
     <link href="https://www.taipeitimes.com/News/editorials/archives/2021/05/21/2003757773" rel="alternate"/>
     <id>tag:canslab1.github.io,2021-05-21:taipeitimes-2021-05-21</id>
@@ -98,11 +88,11 @@
   </entry>
 
   <entry>
-    <title>別再揮霍了 讓疫苗發揮最大效力 (自由時報)</title>
-    <link href="https://talk.ltn.com.tw/article/paper/1449485" rel="alternate"/>
+    <title>一起來寫抗疫光榮史 (自由時報)</title>
+    <link href="https://talk.ltn.com.tw/article/paper/1448637" rel="alternate"/>
     <id>tag:canslab1.github.io,2021-05-14:ltn-2021-05-14</id>
     <updated>2021-05-14T00:00:00+08:00</updated>
-    <summary>台灣即將開始大規模施打新冠疫苗，醫療人員、政府官員與民眾都應審慎評估疫苗資訊。</summary>
+    <summary>一起來寫抗疫光榮史。</summary>
     <category term="Op-Ed"/>
     <category term="自由時報"/>
   </entry>
@@ -128,41 +118,41 @@
   </entry>
 
   <entry>
-    <title>疫情時代 為何大學仍然重要 (風傳媒)</title>
-    <link href="https://www.storm.mg/article/3704831" rel="alternate"/>
+    <title>流行病動態學教授給所有大學生的一封信 (風傳媒)</title>
+    <link href="https://www.storm.mg/article/3689310" rel="alternate"/>
     <id>tag:canslab1.github.io,2021-05-20:storm-2021-05-20</id>
     <updated>2021-05-20T00:00:00+08:00</updated>
-    <summary>疫情衝擊下，大學存在的價值受到質疑，但高等教育的核心價值不應被忽視。</summary>
+    <summary>流行病動態學教授給所有大學生的一封信。</summary>
     <category term="Op-Ed"/>
     <category term="風傳媒"/>
   </entry>
 
   <entry>
-    <title>一場瘟疫 一面照妖鏡 (自由時報)</title>
-    <link href="https://talk.ltn.com.tw/article/paper/1355762" rel="alternate"/>
+    <title>AZ疫苗蒙冤：撥開副作用濃霧 正確看待接種計畫 (自由時報)</title>
+    <link href="https://talk.ltn.com.tw/article/paper/1433521" rel="alternate"/>
     <id>tag:canslab1.github.io,2021-02-26:ltn-2021-02-26</id>
     <updated>2021-02-26T00:00:00+08:00</updated>
-    <summary>新冠肺炎疫情如同照妖鏡，照出各國政府的治理能力與社會的真實面貌。</summary>
+    <summary>AZ疫苗蒙冤：撥開副作用濃霧，正確看待接種計畫。</summary>
     <category term="Op-Ed"/>
     <category term="自由時報"/>
   </entry>
 
   <entry>
-    <title>Air travel significant to spread of COVID-19 — Part 2 (Taipei Times)</title>
-    <link href="https://www.taipeitimes.com/News/editorials/archives/2020/04/20/2003734927" rel="alternate"/>
+    <title>Academics should help people, not sow fear (Taipei Times)</title>
+    <link href="https://www.taipeitimes.com/News/editorials/archives/2020/04/20/2003734932" rel="alternate"/>
     <id>tag:canslab1.github.io,2020-04-20:taipeitimes-2020-04-20</id>
     <updated>2020-04-20T00:00:00+08:00</updated>
-    <summary>The second wave of COVID-19 in Taiwan is cause for increasing concern.</summary>
+    <summary>Academics should help people, not sow fear.</summary>
     <category term="Op-Ed"/>
     <category term="Taipei Times"/>
   </entry>
 
   <entry>
-    <title>防疫的國際觀 (風傳媒)</title>
-    <link href="https://www.storm.mg/article/2528184" rel="alternate"/>
+    <title>防疫，知識份子應有的責任絕非獵巫！ (風傳媒)</title>
+    <link href="https://www.storm.mg/article/2514790" rel="alternate"/>
     <id>tag:canslab1.github.io,2020-04-14:storm-2020-04-14</id>
     <updated>2020-04-14T00:00:00+08:00</updated>
-    <summary>面對全球疫情，台灣應以更宏觀的國際視野來思考防疫策略。</summary>
+    <summary>防疫，知識份子應有的責任絕非獵巫！</summary>
     <category term="Op-Ed"/>
     <category term="風傳媒"/>
   </entry>
@@ -188,11 +178,11 @@
   </entry>
 
   <entry>
-    <title>台灣防疫這面照妖鏡 (自由時報)</title>
-    <link href="https://talk.ltn.com.tw/article/paper/1354394" rel="alternate"/>
+    <title>塞翁失馬，焉知非福？台灣防疫做得最好！ (自由時報)</title>
+    <link href="https://talk.ltn.com.tw/article/paper/1354128" rel="alternate"/>
     <id>tag:canslab1.github.io,2020-02-24:ltn-2020-02-24</id>
     <updated>2020-02-24T00:00:00+08:00</updated>
-    <summary>台灣的防疫措施在國際間備受肯定，但也反映出社會中的種種問題。</summary>
+    <summary>塞翁失馬，焉知非福？台灣防疫做得最好！</summary>
     <category term="Op-Ed"/>
     <category term="自由時報"/>
   </entry>
@@ -218,11 +208,11 @@
   </entry>
 
   <entry>
-    <title>台灣防疫 莫忘疫情背後的科學 (自由時報)</title>
-    <link href="https://talk.ltn.com.tw/article/paper/1351521" rel="alternate"/>
+    <title>武漢肺炎進展到群聚、社區感染前，台灣可以怎麼做？ (自由時報)</title>
+    <link href="https://talk.ltn.com.tw/article/paper/1351389" rel="alternate"/>
     <id>tag:canslab1.github.io,2020-02-12:ltn-2020-02-12</id>
     <updated>2020-02-12T00:00:00+08:00</updated>
-    <summary>面對新冠肺炎疫情，台灣的防疫措施不應忽視背後的科學研究基礎。</summary>
+    <summary>武漢肺炎進展到群聚、社區感染前，台灣可以怎麼做？</summary>
     <category term="Op-Ed"/>
     <category term="自由時報"/>
   </entry>
