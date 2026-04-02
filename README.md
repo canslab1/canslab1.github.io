@@ -588,7 +588,7 @@ python3 build-prerender.py
 |------|------|
 | 路徑 | `stories.html` |
 | 副標題 | 大頭仔的 60 道手工伍仁餡 |
-| 用途 | 黃崇源教授親筆撰寫的 59 篇家族故事集 |
+| 用途 | 黃崇源教授親筆撰寫的 60 篇家族故事集 |
 | 內容主題 | 從台北龍山寺旁的西園路到福建福州祖地，描繪三代人跨越時代的生活軌跡與情感連結 |
 | 專屬樣式 | `stories.css`（獨立 CSS，不共用 `shared.css`） |
 | 專屬腳本 | `stories.js`（獨立 JS，不共用 `shared.js`） |
@@ -657,7 +657,7 @@ python3 build-prerender.py
 
 **stories.html**：
 - `CollectionPage`：故事合集頁面
-- `CreativeWorkSeries`：59 篇家族故事系列的名稱、描述、類型、作者
+- `CreativeWorkSeries`：60 篇家族故事系列的名稱、描述、類型、作者
 
 ## LLM 搜尋設定
 

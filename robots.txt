@@ -44,14 +44,5 @@ Allow: /
 User-agent: Baiduspider
 Allow: /
 
-User-agent: DeepSeekBot
-Allow: /
-
-User-agent: MistralBot
-Allow: /
-
-User-agent: xAI
-Allow: /
-
 Sitemap: https://canslab1.github.io/sitemap.xml
 Security: https://canslab1.github.io/security.txt
