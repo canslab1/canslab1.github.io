@@ -50,10 +50,11 @@ Prof. Chung-Yuan Huang (黃崇源) is a full professor in the Department of Comp
 
 ## Awards and Honors
 
+- 2026: Appointed School Advisor of Taipei Laosong Elementary School (榮膺 115 年校務顧問)
 - 2025: Donated NT$500,000 on Teachers' Day to Taipei Laosong Elementary School (教師節捐款新台幣伍拾萬元整)
 - 2025: Since the 111th Academic Year, cumulative donations over four consecutive years exceeded NT$1,000,000 (111 學年起，連續四學年捐款總額超過新臺幣壹佰萬元整)
 - 2024: China University of Technology Distinguished Alumni Award (中國科技大學傑出校友) — the only recipient in university history of both Distinguished and Outstanding Alumni honors
-- 2024: Taipei Honored Contributors to Education Award (臺北市杏壇芬芳獎)
+- 2024: Taipei Honored Contributors to Education Award (臺北市杏壇芬芳獎) — 源源不絕無私大愛，守護美好優質老松
 - 2024: Honorary President, 34th Laosong Elementary School Parents' Association
 - 2023: Standing Director of Taipei Elementary School PTA Federation (臺北市小聯會常務理事)
 - 2022: Independent Director, Solomon Technology Corporation (所羅門股份有限公司獨立董事)
@@ -107,7 +108,7 @@ Prof. Chung-Yuan Huang (黃崇源) is a full professor in the Department of Comp
   - "程式" (Softwares): 開源程式 (Open-Source Software) — 8 open-source tools (EpiRank, MV17, CASMIM, HETA, HATA, BCAT, SRAC-Agent, AED2) with paper references and GitHub links
   - "評論" (Op-Eds): 媒體投書 — 19 op-ed articles published in Taipei Times (8), 自由時報 (5), 風傳媒 (3), 聯合報 (2), and 中國時報 (1), grouped by newspaper and sorted newest first
   - "履歷" (CV): Embedded PDF viewer displaying the full academic curriculum vitae
-- /stories.html: Family Stories — 60 personal family stories spanning three generations in Taipei Wanhua
+- /stories.html: Family Stories — 59 personal family stories spanning three generations in Taipei Wanhua
 - /CV.pdf: Full academic curriculum vitae (PDF)
 - /CYHuang.html: Redirect → index.html#papers (old publications page, now integrated)
 - /software.html: Redirect → index.html#software (old software page, now integrated)

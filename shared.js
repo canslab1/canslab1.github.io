@@ -40,7 +40,7 @@ const navItemsEn = [
     { label: 'Overview', href: null, section: 'lab' },
     { label: 'Papers', href: null, section: 'papers' },
     { label: 'Projects', href: null, section: 'projects' },
-    { label: 'Softwares', href: null, section: 'software' },
+    { label: 'Software', href: null, section: 'software' },
     { label: 'Articles', href: null, section: 'articles' },
     { label: 'Op-Eds', href: null, section: 'press' },
     { label: 'CV', href: 'https://canslab1.github.io/CV.pdf', embed: true },
@@ -51,15 +51,15 @@ const navItemsEn = [
 /* ===== Footer Data ===== */
 
 const footerLinks = [
-    { href: 'https://www.cgu.edu.tw/csie/', label: '前往長庚大學資訊工程學系', src: 'https://canslab1.github.io/images/csie-thumb.png', alt: '長庚資工系 logo' },
-    { href: 'https://web.tlsps.tp.edu.tw/nss/p/index', label: '前往老松國小', src: 'https://canslab1.github.io/images/laosong-thumb.png', alt: '老松國小 logo' },
-    { href: 'https://xingtan.tiec.tp.edu.tw/Register/Profile/20240715152009039506', label: '前往臺北市杏壇芬芳錄', src: 'https://canslab1.github.io/images/favicon-thumb.ico', alt: '臺北市杏壇芬芳錄 logo' },
-    { href: 'https://orcid.org/0000-0002-8680-6755', label: '前往ORCiD', src: 'https://orcid.org/assets/vectors/orcid.logo.icon.svg', alt: 'ORCiD logo' },
-    { href: 'https://www.facebook.com/gscott.huang/', label: '前往 Facebook', src: 'https://canslab1.github.io/images/facebook-thumb.png', alt: 'Facebook logo' },
-    { href: 'https://sites.google.com/view/gscott-huang', label: '前往 Google Sites', src: 'https://canslab1.github.io/images/google-thumb.png', alt: 'Google logo' },
-    { href: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en', label: '前往 Google Scholar', src: 'https://canslab1.github.io/images/google-scholar-thumb.png', alt: 'Google Scholar logo' },
-    { href: 'https://github.com/canslab1', label: '前往 GitHub', src: 'https://canslab1.github.io/images/github-thumb.png', alt: 'GitHub logo' },
-    { href: 'https://pure.lib.cgu.edu.tw/zh/persons/chung-yuan-huang-2', label: '前往長庚大學 Pure 學術檔案', src: 'https://canslab1.github.io/images/cgu-thumb.png', alt: '長庚大學 Pure logo' }
+    { href: 'https://www.cgu.edu.tw/csie/', label: '前往長庚大學資訊工程學系', labelEn: 'CGU CSIE', src: 'https://canslab1.github.io/images/csie-thumb.png', alt: '長庚資工系 logo' },
+    { href: 'https://web.tlsps.tp.edu.tw/nss/p/index', label: '前往老松國小', labelEn: 'Laosong Elementary', src: 'https://canslab1.github.io/images/laosong-thumb.png', alt: '老松國小 logo' },
+    { href: 'https://xingtan.tiec.tp.edu.tw/Register/Profile/20240715152009039506', label: '前往臺北市杏壇芬芳錄', labelEn: 'Taipei Honored Contributors', src: 'https://canslab1.github.io/images/favicon-thumb.ico', alt: '臺北市杏壇芬芳錄 logo' },
+    { href: 'https://orcid.org/0000-0002-8680-6755', label: '前往ORCiD', labelEn: 'ORCiD', src: 'https://orcid.org/assets/vectors/orcid.logo.icon.svg', alt: 'ORCiD logo' },
+    { href: 'https://www.facebook.com/gscott.huang/', label: '前往 Facebook', labelEn: 'Facebook', src: 'https://canslab1.github.io/images/facebook-thumb.png', alt: 'Facebook logo' },
+    { href: 'https://sites.google.com/view/gscott-huang', label: '前往 Google Sites', labelEn: 'Google Sites', src: 'https://canslab1.github.io/images/google-thumb.png', alt: 'Google logo' },
+    { href: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en', label: '前往 Google Scholar', labelEn: 'Google Scholar', src: 'https://canslab1.github.io/images/google-scholar-thumb.png', alt: 'Google Scholar logo' },
+    { href: 'https://github.com/canslab1', label: '前往 GitHub', labelEn: 'GitHub', src: 'https://canslab1.github.io/images/github-thumb.png', alt: 'GitHub logo' },
+    { href: 'https://pure.lib.cgu.edu.tw/zh/persons/chung-yuan-huang-2', label: '前往長庚大學 Pure 學術檔案', labelEn: 'CGU Pure', src: 'https://canslab1.github.io/images/cgu-thumb.png', alt: '長庚大學 Pure logo' }
 ];
 
 /* ===== Language Toggle ===== */
@@ -80,6 +80,7 @@ function toggleLanguage() {
     renderPapers();
     renderProjects();
     renderNav();
+    renderFooter();
     updateAriaLabels();
 }
 
@@ -248,6 +249,7 @@ function renderFooter() {
     const footer = document.getElementById('main-footer');
     if (!footer) return;
 
+    footer.innerHTML = '';
     const isEn = document.documentElement.lang === 'en';
 
     const nav = document.createElement('nav');
@@ -262,11 +264,12 @@ function renderFooter() {
         a.target = '_blank';
         a.rel = 'noopener noreferrer';
         a.className = 'footer-link';
-        a.setAttribute('aria-label', link.label);
+        const ariaText = isEn ? link.labelEn : link.label;
+        a.setAttribute('aria-label', ariaText);
 
         const tooltip = document.createElement('span');
         tooltip.className = 'footer-tooltip';
-        tooltip.textContent = link.label.replace(/^前往\s?/, '');
+        tooltip.textContent = isEn ? link.labelEn : link.label.replace(/^前往\s?/, '');
         a.appendChild(tooltip);
 
         const img = document.createElement('img');
