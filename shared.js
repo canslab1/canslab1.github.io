@@ -335,25 +335,25 @@ const alumniArticleEn = [
 
 const honorsFigures = [
     {
-        src: 'https://canslab1.github.io/images/honors1.png',
+        src: 'https://canslab1.github.io/images/honors1.webp',
         alt: '老松國小．學生家長會．黃崇源會長過往二年的部分成果展現',
         captionZh: '▲ 在老松學童的眼中，崇源會長就是聖誕老公公，帶來歡笑，帶來令人難忘的回憶。',
         captionEn: '▲ To the children of Lao-Song Elementary, President Chung-Yuan is their Santa Claus\u2014bringing joy, spreading laughter, and leaving behind memories that linger long after the moment has passed.'
     },
     {
-        src: 'https://canslab1.github.io/images/honors2.png',
+        src: 'https://canslab1.github.io/images/honors2.webp',
         alt: '老松國小．學生家長會．黃崇源會長過往二年的部分成果展現',
         captionZh: '▲ 崇源會長出錢出力，盡心盡力辦好學生家長會主辦的親師生及愛心志工活動。',
         captionEn: '▲ President Chung-Yuan contributed both time and resources with wholehearted dedication, ensuring that every event for teachers, students, and volunteers was carried out with care, creativity, and purpose.'
     },
     {
-        src: 'https://canslab1.github.io/images/honors3.png',
+        src: 'https://canslab1.github.io/images/honors3.webp',
         alt: '老松國小．學生家長會．黃崇源會長過往二年的部分成果展現',
         captionZh: '▲ 在崇源會長付出寶貴的時間與無比的愛心後，老松國小親師生同心協力共好共榮。',
         captionEn: '▲ Through the generous time and boundless care of President Chung-Yuan, the Lao-Song community\u2014teachers, parents, and students alike\u2014came together in harmony, working hand in hand toward shared growth and collective flourishing.'
     },
     {
-        src: 'https://canslab1.github.io/images/honors4.png',
+        src: 'https://canslab1.github.io/images/honors4.webp',
         alt: '老松國小．學生家長會．黃崇源會長過往二年的部分成果展現',
         captionZh: '▲ 崇源會長永遠面帶微笑，和老松所有學童（包含幼兒園幼童）相處融洽。',
         captionEn: '▲ With a warm and ever-present smile, President Chung-Yuan connects effortlessly with every child at Lao-Song\u2014from kindergarteners to upper-grade students\u2014creating bonds built on kindness, trust, and joy.'
