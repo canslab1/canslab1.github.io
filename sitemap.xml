@@ -38,131 +38,131 @@
     </image:image>
     <!-- Software research images -->
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/epirank-sensitivity.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/epirank-sensitivity.webp</image:loc>
       <image:title>EpiRank sensitivity analysis heatmaps for damping factor and daytime parameter</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/epirank-vs-disease.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/epirank-vs-disease.webp</image:loc>
       <image:title>EpiRank vs actual disease core classification stacked bar charts</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/epirank-commuter.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/epirank-commuter.webp</image:loc>
       <image:title>Taiwan commuter flow network visualization and statistics</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/epirank-paper.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/epirank-paper.webp</image:loc>
       <image:title>EpiRank paper first page — Scientific Reports 2019</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/mv17-kcore.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/mv17-kcore.webp</image:loc>
       <image:title>MV17 K-Core Visualization of dolphins network with color-coded k-core numbers</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/mv17-attributes.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/mv17-attributes.webp</image:loc>
       <image:title>MV17 Node Attributes table showing 11 centrality measures and neighbor degree distribution</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/mv17-scatter.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/mv17-scatter.webp</image:loc>
       <image:title>MV17 scatter matrix showing pairwise correlations between centrality measures</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/mv17-paper.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/mv17-paper.webp</image:loc>
       <image:title>MV17 paper first page — Physica A 2015</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/casmim-lattice.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/casmim-lattice.webp</image:loc>
       <image:title>CASMIM lattice model with color-coded susceptible, incubation, and infected agent states</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/casmim-mirror-identity.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/casmim-mirror-identity.webp</image:loc>
       <image:title>Social mirror identity concept — individuals distributed across home, office, school bus, and other social spheres</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/casmim-gui.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/casmim-gui.webp</image:loc>
       <image:title>CASMIM GUI screenshot with 500×500 macro lattice view and policy controls</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/casmim-paper.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/casmim-paper.webp</image:loc>
       <image:title>CASMIM paper first page — SIMULATION 2005</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/heta-link-types.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/heta-link-types.webp</image:loc>
       <image:title>HETA edge type classification: Silk, Bond, Local Bridge, Global Bridge on example network</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/heta-community.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/heta-community.webp</image:loc>
       <image:title>HETA community detection on 4 real-world networks</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/heta-16networks.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/heta-16networks.webp</image:loc>
       <image:title>HETA link type analysis applied to 16 benchmark networks</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/heta-paper.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/heta-paper.webp</image:loc>
       <image:title>HETA paper first page — Physica A 2019</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/hata-arc-types.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/hata-arc-types.webp</image:loc>
       <image:title>HATA arc type classification on directed example network</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/hata-4networks.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/hata-4networks.webp</image:loc>
       <image:title>HATA arc classification on 4 directed networks</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/hata-travian.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/hata-travian.webp</image:loc>
       <image:title>HATA arc type proportions over time in Travian game networks</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/hata-paper.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/hata-paper.webp</image:loc>
       <image:title>HATA paper first page — IEEE Access 2020</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/bcat-correlation.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/bcat-correlation.webp</image:loc>
       <image:title>BCAT correlation matrices across Regular Lattice, Small-World, Random, and Scale-Free networks</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/bcat-flowchart.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/bcat-flowchart.webp</image:loc>
       <image:title>BCAT simulation algorithm flowchart with opinion exchange and adoption decision phases</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/bcat-gui-overview.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/bcat-gui-overview.webp</image:loc>
       <image:title>BCAT GUI — opinion dynamics and adoption simulation with multiple charts</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/bcat-paper.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/bcat-paper.webp</image:loc>
       <image:title>BCAT paper first page — IEEE Access 2022</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/srac-initial.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/srac-initial.webp</image:loc>
       <image:title>SRAC-IPD initial random strategies on 50×50 cellular automata grid</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/srac-evolved.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/srac-evolved.webp</image:loc>
       <image:title>SRAC-IPD evolved strategies at generation 99 with SRAC agents enabled</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/srac-strategies.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/srac-strategies.webp</image:loc>
       <image:title>SRAC-Agent four key strategies dynamics — ALL-C, TFT, PAVLOV, ALL-D</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/srac-paper.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/srac-paper.webp</image:loc>
       <image:title>SRAC-Agent paper first page — PLOS ONE 2014</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/aed2-map.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/aed2-map.webp</image:loc>
       <image:title>Taipei City maps: fire stations, OHCA cases, current AED and 7-11 locations</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/aed2-density.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/aed2-density.webp</image:loc>
       <image:title>Density distribution comparison: OHCA cases vs suggested AED placement locations</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/aed2-distribution.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/aed2-distribution.webp</image:loc>
       <image:title>AED2 optimization results: 49 stores in top 50 and 74 stores in top 10 across runs</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/software/aed2-paper.png</image:loc>
+      <image:loc>https://canslab1.github.io/images/software/aed2-paper.webp</image:loc>
       <image:title>AED2 paper first page — Applied Geography 2012</image:title>
     </image:image>
     <!-- Press images -->
@@ -202,79 +202,79 @@
     </image:image>
     <!-- Honors activity photos -->
     <image:image>
-      <image:loc>https://canslab1.github.io/images/honors/cute-alumni-group.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/honors/cute-alumni-group.webp</image:loc>
       <image:title>2024 中國科技大學 59 週年校慶校友大會團體合照 — 黃崇源教授榮獲傑出校友</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/honors/cute-distinguished-alumni.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/honors/cute-distinguished-alumni.webp</image:loc>
       <image:title>2024 中國科技大學傑出校友 — 黃崇源教授與校方師長合影</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/honors/xtff-award.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/honors/xtff-award.webp</image:loc>
       <image:title>2024 臺北市杏壇芬芳獎頒獎典禮 — 黃崇源榮譽會長受獎</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/honors/xtff-group.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/honors/xtff-group.webp</image:loc>
       <image:title>2024 臺北市杏壇芬芳獎頒獎典禮 — 黃崇源榮譽會長與家人師長合影</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/honors/laosong-honorary-president.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/honors/laosong-honorary-president.webp</image:loc>
       <image:title>2024 老松國小第 34 屆榮譽會長黃崇源教授參加校慶運動會</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/honors/laosong-xlh-delegates.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/honors/laosong-xlh-delegates.webp</image:loc>
       <image:title>2023 臺北市國小學生家長會聯合會第 22 屆第一次代表大會合照</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/honors/laosong-xlh-board.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/honors/laosong-xlh-board.webp</image:loc>
       <image:title>2023 臺北市國小學生家長會聯合會第一次理監事會議</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/honors/laosong-xlh-election.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/honors/laosong-xlh-election.webp</image:loc>
       <image:title>2023 臺北市國小學生家長會聯合會第二十二屆常務理事選舉結果</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/honors/laosong-xlh-west-district.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/honors/laosong-xlh-west-district.webp</image:loc>
       <image:title>2023 臺北市國小學生家長會聯合會第 22 屆西區理事選舉結果</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/honors/laosong-president-award.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/honors/laosong-president-award.webp</image:loc>
       <image:title>2025 老松國小第 80 屆畢業典禮 — 黃崇源榮譽會長頒發榮譽會長獎</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/honors/laosong-donation-1.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/honors/laosong-donation-1.webp</image:loc>
       <image:title>2025 教師節 — 黃崇源榮譽會長捐贈新台幣伍拾萬元整予老松國小</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/honors/laosong-donation-2.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/honors/laosong-donation-2.webp</image:loc>
       <image:title>2025 教師節 — 老松國小校長頒發感謝狀予黃崇源榮譽會長</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/honors/laosong-donation-3.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/honors/laosong-donation-3.webp</image:loc>
       <image:title>2025 老松國小 114 學年度教師節慶祝活動海報</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/honors/laosong-donation-4.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/honors/laosong-donation-4.webp</image:loc>
       <image:title>2025 老松國小 114 年 9 月份捐款收支明細表</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/honors/laosong-donation-5.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/honors/laosong-donation-5.webp</image:loc>
       <image:title>2025 黃崇源榮譽會長捐贈老松國小新台幣伍拾萬元整支票</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/honors/solomon-newyear.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/honors/solomon-newyear.webp</image:loc>
       <image:title>2023 所羅門集團新年晚會 — 黃崇源教授擔任獨立董事</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/honors/solomon-shareholders.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/honors/solomon-shareholders.webp</image:loc>
       <image:title>2023 所羅門股份有限公司 112 年股東常會 — 黃崇源教授擔任獨立董事</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/honors/ptphs-family.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/honors/ptphs-family.webp</image:loc>
       <image:title>2006 中華民國斐陶斐榮譽學會獎 — 黃崇源教授與家人合影於國立交通大學頒獎典禮</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://canslab1.github.io/images/honors/ptphs-ceremony.jpg</image:loc>
+      <image:loc>https://canslab1.github.io/images/honors/ptphs-ceremony.webp</image:loc>
       <image:title>2006 中華民國斐陶斐榮譽學會 95 年度榮譽會員授證典禮 — 黃崇源教授</image:title>
     </image:image>
   </url>
