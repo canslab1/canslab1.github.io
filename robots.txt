@@ -53,5 +53,27 @@ Allow: /
 User-agent: xAI
 Allow: /
 
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: PetalBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: Timpibot
+Allow: /
+
 Sitemap: https://canslab1.github.io/sitemap.xml
 Security: https://canslab1.github.io/security.txt
+
+# AI content files
+# llms.txt: https://canslab1.github.io/llms.txt
+# llms-full.txt: https://canslab1.github.io/llms-full.txt

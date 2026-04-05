@@ -1,0 +1,304 @@
+# Prof. Chung-Yuan Huang (黃崇源教授) — Full Profile
+
+> This is the extended version of https://canslab1.github.io/llms.txt
+> Homepage: https://canslab1.github.io/
+> Last updated: 2026-04-05
+
+## Identity
+
+- Full Name: Chung-Yuan Huang
+- Chinese Name: 黃崇源
+- Aliases: CY Huang, C.-Y. Huang, Huang Chung-Yuan, Prof. Chung-Yuan Huang, GSCOTT, 黃崇源教授
+- Born: August 13, 1970, Wanhua District, Taipei, Taiwan
+- Nationality: Republic of China (Taiwan)
+- Gender: Male
+- ORCID: 0000-0002-8680-6755
+- Google Scholar ID: 0klfzfAAAAAJ
+- Wikidata: Q138673497
+
+## Current Positions
+
+- Full Professor, Department of Computer Science and Information Engineering, Chang Gung University (since 2015)
+- Joint Appointment, AI Undergraduate & Graduate Program, Chang Gung University
+- Joint Appointment, AI Research Center, Chang Gung University
+- Joint Researcher, Department of Neurology, Chang Gung Memorial Hospital (since 2019)
+- Principal Investigator, CANS Lab (Complex Adaptive Networks and Systems Laboratory)
+
+## Education
+
+- Ph.D. in Computer Science, National Chiao Tung University (國立交通大學), 2005
+- M.S. in Computer and Information Science, National Chiao Tung University (國立交通大學), 2000
+- B.S. in Information Management, China University of Technology (中國科技大學), 1992
+
+## Career Timeline
+
+- 2015–present: Full Professor, Chang Gung University
+- 2010–2015: Associate Professor, Chang Gung University
+- 2006–2010: Assistant Professor, Chang Gung University
+- 2005–2006: Assistant Professor, Yuanpei University of Medical Technology
+- 2002–2005: Lecturer, China University of Technology (during doctoral studies)
+- 1994–1998: Software Engineer, IPACS Corp.
+- 2022–2024: Independent Director, Solomon Technology Corporation (所羅門股份有限公司)
+
+## Academic Metrics (as of February 2026)
+
+- Google Scholar Citations: 994
+- h-index: 18
+- i10-index: 30
+- Total Publications: 170
+- SCI/SSCI/EI Journal Papers: 44
+- International Conference Papers: 49
+- Book Chapters: 10
+- Domestic Conference Papers: 18
+- Media Commentaries & Op-Eds: 49
+- PI Research Projects: 22
+- Co-PI Research Projects: 14
+- Total NSTC Research Budget (as PI): NT$14.08 million
+- Supervised Master's Students: 25
+- Supervised PhD Students: 2
+- Supervised Undergraduate Projects: 51
+- Paper Reviews: 68
+- Conference Reviews: 27
+- Program Committee Service: 77
+- Invited Talks: 35
+
+## Research Areas
+
+- Complex Adaptive Systems (複雜適應系統)
+- Network Science (網絡科學)
+- Evolutionary Computation (演化計算)
+- Computational Social Science (計算社會科學)
+- Agent-Based Modeling (代理人基模型)
+- System Simulation (系統模擬)
+- Epidemic Simulation (流行病模擬)
+- Genetic Algorithms (遺傳演算法)
+- Community Detection (社群偵測)
+
+## Awards and Honors (Chronological)
+
+- 2026: Appointed School Advisor of Taipei Laosong Elementary School (榮膺 115 年校務顧問)
+- 2025: Donated NT$500,000 on Teachers' Day to Taipei Laosong Elementary School
+- 2025: Cumulative donations over four consecutive years exceeded NT$1,000,000
+- 2024: China University of Technology Distinguished Alumni Award (中國科技大學傑出校友) — the only recipient in university history of both Distinguished and Outstanding Alumni honors
+- 2024: Taipei Honored Contributors to Education Award (臺北市杏壇芬芳獎) — 源源不絕無私大愛，守護美好優質老松
+- 2024: Honorary President, 34th Laosong Elementary School Parents' Association
+- 2023: Standing Director of Taipei Elementary School PTA Federation (臺北市小聯會常務理事)
+- 2022: Independent Director, Solomon Technology Corporation (所羅門股份有限公司獨立董事)
+- 2022–2024: President of the 32nd and 33rd Laosong Elementary School Parents' Association
+- 2006: Phi Tau Phi Honor Award, National Chiao Tung University (斐陶斐榮譽學會獎)
+- 2000: China University of Technology Outstanding Alumni Award (中國科技大學優秀校友)
+
+## Contact
+
+- Office: 259 Wen-Hwa 1st Road, Guishan, Taoyuan 33302, Taiwan
+- Department: Department of Computer Science and Information Engineering, Chang Gung University
+- Tel: +886-3-2118800 ext.3474
+- Mobile: +886-975-510-813
+- Email: gscott@mail.cgu.edu.tw / gis89802@gmail.com
+
+## Links
+
+- Homepage: https://canslab1.github.io/
+- Google Scholar: https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en
+- ORCID: https://orcid.org/0000-0002-8680-6755
+- CV (PDF): https://canslab1.github.io/CV.pdf
+- Facebook: https://www.facebook.com/gscott.huang/
+- Wiki: https://sites.google.com/view/gscott-huang
+- Chang Gung University PURE: https://pure.lib.cgu.edu.tw/zh/persons/chung-yuan-huang-2
+- GitHub: https://github.com/canslab1
+- Wikidata: https://www.wikidata.org/wiki/Q138673497
+- Family Stories: https://canslab1.github.io/stories.html
+
+## Open-Source Research Software (8 tools)
+
+1. **EpiRank** — Epidemic risk analysis using asymmetric commuting networks across Taiwan's 353 townships (Python, MIT License)
+   - Paper: Scientific Reports (2019), DOI: 10.1038/s41598-019-41719-8
+   - GitHub: https://github.com/canslab1/EpiRank
+
+2. **MV17** — K-core based multi-attribute node importance ranking in complex networks (Python, MIT License)
+   - Paper: Physica A (2015), DOI: 10.1016/j.physa.2015.03.042
+   - GitHub: https://github.com/canslab1/MV17
+
+3. **CASMIM** — Cellular Automata with Social Mirror Identities Model for SARS simulation (Python, MIT License)
+   - Paper: Simulation (2005), DOI: 10.1177/0037549705061519
+   - GitHub: https://github.com/canslab1/CASMIM
+
+4. **HETA** — Hierarchical Edge Type Analysis: parameter-free edge classification for complex networks (Python, MIT License)
+   - Paper: Physica A (2019), DOI: 10.1016/j.physa.2019.04.263
+   - GitHub: https://github.com/canslab1/HETA
+
+5. **HATA** — Hierarchical Arc Type Analysis: directed arc classification extending HETA (Python, MIT License)
+   - Paper: IEEE Access (2020), DOI: 10.1109/ACCESS.2020.2986017
+   - GitHub: https://github.com/canslab1/HATA
+
+6. **BCAT** — Bounded Confidence and Adoption Threshold model for opinion dynamics (Python/NetLogo, MIT License)
+   - Paper: IEEE Access (2022), DOI: 10.1109/ACCESS.2022.3218719
+   - GitHub: https://github.com/canslab1/BCAT
+
+7. **SRAC-Agent** — Self-reputation awareness in evolutionary spatial Prisoner's Dilemma (Python, MIT License)
+   - Paper: PLOS ONE (2014), DOI: 10.1371/journal.pone.0099841
+   - GitHub: https://github.com/canslab1/SRAC-Agent
+
+8. **AED2** — Genetic algorithm for optimizing AED placement at convenience stores (C++/Python, MIT License)
+   - Paper: Applied Geography (2012), DOI: 10.1016/j.apgeog.2012.09.002
+   - GitHub: https://github.com/canslab1/AED2
+
+## SCI/SSCI/EI Journal Papers (44 papers)
+
+### Full Professor Period (since 2015.08)
+
+1. Wang S.W., and Huang C.Y.* (2026) A Hybrid SVR-Based Framework for Cryptocurrency Price Forecasting and Strategy Backtesting. Applied Artificial Intelligence, 40(1). DOI: 10.1080/08839514.2026.2612793
+2. Wang S.W., Huang C.Y.*, and Sun C.T. (2022) Multiagent Diffusion and Opinion Dynamics Model Interaction Effects on Controversial Products. IEEE Access, 10, 115252-115270. DOI: 10.1109/ACCESS.2022.3218719
+3. Huang C.Y. and Chin W.C.B. (2020) Distinguishing Arc Types to Understand Complex Network Strength Structures. IEEE Access, 8, 71021-71040. DOI: 10.1109/ACCESS.2020.2986017
+4. Huang C.Y., Chin W.C.B., Fu Y.H., and Tsai Y.S. (2019) Beyond Bond Links in Complex Networks: Local Bridges, Global Bridges and Silk Links. Physica A, 536, 121027. DOI: 10.1016/j.physa.2019.04.263
+5. Huang C.Y., Chin W.C.B., Wen T.H., Fu Y.H., and Tsai Y.S. (2019) EpiRank: Modeling Bidirectional Disease Spread in Asymmetric Commuting Networks. Scientific Reports, 9:5415. DOI: 10.1038/s41598-019-41719-8
+6. Fu Y.H., Huang C.Y.*, and Sun C.T. (2017) A Community Detection Algorithm Using Network Topologies. PLoS One, 12(11), e0187603. DOI: 10.1371/journal.pone.0187603
+7. Lan Y.C., Wen T.H., et al., Huang C.Y. (2017) Indigenous Wildlife Rabies in Taiwan. BioMed Research International, 5491640. DOI: 10.1155/2017/5491640
+8. Fu Y.H., Huang C.Y.*, and Sun C.T. (2016) Using a Two-Phase Evolutionary Framework to Select Multiple Network Spreaders. Physica A, 461, 840-853. DOI: 10.1016/j.physa.2016.06.042
+9. Fu Y.H., Huang C.Y.*, and Sun C.T. (2015) Using Global Diversity and Local Topology Features to Identify Influential Network Spreaders. Physica A, 433, 344-355. DOI: 10.1016/j.physa.2015.03.042
+
+### Associate Professor Period
+
+10. Huang C.Y. (2015) An Agent-based Epidemic Simulation of Social Behaviors Affecting HIV Transmission. Computational and Mathematical Methods in Medicine, 867264. DOI: 10.1155/2015/867264
+11. Lee C.L., Huang C.Y.*, et al. (2014) Impact of Vehicular Networks on Emergency Medical Services. IJERPH, 11(11), 11348-11370. DOI: 10.3390/ijerph111111348
+12. Fu Y.H., Huang C.Y.*, and Sun C.T. (2014) Identifying Super-Spreader Nodes in Complex Networks. Mathematical Problems in Engineering, 675713. DOI: 10.1155/2015/675713
+13. Huang C.Y. and Wen T.H. (2014) Optimal Installation Locations for Automated External Defibrillators. Computational and Mathematical Methods in Medicine, 241435. DOI: 10.1155/2014/241435
+14. Huang C.Y. and Lee C.L. (2014) Influences of Agents with Self-Reputation Awareness in Evolutionary Spatial IPD. PLoS One, 9(6), e99841. DOI: 10.1371/journal.pone.0099841
+15. Huang C.Y. and Wen T.H. (2014) A Novel Private Attitude and Public Opinion Dynamics Model. JASSS, 17(3), 8. DOI: 10.18564/jasss.2517
+16. Wang S.W., Huang C.Y.*, and Sun C.T. (2014) Modeling Self-perception Agents in an Opinion Dynamics Propagation Society. Simulation, 90(3), 238-248. DOI: 10.1177/0037549713515029
+17. Wang S.W., Huang C.Y.*, and Sun C.T. (2014) Smart Agents with Adjusting Self-Reputation Capability. JISE, 30(2), 313-332.
+18. Huang C.Y.*, Wen T.H., and Tsai Y.S. (2013) FLUed: A Four-Layer Model for Simulating Epidemic Dynamics. Journal of Applied Mathematics, 325816. DOI: 10.1155/2013/325816
+19. Huang C.Y.*, Lee C.L., Wen T.H., and Sun C.T. (2013) A Computer Virus Spreading Model Based on Resource Limitations. JSS, 86(3), 801-808. DOI: 10.1016/j.jss.2012.11.027
+20. Huang C.Y.* and Sun C.T. (2012) Effects of Resource Limitations on Computer Virus Epidemic Dynamics. Discrete Dynamics in Nature and Society, 473136. DOI: 10.1155/2012/473136
+21. Tsai Y.S., Ko P.C.I., Huang C.Y., and Wen T.H. (2012) Optimizing Locations for AEDs in Urban Public Streets. Applied Geography, 35(1-2), 394-404. DOI: 10.1016/j.apgeog.2012.09.002
+22. Huang C.Y.*, Tzou P.J., and Sun C.T. (2011) Collective Opinion and Attitude Dynamics. Simulation, 87(10), 875-892. DOI: 10.1177/0037549710387940
+23. Huang C.Y.*, Wang S.W., and Sun C.T. (2011) Using Self-Aware Agents to Analyze Public Self-Consciousness in IPD. Simulation, 87(7), 600-615. DOI: 10.1177/0037549710391822
+24. Tsai Y.S., Huang C.Y., Wen T.H., Sun C.T., and Yen M.Y. (2011) Integrating Epidemic Dynamics with Daily Commuting Networks. Simulation, 87(5), 385-405. DOI: 10.1177/0037549710379481
+
+### Assistant Professor Period
+
+25. Tsai Y.S., Huang C.Y.*, and Sun C.T. (2011) Response to Wilson's Note. Simulation, 87(3), 267-270. DOI: 10.1177/0037549709351543
+26. Huang C.Y., Tsai Y.S., and Wen T.H. (2010) Simulations for Epidemiology and Public Health Education. Journal of Simulation, 4(1), 68-80. DOI: 10.1057/jos.2009.13
+27. Huang C.Y., Tsai Y.S., and Wen T.H. (2010) A Network-Based Simulation Architecture for Studying Epidemic Dynamics. Simulation, 86(5/6), 351-368. DOI: 10.1177/0037549709340733
+28. Tsai Y.S. and Huang C.Y.* (2010) Effects of Resources and Costs on Diffusion Dynamics. IJIIDS, 4(1), 19-42. DOI: 10.1504/IJIIDS.2010.031760
+29. Huang C.Y. and Tsai Y.S. (2010) Effects of Friend-Making Resources/Costs on Acquaintance Networks. Physica A, 389(3), 604-622. DOI: 10.1016/j.physa.2009.09.038
+30. Huang C.Y. et al. (2009) Influences of Resource Limitations and Transmission Costs on Epidemic Simulation. Simulation, 85(3), 205-219. DOI: 10.1177/0037549709103775
+31. Hsieh J.L., Huang C.Y.*, et al. (2009) Learning to Build Network-Oriented Epidemic Simulation Models. IJSPM, 5(1), 31-41. DOI: 10.1504/ijspm.2009.025825
+32. Huang C.Y. (2009) Teaching Epidemic Simulation and Policy-Making to Novice Researchers. IJIM, 36(1), 107-117.
+33. Cheng C.Y., Huang C.Y.*, and Sun C.T. (2008) Mining Bridge and Brick Motifs from Complex Biological Networks. IEEE Trans. SMC-B, 38(1), 17-24. DOI: 10.1109/TSMCB.2007.908842
+34. Huang C.Y., Cheng C.Y., and Sun C.T. (2007) Bridge and Brick Network Motifs: Identifying Significant Building Blocks. Artificial Intelligence in Medicine, 41(2), 117-127. DOI: 10.1016/j.artmed.2007.07.006
+35. Huang C.Y., Sun C.T., Cheng C.Y., and Hsieh J.L. (2007) Bridge and Brick Motifs in Complex Networks. Physica A, 377(1), 340-350. DOI: 10.1016/j.physa.2006.11.014
+36. Hsieh J.L., Sun C.T., Kao Y.M.G., and Huang C.Y.* (2006) Teaching through Simulation: Epidemic Dynamics. Simulation, 82(11), 731-759. DOI: 10.1177/0037549706074487
+37. Chen D.J., Tsai M.J., and Huang C.Y.* (2006) UI Design Patterns Generator for Pervasive Device. WSEAS Trans. Computers, 5(9), 2114-2121.
+38. Chen D.J., Tsai M.J., and Huang C.Y.* (2006) Visual Based Software Construction. WSEAS Trans. Systems, 5(8), 1881-1888.
+
+### PhD Student & Lecturer Period
+
+39. Huang C.Y., Sun C.T., and Chu Y.W. (2006) A Co-adaptive Approach to XCS Classifier Systems. WSEAS Trans. Systems, 5(2), 388-394.
+40. Chu Y.W., Sun C.T., and Huang C.Y.* (2006) Regularity of Protein Secondary Structures. WSEAS Trans. Systems, 5(2), 380-385.
+41. Huang C.Y. et al. (2006) Teaching Epidemic and Public Health Policies through Simulation. WSEAS Trans. Info Sci., 3(5), 899-904.
+42. Huang C.Y., Sun C.T., Hsieh J.L., Chen Y.M.A., and Lin H. (2005) A Novel Small-World Model: Using Social Mirror Identities for Epidemic Simulations. Simulation, 81(10), 671-699. DOI: 10.1177/0037549705061519
+43. Huang C.Y., Sun C.T., and Lin H.C. (2005) Influence of Local Information on Social Simulation in Small-World Network Models. JASSS, 8(4). https://www.jasss.org/8/4/8.html
+44. Huang C.Y., Sun C.T., Hsieh J.L., and Lin H. (2004) Simulating SARS: Small-World Epidemiological Modeling and Public Health Policy Assessments. JASSS, 7(4). https://jasss.soc.surrey.ac.uk/7/4/2.html
+
+## Research Projects (37 total)
+
+### As Principal Investigator (22 projects, total budget NT$14.08 million)
+
+1. (2020-2021) MOST-109-2314-B-182-037: AI genetic algorithm and spatio-temporal models for AED placement at urban convenience stores. NT$1,130,000
+2. (2018-2019) MOST-107-2221-E-182-069: Integrating information entropy and local topology to identify complex network super-spreaders. NT$784,000
+3. (2017-2018) MOST-106-2221-E-182-073: Rule-based topological strategies for rapid community and hierarchy identification. NT$539,000
+4. (2016-2017) MOST-105-2221-E-182-069: Effects of friend-making resources and memory on online social network evolution. NT$614,000
+5. (2015-2016) MOST-104-2221-E-182-047: Impact of self-reputation-adjustable intelligent agents in iterated prisoner's dilemma. NT$821,000
+6. (2014-2015) MOST-103-2221-E-182-052: Optimal H1N1 traffic blocking strategies via genetic algorithm. NT$500,000
+7. (2013-2014) NSC-102-2221-E-182-052: Multi-agent opinion and attitude dynamics based on normative and informational social influence. NT$761,000
+8. (2012-2013) NSC-101-2119-M-182-001: Applying geospatial data mining to voluntary geographic information. NT$836,000
+9. (2011-2012) NSC-100-2221-E-182-058: Effects of public-self-consciousness agents on cooperation in iterated prisoner's dilemma. NT$449,000
+10. (2011-2012) CMRPD290012: H1N1 quantitative geographic analysis and spatio-temporal monitoring platform (2/2). NT$506,980
+11. (2010-2011) NSC-99-2314-B-182-031: Taiwan commuting network model for optimal H1N1 traffic blocking strategies. NT$780,000
+12. (2010-2011) CMRPD290011: H1N1 quantitative geographic analysis and spatio-temporal monitoring platform (1/2). NT$498,580
+13. (2009-2010) UERPD280351: Vehicular wireless mobile intelligent P2P network system. NT$497,500
+14. (2009-2010) CMRPD260023: Social network-based epidemic simulation for H1N1 monitoring (3/3). NT$565,498
+15. (2009-2010) NSC-98-2314-B-182-043: Taiwan-specific H1N1 epidemic simulation with vaccine and quarantine policy evaluation. NT$900,000
+16. (2008-2009) NSC-97-2221-E-182-046: Epidemic simulation and evaluation of public health policies for major infectious diseases. NT$570,000
+17. (2008-2009) UERPD270281: Active-diffusion P2P resource sharing system and search algorithm. NT$436,500
+18. (2008-2009) CMRPD260022: Social network-based epidemic simulation for H1N1 monitoring (2/3). NT$506,980
+19. (2007-2008) CMRPD260021: Social network-based epidemic simulation for H1N1 monitoring (1/3). NT$578,580
+20. (2007-2008) NSC-96-2221-E-182-041: Bridge and brick functional motif analysis in real complex networks. NT$558,000
+21. (2007-2008) DOH96-DC-1102: Evaluating school closure, handwashing and mask policies for enterovirus. NT$800,000
+22. (2006-2007) NSC-95-2221-E-182-076: Small-world epidemiological modeling and public health policy assessment. NT$449,000
+
+### As Co-Principal Investigator (14 projects)
+
+1. (2020-2021) MOST-109-2221-E-992-069: AI deep learning in opinion diffusion models
+2. (2019-2022) MOST-108-2368-H-002-MY2: Shackleton Project — Global infectious disease risk prediction framework
+3. (2013-2014) NSC-102-2410-H-002-168: Spatio-temporal cluster detection for tracking epidemic transmission chains
+4. (2013-2014) NSC-102-2221-E-182-034: GPU-based multi-string matching algorithms
+5. (2013-2014) NSC-102-2314-B-039-024: Real-time mobile system for Taiwan methadone patients
+6. (2013) 102TFDA-N-003: Network applications for drug abuse prevention
+7. (2010-2011) NSC-99-2221-E-182-053: File sharing efficiency in P2P networks
+8. (2009-2010) UERPD280331: Mobile P2P wireless sensor network navigation system
+9. (2009-2010) NSC-98-2221-E-182-033: Improving QoS in unstructured P2P networks
+10. (2009-2011) NSC-98-2410-H-002-168-MY2: Quantitative geographic analysis of Taiwan dengue fever
+11. (2009-2010) DOH98-NNB-1048: Drug abuse prediction models using risk analysis
+12. (2009-2010) DOH98-DC-1501: HIV harm reduction program evaluation
+13. (2008-2009) NSC-97-2314-B002-180: Spatio-temporal risk model for dengue fever transmission
+14. (2006-2007) DOH95-DC-1406: Integrated surveillance software for influenza monitoring
+
+### As Research Member (1 project)
+
+1. (2009-2010) DOH98-DC-1006: Risk management and response planning for epidemic disasters
+
+## Op-Eds and Media Commentary (selected)
+
+### Taipei Times (English)
+- (2025) The beginning of your adventure with an AGI thinking machine!
+- (2025) Digging for gold or selling shovels?
+- (2023) Is ChatGPT actually intelligent?
+- (2021) A message to students
+- (2021) Taiwan's pandemic history
+- (2021) Getting the truth about virus shots
+- (2020) Academics should help people, not sow fear
+- (2020) Air travel significant to spread of COVID-19
+- (2020) How to keep infection clusters from happening
+
+### 自由時報 Liberty Times
+- (2025) 誰說賣鏟子的人知道金礦在那裡？
+- (2021) 一起來寫抗疫光榮史
+- (2021) 撥開副作用濃霧，正確看待接種計畫
+- (2020) 塞翁失馬，焉知非福？台灣防疫做得最好！
+- (2020) 武漢肺炎進展到群聚、社區感染前，台灣可以怎麼做？
+
+### 風傳媒 Storm Media
+- (2021) 流行病動態學教授給所有大學生的一封信
+- (2020) 防疫，知識份子應有的責任絕非獵巫
+- (2020) 國內新冠肺炎確診人數日日增，專家點出北北基5大高風險區
+
+### 聯合報 United Daily News
+- (2020) 只囤泡麵衛生紙是錯的！學者籲政府教育正確儲量
+- (2020) 佛系防疫vs. 嚴謹防疫/日醫療優 台用閉關爭時間
+- (2020) 陳部長沒說的另一半答案
+
+### Children's Magazine Articles
+- (2025) 結交智能小幫手，結伴勇闖新世界 — 老松兒童第45期
+- (2024) 從「老松國小校歌」談起 — 老松兒童第43期
+- (2023) 願景相承，生生不息 — 老松兒童第42期
+
+### Featured Articles
+- 蓮花池畔的清清之遠香 / Lotus Fragrance by the Pond — 老松國小創校130週年校慶專刊 (Chinese/English)
+- 遺忘的記憶郵筒——序章 / The Forgotten Memory Mailbox — Prologue (fantasy novel)
+
+## Video
+
+- 中國科技大學 59 週年校慶傑出校友專訪 — 黃崇源教授 (10m38s)
+  YouTube: https://www.youtube.com/watch?v=028zexOcXZo
+
+## Site Structure
+
+- / (index.html): Single-page bilingual (zh-TW/en) academic website with 8 content sections
+- /stories.html: 59 family stories spanning three generations in Taipei Wanhua
+- /CV.pdf: Full academic curriculum vitae
+- /llms.txt: Summary profile for AI systems
+- /llms-full.txt: This file — complete profile for AI systems
+- /feed.xml: Atom feed with latest updates
+- /security.txt: Security contact information (RFC 9116)

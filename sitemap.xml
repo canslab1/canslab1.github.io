@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://canslab1.github.io/</loc>
     <lastmod>2026-04-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <!-- YouTube interview video -->
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/028zexOcXZo/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>中國科技大學 59 週年校慶傑出校友專訪 — 黃崇源教授</video:title>
+      <video:description>2024 年中國科技大學 59 週年校慶，黃崇源教授榮獲傑出校友獎專訪影片。China University of Technology 59th Anniversary Distinguished Alumni Interview — Prof. Chung-Yuan Huang.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=028zexOcXZo</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/028zexOcXZo</video:player_loc>
+      <video:duration>638</video:duration>
+      <video:publication_date>2024-11-01</video:publication_date>
+    </video:video>
     <!-- Article thumbnails -->
     <image:image>
       <image:loc>https://canslab1.github.io/images/articles/thumb-45-zh.webp</image:loc>
@@ -368,6 +379,12 @@
     <lastmod>2026-04-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://canslab1.github.io/llms-full.txt</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <!-- Redirect pages: content moved to index.html -->
   <url>

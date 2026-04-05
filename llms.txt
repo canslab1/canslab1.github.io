@@ -1,6 +1,7 @@
 # Prof. Chung-Yuan Huang (黃崇源教授)
 
 > Professor of Computer Science and Information Engineering at Chang Gung University, Taiwan. Principal Investigator of the Complex Adaptive Networks and Systems (CANS) Lab.
+> Full version with complete publication list: https://canslab1.github.io/llms-full.txt
 
 ## About
 
