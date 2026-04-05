@@ -25,6 +25,8 @@ Static personal academic website for **Prof. Chung-Yuan Huang** (黃崇源教授
 | `stories.html` / `stories.js` / `stories.css` | Standalone stories page |
 | `feed.xml` | Atom feed |
 | `manifest.json` | PWA manifest |
+| `llms.txt` | AI-readable summary profile (references `llms-full.txt`) |
+| `llms-full.txt` | Extended AI-readable profile with complete papers, projects, awards, op-eds |
 
 ## Section IDs in index.html
 
@@ -60,7 +62,73 @@ python3 build-prerender.py
 - **IndexNow key**: `d22a81b36ccb45e085fe6679a822df52` (active); `c88197fa...` is stale/broken
 - **Google verification**: `google9ba7e621fca59b66.html` (file-based)
 - **Bing verification**: `BingSiteAuth.xml`
-- **robots.txt**: allows all crawlers including AI bots; references `sitemap.xml` and `security.txt`
+- **robots.txt**: allows all crawlers including 24+ named AI bots; references `sitemap.xml`, `security.txt`, `llms.txt`, `llms-full.txt`
+
+## Metadata Architecture (index.html `<head>`)
+
+All metadata is designed so search engines and generative AI systems return correct, detailed responses for "Chung-Yuan Huang" / "黃崇源" queries, including all images and videos.
+
+### Open Graph
+
+- `og:type` = `profile` with `profile:first_name` / `profile:last_name`
+- **6 images**: primary photo (IMG-2.jpg) + CANS lab logo + distinguished alumni + education award + EpiRank + Laosong donation — each with `og:image:alt`
+- **1 video**: YouTube interview embed (028zexOcXZo) with `og:video:secure_url`
+- 4 `og:see_also` links: Google Scholar, ORCID, GitHub, Wikidata
+
+### Twitter Card
+
+- `summary_large_image` with structured labels: Position (Professor, Chang Gung University), Research (Complex Networks, AI, Epidemic Simulation)
+
+### Dublin Core
+
+- Uses **English only** (intentional convention)
+- Includes: title, creator, subject, description, publisher, type, format, language, identifier, rights, date, modified, coverage, contributor, 3 relation URLs, audience
+
+### Google Scholar
+
+- `citation_author`, `citation_author_institution`, `citation_author_orcid` (author-level tags only; this is a profile page, not a paper)
+
+### Geo Tags
+
+- `geo.region` (TW-TAO), `geo.placename`, `geo.position`, `ICBM` — Chang Gung University coordinates
+
+## JSON-LD Structured Data (index.html)
+
+7 JSON-LD blocks total. Blocks 1–5 are **hand-authored** in `index.html`; blocks 6–7 are **auto-generated** by `build-prerender.py`.
+
+| Block | Type | Content |
+|-------|------|---------|
+| 1 | `@graph` (11 items) | WebSite + ProfilePage/Person + ResearchOrganization + 8 SoftwareSourceCode |
+| 2 | `ItemList` | 10 SiteNavigationElement entries |
+| 3 | `BreadcrumbList` | 11 navigation items |
+| 4 | `VideoObject` | YouTube interview (028zexOcXZo, 10m38s) |
+| 5 | `ImageGallery` | 12 ImageObject entries (10 honors photos + 2 software screenshots) |
+| 6 | `ItemList` | 42 ScholarlyArticle entries *(auto-generated)* |
+| 7 | `ItemList` | 22 ResearchProject entries *(auto-generated)* |
+
+### Person Entity (`@id: "#person"`) — Key Properties
+
+- **Identity**: name, alternateName (7 variants), givenName, familyName, birthDate, birthPlace, gender
+- **Identifiers**: ORCID (`0000-0002-8680-6755`), Google Scholar (`0klfzfAAAAAJ`), Wikidata (`Q138673497`)
+- **Credentials**: 3 EducationalOccupationalCredential (PhD/MS/BS with institutions and years)
+- **Expertise**: 8 DefinedTerm objects with Chinese alternateNames (Complex Adaptive Systems, Network Science, etc.)
+- **Awards**: 4 structured objects with Chinese alternateNames, dates, and descriptions
+- **Academic Metrics**: interactionStatistic (994 CiteAction), additionalProperty (h-index 18, i10-index 30, 170 pubs, 44 SCI)
+- **Links**: 7 sameAs (Scholar, ORCID, Facebook, Google Sites, PURE, GitHub, Wikidata)
+- **Affiliations**: worksFor, affiliation, memberOf (Phi Tau Phi, Taipei PTA Federation)
+- **Contact**: address (PostalAddress), telephone, email
+- **Media**: image (IMG-2.jpg), subjectOf (VideoObject)
+
+### SoftwareSourceCode Entries (8 tools)
+
+Each includes: name, alternateName, description, codeRepository, programmingLanguage, license, author (@id ref), keywords, **image** (4 screenshots each, 32 total).
+
+## AI Discoverability
+
+- **`llms.txt`**: summary profile with pointer to `llms-full.txt`
+- **`llms-full.txt`**: complete 44 SCI/SSCI papers with DOIs, 37 projects with grant numbers, 8 software tools, all awards, selected op-eds, career timeline, contact info
+- **`robots.txt`**: explicitly allows 24+ AI crawlers by name (GPTBot, ChatGPT-User, ClaudeBot, Claude-Web, Anthropic-AI, PerplexityBot, OAI-SearchBot, DeepSeekBot, xAI, etc.)
+- **`sitemap.xml`**: includes `xmlns:video` namespace with YouTube interview entry, `xmlns:image` with 60+ image entries, `llms-full.txt` URL
 
 ## Conventions & Constraints
 
@@ -71,6 +139,10 @@ python3 build-prerender.py
 - Dublin Core tags use English; OG/Twitter tags use Chinese — this is intentional
 - `feed.xml` is Atom format (`application/atom+xml`), not RSS
 - `rel="security"` on line 79 is non-standard but intentionally kept for redundancy with `robots.txt Security:` directive
+- When updating academic metrics, sync across: meta description, JSON-LD Person (`additionalProperty`, `interactionStatistic`), `llms.txt`, `llms-full.txt`, bio text, stats cards
+- When adding new honors photos, also update: ImageGallery JSON-LD block, relevant `og:image` tags if significant
+- When adding new software, also update: `@graph` SoftwareSourceCode entry (with 4 `image` URLs), `llms.txt`, `llms-full.txt`
+- After any push, send IndexNow notification: `POST https://api.indexnow.org/indexnow` with key `d22a81b36ccb45e085fe6679a822df52`
 
 ## Data Counts (as of 2026-04)
 
