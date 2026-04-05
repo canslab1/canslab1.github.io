@@ -137,6 +137,20 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 ## 首頁（index.html）內容區段
 
+> **Section IDs 對照表**：這些 ID 被 `shared.js`、`lab.html`（redirect）、`security.txt`、`llms.txt`、`README.md` 及外部連結深度引用，**請勿改名**。
+
+| Section ID | 實際內容 | 導覽標籤 |
+|-----------|---------|---------|
+| `#bio` | 簡短自傳 | 介紹 / About |
+| `#overview` | 榮譽與獎項 | 榮譽 / Honors |
+| `#lab` | 數據卡片 | 綜覽 / Overview |
+| `#papers` | 著作列表 | 著作 / Papers |
+| `#projects` | 研究計畫 | 計畫 / Projects |
+| `#software` | 開源程式 | 程式 / Software |
+| `#articles` | 兒童校刊文章 | 文章 / Articles |
+| `#press` | 媒體投書 | 評論 / Op-Eds |
+| `#embed` | 內嵌內容 | （內部） |
+
 ### Header
 - 大頭照（`images/IMG-2.jpg`）
 - 姓名：長庚大學 黃崇源 教授
@@ -630,7 +644,7 @@ python3 build-prerender.py
 
 | 頁面 | og:type | og:image | JSON-LD 類型 | robots |
 |------|---------|----------|-------------|--------|
-| `index.html` | `profile` | `IMG-2.jpg`（大頭照） | `WebSite` + `ProfilePage` → `Person` + `ResearchOrganization` + 8× `SoftwareSourceCode` + `ItemList`（SiteNavigationElement ×11） + `BreadcrumbList` + `VideoObject` + `ItemList`（42 ScholarlyArticle + 22 ResearchProject） | `index, follow` |
+| `index.html` | `profile` | 6 張（大頭照 + Lab logo + 傑出校友 + 杏壇芬芳 + EpiRank + 捐款） | `WebSite` + `ProfilePage` → `Person` + `ResearchOrganization` + 8× `SoftwareSourceCode` + `ItemList`（SiteNavigationElement ×10） + `BreadcrumbList` + `VideoObject` + `ImageGallery`（12 ImageObject） + `ItemList`（42 ScholarlyArticle + 22 ResearchProject） | `index, follow` |
 | `stories.html` | `website` | `IMG-2.jpg`（大頭照） | `CollectionPage` + `CreativeWorkSeries` | `index, follow` |
 | `404.html` | —（未設定） | —（未設定） | —（無） | `noindex, follow` |
 
@@ -651,15 +665,31 @@ python3 build-prerender.py
 
 ### 結構化資料（JSON-LD）詳細
 
-**index.html**（整合八區段 + 內嵌 PDF，共 5 個 JSON-LD blocks）：
-- `WebSite`：網站名稱、語言、描述
-- `ProfilePage` → `Person`：姓名、別名（黃崇源、CY Huang、GSCOTT）、職稱、服務機構、學歷、研究領域、Google Scholar、ORCID
-- `ResearchOrganization`：CANS Lab 組織資訊，隸屬長庚大學
-- 8 個 `SoftwareSourceCode`：每套軟體的名稱、描述、程式語言、授權、GitHub 連結
-- `ItemList`（SiteNavigationElement ×11）：網站導覽結構
-- `BreadcrumbList`（11 項）：麵包屑導覽
-- `VideoObject`：傑出校友專訪影片（duration: PT10M38S）
-- `ItemList`：42 篇 `ScholarlyArticle`（SCI/SSCI/EI 期刊論文）+ 22 個 `ResearchProject`（主持人計畫）— 由 `build-prerender.py` 自動產生
+**index.html**（整合八區段 + 內嵌 PDF，共 7 個 JSON-LD blocks）：
+
+| Block | Type | 內容 |
+|-------|------|------|
+| 1 | `@graph`（11 items） | WebSite + ProfilePage/Person + ResearchOrganization + 8 SoftwareSourceCode |
+| 2 | `ItemList` | 10 SiteNavigationElement |
+| 3 | `BreadcrumbList` | 11 導覽項目 |
+| 4 | `VideoObject` | YouTube 傑出校友專訪（028zexOcXZo, 10m38s） |
+| 5 | `ImageGallery` | 12 ImageObject（10 榮譽照片 + 2 軟體截圖） |
+| 6 | `ItemList` | 42 ScholarlyArticle *(auto-generated)* |
+| 7 | `ItemList` | 22 ResearchProject *(auto-generated)* |
+
+**Person 實體**（`@id: "#person"`）主要屬性：
+- 身份：name, alternateName（7 變體）, birthDate, birthPlace, gender
+- 識別碼：ORCID, Google Scholar, Wikidata（3 PropertyValue）
+- 學歷：3 EducationalOccupationalCredential（博士/碩士/學士）
+- 專長：8 DefinedTerm（含中文 alternateName）
+- 獎項：4 結構化物件（含中文、日期、描述）
+- 學術指標：interactionStatistic（994 引用）, additionalProperty（h-index 18, i10-index 30, 170 論文, 44 SCI）
+- 連結：11 sameAs（Scholar, ORCID, DBLP, Scopus, Semantic Scholar, ResearchGate, Facebook, Google Sites, PURE, GitHub, Wikidata）
+- 隸屬：worksFor, affiliation, memberOf（斐陶斐、小聯會）
+- 聯絡：address, telephone, email
+- 媒體：image, subjectOf（VideoObject）
+
+**SoftwareSourceCode**（8 套）：每套含 name, description, codeRepository, programmingLanguage, license, keywords, **image**（4 截圖，共 32 張）
 
 **stories.html**：
 - `CollectionPage`：故事合集頁面
@@ -667,14 +697,15 @@ python3 build-prerender.py
 
 ## LLM 搜尋設定
 
-### llms.txt
-根目錄下的 `llms.txt` 提供結構化純文字摘要，供 AI 爬蟲快速擷取教授資訊（姓名、職稱、研究領域、學術指標、獲獎、連結）。
+### llms.txt / llms-full.txt
+- **`llms.txt`**：摘要版 AI 可讀檔案（姓名、職稱、研究領域、學術指標、獲獎、連結、網站結構）
+- **`llms-full.txt`**：完整版（含 44 篇 SCI/SSCI 論文 + DOI、37 件計畫 + 計畫編號、8 套軟體、全部獎項、媒體投書、生涯時間軸、聯絡方式）
 
 ### robots.txt
-明確允許以下 AI 爬蟲存取：
-- `GPTBot`、`ChatGPT-User`（OpenAI）
+明確允許 24 個 AI 爬蟲存取：
+- `GPTBot`、`ChatGPT-User`、`OAI-SearchBot`（OpenAI）
 - `Google-Extended`（Google AI）
-- `Claude-Web`、`Anthropic-AI`（Anthropic）
+- `Claude-Web`、`Anthropic-AI`、`ClaudeBot`（Anthropic）
 - `PerplexityBot`（Perplexity）
 - `Bytespider`（ByteDance）
 - `CCBot`（Common Crawl）
@@ -684,6 +715,12 @@ python3 build-prerender.py
 - `Amazonbot`（Amazon）
 - `YouBot`（You.com）
 - `Baiduspider`（百度）
+- `DeepSeekBot`（DeepSeek）
+- `MistralBot`（Mistral）
+- `xAI`（Grok）
+- `DuckAssistBot`（DuckDuckGo）
+- `PetalBot`（Huawei）
+- `Diffbot`、`Timpibot`
 
 ### 網域驗證檔
 | 檔案 | 用途 |

@@ -100,7 +100,7 @@ All metadata is designed so search engines and generative AI systems return corr
 |-------|------|---------|
 | 1 | `@graph` (11 items) | WebSite + ProfilePage/Person + ResearchOrganization + 8 SoftwareSourceCode |
 | 2 | `ItemList` | 10 SiteNavigationElement entries |
-| 3 | `BreadcrumbList` | 11 navigation items |
+| 3 | `BreadcrumbList` | 2-level hierarchy: Home → About |
 | 4 | `VideoObject` | YouTube interview (028zexOcXZo, 10m38s) |
 | 5 | `ImageGallery` | 12 ImageObject entries (10 honors photos + 2 software screenshots) |
 | 6 | `ItemList` | 42 ScholarlyArticle entries *(auto-generated)* |
@@ -114,7 +114,7 @@ All metadata is designed so search engines and generative AI systems return corr
 - **Expertise**: 8 DefinedTerm objects with Chinese alternateNames (Complex Adaptive Systems, Network Science, etc.)
 - **Awards**: 4 structured objects with Chinese alternateNames, dates, and descriptions
 - **Academic Metrics**: interactionStatistic (994 CiteAction), additionalProperty (h-index 18, i10-index 30, 170 pubs, 44 SCI)
-- **Links**: 7 sameAs (Scholar, ORCID, Facebook, Google Sites, PURE, GitHub, Wikidata)
+- **Links**: 11 sameAs (Scholar, ORCID, DBLP, Scopus, Semantic Scholar, ResearchGate, Facebook, Google Sites, PURE, GitHub, Wikidata)
 - **Affiliations**: worksFor, affiliation, memberOf (Phi Tau Phi, Taipei PTA Federation)
 - **Contact**: address (PostalAddress), telephone, email
 - **Media**: image (IMG-2.jpg), subjectOf (VideoObject)

@@ -1,0 +1,11 @@
+# Security Policy for canslab1.github.io
+# RFC 9116 — https://www.rfc-editor.org/rfc/rfc9116
+# Canonical location: https://canslab1.github.io/security.txt
+
+Contact: mailto:gscott@mail.cgu.edu.tw
+Contact: https://github.com/canslab1/canslab1.github.io/issues
+Expires: 2027-04-02T00:00:00+08:00
+Preferred-Languages: zh-TW, en
+Canonical: https://canslab1.github.io/security.txt
+Policy: https://github.com/canslab1/canslab1.github.io/blob/master/LICENSE
+Hiring: https://canslab1.github.io/#lab
