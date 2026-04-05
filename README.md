@@ -129,6 +129,7 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 | `papers-data.js` | 論文資料 | 170 篇著作列表（5 大類，中英文） |
 | `projects-data.js` | 計畫資料 | 37 件研究計畫列表（3 種角色，中英文） |
 | `build-prerender.py` | 建構工具 | 解析 JS 資料檔，產生預渲染 HTML 及 JSON-LD 結構化資料 |
+| `CLAUDE.md` | AI 輔助指引 | Claude Code 專案慣例、約束與開發指引 |
 | `css/project-page.css` | 子 repo 共用樣式 | 8 個子 repo 專案頁面共用 CSS（header、markdown-body、footer、響應式） |
 | `js/readme-loader.js` | 子 repo 共用腳本 | 自動偵測 repo 名稱、fetch README.md、渲染 Markdown 與語法高亮 |
 | `stories.css` | 故事樣式 | 家族故事頁面專屬 CSS |
@@ -350,6 +351,7 @@ canslab1.github.io/
 ├── feed.xml             # Atom feed（媒體投書 / 文章動態）
 ├── humans.txt           # 網站製作者資訊
 ├── README.md            # 本文件
+├── CLAUDE.md            # Claude Code 專案慣例與開發指引
 ├── LICENSE              # MIT 授權條款
 ├── css/
 │   └── project-page.css # 8 個子 repo 專案頁面共用 CSS
@@ -628,7 +630,7 @@ python3 build-prerender.py
 
 | 頁面 | og:type | og:image | JSON-LD 類型 | robots |
 |------|---------|----------|-------------|--------|
-| `index.html` | `profile` | `IMG-2.jpg`（大頭照） | `WebSite` + `ProfilePage` → `Person` + `ResearchOrganization` + 8× `SoftwareSourceCode` + `ItemList`（42 ScholarlyArticle + 22 ResearchProject） | `index, follow` |
+| `index.html` | `profile` | `IMG-2.jpg`（大頭照） | `WebSite` + `ProfilePage` → `Person` + `ResearchOrganization` + 8× `SoftwareSourceCode` + `ItemList`（SiteNavigationElement ×11） + `BreadcrumbList` + `VideoObject` + `ItemList`（42 ScholarlyArticle + 22 ResearchProject） | `index, follow` |
 | `stories.html` | `website` | `IMG-2.jpg`（大頭照） | `CollectionPage` + `CreativeWorkSeries` | `index, follow` |
 | `404.html` | —（未設定） | —（未設定） | —（無） | `noindex, follow` |
 
@@ -643,17 +645,20 @@ python3 build-prerender.py
 - Schema.org：`<html>` 標籤加上 `itemscope itemtype="https://schema.org/WebPage"`
 - `theme-color`：`#27ae60`（綠色主題色）
 - `manifest.json`：PWA Web App Manifest（雙語描述）
-- `apple-touch-icon`：iOS 桌面圖示（`images/icon-192.png`）
+- `apple-touch-icon`：iOS 桌面圖示（`images/icon-192.png`，`sizes="192x192"`）
 - `security.txt`：RFC 9116 安全聯絡資訊（根目錄）
 - `feed.xml`：Atom feed（21 篇媒體投書 / 文章動態）
 
 ### 結構化資料（JSON-LD）詳細
 
-**index.html**（整合八區段 + 內嵌 PDF）：
+**index.html**（整合八區段 + 內嵌 PDF，共 5 個 JSON-LD blocks）：
 - `WebSite`：網站名稱、語言、描述
 - `ProfilePage` → `Person`：姓名、別名（黃崇源、CY Huang、GSCOTT）、職稱、服務機構、學歷、研究領域、Google Scholar、ORCID
 - `ResearchOrganization`：CANS Lab 組織資訊，隸屬長庚大學
 - 8 個 `SoftwareSourceCode`：每套軟體的名稱、描述、程式語言、授權、GitHub 連結
+- `ItemList`（SiteNavigationElement ×11）：網站導覽結構
+- `BreadcrumbList`（11 項）：麵包屑導覽
+- `VideoObject`：傑出校友專訪影片（duration: PT10M38S）
 - `ItemList`：42 篇 `ScholarlyArticle`（SCI/SSCI/EI 期刊論文）+ 22 個 `ResearchProject`（主持人計畫）— 由 `build-prerender.py` 自動產生
 
 **stories.html**：
@@ -872,7 +877,7 @@ README 渲染腳本，功能：
 |------|------|---------|------|
 | **Ahrefs Analytics** | 流量分析 | 各頁面 `<head>`（`analytics.ahrefs.com/analytics.js`） | SEO 排名追蹤與流量分析 |
 | **Microsoft Clarity** | 行為分析 | `shared.js` 底部 / `404.html` 行內腳本（`clarity.ms`，ID: `rzlnthqbys`） | 熱力圖、點擊分析、錄影回放 |
-| **Unsplash 圖片** | 背景圖片 | `404.html` header（`images.unsplash.com`） | 數位科技主題背景圖（僅 404 頁面使用） |
+| **Unsplash 圖片** | 背景圖片 | `shared.css` header / `stories.css` header / `404.html` header（`images.unsplash.com`） | 數位科技主題背景圖 |
 | **ORCiD logo** | 外部圖片 | Footer（`orcid.org/assets/vectors/orcid.logo.icon.svg`） | ORCiD 官方 SVG logo |
 
 ### 字型策略
@@ -882,7 +887,7 @@ README 渲染腳本，功能：
 
 ### DNS 預連接
 各頁面 `<head>` 中設定 DNS 預取與預連接，減少第三方資源延遲：
-- `dns-prefetch`：`scholar.google.com`、`www.clarity.ms`、`analytics.ahrefs.com`
+- `dns-prefetch`：`www.clarity.ms`（動態載入，需提前解析）
 - `preconnect`：`images.unsplash.com`
 
 ## 無障礙設計（Accessibility）
