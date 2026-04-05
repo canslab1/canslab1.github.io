@@ -610,7 +610,16 @@ def main():
     else:
         print("⚠️  Honors article container not found (already replaced?)")
 
-    # Add JSON-LD before </body>
+    # Add JSON-LD before </body> — remove old auto-generated block first to prevent duplicates
+    marker = '"Publications and Research Projects of Prof. Chung-Yuan Huang"'
+    # Remove any existing auto-generated JSON-LD blocks
+    while marker in index_html:
+        start = index_html.rfind('<script type="application/ld+json">', 0, index_html.rfind(marker))
+        end = index_html.find('</script>', index_html.rfind(marker)) + len('</script>')
+        if start >= 0 and end > start:
+            index_html = index_html[:start].rstrip() + '\n' + index_html[end:].lstrip()
+        else:
+            break
     ld_script = f'\n    <script type="application/ld+json">\n    {jsonld_str}\n    </script>'
     index_html = index_html.replace('</body>', ld_script + '\n</body>')
     print("✅ JSON-LD structured data added")

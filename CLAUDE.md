@@ -94,7 +94,7 @@ All metadata is designed so search engines and generative AI systems return corr
 
 ## JSON-LD Structured Data (index.html)
 
-7 JSON-LD blocks total. Blocks 1–5 are **hand-authored** in `index.html`; blocks 6–7 are **auto-generated** by `build-prerender.py`.
+6 JSON-LD blocks total. Blocks 1–5 are **hand-authored** in `index.html`; block 6 is **auto-generated** by `build-prerender.py`.
 
 | Block | Type | Content |
 |-------|------|---------|
@@ -103,8 +103,7 @@ All metadata is designed so search engines and generative AI systems return corr
 | 3 | `BreadcrumbList` | 2-level hierarchy: Home → About |
 | 4 | `VideoObject` | YouTube interview (028zexOcXZo, 10m38s) |
 | 5 | `ImageGallery` | 12 ImageObject entries (10 honors photos + 2 software screenshots) |
-| 6 | `ItemList` | 42 ScholarlyArticle entries *(auto-generated)* |
-| 7 | `ItemList` | 22 ResearchProject entries *(auto-generated)* |
+| 6 | `ItemList` | 42 ScholarlyArticle + 22 ResearchProject entries *(auto-generated)* |
 
 ### Person Entity (`@id: "#person"`) — Key Properties
 
