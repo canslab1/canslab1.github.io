@@ -478,7 +478,7 @@ figure {
 .software-meta {
     margin-top: 0.75rem;
     font-size: 0.85rem;
-    color: #888;
+    color: #767676;
 }
 .software-meta a { color: #1a73e8; text-decoration: none; }
 .software-meta a:hover { text-decoration: underline; }
@@ -548,7 +548,7 @@ figure {
     display: inline-block;
     font-size: 0.85rem;
     font-weight: normal;
-    color: #888;
+    color: #767676;
     margin-right: 0.3rem;
 }
 .press-author {
@@ -578,7 +578,7 @@ figure {
 
 .papers-note {
     font-size: 0.85rem;
-    color: #888;
+    color: #767676;
     margin: 0.25rem 0 1rem 0;
     font-style: italic;
 }
@@ -629,7 +629,7 @@ figure {
 .paper-index {
     display: inline;
     font-size: 0.82rem;
-    color: #888;
+    color: #767676;
 }
 
 /* ===== Projects Section ===== */
@@ -676,7 +676,7 @@ figure {
 .project-meta {
     display: block;
     font-size: 0.82rem;
-    color: #888;
+    color: #767676;
     line-height: 1.5;
     margin-top: 0.15rem;
 }
@@ -972,4 +972,29 @@ figure {
     background: var(--color-primary-dark);
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(39, 174, 96, 0.6);
+}
+
+/* Skip-to-content link for accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #14532d;
+    color: #fff;
+    padding: 8px 16px;
+    z-index: 10000;
+    font-size: 14px;
+    text-decoration: none;
+    transition: top 0.2s;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+/* Focus styles for keyboard accessibility */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid #14532d;
+    outline-offset: 2px;
 }
