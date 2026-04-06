@@ -26,6 +26,14 @@
 
     var container = document.getElementById('content');
 
+    // If content is pre-rendered (no loading div), skip fetch; just highlight code blocks
+    if (!container.querySelector('.loading')) {
+        container.querySelectorAll('pre code').forEach(function (block) {
+            hljs.highlightElement(block);
+        });
+        return;
+    }
+
     fetch('./README.md')
         .then(function (res) {
             if (!res.ok) throw new Error('HTTP ' + res.status);
