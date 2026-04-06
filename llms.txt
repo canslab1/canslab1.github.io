@@ -81,6 +81,7 @@ Prof. Chung-Yuan Huang (黃崇源) is a full professor in the Department of Comp
 - Family Stories (家族故事): https://canslab1.github.io/stories.html
 - EpiRank on GitHub: https://github.com/canslab1/EpiRank
 - MV17 on GitHub: https://github.com/canslab1/MV17
+- CASMIM on GitHub: https://github.com/canslab1/CASMIM
 - HETA on GitHub: https://github.com/canslab1/HETA
 - HATA on GitHub: https://github.com/canslab1/HATA
 - BCAT on GitHub: https://github.com/canslab1/BCAT
@@ -91,6 +92,7 @@ Prof. Chung-Yuan Huang (黃崇源) is a full professor in the Department of Comp
 
 - EpiRank: Epidemic risk analysis using asymmetric commuting networks (Python, Scientific Reports 2019)
 - MV17: K-core based multi-attribute node importance ranking in complex networks (Python, Physica A 2015)
+- CASMIM: Complex Adaptive System Mutual Information Model for network analysis (Python)
 - HETA: Parameter-free edge classification for complex networks (Python, Physica A 2019)
 - HATA: Directed arc classification extending HETA to directed graphs (Python, IEEE Access 2020)
 - BCAT: Bounded confidence and adoption threshold model for opinion dynamics (Python/NetLogo, IEEE Access 2022)

@@ -336,7 +336,7 @@ def generate_jsonld(papers_data, projects_data):
 
                 title_match = re.search(
                     r'\(\d{4}\)\s+(.+?)\.\s+(?:IEEE|PLoS|Physica|Scientific|Computational|Journal|Simulation|'
-                    r'International|Applied|BioMed|Artificial|Discrete|WSEAS)',
+                    r'International|Applied|BioMed|Artificial|Discrete|WSEAS|Mathematical|The\s+Journal)',
                     text
                 )
                 title = title_match.group(1) if title_match else None

@@ -16,6 +16,7 @@ on:
       - '*.js'
       - '*.pdf'
       - 'llms.txt'
+      - 'llms-full.txt'
       - 'sitemap.xml'
       - 'feed.xml'
       - 'robots.txt'
@@ -46,6 +47,7 @@ jobs:
             "https://${HOST}/stories.html"
             "https://${HOST}/CV.pdf"
             "https://${HOST}/llms.txt"
+            "https://${HOST}/llms-full.txt"
             "https://${HOST}/feed.xml"
             "https://${HOST}/humans.txt"
             "https://${HOST}/CYHuang.html"
