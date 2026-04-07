@@ -72,6 +72,14 @@ User-agent: Timpibot
 Allow: /
 
 Sitemap: https://canslab1.github.io/sitemap.xml
+Sitemap: https://canslab1.github.io/EpiRank/sitemap.xml
+Sitemap: https://canslab1.github.io/MV17/sitemap.xml
+Sitemap: https://canslab1.github.io/CASMIM/sitemap.xml
+Sitemap: https://canslab1.github.io/HETA/sitemap.xml
+Sitemap: https://canslab1.github.io/HATA/sitemap.xml
+Sitemap: https://canslab1.github.io/BCAT/sitemap.xml
+Sitemap: https://canslab1.github.io/SRAC-Agent/sitemap.xml
+Sitemap: https://canslab1.github.io/AED2/sitemap.xml
 Security: https://canslab1.github.io/security.txt
 
 # AI content files
