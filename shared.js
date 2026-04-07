@@ -135,7 +135,12 @@ function showEmbed(url, event) {
 
 function toggleNav() {
     const navContainer = document.querySelector('.nav-container');
-    if (navContainer) navContainer.classList.toggle('show');
+    const navToggleBtn = document.querySelector('.nav-toggle');
+    if (navContainer) {
+        navContainer.classList.toggle('show');
+        const isExpanded = navContainer.classList.contains('show');
+        if (navToggleBtn) navToggleBtn.setAttribute('aria-expanded', isExpanded);
+    }
 }
 
 /* ===== ARIA Labels ===== */
@@ -195,10 +200,10 @@ function renderNav() {
 
     nav.innerHTML = `
         <div class="container">
-            <button class="nav-toggle">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu-container">
                 <span class="zh">☰ 導覽</span><span class="en">☰ Navigation</span>
             </button>
-            <div class="nav-container"></div>
+            <div class="nav-container" id="nav-menu-container"></div>
         </div>
     `;
 
@@ -582,9 +587,11 @@ function toggleArticleText(el) {
     if (el.classList.contains('collapsed')) {
         el.classList.remove('collapsed');
         el.classList.add('expanded');
+        el.setAttribute('aria-expanded', 'true');
     } else {
         el.classList.remove('expanded');
         el.classList.add('collapsed');
+        el.setAttribute('aria-expanded', 'false');
     }
 }
 
@@ -665,6 +672,35 @@ function initShared() {
     renderFooter();
     renderBackToTop();
     updateAriaLabels();
+    initArticleTextA11y();
+    initTooltipEscDismiss();
+}
+
+/* ===== Accessibility: article-text keyboard + tabindex ===== */
+function initArticleTextA11y() {
+    document.querySelectorAll('.article-text').forEach(function(el) {
+        if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '0');
+        if (!el.hasAttribute('role')) el.setAttribute('role', 'button');
+        if (el.classList.contains('collapsed')) el.setAttribute('aria-expanded', 'false');
+        el.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleArticleText(el);
+            }
+        });
+    });
+}
+
+/* ===== Accessibility: dismiss footer tooltips with Escape ===== */
+function initTooltipEscDismiss() {
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            var focused = document.activeElement;
+            if (focused && focused.classList.contains('footer-link')) {
+                focused.blur();
+            }
+        }
+    });
 }
 
 function renderBackToTop() {

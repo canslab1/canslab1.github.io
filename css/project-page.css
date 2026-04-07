@@ -17,7 +17,7 @@ body{font-family:system-ui,-apple-system,'PingFang TC','Microsoft JhengHei','Not
 .header-nav a:hover{background:hsla(0,0%,100%,.15);color:#fff}
 .content-wrapper{flex:1;max-width:960px;width:100%;margin:2rem auto;padding:0 20px}
 .markdown-body{background:#fff;border-radius:10px;padding:2rem 2.5rem;box-shadow:0 4px 6px rgba(0,0,0,.1);overflow-x:auto}
-.loading{text-align:center;padding:3rem;color:#888;font-size:1.1rem}
+.loading{text-align:center;padding:3rem;color:#767676;font-size:1.1rem}
 .loading::before{content:'';display:block;width:36px;height:36px;margin:0 auto 1rem;border:3px solid #e0e0e0;border-top-color:#27ae60;border-radius:50%;animation:spin .8s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 .error{text-align:center;padding:3rem;color:#c0392b}
@@ -51,4 +51,9 @@ body{font-family:system-ui,-apple-system,'PingFang TC','Microsoft JhengHei','Not
 .site-footer{background:#fff;border-top:1px solid #ddd;padding:1rem 0;text-align:center;font-size:.85rem;color:#888}
 .site-footer a{color:#27ae60;text-decoration:none}
 .site-footer a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid #14532d;outline-offset:2px}
+.header-nav a:focus-visible{background:hsla(0,0%,100%,.25);color:#fff}
+.site-footer a:focus-visible{outline-color:#27ae60}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+@media(forced-colors:active){a:focus-visible,button:focus-visible{outline:2px solid}}
 @media(max-width:768px){.header-inner{justify-content:center;text-align:center}.markdown-body{padding:1.2rem 1rem;border-radius:0}.content-wrapper{padding:0;margin:0 auto}.markdown-body h1{font-size:1.5rem}.markdown-body h2{font-size:1.3rem}.markdown-body h3{font-size:1.1rem}.markdown-body table{font-size:.82rem}.markdown-body pre code{font-size:.82em}}

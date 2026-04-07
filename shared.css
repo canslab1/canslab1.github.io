@@ -245,7 +245,7 @@ main {
 
 .stat-label {
     font-size: 1rem;
-    opacity: 0.9;
+    opacity: 1;
     margin-top: 0.5rem;
 }
 
@@ -269,7 +269,9 @@ main {
     display: inline-block;
     font-size: 0.75rem;
     font-weight: 600;
-    padding: 0.15rem 0.6rem;
+    padding: 0.35rem 0.8rem;
+    min-height: 44px;
+    min-width: 44px;
     border-radius: 999px;
     background: #e8f0fe;
     color: #2980b9;
@@ -436,10 +438,12 @@ figure {
     border-top-color: var(--color-mid-green);
 }
 
-.footer-link:hover .footer-tooltip {
+.footer-link:hover .footer-tooltip,
+.footer-link:focus-within .footer-tooltip {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
 }
 
 /* ===== Software Cards ===== */
@@ -714,6 +718,11 @@ figure {
     line-height: 1.7;
     transition: max-height 0.4s ease;
     overflow: hidden;
+}
+.article-text:focus-visible {
+    outline: 2px solid #14532d;
+    outline-offset: 2px;
+    border-radius: 4px;
 }
 
 .article-text.collapsed {
@@ -997,4 +1006,29 @@ button:focus-visible,
 [tabindex]:focus-visible {
     outline: 2px solid #14532d;
     outline-offset: 2px;
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: more) {
+    :root {
+        --color-primary: #006400;
+        --color-dark-green: #003300;
+    }
+    .stat-card { border: 2px solid #000; }
+    .software-card { border: 2px solid #000; }
+    .footer-tooltip { border: 1px solid #fff; }
+}
+@media (forced-colors: active) {
+    .skip-link { border: 1px solid; }
+    a:focus-visible, button:focus-visible { outline: 2px solid; }
 }
