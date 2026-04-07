@@ -51,6 +51,8 @@ body{font-family:system-ui,-apple-system,'PingFang TC','Microsoft JhengHei','Not
 .site-footer{background:#fff;border-top:1px solid #ddd;padding:1rem 0;text-align:center;font-size:.85rem;color:#888}
 .site-footer a{color:#27ae60;text-decoration:none}
 .site-footer a:hover{text-decoration:underline}
+.skip-link{position:absolute;top:-40px;left:0;background:#14532d;color:#fff;padding:8px 16px;z-index:10000;font-size:14px;text-decoration:none;transition:top .2s}
+.skip-link:focus{top:0}
 a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid #14532d;outline-offset:2px}
 .header-nav a:focus-visible{background:hsla(0,0%,100%,.25);color:#fff}
 .site-footer a:focus-visible{outline-color:#27ae60}
