@@ -441,6 +441,8 @@ IMAGE_ALT_TEXT = {
     'images/honors/cute-distinguished-alumni.jpg': '2024 中國科技大學傑出校友 — 黃崇源教授與校方師長合影',
     'images/honors/xtff-award.jpg': '2024 臺北市杏壇芬芳獎頒獎典禮 — 黃崇源榮譽會長受獎',
     'images/honors/xtff-group.jpg': '2024 臺北市杏壇芬芳獎頒獎典禮 — 黃崇源榮譽會長與家人師長合影',
+    'images/honors/longshan-donation-1.webp': '2026 臺北市立龍山國中 — 黃崇源捐資母校受頒感謝狀現場照',
+    'images/honors/longshan-donation-2.webp': '2026 臺北市立龍山國中 — 黃崇源捐資母校 115 學年感謝狀',
     'images/honors/laosong-honorary-president.jpg': '2024 老松國小第 34 屆榮譽會長黃崇源教授參加校慶運動會',
     'images/honors/laosong-xlh-delegates.jpg': '2023 臺北市國小學生家長會聯合會第 22 屆第一次代表大會合照',
     'images/honors/laosong-xlh-board.jpg': '2023 臺北市國小學生家長會聯合會第一次理監事會議',

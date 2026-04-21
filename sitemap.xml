@@ -4,7 +4,7 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://canslab1.github.io/</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <!-- YouTube interview video -->
@@ -239,6 +239,14 @@
     <image:image>
       <image:loc>https://canslab1.github.io/images/honors/xtff-group.webp</image:loc>
       <image:title>2024 臺北市杏壇芬芳獎頒獎典禮 — 黃崇源榮譽會長與家人師長合影</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/honors/longshan-donation-1.webp</image:loc>
+      <image:title>2026 臺北市立龍山國中 — 黃崇源捐資母校受頒感謝狀現場照</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/honors/longshan-donation-2.webp</image:loc>
+      <image:title>2026 臺北市立龍山國中 — 黃崇源捐資母校 115 學年感謝狀</image:title>
     </image:image>
     <image:image>
       <image:loc>https://canslab1.github.io/images/honors/laosong-honorary-president.webp</image:loc>
