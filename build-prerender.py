@@ -454,6 +454,7 @@ IMAGE_ALT_TEXT = {
     'images/honors/laosong-donation-3.jpg': '2025 老松國小 114 學年度教師節慶祝活動海報',
     'images/honors/laosong-donation-4.jpg': '2025 老松國小 114 年 9 月份捐款收支明細表',
     'images/honors/laosong-donation-5.jpg': '2025 黃崇源榮譽會長捐贈老松國小新台幣伍拾萬元整支票',
+    'images/honors/laosong-donation-6.webp': '2025 老松國小校長黎季昊頒贈黃崇源榮譽會長惠捐伍拾萬元感謝狀',
     'images/honors/solomon-newyear.jpg': '2023 所羅門集團新年晚會 — 黃崇源教授擔任獨立董事',
     'images/honors/solomon-shareholders.jpg': '2023 所羅門股份有限公司 112 年股東常會 — 黃崇源教授擔任獨立董事',
     'images/honors/ptphs-family.jpg': '2006 中華民國斐陶斐榮譽學會獎 — 黃崇源教授與家人合影於國立交通大學頒獎典禮',
