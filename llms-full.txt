@@ -2,7 +2,7 @@
 
 > This is the extended version of https://canslab1.github.io/llms.txt
 > Homepage: https://canslab1.github.io/
-> Last updated: 2026-04-05
+> Last updated: 2026-04-21
 
 ## Identity
 
