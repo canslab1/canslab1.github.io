@@ -14,7 +14,7 @@ Research: Complex Networks, Epidemic Simulation, Computational Social Science, A
 Software: EpiRank, MV17, CASMIM, HETA, HATA, BCAT, SRAC-Agent, AED2
 
 /* SITE */
-Last update: 2026-04-21
+Last update: 2026-04-22
 Language: Chinese (zh-TW) / English
 Standards: HTML5, CSS3, ES6
 Technology: GitHub Pages, IndexNow, Schema.org JSON-LD, Dublin Core, Atom Feed, Web App Manifest
