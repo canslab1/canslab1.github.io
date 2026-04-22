@@ -437,34 +437,37 @@ def generate_bio_html(bio_zh, bio_en):
 # ─── Image alt-text mapping for SEO ───
 
 IMAGE_ALT_TEXT = {
-    'images/honors/cute-alumni-group.jpg': '2024 中國科技大學 59 週年校慶校友大會團體合照 — 黃崇源教授榮獲傑出校友',
-    'images/honors/cute-distinguished-alumni.jpg': '2024 中國科技大學傑出校友 — 黃崇源教授與校方師長合影',
-    'images/honors/xtff-award.jpg': '2024 臺北市杏壇芬芳獎頒獎典禮 — 黃崇源榮譽會長受獎',
-    'images/honors/xtff-group.jpg': '2024 臺北市杏壇芬芳獎頒獎典禮 — 黃崇源榮譽會長與家人師長合影',
+    'images/honors/cute-alumni-group.webp': '2024 中國科技大學 59 週年校慶校友大會團體合照 — 黃崇源教授榮獲傑出校友',
+    'images/honors/cute-distinguished-alumni.webp': '2024 中國科技大學傑出校友 — 黃崇源教授與校方師長合影',
+    'images/honors/xtff-award.webp': '2024 臺北市杏壇芬芳獎頒獎典禮 — 黃崇源榮譽會長受獎',
+    'images/honors/xtff-group.webp': '2024 臺北市杏壇芬芳獎頒獎典禮 — 黃崇源榮譽會長與家人師長合影',
     'images/honors/longshan-donation-1.webp': '2026 臺北市立龍山國中 — 黃崇源捐資母校受頒感謝狀現場照',
     'images/honors/longshan-donation-2.webp': '2026 臺北市立龍山國中 — 黃崇源捐資母校 115 學年感謝狀',
-    'images/honors/laosong-honorary-president.jpg': '2024 老松國小第 34 屆榮譽會長黃崇源教授參加校慶運動會',
-    'images/honors/laosong-xlh-delegates.jpg': '2023 臺北市國小學生家長會聯合會第 22 屆第一次代表大會合照',
-    'images/honors/laosong-xlh-board.jpg': '2023 臺北市國小學生家長會聯合會第一次理監事會議',
-    'images/honors/laosong-xlh-election.jpg': '2023 臺北市國小學生家長會聯合會第二十二屆常務理事選舉結果',
-    'images/honors/laosong-xlh-west-district.jpg': '2023 臺北市國小學生家長會聯合會第 22 屆西區理事選舉結果',
-    'images/honors/laosong-president-award.jpg': '2025 老松國小第 80 屆畢業典禮 — 黃崇源榮譽會長頒發榮譽會長獎',
-    'images/honors/laosong-donation-1.jpg': '2025 教師節 — 黃崇源榮譽會長捐贈新台幣伍拾萬元整予老松國小',
-    'images/honors/laosong-donation-2.jpg': '2025 教師節 — 老松國小校長頒發感謝狀予黃崇源榮譽會長',
-    'images/honors/laosong-donation-3.jpg': '2025 老松國小 114 學年度教師節慶祝活動海報',
-    'images/honors/laosong-donation-4.jpg': '2025 老松國小 114 年 9 月份捐款收支明細表',
-    'images/honors/laosong-donation-5.jpg': '2025 黃崇源榮譽會長捐贈老松國小新台幣伍拾萬元整支票',
+    'images/honors/laosong-advisor.webp': '2026 臺北市老松國民小學聘書 — 黃崇源先生榮膺 115 年校務顧問',
+    'images/honors/laosong-honorary-president.webp': '2024 老松國小第 34 屆榮譽會長黃崇源教授參加校慶運動會',
+    'images/honors/laosong-xlh-delegates.webp': '2023 臺北市國小學生家長會聯合會第 22 屆第一次代表大會合照',
+    'images/honors/laosong-xlh-board.webp': '2023 臺北市國小學生家長會聯合會第一次理監事會議',
+    'images/honors/laosong-xlh-election.webp': '2023 臺北市國小學生家長會聯合會第二十二屆常務理事選舉結果',
+    'images/honors/laosong-xlh-west-district.webp': '2023 臺北市國小學生家長會聯合會第 22 屆西區理事選舉結果',
+    'images/honors/laosong-president-award.webp': '2025 老松國小第 80 屆畢業典禮 — 黃崇源榮譽會長頒發榮譽會長獎',
+    'images/honors/laosong-donation-1.webp': '2025 教師節 — 黃崇源榮譽會長捐贈新台幣伍拾萬元整予老松國小',
+    'images/honors/laosong-donation-2.webp': '2025 教師節 — 老松國小校長與黃崇源榮譽會長合影留念',
+    'images/honors/laosong-donation-3.webp': '2025 老松國小 114 學年度教師節慶祝活動海報',
+    'images/honors/laosong-donation-4.webp': '2025 老松國小 114 年 9 月份捐款收支明細表',
+    'images/honors/laosong-donation-5.webp': '2025 黃崇源榮譽會長捐贈老松國小新台幣伍拾萬元整支票',
     'images/honors/laosong-donation-6.webp': '2025 老松國小校長黎季昊頒贈黃崇源榮譽會長惠捐伍拾萬元感謝狀',
-    'images/honors/solomon-newyear.jpg': '2023 所羅門集團新年晚會 — 黃崇源教授擔任獨立董事',
-    'images/honors/solomon-shareholders.jpg': '2023 所羅門股份有限公司 112 年股東常會 — 黃崇源教授擔任獨立董事',
-    'images/honors/ptphs-family.jpg': '2006 中華民國斐陶斐榮譽學會獎 — 黃崇源教授與家人合影於國立交通大學頒獎典禮',
-    'images/honors/ptphs-ceremony.jpg': '2006 中華民國斐陶斐榮譽學會 95 年度榮譽會員授證典禮 — 黃崇源教授',
+    'images/honors/solomon-newyear.webp': '2023 所羅門集團新年晚會 — 黃崇源教授擔任獨立董事',
+    'images/honors/solomon-shareholders.webp': '2023 所羅門股份有限公司 112 年股東常會 — 黃崇源教授擔任獨立董事',
+    'images/honors/ptphs-family.webp': '2006 中華民國斐陶斐榮譽學會獎 — 黃崇源教授與家人合影於國立交通大學頒獎典禮',
+    'images/honors/ptphs-ceremony.webp': '2006 中華民國斐陶斐榮譽學會 95 年度榮譽會員授證典禮 — 黃崇源教授',
 }
 
 
 def extract_image_urls(html_str):
-    """Extract all image URLs from showImageModal('...') calls in HTML."""
-    return re.findall(r"showImageModal\('([^']+)'\)", html_str)
+    """Extract all image URLs from showImageModal('...') calls in HTML.
+    Strips ?query strings so alt-text lookups hit the dict key (e.g. `?v=2` cache-busters)."""
+    urls = re.findall(r"showImageModal\('([^']+)'\)", html_str)
+    return [u.split('?', 1)[0] for u in urls]
 
 
 # ─── Generate Honors HTML ───
