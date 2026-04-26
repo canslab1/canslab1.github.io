@@ -4,7 +4,7 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://canslab1.github.io/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <!-- YouTube interview video -->
@@ -247,6 +247,22 @@
     <image:image>
       <image:loc>https://canslab1.github.io/images/honors/longshan-donation-2.webp</image:loc>
       <image:title>2026 臺北市立龍山國中 — 黃崇源捐資母校 115 學年感謝狀</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/honors/laosong-130-1.webp</image:loc>
+      <image:title>2026 臺北市老松國民小學創校 130 周年校慶 — 黃崇源教授獲頒傑出校友貢獻獎榮譽狀（松小字第 1150005 號）</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/honors/laosong-130-2.webp</image:loc>
+      <image:title>2026 臺北市老松國民小學創校 130 周年校慶 — 黃崇源教授榮獲傑出校友貢獻獎，與校長黎季昊合影</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/honors/laosong-130-3.webp</image:loc>
+      <image:title>2026 臺北市老松國民小學創校 130 周年校慶 — 黃崇源先生獲頒金質獎捐款感謝狀（松小字第 1150006 號）</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://canslab1.github.io/images/honors/laosong-130-4.webp</image:loc>
+      <image:title>2026 臺北市老松國民小學創校 130 周年校慶 — 黃崇源先生榮獲金質獎捐款感謝狀，與校長黎季昊合影</image:title>
     </image:image>
     <image:image>
       <image:loc>https://canslab1.github.io/images/honors/laosong-honorary-president.webp</image:loc>
