@@ -102,7 +102,7 @@ All metadata is designed so search engines and generative AI systems return corr
 | 2 | `ItemList` | 10 SiteNavigationElement entries |
 | 3 | `BreadcrumbList` | 2-level hierarchy: Home → About |
 | 4 | `VideoObject` | YouTube interview (028zexOcXZo, 10m38s) |
-| 5 | `ImageGallery` | 12 ImageObject entries (10 honors photos + 2 software screenshots) |
+| 5 | `ImageGallery` | 19 ImageObject entries (17 honors photos + 2 software screenshots) |
 | 6 | `ItemList` | 42 ScholarlyArticle + 22 ResearchProject entries *(auto-generated)* |
 
 ### Person Entity (`@id: "#person"`) — Key Properties

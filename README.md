@@ -654,7 +654,7 @@ python3 build-prerender.py
 
 | 頁面 | og:type | og:image | JSON-LD 類型 | robots |
 |------|---------|----------|-------------|--------|
-| `index.html` | `profile` | 6 張（大頭照 + Lab logo + 傑出校友 + 杏壇芬芳 + EpiRank + 捐款） | `WebSite` + `ProfilePage` → `Person` + `ResearchOrganization` + 8× `SoftwareSourceCode` + `ItemList`（SiteNavigationElement ×10） + `BreadcrumbList` + `VideoObject` + `ImageGallery`（12 ImageObject） + `ItemList`（42 ScholarlyArticle + 22 ResearchProject） | `index, follow` |
+| `index.html` | `profile` | 6 張（大頭照 + Lab logo + 傑出校友 + 杏壇芬芳 + EpiRank + 捐款） | `WebSite` + `ProfilePage` → `Person` + `ResearchOrganization` + 8× `SoftwareSourceCode` + `ItemList`（SiteNavigationElement ×10） + `BreadcrumbList` + `VideoObject` + `ImageGallery`（19 ImageObject） + `ItemList`（42 ScholarlyArticle + 22 ResearchProject） | `index, follow` |
 | `stories.html` | `website` | `IMG-2.jpg`（大頭照） | `CollectionPage` + `CreativeWorkSeries` | `index, follow` |
 | `404.html` | —（未設定） | —（未設定） | —（無） | `noindex, follow` |
 
@@ -683,7 +683,7 @@ python3 build-prerender.py
 | 2 | `ItemList` | 10 SiteNavigationElement |
 | 3 | `BreadcrumbList` | 11 導覽項目 |
 | 4 | `VideoObject` | YouTube 傑出校友專訪（028zexOcXZo, 10m38s） |
-| 5 | `ImageGallery` | 12 ImageObject（10 榮譽照片 + 2 軟體截圖） |
+| 5 | `ImageGallery` | 19 ImageObject（17 榮譽照片 + 2 軟體截圖） |
 | 6 | `ItemList` | 42 ScholarlyArticle *(auto-generated)* |
 | 7 | `ItemList` | 22 ResearchProject *(auto-generated)* |
 
