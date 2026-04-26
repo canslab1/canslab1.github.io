@@ -286,6 +286,139 @@ main {
     color: #fff;
 }
 
+/* ===== Alumni List Modal ===== */
+.alumni-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    align-items: flex-start;
+    justify-content: center;
+    overflow-y: auto;
+    padding: 40px 16px;
+}
+
+.alumni-modal-close {
+    position: fixed;
+    top: 18px;
+    right: 28px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2.2rem;
+    cursor: pointer;
+    z-index: 10000;
+    line-height: 1;
+}
+
+.alumni-modal-content {
+    background: #fff;
+    border-radius: 12px;
+    max-width: 1100px;
+    width: 100%;
+    color: #222;
+    padding: 28px 32px 36px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.alumni-modal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f3a68;
+    text-align: center;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid #1f3a68;
+}
+
+.alumni-section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 1.4rem;
+    margin-bottom: 0.8rem;
+    padding: 0.45rem 0.9rem;
+    border-radius: 4px;
+}
+
+.alumni-section-title--dist {
+    background: #1f3a68;
+}
+
+.alumni-section-title--out {
+    background: #2980b9;
+}
+
+.alumni-cohort {
+    margin-bottom: 1.1rem;
+}
+
+.alumni-cohort-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1f3a68;
+    background: #eef3fa;
+    border-left: 4px solid #1f3a68;
+    padding: 0.35rem 0.7rem;
+    margin-bottom: 0.5rem;
+}
+
+.alumni-cohort--out .alumni-cohort-title {
+    color: #1d5d8c;
+    background: #e7f1f9;
+    border-left-color: #2980b9;
+}
+
+.alumni-cohort-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 0.5rem;
+}
+
+.alumni-card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fafafa;
+    padding: 0.45rem 0.6rem;
+}
+
+.alumni-card-name {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.15rem;
+}
+
+.alumni-card-meta {
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.alumni-card--self {
+    background: #fff8d6;
+    border-color: #f39c12;
+    box-shadow: 0 0 0 2px rgba(243, 156, 18, 0.25);
+}
+
+.alumni-card--self .alumni-card-name {
+    color: #c0392b;
+}
+
+@media (max-width: 600px) {
+    .alumni-modal-content {
+        padding: 20px 18px 28px;
+    }
+    .alumni-modal-title {
+        font-size: 1.2rem;
+    }
+    .alumni-cohort-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+}
+
 .honors-image {
     display: block;
     margin: 0 auto;

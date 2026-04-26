@@ -1,7 +1,7 @@
 /* ===== Honors Data ===== */
 
 const honorsZh = [
-    '<span class="honors-highlight">中國科技大學</span><br>2024.11 榮獲傑出校友 <button class="interview-btn" onclick="showVideoModal(\'028zexOcXZo\')">專訪</button> <button class="interview-btn" onclick="showImageModal(\'images/honors/cute-alumni-group.webp\')">照片一</button> <button class="interview-btn" onclick="showImageModal(\'images/honors/cute-distinguished-alumni.webp\')">照片二</button><br>2000.11 榮獲優秀校友<br>校史唯一先後獲頒傑出與優秀校友',
+    '<span class="honors-highlight">中國科技大學</span><br>2024.11 榮獲傑出校友 <button class="interview-btn" onclick="showVideoModal(\'028zexOcXZo\')">專訪</button> <button class="interview-btn" onclick="showImageModal(\'images/honors/cute-alumni-group.webp\')">照片一</button> <button class="interview-btn" onclick="showImageModal(\'images/honors/cute-distinguished-alumni.webp\')">照片二</button><br>2000.11 榮獲優秀校友 <button class="interview-btn" onclick="showAlumniListModal()">名單</button><br>校史唯一先後獲頒傑出與優秀校友',
     '<span class="honors-highlight">臺北市杏壇芬芳獎</span><br>2024.11 榮獲臺北市教育局公開表揚 <button class="interview-btn" onclick="showImageModal(\'images/honors/xtff-award.webp\')">照片一</button> <button class="interview-btn" onclick="showImageModal(\'images/honors/xtff-group.webp\')">照片二</button><br>源源不絕無私大愛，守護美好優質老松',
     '<span class="honors-highlight">臺北市立龍山國民中學</span><br>2026.04 捐資母校，獲頒感謝狀 <button class="interview-btn" onclick="showImageModal(\'images/honors/longshan-donation-1.webp\')">照片一</button> <button class="interview-btn" onclick="showImageModal(\'images/honors/longshan-donation-2.webp\')">照片二</button>',
     '<span class="honors-highlight">臺北市立龍山國民中學學生家長會</span><br>113 學年起，擔任學生家長會顧問',
@@ -12,7 +12,7 @@ const honorsZh = [
 ];
 
 const honorsEn = [
-    '<span class="honors-highlight">China University of Technology</span><br>2024.11 Distinguished Alumni Award <button class="interview-btn" onclick="showVideoModal(\'028zexOcXZo\')">Interview</button> <button class="interview-btn" onclick="showImageModal(\'images/honors/cute-alumni-group.webp\')">Photo 1</button> <button class="interview-btn" onclick="showImageModal(\'images/honors/cute-distinguished-alumni.webp\')">Photo 2</button><br>2000.11 Outstanding Alumni Award<br>the only recipient in university history of both Distinguished and Outstanding Alumni honors.',
+    '<span class="honors-highlight">China University of Technology</span><br>2024.11 Distinguished Alumni Award <button class="interview-btn" onclick="showVideoModal(\'028zexOcXZo\')">Interview</button> <button class="interview-btn" onclick="showImageModal(\'images/honors/cute-alumni-group.webp\')">Photo 1</button> <button class="interview-btn" onclick="showImageModal(\'images/honors/cute-distinguished-alumni.webp\')">Photo 2</button><br>2000.11 Outstanding Alumni Award <button class="interview-btn" onclick="showAlumniListModal()">List</button><br>the only recipient in university history of both Distinguished and Outstanding Alumni honors.',
     '<span class="honors-highlight">Taipei Honored Contributors to Education</span><br>2024.11 Publicly commended by the Taipei City Department of Education <button class="interview-btn" onclick="showImageModal(\'images/honors/xtff-award.webp\')">Photo 1</button> <button class="interview-btn" onclick="showImageModal(\'images/honors/xtff-group.webp\')">Photo 2</button><br>Bottomless Devotion to Taipei Lao-Song Elementary School',
     '<span class="honors-highlight">Taipei Municipal Longshan Junior High School</span><br>2026.04 Donated to alma mater; received a Certificate of Appreciation <button class="interview-btn" onclick="showImageModal(\'images/honors/longshan-donation-1.webp\')">Photo 1</button> <button class="interview-btn" onclick="showImageModal(\'images/honors/longshan-donation-2.webp\')">Photo 2</button>',
     '<span class="honors-highlight">Taipei Municipal Longshan Junior High School Parents&#39; Association</span><br>Advisor since the 113th Academic Year',
@@ -657,6 +657,114 @@ function hideVideoModal() {
     if (!overlay || !frame) return;
     frame.src = 'about:blank';
     overlay.style.display = 'none';
+}
+
+/* ===== Alumni List Modal (中國科技大學傑優校友名單) ===== */
+
+const alumniListDistinguished = [
+    { y: 114, t: 13, m: [['孔乃德','80','建築工程科'],['趙柏鈞(趙傳)','71','財政稅務科'],['王志錚','75','建築工程科']] },
+    { y: 113, t: 12, m: [['高明義','106','土木系/研究所'],['黃崇源','79','電子資料處理科'],['林玄紹','91','會計系']] },
+    { y: 112, t: 11, m: [['甄克堅','100','企業管理系/研究所'],['李定壯','72','建築工程科'],['龍雲祥','110','室內設計系/研究所'],['林詠慈','78','企業管理科'],['李秉達','78','國際貿易科'],['呂政達','81','國際貿易科'],['胡志剛','80','電子資料處理科']] },
+    { y: 111, t: 10, m: [['張裕泰','61','公共衛生科'],['康耀忠','70','工商管理科'],['林俊岳','87','建築工程科'],['滕春祐','71','土木工程科'],['楊柏林','111','室內設計系/研究所'],['王偉羽','88','企業管理系']] },
+    { y: 110, t: 9, m: [['邱英浩','81','建築工程科'],['鄭旭峰','101','土木工程系'],['羅道偉','72','企業管理科'],['陳紹元','67','市政管理科']] },
+    { y: 109, t: 8, m: [['盛筱蓉','76','建築工程科'],['郭憲誌','76','建築工程系'],['林瑞興','108','室設系/研究所'],['黃美華','67','工商管理科']] },
+    { y: 108, t: 7, m: [['楊文科','60','公共事業管理科'],['孫偉志','97','建築工程系/研究所']] },
+    { y: 107, t: 6, m: [['林仁宏','72','建築工程科'],['邱銘源','76','建築工程科'],['宋良政','68','公共工程科-建築工程組'],['楊至中','87','土木工程系'],['郭慶輝','88','企業管理系'],['彭世融','104','企業管理系']] },
+    { y: 106, t: 5, m: [['鄭貴元','99','企管系/研究所'],['鄧文廣','66','公共工程科-土木工程組'],['李文勝','78','建築工程科'],['蕭富元','75','企業管理科']] },
+    { y: 105, t: 4, m: [['黃新志','91','土木工程科']] },
+    { y: 104, t: 3, m: [['劉進興','64','公共工程科-土木工程組'],['許東隆','66','公共工程科-土木工程組'],['呂秋慧','67','市政管理科'],['張清雲','68','公共工程科-土木工程組'],['廖憲文','72','財政稅務科']] },
+    { y: 103, t: 2, m: [['李忠恕','72','土木工程科'],['康文昌','102','室內設計系']] },
+    { y: 102, t: 1, m: [['蘇文龍','65','工商管理科'],['許嘉旭','66','工商管理科']] }
+];
+
+const alumniListOutstanding = [
+    { y: 114, t: 38, m: [['王祥安','86','資訊管理科'],['劉泓維','92','土木工程科'],['周宏宇','94','土木工程科'],['李佳珍','101','室內設計系'],['陳家榆','105','數位多媒體設計系'],['陳宣佑','103','研究所/企業管理系']] },
+    { y: 113, t: 37, m: [['陳清楠','85','建築科'],['戴瑋伸','98','室內設計系'],['蔡盈盈','102','觀光與休閒事業管理系'],['陳家翊','104','數位多媒體設計系'],['陳秀美','105','企業管理科']] },
+    { y: 112, t: 36, m: [['林泊妦','98','建築工程系'],['楊閎嵐','87','土木工程科'],['陳仕成','109','視傳系/研究所'],['趙潔澤','109','影視設計系'],['吳菁芳','84','企業管理科'],['蔡岳信','106','企管系/研究所'],['王劍強','111','企業管理系'],['黃運興','105','企管系/研究所'],['陳郁智','103','財務金融系'],['余治明','105','行銷與流通管理系'],['蔡佳哲','108','應用英語系'],['何偉寧','102','觀光與休閒管理系']] },
+    { y: 111, t: 35, m: [['陳錦華','75','公共衛生科'],['江得港','89','會計系'],['周逸達','92','企業管理系'],['江惠樱','76','財政稅務科'],['黃鈺涵','95','土木工程系'],['蔡錦明','108','室設系/研究所'],['李宗憲','111','室設系/研究所'],['張智翔','108','影視設計系'],['陳韻升','82','企業管理系'],['白美珠','96','企業管理系'],['姚懿倩','108','企管系/研究所'],['林惠誼','109','企管系/研究所'],['黃三翁','96','產業經營管理系'],['溫載鉉','97','應用英語系']] },
+    { y: 110, t: 34, m: [['王偉鍵','86','建築工程科'],['李宗霖','75','建築工程科'],['王鏡偉','72','建築工程科'],['朱午潮','72','建築工程科'],['龔文信','86','建築工程科'],['黃冠欽','78','建築工程科'],['林彥穎','86','建築工程科'],['謝炎廷','74','建築工程科'],['李斯緯','85','建築工程科'],['趙璽','109','室設系/研究所'],['呂建宏','105','室設系/研究所'],['鄭嘉云','104','財務金融系'],['羅林炫郁','104','行銷與流通管理系'],['陳姿吟','96','應用英語系'],['沈月惠','99','財政稅務科'],['蕭聖賢','81','會計科']] },
+    { y: 109, t: 33, m: [['黃美玉','72','建築工程科'],['湯潔新','79','建築工程科'],['黃旭任','80','建築工程科'],['盧俐靜','93','建築工程系'],['林樑銓','103','室設系/研究所'],['曹登昌','107','視傳系/研究所'],['黃智城','107','企管系/研究所'],['宋文健','104','行銷與流通管理系'],['游碧菁','87','會計科'],['蔣懷孝','80','電子資料處理科']] },
+    { y: 108, t: 32, m: [['張鎮元','105','土木工程系'],['陳國隆','103','室設系/研究所'],['宋瀚霖','108','室設系/研究所'],['費詩涵','102','數位多媒體設計系'],['黃玉豪','101','資訊管理系'],['黃律萍','102','財務金融系'],['陳彥君','103','行銷與流通管理系'],['王彥方','100','應用英語系'],['彭日明','102','應用英語系'],['王朝偉','101','休閒事業管理系'],['孫杰民','89','財政稅務系'],['崔世川','93','財政稅務系'],['江支杰','81','會計科'],['劉淑瑛','83','會計科']] },
+    { y: 107, t: 31, m: [['吳良治','76','建築工程科'],['李偉基','64','公共工程科-建築工程組'],['林弘壹','79','建築工程科'],['劉榮祿','102','室內設計系'],['陳柏任','94','財政稅務系'],['黃育靖','102','財務金融系'],['李宗嶽','90','會計系'],['陳昱彤','102','觀光與休閒事業管理系']] },
+    { y: 106, t: 30, m: [['王洋紳','83','國際貿易科'],['張清山','72','建築工程科'],['林家僑','102','財政稅務系'],['張原瑄','104','會計系'],['江福雄','98','行銷與流通管理系'],['胡哲瑋','100','電腦與通訊系'],['姜雅玲','105','企業管理系'],['葉挺孝','101','行銷與流通管理系']] },
+    { y: 105, t: 29, m: [['張景榮','87','會計系'],['蔡基財','80','國際貿易科'],['江亞萍','83','國際貿易科'],['邱建華','81','企業管理科'],['陳俊誼','97','行銷與流通管理系'],['羅介韋','96','電腦與通訊系'],['洪德豪','79','建築工程科'],['謝志鴻','78','國際貿易科'],['陳國樑','70','工商管理科'],['王正隆','81','工商管理科']] },
+    { y: 104, t: 28, m: [['李孟奎','63','公共工程科'],['陳珮芝','73','公共衛生科'],['陳郁郁','73','公共衛生科'],['劉兆堂','76','公共衛生科'],['王志仁','80','國際貿易科'],['邱英浩','81','建築工程科'],['林莉婷','86','建築工程科'],['黃新志','91','土木工程科'],['陳偉雄','98','行銷與流通管理系'],['范昌明','102','企業管理系']] },
+    { y: 103, t: 27, m: [['童惠霖','72','財政稅務科'],['吳東昇','67','建築工程科'],['高啟仁','85','財政稅務科'],['黃秀敏','94','會計系']] },
+    { y: 102, t: 26, m: [['孫文駿','85','資訊管理科'],['王怡汝','82','財政稅務科'],['王韻瑾','74','土木工程科'],['童恩霖','72','企業管理系'],['蔡許宏','74','土木工程科']] },
+    { y: 101, t: 25, m: [['林家聲','92','會計系'],['張峰誠','83','資訊管理科'],['李清全','78','建築工程科'],['林宜君','78','建築工程科']] },
+    { y: 100, t: 24, m: [['李雅琳','83','資訊管理科'],['何明諺','87','會計科'],['許秀菁','80','國際貿易科'],['張建陞','96','土木工程系'],['楊智賢','84','財政稅務科']] },
+    { y: 99, t: 23, m: [['陳采青','80','資訊管理系'],['劉嘉雯','83','土木工程科'],['黃宗宸','89','土木工程科'],['顏敏傑','94','建築系/研究所'],['夏至禹','97','室內設計系'],['陳再河','71','土木工程科']] },
+    { y: 98, t: 22, m: [['邱德賢','79','建築工程科'],['吳銘根','63','工商管理科'],['李盛沐','74','建築工程科'],['李家琪','84','會計科'],['陳哲生','78','土木工程科'],['鄭貴元','97','室內設計系']] },
+    { y: 97, t: 21, m: [['楊詩弘','82','建築工程科'],['劉哲維','86','土木工程科'],['藍兆宏','98','運籌管理研究所'],['張淑娟','73','財政稅務科'],['林曉琴','68','財政稅務科']] },
+    { y: 95, t: 19, m: [['鄺麗貞','72','工商管理科'],['林振成','65','土木工程科']] },
+    { y: 94, t: 18, m: [['陳福臨','80','企業管理科'],['游政憲','84','資訊管理科'],['郭偉琪','85','建築工程科']] },
+    { y: 93, t: 17, m: [['陳欽賢','78','電子資料處理科'],['張淮杞','71','工商管理科'],['王武仁','68','土木工程科'],['鐘震寰','88','資訊管理系'],['胡維新','65','工商管理科']] },
+    { y: 92, t: 16, m: [['浦筱芸','66','公共衛生科'],['張雲斐','81','建築工程科'],['謝宗榮','74','建築工程科'],['藍達生','83','企業管理系'],['張益通','80','土木工程科']] },
+    { y: 91, t: 15, m: [['蔡昇達','87','國際貿易科'],['蔡智仁','82','建築工程科'],['蔡碧姬','77','財政稅務科'],['黎煥義','84','會計系'],['張清芳','75','企業管理科']] },
+    { y: 90, t: 14, m: [['吳明芳','79','國際貿易科'],['陳建利','81','企業管理科'],['田玉昶','79','建築工程科'],['賴建華','78','財政稅務科'],['蕭錫利','80','資訊管理科']] },
+    { y: 89, t: 13, m: [['黃素貞','68','工商管理科'],['黃崇源','81','資訊管理科'],['王踐誠','75','建築工程科'],['林婉如','83','財政稅務科'],['蘇茂林','70','土木工程科'],['陳美雪','81','會計科']] },
+    { y: 88, t: 12, m: [['黃啟煌','76','建築工程科'],['侯玉燁','80','會計科'],['賈容','79','財政稅務科'],['林文雄','69','土木工程科'],['朱曉偉','80','資訊管理科'],['吳心恬','81','資訊管理科'],['高維洋','60','工商管理系'],['鄭瑩玉','75','企業管理系']] },
+    { y: 87, t: 11, m: [['江怡瑩','81','國際貿易科'],['楊靜婷','80','會計科'],['吳奕德','74','建築工程科'],['許東隆','66','土木工程科'],['詹文修','71','土木工程科'],['李利成','62','土木工程科'],['郭坤明','76','公共衛生科'],['邵雅倫','77','公共衛生科'],['吳卓俊','82','資訊管理科'],['陳塊','67','工商管理科'],['楊淑如','82','財政稅務科']] },
+    { y: 86, t: 10, m: [['廖憲文','72','財政稅務科'],['蔡晃全','76','建築工程科'],['林啟光','68','建築工程科'],['王正元','65','工商管理科']] },
+    { y: 85, t: 9, m: [['吳宗政','65','市政管理科'],['盧盛豐','70','土木工程科'],['黃漢雄','77','建築工程科'],['陳儷穎','84','資訊管理科'],['徐瑞麒','63','土木工程科'],['劉家財','60','公共事業管理科'],['劉安然','69','建築工程科'],['趙大為','60','市政管理系']] },
+    { y: 84, t: 8, m: [['張清雲','68','公共工程科-土木工程組'],['李振光','63','市政管理科'],['趙國玲','80','資訊管理科'],['楊敏鳳','75','財政稅務科'],['陳致和','74','建築工程科'],['葉欽銘','74','企業管理科']] },
+    { y: 83, t: 7, m: [['張裕泰','61','公共衛生科'],['王聰榮','70','建築工程科'],['蘇文龍','64','工商管理科']] },
+    { y: 82, t: 6, m: [['林武接','66','市政管理科'],['唐玉玫','78','企業管理科'],['劉麗玲','73','財政稅務科']] },
+    { y: 81, t: 5, m: [['周敦庸','71','企業管理科'],['李宜純','72','土木工程科'],['陳昶良','74','建築工程科'],['王順治','75','建築工程科']] },
+    { y: 80, t: 4, m: [['王世燁','64','公共工程科-建築工程組'],['林惠敬','64','公共工程組-建築工程科']] },
+    { y: 79, t: 3, m: [['劉茂賢','61','工商管理科'],['詹儒賢','70','工商管理科'],['溫綉玲','70','建築工程科'],['陳松極','70','市政管理科']] },
+    { y: 78, t: 2, m: [['蕭興臺','70','土木工程組'],['鍾新慶','72','土木工程科']] },
+    { y: 77, t: 1, m: [['陳世雄','59','市政管理科'],['李學銘','59','營建工程科'],['何建中','59','公共事業管理科'],['張清淼','62','公共工程科-建築工程組'],['宋永鑾','60','公共工程科-建築工程組'],['石瓊文','61','市政管理科'],['劉炳發','62','公共工程科-建築工程組']] }
+];
+
+function renderAlumniListContent() {
+    var isEn = document.documentElement.lang === 'en';
+    var SELF = '黃崇源';
+    var titleText = isEn ? 'China University of Technology — Alumni Roster' : '中國科技大學傑優校友名單';
+    var distLabel = isEn ? 'Distinguished Alumni' : '傑出校友';
+    var outLabel = isEn ? 'Outstanding Alumni' : '優秀校友';
+
+    function cohortHTML(c, variant) {
+        var termText = isEn
+            ? 'No. ' + c.t + ' Cohort · ROC ' + c.y
+            : '第 ' + c.t + ' 屆 · 民國 ' + c.y + ' 年度';
+        var cards = c.m.map(function(p) {
+            var selfClass = (p[0] === SELF) ? ' alumni-card--self' : '';
+            return '<div class="alumni-card' + selfClass + '">' +
+                '<div class="alumni-card-name">' + p[0] + '</div>' +
+                '<div class="alumni-card-meta">' + p[1] + ' 年畢 · ' + p[2] + '</div>' +
+                '</div>';
+        }).join('');
+        return '<div class="alumni-cohort alumni-cohort--' + variant + '">' +
+            '<div class="alumni-cohort-title">' + termText + '</div>' +
+            '<div class="alumni-cohort-grid">' + cards + '</div>' +
+            '</div>';
+    }
+
+    var distHTML = alumniListDistinguished.map(function(c) { return cohortHTML(c, 'dist'); }).join('');
+    var outHTML = alumniListOutstanding.map(function(c) { return cohortHTML(c, 'out'); }).join('');
+
+    return '<h2 class="alumni-modal-title">' + titleText + '</h2>' +
+        '<h3 class="alumni-section-title alumni-section-title--dist">' + distLabel + '</h3>' +
+        distHTML +
+        '<h3 class="alumni-section-title alumni-section-title--out">' + outLabel + '</h3>' +
+        outHTML;
+}
+
+function showAlumniListModal() {
+    var overlay = document.getElementById('alumni-list-modal-overlay');
+    var content = document.getElementById('alumni-list-modal-content');
+    if (!overlay || !content) return;
+    content.innerHTML = renderAlumniListContent();
+    overlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function hideAlumniListModal() {
+    var overlay = document.getElementById('alumni-list-modal-overlay');
+    if (!overlay) return;
+    overlay.style.display = 'none';
+    document.body.style.overflow = '';
 }
 
 /* ===== Initialization ===== */
