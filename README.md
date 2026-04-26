@@ -654,7 +654,7 @@ python3 build-prerender.py
 
 | 頁面 | og:type | og:image | JSON-LD 類型 | robots |
 |------|---------|----------|-------------|--------|
-| `index.html` | `profile` | 6 張（大頭照 + Lab logo + 傑出校友 + 杏壇芬芳 + EpiRank + 捐款） | `WebSite` + `ProfilePage` → `Person` + `ResearchOrganization` + 8× `SoftwareSourceCode` + `ItemList`（SiteNavigationElement ×10） + `BreadcrumbList` + `VideoObject` + `ImageGallery`（19 ImageObject） + `ItemList`（42 ScholarlyArticle + 22 ResearchProject） | `index, follow` |
+| `index.html` | `profile` | 7 張（大頭照 + Lab logo + 傑出校友 + 杏壇芬芳 + EpiRank + 老松 130 周年校友獎 + 捐款） | `WebSite` + `ProfilePage` → `Person` + `ResearchOrganization` + 8× `SoftwareSourceCode` + `ItemList`（SiteNavigationElement ×10） + `BreadcrumbList` + `VideoObject` + `ImageGallery`（19 ImageObject） + `ItemList`（42 ScholarlyArticle + 22 ResearchProject） | `index, follow` |
 | `stories.html` | `website` | `IMG-2.jpg`（大頭照） | `CollectionPage` + `CreativeWorkSeries` | `index, follow` |
 | `404.html` | —（未設定） | —（未設定） | —（無） | `noindex, follow` |
 
@@ -697,7 +697,7 @@ python3 build-prerender.py
 - 連結：11 sameAs（Scholar, ORCID, DBLP, Scopus, Semantic Scholar, ResearchGate, Facebook, Google Sites, PURE, GitHub, Wikidata）
 - 隸屬：worksFor, affiliation, memberOf（斐陶斐、小聯會）
 - 聯絡：address, telephone, email
-- 媒體：image, subjectOf（VideoObject）
+- 媒體：image, subjectOf（VideoObject + Event — 2026.04.25 老松 130 周年校慶頒獎典禮，含地點、主辦、表彰對象、4 張照片）
 
 **SoftwareSourceCode**（8 套）：每套含 name, description, codeRepository, programmingLanguage, license, keywords, **image**（4 截圖，共 32 張）
 

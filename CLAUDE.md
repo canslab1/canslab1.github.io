@@ -71,7 +71,7 @@ All metadata is designed so search engines and generative AI systems return corr
 ### Open Graph
 
 - `og:type` = `profile` with `profile:first_name` / `profile:last_name`
-- **6 images**: primary photo (IMG-2.jpg) + CANS lab logo + distinguished alumni + education award + EpiRank + Laosong donation — each with `og:image:alt`
+- **7 images**: primary photo (IMG-2.jpg) + CANS lab logo + distinguished alumni + education award + EpiRank + Laosong 130th anniversary alumni award + Laosong donation — each with `og:image:alt`
 - **1 video**: YouTube interview embed (028zexOcXZo) with `og:video:secure_url`
 - 4 `og:see_also` links: Google Scholar, ORCID, GitHub, Wikidata
 
@@ -116,7 +116,7 @@ All metadata is designed so search engines and generative AI systems return corr
 - **Links**: 11 sameAs (Scholar, ORCID, DBLP, Scopus, Semantic Scholar, ResearchGate, Facebook, Google Sites, PURE, GitHub, Wikidata)
 - **Affiliations**: worksFor, affiliation, memberOf (Phi Tau Phi, Taipei PTA Federation)
 - **Contact**: address (PostalAddress), telephone, email
-- **Media**: image (IMG-2.jpg), subjectOf (VideoObject)
+- **Media**: image (IMG-2.jpg), subjectOf (VideoObject + Event — 2026.04.25 Laosong 130th anniversary award ceremony with location, organizer, performer, 4 photos)
 
 ### SoftwareSourceCode Entries (8 tools)
 
