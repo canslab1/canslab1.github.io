@@ -45,8 +45,8 @@
 - Google Scholar Citations: 994
 - h-index: 18
 - i10-index: 30
-- Total Publications: 170
-- SCI/SSCI/EI Journal Papers: 44
+- Total Publications: 171
+- SCI/SSCI/EI Journal Papers: 45
 - International Conference Papers: 49
 - Book Chapters: 10
 - Domestic Conference Papers: 18
@@ -147,63 +147,64 @@
    - Paper: Applied Geography (2012), DOI: 10.1016/j.apgeog.2012.09.002
    - GitHub: https://github.com/canslab1/AED2
 
-## SCI/SSCI/EI Journal Papers (44 papers)
+## SCI/SSCI/EI Journal Papers (45 papers)
 
 ### Full Professor Period (since 2015.08)
 
-1. Wang S.W., and Huang C.Y.* (2026) A Hybrid SVR-Based Framework for Cryptocurrency Price Forecasting and Strategy Backtesting. Applied Artificial Intelligence, 40(1). DOI: 10.1080/08839514.2026.2612793
-2. Wang S.W., Huang C.Y.*, and Sun C.T. (2022) Multiagent Diffusion and Opinion Dynamics Model Interaction Effects on Controversial Products. IEEE Access, 10, 115252-115270. DOI: 10.1109/ACCESS.2022.3218719
-3. Huang C.Y. and Chin W.C.B. (2020) Distinguishing Arc Types to Understand Complex Network Strength Structures. IEEE Access, 8, 71021-71040. DOI: 10.1109/ACCESS.2020.2986017
-4. Huang C.Y., Chin W.C.B., Fu Y.H., and Tsai Y.S. (2019) Beyond Bond Links in Complex Networks: Local Bridges, Global Bridges and Silk Links. Physica A, 536, 121027. DOI: 10.1016/j.physa.2019.04.263
-5. Huang C.Y., Chin W.C.B., Wen T.H., Fu Y.H., and Tsai Y.S. (2019) EpiRank: Modeling Bidirectional Disease Spread in Asymmetric Commuting Networks. Scientific Reports, 9:5415. DOI: 10.1038/s41598-019-41719-8
-6. Fu Y.H., Huang C.Y.*, and Sun C.T. (2017) A Community Detection Algorithm Using Network Topologies. PLoS One, 12(11), e0187603. DOI: 10.1371/journal.pone.0187603
-7. Lan Y.C., Wen T.H., et al., Huang C.Y. (2017) Indigenous Wildlife Rabies in Taiwan. BioMed Research International, 5491640. DOI: 10.1155/2017/5491640
-8. Fu Y.H., Huang C.Y.*, and Sun C.T. (2016) Using a Two-Phase Evolutionary Framework to Select Multiple Network Spreaders. Physica A, 461, 840-853. DOI: 10.1016/j.physa.2016.06.042
-9. Fu Y.H., Huang C.Y.*, and Sun C.T. (2015) Using Global Diversity and Local Topology Features to Identify Influential Network Spreaders. Physica A, 433, 344-355. DOI: 10.1016/j.physa.2015.03.042
+1. Huang C.Y.*, and Wang S.W. (2026) Using a Mixed Opinion Dynamics and Innovation Diffusion Model to Explore the ‘Best Game No One Played’ Phenomenon. PLoS One. (Accepted at 2026/05/01, SCI, IF: 2.6, Rank: 44/135 [33%] in Multidisciplinary Sciences)
+2. Wang S.W., and Huang C.Y.* (2026) A Hybrid SVR-Based Framework for Cryptocurrency Price Forecasting and Strategy Backtesting. Applied Artificial Intelligence, 40(1). DOI: 10.1080/08839514.2026.2612793
+3. Wang S.W., Huang C.Y.*, and Sun C.T. (2022) Multiagent Diffusion and Opinion Dynamics Model Interaction Effects on Controversial Products. IEEE Access, 10, 115252-115270. DOI: 10.1109/ACCESS.2022.3218719
+4. Huang C.Y. and Chin W.C.B. (2020) Distinguishing Arc Types to Understand Complex Network Strength Structures. IEEE Access, 8, 71021-71040. DOI: 10.1109/ACCESS.2020.2986017
+5. Huang C.Y., Chin W.C.B., Fu Y.H., and Tsai Y.S. (2019) Beyond Bond Links in Complex Networks: Local Bridges, Global Bridges and Silk Links. Physica A, 536, 121027. DOI: 10.1016/j.physa.2019.04.263
+6. Huang C.Y., Chin W.C.B., Wen T.H., Fu Y.H., and Tsai Y.S. (2019) EpiRank: Modeling Bidirectional Disease Spread in Asymmetric Commuting Networks. Scientific Reports, 9:5415. DOI: 10.1038/s41598-019-41719-8
+7. Fu Y.H., Huang C.Y.*, and Sun C.T. (2017) A Community Detection Algorithm Using Network Topologies. PLoS One, 12(11), e0187603. DOI: 10.1371/journal.pone.0187603
+8. Lan Y.C., Wen T.H., et al., Huang C.Y. (2017) Indigenous Wildlife Rabies in Taiwan. BioMed Research International, 5491640. DOI: 10.1155/2017/5491640
+9. Fu Y.H., Huang C.Y.*, and Sun C.T. (2016) Using a Two-Phase Evolutionary Framework to Select Multiple Network Spreaders. Physica A, 461, 840-853. DOI: 10.1016/j.physa.2016.06.042
+10. Fu Y.H., Huang C.Y.*, and Sun C.T. (2015) Using Global Diversity and Local Topology Features to Identify Influential Network Spreaders. Physica A, 433, 344-355. DOI: 10.1016/j.physa.2015.03.042
 
 ### Associate Professor Period
 
-10. Huang C.Y. (2015) An Agent-based Epidemic Simulation of Social Behaviors Affecting HIV Transmission. Computational and Mathematical Methods in Medicine, 867264. DOI: 10.1155/2015/867264
-11. Lee C.L., Huang C.Y.*, et al. (2014) Impact of Vehicular Networks on Emergency Medical Services. IJERPH, 11(11), 11348-11370. DOI: 10.3390/ijerph111111348
-12. Fu Y.H., Huang C.Y.*, and Sun C.T. (2014) Identifying Super-Spreader Nodes in Complex Networks. Mathematical Problems in Engineering, 675713. DOI: 10.1155/2015/675713
-13. Huang C.Y. and Wen T.H. (2014) Optimal Installation Locations for Automated External Defibrillators. Computational and Mathematical Methods in Medicine, 241435. DOI: 10.1155/2014/241435
-14. Huang C.Y. and Lee C.L. (2014) Influences of Agents with Self-Reputation Awareness in Evolutionary Spatial IPD. PLoS One, 9(6), e99841. DOI: 10.1371/journal.pone.0099841
-15. Huang C.Y. and Wen T.H. (2014) A Novel Private Attitude and Public Opinion Dynamics Model. JASSS, 17(3), 8. DOI: 10.18564/jasss.2517
-16. Wang S.W., Huang C.Y.*, and Sun C.T. (2014) Modeling Self-perception Agents in an Opinion Dynamics Propagation Society. Simulation, 90(3), 238-248. DOI: 10.1177/0037549713515029
-17. Wang S.W., Huang C.Y.*, and Sun C.T. (2014) Smart Agents with Adjusting Self-Reputation Capability. JISE, 30(2), 313-332.
-18. Huang C.Y.*, Wen T.H., and Tsai Y.S. (2013) FLUed: A Four-Layer Model for Simulating Epidemic Dynamics. Journal of Applied Mathematics, 325816. DOI: 10.1155/2013/325816
-19. Huang C.Y.*, Lee C.L., Wen T.H., and Sun C.T. (2013) A Computer Virus Spreading Model Based on Resource Limitations. JSS, 86(3), 801-808. DOI: 10.1016/j.jss.2012.11.027
-20. Huang C.Y.* and Sun C.T. (2012) Effects of Resource Limitations on Computer Virus Epidemic Dynamics. Discrete Dynamics in Nature and Society, 473136. DOI: 10.1155/2012/473136
-21. Tsai Y.S., Ko P.C.I., Huang C.Y., and Wen T.H. (2012) Optimizing Locations for AEDs in Urban Public Streets. Applied Geography, 35(1-2), 394-404. DOI: 10.1016/j.apgeog.2012.09.002
-22. Huang C.Y.*, Tzou P.J., and Sun C.T. (2011) Collective Opinion and Attitude Dynamics. Simulation, 87(10), 875-892. DOI: 10.1177/0037549710387940
-23. Huang C.Y.*, Wang S.W., and Sun C.T. (2011) Using Self-Aware Agents to Analyze Public Self-Consciousness in IPD. Simulation, 87(7), 600-615. DOI: 10.1177/0037549710391822
-24. Tsai Y.S., Huang C.Y., Wen T.H., Sun C.T., and Yen M.Y. (2011) Integrating Epidemic Dynamics with Daily Commuting Networks. Simulation, 87(5), 385-405. DOI: 10.1177/0037549710379481
+11. Huang C.Y. (2015) An Agent-based Epidemic Simulation of Social Behaviors Affecting HIV Transmission. Computational and Mathematical Methods in Medicine, 867264. DOI: 10.1155/2015/867264
+12. Lee C.L., Huang C.Y.*, et al. (2014) Impact of Vehicular Networks on Emergency Medical Services. IJERPH, 11(11), 11348-11370. DOI: 10.3390/ijerph111111348
+13. Fu Y.H., Huang C.Y.*, and Sun C.T. (2014) Identifying Super-Spreader Nodes in Complex Networks. Mathematical Problems in Engineering, 675713. DOI: 10.1155/2015/675713
+14. Huang C.Y. and Wen T.H. (2014) Optimal Installation Locations for Automated External Defibrillators. Computational and Mathematical Methods in Medicine, 241435. DOI: 10.1155/2014/241435
+15. Huang C.Y. and Lee C.L. (2014) Influences of Agents with Self-Reputation Awareness in Evolutionary Spatial IPD. PLoS One, 9(6), e99841. DOI: 10.1371/journal.pone.0099841
+16. Huang C.Y. and Wen T.H. (2014) A Novel Private Attitude and Public Opinion Dynamics Model. JASSS, 17(3), 8. DOI: 10.18564/jasss.2517
+17. Wang S.W., Huang C.Y.*, and Sun C.T. (2014) Modeling Self-perception Agents in an Opinion Dynamics Propagation Society. Simulation, 90(3), 238-248. DOI: 10.1177/0037549713515029
+18. Wang S.W., Huang C.Y.*, and Sun C.T. (2014) Smart Agents with Adjusting Self-Reputation Capability. JISE, 30(2), 313-332.
+19. Huang C.Y.*, Wen T.H., and Tsai Y.S. (2013) FLUed: A Four-Layer Model for Simulating Epidemic Dynamics. Journal of Applied Mathematics, 325816. DOI: 10.1155/2013/325816
+20. Huang C.Y.*, Lee C.L., Wen T.H., and Sun C.T. (2013) A Computer Virus Spreading Model Based on Resource Limitations. JSS, 86(3), 801-808. DOI: 10.1016/j.jss.2012.11.027
+21. Huang C.Y.* and Sun C.T. (2012) Effects of Resource Limitations on Computer Virus Epidemic Dynamics. Discrete Dynamics in Nature and Society, 473136. DOI: 10.1155/2012/473136
+22. Tsai Y.S., Ko P.C.I., Huang C.Y., and Wen T.H. (2012) Optimizing Locations for AEDs in Urban Public Streets. Applied Geography, 35(1-2), 394-404. DOI: 10.1016/j.apgeog.2012.09.002
+23. Huang C.Y.*, Tzou P.J., and Sun C.T. (2011) Collective Opinion and Attitude Dynamics. Simulation, 87(10), 875-892. DOI: 10.1177/0037549710387940
+24. Huang C.Y.*, Wang S.W., and Sun C.T. (2011) Using Self-Aware Agents to Analyze Public Self-Consciousness in IPD. Simulation, 87(7), 600-615. DOI: 10.1177/0037549710391822
+25. Tsai Y.S., Huang C.Y., Wen T.H., Sun C.T., and Yen M.Y. (2011) Integrating Epidemic Dynamics with Daily Commuting Networks. Simulation, 87(5), 385-405. DOI: 10.1177/0037549710379481
 
 ### Assistant Professor Period
 
-25. Tsai Y.S., Huang C.Y.*, and Sun C.T. (2011) Response to Wilson's Note. Simulation, 87(3), 267-270. DOI: 10.1177/0037549709351543
-26. Huang C.Y., Tsai Y.S., and Wen T.H. (2010) Simulations for Epidemiology and Public Health Education. Journal of Simulation, 4(1), 68-80. DOI: 10.1057/jos.2009.13
-27. Huang C.Y., Tsai Y.S., and Wen T.H. (2010) A Network-Based Simulation Architecture for Studying Epidemic Dynamics. Simulation, 86(5/6), 351-368. DOI: 10.1177/0037549709340733
-28. Tsai Y.S. and Huang C.Y.* (2010) Effects of Resources and Costs on Diffusion Dynamics. IJIIDS, 4(1), 19-42. DOI: 10.1504/IJIIDS.2010.031760
-29. Huang C.Y. and Tsai Y.S. (2010) Effects of Friend-Making Resources/Costs on Acquaintance Networks. Physica A, 389(3), 604-622. DOI: 10.1016/j.physa.2009.09.038
-30. Huang C.Y. et al. (2009) Influences of Resource Limitations and Transmission Costs on Epidemic Simulation. Simulation, 85(3), 205-219. DOI: 10.1177/0037549709103775
-31. Hsieh J.L., Huang C.Y.*, et al. (2009) Learning to Build Network-Oriented Epidemic Simulation Models. IJSPM, 5(1), 31-41. DOI: 10.1504/ijspm.2009.025825
-32. Huang C.Y. (2009) Teaching Epidemic Simulation and Policy-Making to Novice Researchers. IJIM, 36(1), 107-117.
-33. Cheng C.Y., Huang C.Y.*, and Sun C.T. (2008) Mining Bridge and Brick Motifs from Complex Biological Networks. IEEE Trans. SMC-B, 38(1), 17-24. DOI: 10.1109/TSMCB.2007.908842
-34. Huang C.Y., Cheng C.Y., and Sun C.T. (2007) Bridge and Brick Network Motifs: Identifying Significant Building Blocks. Artificial Intelligence in Medicine, 41(2), 117-127. DOI: 10.1016/j.artmed.2007.07.006
-35. Huang C.Y., Sun C.T., Cheng C.Y., and Hsieh J.L. (2007) Bridge and Brick Motifs in Complex Networks. Physica A, 377(1), 340-350. DOI: 10.1016/j.physa.2006.11.014
-36. Hsieh J.L., Sun C.T., Kao Y.M.G., and Huang C.Y.* (2006) Teaching through Simulation: Epidemic Dynamics. Simulation, 82(11), 731-759. DOI: 10.1177/0037549706074487
-37. Chen D.J., Tsai M.J., and Huang C.Y.* (2006) UI Design Patterns Generator for Pervasive Device. WSEAS Trans. Computers, 5(9), 2114-2121.
-38. Chen D.J., Tsai M.J., and Huang C.Y.* (2006) Visual Based Software Construction. WSEAS Trans. Systems, 5(8), 1881-1888.
+26. Tsai Y.S., Huang C.Y.*, and Sun C.T. (2011) Response to Wilson's Note. Simulation, 87(3), 267-270. DOI: 10.1177/0037549709351543
+27. Huang C.Y., Tsai Y.S., and Wen T.H. (2010) Simulations for Epidemiology and Public Health Education. Journal of Simulation, 4(1), 68-80. DOI: 10.1057/jos.2009.13
+28. Huang C.Y., Tsai Y.S., and Wen T.H. (2010) A Network-Based Simulation Architecture for Studying Epidemic Dynamics. Simulation, 86(5/6), 351-368. DOI: 10.1177/0037549709340733
+29. Tsai Y.S. and Huang C.Y.* (2010) Effects of Resources and Costs on Diffusion Dynamics. IJIIDS, 4(1), 19-42. DOI: 10.1504/IJIIDS.2010.031760
+30. Huang C.Y. and Tsai Y.S. (2010) Effects of Friend-Making Resources/Costs on Acquaintance Networks. Physica A, 389(3), 604-622. DOI: 10.1016/j.physa.2009.09.038
+31. Huang C.Y. et al. (2009) Influences of Resource Limitations and Transmission Costs on Epidemic Simulation. Simulation, 85(3), 205-219. DOI: 10.1177/0037549709103775
+32. Hsieh J.L., Huang C.Y.*, et al. (2009) Learning to Build Network-Oriented Epidemic Simulation Models. IJSPM, 5(1), 31-41. DOI: 10.1504/ijspm.2009.025825
+33. Huang C.Y. (2009) Teaching Epidemic Simulation and Policy-Making to Novice Researchers. IJIM, 36(1), 107-117.
+34. Cheng C.Y., Huang C.Y.*, and Sun C.T. (2008) Mining Bridge and Brick Motifs from Complex Biological Networks. IEEE Trans. SMC-B, 38(1), 17-24. DOI: 10.1109/TSMCB.2007.908842
+35. Huang C.Y., Cheng C.Y., and Sun C.T. (2007) Bridge and Brick Network Motifs: Identifying Significant Building Blocks. Artificial Intelligence in Medicine, 41(2), 117-127. DOI: 10.1016/j.artmed.2007.07.006
+36. Huang C.Y., Sun C.T., Cheng C.Y., and Hsieh J.L. (2007) Bridge and Brick Motifs in Complex Networks. Physica A, 377(1), 340-350. DOI: 10.1016/j.physa.2006.11.014
+37. Hsieh J.L., Sun C.T., Kao Y.M.G., and Huang C.Y.* (2006) Teaching through Simulation: Epidemic Dynamics. Simulation, 82(11), 731-759. DOI: 10.1177/0037549706074487
+38. Chen D.J., Tsai M.J., and Huang C.Y.* (2006) UI Design Patterns Generator for Pervasive Device. WSEAS Trans. Computers, 5(9), 2114-2121.
+39. Chen D.J., Tsai M.J., and Huang C.Y.* (2006) Visual Based Software Construction. WSEAS Trans. Systems, 5(8), 1881-1888.
 
 ### PhD Student & Lecturer Period
 
-39. Huang C.Y., Sun C.T., and Chu Y.W. (2006) A Co-adaptive Approach to XCS Classifier Systems. WSEAS Trans. Systems, 5(2), 388-394.
-40. Chu Y.W., Sun C.T., and Huang C.Y.* (2006) Regularity of Protein Secondary Structures. WSEAS Trans. Systems, 5(2), 380-385.
-41. Huang C.Y. et al. (2006) Teaching Epidemic and Public Health Policies through Simulation. WSEAS Trans. Info Sci., 3(5), 899-904.
-42. Huang C.Y., Sun C.T., Hsieh J.L., Chen Y.M.A., and Lin H. (2005) A Novel Small-World Model: Using Social Mirror Identities for Epidemic Simulations. Simulation, 81(10), 671-699. DOI: 10.1177/0037549705061519
-43. Huang C.Y., Sun C.T., and Lin H.C. (2005) Influence of Local Information on Social Simulation in Small-World Network Models. JASSS, 8(4). https://www.jasss.org/8/4/8.html
-44. Huang C.Y., Sun C.T., Hsieh J.L., and Lin H. (2004) Simulating SARS: Small-World Epidemiological Modeling and Public Health Policy Assessments. JASSS, 7(4). https://jasss.soc.surrey.ac.uk/7/4/2.html
+40. Huang C.Y., Sun C.T., and Chu Y.W. (2006) A Co-adaptive Approach to XCS Classifier Systems. WSEAS Trans. Systems, 5(2), 388-394.
+41. Chu Y.W., Sun C.T., and Huang C.Y.* (2006) Regularity of Protein Secondary Structures. WSEAS Trans. Systems, 5(2), 380-385.
+42. Huang C.Y. et al. (2006) Teaching Epidemic and Public Health Policies through Simulation. WSEAS Trans. Info Sci., 3(5), 899-904.
+43. Huang C.Y., Sun C.T., Hsieh J.L., Chen Y.M.A., and Lin H. (2005) A Novel Small-World Model: Using Social Mirror Identities for Epidemic Simulations. Simulation, 81(10), 671-699. DOI: 10.1177/0037549705061519
+44. Huang C.Y., Sun C.T., and Lin H.C. (2005) Influence of Local Information on Social Simulation in Small-World Network Models. JASSS, 8(4). https://www.jasss.org/8/4/8.html
+45. Huang C.Y., Sun C.T., Hsieh J.L., and Lin H. (2004) Simulating SARS: Small-World Epidemiological Modeling and Public Health Policy Assessments. JASSS, 7(4). https://jasss.soc.surrey.ac.uk/7/4/2.html
 
 ## Research Projects (37 total)
 

@@ -4,7 +4,7 @@
  */
 
 const statsZh = [
-    { number: '44篇',   label: '期刊論文', url: 'https://pure.lib.cgu.edu.tw/zh/persons/chung-yuan-huang-2/publications/?type=%2Fdk%2Fatira%2Fpure%2Fresearchoutput%2Fresearchoutputtypes%2Fcontributiontojournal%2Farticle' },
+    { number: '45篇',   label: '期刊論文', url: 'https://pure.lib.cgu.edu.tw/zh/persons/chung-yuan-huang-2/publications/?type=%2Fdk%2Fatira%2Fpure%2Fresearchoutput%2Fresearchoutputtypes%2Fcontributiontojournal%2Farticle' },
     { number: '49篇',   label: '國際研討會', url: 'https://pure.lib.cgu.edu.tw/zh/persons/chung-yuan-huang-2/publications/?type=%2Fdk%2Fatira%2Fpure%2Fresearchoutput%2Fresearchoutputtypes%2Fcontributiontoconference%2Finternational_conference_report' },
     { number: '10篇',   label: '專書專章', url: 'https://canslab1.github.io/CV.pdf' },
     { number: '18篇',   label: '國內研討會', url: 'https://canslab1.github.io/CV.pdf' },
@@ -35,7 +35,7 @@ const statsZh = [
 ];
 
 const statsEn = [
-    { number: '44',   label: 'Journal Papers', url: 'https://canslab1.github.io/CV.pdf#page=21' },
+    { number: '45',   label: 'Journal Papers', url: 'https://canslab1.github.io/CV.pdf#page=21' },
     { number: '49',   label: "Int'l Conferences", url: 'https://canslab1.github.io/CV.pdf#page=24' },
     { number: '10',   label: 'Book Chapters', url: 'https://canslab1.github.io/CV.pdf#page=27' },
     { number: '18',   label: 'Dom. Conferences', url: 'https://canslab1.github.io/CV.pdf#page=29' },

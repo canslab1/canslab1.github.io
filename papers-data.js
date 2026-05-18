@@ -14,6 +14,7 @@ const papersData = [
                 titleZh: '長庚大學資訊工程學系正教授時期（2015.08 開始）',
                 titleEn: 'Full Professor, Dept. of CSIE, Chang Gung University (since 2015.08)',
                 items: [
+            'Huang C.Y.*, and Wang S.W. (2026) Using a Mixed Opinion Dynamics and Innovation Diffusion Model to Explore the ‘Best Game No One Played’ Phenomenon. PLoS One. (Accepted at 2026/05/01, SCI, IF: 2.6, Rank: 44/135 [33%] in Multidisciplinary Sciences)',
             'Wang S.W., and Huang C.Y.* (2026) A Hybrid SVR-Based Framework for Cryptocurrency Price Forecasting and Strategy Backtesting. Applied Artificial Intelligence, 40(1), e2612793. https://doi.org/10.1080/08839514.2026.2612793. (SCI, IF: 4.3, Rank: 105/366 [27%] in Engineering, Electrical & Electronic)',
             'Wang S.W., Huang C.Y.*, and Sun C.T. (2022) Multiagent Diffusion and Opinion Dynamics Model Interaction Effects on Controversial Products. IEEE Access, 10, 115252-115270. https://doi.org/10.1109/ACCESS.2022.3218719. (SCI, IF: 4.098, Rank: 52/266 [20%] in Engineering, Electrical & Electronic)',
             'Huang C.Y. and Chin W.C.B. (2020) Distinguishing Arc Types to Understand Complex Network Strength Structures and Hierarchical Connectivity Patterns. IEEE Access, 8, 71021-71040. https://doi.org/10.1109/ACCESS.2020.2986017. (SCI, IF: 4.098, Rank: 52/266 [20%] in Engineering, Electrical & Electronic)',

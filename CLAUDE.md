@@ -143,15 +143,15 @@ Each includes: name, alternateName, description, codeRepository, programmingLang
 - When adding new software, also update: `@graph` SoftwareSourceCode entry (with 4 `image` URLs), `llms.txt`, `llms-full.txt`
 - After any push, send IndexNow notification: `POST https://api.indexnow.org/indexnow` with key `d22a81b36ccb45e085fe6679a822df52`
 
-## Data Counts (as of 2026-04)
+## Data Counts (as of 2026-05)
 
 These appear in meta descriptions, JSON-LD, and bio text — keep them consistent when updating:
 
 | Metric | Value |
 |--------|-------|
-| Journal papers (SCI/SSCI) | 44 |
+| Journal papers (SCI/SSCI) | 45 |
 | International conference papers | 49 |
-| Total publications | 170 |
+| Total publications | 171 |
 | h-index | 18 |
 | Citations | 994 |
 | Open-source software | 8 |
