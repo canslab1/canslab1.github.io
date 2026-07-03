@@ -195,7 +195,7 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 ### 區段三：學術數據卡片（綜覽）
 
 直接顯示 28 張數據卡片（無標題、無綠線分隔），涵蓋：
-- 期刊論文：44 篇
+- 期刊論文：45 篇
 - 國際研討會：49 篇
 - 專書專章：10 篇
 - 國內研討會：18 篇
@@ -637,7 +637,7 @@ python3 build-prerender.py
 | robots | `noindex, follow`（不索引但允許追蹤連結） |
 | 元素 | 教授大頭照、404 錯誤碼、提示訊息 |
 | 導覽連結 | 「回首頁」（`/`）、「閱讀家族故事」（`stories.html`） |
-| 背景圖片 | Header 使用 Unsplash 外部圖片（數位科技主題） |
+| 背景圖片 | Header 使用自架圖片 `images/hero-bg.webp`（數位科技主題） |
 | 分析追蹤 | Microsoft Clarity（ID: `rzlnthqbys`），以行內腳本載入 |
 | 字型 | `system-ui` 系統字型堆疊（無外部字型依賴） |
 | 響應式 | ≤768px 自動調整標題與錯誤碼字級 |
@@ -654,7 +654,7 @@ python3 build-prerender.py
 
 | 頁面 | og:type | og:image | JSON-LD 類型 | robots |
 |------|---------|----------|-------------|--------|
-| `index.html` | `profile` | 7 張（大頭照 + Lab logo + 傑出校友 + 杏壇芬芳 + EpiRank + 老松 130 周年校友獎 + 捐款） | `WebSite` + `ProfilePage` → `Person` + `ResearchOrganization` + 8× `SoftwareSourceCode` + `ItemList`（SiteNavigationElement ×10） + `BreadcrumbList` + `VideoObject` + `ImageGallery`（19 ImageObject） + `ItemList`（42 ScholarlyArticle + 22 ResearchProject） | `index, follow` |
+| `index.html` | `profile` | 8 張（社群分享卡 + 大頭照 + Lab logo + 傑出校友 + 杏壇芬芳 + EpiRank + 老松 130 周年校友獎 + 捐款） | `WebSite` + `ProfilePage` → `Person` + `ResearchOrganization` + 8× `SoftwareSourceCode` + `ItemList`（SiteNavigationElement ×10） + `BreadcrumbList` + `VideoObject` + `ImageGallery`（19 ImageObject） + `ItemList`（45 ScholarlyArticle + 22 ResearchProject） | `index, follow` |
 | `stories.html` | `website` | `IMG-2.jpg`（大頭照） | `CollectionPage` + `CreativeWorkSeries` | `index, follow` |
 | `404.html` | —（未設定） | —（未設定） | —（無） | `noindex, follow` |
 
@@ -681,11 +681,10 @@ python3 build-prerender.py
 |-------|------|------|
 | 1 | `@graph`（11 items） | WebSite + ProfilePage/Person + ResearchOrganization + 8 SoftwareSourceCode |
 | 2 | `ItemList` | 10 SiteNavigationElement |
-| 3 | `BreadcrumbList` | 11 導覽項目 |
+| 3 | `BreadcrumbList` | 2 層級（首頁 → 介紹） |
 | 4 | `VideoObject` | YouTube 傑出校友專訪（028zexOcXZo, 10m38s） |
 | 5 | `ImageGallery` | 19 ImageObject（17 榮譽照片 + 2 軟體截圖） |
-| 6 | `ItemList` | 42 ScholarlyArticle *(auto-generated)* |
-| 7 | `ItemList` | 22 ResearchProject *(auto-generated)* |
+| 6 | `ItemList` | 45 ScholarlyArticle + 22 ResearchProject *(auto-generated)* |
 
 **Person 實體**（`@id: "#person"`）主要屬性：
 - 身份：name, alternateName（7 變體）, birthDate, birthPlace, gender
@@ -693,7 +692,7 @@ python3 build-prerender.py
 - 學歷：3 EducationalOccupationalCredential（博士/碩士/學士）
 - 專長：8 DefinedTerm（含中文 alternateName）
 - 獎項：4 結構化物件（含中文、日期、描述）
-- 學術指標：interactionStatistic（994 引用）, additionalProperty（h-index 18, i10-index 30, 170 論文, 44 SCI）
+- 學術指標：additionalProperty（Citations 994, h-index 18, i10-index 30, 171 論文, 45 SCI）
 - 連結：11 sameAs（Scholar, ORCID, DBLP, Scopus, Semantic Scholar, ResearchGate, Facebook, Google Sites, PURE, GitHub, Wikidata）
 - 隸屬：worksFor, affiliation, memberOf（斐陶斐、小聯會）
 - 聯絡：address, telephone, email
@@ -709,7 +708,7 @@ python3 build-prerender.py
 
 ### llms.txt / llms-full.txt
 - **`llms.txt`**：摘要版 AI 可讀檔案（姓名、職稱、研究領域、學術指標、獲獎、連結、網站結構）
-- **`llms-full.txt`**：完整版（含 44 篇 SCI/SSCI 論文 + DOI、37 件計畫 + 計畫編號、8 套軟體、全部獎項、媒體投書、生涯時間軸、聯絡方式）
+- **`llms-full.txt`**：完整版（含 45 篇 SCI/SSCI 論文 + DOI、37 件計畫 + 計畫編號、8 套軟體、全部獎項、媒體投書、生涯時間軸、聯絡方式）
 
 ### robots.txt
 明確允許 24 個 AI 爬蟲存取：
@@ -924,7 +923,7 @@ README 渲染腳本，功能：
 |------|------|---------|------|
 | **Ahrefs Analytics** | 流量分析 | 各頁面 `<head>`（`analytics.ahrefs.com/analytics.js`） | SEO 排名追蹤與流量分析 |
 | **Microsoft Clarity** | 行為分析 | `shared.js` 底部 / `404.html` 行內腳本（`clarity.ms`，ID: `rzlnthqbys`） | 熱力圖、點擊分析、錄影回放 |
-| **Unsplash 圖片** | 背景圖片 | `shared.css` header / `stories.css` header / `404.html` header（`images.unsplash.com`） | 數位科技主題背景圖 |
+| **背景圖片（自架）** | 背景圖片 | `shared.css` header / `stories.css` header / `404.html` header（`images/hero-bg.webp`） | 數位科技主題背景圖（已自架，無外部依賴） |
 | **ORCiD logo** | 外部圖片 | Footer（`orcid.org/assets/vectors/orcid.logo.icon.svg`） | ORCiD 官方 SVG logo |
 
 ### 字型策略
@@ -935,7 +934,6 @@ README 渲染腳本，功能：
 ### DNS 預連接
 各頁面 `<head>` 中設定 DNS 預取與預連接，減少第三方資源延遲：
 - `dns-prefetch`：`www.clarity.ms`（動態載入，需提前解析）
-- `preconnect`：`images.unsplash.com`
 
 ## 無障礙設計（Accessibility）
 

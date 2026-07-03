@@ -4,3 +4,8 @@
 # Claude Code
 .claude/
 IMG-2-original.jpg
+傑優校友名單.pdf
+
+# Python
+__pycache__/
+*.pyc

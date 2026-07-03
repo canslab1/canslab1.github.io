@@ -4,7 +4,7 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://canslab1.github.io/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <!-- YouTube interview video -->
@@ -195,6 +195,10 @@
       <image:title>Prof. Chung-Yuan Huang (黃崇源教授) — Profile Photo</image:title>
     </image:image>
     <image:image>
+      <image:loc>https://canslab1.github.io/images/og-share.jpg</image:loc>
+      <image:title>Prof. Chung-Yuan Huang (黃崇源教授) — Social Share Card</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://canslab1.github.io/images/CANS.webp</image:loc>
       <image:title>CANS Lab logo — Complex Adaptive Networks and Systems Laboratory</image:title>
     </image:image>
@@ -329,6 +333,43 @@
       <image:title>2006 中華民國斐陶斐榮譽學會 95 年度榮譽會員授證典禮 — 黃崇源教授</image:title>
     </image:image>
   </url>
+  <!-- Paper PDFs -->
+  <url>
+    <loc>https://canslab1.github.io/papers/Journal%20Paper-17.pdf</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://canslab1.github.io/papers/Journal%20Paper-37.pdf</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://canslab1.github.io/papers/Journal%20Paper-38.pdf</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://canslab1.github.io/papers/Journal%20Paper-39.pdf</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://canslab1.github.io/papers/Journal%20Paper-40.pdf</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://canslab1.github.io/papers/Journal%20Paper-41.pdf</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.5</priority>
+  </url>
   <!-- Article PDFs -->
   <url>
     <loc>https://canslab1.github.io/articles/%E8%80%81%E6%9D%BE%E5%85%92%E7%AB%A5114-45.pdf</loc>
@@ -368,7 +409,7 @@
   </url>
   <url>
     <loc>https://canslab1.github.io/stories.html</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -386,7 +427,7 @@
   </url>
   <url>
     <loc>https://canslab1.github.io/CV.pdf</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
@@ -398,13 +439,13 @@
   </url>
   <url>
     <loc>https://canslab1.github.io/feed.xml</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://canslab1.github.io/humans.txt</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

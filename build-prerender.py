@@ -255,10 +255,38 @@ def format_paper_text(text):
 
     html = re.sub(r'(https?://[^\s,)]+[^\s,).])', r'<a href="\1" target="_blank" rel="noopener noreferrer">\1</a>', html)
     html = re.sub(r'doi:(10\.\d{4,}/[^\s,)]+[^\s,).])', r'<a href="https://doi.org/\1" target="_blank" rel="noopener noreferrer">doi:\1</a>', html)
+    html = re.sub(r'\[PDF:([^\]]+)\]', r'<a href="\1" target="_blank" rel="noopener noreferrer">[PDF]</a>', html)
 
     html = re.sub(r'\(([^()]*(?:SCI|SSCI|SCIE|EI)[^()]*)\)\s*\.?\s*$', r'<span class="paper-index">(\1)</span>', html)
 
     return html
+
+
+# ─── Idempotent container replacement ───
+
+def replace_container_inner(html, open_tag, new_inner, tag_name):
+    """Replace the inner content of a container, whether it is empty or already
+    filled by a previous run, by depth-matching nested tags of the same name."""
+    start = html.find(open_tag)
+    if start < 0:
+        return html, False
+    inner_start = start + len(open_tag)
+    open_re = re.compile('<' + tag_name + r'[\s>]')
+    close_tag = '</' + tag_name + '>'
+    depth, i = 1, inner_start
+    while True:
+        m = open_re.search(html, i)
+        c = html.find(close_tag, i)
+        if c < 0:
+            return html, False
+        if m and m.start() < c:
+            depth += 1
+            i = m.end()
+        else:
+            depth -= 1
+            if depth == 0:
+                return html[:inner_start] + new_inner + html[c:], True
+            i = c + len(close_tag)
 
 
 # ─── Generate Papers HTML ───
@@ -566,59 +594,21 @@ def main():
     with open(index_path, 'r', encoding='utf-8') as f:
         index_html = f.read()
 
-    # Replace papers container
-    old_papers = '<div id="papers-container"></div>'
-    new_papers = '<div id="papers-container">\n' + papers_html + '\n            </div>'
-    if old_papers in index_html:
-        index_html = index_html.replace(old_papers, new_papers)
-        print("\n✅ Papers container replaced")
-    else:
-        print("\n⚠️  Papers container not found (already replaced?)")
-
-    # Replace projects container
-    old_projects = '<div id="projects-container"></div>'
-    new_projects = '<div id="projects-container">\n' + projects_html + '\n            </div>'
-    if old_projects in index_html:
-        index_html = index_html.replace(old_projects, new_projects)
-        print("✅ Projects container replaced")
-    else:
-        print("⚠️  Projects container not found (already replaced?)")
-
-    # Replace bio container
-    old_bio = '<div id="bio-content"></div>'
-    new_bio = '<div id="bio-content">\n' + bio_html + '\n            </div>'
-    if old_bio in index_html:
-        index_html = index_html.replace(old_bio, new_bio)
-        print("✅ Bio container replaced")
-    else:
-        print("⚠️  Bio container not found (already replaced?)")
-
-    # Replace honors list container
-    old_honors = '<ul id="honors-list" class="honors-list"></ul>'
-    new_honors = '<ul id="honors-list" class="honors-list">\n' + honors_html + '\n            </ul>'
-    if old_honors in index_html:
-        index_html = index_html.replace(old_honors, new_honors)
-        print("✅ Honors list container replaced")
-    else:
-        print("⚠️  Honors list container not found (already replaced?)")
-
-    # Replace alumni article container
-    old_alumni = '<div id="alumni-article"></div>'
-    new_alumni = '<div id="alumni-article">\n' + alumni_html + '\n            </div>'
-    if old_alumni in index_html:
-        index_html = index_html.replace(old_alumni, new_alumni)
-        print("✅ Alumni article container replaced")
-    else:
-        print("⚠️  Alumni article container not found (already replaced?)")
-
-    # Replace honors article container
-    old_honors_art = '<div id="honors-article"></div>'
-    new_honors_art = '<div id="honors-article">\n' + honors_article_html + '\n            </div>'
-    if old_honors_art in index_html:
-        index_html = index_html.replace(old_honors_art, new_honors_art)
-        print("✅ Honors article container replaced")
-    else:
-        print("⚠️  Honors article container not found (already replaced?)")
+    # Replace containers (idempotent — works whether each container is empty
+    # or already filled by a previous run)
+    containers = [
+        ('<div id="papers-container">', papers_html, 'div', 'Papers'),
+        ('<div id="projects-container">', projects_html, 'div', 'Projects'),
+        ('<div id="bio-content">', bio_html, 'div', 'Bio'),
+        ('<ul id="honors-list" class="honors-list">', honors_html, 'ul', 'Honors list'),
+        ('<div id="alumni-article">', alumni_html, 'div', 'Alumni article'),
+        ('<div id="honors-article">', honors_article_html, 'div', 'Honors article'),
+    ]
+    print()
+    for open_tag, inner_html, tag_name, label in containers:
+        index_html, ok = replace_container_inner(
+            index_html, open_tag, '\n' + inner_html + '\n            ', tag_name)
+        print(('✅ %s container replaced' % label) if ok else ('⚠️  %s container NOT found' % label))
 
     # Add JSON-LD before </body> — remove old auto-generated block first to prevent duplicates
     marker = '"Publications and Research Projects of Prof. Chung-Yuan Huang"'
@@ -648,6 +638,40 @@ def main():
     print(f"Pre-rendered honors article: {len(honors_article_zh)}+{len(honors_article_en)} paragraphs")
     print(f"JSON-LD: {n_articles} scholarly articles + {n_rp} research projects")
     print(f"index.html updated successfully!")
+
+    print()
+    minify_assets()
+
+
+# ─── Minify deployed JS/CSS ───
+# Sources stay readable (and build-prerender.py keeps parsing them);
+# the HTML pages reference the generated *.min.* copies.
+
+MINIFY_JS = ['shared.js', 'stats-data.js', 'papers-data.js', 'projects-data.js', 'stories.js']
+MINIFY_CSS = ['shared.css', 'stories.css']
+
+
+def minify_assets():
+    try:
+        import rjsmin
+        import rcssmin
+    except ImportError:
+        rjsmin = rcssmin = None
+        print("⚠️  rjsmin/rcssmin not installed (pip3 install --user rjsmin rcssmin);"
+              " copying sources unminified")
+    for name in MINIFY_JS + MINIFY_CSS:
+        src = os.path.join(BASE, name)
+        stem, ext = os.path.splitext(name)
+        dst = os.path.join(BASE, stem + '.min' + ext)
+        with open(src, 'r', encoding='utf-8') as f:
+            code = f.read()
+        if ext == '.js':
+            out = rjsmin.jsmin(code) if rjsmin else code
+        else:
+            out = rcssmin.cssmin(code) if rcssmin else code
+        with open(dst, 'w', encoding='utf-8') as f:
+            f.write(out)
+        print(f"✅ Minified {name}: {len(code):,} → {len(out):,} chars")
 
 
 if __name__ == '__main__':

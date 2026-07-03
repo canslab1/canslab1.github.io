@@ -14,11 +14,11 @@ Research: Complex Networks, Epidemic Simulation, Computational Social Science, A
 Software: EpiRank, MV17, CASMIM, HETA, HATA, BCAT, SRAC-Agent, AED2
 
 /* SITE */
-Last update: 2026-04-26
+Last update: 2026-07-03
 Language: Chinese (zh-TW) / English
 Standards: HTML5, CSS3, ES6
 Technology: GitHub Pages, IndexNow, Schema.org JSON-LD, Dublin Core, Atom Feed, Web App Manifest
-Metadata: 7 JSON-LD blocks, 6 OG images, Twitter Card labels, Dublin Core, Google Scholar citation_ tags, Geo tags
+Metadata: 6 JSON-LD blocks, 8 OG images, Twitter Card labels, Dublin Core, Google Scholar citation_ tags, Geo tags
 AI Discoverability: llms.txt, llms-full.txt, 24 AI crawlers allowed in robots.txt
 Identifiers: ORCID (0000-0002-8680-6755), Google Scholar (0klfzfAAAAAJ), Wikidata (Q138673497), DBLP, Scopus, Semantic Scholar
 Analytics: Google Analytics (GA4), Ahrefs Analytics, Microsoft Clarity
