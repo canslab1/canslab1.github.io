@@ -37,8 +37,24 @@ def extract_js_string(text, start):
     while i < len(text):
         c = text[i]
         if c == '\\' and i + 1 < len(text):
-            chars.append(text[i + 1])
-            i += 2
+            nxt = text[i + 1]
+            if nxt == 'u' and i + 5 < len(text):
+                code = int(text[i + 2:i + 6], 16)
+                i += 6
+                if 0xD800 <= code <= 0xDBFF and text[i:i + 2] == '\\u':
+                    low = int(text[i + 2:i + 6], 16)
+                    code = 0x10000 + ((code - 0xD800) << 10) + (low - 0xDC00)
+                    i += 6
+                chars.append(chr(code))
+            elif nxt == 'n':
+                chars.append('\n')
+                i += 2
+            elif nxt == 't':
+                chars.append('\t')
+                i += 2
+            else:
+                chars.append(nxt)
+                i += 2
         elif c == "'":
             return ''.join(chars), i + 1
         else:

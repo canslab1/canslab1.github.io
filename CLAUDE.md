@@ -18,7 +18,7 @@ Static personal academic website for **Prof. Chung-Yuan Huang** (黃崇源教授
 | `index.html` | Main page — all primary content sections live here |
 | `shared.js` | Navigation, honors data, Clarity analytics, `initShared()` entry point |
 | `shared.css` | Global styles (hero background: self-hosted `images/hero-bg.webp`) |
-| `papers-data.js` | Publication data (170 papers) |
+| `papers-data.js` | Publication data (171 papers) |
 | `projects-data.js` | Research project data (37 projects) |
 | `stats-data.js` | Stats card data for the overview section |
 | `build-prerender.py` | Reads JS data files, generates pre-rendered HTML + JSON-LD into `index.html` |
@@ -112,7 +112,7 @@ All metadata is designed so search engines and generative AI systems return corr
 - **Identifiers**: ORCID (`0000-0002-8680-6755`), Google Scholar (`0klfzfAAAAAJ`), Wikidata (`Q138673497`)
 - **Credentials**: 3 EducationalOccupationalCredential (PhD/MS/BS with institutions and years)
 - **Expertise**: 8 DefinedTerm objects with Chinese alternateNames (Complex Adaptive Systems, Network Science, etc.)
-- **Awards**: 4 structured objects with Chinese alternateNames, dates, and descriptions
+- **Awards**: 6 structured objects with Chinese alternateNames, dates, and descriptions
 - **Academic Metrics**: additionalProperty (Citations 994, h-index 18, i10-index 30, 171 pubs, 45 SCI) — no interactionStatistic (schema.org has no CiteAction type)
 - **Links**: 11 sameAs (Scholar, ORCID, DBLP, Scopus, Semantic Scholar, ResearchGate, Facebook, Google Sites, PURE, GitHub, Wikidata)
 - **Affiliations**: worksFor, affiliation, memberOf (Phi Tau Phi, Taipei PTA Federation)
@@ -142,6 +142,7 @@ Each includes: name, alternateName, description, codeRepository, programmingLang
 - When updating academic metrics, sync across: meta description, JSON-LD Person (`additionalProperty`), `llms.txt`, `llms-full.txt`, bio text, stats cards
 - When adding new honors photos, also update: ImageGallery JSON-LD block, relevant `og:image` tags if significant
 - When adding new software, also update: `@graph` SoftwareSourceCode entry (with 4 `image` URLs), `llms.txt`, `llms-full.txt`
+- When content changes, also bump: sitemap `lastmod`, `DCTERMS.modified` (index.html), humans.txt / llms-full.txt "Last update", README 最後更新
 - After any push, send IndexNow notification: `POST https://api.indexnow.org/indexnow` with key `d22a81b36ccb45e085fe6679a822df52`
 
 ## Data Counts (as of 2026-05)

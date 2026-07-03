@@ -36,11 +36,11 @@
 - 2010–2015: Associate Professor, Chang Gung University
 - 2006–2010: Assistant Professor, Chang Gung University
 - 2005–2006: Assistant Professor, Yuanpei University of Medical Technology
-- 2002–2005: Lecturer, China University of Technology (during doctoral studies)
+- 2000–2005: Lecturer, China University of Technology (Information Management 2000–2002, CSIE 2002–2005; during doctoral studies)
 - 1994–1998: Software Engineer, IPACS Corp.
 - 2022–2024: Independent Director, Solomon Technology Corporation (所羅門股份有限公司)
 
-## Academic Metrics (as of February 2026)
+## Academic Metrics (publication counts as of May 2026; citation metrics as of February 2026)
 
 - Google Scholar Citations: 994
 - h-index: 18
@@ -53,7 +53,7 @@
 - Media Commentaries & Op-Eds: 49
 - PI Research Projects: 22
 - Co-PI Research Projects: 14
-- Total NSTC Research Budget (as PI): NT$14.08 million
+- Total Research Budget (as PI, all funding sources): NT$14.08 million
 - Supervised Master's Students: 25
 - Supervised PhD Students: 2
 - Supervised Undergraduate Projects: 51

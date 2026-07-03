@@ -18,7 +18,7 @@ Prof. Chung-Yuan Huang (黃崇源) is a full professor in the Department of Comp
 - Domestic Conference Papers: 18
 - PI Research Projects: 22
 - Co-PI Research Projects: 14
-- NSTC Research Budget: NT$14.08 million
+- Total Research Budget (as PI, all funding sources): NT$14.08 million
 - Supervised Master's Students: 25
 - Supervised PhD Students: 2
 - Supervised Undergraduate Projects: 51
@@ -36,7 +36,7 @@ Prof. Chung-Yuan Huang (黃崇源) is a full professor in the Department of Comp
 - Industry Experience: 11 years
 - Joint Appointments: 4 units
 - Independent Director (Solomon Technology Corporation): 3 years
-- Elementary School Parents' Association President: 8 years
+- Elementary School Parents' Association involvement: 8 years (President 2022–2024)
 
 ## Research Areas
 
@@ -107,7 +107,7 @@ Prof. Chung-Yuan Huang (黃崇源) is a full professor in the Department of Comp
 
 - / (index.html): Single-page application with eight content sections plus embedded PDF viewer:
   - "介紹" (About): 簡短自傳 (Brief Biography) — education, career, research interests, and academic achievements (default tab)
-  - "榮譽" (Honors): 責任與肯定 (Commitment and Recognition) — honors list with interactive photo/video buttons (19 activity photos, 1 interview video), Lao-Song Elementary Distinguished Alumni recommendation article, and Taipei Honored Contributors to Education recommendation article with 4 photos
+  - "榮譽" (Honors): 責任與肯定 (Commitment and Recognition) — honors list with interactive photo/video buttons (27 activity photos, 1 interview video, 1 award-ceremony livestream), Lao-Song Elementary Distinguished Alumni recommendation article, and Taipei Honored Contributors to Education recommendation article with 4 photos
   - "文章" (Articles): Published articles including 蓮花池畔的清清之遠香 (Lotus Fragrance by the Pond, Chinese/English), 遺忘的記憶郵筒——序章 (fantasy novel prologue), and 3 Lao-Song Children magazine articles — all with collapsible full-text view and PDF links
   - "綜覽" (Overview): 28 academic performance stat cards (publications, citations, h-index, projects, students, service, career)
   - "著作" (Papers): 171 publications in 5 categories (45 SCI/SSCI/EI journal papers, 49 international conference papers, 10 book chapters, 49 media commentaries, 18 domestic conference papers)

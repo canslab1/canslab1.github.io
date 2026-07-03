@@ -2,7 +2,7 @@
 
 黃崇源教授（Prof. Chung-Yuan Huang, Ph.D.）個人學術網站，託管於 GitHub Pages。
 
-> **最後更新**：2026-04-26 ｜ **更新歷史**：[Commit Log](https://github.com/canslab1/canslab1.github.io/commits/master)
+> **最後更新**：2026-07-03 ｜ **更新歷史**：[Commit Log](https://github.com/canslab1/canslab1.github.io/commits/master)
 
 ## 目錄
 
@@ -99,6 +99,7 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 | 助理教授 | 長庚大學 資訊工程學系 | 95.08–99.07 |
 | 助理教授兼系主任 | 元培科技大學 資訊工程學系 | 94.08–95.07 |
 | 專任講師 | 中國科技大學 資訊工程學系 | 91.08–94.07 |
+| 講師 | 中國科技大學 資訊管理學系 | 89.08–91.07 |
 
 ### 業界經歷（攻讀博士前，共 11 年）
 - 宇博電腦（新加坡）— 資深系統設計師
@@ -126,7 +127,7 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 | `shared.css` | 共用樣式 | 各頁面共用的 CSS 樣式表 |
 | `shared.js` | 共用腳本 | 渲染函式、語言切換、導覽列/Footer、區段切換 |
 | `stats-data.js` | 卡片資料 | 28 張學術數據卡片的中英文資料 |
-| `papers-data.js` | 論文資料 | 170 篇著作列表（5 大類，中英文） |
+| `papers-data.js` | 論文資料 | 171 篇著作列表（5 大類，中英文） |
 | `projects-data.js` | 計畫資料 | 37 件研究計畫列表（3 種角色，中英文） |
 | `build-prerender.py` | 建構工具 | 解析 JS 資料檔，產生預渲染 HTML 及 JSON-LD 結構化資料 |
 | `CLAUDE.md` | AI 輔助指引 | Claude Code 專案慣例、約束與開發指引 |
@@ -212,7 +213,7 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 ### 區段四：著作目錄（著作）
 
-顯示黃崇源教授 170 篇著作，分為 5 大類別，詳見下方「著作列表」章節。
+顯示黃崇源教授 171 篇著作，分為 5 大類別，詳見下方「著作列表」章節。
 
 > **維護提示**：新增或修改論文只需編輯 `papers-data.js`，然後執行 `python3 build-prerender.py` 重新產生預渲染 HTML。
 
@@ -273,11 +274,11 @@ Footer 使用縮圖（`*-thumb.*`）以減少頁面載入大小。Hover 時顯�
 
 ## 著作列表（papers-data.js）
 
-首頁「著作」區段顯示黃崇源教授 170 篇著作，資料儲存於 `papers-data.js`，分為 5 大類別：
+首頁「著作」區段顯示黃崇源教授 171 篇著作，資料儲存於 `papers-data.js`，分為 5 大類別：
 
 | # | 類別 | 篇數 | 期別分組 |
 |---|------|------|---------|
-| 1 | SCI / SSCI / EI 等級期刊論文 | 44 | 依教職時期分 5 組 |
+| 1 | SCI / SSCI / EI 等級期刊論文 | 45 | 依教職時期分 5 組 |
 | 2 | 國際會議論文 | 49 | 單一列表 |
 | 3 | 專章、學位及其它論文 | 10 | 單一列表 |
 | 4 | 國內外媒體投書及採訪 | 49 | 單一列表 |
@@ -357,7 +358,7 @@ canslab1.github.io/
 ├── shared.css           # 共用 CSS 樣式（含回到頂部按鈕、Footer 提示框）
 ├── shared.js            # 共用 JS 渲染函式與區段切換（含回到頂部按鈕邏輯）
 ├── stats-data.js        # 28 張學術數據卡片資料
-├── papers-data.js       # 170 篇著作列表資料
+├── papers-data.js       # 171 篇著作列表資料
 ├── projects-data.js     # 37 件研究計畫列表資料
 ├── build-prerender.py   # 預渲染建構工具（產生靜態 HTML 及 JSON-LD）
 ├── 404.html             # 自訂錯誤頁
@@ -468,11 +469,11 @@ canslab1.github.io/
 > **維護提示**：日後更新卡片數據只需修改此檔，不需異動 `index.html` 或 `shared.js`。
 
 #### `papers-data.js`
-170 篇著作列表（5 大類別，含期別分組），中英文標題：
+171 篇著作列表（5 大類別，含期別分組），中英文標題：
 
 | 類別 | 篇數 |
 |------|------|
-| SCI / SSCI / EI 期刊論文 | 44 |
+| SCI / SSCI / EI 期刊論文 | 45 |
 | 國際會議論文 | 49 |
 | 專章、學位及其它論文 | 10 |
 | 國內外媒體投書及採訪 | 49 |
@@ -671,11 +672,11 @@ python3 build-prerender.py
 - `manifest.json`：PWA Web App Manifest（雙語描述）
 - `apple-touch-icon`：iOS 桌面圖示（`images/icon-192.png`，`sizes="192x192"`）
 - `security.txt`：RFC 9116 安全聯絡資訊（根目錄）
-- `feed.xml`：Atom feed（21 篇媒體投書 / 文章動態）
+- `feed.xml`：Atom feed（25 篇網站動態 / 媒體投書 / 文章）
 
 ### 結構化資料（JSON-LD）詳細
 
-**index.html**（整合八區段 + 內嵌 PDF，共 7 個 JSON-LD blocks）：
+**index.html**（整合八區段 + 內嵌 PDF，共 6 個 JSON-LD blocks）：
 
 | Block | Type | 內容 |
 |-------|------|------|
@@ -691,7 +692,7 @@ python3 build-prerender.py
 - 識別碼：ORCID, Google Scholar, Wikidata（3 PropertyValue）
 - 學歷：3 EducationalOccupationalCredential（博士/碩士/學士）
 - 專長：8 DefinedTerm（含中文 alternateName）
-- 獎項：4 結構化物件（含中文、日期、描述）
+- 獎項：6 結構化物件（含中文、日期、描述）
 - 學術指標：additionalProperty（Citations 994, h-index 18, i10-index 30, 171 論文, 45 SCI）
 - 連結：11 sameAs（Scholar, ORCID, DBLP, Scopus, Semantic Scholar, ResearchGate, Facebook, Google Sites, PURE, GitHub, Wikidata）
 - 隸屬：worksFor, affiliation, memberOf（斐陶斐、小聯會）
