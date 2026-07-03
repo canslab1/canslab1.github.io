@@ -31,6 +31,7 @@ body {
 /* ===== Language Toggle ===== */
 .en { display: none; }
 html[lang="en"] .en { display: inline; }
+html[lang="en"] div.en, html[lang="en"] p.en { display: block; }
 html[lang="en"] .zh { display: none; }
 
 .language-toggle {

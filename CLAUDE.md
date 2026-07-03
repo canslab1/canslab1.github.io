@@ -133,7 +133,7 @@ Each includes: name, alternateName, description, codeRepository, programmingLang
 ## Conventions & Constraints
 
 - Commit messages: imperative mood, describe "what + why", include `Co-Authored-By` when Claude assists
-- After changes to `index.html`, always validate: JSON-LD blocks parse, section IDs intact, no duplicate meta tags
+- After changes to `index.html`, always validate: JSON-LD blocks parse, section IDs intact, no duplicate meta tags, HTML structure balanced (0 errors on https://validator.w3.org/nu/)
 - `hreflang` tags (zh-TW, en, x-default) all point to the same URL — this is correct for client-side language toggle
 - `og:description` and `twitter:description` must stay in sync (same text)
 - Dublin Core tags use English; OG/Twitter tags use Chinese — this is intentional
