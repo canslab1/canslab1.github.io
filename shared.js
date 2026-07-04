@@ -55,15 +55,15 @@ const navItemsEn = [
 /* ===== Footer Data ===== */
 
 const footerLinks = [
-    { href: 'https://www.cgu.edu.tw/csie/', label: '前往長庚大學資訊工程學系', labelEn: 'CGU CSIE', src: 'https://canslab1.github.io/images/csie-thumb.png', alt: '長庚資工系 logo' },
-    { href: 'https://web.tlsps.tp.edu.tw/nss/p/index', label: '前往老松國小', labelEn: 'Laosong Elementary', src: 'https://canslab1.github.io/images/laosong-thumb.png', alt: '老松國小 logo' },
-    { href: 'https://xingtan.tiec.tp.edu.tw/Register/Profile/20240715152009039506', label: '前往臺北市杏壇芬芳錄', labelEn: 'Taipei Honored Contributors', src: 'https://canslab1.github.io/images/favicon-thumb.ico', alt: '臺北市杏壇芬芳錄 logo' },
-    { href: 'https://orcid.org/0000-0002-8680-6755', label: '前往ORCiD', labelEn: 'ORCiD', src: 'https://orcid.org/assets/vectors/orcid.logo.icon.svg', alt: 'ORCiD logo' },
-    { href: 'https://www.facebook.com/gscott.huang/', label: '前往 Facebook', labelEn: 'Facebook', src: 'https://canslab1.github.io/images/facebook-thumb.png', alt: 'Facebook logo' },
-    { href: 'https://sites.google.com/view/gscott-huang', label: '前往 Google Sites', labelEn: 'Google Sites', src: 'https://canslab1.github.io/images/google-thumb.png', alt: 'Google logo' },
-    { href: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en', label: '前往 Google Scholar', labelEn: 'Google Scholar', src: 'https://canslab1.github.io/images/google-scholar-thumb.png', alt: 'Google Scholar logo' },
-    { href: 'https://github.com/canslab1', label: '前往 GitHub', labelEn: 'GitHub', src: 'https://canslab1.github.io/images/github-thumb.png', alt: 'GitHub logo' },
-    { href: 'https://pure.lib.cgu.edu.tw/zh/persons/chung-yuan-huang-2', label: '前往長庚大學 Pure 學術檔案', labelEn: 'CGU Pure', src: 'https://canslab1.github.io/images/cgu-thumb.png', alt: '長庚大學 Pure logo' }
+    { href: 'https://www.cgu.edu.tw/csie/', label: '前往長庚大學資訊工程學系', labelEn: 'CGU CSIE', src: 'https://canslab1.github.io/images/csie-thumb.png', alt: '長庚資工系 logo', w: 256, h: 256 },
+    { href: 'https://web.tlsps.tp.edu.tw/nss/p/index', label: '前往老松國小', labelEn: 'Laosong Elementary', src: 'https://canslab1.github.io/images/laosong-thumb.png', alt: '老松國小 logo', w: 256, h: 124 },
+    { href: 'https://xingtan.tiec.tp.edu.tw/Register/Profile/20240715152009039506', label: '前往臺北市杏壇芬芳錄', labelEn: 'Taipei Honored Contributors', src: 'https://canslab1.github.io/images/favicon-thumb.ico', alt: '臺北市杏壇芬芳錄 logo', w: 16, h: 16 },
+    { href: 'https://orcid.org/0000-0002-8680-6755', label: '前往ORCiD', labelEn: 'ORCiD', src: 'https://orcid.org/assets/vectors/orcid.logo.icon.svg', alt: 'ORCiD logo', w: 256, h: 256 },
+    { href: 'https://www.facebook.com/gscott.huang/', label: '前往 Facebook', labelEn: 'Facebook', src: 'https://canslab1.github.io/images/facebook-thumb.png', alt: 'Facebook logo', w: 128, h: 128 },
+    { href: 'https://sites.google.com/view/gscott-huang', label: '前往 Google Sites', labelEn: 'Google Sites', src: 'https://canslab1.github.io/images/google-thumb.png', alt: 'Google logo', w: 120, h: 120 },
+    { href: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en', label: '前往 Google Scholar', labelEn: 'Google Scholar', src: 'https://canslab1.github.io/images/google-scholar-thumb.png', alt: 'Google Scholar logo', w: 120, h: 120 },
+    { href: 'https://github.com/canslab1', label: '前往 GitHub', labelEn: 'GitHub', src: 'https://canslab1.github.io/images/github-thumb.png', alt: 'GitHub logo', w: 128, h: 128 },
+    { href: 'https://pure.lib.cgu.edu.tw/zh/persons/chung-yuan-huang-2/', label: '前往長庚大學 Pure 學術檔案', labelEn: 'CGU Pure', src: 'https://canslab1.github.io/images/cgu-thumb.png', alt: '長庚大學 Pure logo', w: 256, h: 256 }
 ];
 
 /* ===== Language Toggle ===== */
@@ -116,6 +116,10 @@ function showSection(sectionId, event) {
 }
 
 function showEmbed(url, event) {
+    if (url && url.indexOf('.pdf') !== -1 && window.matchMedia('(max-width: 768px)').matches) {
+        window.open(url, '_blank', 'noopener');
+        return;
+    }
     document.querySelectorAll('.section').forEach(s => s.classList.remove('active', 'fade-in'));
     document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
 
@@ -218,30 +222,25 @@ function renderNav() {
 
     const ul = document.createElement('ul');
     ul.className = 'nav-list';
-    ul.setAttribute('role', 'menubar');
 
     items.forEach(item => {
         const li = document.createElement('li');
-        li.setAttribute('role', 'none');
 
         if (item.section) {
             const btn = document.createElement('button');
             btn.className = 'nav-item' + (item.section === _activeSection ? ' active' : '');
-            btn.setAttribute('role', 'menuitem');
             btn.textContent = item.label;
             btn.addEventListener('click', (e) => showSection(item.section, e));
             li.appendChild(btn);
         } else if (item.embed) {
             const btn = document.createElement('button');
             btn.className = 'nav-item' + (_activeSection === 'embed' ? ' active' : '');
-            btn.setAttribute('role', 'menuitem');
             btn.textContent = item.label;
             btn.addEventListener('click', (e) => showEmbed(item.href, e));
             li.appendChild(btn);
         } else {
             const a = document.createElement('a');
             a.className = 'nav-item';
-            a.setAttribute('role', 'menuitem');
             a.href = item.href;
             a.target = 'canslab-' + item.label;
             a.rel = 'noopener noreferrer';
@@ -286,6 +285,7 @@ function renderFooter() {
         img.src = link.src;
         img.alt = link.alt;
         img.className = 'footer-logo';
+        if (link.w) { img.width = link.w; img.height = link.h; }
 
         a.appendChild(img);
         div.appendChild(a);
@@ -602,6 +602,10 @@ function toggleArticleText(el) {
 /* ===== Article PDF Viewer ===== */
 
 function showArticlePdf(filename) {
+    if (window.matchMedia('(max-width: 768px)').matches) {
+        window.open(filename, '_blank', 'noopener');
+        return;
+    }
     var list = document.getElementById('articles-list');
     var viewer = document.getElementById('articles-pdf-viewer');
     if (!list || !viewer) return;
@@ -624,12 +628,46 @@ function hideArticlePdf() {
 
 /* ===== Image Modal ===== */
 
+/* ===== Modal accessibility (Escape, focus management) ===== */
+
+var _modalLastFocus = null;
+var _modalOverlay = null;
+
+function _modalOpened(overlay) {
+    _modalLastFocus = document.activeElement;
+    _modalOverlay = overlay;
+    var btn = overlay.querySelector('button');
+    if (btn) btn.focus();
+    document.addEventListener('keydown', _modalKeydown);
+}
+
+function _modalClosed() {
+    document.removeEventListener('keydown', _modalKeydown);
+    _modalOverlay = null;
+    if (_modalLastFocus && _modalLastFocus.focus) _modalLastFocus.focus();
+    _modalLastFocus = null;
+}
+
+function _modalKeydown(e) {
+    if (e.key === 'Escape') {
+        hideImageModal();
+        hideVideoModal();
+        hideAlumniListModal();
+        return;
+    }
+    if (e.key === 'Tab' && _modalOverlay && !_modalOverlay.contains(document.activeElement)) {
+        var btn = _modalOverlay.querySelector('button');
+        if (btn) { btn.focus(); e.preventDefault(); }
+    }
+}
+
 function showImageModal(src) {
     var overlay = document.getElementById('image-modal-overlay');
     var img = document.getElementById('image-modal-img');
     if (!overlay || !img) return;
     img.src = src;
     overlay.style.display = 'flex';
+    _modalOpened(overlay);
 }
 
 function hideImageModal() {
@@ -638,6 +676,7 @@ function hideImageModal() {
     if (!overlay || !img) return;
     img.src = '';
     overlay.style.display = 'none';
+    _modalClosed();
 }
 
 /* ===== Video Modal ===== */
@@ -653,6 +692,7 @@ function showVideoModal(youtubeId, startSeconds) {
     }
     frame.src = url;
     overlay.style.display = 'flex';
+    _modalOpened(overlay);
 }
 
 function hideVideoModal() {
@@ -661,6 +701,7 @@ function hideVideoModal() {
     if (!overlay || !frame) return;
     frame.src = 'about:blank';
     overlay.style.display = 'none';
+    _modalClosed();
 }
 
 /* ===== Alumni List Modal (中國科技大學傑優校友名單) ===== */
@@ -748,7 +789,7 @@ function renderAlumniListContent() {
     var distHTML = alumniListDistinguished.map(function(c) { return cohortHTML(c, 'dist'); }).join('');
     var outHTML = alumniListOutstanding.map(function(c) { return cohortHTML(c, 'out'); }).join('');
 
-    return '<h2 class="alumni-modal-title">' + titleText + '</h2>' +
+    return '<h2 id="alumni-modal-title-text" class="alumni-modal-title">' + titleText + '</h2>' +
         '<h3 class="alumni-section-title alumni-section-title--dist">' + distLabel + '</h3>' +
         distHTML +
         '<h3 class="alumni-section-title alumni-section-title--out">' + outLabel + '</h3>' +
@@ -761,6 +802,7 @@ function showAlumniListModal() {
     if (!overlay || !content) return;
     content.innerHTML = renderAlumniListContent();
     overlay.style.display = 'flex';
+    _modalOpened(overlay);
     document.body.style.overflow = 'hidden';
 }
 
@@ -768,6 +810,7 @@ function hideAlumniListModal() {
     var overlay = document.getElementById('alumni-list-modal-overlay');
     if (!overlay) return;
     overlay.style.display = 'none';
+    _modalClosed();
     document.body.style.overflow = '';
 }
 

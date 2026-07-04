@@ -43,6 +43,14 @@ header {
     position: relative;
 }
 
+@media (max-width: 768px) {
+    header {
+        background:
+            linear-gradient(135deg, rgba(20, 83, 45, 0.85) 0%, rgba(26, 119, 69, 0.85) 100%),
+            url('images/hero-bg-mobile.webp') center/cover no-repeat;
+    }
+}
+
 header::before {
     content: '';
     position: absolute;
@@ -113,7 +121,7 @@ nav {
 }
 
 .nav-item:hover {
-    background: #27ae60;
+    background: #1e8449;
     color: white;
     text-decoration: none;
 }
@@ -277,7 +285,7 @@ footer {
 
 /* ===== Table of Contents ===== */
 .table-of-contents {
-    background: linear-gradient(135deg, #27ae60 0%, #219150 100%);
+    background: linear-gradient(135deg, #1e8449 0%, #196f3d 100%);
     color: white;
     padding: 30px;
     border-radius: 15px;
@@ -329,12 +337,14 @@ footer {
 .toc-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-out;
+    visibility: hidden;
+    transition: max-height 0.5s ease-out, visibility 0.5s;
     pointer-events: none;
 }
 
 .toc-content.expanded {
     max-height: none;
+    visibility: visible;
     transition: none;
     pointer-events: auto;
 }
@@ -472,4 +482,32 @@ footer {
         padding: 0.5rem 0.6rem;
         font-size: 0.9rem;
     }
+}
+
+/* A11y: skip link, TOC list reset, motion & print support */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: #14532d;
+    color: #fff;
+    padding: 10px 18px;
+    z-index: 2000;
+    border-radius: 0 0 8px 0;
+}
+.skip-link:focus { left: 0; }
+ul.toc-list { list-style: none; margin: 0; padding: 0; }
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+@media print {
+    nav, .back-to-top, .nav-toggle { display: none !important; }
+    .table-of-contents { background: none !important; color: #000 !important; }
+    .toc-link, .toc-chapter-title, .toc-title { color: #000 !important; }
+    .poem { background: none !important; color: #000 !important; border: 1px solid #767676; }
+    .toc-content { max-height: none !important; visibility: visible !important; }
 }

@@ -9,6 +9,9 @@
 function toggleMenu() {
     const nav = document.getElementById("navLinks");
     if (nav) nav.classList.toggle("show");
+    var navBtn = document.getElementById('navToggle');
+    var navLinks = document.getElementById('navLinks');
+    if (navBtn && navLinks) navBtn.setAttribute('aria-expanded', navLinks.classList.contains('show') ? 'true' : 'false');
 }
 
 /* ===== Table of Contents Toggle ===== */
@@ -60,6 +63,10 @@ function smoothScrollToAnchor(anchorElement) {
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             history.pushState(null, '', targetId);
         }, 300);
+    }
+    if (anchorElement) {
+        anchorElement.setAttribute('tabindex', '-1');
+        anchorElement.focus({ preventScroll: true });
     }
 }
 

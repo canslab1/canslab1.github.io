@@ -42,6 +42,13 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       position: relative;
     }
+    @media (max-width: 768px) {
+      header {
+        background:
+          linear-gradient(135deg, rgba(20, 83, 45, 0.85) 0%, rgba(26, 119, 69, 0.85) 100%),
+          url('/images/hero-bg-mobile.webp') center/cover no-repeat;
+      }
+    }
     .header-content {
       display: flex;
       align-items: center;
@@ -101,7 +108,7 @@
     }
     .btn {
       display: inline-block;
-      background: linear-gradient(135deg, #27ae60 0%, #219150 100%);
+      background: linear-gradient(135deg, #1e8449 0%, #187a41 100%);
       color: #fff;
       font-size: 1.1rem;
       font-weight: 500;
@@ -160,9 +167,12 @@
     <div class="error-desc">
       檢查網址是否正確，或回到下方連結開始了解黃崇源。
     </div>
+    <p lang="en" style="color:#555;margin-bottom:1rem;">Page not found — the links below will take you back.</p>
     <div class="links">
-      <a class="btn" href="/">回首頁</a>
-      <a class="btn" href="https://canslab1.github.io/stories.html">閱讀家族故事</a>
+      <a class="btn" href="/">回首頁 Home</a>
+      <a class="btn" href="/#papers">著作 Papers</a>
+      <a class="btn" href="/CV.pdf">履歷 CV</a>
+      <a class="btn" href="https://canslab1.github.io/stories.html">家族故事 Stories</a>
     </div>
   </main>
 

@@ -138,7 +138,7 @@ Each includes: name, alternateName, description, codeRepository, programmingLang
 - `og:description` and `twitter:description` must stay in sync (same text)
 - Dublin Core tags use English; OG/Twitter tags use Chinese — this is intentional
 - `feed.xml` is Atom format (`application/atom+xml`), not RSS
-- `rel="security"` on line 79 is non-standard but intentionally kept for redundancy with `robots.txt Security:` directive
+- `rel="security"` link in the HTML head is non-standard but intentionally kept; the former robots.txt `Security:` directive was removed (invalid robots.txt syntax per Lighthouse) — security.txt stays discoverable via `/.well-known/security.txt` and the HTML link
 - When updating academic metrics, sync across: meta description, JSON-LD Person (`additionalProperty`), `llms.txt`, `llms-full.txt`, bio text, stats cards
 - When adding new honors photos, also update: ImageGallery JSON-LD block, relevant `og:image` tags if significant
 - When adding new software, also update: `@graph` SoftwareSourceCode entry (with 4 `image` URLs), `llms.txt`, `llms-full.txt`

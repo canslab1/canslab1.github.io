@@ -125,14 +125,14 @@
     <link rel="icon" href="https://canslab1.github.io/images/csie.png" type="image/png" sizes="any">
     <link rel="manifest" href="https://canslab1.github.io/manifest.json">
     <link rel="apple-touch-icon" href="https://canslab1.github.io/images/icon-192.png" sizes="192x192">
-    <link rel="preload" as="image" href="https://canslab1.github.io/images/IMG-2.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="https://canslab1.github.io/images/IMG-2-thumb.jpg" fetchpriority="high">
     <link rel="alternate" type="application/atom+xml" title="Prof. Chung-Yuan Huang — Updates" href="https://canslab1.github.io/feed.xml">
     <link rel="author" href="https://canslab1.github.io/humans.txt">
     <link rel="security" type="text/plain" href="https://canslab1.github.io/security.txt">
 
     <link rel="dns-prefetch" href="https://www.clarity.ms">
 
-    <link rel="stylesheet" href="shared.min.css?v=20260703">
+    <link rel="stylesheet" href="shared.min.css?v=20260704">
 </head>
 <body>
     <a href="#bio" class="skip-link">Skip to content</a>
@@ -141,7 +141,7 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <img src="https://canslab1.github.io/images/IMG-2.jpg" alt="Chung-Yuan Huang（黃崇源），長庚大學資訊工程學系教授，個人官方網站大頭照" class="profile-photo">
+                <img src="https://canslab1.github.io/images/IMG-2-thumb.jpg" width="360" height="360" alt="Chung-Yuan Huang（黃崇源），長庚大學資訊工程學系教授，個人官方網站大頭照" class="profile-photo">
                 <div class="header-text">
                     <h1><span class="zh">長庚大學 黃崇源 教授</span><span class="en">Prof. Chung-Yuan Huang</span></h1>
                     <div class="subheadline"><span class="zh">複雜適應性網絡與系統實驗室 主持人</span><span class="en">Complex Adaptive Networks and Systems Lab</span></div>
@@ -1347,10 +1347,10 @@
 
     <footer id="main-footer" class="site-footer"></footer>
 
-    <script src="stats-data.min.js?v=20260703"></script>
-    <script src="papers-data.min.js?v=20260703"></script>
-    <script src="projects-data.min.js?v=20260703"></script>
-    <script src="shared.min.js?v=20260703"></script>
+    <script src="stats-data.min.js?v=20260704"></script>
+    <script src="papers-data.min.js?v=20260704"></script>
+    <script src="projects-data.min.js?v=20260704"></script>
+    <script src="shared.min.js?v=20260704"></script>
     <script>document.addEventListener('DOMContentLoaded', () => initShared());</script>
 
     <script type="application/ld+json">
@@ -2076,12 +2076,12 @@
         ]
     }
     </script>
-    <div id="image-modal-overlay" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:9999;align-items:center;justify-content:center;" onclick="hideImageModal()">
-        <button onclick="hideImageModal()" style="position:absolute;top:18px;right:28px;background:none;border:none;color:#fff;font-size:2.2rem;cursor:pointer;z-index:10000;">&times;</button>
+    <div id="image-modal-overlay" role="dialog" aria-modal="true" aria-label="照片放大檢視" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:9999;align-items:center;justify-content:center;" onclick="hideImageModal()">
+        <button onclick="hideImageModal()" aria-label="關閉" style="position:absolute;top:18px;right:28px;background:none;border:none;color:#fff;font-size:2.2rem;cursor:pointer;z-index:10000;">&times;</button>
         <img id="image-modal-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="放大檢視照片" style="max-width:90%;max-height:85vh;border-radius:8px;object-fit:contain;" onclick="event.stopPropagation()">
     </div>
-    <div id="video-modal-overlay" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:9999;align-items:center;justify-content:center;" onclick="hideVideoModal()">
-        <button onclick="hideVideoModal()" style="position:absolute;top:18px;right:28px;background:none;border:none;color:#fff;font-size:2.2rem;cursor:pointer;z-index:10000;">&times;</button>
+    <div id="video-modal-overlay" role="dialog" aria-modal="true" aria-label="影片播放" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:9999;align-items:center;justify-content:center;" onclick="hideVideoModal()">
+        <button onclick="hideVideoModal()" aria-label="關閉" style="position:absolute;top:18px;right:28px;background:none;border:none;color:#fff;font-size:2.2rem;cursor:pointer;z-index:10000;">&times;</button>
         <iframe id="video-modal-frame" src="about:blank" title="影片播放器" style="width:90%;max-width:960px;aspect-ratio:16/9;border:none;border-radius:8px;" allow="autoplay;encrypted-media" allowfullscreen onclick="event.stopPropagation()"></iframe>
     </div>
     <div id="alumni-list-modal-overlay" class="alumni-modal-overlay" style="display:none;" onclick="hideAlumniListModal()" role="dialog" aria-modal="true" aria-labelledby="alumni-modal-title-text">

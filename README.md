@@ -120,9 +120,9 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 | `index.html` | 首頁（單頁式） | 包含八個區段：介紹（簡短自傳）、榮譽（責任與肯定 + 傑出校友推薦文 + 杏壇芬芳錄推薦文）、綜覽（28 張學術數據卡片）、著作（著作目錄）、計畫（計畫列表）、程式（開源程式）、文章（專欄文章）、評論（媒體投書），以及內嵌 PDF 檢視（履歷） |
 | `stories.html` | 家族故事 | 個人家族故事集 |
 | `404.html` | 錯誤頁 | 自訂 404 頁面 |
-| `CYHuang.html` | 重導向頁 | 已移至 `index.html#papers`（`noindex`、`meta refresh`、`canonical`） |
-| `software.html` | 重導向頁 | 已移至 `index.html#software`（`noindex`、`meta refresh`、`canonical`） |
-| `lab.html` | 重導向頁 | 已移至 `index.html#lab`（`noindex`、`meta refresh`、`canonical`） |
+| `CYHuang.html` | 重導向頁 | 已移至 `index.html#papers`（`noindex`、`meta refresh`） |
+| `software.html` | 重導向頁 | 已移至 `index.html#software`（`noindex`、`meta refresh`） |
+| `lab.html` | 重導向頁 | 已移至 `index.html#lab`（`noindex`、`meta refresh`） |
 | `CV.pdf` | 履歷 | 完整學術履歷（PDF） |
 | `shared.css` | 共用樣式 | 各頁面共用的 CSS 樣式表 |
 | `shared.js` | 共用腳本 | 渲染函式、語言切換、導覽列/Footer、區段切換 |

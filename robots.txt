@@ -83,7 +83,6 @@ Sitemap: https://canslab1.github.io/HATA/sitemap.xml
 Sitemap: https://canslab1.github.io/BCAT/sitemap.xml
 Sitemap: https://canslab1.github.io/SRAC-Agent/sitemap.xml
 Sitemap: https://canslab1.github.io/AED2/sitemap.xml
-Security: https://canslab1.github.io/security.txt
 
 # AI content files
 # llms.txt: https://canslab1.github.io/llms.txt
