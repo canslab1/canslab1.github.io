@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /editor.html
 
 # AI Crawlers
 User-agent: GPTBot

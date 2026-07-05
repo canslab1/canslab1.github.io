@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>網頁編輯器 — canslab1.github.io</title>
+    <style>
+        :root {
+            --ed-green: #1e8449;
+            --ed-green-light: #d4efdf;
+            --ed-bg: #f8f9fa;
+            --ed-border: #d0d7de;
+            --ed-text: #2c3e50;
+            --ed-danger: #b91c1c;
+            --ed-menu-h: 44px;
+            --ed-status-h: 30px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { height: 100%; overflow: hidden; }
+        body {
+            font-family: system-ui, -apple-system, 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', sans-serif;
+            font-size: 14px; color: var(--ed-text); background: var(--ed-bg);
+            display: flex; flex-direction: column;
+        }
+
+        /* ===== 選單列 ===== */
+        #menubar {
+            height: var(--ed-menu-h); flex: 0 0 auto;
+            display: flex; align-items: center; gap: 4px; padding: 0 10px;
+            background: #fff; border-bottom: 1px solid var(--ed-border);
+        }
+        #menubar .brand { font-weight: 600; margin-right: 10px; color: var(--ed-green); white-space: nowrap; }
+        .menu { position: relative; }
+        .menu > button, #menubar > button {
+            background: none; border: none; padding: 7px 11px; font-size: 14px;
+            border-radius: 6px; cursor: pointer; color: var(--ed-text); white-space: nowrap;
+        }
+        .menu > button:hover, #menubar > button:hover { background: var(--ed-green-light); }
+        .menu-list {
+            display: none; position: absolute; top: 100%; left: 0; z-index: 50;
+            background: #fff; border: 1px solid var(--ed-border); border-radius: 8px;
+            box-shadow: 0 6px 18px rgba(0,0,0,.12); min-width: 190px; padding: 5px;
+        }
+        .menu.open .menu-list { display: block; }
+        .menu-list button {
+            display: block; width: 100%; text-align: left; background: none; border: none;
+            padding: 7px 10px; font-size: 13.5px; border-radius: 5px; cursor: pointer; color: var(--ed-text);
+        }
+        .menu-list button:hover { background: var(--ed-green-light); }
+        .menu-list button:disabled { color: #9ca3af; cursor: default; background: none; }
+        .menu-list hr { border: none; border-top: 1px solid var(--ed-border); margin: 5px 4px; }
+        #menubar .spacer { flex: 1; }
+        #btn-publish {
+            background: var(--ed-green); color: #fff; border: none; padding: 7px 16px;
+            border-radius: 6px; font-size: 14px; cursor: pointer; font-weight: 500;
+        }
+        #btn-publish:hover { background: #14532d; }
+        #btn-publish:disabled { background: #9ca3af; cursor: default; }
+
+        /* ===== 主區域 ===== */
+        #main { flex: 1; display: flex; min-height: 0; }
+        #sidebar {
+            width: 220px; flex: 0 0 auto; overflow-y: auto;
+            background: #fff; border-right: 1px solid var(--ed-border); padding: 8px;
+        }
+        #sidebar h2 { font-size: 12px; color: #6b7280; font-weight: 600; padding: 6px 8px 4px; }
+        .file-item {
+            display: block; width: 100%; text-align: left; background: none; border: none;
+            padding: 8px 10px; border-radius: 6px; cursor: pointer; font-size: 13.5px;
+            color: var(--ed-text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+        }
+        .file-item:hover { background: var(--ed-green-light); }
+        .file-item.active { background: var(--ed-green); color: #fff; }
+        .file-item .size { color: #9ca3af; font-size: 11.5px; margin-left: 6px; }
+        .file-item.active .size { color: #d4efdf; }
+        #editor-pane { flex: 1; min-width: 0; display: flex; }
+        #editor-frame { flex: 1; border: none; background: #fff; }
+        #welcome {
+            flex: 1; display: flex; flex-direction: column; align-items: center;
+            justify-content: center; gap: 12px; color: #6b7280; padding: 20px; text-align: center;
+        }
+        [hidden] { display: none !important; }
+        #welcome .big { font-size: 20px; color: var(--ed-text); }
+
+        /* ===== 狀態列 ===== */
+        #statusbar {
+            height: var(--ed-status-h); flex: 0 0 auto;
+            display: flex; align-items: center; gap: 16px; padding: 0 12px;
+            background: #fff; border-top: 1px solid var(--ed-border);
+            font-size: 12.5px; color: #57606a; overflow: hidden; white-space: nowrap;
+        }
+        #st-file { font-weight: 600; color: var(--ed-text); }
+        #st-dirty.dirty { color: #b45309; font-weight: 600; }
+        #st-msg { flex: 1; overflow: hidden; text-overflow: ellipsis; }
+        #st-msg a { color: var(--ed-green); }
+        #st-msg.err { color: var(--ed-danger); font-weight: 600; }
+
+        /* ===== 對話框 ===== */
+        dialog {
+            border: 1px solid var(--ed-border); border-radius: 12px; padding: 22px;
+            width: min(480px, 92vw); box-shadow: 0 12px 40px rgba(0,0,0,.2);
+        }
+        dialog::backdrop { background: rgba(0,0,0,.35); }
+        dialog h3 { font-size: 16px; margin-bottom: 12px; }
+        dialog p { font-size: 13px; line-height: 1.6; margin-bottom: 10px; color: #57606a; }
+        dialog input[type=text], dialog input[type=password] {
+            width: 100%; padding: 8px 10px; font-size: 13.5px; border: 1px solid var(--ed-border);
+            border-radius: 6px; margin-bottom: 10px; font-family: ui-monospace, monospace;
+        }
+        dialog label { font-size: 13px; display: flex; align-items: center; gap: 6px; margin-bottom: 14px; }
+        dialog .row { display: flex; gap: 8px; justify-content: flex-end; }
+        dialog .row button {
+            padding: 7px 16px; border-radius: 6px; border: 1px solid var(--ed-border);
+            background: #fff; cursor: pointer; font-size: 13.5px;
+        }
+        dialog .row button.primary { background: var(--ed-green); color: #fff; border-color: var(--ed-green); }
+        dialog ul { font-size: 12.5px; color: #57606a; margin: 0 0 12px 18px; line-height: 1.7; }
+        dialog code { background: var(--ed-bg); padding: 1px 5px; border-radius: 4px; font-size: 12px; }
+    </style>
+</head>
+<body>
+
+<div id="menubar">
+    <span class="brand">📝 網頁編輯器</span>
+    <div class="menu" id="menu-file">
+        <button aria-haspopup="true" aria-expanded="false">檔案 ▾</button>
+        <div class="menu-list" role="menu">
+            <button id="mi-refresh-list">重新整理檔案列表</button>
+            <button id="mi-reload" disabled>重新載入目前檔案（捨棄變更）</button>
+        </div>
+    </div>
+    <div class="menu" id="menu-format">
+        <button aria-haspopup="true" aria-expanded="false">格式 ▾</button>
+        <div class="menu-list" role="menu">
+            <button data-cmd="bold">粗體（⌘B）</button>
+            <button data-cmd="italic">斜體（⌘I）</button>
+            <button id="mi-link">插入超連結…</button>
+            <button data-cmd="unlink">移除超連結</button>
+            <hr>
+            <button data-cmd="removeFormat">清除格式</button>
+        </div>
+    </div>
+    <div class="menu" id="menu-view">
+        <button aria-haspopup="true" aria-expanded="false">檢視 ▾</button>
+        <div class="menu-list" role="menu">
+            <button id="mi-lang-zh">中文檢視 ✓</button>
+            <button id="mi-lang-en">英文檢視</button>
+        </div>
+    </div>
+    <span class="spacer"></span>
+    <button id="btn-token" title="設定 GitHub 金鑰">🔑 金鑰</button>
+    <button id="btn-publish" disabled>🚀 發布</button>
+</div>
+
+<div id="main">
+    <nav id="sidebar" aria-label="可編輯的檔案">
+        <h2>可編輯的 HTML 檔案</h2>
+        <div id="file-list"><p style="padding:8px;color:#9ca3af;">載入中…</p></div>
+    </nav>
+    <div id="editor-pane">
+        <div id="welcome">
+            <div class="big">從左側選擇要編輯的頁面</div>
+            <div>編輯區為所見即所得；由建置腳本產生的區塊會以紅色虛線框保護、不可直接編輯。<br>
+            瀏覽與編輯不需金鑰；按「🚀 發布」上線時才需要 GitHub 金鑰。</div>
+        </div>
+        <iframe id="editor-frame" title="頁面編輯區" sandbox="allow-same-origin" hidden></iframe>
+    </div>
+</div>
+
+<div id="statusbar">
+    <span id="st-file">未開啟檔案</span>
+    <span id="st-dirty"></span>
+    <span id="st-sha"></span>
+    <span id="st-msg"></span>
+</div>
+
+<dialog id="dlg-token">
+    <h3>GitHub 金鑰（Fine-grained PAT）</h3>
+    <p>發布需要一把只授權本 repo 的金鑰。建立方式：</p>
+    <ul>
+        <li>GitHub → Settings → Developer settings → <b>Fine-grained tokens</b> → Generate new token</li>
+        <li>Repository access：<b>Only select repositories</b> → 選 <code>canslab1.github.io</code></li>
+        <li>Permissions → Repository permissions → <b>Contents：Read and write</b>（其餘全部 No access）</li>
+    </ul>
+    <input type="password" id="token-input" placeholder="github_pat_…" autocomplete="off">
+    <label><input type="checkbox" id="token-remember"> 記住金鑰（存於本瀏覽器 localStorage；共用電腦請勿勾選）</label>
+    <div class="row">
+        <button id="token-clear">清除金鑰</button>
+        <button id="token-cancel">取消</button>
+        <button id="token-save" class="primary">儲存</button>
+    </div>
+</dialog>
+
+<dialog id="dlg-publish">
+    <h3>發布到網站</h3>
+    <p id="pub-summary"></p>
+    <input type="text" id="pub-message" placeholder="Commit 訊息">
+    <p style="font-size:12px">將以單一 commit 同步更新：頁面本身、<span id="pub-stamps"></span>。推送後 GitHub Pages 與 IndexNow 會自動執行。</p>
+    <div class="row">
+        <button id="pub-cancel">取消</button>
+        <button id="pub-confirm" class="primary">確認發布</button>
+    </div>
+</dialog>
+
+<dialog id="dlg-link">
+    <h3>插入超連結</h3>
+    <input type="text" id="link-url" placeholder="https://…">
+    <div class="row">
+        <button id="link-cancel">取消</button>
+        <button id="link-ok" class="primary">插入</button>
+    </div>
+</dialog>
+
+<script>
+'use strict';
+
+/* ===== 常數 ===== */
+const OWNER = 'canslab1';
+const REPO = 'canslab1.github.io';
+const BRANCH = 'master';
+const API = 'https://api.github.com';
+/* build-prerender.py 管理的容器：直接編輯會在下次建置被覆蓋，故唯讀保護 */
+const PROTECTED_IDS = ['papers-container', 'projects-container', 'bio-content',
+    'honors-list', 'alumni-article', 'honors-article', 'stats-container', 'main-nav'];
+const EXCLUDE_FILES = ['editor.html', 'google9ba7e621fca59b66.html'];
+/* 發布時同步日期戳記的檔案（對應 build-prerender.py --bump-dates） */
+const STAMP_FILES = {
+    'humans.txt':     { pattern: /(Last update: )\d{4}-\d{2}-\d{2}/, label: 'humans.txt' },
+    'llms-full.txt':  { pattern: /(> Last updated: )\d{4}-\d{2}-\d{2}/, label: 'llms-full.txt' },
+    'README.md':      { pattern: /(\*\*最後更新\*\*：)\d{4}-\d{2}-\d{2}/, label: 'README' },
+};
+
+/* ===== 狀態 ===== */
+const state = {
+    files: [],          // {name, size, sha}
+    path: null,         // 目前檔案
+    sha: null,          // 載入時的 blob sha（衝突偵測用）
+    originalText: null, // 載入時的完整原始碼
+    bodyOpenEnd: -1,    // 原始碼中 <body …> 結尾位置
+    bodyCloseStart: -1, // 原始碼中 </body> 起始位置
+    dirty: false,
+    lang: 'zh-TW',
+    publishing: false,
+    editGen: 0,         // 編輯代次（發布期間再輸入的偵測）
+    loadToken: 0,       // iframe 載入序號（去除重複 load 監聽）
+};
+
+const $ = id => document.getElementById(id);
+const frame = $('editor-frame');
+
+/* ===== 金鑰管理 ===== */
+function getToken() {
+    return sessionStorage.getItem('ed-token') || localStorage.getItem('ed-token') || '';
+}
+function setToken(tok, remember) {
+    sessionStorage.removeItem('ed-token'); localStorage.removeItem('ed-token');
+    if (tok) (remember ? localStorage : sessionStorage).setItem('ed-token', tok);
+}
+
+/* ===== GitHub API ===== */
+async function gh(path, opts = {}) {
+    const headers = { 'Accept': 'application/vnd.github+json', ...(opts.headers || {}) };
+    const tok = getToken();
+    if (tok) headers['Authorization'] = 'Bearer ' + tok;
+    /* no-store：GitHub API 回應帶 max-age=60，若走瀏覽器快取，
+       sha 讀取可能過期 60 秒，會讓衝突偵測失效、第二次發布誤判 */
+    const res = await fetch(API + path, { cache: 'no-store', ...opts, headers });
+    if (!res.ok) {
+        let detail = '';
+        try { detail = (await res.json()).message || ''; } catch (e) {}
+        if (res.status === 403 && /rate limit/i.test(detail))
+            throw new Error('GitHub 流量限制已滿（未登入限額 60/hr）：請設定 🔑 金鑰（提升至 5000/hr）或稍後再試');
+        throw new Error(`GitHub API ${res.status}：${detail || res.statusText}`);
+    }
+    return res.json();
+}
+
+/* base64 ↔ UTF-8 */
+function b64ToText(b64) {
+    const bin = atob(b64.replace(/\n/g, ''));
+    const bytes = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+}
+function textToB64(text) {
+    const bytes = new TextEncoder().encode(text);
+    let bin = '';
+    const CHUNK = 0x8000;
+    for (let i = 0; i < bytes.length; i += CHUNK)
+        bin += String.fromCharCode.apply(null, bytes.subarray(i, i + CHUNK));
+    return btoa(bin);
+}
+
+/* ===== 狀態列 ===== */
+function status(msg, isErr) {
+    const el = $('st-msg');
+    el.innerHTML = ''; el.classList.toggle('err', !!isErr);
+    if (msg instanceof Node) el.appendChild(msg); else el.textContent = msg || '';
+}
+function setDirty(d) {
+    state.dirty = d;
+    $('st-dirty').textContent = state.path ? (d ? '● 已修改' : '已載入') : '';
+    $('st-dirty').classList.toggle('dirty', d);
+    $('btn-publish').disabled = !d || state.publishing;
+    $('mi-reload').disabled = !state.path;
+}
+
+/* ===== 檔案列表 ===== */
+async function refreshList() {
+    $('file-list').innerHTML = '<p style="padding:8px;color:#9ca3af;">載入中…</p>';
+    try {
+        const items = await gh(`/repos/${OWNER}/${REPO}/contents/?ref=${BRANCH}`);
+        state.files = items.filter(it => it.type === 'file' && it.name.endsWith('.html')
+            && !EXCLUDE_FILES.includes(it.name));
+        const box = $('file-list'); box.innerHTML = '';
+        for (const f of state.files) {
+            const b = document.createElement('button');
+            b.className = 'file-item' + (f.name === state.path ? ' active' : '');
+            b.dataset.name = f.name;
+            /* 檔名以 textContent 寫入，絕不用 innerHTML——檔名來自 API，
+               允許 < > " 等字元，用 innerHTML 會造成本站來源的 DOM-XSS */
+            b.appendChild(document.createTextNode(f.name));
+            const s = document.createElement('span');
+            s.className = 'size';
+            s.textContent = (f.size / 1024).toFixed(0) + 'K';
+            b.appendChild(s);
+            b.addEventListener('click', () => openFile(f.name));
+            box.appendChild(b);
+        }
+        status(`共 ${state.files.length} 個可編輯檔案`);
+    } catch (e) {
+        $('file-list').innerHTML = '';
+        status('檔案列表載入失敗：' + e.message, true);
+    }
+}
+
+/* ===== 載入與渲染 ===== */
+async function openFile(name) {
+    if (state.dirty && !confirm('目前檔案有未發布的變更，切換將捨棄。確定？')) return;
+    status('載入 ' + name + ' 中…');
+    try {
+        const data = await gh(`/repos/${OWNER}/${REPO}/contents/${encodeURIComponent(name)}?ref=${BRANCH}`);
+        /* 先在區域變數驗證，全部通過才寫入 state——
+           否則丟例外時會殘留上一個檔案的偏移量，導致序列化錯亂 */
+        const text = b64ToText(data.content);
+        const openMatch = text.match(/<body[^>]*>/i);
+        const closeIdx = text.lastIndexOf('</body>');
+        if (!openMatch || closeIdx < 0) throw new Error('找不到 <body> 標籤，無法以所見即所得模式編輯此檔');
+        state.path = name;
+        state.sha = data.sha;
+        state.originalText = text;
+        state.bodyOpenEnd = openMatch.index + openMatch[0].length;
+        state.bodyCloseStart = closeIdx;
+        state.editGen = 0;
+        renderFrame();
+        $('st-file').textContent = name;
+        $('st-sha').textContent = 'SHA ' + data.sha.slice(0, 7);
+        setDirty(false);
+        document.querySelectorAll('.file-item').forEach(el =>
+            el.classList.toggle('active', el.dataset.name === name));
+        status('已載入，可直接在右側編輯');
+    } catch (e) { status('載入失敗：' + e.message, true); }
+}
+
+function renderFrame() {
+    $('welcome').hidden = true;
+    frame.hidden = false;
+    /* 注入編輯輔助樣式於 head（儲存時只取 body，故不會進入檔案） */
+    const edStyle = `<style id="__ed-style">
+        .section { display: block !important; }
+        [data-ed-protected] { outline: 2px dashed #b91c1c; outline-offset: 2px;
+            cursor: not-allowed; position: relative; }
+        [data-ed-protected]::before { content: '🔒 產生區（請編輯 shared.js / 資料檔）';
+            position: sticky; top: 0; display: block; background: #fef2f2; color: #b91c1c;
+            font-size: 12px; padding: 2px 8px; z-index: 5; }
+        body { padding-bottom: 40vh; }
+    </style>`;
+    /* head 標籤可能大寫或帶屬性；只在第一個 head 起始標籤後插入輔助樣式 */
+    const doc = state.originalText.slice(0, state.bodyOpenEnd)
+        .replace(/<head\b[^>]*>/i, m => m + edStyle)
+        + state.originalText.slice(state.bodyOpenEnd);
+    /* 每次載入用新的 loadToken，讓殘留的舊 load 監聽器早退，避免重複註冊事件 */
+    const myToken = state.loadToken = (state.loadToken || 0) + 1;
+    frame.srcdoc = doc;
+    frame.addEventListener('load', () => onFrameLoad(myToken), { once: true });
+}
+
+/* 貼上與拖放的清理：移除 script/style/iframe 等、所有 on* 事件屬性、
+   javascript:/data: 連結——避免惡意標記被貼進可編輯區並發布成公開站的儲存型 XSS */
+const SANITIZE_DROP_TAGS = ['SCRIPT', 'STYLE', 'IFRAME', 'OBJECT', 'EMBED', 'LINK', 'META', 'BASE', 'FORM'];
+function sanitizeFragment(root) {
+    const walker = root.ownerDocument.createTreeWalker(root, NodeFilter.SHOW_ELEMENT);
+    const kill = [];
+    let node;
+    while ((node = walker.nextNode())) {
+        if (SANITIZE_DROP_TAGS.includes(node.tagName)) { kill.push(node); continue; }
+        for (const attr of Array.from(node.attributes)) {
+            const n = attr.name.toLowerCase(), v = (attr.value || '').trim().toLowerCase();
+            if (n.startsWith('on')) node.removeAttribute(attr.name);
+            else if ((n === 'href' || n === 'src' || n === 'xlink:href')
+                     && (v.startsWith('javascript:') || v.startsWith('data:') || v.startsWith('vbscript:')))
+                node.removeAttribute(attr.name);
+        }
+    }
+    kill.forEach(el => el.remove());
+    return root;
+}
+
+function onFrameLoad(myToken) {
+    if (myToken !== state.loadToken) return; /* 已切換到別的檔案，忽略舊事件 */
+    const doc = frame.contentDocument;
+    if (!doc) { status('編輯框架初始化失敗', true); return; }
+    doc.documentElement.lang = state.lang;
+    doc.body.setAttribute('contenteditable', 'true');
+    doc.body.setAttribute('spellcheck', 'false');
+    for (const id of PROTECTED_IDS) {
+        const el = doc.getElementById(id);
+        if (el) { el.setAttribute('contenteditable', 'false'); el.setAttribute('data-ed-protected', '1'); }
+    }
+    /* 連結點擊不導覽（避免編輯中跳頁） */
+    doc.addEventListener('click', e => {
+        const a = e.target.closest && e.target.closest('a');
+        if (a) e.preventDefault();
+    }, true);
+    doc.addEventListener('input', () => { state.editGen = (state.editGen || 0) + 1; setDirty(true); });
+    doc.addEventListener('keydown', e => {
+        if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'b') { e.preventDefault(); doc.execCommand('bold'); }
+        if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'i') { e.preventDefault(); doc.execCommand('italic'); }
+    });
+    /* 保護區防刪除：任何會影響保護島的輸入（含跨區選取刪除）一律攔下 */
+    doc.addEventListener('beforeinput', e => {
+        const ranges = e.getTargetRanges ? e.getTargetRanges() : [];
+        const prot = doc.querySelectorAll('[data-ed-protected]');
+        for (const r of ranges) {
+            const range = doc.createRange();
+            try { range.setStart(r.startContainer, r.startOffset); range.setEnd(r.endContainer, r.endOffset); }
+            catch (err) { continue; }
+            for (const p of prot) {
+                if (range.intersectsNode(p)) {
+                    e.preventDefault();
+                    status('🔒 選取範圍包含產生區，已阻止此編輯（請縮小選取範圍）', true);
+                    return;
+                }
+            }
+        }
+    });
+    /* 貼上／拖放清理 */
+    doc.addEventListener('paste', e => {
+        const html = e.clipboardData && e.clipboardData.getData('text/html');
+        if (!html) return; /* 純文字貼上交給瀏覽器 */
+        e.preventDefault();
+        const tmp = doc.createElement('div');
+        tmp.innerHTML = html;
+        sanitizeFragment(tmp);
+        doc.execCommand('insertHTML', false, tmp.innerHTML);
+    });
+    doc.addEventListener('drop', e => e.preventDefault());
+    /* 游標進入保護區時提示 */
+    doc.addEventListener('selectionchange', () => {
+        const sel = doc.getSelection();
+        if (!sel || !sel.anchorNode) return;
+        const el = sel.anchorNode.nodeType === 1 ? sel.anchorNode : sel.anchorNode.parentElement;
+        const prot = el && el.closest && el.closest('[data-ed-protected]');
+        if (prot) status('🔒 此區塊由 build-prerender.py 產生——編輯內容請改 shared.js 或對應資料檔');
+    });
+}
+
+/* ===== 序列化（只取 body 內容，拼回原始碼） ===== */
+
+/* 在原始碼中定位容器的內容範圍（同 build-prerender.py 的深度配對邏輯）。
+   要求 id 屬性前有空白（避免誤中 data-id=），並驗證找到的結尾確為對應收尾標籤 */
+function findContainerRange(src, id) {
+    /* id 前須有空白（排除 data-id=），但允許 id 為第一個屬性（<ul id="…"）；
+       [^>]*? 惰性跨越其他屬性，\sid=" 確保是真正的 id 屬性 */
+    const openRe = new RegExp('<([a-zA-Z][a-zA-Z0-9]*)\\b[^>]*?\\sid="' + id + '"[^>]*>');
+    const m = src.match(openRe);
+    if (!m) return null;
+    const tag = m[1].toLowerCase();
+    const start = m.index + m[0].length;
+    const re = new RegExp('<' + tag + '\\b|</' + tag + '\\s*>', 'gi');
+    re.lastIndex = start;
+    let depth = 1, mm;
+    while ((mm = re.exec(src))) {
+        if (mm[0][1] === '/') { depth--; if (depth === 0) return { start, end: mm.index }; }
+        else depth++;
+    }
+    return null;
+}
+
+function serialize() {
+    const doc = frame.contentDocument;
+    const body = doc.body.cloneNode(true);
+    body.removeAttribute('contenteditable');
+    body.removeAttribute('spellcheck');
+    /* 保護容器不可能被編輯，改以「原始碼原文」拼回，
+       避免瀏覽器解析正規化（實體解碼、tbody 插入等）污染
+       build-prerender.py 產生的內容、造成建置往返 diff 乒乓。
+       完整性驗證：每個保護 id 在 DOM 內必須恰好出現一次（防止複製貼上
+       產生重複，或選取刪除導致遺失），否則中止序列化並要求重新載入。 */
+    const nonce = (crypto.randomUUID ? crypto.randomUUID() : String(Math.random())).replace(/-/g, '');
+    const slots = [];
+    for (const id of PROTECTED_IDS) {
+        const found = body.querySelectorAll('#' + (window.CSS && CSS.escape ? CSS.escape(id) : id));
+        const inOriginal = findContainerRange(state.originalText, id) ? 1 : 0;
+        if (inOriginal && found.length !== 1)
+            throw new Error(`保護區「#${id}」在頁面中出現 ${found.length} 次（應為 1 次，可能被複製或刪除）。請「重新載入目前檔案」後再編輯。`);
+    }
+    body.querySelectorAll('[data-ed-protected]').forEach(el => {
+        el.removeAttribute('data-ed-protected');
+        el.removeAttribute('contenteditable');
+        const id = el.id;
+        const range = findContainerRange(state.originalText, id);
+        if (range) {
+            const token = `__ED_SLOT_${id}_${nonce}__`;
+            slots.push({ token, source: state.originalText.slice(range.start, range.end) });
+            el.innerHTML = token;
+        }
+    });
+    let bodyInner = body.innerHTML;
+    for (const s of slots) {
+        if (bodyInner.indexOf(s.token) === -1 || bodyInner.indexOf(s.token) !== bodyInner.lastIndexOf(s.token))
+            throw new Error('序列化完整性檢查失敗（保護區標記重複或遺失），已中止。請重新載入檔案。');
+        bodyInner = bodyInner.replace(s.token, () => s.source);
+    }
+    /* HTML 解析器會把 </body> 之後的空白（如 </html> 前後換行）搬進 body；
+       以原始碼 body 結尾的空白樣式重建，維持逐位元組往返 */
+    const srcTrailWs = state.originalText.slice(state.bodyOpenEnd, state.bodyCloseStart).match(/\s*$/)[0];
+    bodyInner = bodyInner.replace(/\s+$/, '') + srcTrailWs;
+    return state.originalText.slice(0, state.bodyOpenEnd)
+        + bodyInner
+        + state.originalText.slice(state.bodyCloseStart);
+}
+
+/* ===== 發布（Git Data API：多檔單一原子 commit） ===== */
+/* 固定以 Asia/Taipei 計算日期，與 build-prerender.py（在台灣機器上執行）一致，
+   避免出國或跨午夜時本機時區造成日期戳記差一天 */
+function today() { return new Date().toLocaleDateString('sv', { timeZone: 'Asia/Taipei' }); }
+
+function bumpOwnStamps(html) {
+    return html.replace(/(<meta name="DCTERMS\.modified" content=")[\d-]+(")/, `$1${today()}$2`);
+}
+
+/* 所有讀取都釘在同一個 commit（headRef），避免與衝突檢查之間有 TOCTOU 空窗 */
+async function collectPublishFiles(pageHtml, headRef) {
+    const d = today();
+    const files = [];   // {path, content, label}
+    files.push({ path: state.path, content: bumpOwnStamps(pageHtml), label: state.path });
+
+    const pageLoc = state.path === 'index.html'
+        ? 'https://canslab1.github.io/' : `https://canslab1.github.io/${state.path}`;
+    try {
+        const sm = await gh(`/repos/${OWNER}/${REPO}/contents/sitemap.xml?ref=${headRef}`);
+        const smText = b64ToText(sm.content);
+        const re = new RegExp(`(<loc>${pageLoc.replace(/[/.]/g, m => '\\' + m)}</loc>\\s*<lastmod>)[\\d-]+(</lastmod>)`);
+        const smNew = smText.replace(re, `$1${d}$2`);
+        if (re.test(smText) && smNew !== smText) files.push({ path: 'sitemap.xml', content: smNew, label: 'sitemap' });
+    } catch (e) { /* sitemap 讀取失敗不阻擋發布 */ }
+
+    for (const [p, cfg] of Object.entries(STAMP_FILES)) {
+        try {
+            const f = await gh(`/repos/${OWNER}/${REPO}/contents/${encodeURIComponent(p)}?ref=${headRef}`);
+            const t = b64ToText(f.content);
+            if (cfg.pattern.test(t)) {
+                const nt = t.replace(cfg.pattern, `$1${d}`);
+                if (nt !== t) files.push({ path: p, content: nt, label: cfg.label });
+            }
+        } catch (e) { /* 缺檔不阻擋 */ }
+    }
+    return files;
+}
+
+async function publish(message) {
+    state.publishing = true; $('btn-publish').disabled = true;
+    try {
+        /* 序列化在最前面：先凍結目前畫面，並記住此刻的編輯代次 */
+        const genAtPublish = state.editGen || 0;
+        const pageHtml = serialize();
+
+        /* 先讀 ref/head commit，之後所有讀取都釘在 headSha 上（消除 TOCTOU） */
+        status('讀取遠端狀態…');
+        const ref = await gh(`/repos/${OWNER}/${REPO}/git/ref/heads/${BRANCH}`);
+        const headSha = ref.object.sha;
+        const headCommit = await gh(`/repos/${OWNER}/${REPO}/git/commits/${headSha}`);
+
+        status('檢查版本衝突…');
+        const remote = await gh(`/repos/${OWNER}/${REPO}/contents/${encodeURIComponent(state.path)}?ref=${headSha}`);
+        if (remote.sha !== state.sha)
+            throw new Error('遠端檔案已被其他 commit 修改（版本衝突）。請「重新載入目前檔案」後再編輯。');
+
+        status('準備檔案與日期戳記…');
+        const files = await collectPublishFiles(pageHtml, headSha);
+
+        status('上傳內容…');
+        const treeItems = [];
+        let pageBlobSha = null;
+        for (const f of files) {
+            const blob = await gh(`/repos/${OWNER}/${REPO}/git/blobs`, {
+                method: 'POST',
+                body: JSON.stringify({ content: textToB64(f.content), encoding: 'base64' }),
+            });
+            if (f.path === state.path) pageBlobSha = blob.sha;
+            treeItems.push({ path: f.path, mode: '100644', type: 'blob', sha: blob.sha });
+        }
+        const tree = await gh(`/repos/${OWNER}/${REPO}/git/trees`, {
+            method: 'POST',
+            body: JSON.stringify({ base_tree: headCommit.tree.sha, tree: treeItems }),
+        });
+        const commit = await gh(`/repos/${OWNER}/${REPO}/git/commits`, {
+            method: 'POST',
+            body: JSON.stringify({ message, tree: tree.sha, parents: [headSha] }),
+        });
+        /* 不可逆的一步：更新分支指標。此後不再有任何可能失敗的呼叫 */
+        await gh(`/repos/${OWNER}/${REPO}/git/refs/heads/${BRANCH}`, {
+            method: 'PATCH',
+            body: JSON.stringify({ sha: commit.sha }),
+        });
+
+        /* 以發布內容為新基準；contents API 的 sha 即 git blob sha，衝突語意不變 */
+        state.originalText = files[0].content;
+        const om = state.originalText.match(/<body[^>]*>/i);
+        state.bodyOpenEnd = om.index + om[0].length;
+        state.bodyCloseStart = state.originalText.lastIndexOf('</body>');
+        state.sha = pageBlobSha;
+        $('st-sha').textContent = 'SHA ' + pageBlobSha.slice(0, 7);
+        /* 若發布期間又有新輸入，維持 dirty 以免遺漏未發布的鍵入 */
+        setDirty((state.editGen || 0) !== genAtPublish);
+        const link = document.createElement('span');
+        const a = document.createElement('a');
+        a.href = `https://github.com/${OWNER}/${REPO}/commit/${commit.sha}`;
+        a.target = '_blank'; a.rel = 'noopener'; a.textContent = commit.sha.slice(0, 7);
+        link.appendChild(document.createTextNode('✅ 已發布 '));
+        link.appendChild(a);
+        link.appendChild(document.createTextNode('（Pages 部署約需 1–2 分鐘，快取最長 10 分鐘）'));
+        status(link);
+    } catch (e) {
+        status('發布失敗：' + e.message, true);
+    } finally {
+        state.publishing = false;
+        $('btn-publish').disabled = !state.dirty;
+    }
+}
+
+/* ===== 選單互動 ===== */
+document.querySelectorAll('.menu > button').forEach(btn => {
+    btn.addEventListener('click', e => {
+        e.stopPropagation();
+        const menu = btn.parentElement;
+        const wasOpen = menu.classList.contains('open');
+        document.querySelectorAll('.menu.open').forEach(m => m.classList.remove('open'));
+        menu.classList.toggle('open', !wasOpen);
+        btn.setAttribute('aria-expanded', String(!wasOpen));
+    });
+});
+document.addEventListener('click', () =>
+    document.querySelectorAll('.menu.open').forEach(m => m.classList.remove('open')));
+
+$('mi-refresh-list').addEventListener('click', refreshList);
+$('mi-reload').addEventListener('click', () => { if (state.path) { state.dirty = false; openFile(state.path); } });
+
+document.querySelectorAll('[data-cmd]').forEach(b => b.addEventListener('click', () => {
+    if (frame.contentDocument) { frame.contentDocument.execCommand(b.dataset.cmd); frame.contentWindow.focus(); }
+}));
+$('mi-link').addEventListener('click', () => { if (frame.contentDocument) $('dlg-link').showModal(); });
+$('link-ok').addEventListener('click', () => {
+    const url = $('link-url').value.trim();
+    if (!url) { $('dlg-link').close(); return; }
+    /* 連結協定白名單：擋掉 javascript:/data:/vbscript:，否則會變成公開站的儲存型 XSS。
+       允許 http/https/mailto、以及相對路徑與頁內錨點（#、/、./、../） */
+    if (!/^(#|\/|\.\.?\/)/.test(url)) {
+        let u;
+        try { u = new URL(url, 'https://canslab1.github.io/'); }
+        catch (e) { status('無效的網址', true); return; }
+        if (!['http:', 'https:', 'mailto:'].includes(u.protocol)) {
+            status('僅允許 http、https、mailto 或相對連結', true); return;
+        }
+    }
+    $('dlg-link').close();
+    if (frame.contentDocument) frame.contentDocument.execCommand('createLink', false, url);
+    $('link-url').value = '';
+});
+$('link-cancel').addEventListener('click', () => $('dlg-link').close());
+
+function setLang(lang) {
+    state.lang = lang;
+    if (frame.contentDocument) frame.contentDocument.documentElement.lang = lang;
+    $('mi-lang-zh').textContent = '中文檢視' + (lang === 'zh-TW' ? ' ✓' : '');
+    $('mi-lang-en').textContent = '英文檢視' + (lang === 'en' ? ' ✓' : '');
+}
+$('mi-lang-zh').addEventListener('click', () => setLang('zh-TW'));
+$('mi-lang-en').addEventListener('click', () => setLang('en'));
+
+/* 金鑰對話框 */
+$('btn-token').addEventListener('click', () => {
+    $('token-input').value = getToken();
+    $('token-remember').checked = !!localStorage.getItem('ed-token');
+    $('dlg-token').showModal();
+});
+$('token-save').addEventListener('click', () => {
+    setToken($('token-input').value.trim(), $('token-remember').checked);
+    $('dlg-token').close(); status(getToken() ? '金鑰已設定' : '金鑰為空');
+});
+$('token-clear').addEventListener('click', () => { setToken('', false); $('token-input').value = ''; status('金鑰已清除'); });
+$('token-cancel').addEventListener('click', () => $('dlg-token').close());
+
+/* 發布對話框 */
+$('btn-publish').addEventListener('click', () => {
+    if (!getToken()) { status('請先設定 GitHub 金鑰（右上角 🔑）', true); $('dlg-token').showModal(); return; }
+    $('pub-summary').textContent = `將把「${state.path}」的變更以單一 commit 發布到 ${BRANCH} 分支。`;
+    $('pub-stamps').textContent = 'sitemap lastmod、humans.txt、llms-full.txt、README 日期戳記';
+    $('pub-message').value = `Edit ${state.path} via editor.html`;
+    $('dlg-publish').showModal();
+});
+$('pub-confirm').addEventListener('click', () => {
+    const msg = $('pub-message').value.trim() || `Edit ${state.path} via editor.html`;
+    $('dlg-publish').close();
+    publish(msg);
+});
+$('pub-cancel').addEventListener('click', () => $('dlg-publish').close());
+
+window.addEventListener('beforeunload', e => { if (state.dirty) { e.preventDefault(); e.returnValue = ''; } });
+
+
+refreshList();
+</script>
+</body>
+</html>
