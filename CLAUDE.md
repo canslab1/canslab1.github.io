@@ -63,7 +63,7 @@ python3 build-prerender.py
 - **IndexNow key**: `d22a81b36ccb45e085fe6679a822df52` (active); `c88197fa...` is stale/broken
 - **Google verification**: `google9ba7e621fca59b66.html` (file-based)
 - **Bing verification**: `BingSiteAuth.xml`
-- **robots.txt**: allows all crawlers including 24+ named AI bots; references `sitemap.xml`, `security.txt`, `llms.txt`, `llms-full.txt`
+- **robots.txt**: allows all crawlers including 24 named AI bots; `Sitemap:` directives only — the `llms.txt` / `llms-full.txt` pointers are informational comments, and it deliberately does NOT reference security.txt (the former `Security:` directive was invalid robots.txt syntax; see Conventions below)
 
 ## Metadata Architecture (index.html `<head>`)
 
@@ -103,7 +103,7 @@ All metadata is designed so search engines and generative AI systems return corr
 | 2 | `ItemList` | 10 SiteNavigationElement entries |
 | 3 | `BreadcrumbList` | 2-level hierarchy: Home → About |
 | 4 | `VideoObject` | YouTube interview (028zexOcXZo, 10m38s) |
-| 5 | `ImageGallery` | 19 ImageObject entries (17 honors photos + 2 software screenshots) |
+| 5 | `ImageGallery` | 29 ImageObject entries (27 honors photos + 2 software screenshots) |
 | 6 | `ItemList` | 45 ScholarlyArticle + 22 ResearchProject entries *(auto-generated)* |
 
 ### Person Entity (`@id: "#person"`) — Key Properties
@@ -142,7 +142,7 @@ Each includes: name, alternateName, description, codeRepository, programmingLang
 - When updating academic metrics, sync across: meta description, JSON-LD Person (`additionalProperty`), `llms.txt`, `llms-full.txt`, bio text, stats cards
 - When adding new honors photos, also update: ImageGallery JSON-LD block, relevant `og:image` tags if significant
 - When adding new software, also update: `@graph` SoftwareSourceCode entry (with 4 `image` URLs), `llms.txt`, `llms-full.txt`
-- When content changes, also bump: sitemap `lastmod`, `DCTERMS.modified` (index.html), humans.txt / llms-full.txt "Last update", README 最後更新
+- When content changes, also bump: sitemap `lastmod`, `DCTERMS.modified` (index.html), humans.txt / llms-full.txt "Last update", README 最後更新 — or simply run `python3 build-prerender.py --bump-dates`, which updates all five stamps; also review whether `feed.xml` deserves a new entry / `<updated>` bump (it is NOT covered by --bump-dates)
 - After any push, send IndexNow notification: `POST https://api.indexnow.org/indexnow` with key `d22a81b36ccb45e085fe6679a822df52`
 
 ## Data Counts (as of 2026-05)

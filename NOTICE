@@ -1,0 +1,24 @@
+NOTICE — Licensing Scope for canslab1.github.io
+================================================
+
+The MIT License in the LICENSE file applies ONLY to the source code of
+this website: HTML, CSS, and JavaScript files, and the build script
+(build-prerender.py).
+
+It does NOT apply to the following content, which remains under the
+copyright of its respective owners and is hosted here as author copies /
+with permission for academic and archival purposes:
+
+- papers/     Published journal articles (publisher-formatted PDFs;
+              copyright belongs to the respective publishers, e.g.
+              JISE, WSEAS)
+- press/      Newspaper scans (copyright China Times, United Daily
+              News, and other respective publishers)
+- articles/   School magazine issues and book excerpts (copyright
+              臺北市老松國民小學 and other respective publishers)
+- CV.pdf      Personal curriculum vitae of Prof. Chung-Yuan Huang
+- images/     Personal and event photographs (all rights reserved by
+              Prof. Chung-Yuan Huang unless otherwise noted)
+
+Site text content (biography, publication lists, project descriptions)
+is provided for accurate citation and academic reference.

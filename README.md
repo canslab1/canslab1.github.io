@@ -68,48 +68,11 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 
 ## 教授簡歷
 
-### 現任職務
-- **長庚大學** 工學院 資訊工程學系 教授（教字第 141150 號，104.08 起）
-- **長庚大學** 智慧運算學院 / 人工智慧學系 合聘教授（109.10 起）
-- **老松國小** 115 年校務顧問（115.03 起）
-- **老松國小** 學生家長會 榮譽會長（113.10 起）
+簡歷、學經歷、研究領域與授課資訊以下列來源為唯一權威，本 README 不再重複維護（避免多份副本漂移）：
 
-### 研究領域
-- 複雜網絡電腦建模與模擬
-- 社會現象電腦建模與模擬
-- 傳染病傳播動態電腦模擬
-
-### 主持實驗室
-複雜適應性網絡與系統實驗室（Complex Adaptive Networks and Systems Lab, CANS Lab）
-
-### 教育背景
-
-| 學位 | 學校 | 系所 | 期間 |
-|------|------|------|------|
-| 博士 | 交通大學 | 資訊科學研究所 | 89.08–94.11 |
-| 碩士 | 交通大學 | 資訊科學研究所 | 87.08–89.07 |
-| 學士 | 中國科技大學 | 電子資料處理科 | 74.08–81.07 |
-
-### 教職經歷
-
-| 職稱 | 單位 | 期間 |
-|------|------|------|
-| 教授 | 長庚大學 資訊工程學系 | 104.08 至今 |
-| 副教授 | 長庚大學 資訊工程學系 | 99.08–104.07 |
-| 助理教授 | 長庚大學 資訊工程學系 | 95.08–99.07 |
-| 助理教授兼系主任 | 元培科技大學 資訊工程學系 | 94.08–95.07 |
-| 專任講師 | 中國科技大學 資訊工程學系 | 91.08–94.07 |
-| 講師 | 中國科技大學 資訊管理學系 | 89.08–91.07 |
-
-### 業界經歷（攻讀博士前，共 11 年）
-- 宇博電腦（新加坡商）— 資深系統設計師
-- 環世股份有限公司 — 系統工程師
-- 百點連鎖資訊教室 — 教學部主任 / 總經理特別助理
-- 鼎眾電腦股份有限公司 — 軟體開發部主任
-
-### 授課科目
-- 大學部：網路應用軟體設計（IT3019）、物件導向軟體設計（IT3004）、系統程式（IT2017）
-- 研究所：機器學習（ITM114）、資料探勘（ITM063）、柔性計算（ITM141）
+- **線上簡介（中英雙語）**：<https://canslab1.github.io/#bio>
+- **完整履歷 CV.pdf**（教育背景、教職與業界經歷、授課科目）：<https://canslab1.github.io/CV.pdf>
+- **AI 可讀完整檔案**（含生涯時間軸）：<https://canslab1.github.io/llms-full.txt>
 
 ## 頁面結構
 
@@ -303,48 +266,19 @@ Footer 使用縮圖（`*-thumb.*`）以減少頁面載入大小。Hover 時顯�
 
 ## 研究計畫摘要（CV.pdf 內容）
 
-### 主持人計畫（22 件，國科會/科技部）
+37 件研究計畫（主持人 22 件、共同主持人 14 件、研究人員 1 件）的完整清單、計畫編號與經費，請見：
 
-| 期間 | 計畫名稱 | 預算 |
-|------|--------|------|
-| 109–110 | 以地理資訊系統為基礎之人工智慧基因演算法暨時空權重雙模型 | 113 萬 |
-| 107–108 | 整合資訊熵值及局域拓樸特性來識別複雜網絡超級傳播者 | 78.4 萬 |
-| 106–107 | 使用規則式拓樸策略來快速識別複雜網絡社群及其階層結構 | 53.9 萬 |
-| 105–106 | 線上熟人社群網絡演化之交友資源與記憶的影響 | 61.4 萬 |
-| 104–105 | 反覆式囚犯困局中可自我聲譽調整能力之智慧型代理人的影響 | 82.1 萬 |
-| 103–104 | 最適新型流感交通阻絕策略之基因演算法優選與防疫成本效益分析 | 50 萬 |
-| 100–101 | 台灣新型流感 H1N1 疫情之計量地理分析與時空傳播網絡監測平台 | 50.7 萬 |
-| 99–100 | 建構「台灣通勤人口暨交通運輸網絡模型」 | 78 萬 |
-| 98–99 | 居家隔離檢疫政策成本效益及最佳實施策略評估分析 | 90 萬 |
-| 95–96 | 小世界流行病學建模與公共衛生政策之評估 | 44.9 萬 |
-
-### 共同主持人計畫（14 件）
-涵蓋傳染病監測、藥物濫用預警、GPU 演算法、P2P 網路等領域。
-
-### 合作機構
-國科會（NSTC/MOST）、新興病毒感染研究中心（CMRPD）、疾病管制局（DOH）、食品藥物管理局（TFDA）
+- **計畫列表（中英雙語）**：<https://canslab1.github.io/#projects>（資料來源：[`projects-data.js`](projects-data.js)）
+- **llms-full.txt**：含全部計畫之計畫編號
+- **CV.pdf 第 3–4 頁**：主持人／共同主持人計畫完整表格與預算
 
 ## 獎項與榮譽完整列表
 
-- **2026.04** 臺北市老松國民小學獲頒創校 130 周年校慶活動傑出校友及金質感謝狀
-- **2026.04** 臺北市立龍山國民中學感謝狀（捐資母校）
-- **2024–至今** 臺北市立龍山國民中學學生家長會顧問（自 113 學年起）
-- **2026.03** 臺北市老松國民小學 115 年校務顧問
-- **2026.02** 臺北市老松國民小學創校 130 周年校慶活動籌備會執行長
-- **2025** 111 學年起，連續四學年捐款總額超過新臺幣壹佰萬元整（老松國小）
-- **2025** 教師節捐款新台幣伍拾萬元整予老松國小
-- **2024** 臺北市杏壇芬芳獎（老松國小推薦，含頒獎照片）— 源源不絕無私大愛，守護美好優質老松
-- **2024** 中國科技大學 59 週年校慶傑出校友（含專訪影片、活動照片）
-- **2019** 第 17 屆台塑企業應用技術研討會研發論文暨海報競賽學校組優勝第一名
-- **2016** ICIAE 2016 Best Student Paper Award（指導學生傅昱翔）
-- **2015** 長庚大學工學院校外實習課程成果競賽佳作
-- **2014** Simulation 期刊 Editor's Choice 排行榜第二名
-- **2013** e-CASE & e-Tech 2013 最佳論文首獎 Shieh Tung-Min Memorial Award
-- **2012** 中華電信創新應用大賽季軍
-- **2006** 中華民國斐陶斐榮譽學會 2006 年度榮譽會員
-- **2001** 第二屆台灣工業銀行創業大賽佳作
-- **2000** 中國科技大學第 12 屆優秀校友
-- 研發全國首套社會網絡式傳染病傳播動態電腦模擬系統 CASMIM
+全部獎項與榮譽（含照片、證書與說明）的權威來源：
+
+- **榮譽列表（中英雙語，含照片檢視）**：<https://canslab1.github.io/#overview>（資料來源：[`shared.js`](shared.js) 的 `honorsZh`/`honorsEn`）
+- **llms-full.txt**：Awards 段落
+- **CV.pdf**：獎項頁
 
 ## 技術架構
 
@@ -655,7 +589,7 @@ python3 build-prerender.py
 
 | 頁面 | og:type | og:image | JSON-LD 類型 | robots |
 |------|---------|----------|-------------|--------|
-| `index.html` | `profile` | 8 張（社群分享卡 + 大頭照 + Lab logo + 傑出校友 + 杏壇芬芳 + EpiRank + 老松 130 周年校友獎 + 捐款） | `WebSite` + `ProfilePage` → `Person` + `ResearchOrganization` + 8× `SoftwareSourceCode` + `ItemList`（SiteNavigationElement ×10） + `BreadcrumbList` + `VideoObject` + `ImageGallery`（19 ImageObject） + `ItemList`（45 ScholarlyArticle + 22 ResearchProject） | `index, follow` |
+| `index.html` | `profile` | 8 張（社群分享卡 + 大頭照 + Lab logo + 傑出校友 + 杏壇芬芳 + EpiRank + 老松 130 周年校友獎 + 捐款） | `WebSite` + `ProfilePage` → `Person` + `ResearchOrganization` + 8× `SoftwareSourceCode` + `ItemList`（SiteNavigationElement ×10） + `BreadcrumbList` + `VideoObject` + `ImageGallery`（29 ImageObject） + `ItemList`（45 ScholarlyArticle + 22 ResearchProject） | `index, follow` |
 | `stories.html` | `website` | `IMG-2.jpg`（大頭照） | `CollectionPage` + `CreativeWorkSeries` | `index, follow` |
 | `404.html` | —（未設定） | —（未設定） | —（無） | `noindex, follow` |
 
@@ -684,7 +618,7 @@ python3 build-prerender.py
 | 2 | `ItemList` | 10 SiteNavigationElement |
 | 3 | `BreadcrumbList` | 2 層級（首頁 → 介紹） |
 | 4 | `VideoObject` | YouTube 傑出校友專訪（028zexOcXZo, 10m38s） |
-| 5 | `ImageGallery` | 19 ImageObject（17 榮譽照片 + 2 軟體截圖） |
+| 5 | `ImageGallery` | 29 ImageObject（27 榮譽照片 + 2 軟體截圖） |
 | 6 | `ItemList` | 45 ScholarlyArticle + 22 ResearchProject *(auto-generated)* |
 
 **Person 實體**（`@id: "#person"`）主要屬性：
@@ -1085,12 +1019,15 @@ sips -Z 128 images/logo.png --out images/logo-thumb.png
 
 ## 授權說明
 
-本專案採用 [MIT License](LICENSE)，但以下資源**不包含**在 MIT 授權範圍內：
+本專案採用 [MIT License](LICENSE)，授權範圍詳見 [NOTICE](NOTICE)。以下資源**不包含**在 MIT 授權範圍內：
 
 | 資源類型 | 授權狀態 |
 |----------|---------|
 | HTML / CSS / JavaScript 程式碼 | ✅ MIT 授權，可自由使用 |
 | 研究軟體（EpiRank、HETA 等） | ✅ 各自 GitHub repo 採 MIT 授權 |
+| `papers/` 期刊論文 PDF（出版社排版版本） | ❌ 版權屬各出版社（JISE、WSEAS 等），僅作者存檔用途 |
+| `press/` 報紙掃描 | ❌ 版權屬中國時報、聯合報等原發行媒體 |
+| `articles/` 校刊與專刊 PDF | ❌ 版權屬臺北市老松國民小學等原發行單位 |
 | 教授個人照片（`images/IMG-2.jpg`、`honors1–4.png`、`images/honors/*`） | ❌ 個人肖像權，未經授權不得使用 |
 | `CV.pdf` 學術履歷 | ❌ 個人文件，僅供閱覽 |
 | 各機構 logo（`csie.png`、`laosong-thumb.png` 等） | ❌ 各機構商標，僅限本網站使用 |
