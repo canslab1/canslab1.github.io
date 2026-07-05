@@ -12,6 +12,8 @@ build-prerender.py
   - 榮譽（shared.js honorsZh/honorsEn → #honors-list）
   - 傑出校友推薦文（shared.js alumniArticleZh/alumniArticleEn → #alumni-article）
   - 杏壇芬芳推薦文（shared.js honorsArticleZh/honorsArticleEn → #honors-article）
+  - 統計卡（stats-data.js statsZh/statsEn → #stats-container）
+  - 導覽列（shared.js navItemsZh/navItemsEn → #main-nav，無 JS 後備）
 
 用法：python3 build-prerender.py [--bump-dates]
   --bump-dates  同步更新五處日期戳記（DCTERMS.modified、sitemap 首頁
@@ -42,10 +44,10 @@ def build_error(msg):
 # Parse JavaScript data using a bracket-based approach
 # ─────────────────────────────────────────────
 
-def extract_js_string(text, start):
-    """Extract a JS single-quoted string starting at position `start` (must be the opening quote).
-    Returns (string_value, end_position_after_closing_quote)."""
-    assert text[start] == "'", f"Expected ' at pos {start}, got {text[start]!r}"
+def extract_js_string(text, start, quote="'"):
+    """Extract a JS quoted string starting at position `start` (must be the opening
+    quote; single or double). Returns (string_value, end_position_after_closing_quote)."""
+    assert text[start] == quote, f"Expected {quote} at pos {start}, got {text[start]!r}"
     i = start + 1
     chars = []
     while i < len(text):
@@ -69,7 +71,7 @@ def extract_js_string(text, start):
             else:
                 chars.append(nxt)
                 i += 2
-        elif c == "'":
+        elif c == quote:
             return ''.join(chars), i + 1
         else:
             chars.append(c)
@@ -78,14 +80,14 @@ def extract_js_string(text, start):
 
 
 def find_bracket_end(text, start, open_b='[', close_b=']'):
-    """Find the matching closing bracket, skipping strings."""
+    """Find the matching closing bracket, skipping single- and double-quoted strings."""
     assert text[start] == open_b
     depth = 1
     i = start + 1
     while i < len(text) and depth > 0:
         c = text[i]
-        if c == "'":
-            _, i = extract_js_string(text, i)
+        if c == "'" or c == '"':
+            _, i = extract_js_string(text, i, c)
         elif c == open_b:
             depth += 1
             i += 1
@@ -552,26 +554,93 @@ def extract_image_urls(html_str):
     return [u.split('?', 1)[0] for u in urls]
 
 
+# ─── Parse object arrays from shared.js / stats-data.js ───
+
+def parse_object_array(js_text, var_name, fields, source_label):
+    """Parse a const array of flat objects, extracting the given string fields.
+    Booleans named in `fields` with a trailing '?' are matched as `name: true`."""
+    m = re.search(rf'const\s+{var_name}\s*=\s*\[', js_text)
+    if not m:
+        build_error(f"Could not find {var_name} in {source_label}")
+        return []
+    arr_start = m.end() - 1
+    arr_end = find_bracket_end(js_text, arr_start)
+    arr_content = js_text[arr_start + 1:arr_end - 1]
+
+    items = []
+    i = 0
+    while i < len(arr_content):
+        idx = arr_content.find('{', i)
+        if idx == -1:
+            break
+        obj_end = find_bracket_end(arr_content, idx, '{', '}')
+        obj_text = arr_content[idx:obj_end]
+        i = obj_end
+
+        item = {}
+        for field in fields:
+            if field.endswith('?'):
+                name = field[:-1]
+                item[name] = bool(re.search(rf'{name}:\s*true', obj_text))
+            else:
+                tm = re.search(rf'''{field}:\s*(['"])''', obj_text)
+                item[field] = extract_js_string(obj_text, tm.end() - 1, tm.group(1))[0] if tm else None
+        items.append(item)
+    return items
+
+
+# ─── Generate Stats HTML (#lab 統計卡預渲染) ───
+
+def generate_stats_html(stats_zh, stats_en):
+    """Replicate renderStats() markup for both languages so the 28 stat cards
+    exist in static HTML for non-JS crawlers; JS re-renders them at runtime."""
+    lines = []
+    for lang, stats in (('zh', stats_zh), ('en', stats_en)):
+        for it in stats:
+            aria = f'View {it["label"]}' if lang == 'en' else f'點選查看 {it["label"]}'
+            lines.append(
+                f'<a class="stat-card {lang}" href="{esc(it["url"] or "#")}" target="_blank" '
+                f'rel="noopener noreferrer" aria-label="{esc(aria)}">'
+                f'<span class="stat-number">{esc(it["number"])}</span>'
+                f'<div class="stat-label">{esc(it["label"])}</div></a>')
+    return '\n'.join(lines)
+
+
+# ─── Generate Nav HTML (無 JS 導覽後備) ───
+
+def generate_nav_html(nav_zh, nav_en):
+    """Static <a> navigation mirroring renderNav()'s skeleton (minus the JS-only
+    mobile toggle). With JS on, renderNav() overwrites this at load; with JS off,
+    the <noscript> style reveals all sections so the anchors work as jumps."""
+    if len(nav_zh) != len(nav_en) or not nav_zh:
+        build_error(f"navItemsZh ({len(nav_zh)}) / navItemsEn ({len(nav_en)}) mismatch or empty")
+        return ''
+    lines = ['<div class="container">',
+             '    <div class="nav-container" id="nav-menu-container">',
+             '        <ul class="nav-list">']
+    for zh, en in zip(nav_zh, nav_en):
+        if zh.get('section'):
+            href, extra = '#' + zh['section'], ''
+        else:
+            href, extra = zh['href'], ' target="_blank" rel="noopener noreferrer"'
+        label = f'<span class="zh">{esc(zh["label"])}</span><span class="en">{esc(en["label"])}</span>'
+        lines.append(f'            <li><a class="nav-item" href="{esc(href)}"{extra}>{label}</a></li>')
+    lines += ['        </ul>', '    </div>', '</div>']
+    return '\n'.join(lines)
+
+
 # ─── Generate Honors HTML ───
 
 def generate_honors_html(honors_zh, honors_en):
     """Generate prerendered HTML for the honors list with both languages.
     Honors items contain raw HTML (buttons, spans) so we preserve them as-is.
-    Also adds hidden <img> tags for each photo so search engines can index them."""
+    （原本額外塞入的隱藏 1x1 <img> 已移除：renderHonors() 執行時會將其刪除，
+    會渲染 JS 的爬蟲反而看不到，且對螢幕報讀器是噪音；照片索引改由
+    ImageGallery JSON-LD 與 sitemap 圖片條目完整涵蓋。）"""
     lines = []
-    seen_images = set()
 
     for html in honors_zh:
-        img_urls = extract_image_urls(html)
-        img_tags = ''
-        for url in img_urls:
-            if url not in seen_images:
-                alt = esc(IMAGE_ALT_TEXT.get(url, url))
-                img_tags += (f'<img src="{esc(url)}" alt="{alt}" '
-                             f'width="1" height="1" loading="lazy" decoding="async" '
-                             f'style="position:absolute;left:-9999px;opacity:0">')
-                seen_images.add(url)
-        lines.append(f'<li class="honors-item zh">{html}{img_tags}</li>')
+        lines.append(f'<li class="honors-item zh">{html}</li>')
 
     for html in honors_en:
         lines.append(f'<li class="honors-item en">{html}</li>')
@@ -660,6 +729,14 @@ def main():
     alumni_en = parse_string_array(shared_js, 'alumniArticleEn')
     honors_article_zh = parse_string_array(shared_js, 'honorsArticleZh')
     honors_article_en = parse_string_array(shared_js, 'honorsArticleEn')
+    nav_zh = parse_object_array(shared_js, 'navItemsZh', ['label', 'href', 'section', 'embed?'], 'shared.js')
+    nav_en = parse_object_array(shared_js, 'navItemsEn', ['label', 'href', 'section', 'embed?'], 'shared.js')
+
+    with open(os.path.join(BASE, 'stats-data.js'), 'r', encoding='utf-8') as f:
+        stats_js = f.read()
+    stats_zh = parse_object_array(stats_js, 'statsZh', ['number', 'label', 'url'], 'stats-data.js')
+    stats_en = parse_object_array(stats_js, 'statsEn', ['number', 'label', 'url'], 'stats-data.js')
+    print(f"  navItems: {len(nav_zh)}+{len(nav_en)}, stats: {len(stats_zh)}+{len(stats_en)} cards")
     print(f"  bioZh: {len(bio_zh)} paragraphs, bioEn: {len(bio_en)} paragraphs")
     print(f"  honorsZh: {len(honors_zh)} items, honorsEn: {len(honors_en)} items")
     print(f"  alumniArticleZh: {len(alumni_zh)} paragraphs, alumniArticleEn: {len(alumni_en)} paragraphs")
@@ -672,6 +749,8 @@ def main():
     honors_html = generate_honors_html(honors_zh, honors_en)
     alumni_html = generate_article_html(alumni_zh, alumni_en)
     honors_article_html = generate_article_html(honors_article_zh, honors_article_en)
+    stats_html = generate_stats_html(stats_zh, stats_en)
+    nav_html = generate_nav_html(nav_zh, nav_en)
 
     jsonld = generate_jsonld(papers_data, projects_data)
     jsonld_str = json.dumps(jsonld, ensure_ascii=False, indent=4)
@@ -689,6 +768,8 @@ def main():
         ('<ul id="honors-list" class="honors-list">', honors_html, 'ul', 'Honors list'),
         ('<div id="alumni-article">', alumni_html, 'div', 'Alumni article'),
         ('<div id="honors-article">', honors_article_html, 'div', 'Honors article'),
+        ('<div class="stats-grid" id="stats-container">', stats_html, 'div', 'Stats'),
+        ('<nav id="main-nav">', nav_html, 'nav', 'Nav'),
     ]
     print()
     for open_tag, inner_html, tag_name, label in containers:
@@ -725,6 +806,8 @@ def main():
         build_error(f"Sanity check failed: only {n_articles} ScholarlyArticle entries (expected 40+)")
     if not bio_zh or not bio_en or not honors_zh or not honors_en:
         build_error("Sanity check failed: bio/honors arrays are empty")
+    if len(stats_zh) < 20 or len(stats_zh) != len(stats_en):
+        build_error(f"Sanity check failed: stats cards {len(stats_zh)}/{len(stats_en)} (expected 20+, equal)")
 
     # 寫檔前的最終防線：任何錯誤都不得覆蓋 index.html
     if BUILD_ERRORS:

@@ -177,9 +177,8 @@ function toggleNav() {
 function updateAriaLabels() {
     const isEn = document.documentElement.lang === 'en';
 
-    const lab = document.getElementById('lab');
-    if (lab) lab.setAttribute('aria-label', isEn ? 'Overview' : '綜覽');
-
+    /* #lab 改用 aria-labelledby 指向預渲染的 <h2>（雙語 span 由 CSS 切換），
+       不再於此設定 aria-label */
     const embed = document.getElementById('embed');
     if (embed) embed.setAttribute('aria-label', isEn ? 'Embedded content' : '嵌入內容');
 }
