@@ -220,9 +220,13 @@ const OWNER = 'canslab1';
 const REPO = 'canslab1.github.io';
 const BRANCH = 'master';
 const API = 'https://api.github.com';
-/* build-prerender.py 管理的容器：直接編輯會在下次建置被覆蓋，故唯讀保護 */
+/* 由 JS（shared.js render*）或 build-prerender.py 管理的容器：
+   直接編輯會被執行期渲染或下次建置覆蓋，故一律唯讀保護。
+   main-footer 由 renderFooter 填入、alumni-list-modal-content 由
+   renderAlumniListContent 於開啟彈窗時填入——兩者靜態原始碼為空。 */
 const PROTECTED_IDS = ['papers-container', 'projects-container', 'bio-content',
-    'honors-list', 'alumni-article', 'honors-article', 'stats-container', 'main-nav'];
+    'honors-list', 'alumni-article', 'honors-article', 'stats-container', 'main-nav',
+    'main-footer', 'alumni-list-modal-content'];
 const EXCLUDE_FILES = ['editor.html', 'google9ba7e621fca59b66.html'];
 /* 發布時同步日期戳記的檔案（對應 build-prerender.py --bump-dates） */
 const STAMP_FILES = {
