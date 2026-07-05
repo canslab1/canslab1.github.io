@@ -1183,3 +1183,6 @@ button:focus-visible,
     padding: 6px 5px;
     min-height: 44px;
 }
+
+/* Skip-link target: programmatic focus only, suppress outline on the whole <main> */
+#main-content:focus { outline: none; }

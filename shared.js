@@ -97,6 +97,8 @@ function showSection(sectionId, event) {
     const target = document.getElementById(sectionId);
     if (target) target.classList.add('active', 'fade-in');
     if (event && event.target) event.target.classList.add('active');
+    const navBtn = document.querySelector('.nav-item[data-section="' + sectionId + '"]');
+    if (navBtn) navBtn.classList.add('active');
 
     _activeSection = sectionId;
 
@@ -113,6 +115,20 @@ function showSection(sectionId, event) {
     }
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    if (location.hash !== '#' + sectionId) {
+        try { history.replaceState(null, '', '#' + sectionId); } catch (e) { /* sandboxed context */ }
+    }
+}
+
+/* 讓 /#section 深層連結生效：載入時與 hash 變更時切換到對應區塊 */
+function applyHashSection() {
+    try {
+        const raw = location.hash.slice(1);
+        const id = raw ? decodeURIComponent(raw) : 'bio';
+        const valid = navItemsZh.filter(i => i.section).map(i => i.section);
+        if (valid.includes(id) && id !== _activeSection) showSection(id);
+    } catch (e) { /* 畸形 hash（如 #%）— 忽略 */ }
 }
 
 function showEmbed(url, event) {
@@ -132,6 +148,9 @@ function showEmbed(url, event) {
     if (event && event.target) event.target.classList.add('active');
 
     _activeSection = 'embed';
+
+    /* 嵌入檢視不可深層連結，清除已不符畫面的區塊 hash */
+    try { if (location.hash) history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
 
     const navContainer = document.querySelector('.nav-container');
     if (navContainer && navContainer.classList.contains('show')) {
@@ -229,6 +248,7 @@ function renderNav() {
         if (item.section) {
             const btn = document.createElement('button');
             btn.className = 'nav-item' + (item.section === _activeSection ? ' active' : '');
+            btn.dataset.section = item.section;
             btn.textContent = item.label;
             btn.addEventListener('click', (e) => showSection(item.section, e));
             li.appendChild(btn);
@@ -833,6 +853,11 @@ function initShared() {
     updateAriaLabels();
     initArticleTextA11y();
     initTooltipEscDismiss();
+
+    try {
+        applyHashSection();
+        window.addEventListener('hashchange', applyHashSection);
+    } catch (e) {}
 }
 
 /* ===== Accessibility: article-text keyboard + tabindex ===== */
