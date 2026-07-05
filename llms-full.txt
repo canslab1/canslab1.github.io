@@ -28,7 +28,7 @@
 
 - Ph.D. in Computer Science, National Chiao Tung University (國立交通大學), 2005
 - M.S. in Computer and Information Science, National Chiao Tung University (國立交通大學), 2000
-- B.S. in Information Management, China University of Technology (中國科技大學), 1992
+- B.S. in Electronic Data Processing, China University of Technology (中國科技大學), 1992
 
 ## Career Timeline
 
@@ -166,7 +166,7 @@
 
 11. Huang C.Y. (2015) An Agent-based Epidemic Simulation of Social Behaviors Affecting HIV Transmission. Computational and Mathematical Methods in Medicine, 867264. DOI: 10.1155/2015/867264
 12. Lee C.L., Huang C.Y.*, et al. (2014) Impact of Vehicular Networks on Emergency Medical Services. IJERPH, 11(11), 11348-11370. DOI: 10.3390/ijerph111111348
-13. Fu Y.H., Huang C.Y.*, and Sun C.T. (2014) Identifying Super-Spreader Nodes in Complex Networks. Mathematical Problems in Engineering, 675713. DOI: 10.1155/2015/675713
+13. Fu Y.H., Huang C.Y.*, and Sun C.T. (2015) Identifying Super-Spreader Nodes in Complex Networks. Mathematical Problems in Engineering, 675713. DOI: 10.1155/2015/675713
 14. Huang C.Y. and Wen T.H. (2014) Optimal Installation Locations for Automated External Defibrillators. Computational and Mathematical Methods in Medicine, 241435. DOI: 10.1155/2014/241435
 15. Huang C.Y. and Lee C.L. (2014) Influences of Agents with Self-Reputation Awareness in Evolutionary Spatial IPD. PLoS One, 9(6), e99841. DOI: 10.1371/journal.pone.0099841
 16. Huang C.Y. and Wen T.H. (2014) A Novel Private Attitude and Public Opinion Dynamics Model. JASSS, 17(3), 8. DOI: 10.18564/jasss.2517

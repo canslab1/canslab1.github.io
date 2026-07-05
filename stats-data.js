@@ -41,7 +41,7 @@ const statsEn = [
     { number: '18',   label: 'Dom. Conferences', url: 'https://canslab1.github.io/CV.pdf#page=29' },
     { number: '49',   label: 'Commentaries & Op-Eds', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
     { number: '22',   label: 'PI Projects', url: 'https://canslab1.github.io/CV.pdf#page=3' },
-    { number: '$14M', label: 'PI Funding Total', url: 'https://canslab1.github.io/CV.pdf#page=3' },
+    { number: 'NT$14M', label: 'PI Funding Total', url: 'https://canslab1.github.io/CV.pdf#page=3' },
     { number: '14',   label: 'Co-PI Projects', url: 'https://canslab1.github.io/CV.pdf#page=4' },
     { number: '994',  label: 'Citations', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },
     { number: '18',   label: 'h-index', url: 'https://scholar.google.com/citations?user=0klfzfAAAAAJ&hl=en' },

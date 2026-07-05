@@ -102,7 +102,7 @@ open index.html                       # 或直接用瀏覽器開啟（部分功�
 | 講師 | 中國科技大學 資訊管理學系 | 89.08–91.07 |
 
 ### 業界經歷（攻讀博士前，共 11 年）
-- 宇博電腦（新加坡）— 資深系統設計師
+- 宇博電腦（新加坡商）— 資深系統設計師
 - 環世股份有限公司 — 系統工程師
 - 百點連鎖資訊教室 — 教學部主任 / 總經理特別助理
 - 鼎眾電腦股份有限公司 — 軟體開發部主任
@@ -693,7 +693,7 @@ python3 build-prerender.py
 - 學歷：3 EducationalOccupationalCredential（博士/碩士/學士）
 - 專長：8 DefinedTerm（含中文 alternateName）
 - 獎項：6 結構化物件（含中文、日期、描述）
-- 學術指標：additionalProperty（Citations 994, h-index 18, i10-index 30, 171 論文, 45 SCI）
+- 學術指標：additionalProperty（Citations 994, h-index 18, i10-index 30, 171 論文, 45 SCI/SSCI/EI）
 - 連結：11 sameAs（Scholar, ORCID, DBLP, Scopus, Semantic Scholar, ResearchGate, Facebook, Google Sites, PURE, GitHub, Wikidata）
 - 隸屬：worksFor, affiliation, memberOf（斐陶斐、小聯會）
 - 聯絡：address, telephone, email
@@ -709,7 +709,7 @@ python3 build-prerender.py
 
 ### llms.txt / llms-full.txt
 - **`llms.txt`**：摘要版 AI 可讀檔案（姓名、職稱、研究領域、學術指標、獲獎、連結、網站結構）
-- **`llms-full.txt`**：完整版（含 45 篇 SCI/SSCI 論文 + DOI、37 件計畫 + 計畫編號、8 套軟體、全部獎項、媒體投書、生涯時間軸、聯絡方式）
+- **`llms-full.txt`**：完整版（含 45 篇 SCI/SSCI/EI 論文 + DOI、37 件計畫 + 計畫編號、8 套軟體、全部獎項、媒體投書、生涯時間軸、聯絡方式）
 
 ### robots.txt
 明確允許 24 個 AI 爬蟲存取：

@@ -18,11 +18,11 @@
   <!-- Site updates -->
 
   <entry>
-    <title>新增 2026 年 PLoS One 期刊論文（SCI/SSCI 期刊論文達 45 篇、總著作數達 171 篇）</title>
+    <title>新增 2026 年 PLoS One 期刊論文（SCI/SSCI/EI 期刊論文達 45 篇、總著作數達 171 篇）</title>
     <link href="https://canslab1.github.io/#papers" rel="alternate"/>
     <id>tag:canslab1.github.io,2026-05-18:plos-one-2026</id>
     <updated>2026-05-18T00:00:00+08:00</updated>
-    <summary>Huang C.Y.* and Wang S.W. (2026) Using a Mixed Opinion Dynamics and Innovation Diffusion Model to Explore the ‘Best Game No One Played’ Phenomenon. PLoS One (Accepted 2026/05/01, SCI, IF: 2.6, Rank: 44/135 in Multidisciplinary Sciences). 全站學術統計同步更新：SCI/SSCI 期刊論文 45 篇、總著作數 171 篇。</summary>
+    <summary>Huang C.Y.* and Wang S.W. (2026) Using a Mixed Opinion Dynamics and Innovation Diffusion Model to Explore the ‘Best Game No One Played’ Phenomenon. PLoS One (Accepted 2026/05/01, SCI, IF: 2.6, Rank: 44/135 in Multidisciplinary Sciences). 全站學術統計同步更新：SCI/SSCI/EI 期刊論文 45 篇、總著作數 171 篇。</summary>
     <category term="Site Update"/>
     <category term="Publication"/>
   </entry>
@@ -52,7 +52,7 @@
     <link href="https://canslab1.github.io/llms-full.txt" rel="alternate"/>
     <id>tag:canslab1.github.io,2026-04-05:llms-full-txt</id>
     <updated>2026-04-05T00:00:00+08:00</updated>
-    <summary>Published llms-full.txt with complete 44 SCI/SSCI papers, 37 research projects, 8 open-source tools, and all awards. Enhanced JSON-LD structured data, Open Graph, Twitter Card, Dublin Core, and Google Scholar metadata for comprehensive search engine and generative AI discoverability.</summary>
+    <summary>Published llms-full.txt with complete 45 SCI/SSCI/EI papers, 37 research projects, 8 open-source tools, and all awards. Enhanced JSON-LD structured data, Open Graph, Twitter Card, Dublin Core, and Google Scholar metadata for comprehensive search engine and generative AI discoverability.</summary>
     <category term="Site Update"/>
     <category term="AI Discoverability"/>
   </entry>

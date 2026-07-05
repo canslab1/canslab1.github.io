@@ -113,7 +113,7 @@ All metadata is designed so search engines and generative AI systems return corr
 - **Credentials**: 3 EducationalOccupationalCredential (PhD/MS/BS with institutions and years)
 - **Expertise**: 8 DefinedTerm objects with Chinese alternateNames (Complex Adaptive Systems, Network Science, etc.)
 - **Awards**: 6 structured objects with Chinese alternateNames, dates, and descriptions
-- **Academic Metrics**: additionalProperty (Citations 994, h-index 18, i10-index 30, 171 pubs, 45 SCI) — no interactionStatistic (schema.org has no CiteAction type)
+- **Academic Metrics**: additionalProperty (Citations 994, h-index 18, i10-index 30, 171 pubs, 45 SCI/SSCI/EI) — no interactionStatistic (schema.org has no CiteAction type)
 - **Links**: 11 sameAs (Scholar, ORCID, DBLP, Scopus, Semantic Scholar, ResearchGate, Facebook, Google Sites, PURE, GitHub, Wikidata)
 - **Affiliations**: worksFor, affiliation, memberOf (Phi Tau Phi, Taipei PTA Federation)
 - **Contact**: address (PostalAddress), telephone, email
@@ -126,7 +126,7 @@ Each includes: name, alternateName, description, codeRepository, programmingLang
 ## AI Discoverability
 
 - **`llms.txt`**: summary profile with pointer to `llms-full.txt`
-- **`llms-full.txt`**: complete 45 SCI/SSCI papers with DOIs, 37 projects with grant numbers, 8 software tools, all awards, selected op-eds, career timeline, contact info
+- **`llms-full.txt`**: complete 45 SCI/SSCI/EI papers with DOIs, 37 projects with grant numbers, 8 software tools, all awards, selected op-eds, career timeline, contact info
 - **`robots.txt`**: explicitly allows 24+ AI crawlers by name (GPTBot, ChatGPT-User, ClaudeBot, Claude-Web, Anthropic-AI, PerplexityBot, OAI-SearchBot, DeepSeekBot, xAI, etc.)
 - **`sitemap.xml`**: includes `xmlns:video` namespace with YouTube interview entry, `xmlns:image` with 60+ image entries, `llms-full.txt` URL
 
@@ -151,7 +151,7 @@ These appear in meta descriptions, JSON-LD, and bio text — keep them consisten
 
 | Metric | Value |
 |--------|-------|
-| Journal papers (SCI/SSCI) | 45 |
+| Journal papers (SCI/SSCI/EI) | 45 |
 | International conference papers | 49 |
 | Total publications | 171 |
 | h-index | 18 |
