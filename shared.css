@@ -2,6 +2,7 @@
 :root {
     --color-primary: #27ae60;       /* 主題綠 */
     --color-primary-dark: #219150;  /* 漸層綠（深） */
+    --color-primary-text: #187a41;  /* 文字用綠（白底 5.39:1，通過 WCAG AA） */
     --color-dark-green: #14532d;    /* Footer 深綠 */
     --color-mid-green: #1a7745;     /* Footer 中綠 */
     --color-text: #2c3e50;          /* 深灰文字 */
@@ -755,7 +756,7 @@ figure {
 }
 
 .paper-item::marker {
-    color: var(--color-primary);
+    color: var(--color-primary-text);
     font-weight: 600;
 }
 
@@ -811,7 +812,7 @@ figure {
 }
 
 .project-item::marker {
-    color: var(--color-primary);
+    color: var(--color-primary-text);
     font-weight: 600;
 }
 
@@ -1165,6 +1166,7 @@ button:focus-visible,
 @media (prefers-contrast: more) {
     :root {
         --color-primary: #006400;
+        --color-primary-text: #006400;
         --color-dark-green: #003300;
     }
     .stat-card { border: 2px solid #000; }
