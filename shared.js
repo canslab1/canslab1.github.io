@@ -75,6 +75,8 @@ function toggleLanguage() {
 
     html.lang = isZh ? 'en' : 'zh-TW';
     btn.textContent = isZh ? '中文' : 'English';
+    btn.setAttribute('lang', isZh ? 'zh-TW' : 'en');
+    try { localStorage.setItem('canslab-lang', html.lang); } catch (e) { /* 私密瀏覽／儲存停用 */ }
 
     renderStats();
     renderHonors();
@@ -186,7 +188,7 @@ function updateAriaLabels() {
 
 function renderStats() {
     const container = document.getElementById('stats-container');
-    if (!container) return;
+    if (!container || typeof statsZh === 'undefined' || typeof statsEn === 'undefined') return;
     const isEn = document.documentElement.lang === 'en';
     const stats = isEn ? statsEn : statsZh;
     container.innerHTML = '';
@@ -839,6 +841,18 @@ function hideAlumniListModal() {
 function initShared() {
     const langBtn = document.querySelector('.language-toggle');
     if (langBtn) langBtn.addEventListener('click', toggleLanguage);
+
+    /* 套用上次選擇的語言（首次渲染前，避免重複渲染） */
+    try {
+        const saved = localStorage.getItem('canslab-lang');
+        if ((saved === 'en' || saved === 'zh-TW') && saved !== document.documentElement.lang) {
+            document.documentElement.lang = saved;
+            if (langBtn) {
+                langBtn.textContent = saved === 'en' ? '中文' : 'English';
+                langBtn.setAttribute('lang', saved === 'en' ? 'zh-TW' : 'en');
+            }
+        }
+    } catch (e) { /* 私密瀏覽／儲存停用 */ }
 
     renderStats();
     renderHonors();
