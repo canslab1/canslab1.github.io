@@ -277,6 +277,9 @@ async function gh(path, opts = {}) {
             throw new Error('GitHub 流量限制已滿（未登入限額 60/hr）：請設定 🔑 金鑰（提升至 5000/hr）或稍後再試');
         throw new Error(`GitHub API ${res.status}：${detail || res.statusText}`);
     }
+    /* parse:false — 不讀取回應主體（用於分支更新 PATCH：只要 HTTP 成功即算成功，
+       避免在「不可逆的分支更新」之後才因讀取空/非 JSON 主體而誤報失敗） */
+    if (opts.parse === false) return;
     return res.json();
 }
 
@@ -341,6 +344,9 @@ async function refreshList() {
 
 /* ===== 載入與渲染 ===== */
 async function openFile(name) {
+    /* 發布進行中禁止切換／重載檔案，否則會在 publish() 收尾時與新載入的
+       檔案狀態互相覆蓋，造成 state.sha / originalText / path 不一致 */
+    if (state.publishing) { status('發布進行中，請待完成後再切換檔案', true); return; }
     if (state.dirty && !confirm('目前檔案有未發布的變更，切換將捨棄。確定？')) return;
     status('載入 ' + name + ' 中…');
     try {
@@ -614,9 +620,11 @@ async function publish(message) {
             method: 'POST',
             body: JSON.stringify({ message, tree: tree.sha, parents: [headSha] }),
         });
-        /* 不可逆的一步：更新分支指標。此後不再有任何可能失敗的呼叫 */
+        /* 不可逆的一步：更新分支指標。parse:false 讓它不讀回應主體，
+           確保此後（純字串/DOM 操作）真的不會有任何可能失敗的呼叫 */
         await gh(`/repos/${OWNER}/${REPO}/git/refs/heads/${BRANCH}`, {
             method: 'PATCH',
+            parse: false,
             body: JSON.stringify({ sha: commit.sha }),
         });
 
@@ -659,8 +667,8 @@ document.querySelectorAll('.menu > button').forEach(btn => {
 document.addEventListener('click', () =>
     document.querySelectorAll('.menu.open').forEach(m => m.classList.remove('open')));
 
-$('mi-refresh-list').addEventListener('click', refreshList);
-$('mi-reload').addEventListener('click', () => { if (state.path) { state.dirty = false; openFile(state.path); } });
+$('mi-refresh-list').addEventListener('click', () => { if (!state.publishing) refreshList(); });
+$('mi-reload').addEventListener('click', () => { if (state.path && !state.publishing) { state.dirty = false; openFile(state.path); } });
 
 document.querySelectorAll('[data-cmd]').forEach(b => b.addEventListener('click', () => {
     if (frame.contentDocument) { frame.contentDocument.execCommand(b.dataset.cmd); frame.contentWindow.focus(); }
