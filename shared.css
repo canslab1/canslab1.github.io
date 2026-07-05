@@ -3,6 +3,7 @@
     --color-primary: #27ae60;       /* 主題綠 */
     --color-primary-dark: #219150;  /* 漸層綠（深） */
     --color-primary-text: #187a41;  /* 文字用綠（白底 5.39:1，通過 WCAG AA） */
+    --color-primary-light: #d4efdf; /* hover 淺綠底（配深色字約 9:1，通過 AA） */
     --color-dark-green: #14532d;    /* Footer 深綠 */
     --color-mid-green: #1a7745;     /* Footer 中綠 */
     --color-text: #2c3e50;          /* 深灰文字 */
@@ -167,7 +168,14 @@ html[lang="en"] .nav-item {
     padding: 0.5rem 0.5rem;
 }
 
-.nav-item:hover, .nav-item.active {
+.nav-item:hover {
+    background: var(--color-primary-light);
+    color: var(--color-text);
+}
+
+/* 目前瀏覽中的選項：滑鼠停留時也維持綠底白字，與 hover 樣式區隔 */
+.nav-item.active,
+.nav-item.active:hover {
     background: #1e8449;
     color: white;
 }
