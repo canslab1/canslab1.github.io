@@ -62,11 +62,10 @@ function smoothScrollToAnchor(anchorElement) {
         setTimeout(() => {
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             history.pushState(null, '', targetId);
+            /* 焦點移至目標區塊（而非點擊的連結），供鍵盤與螢幕報讀器使用 */
+            target.setAttribute('tabindex', '-1');
+            target.focus({ preventScroll: true });
         }, 300);
-    }
-    if (anchorElement) {
-        anchorElement.setAttribute('tabindex', '-1');
-        anchorElement.focus({ preventScroll: true });
     }
 }
 
@@ -85,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /* Smooth anchor scrolling */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        if (anchor.classList.contains('skip-link')) return; /* 跳過連結保留原生跳轉與聚焦 */
         anchor.addEventListener('click', function (e) {
             if (this.getAttribute('href').length > 1) {
                 e.preventDefault();

@@ -496,6 +496,8 @@ footer {
     border-radius: 0 0 8px 0;
 }
 .skip-link:focus { left: 0; }
+/* Skip-link target: programmatic focus only, suppress outline on the whole <main> */
+#main-content:focus { outline: none; }
 ul.toc-list { list-style: none; margin: 0; padding: 0; }
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
