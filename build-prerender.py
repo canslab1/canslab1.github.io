@@ -13,7 +13,11 @@ build-prerender.py
   - 傑出校友推薦文（shared.js alumniArticleZh/alumniArticleEn → #alumni-article）
   - 杏壇芬芳推薦文（shared.js honorsArticleZh/honorsArticleEn → #honors-article）
 
-用法：python3 build-prerender.py
+用法：python3 build-prerender.py [--bump-dates]
+  --bump-dates  同步更新五處日期戳記（DCTERMS.modified、sitemap 首頁
+                lastmod、humans.txt、llms-full.txt、README 最後更新）；
+                內容有實質變動時使用。
+任何解析失敗、容器遺失或數量低於門檻都會以非零狀態退出且不寫入 index.html。
 """
 
 import json
@@ -22,6 +26,16 @@ import re
 import sys
 
 BASE = os.path.dirname(os.path.abspath(__file__))
+
+# ─── Fail-fast error collector ───
+# 任何解析失敗或容器遺失都記錄於此；main() 會在寫入 index.html 之前
+# 檢查並以非零狀態退出，避免以空內容覆蓋正確的預渲染結果。
+BUILD_ERRORS = []
+
+
+def build_error(msg):
+    print(f"❌ {msg}")
+    BUILD_ERRORS.append(msg)
 
 
 # ─────────────────────────────────────────────
@@ -90,7 +104,7 @@ def parse_papers_data(js_text):
     # Find the top-level array start
     m = re.search(r'const\s+papersData\s*=\s*\[', js_text)
     if not m:
-        print("ERROR: Could not find papersData")
+        build_error("Could not find papersData in papers-data.js")
         return categories
 
     arr_start = m.end() - 1  # position of '['
@@ -191,7 +205,7 @@ def parse_projects_data(js_text):
 
     m = re.search(r'const\s+projectsData\s*=\s*\[', js_text)
     if not m:
-        print("ERROR: Could not find projectsData")
+        build_error("Could not find projectsData in projects-data.js")
         return roles
 
     arr_start = m.end() - 1
@@ -370,9 +384,14 @@ def generate_projects_html(projects_data):
 
 def generate_jsonld(papers_data, projects_data):
     articles = []
+    skipped = []
 
-    if papers_data:
-        journal_cat = papers_data[0]
+    # 以分類標題選取期刊分類（不可依賴陣列位置——重排資料檔不應造成錯置）
+    journal_cat = next((c for c in papers_data if 'SCI' in c['titleZh']), None)
+    if papers_data and journal_cat is None:
+        build_error("JSON-LD: no papers category with 'SCI' in titleZh found")
+
+    if journal_cat:
         for period in journal_cat['periods']:
             for text in period['items']:
                 year_match = re.search(r'\((\d{4})\)', text)
@@ -403,10 +422,25 @@ def generate_jsonld(papers_data, projects_data):
                     if url:
                         article["url"] = url
                     articles.append(article)
+                else:
+                    skipped.append(text[:120])
+
+        # 漏抓偵測：期刊白名單或年份 regex 沒抓到的論文會從結構化資料
+        # 靜默消失（例如未來發表於 Nature/Frontiers 等不在白名單的期刊）
+        cat_total = sum(len(p['items']) for p in journal_cat['periods'])
+        if len(articles) != cat_total:
+            build_error(f"JSON-LD dropped {cat_total - len(articles)} of {cat_total} journal papers "
+                        f"(title/year regex miss — extend the journal-name whitelist at generate_jsonld)")
+            for s in skipped:
+                print(f"    · skipped: {s}")
 
     research_projects = []
-    if projects_data:
-        pi_cat = projects_data[0]
+    # 以角色標題選取主持人分類（不可依賴陣列位置；須精確比對，
+    # 因「共同主持人」亦包含「主持人」子字串）
+    pi_cat = next((r for r in projects_data if r['titleZh'] == '主持人'), None)
+    if projects_data and pi_cat is None:
+        build_error("JSON-LD: no projects role with titleZh == '主持人' found")
+    if pi_cat:
         for proj in pi_cat['items']:
             rp = {
                 "@type": "ResearchProject",
@@ -447,7 +481,7 @@ def parse_string_array(js_text, var_name):
     Returns a list of strings."""
     m = re.search(rf'const\s+{var_name}\s*=\s*\[', js_text)
     if not m:
-        print(f"  WARNING: Could not find {var_name}")
+        build_error(f"Could not find {var_name} in shared.js")
         return []
 
     arr_start = m.end() - 1  # position of '['
@@ -558,6 +592,42 @@ def generate_article_html(paragraphs_zh, paragraphs_en):
     return '\n'.join(lines)
 
 
+# ─── Freshness stamps (--bump-dates) ───
+# 同步 CLAUDE.md 慣例要求的五處日期戳記。採旗標而非每次建置自動更新，
+# 以保留「同輸入必同輸出」的跨日冪等性；內容有實質變動時執行：
+#   python3 build-prerender.py --bump-dates
+
+def bump_dates(index_html):
+    import datetime
+    today = datetime.date.today().isoformat()
+
+    index_html = re.sub(r'(<meta name="DCTERMS\.modified" content=")[0-9-]+(")',
+                        rf'\g<1>{today}\g<2>', index_html)
+    print(f"✅ DCTERMS.modified → {today}")
+
+    file_patterns = [
+        ('sitemap.xml',
+         r'(<loc>https://canslab1\.github\.io/</loc>\s*<lastmod>)[0-9-]+(</lastmod>)',
+         rf'\g<1>{today}\g<2>'),
+        ('humans.txt', r'(Last update: )[0-9-]+', rf'\g<1>{today}'),
+        ('llms-full.txt', r'(> Last updated: )[0-9-]+', rf'\g<1>{today}'),
+        ('README.md', r'(\*\*最後更新\*\*：)[0-9-]+', rf'\g<1>{today}'),
+    ]
+    for fname, pattern, repl in file_patterns:
+        path = os.path.join(BASE, fname)
+        with open(path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        new_content, n = re.subn(pattern, repl, content, count=1)
+        if n:
+            with open(path, 'w', encoding='utf-8') as f:
+                f.write(new_content)
+            print(f"✅ {fname} stamp → {today}")
+        else:
+            build_error(f"--bump-dates: stamp pattern not found in {fname}")
+
+    return index_html
+
+
 # ─── Main ───
 
 def main():
@@ -624,7 +694,10 @@ def main():
     for open_tag, inner_html, tag_name, label in containers:
         index_html, ok = replace_container_inner(
             index_html, open_tag, '\n' + inner_html + '\n            ', tag_name)
-        print(('✅ %s container replaced' % label) if ok else ('⚠️  %s container NOT found' % label))
+        if ok:
+            print('✅ %s container replaced' % label)
+        else:
+            build_error('%s container NOT found in index.html' % label)
 
     # Add JSON-LD before </body> — remove old auto-generated block first to prevent duplicates
     marker = '"Publications and Research Projects of Prof. Chung-Yuan Huang"'
@@ -640,11 +713,34 @@ def main():
     index_html = index_html.replace('</body>', ld_script + '\n</body>')
     print("✅ JSON-LD structured data added")
 
-    with open(index_path, 'w', encoding='utf-8') as f:
-        f.write(index_html)
-
     n_articles = len([i for i in jsonld['itemListElement'] if i['item']['@type'] == 'ScholarlyArticle'])
     n_rp = len([i for i in jsonld['itemListElement'] if i['item']['@type'] == 'ResearchProject'])
+
+    # 門檻斷言：解析結果遠低於已知規模即視為解析故障，而非真實內容變動
+    if total_papers < 100:
+        build_error(f"Sanity check failed: only {total_papers} papers parsed (expected 100+)")
+    if total_projects < 30:
+        build_error(f"Sanity check failed: only {total_projects} projects parsed (expected 30+)")
+    if n_articles < 40:
+        build_error(f"Sanity check failed: only {n_articles} ScholarlyArticle entries (expected 40+)")
+    if not bio_zh or not bio_en or not honors_zh or not honors_en:
+        build_error("Sanity check failed: bio/honors arrays are empty")
+
+    # 寫檔前的最終防線：任何錯誤都不得覆蓋 index.html
+    if BUILD_ERRORS:
+        print(f"\n❌ Build FAILED with {len(BUILD_ERRORS)} error(s); index.html NOT written:")
+        for e in BUILD_ERRORS:
+            print(f"  - {e}")
+        sys.exit(1)
+
+    if '--bump-dates' in sys.argv:
+        index_html = bump_dates(index_html)
+        if BUILD_ERRORS:
+            print("\n❌ --bump-dates failed; index.html NOT written")
+            sys.exit(1)
+
+    with open(index_path, 'w', encoding='utf-8') as f:
+        f.write(index_html)
     print(f"\n=== Summary ===")
     print(f"Pre-rendered papers: {total_papers}")
     print(f"Pre-rendered projects: {total_projects}")
