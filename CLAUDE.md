@@ -22,6 +22,7 @@ Static personal academic website for **Prof. Chung-Yuan Huang** (黃崇源教授
 | `projects-data.js` | Research project data (37 projects) |
 | `stats-data.js` | Stats card data for the overview section |
 | `build-prerender.py` | Reads JS data files, generates pre-rendered HTML + JSON-LD into `index.html` |
+| `editor.html` | In-browser WYSIWYG editor that commits page edits straight to `master` via the GitHub API (see below) |
 | `stories.html` / `stories.js` / `stories.css` | Standalone stories page |
 | `feed.xml` | Atom feed |
 | `manifest.json` | PWA manifest |
@@ -54,6 +55,21 @@ python3 -m http.server 8000
 # shared.js/shared.css/stories.js/stories.css/*-data.js)
 python3 build-prerender.py
 ```
+
+## Browser Editor (`editor.html`)
+
+A single-file, dependency-free WYSIWYG editor (marked `noindex,nofollow`) that lets the site owner edit any page's `<body>` in a `contenteditable` iframe and commit the result **directly to `master`** through the GitHub REST API — no local checkout needed. Constants: `OWNER=canslab1`, `REPO=canslab1.github.io`, `BRANCH=master`. Auth is a fine-grained PAT the user pastes, held in `sessionStorage` by default or `localStorage` if "remember" is checked (`ed-token`).
+
+Key invariants to preserve when touching this file:
+
+- **Atomic multi-file publish via the Git Data API** — `publish()` builds blobs → one tree (on `base_tree` = current head) → one commit → a single `PATCH` of `refs/heads/master`. The ref update is the one irreversible step and deliberately the *last* network call; everything after it is pure string/DOM work. Do not add fallible calls after the PATCH.
+- **Conflict detection (TOCTOU-safe)** — before writing, it re-reads head, pins every read to that `headSha`, and aborts if the file's remote `sha` no longer matches the `sha` loaded into the editor. Preserve this pinning.
+- **Mid-publish lock** — `state.publishing` blocks file switching/reloading during a publish so the success handler doesn't clobber a freshly loaded file.
+- **Protected-region "slots"** — non-editable blocks (`data-ed-protected`) are swapped out to placeholder tokens before editing and restored on serialize; a slot is only restored if its token appears exactly once (guards against duplication/loss).
+- **Date stamping on publish** — mirrors `build-prerender.py`: bumps `DCTERMS.modified` in the edited page, the page's `<lastmod>` in `sitemap.xml`, plus `STAMP_FILES` (`humans.txt`, `llms-full.txt` "Last updated", `README.md` 最後更新), all computed in `Asia/Taipei`. Missing/unmatched files are skipped, never fatal.
+- **Link-insertion XSS guard** — inserted link URLs are protocol-allowlisted; `javascript:`/`data:`/`vbscript:` are rejected because output is served on the public site.
+
+Because publishes land on `master`, they trigger the same Pages deploy (and the IndexNow workflow) as a normal push.
 
 ## SEO & Verification
 
@@ -143,7 +159,7 @@ Each includes: name, alternateName, description, codeRepository, programmingLang
 - When adding new honors photos, also update: ImageGallery JSON-LD block, relevant `og:image` tags if significant
 - When adding new software, also update: `@graph` SoftwareSourceCode entry (with 4 `image` URLs), `llms.txt`, `llms-full.txt`
 - When content changes, also bump: sitemap `lastmod`, `DCTERMS.modified` (index.html), humans.txt / llms-full.txt "Last update", README 最後更新 — or simply run `python3 build-prerender.py --bump-dates`, which updates all five stamps; also review whether `feed.xml` deserves a new entry / `<updated>` bump (it is NOT covered by --bump-dates)
-- After any push, send IndexNow notification: `POST https://api.indexnow.org/indexnow` with key `d22a81b36ccb45e085fe6679a822df52`
+- IndexNow submission is **automated** by `.github/workflows/indexnow.yml` (runs on every push to `master` that touches content paths, plus a weekly cron and manual dispatch) — no manual step is normally needed. That workflow submits a **fixed URL list**; only send a manual `POST https://api.indexnow.org/IndexNow` (key `d22a81b36ccb45e085fe6679a822df52`, `keyLocation` = `https://canslab1.github.io/<key>.txt`) when you need to notify a URL not in that list.
 
 ## Data Counts (as of 2026-05)
 
